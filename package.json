@@ -13,6 +13,7 @@
     "lint": "npm run lint:js"
   },
   "dependencies": {
+    "normalize.css": "^8.0.1",
     "nuxt": "^2.13.0"
   },
   "devDependencies": {
