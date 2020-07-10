@@ -88,6 +88,16 @@
       </div>
     </div> -->
 
+    <div id="contributors" class="section-contributors">
+      <div class="section-header">Contributors</div>
+      <div class="section-title">Core Developers</div>
+      <div class="section-statement">
+        Stargate is made possible through the hard work and coordination of many
+        dedicated teams contributing to development on Cosmos SDK, Tendermint
+        Core, IBC and Gaia.
+      </div>
+    </div>
+
     <div id="articles" class="section-articles">
       <div class="section-title">Learn more about Stargate</div>
       <div class="section-header">3 Articles</div>
@@ -270,6 +280,46 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+.section-contributors
+  display grid
+  grid-template-columns repeat(12,1fr)
+  padding-top 224px
+  text-align center
+  max-width 1184px
+  width 100%
+  margin auto
+  .section-header
+    padding-top 24px
+    height 48px
+    font-weight 600
+    font-size 19px
+    line-height 1.263
+    letter-spacing 0.08em
+    text-transform uppercase
+    color #989BB9
+    border-top 1px solid #282B53
+    display flex
+    flex-direction column
+    grid-column 1 / span 12
+    text-align left
+  .section-title
+    margin-top 48px
+    grid-column 1/4
+    font-weight 900
+    font-size 82px
+    line-height 1.121
+    letter-spacing -0.025em
+    color #FFFFFF
+    text-align left
+  .section-statement
+    margin-top 154px
+    margin-left 2rem
+    grid-column 7/12
+    font-size: 23px
+    line-height 1.565
+    letter-spacing -0.01em
+    color #CFD1E7
+
 .section-hero
   margin 4rem 8rem
   display flex
@@ -562,10 +612,10 @@ export default {
     justify-content flex-end
     text-align left
   .cards
-    padding-top: 6rem;
-    max-width: 1184px;
-    width: 100%;
-    margin: auto;
+    padding-top 6rem
+    max-width 1184px
+    width 100%
+    margin auto
     display grid
     grid-template-columns 1fr 1fr
     gap 1.5rem
