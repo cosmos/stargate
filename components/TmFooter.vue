@@ -2,38 +2,49 @@
   <footer>
     <div class="container">
       <Logo />
-      <a href="http://cosmos.network" target="blank_" rel="noreferrer noopener">
-        <div class="home-nav">cosmos.network</div>
-      </a>
+
+      <div class="home-nav">
+        <a
+          href="http://cosmos.network"
+          target="blank_"
+          rel="noreferrer noopener"
+          >cosmos.network</a
+        >
+      </div>
+
       <div class="nav">
-        <a
-          href="https://docs.cosmos.network"
-          target="blank_"
-          rel="noreferrer noopener"
-        >
-          <div class="nav__item">Cosmos SDK</div>
-        </a>
-        <a
-          href="https://gaia.cosmos.network"
-          target="blank_"
-          rel="noreferrer noopener"
-        >
-          <div class="nav__item">Cosmos Hub</div>
-        </a>
-        <a
-          href="https://docs.tendermint.com"
-          target="blank_"
-          rel="noreferrer noopener"
-        >
-          <div class="nav__item">Tendermint Core</div>
-        </a>
-        <a
-          href="https://github.com/cosmos/ics"
-          target="blank_"
-          rel="noreferrer noopener"
-        >
-          <div class="nav__item">Interchain Standards</div>
-        </a>
+        <div class="nav__item">
+          <a
+            href="https://docs.cosmos.network"
+            target="blank_"
+            rel="noreferrer noopener"
+            >Cosmos SDK</a
+          >
+        </div>
+        <div class="nav__item">
+          <a
+            href="https://gaia.cosmos.network"
+            target="blank_"
+            rel="noreferrer noopener"
+            >Cosmos Hub</a
+          >
+        </div>
+        <div class="nav__item">
+          <a
+            href="https://docs.tendermint.com"
+            target="blank_"
+            rel="noreferrer noopener"
+            >Tendermint Core</a
+          >
+        </div>
+        <div class="nav__item">
+          <a
+            href="https://github.com/cosmos/ics"
+            target="blank_"
+            rel="noreferrer noopener"
+            >Interchain Standards</a
+          >
+        </div>
       </div>
       <div ref="links" class="social-icons">
         <a
@@ -153,6 +164,7 @@ footer
       gap 2rem
       grid-template-columns repeat(auto-fit, minmax(120px, 1fr))
       max-width 45.9375rem
+      width 100%
       margin-top 3rem
       margin-left auto
       margin-right auto
