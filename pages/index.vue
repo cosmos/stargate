@@ -87,6 +87,67 @@
         <h1 class="title">85% complete</h1>
       </div>
     </div> -->
+
+    <div id="videos" class="section-videos">
+      <div class="section-header">Videos</div>
+      <div class="container">
+        <div class="frame">
+          <iframe
+            src="https://www.youtube.com/embed/mlq5GzQTIAM?autoplay=0&controls=1&rel=0&modestbranding=1&fs=1&enablejsapi=1"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media;
+          gyroscope; picture-in-picture"
+            allowfullscreen
+          />
+        </div>
+        <div class="text">
+          <div class="text__caption">
+            June 23
+          </div>
+          <div class="text__title">
+            Stargate Q&A with Zaki Manian
+          </div>
+          <div class="text__cta">
+            <a
+              href="https://www.youtube.com/watch?v=mlq5GzQTIAM"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              Watch on YouTube ->
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="community" class="section-community">
+      <div class="section-header">Community</div>
+      <div class="cards">
+        <div class="cards__item">
+          <div class="cards__item__caption">connect</div>
+          <div class="cards__item__title">Join the community</div>
+          <div class="cards__item__description">
+            Learn about Cosmos, get to know the community, connect with other
+            Cosmonauts and more.
+          </div>
+        </div>
+        <div class="cards__item">
+          <div class="cards__item__caption">chat</div>
+          <div class="cards__item__title">Discuss Stargate</div>
+          <div class="cards__item__description">
+            Join the
+            <a
+              href="https://discord.com/channels/669268347736686612/723170066937413693"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              <code>#stargate</code>
+            </a>
+            channel in the Cosmos community Discord and chat with developers.
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -134,15 +195,88 @@ export default {
           ...this.formData,
         }),
       }
-      fetch(this.url, options).then((_) => {
-        this.state = 'success'
-      })
+      fetch(this.url, options)
     },
   },
 }
 </script>
 
 <style lang="stylus" scoped>
+.section-videos
+  display grid
+  grid-template-columns repeat(12,1fr)
+  padding-top 224px
+  text-align center
+  .section-header
+    padding-top 24px
+    height 48px
+    font-weight 600
+    font-size 19px
+    line-height 1.263
+    letter-spacing 0.08em
+    text-transform uppercase
+    color #989BB9
+    border-top 1px solid #282B53
+    display flex
+    flex-direction column
+    grid-column 6 / span 12
+    justify-content flex-end
+    text-align left
+  .container
+    padding-top 6rem
+    max-width 1184px
+    width 100%
+    margin auto
+    display grid
+    grid-template-columns 1fr 1fr
+    gap 2rem
+    grid-column 1 / span 12
+    .frame
+      background-color rgb(22, 25, 49)
+      border-radius 0.5rem
+      padding-top 1.5625rem
+      padding-bottom 56.25% /* 16:9 */
+      height 0
+      position relative
+      grid-column 1 / span 8
+      iframe
+        border-radius 0.5rem
+        top 0
+        left 0
+        width 100%
+        height 100%
+        position absolute
+    .text
+      text-align left
+      width 373px
+      grid-column 9 / span 12
+      position relative
+      &__caption
+        font-size 16px
+        line-height 1.625
+        color #989BB9
+      &__title
+        margin-top 8px
+        font-weight bold
+        font-size 32px
+        line-height 125%
+        letter-spacing -0.025em
+        color #FFFFFF
+      &__cta
+        font-weight bold
+        font-size 16px
+        line-height 137.5%
+        display flex
+        align-items center
+        text-align center
+        border-radius 8px
+        position absolute
+        bottom 0
+        right 0
+        padding 13px 0px
+        a
+          color #40B3FF
+
 .section-hero
   margin 4rem 8rem
   display flex
@@ -220,6 +354,17 @@ export default {
           height 2rem
           fill var(--white)
 
+.section-intro
+  .container
+    margin 8rem
+    .title
+      font-weight 900
+      font-size 100px
+      line-height 112%
+      display flex
+      align-items center
+      letter-spacing -0.03em
+      color var(--white)
 
 .section-nav
   .nav
@@ -257,15 +402,65 @@ export default {
             transform scaleX(0)
             transition all 0.3s cubic-bezier(0.325, -0.075, 0, 1.65)
 
-.section-intro
-  .container
-    margin 8rem
-    .title
-      font-weight 900
-      font-size 100px
-      line-height 112%
+.section-community
+  display grid
+  grid-template-columns repeat(12,1fr)
+  padding-top 224px
+  text-align center
+  .section-header
+    padding-top 24px
+    height 48px
+    font-weight 600
+    font-size 19px
+    line-height 1.263
+    letter-spacing 0.08em
+    text-transform uppercase
+    color #989BB9
+    border-top 1px solid #282B53
+    display flex
+    flex-direction column
+    grid-column 6 / span 12
+    justify-content flex-end
+    text-align left
+  .cards
+    padding-top: 6rem;
+    max-width: 1184px;
+    width: 100%;
+    margin: auto;
+    display grid
+    grid-template-columns 1fr 1fr
+    gap 1.5rem
+    grid-column 1/span 12
+    &__item
+      padding 3rem
+      background linear-gradient(256.92deg, #120018 0%, #121435 100%)
+      box-shadow 0px 15px 33px rgba(0, 3, 66, 0.11), 0px 6px 12px rgba(0, 0, 0, 0.06), 0px 0px 1px rgba(0, 0, 0, 0.07)
+      border-radius 1.25rem
       display flex
-      align-items center
-      letter-spacing -0.03em
+      flex-direction column
       color var(--white)
+      text-align left
+      height 338px
+      &:first-child
+        background: linear-gradient(256.92deg, #121435 0%, #030419 100%)
+      &__caption
+        font-weight 600
+        font-size 16px
+        line-height 1.375
+        letter-spacing 0.08em
+        text-transform uppercase
+        color #989BB9
+      &__title
+        margin-top 12px
+        font-weight bold
+        font-size 32px
+        line-height 125%
+        letter-spacing -0.025em
+        color #FFFFFF
+      &__description
+        margin-top 12px
+        font-size 19px
+        line-height 1.579
+        letter-spacing -0.005em
+        color #989BB9
 </style>
