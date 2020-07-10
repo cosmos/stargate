@@ -64,6 +64,27 @@
       </nav>
     </div>
 
+    <div id="launchpad" class="section-launchpad section-width">
+      <div class="section-header">Cosmos SDK Launchpad</div>
+      <div class="section-left">
+        <div class="section-left__title">Not ready to upgrade?</div>
+      </div>
+      <div class="section-statement">
+        Long-term support will be provided via Launchpad, a branch of the Cosmos
+        SDK that supports the legacy version of the software, for those who wish
+        to continue using the current version.
+        <div class="section-cta">
+          <a
+            href="https://www.youtube.com/watch?v=mlq5GzQTIAM"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            Check out the branch ->
+          </a>
+        </div>
+      </div>
+    </div>
+
     <div id="roadmap" class="section-roadmap section-width">
       <div class="section-header">Roadmap</div>
       <div class="section-progress-title">{{ progressTotal }}% complete</div>
@@ -352,128 +373,6 @@ export default {
   margin-left auto
   margin-right auto
 
-.section-roadmap
-  display grid
-  grid-template-columns repeat(12,1fr)
-  padding-top 224px
-  .section-header
-    padding-top 24px
-    height 48px
-    font-weight 600
-    font-size 19px
-    line-height 1.263
-    letter-spacing 0.08em
-    text-transform uppercase
-    color #989BB9
-    border-top 1px solid #282B53
-    display flex
-    flex-direction column
-    grid-column 6 / span 12
-    justify-content flex-end
-    text-align left
-  .section-progress-title
-    margin-top 2rem
-    margin-bottom 2rem
-    font-weight 900
-    font-size 90px
-    line-height 112%
-    text-align right
-    letter-spacing -0.03em
-    color #FFFFFF
-    grid-column 6 / span 12
-    justify-content flex-end
-  .section-left
-    position relative
-    grid-column 1 / 2
-    grid-row 3 / 6
-    &__title
-      margin-top 2rem
-      grid-column 1 / span 4
-      font-weight bold
-      font-size 2.5rem
-      line-height 120%
-      letter-spacing -0.03em
-      text-align start
-      color #FFFFFF
-    &__cta
-      font-weight bold
-      font-size 19px
-      line-height 1.26
-      letter-spacing -0.005em
-      border-radius 0.375rem
-      padding 20px 0px
-      position absolute
-      bottom 0
-      left 0
-      a
-        color #40B3FF
-  .section-row
-    margin-top 2rem
-    grid-column 6/span 12
-    display grid
-    grid-auto-flow column
-    align-items center
-    box-shadow inset -140px 0px 0px rgba(0, 8, 85, 0.405)
-    background linear-gradient(95.47deg, #320B93 0%, #3B2AB7 100%)
-    color white
-    grid-auto-flow column
-    text-decoration none
-    border-radius 0.5rem
-    transition all .25s
-    .meter
-      width var(--progress-bar-width, 0)
-      background linear-gradient(95.47deg, #320B93 0%, #3B2AB7 100%)
-      border-radius 0.5rem
-      display inline-flex
-    .icon__wrapper
-      display flex
-      align-items center
-      .icon
-        grid-column-start 1
-        width 3rem
-        height 3rem
-        fill var(--white)
-        opacity 0.32
-        margin 2rem
-        display flex
-        align-items center
-        justify-content center
-        transition opacity .25s
-    .details
-      margin-right 2rem
-      grid-column-start 2
-      display grid
-      grid-auto-flow column
-      align-items center
-      gap 1rem
-      text-align left
-      justify-content space-between
-      width -webkit-fill-available
-      .title
-        font-weight 500
-        font-size 1.25rem
-        letter-spacing -0.01em
-        display block
-      .subtitle
-        font-size 16px
-        line-height 1.375
-        color rgba(255, 255, 255, 0.75)
-      .indicator
-        display flex
-        flex-direction row
-        align-items flex-end
-      .progress__wrapper
-        display flex
-        flex-direction column
-        align-items flex-end
-        .h3
-          font-size 16px
-          line-height 1.375
-          display flex
-          align-items center
-          text-align right
-          color #FFFFFF
-
 .section-hero
   margin 4rem 8rem
   display flex
@@ -598,6 +497,178 @@ export default {
             visibility hidden
             transform scaleX(0)
             transition all 300ms cubic-bezier(0.325, -0.075, 0, 1.65)
+
+.section-launchpad
+  display grid
+  grid-template-columns repeat(12,1fr)
+  padding-top 224px
+  .section-header
+    padding-top 24px
+    height 48px
+    font-weight 600
+    font-size 19px
+    line-height 1.263
+    letter-spacing 0.08em
+    text-transform uppercase
+    color #989BB9
+    border-top 1px solid #282B53
+    display flex
+    flex-direction column
+    grid-column 6 / span 12
+    justify-content flex-end
+    text-align left
+  .section-left
+    grid-column 1/5
+    grid-row 2
+    &__title
+      margin-top 3rem
+      font-weight bold
+      font-size 40px
+      line-height 120%
+      letter-spacing -0.03em
+      color #FFFFFF
+      text-align start
+  .section-statement
+    margin-top 3rem
+    grid-column 6/11
+    font-size 23px
+    line-height 1.565
+    letter-spacing -0.01em
+    color #CFD1E7
+    text-align initial
+  .section-cta
+    margin-top 2.25rem
+    font-weight bold
+    font-size 19px
+    line-height 1.263
+    letter-spacing -0.005em
+    border-radius 6px
+    a
+      color #40B3FF
+
+.section-roadmap
+  display grid
+  grid-template-columns repeat(12,1fr)
+  padding-top 224px
+  .section-header
+    padding-top 24px
+    height 48px
+    font-weight 600
+    font-size 19px
+    line-height 1.263
+    letter-spacing 0.08em
+    text-transform uppercase
+    color #989BB9
+    border-top 1px solid #282B53
+    display flex
+    flex-direction column
+    grid-column 6 / span 12
+    justify-content flex-end
+    text-align left
+  .section-progress-title
+    margin-top 2rem
+    margin-bottom 2rem
+    font-weight 900
+    font-size 90px
+    line-height 112%
+    text-align right
+    letter-spacing -0.03em
+    color #FFFFFF
+    grid-column 6 / span 12
+    justify-content flex-end
+  .section-left
+    position relative
+    grid-column 1 / 2
+    grid-row 3 / 6
+    &__title
+      margin-top 2rem
+      grid-column 1 / span 4
+      font-weight bold
+      font-size 2.5rem
+      line-height 120%
+      letter-spacing -0.03em
+      text-align start
+      color #FFFFFF
+    &__cta
+      font-weight bold
+      font-size 19px
+      line-height 1.26
+      letter-spacing -0.005em
+      border-radius 0.375rem
+      padding 20px 0px
+      position absolute
+      bottom 0
+      left 0
+      a
+        color #40B3FF
+  .section-row
+    margin-top 2rem
+    grid-column 6/span 12
+    display grid
+    grid-auto-flow column
+    align-items center
+    box-shadow inset -140px 0px 0px rgba(0, 8, 85, 0.405)
+    background linear-gradient(95.47deg, #320B93 0%, #3B2AB7 100%)
+    color white
+    grid-auto-flow column
+    text-decoration none
+    border-radius 0.5rem
+    transition all .25s
+    .meter
+      width var(--progress-bar-width, 0)
+      background linear-gradient(95.47deg, #320B93 0%, #3B2AB7 100%)
+      border-radius 0.5rem
+      display inline-flex
+    .icon__wrapper
+      display flex
+      align-items center
+      .icon
+        grid-column-start 1
+        width 3rem
+        height 3rem
+        fill var(--white)
+        opacity 0.32
+        margin 2rem
+        display flex
+        align-items center
+        justify-content center
+        transition opacity .25s
+    .details
+      margin-right 2rem
+      grid-column-start 2
+      display grid
+      grid-auto-flow column
+      align-items center
+      gap 1rem
+      text-align left
+      justify-content space-between
+      width -webkit-fill-available
+      width -moz-available
+      .title
+        font-weight 500
+        font-size 1.25rem
+        letter-spacing -0.01em
+        display block
+      .subtitle
+        font-size 16px
+        line-height 1.375
+        color rgba(255, 255, 255, 0.75)
+      .indicator
+        display flex
+        flex-direction row
+        align-items flex-end
+      .progress__wrapper
+        display flex
+        flex-direction column
+        align-items flex-end
+        .h3
+          font-size 16px
+          line-height 1.375
+          display flex
+          align-items center
+          text-align right
+          color #FFFFFF
+
 
 .section-contributors
   display grid
