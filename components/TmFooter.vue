@@ -145,6 +145,7 @@ export default {
 
 <style lang="stylus" scoped>
 footer
+  margin-top 8rem
   display flex
   justify-content center
   align-items center
