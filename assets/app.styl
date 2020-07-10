@@ -1,0 +1,41 @@
+// variables
+:root
+  --white #FFFFFF
+  --link hsl(233, 96%, 65%)
+
+@font-face
+    font-family 'JetBrains Mono'
+    src url('https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/web/eot/JetBrainsMono-Regular.eot') format('embedded-opentype'),
+         url('https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/web/woff2/JetBrainsMono-Regular.woff2') format('woff2'),
+         url('https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/web/woff/JetBrainsMono-Regular.woff') format('woff'),
+         url('https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/ttf/JetBrainsMono-Regular.ttf') format('truetype')
+    font-weight normal
+    font-style normal
+
+html
+  font-family "Inter", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif
+  -ms-text-size-adjust 100%
+  -webkit-text-size-adjust 100%
+  -moz-osx-font-smoothing grayscale
+  -webkit-font-smoothing antialiased
+  text-rendering optimizeLegibility
+  background-color #030419
+  scroll-behavior smooth
+
+*,
+*::before,
+*::after
+  box-sizing border-box
+  margin 0
+
+a
+  color var(--link)
+  text-decoration none
+  cursor pointer
+  &:hover
+    color var(--hover)
+
+code
+  -webkit-font-feature-settings "liga" on, "calt" on
+  font-family "JetBrains Mono", "Menlo", "Monaco", "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace
