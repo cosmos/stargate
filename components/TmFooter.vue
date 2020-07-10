@@ -172,6 +172,10 @@ footer
       text-align center
       &__item
         margin 0.75rem
+        &:hover svg,
+        &:focus svg
+          transition fill .15s ease-out
+          fill #FFF
     .smallprint
       margin-top 3rem
       font-size 0.8125rem
