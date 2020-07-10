@@ -64,29 +64,52 @@
       </nav>
     </div>
 
-    <!-- <div id="intro" class="section-intro">
-      <div class="container">
-        <h1 class="title">A new era for Cosmos</h1>
+    <div id="roadmap" class="section-roadmap section-width">
+      <div class="section-header">Roadmap</div>
+      <div class="section-progress-title">{{ progressTotal }}% complete</div>
+      <div class="section-left">
+        <div class="section-left__title">Milestones</div>
+        <div class="section-left__cta">
+          <a
+            href="https://www.youtube.com/watch?v=mlq5GzQTIAM"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            View on GitHub ->
+          </a>
+        </div>
       </div>
+      <a
+        v-for="item in milestoneList"
+        :key="item.url"
+        :href="item.url"
+        target="_blank"
+        rel="noreferrer noopener"
+        class="section-row"
+      >
+        <div
+          class="meter"
+          :style="{ '--progress-bar-width': `${item.progress}%` }"
+        >
+          <div class="icon__wrapper">
+            <div class="icon">
+              <component :is="`icon-${item.logo}`" />
+            </div>
+          </div>
+          <div class="details">
+            <div class="text">
+              <div class="title">{{ item.title }}</div>
+              <div class="subtitle">{{ item.repo }}</div>
+            </div>
+            <div class="indicator">
+              <div v-if="item.progress" class="progress__wrapper">
+                <div class="h3">{{ item.progress }}% complete</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
     </div>
-
-    <div id="features" class="section-features">
-      <div class="container">
-        <h1 class="title">What's new?</h1>
-      </div>
-    </div>
-
-    <div id="prepare" class="section-prepare">
-      <div class="container">
-        <h1 class="title">Get set for launch</h1>
-      </div>
-    </div>
-
-    <div id="roadmap" class="section-roadmap">
-      <div class="container">
-        <h1 class="title">85% complete</h1>
-      </div>
-    </div> -->
 
     <div id="contributors" class="section-contributors">
       <div class="section-header">Contributors</div>
@@ -165,13 +188,12 @@
 
     <div id="videos" class="section-videos">
       <div class="section-header">Videos</div>
-      <div class="container">
+      <div class="container section-width">
         <div class="frame">
           <iframe
             src="https://www.youtube.com/embed/mlq5GzQTIAM?autoplay=0&controls=1&rel=0&modestbranding=1&fs=1&enablejsapi=1"
             frameborder="0"
-            allow="accelerometer; autoplay; encrypted-media;
-          gyroscope; picture-in-picture"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
           />
         </div>
@@ -197,7 +219,7 @@
 
     <div id="community" class="section-community">
       <div class="section-header">Community</div>
-      <div class="cards">
+      <div class="cards section-width">
         <div class="cards__item">
           <div class="cards__item__caption">connect</div>
           <div class="cards__item__title">Join the community</div>
@@ -229,11 +251,16 @@
 <script>
 import querystring from 'querystring'
 import moment from 'moment'
+import axios from 'axios'
 import Logo from '~/components/Logo.vue'
+import IconIbc from '~/components/IconIbc.vue'
+import IconSdk from '~/components/IconSdk.vue'
 
 export default {
   components: {
     Logo,
+    IconIbc,
+    IconSdk,
   },
   data() {
     return {
@@ -246,6 +273,12 @@ export default {
         guid: '6ca22b31-4124-e926-cf4f-272ff9f44ec3',
         _: '1594145875469',
       },
+      milestoneList: [],
+      sources: [
+        ['cosmos/cosmos-sdk', 25, 'sdk', 'Cosmos SDK 0.40'],
+        ['tendermint/tendermint', 27, 'sdk', 'Tendermint Core 0.34'], // TODO: fix ibc-core svg
+        ['cosmos/cosmos-sdk', 21, 'ibc', 'Cosmos SDK – IBC 1.0 Milestone'],
+      ],
     }
   },
   computed: {
@@ -259,6 +292,19 @@ export default {
       // return moment('20200729', 'YYYYMMDD').fromNow()
       return b.diff(a, 'days')
     },
+    progressTotal() {
+      const progressSum = this.milestoneList
+        .map((i) => Math.floor(i.progress))
+        .reduce((a, b) => a + b, 0)
+      const percentage = (progressSum / 300) * 100
+      return percentage
+    },
+  },
+  mounted() {
+    this.sources.forEach(async (source) => {
+      const milestone = await this.getMilestone.apply(null, source)
+      this.milestoneList.push(milestone)
+    })
   },
   methods: {
     actionSubmitEmail() {
@@ -275,19 +321,41 @@ export default {
       }
       fetch(this.url, options)
     },
+    async getMilestone(repo, id, logo, defaultTitle, defaultProgress) {
+      const url = `https://github.com/${repo}/milestone/${id}`
+      try {
+        const api = `https://api.github.com/repos/${repo}/milestones/${id}`
+        const m = (await axios.get(api)).data
+        const title = m.title
+        const open = parseInt(m.open_issues)
+        const closed = parseInt(m.closed_issues)
+        const progress = Math.floor((100 * closed) / (open + closed)).toFixed(0)
+        return { title, repo, progress, logo, url }
+      } catch {
+        return {
+          repo,
+          logo,
+          url,
+          title: defaultTitle,
+          progress: null,
+        }
+      }
+    },
   },
 }
 </script>
 
 <style lang="stylus" scoped>
-.section-contributors
+.section-width
+  max-width 1184px
+  width 100%
+  margin-left auto
+  margin-right auto
+
+.section-roadmap
   display grid
   grid-template-columns repeat(12,1fr)
   padding-top 224px
-  text-align center
-  max-width 1184px
-  width 100%
-  margin auto
   .section-header
     padding-top 24px
     height 48px
@@ -300,25 +368,111 @@ export default {
     border-top 1px solid #282B53
     display flex
     flex-direction column
-    grid-column 1 / span 12
+    grid-column 6 / span 12
+    justify-content flex-end
     text-align left
-  .section-title
-    margin-top 48px
-    grid-column 1/4
+  .section-progress-title
+    margin-top 2rem
+    margin-bottom 2rem
     font-weight 900
-    font-size 82px
-    line-height 1.121
-    letter-spacing -0.025em
+    font-size 90px
+    line-height 112%
+    text-align right
+    letter-spacing -0.03em
     color #FFFFFF
-    text-align left
-  .section-statement
-    margin-top 154px
-    margin-left 2rem
-    grid-column 7/12
-    font-size: 23px
-    line-height 1.565
-    letter-spacing -0.01em
-    color #CFD1E7
+    grid-column 6 / span 12
+    justify-content flex-end
+  .section-left
+    position relative
+    grid-column 1 / 2
+    grid-row 3 / 6
+    &__title
+      margin-top 2rem
+      grid-column 1 / span 4
+      font-weight bold
+      font-size 2.5rem
+      line-height 120%
+      letter-spacing -0.03em
+      text-align start
+      color #FFFFFF
+    &__cta
+      font-weight bold
+      font-size 19px
+      line-height 1.26
+      letter-spacing -0.005em
+      border-radius 0.375rem
+      padding 20px 0px
+      position absolute
+      bottom 0
+      left 0
+      a
+        color #40B3FF
+  .section-row
+    margin-top 2rem
+    grid-column 6/span 12
+    display grid
+    grid-auto-flow column
+    align-items center
+    box-shadow inset -140px 0px 0px rgba(0, 8, 85, 0.405)
+    background linear-gradient(95.47deg, #320B93 0%, #3B2AB7 100%)
+    color white
+    grid-auto-flow column
+    text-decoration none
+    border-radius 0.5rem
+    transition all .25s
+    .meter
+      width var(--progress-bar-width, 0)
+      background linear-gradient(95.47deg, #320B93 0%, #3B2AB7 100%)
+      border-radius 0.5rem
+      display inline-flex
+    .icon__wrapper
+      display flex
+      align-items center
+      .icon
+        grid-column-start 1
+        width 3rem
+        height 3rem
+        fill var(--white)
+        opacity 0.32
+        margin 2rem
+        display flex
+        align-items center
+        justify-content center
+        transition opacity .25s
+    .details
+      margin-right 2rem
+      grid-column-start 2
+      display grid
+      grid-auto-flow column
+      align-items center
+      gap 1rem
+      text-align left
+      justify-content space-between
+      width -webkit-fill-available
+      .title
+        font-weight 500
+        font-size 1.25rem
+        letter-spacing -0.01em
+        display block
+      .subtitle
+        font-size 16px
+        line-height 1.375
+        color rgba(255, 255, 255, 0.75)
+      .indicator
+        display flex
+        flex-direction row
+        align-items flex-end
+      .progress__wrapper
+        display flex
+        flex-direction column
+        align-items flex-end
+        .h3
+          font-size 16px
+          line-height 1.375
+          display flex
+          align-items center
+          text-align right
+          color #FFFFFF
 
 .section-hero
   margin 4rem 8rem
@@ -371,6 +525,12 @@ export default {
         display flex
         position relative
         align-items center
+        &__icon
+          max-width 20%
+          position absolute
+          right 0
+          height 2rem
+          fill var(--white)
         &__input
           outline none
           max-width 360px
@@ -390,12 +550,6 @@ export default {
           color #989BB9
           opacity 0.7
           transition all 0.15s
-        &__icon
-          max-width 20%
-          position absolute
-          right 0
-          height 2rem
-          fill var(--white)
 
 .section-intro
   .container
@@ -444,6 +598,47 @@ export default {
             visibility hidden
             transform scaleX(0)
             transition all 300ms cubic-bezier(0.325, -0.075, 0, 1.65)
+
+.section-contributors
+  display grid
+  grid-template-columns repeat(12,1fr)
+  padding-top 224px
+  text-align center
+  width 1184px
+  margin-left auto
+  margin-right auto
+  .section-header
+    padding-top 24px
+    height 48px
+    font-weight 600
+    font-size 19px
+    line-height 1.263
+    letter-spacing 0.08em
+    text-transform uppercase
+    color #989BB9
+    border-top 1px solid #282B53
+    display flex
+    flex-direction column
+    grid-column 1 / span 12
+    text-align left
+  .section-title
+    margin-top 48px
+    grid-column 1/4
+    font-weight 900
+    font-size 82px
+    line-height 1.121
+    letter-spacing -0.025em
+    color #FFFFFF
+    text-align left
+  .section-statement
+    margin-top 154px
+    margin-left 2rem
+    grid-column 7/12
+    font-size: 23px
+    line-height 1.565
+    letter-spacing -0.01em
+    color #CFD1E7
+    text-align initial
 
 .section-articles
   display grid
@@ -538,9 +733,6 @@ export default {
     text-align left
   .container
     padding-top 6rem
-    max-width 1184px
-    width 100%
-    margin auto
     display grid
     grid-template-columns 1fr 1fr
     gap 2rem
@@ -613,9 +805,6 @@ export default {
     text-align left
   .cards
     padding-top 6rem
-    max-width 1184px
-    width 100%
-    margin auto
     display grid
     grid-template-columns 1fr 1fr
     gap 1.5rem
@@ -652,4 +841,16 @@ export default {
         line-height 1.579
         letter-spacing -0.005em
         color #989BB9
+
+@media screen and (max-width: 600px)
+  .section-roadmap
+    .section-row
+      .icon__wrapper
+        .icon
+          display none
+      .details
+        margin-left: 1rem;
+        margin-right: 1rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
 </style>

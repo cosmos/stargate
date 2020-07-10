@@ -13,6 +13,7 @@
     "lint": "npm run lint:js"
   },
   "dependencies": {
+    "axios": "^0.19.2",
     "moment": "^2.27.0",
     "normalize.css": "^8.0.1",
     "nuxt": "^2.13.0",
