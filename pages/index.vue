@@ -135,7 +135,7 @@
             target="_blank"
             rel="noreferrer noopener"
           >
-            Check out the branch ->
+            Check out the branch &#8594;
           </a>
         </div>
       </div>
@@ -152,7 +152,7 @@
             target="_blank"
             rel="noreferrer noopener"
           >
-            View on GitHub ->
+            View on GitHub &#8594;
           </a>
         </div>
       </div>
@@ -287,7 +287,7 @@
               target="_blank"
               rel="noreferrer noopener"
             >
-              Watch on YouTube ->
+              Watch on YouTube &#8594;
             </a>
           </div>
         </div>
