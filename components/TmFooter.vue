@@ -151,6 +151,7 @@ footer
   align-items center
   text-align center
   color var(--white)
+  background linear-gradient(180deg, #000000 0%, #030419 100%)
   .container
     margin 6rem 8rem
     max-width 1184px
