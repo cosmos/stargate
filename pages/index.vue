@@ -64,6 +64,10 @@
       </nav>
     </div>
 
+    <div id="prepare" class="section-prepare section-width">
+      <div class="section-header">Prepare</div>
+    </div>
+
     <div id="launchpad" class="section-launchpad section-width">
       <div class="section-header">Cosmos SDK Launchpad</div>
       <div class="section-left">
@@ -132,7 +136,7 @@
       </a>
     </div>
 
-    <div id="contributors" class="section-contributors">
+    <div id="contributors" class="section-contributors section-width">
       <div class="section-header">Contributors</div>
       <div class="section-title">Core Developers</div>
       <div class="section-statement">
@@ -142,7 +146,7 @@
       </div>
     </div>
 
-    <div id="articles" class="section-articles">
+    <div id="articles" class="section-articles section-width">
       <div class="section-title">Learn more about Stargate</div>
       <div class="section-header">3 Articles</div>
       <div class="articles-wrapper">
@@ -368,10 +372,29 @@ export default {
 
 <style lang="stylus" scoped>
 .section-width
-  max-width 1184px
+  display grid
+  grid-template-columns repeat(12, 1fr)
+  max-width 74rem
   width 100%
-  margin-left auto
-  margin-right auto
+  margin 0 auto
+  padding 8rem 0
+
+.section-prepare
+  text-align center
+  .section-header
+    height 48px
+    font-weight 600
+    font-size 19px
+    line-height 1.263
+    letter-spacing 0.08em
+    text-transform uppercase
+    color #989BB9
+    border-top 1px solid #282B53
+    display flex
+    flex-direction column
+    grid-column 1 / span 12
+    justify-content flex-end
+    text-align left
 
 .section-hero
   margin 4rem 8rem
@@ -463,18 +486,35 @@ export default {
       color var(--white)
 
 .section-nav
+  position sticky
+  position -webkit-sticky
+  top 0
+  width 100%
+  z-index 10
+  backdrop-filter blur(10px)
+  -webkit-backdrop-filter blur(10px)
+  background-color transparent
+  transition background-color 300ms ease 0s;
   .nav
     display block
     margin-top 167px
     max-width 837px
     width 100%
     margin auto
+    transition height 250ms ease 0s
+    height 80px
+    position relative
+    box-shadow none
+    white-space nowrap
     &__list
-      display grid
       grid-template-columns repeat(auto-fit, minmax(120px, 1fr))
-      align-items center
       text-align center
       list-style none
+      display flex
+      align-items center
+      justify-content center
+      height 100%
+      transition transform 200ms ease 0s
       &-item
         margin 2rem
         color var(--white)
@@ -489,8 +529,7 @@ export default {
             position absolute
             width 100%
             height 2px
-            bottom -1em
-            padding 0 0.2em
+            bottom -1rem
             z-index -1
             border-radius 4px
             background-color var(--link)
@@ -499,11 +538,7 @@ export default {
             transition all 300ms cubic-bezier(0.325, -0.075, 0, 1.65)
 
 .section-launchpad
-  display grid
-  grid-template-columns repeat(12,1fr)
-  padding-top 224px
   .section-header
-    padding-top 24px
     height 48px
     font-weight 600
     font-size 19px
@@ -547,11 +582,7 @@ export default {
       color #40B3FF
 
 .section-roadmap
-  display grid
-  grid-template-columns repeat(12,1fr)
-  padding-top 224px
   .section-header
-    padding-top 24px
     height 48px
     font-weight 600
     font-size 19px
@@ -669,17 +700,15 @@ export default {
           text-align right
           color #FFFFFF
 
-
 .section-contributors
   display grid
   grid-template-columns repeat(12,1fr)
-  padding-top 224px
   text-align center
   width 1184px
   margin-left auto
   margin-right auto
   .section-header
-    padding-top 24px
+    padding-top 1.5rem
     height 48px
     font-weight 600
     font-size 19px
@@ -690,7 +719,7 @@ export default {
     border-top 1px solid #282B53
     display flex
     flex-direction column
-    grid-column 1 / span 12
+    grid-column 6 / span 12
     text-align left
   .section-title
     margin-top 48px
@@ -712,10 +741,6 @@ export default {
     text-align initial
 
 .section-articles
-  display grid
-  grid-template-columns repeat(12,1fr)
-  padding-top 224px
-  text-align center
   .section-title
     font-weight 900
     font-size 3.625rem
@@ -724,9 +749,8 @@ export default {
     color #FFFFFF
     width 379px
     text-align left
-    grid-column span 1 / 4
+    grid-column 1 / 4
   .section-header
-    padding-top 24px
     height 48px
     font-weight 600
     font-size 19px
@@ -785,10 +809,8 @@ export default {
 .section-videos
   display grid
   grid-template-columns repeat(12,1fr)
-  padding-top 224px
   text-align center
   .section-header
-    padding-top 24px
     height 48px
     font-weight 600
     font-size 19px
@@ -857,10 +879,8 @@ export default {
 .section-community
   display grid
   grid-template-columns repeat(12,1fr)
-  padding-top 224px
   text-align center
   .section-header
-    padding-top 24px
     height 48px
     font-weight 600
     font-size 19px
@@ -912,6 +932,11 @@ export default {
         line-height 1.579
         letter-spacing -0.005em
         color #989BB9
+
+// TODO: temp fix for moz
+@supports not (backdrop-filter: none)
+  .section-nav
+    background-color rgba(255, 255, 255, 0.1)
 
 @media screen and (max-width: 600px)
   .section-roadmap
