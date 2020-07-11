@@ -66,6 +66,58 @@
 
     <div id="prepare" class="section-prepare section-width">
       <div class="section-header">Prepare</div>
+      <div class="section-title">Get set for testnets</div>
+      <div class="section-statement">
+        The following services will be affected by the upgrades with Stargate.
+        Make sure to schedule time in August for integration testing on the
+        testnet. More detailed instructions & guidelines on how services can
+        prepare for the upgrade will be published in August.
+      </div>
+      <div class="grid-container">
+        <div class="grid-item">
+          <div class="grid-item__icon">
+            <icon-mask-oval />
+          </div>
+          <div class="grid-item__title">Validators</div>
+          <div class="grid-item__description">
+            Validators of chains that will implement Stargate upgrades -
+            beginning with the Cosmos Hub - should prepare by helping run
+            Stargate testnets in the coming weeks.
+          </div>
+        </div>
+        <div class="grid-item">
+          <div class="grid-item__icon">
+            <icon-mask-oval />
+          </div>
+          <div class="grid-item__title">Wallets & Explorers</div>
+          <div class="grid-item__description">
+            This release will bring breaking changes to all wallets and
+            explorers of chains that will implement the Stargate Upgrade
+            (including Cosmos Hub).
+          </div>
+        </div>
+        <div class="grid-item">
+          <div class="grid-item__icon">
+            <icon-mask-oval />
+          </div>
+          <div class="grid-item__title">Zone Developers</div>
+          <div class="grid-item__description">
+            If you're developing a blockchain with Cosmos SDK, please prepare to
+            join the Stargate testnet. More detailed guides to follow shortly.
+          </div>
+        </div>
+        <div class="grid-item">
+          <div class="grid-item__icon">
+            <icon-mask-oval />
+          </div>
+          <div class="grid-item__title">Exchanges</div>
+          <div class="grid-item__description">
+            Make sure your signing and querying software is ready for the
+            Stargate upgrade by testing the features and your infrastructure
+            ahead of time, using the testnet.
+          </div>
+        </div>
+      </div>
     </div>
 
     <div id="launchpad" class="section-launchpad section-width">
@@ -395,6 +447,51 @@ export default {
     grid-column 1 / span 12
     justify-content flex-end
     text-align left
+  .section-title
+    grid-column 1 / span 5
+    margin-top 4.25rem
+    font-weight 900
+    font-size 82px
+    line-height 1.121
+    letter-spacing -0.025em
+    color #FFFFFF
+    text-align left
+    width 677px
+  .section-statement
+    grid-column 5 / span 11
+    grid-row 3
+    width 636px
+    font-size 23px
+    line-height 1.565
+    letter-spacing -0.01em
+    color #CFD1E7
+    text-align left
+  .grid-container
+    margin-top 136px
+    display grid
+    grid-template-columns repeat(2, 1fr)
+    gap 6rem
+    grid-column 1 / span 12
+    grid-row 4
+    color white
+    .grid-item
+      text-align left
+      &__icon
+        width 48px
+        height 48px
+      &__title
+        margin-top 24px
+        font-weight bold
+        font-size 40px
+        line-height 120%
+        letter-spacing -0.03em
+        color #FFFFFF
+      &__description
+        margin-top 16px
+        font-size 19px
+        line-height:1.579
+        letter-spacing -0.005em
+        color #989BB9
 
 .section-hero
   margin 4rem 8rem
