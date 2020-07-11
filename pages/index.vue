@@ -64,6 +64,28 @@
       </nav>
     </div>
 
+    <div id="intro" class="section-intro section-width">
+      <div class="section-title">A new era for Cosmos</div>
+      <div class="section-subtitle">
+        The biggest event in the ecosystem since the launch of the Cosmos Hub.
+      </div>
+      <div class="section-statement">
+        Stargate is a set of upgrades that complete the original roadmap laid
+        out in the Cosmos Whitepaper. For the first time ever, Cosmos
+        blockchains will be able to connect with each other using the first
+        standardized protocol for inter-blockchain communication (IBC).
+      </div>
+      <div class="section-cta">
+        <a
+          href="https://www.youtube.com/watch?v=mlq5GzQTIAM"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          Read more about Stargate &#8594;
+        </a>
+      </div>
+    </div>
+
     <div id="features" class="section-features section-width">
       <div class="section-header">Features</div>
       <div class="section-title">What’s new?</div>
@@ -460,7 +482,7 @@ export default {
       const progressSum = this.milestoneList
         .map((i) => Math.floor(i.progress))
         .reduce((a, b) => a + b, 0)
-      const percentage = (progressSum / 300) * 100
+      const percentage = ((progressSum / 300) * 100).toFixed(0)
       return percentage
     },
   },
@@ -517,6 +539,46 @@ export default {
   width 100%
   margin 0 auto
   padding 8rem 0
+
+.section-intro
+  .section-title
+    grid-column 1 / span 5
+    font-weight 900
+    font-size 100px
+    line-height 112%
+    letter-spacing -0.03em
+    color #FFFFFF
+    width 677px
+  .section-subtitle
+    margin-top 168px
+    grid-row 1
+    grid-column 6 / span 12
+    font-size 2rem
+    line-height 125%
+    letter-spacing -0.02em
+    color #FFFFFF
+  .section-statement
+    margin-top 3rem
+    grid-column 6 / span 12
+    grid-row 2
+    width 636px
+    font-size 23px
+    line-height 1.565
+    letter-spacing -0.01em
+    color #CFD1E7
+    text-align left
+  .section-cta
+    grid-row 3
+    margin-top 3rem
+    grid-column 6 / span 12
+    font-weight bold
+    font-size 23px
+    line-height 121.7%
+    letter-spacing -0.01em
+    border-radius 6px
+    padding 22px 0
+    a
+      color #40B3FF
 
 .section-features
   text-align left
@@ -624,7 +686,6 @@ export default {
         color #989BB9
 
 .section-prepare
-  text-align center
   .section-header
     height 48px
     font-weight 600
@@ -990,12 +1051,6 @@ export default {
           color #FFFFFF
 
 .section-contributors
-  display grid
-  grid-template-columns repeat(12,1fr)
-  text-align center
-  width 1184px
-  margin-left auto
-  margin-right auto
   .section-header
     padding-top 1.5rem
     height 48px
