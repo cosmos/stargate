@@ -23,7 +23,7 @@
         </div>
         <div class="nav__item">
           <a
-            href="https://gaia.cosmos.network"
+            href="https://hub.cosmos.network"
             target="blank_"
             rel="noreferrer noopener"
             >Cosmos Hub</a

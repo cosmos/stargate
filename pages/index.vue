@@ -64,6 +64,92 @@
       </nav>
     </div>
 
+    <div id="features" class="section-features section-width">
+      <div class="section-header">Features</div>
+      <div class="section-title">What’s new?</div>
+      <div class="section-statement">
+        These upgrades bring significant performance improvements to blockchains
+        built with Cosmos SDK. Discover all the amazing features of the Stargate
+        upgrade below.
+      </div>
+      <div class="data-container">
+        <div class="data-item">
+          <div class="data-item__overline">Enabling</div>
+          <div class="data-item__heading">IBC</div>
+        </div>
+        <div class="data-item">
+          <div class="data-item__overline">Efficiency gains up to</div>
+          <div class="data-item__heading">100x</div>
+        </div>
+        <div class="data-item">
+          <div class="data-item__overline">Faster full node sync</div>
+          <div class="data-item__heading">96x</div>
+        </div>
+        <div class="data-item">
+          <div class="data-item__overline">Faster upgrades</div>
+          <div class="data-item__heading">20x</div>
+        </div>
+      </div>
+      <div class="ibc-item">
+        <div class="ibc-item__icon">
+          <icon-ibc-cropped />
+        </div>
+        <div class="ibc-item__title">Inter-Blockchain Communication</div>
+        <div class="ibc-item__description">
+          Cosmos SDK-based blockchains can incorporate the Inter-Blockchain
+          Communication (IBC) Protocol to communicate with other compatible
+          blockchains. The Cosmos Hub is the first blockchain to support IBC in
+          production.
+        </div>
+      </div>
+      <div class="grid-container">
+        <div class="grid-item">
+          <div class="grid-item__icon">
+            <icon-countdown />
+          </div>
+          <div class="grid-item__title">State Sync</div>
+          <div class="grid-item__description">
+            For blockchains built on top of Tendermint Core, the full-node
+            synchronization process will be reduced from 2 days to just 30 mins
+            or less.
+          </div>
+        </div>
+        <div class="grid-item">
+          <div class="grid-item__icon">
+            <icon-repeat />
+          </div>
+          <div class="grid-item__title">Automatic upgrades</div>
+          <div class="grid-item__description">
+            The upgrade module facilitates the upgrade process of chains built
+            with Cosmos SDK. Migration from one version to the next will take
+            little to no time, as opposed to one hour or more before.
+          </div>
+        </div>
+        <div class="grid-item">
+          <div class="grid-item__icon">
+            <icon-mask-oval />
+          </div>
+          <div class="grid-item__title">Full-featured Light Clients</div>
+          <div class="grid-item__description">
+            Protobuf brings performance improvements and developer acceleration
+            to Cosmos SDK-based blockchains with efficiency gains of 10-100x,
+            and wider language support.
+          </div>
+        </div>
+        <div class="grid-item">
+          <div class="grid-item__icon">
+            <icon-speedometer />
+          </div>
+          <div class="grid-item__title">Transition from Amino to Protobuf</div>
+          <div class="grid-item__description">
+            Protobuf brings performance improvements and developer acceleration
+            to Cosmos SDK-based blockchains with efficiency gains of 10-100x,
+            and wider language support.
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div id="prepare" class="section-prepare section-width">
       <div class="section-header">Prepare</div>
       <div class="section-title">Get set for testnets</div>
@@ -78,43 +164,44 @@
           <div class="grid-item__icon">
             <icon-mask-oval />
           </div>
-          <div class="grid-item__title">Validators</div>
+          <div class="grid-item__title">State Sync</div>
           <div class="grid-item__description">
-            Validators of chains that will implement Stargate upgrades -
-            beginning with the Cosmos Hub - should prepare by helping run
-            Stargate testnets in the coming weeks.
+            For blockchains built on top of Tendermint Core, the full-node
+            synchronization process will be reduced from 2 days to just 30 mins
+            or less.
           </div>
         </div>
         <div class="grid-item">
           <div class="grid-item__icon">
             <icon-mask-oval />
           </div>
-          <div class="grid-item__title">Wallets & Explorers</div>
+          <div class="grid-item__title">Automatic upgrades</div>
           <div class="grid-item__description">
-            This release will bring breaking changes to all wallets and
-            explorers of chains that will implement the Stargate Upgrade
-            (including Cosmos Hub).
+            The upgrade module facilitates the upgrade process of chains built
+            with Cosmos SDK. Migration from one version to the next will take
+            little to no time, as opposed to one hour or more before.
           </div>
         </div>
         <div class="grid-item">
           <div class="grid-item__icon">
             <icon-mask-oval />
           </div>
-          <div class="grid-item__title">Zone Developers</div>
+          <div class="grid-item__title">Full-featured Light Clients</div>
           <div class="grid-item__description">
-            If you're developing a blockchain with Cosmos SDK, please prepare to
-            join the Stargate testnet. More detailed guides to follow shortly.
+            Protobuf brings performance improvements and developer acceleration
+            to Cosmos SDK-based blockchains with efficiency gains of 10-100x,
+            and wider language support.
           </div>
         </div>
         <div class="grid-item">
           <div class="grid-item__icon">
             <icon-mask-oval />
           </div>
-          <div class="grid-item__title">Exchanges</div>
+          <div class="grid-item__title">Transition from Amino to Protobuf</div>
           <div class="grid-item__description">
-            Make sure your signing and querying software is ready for the
-            Stargate upgrade by testing the features and your infrastructure
-            ahead of time, using the testnet.
+            Protobuf brings performance improvements and developer acceleration
+            to Cosmos SDK-based blockchains with efficiency gains of 10-100x,
+            and wider language support.
           </div>
         </div>
       </div>
@@ -233,10 +320,10 @@
             </span>
             <div class="articles-item__date">June 23</div>
             <div class="articles-item__title">
-              Tendermint 0.34, Protocol Buffers, and You
+              Tendermint Ø.34, Protocol Buffers, and You
             </div>
             <div class="articles-item__description">
-              The upcoming Tendermint 0.34 release contains a major change to
+              The upcoming Tendermint Ø.34 release contains a major change to
               the way we serialize and encode data. Here’s what you need to
               know.
             </div>
@@ -430,6 +517,111 @@ export default {
   width 100%
   margin 0 auto
   padding 8rem 0
+
+.section-features
+  text-align left
+  .section-header
+    grid-row 1
+    height 48px
+    font-weight 600
+    font-size 19px
+    line-height 1.263
+    letter-spacing 0.08em
+    text-transform uppercase
+    color #989BB9
+    border-top 1px solid #282B53
+    display flex
+    flex-direction column
+    grid-column 6 / span 12
+    justify-content flex-end
+  .section-title
+    grid-row 2
+    margin-top 2rem
+    margin-bottom 2rem
+    font-weight 900
+    font-size 82px
+    line-height 1.121
+    letter-spacing -0.025em
+    color #FFFFFF
+    grid-column 6 / 12
+    text-align left
+  .section-statement
+    grid-row 3
+    grid-column 6 / 11
+    width 636px
+    font-size 23px
+    line-height 1.565
+    letter-spacing -0.01em
+    color #CFD1E7
+  .data-container
+    grid-row 4
+    margin-top 96px
+    display grid
+    flex-direction row
+    grid-column 1/13
+    grid-template-columns repeat(4, 1fr)
+    gap 2rem
+    .data-item
+      &__overline
+        margin-top 16px
+        font-weight 600
+        font-size 16px
+        line-height 137.5%
+        letter-spacing 0.08em
+        text-transform uppercase
+        color #989BB9
+      &__heading
+        margin-top 16px
+        font-weight bold
+        font-size 58px
+        line-height 117.2%
+        letter-spacing -0.03em
+        color #CCD1FF
+  .ibc-item
+    grid-column 9 / span 12
+    grid-row 5
+    margin 4rem 0
+    &__icon
+      width 48px
+      height 48px
+    &__title
+      margin-top 24px
+      font-weight bold
+      font-size 40px
+      line-height 120%
+      letter-spacing -0.03em
+      color #FFFFFF
+    &__description
+      margin-top 16px
+      font-size 19px
+      line-height:1.579
+      letter-spacing -0.005em
+      color #989BB9
+  .grid-container
+    margin-top 8rem
+    display grid
+    grid-template-columns repeat(2, 1fr)
+    gap 6rem
+    grid-column 4 / span 12
+    grid-row 6
+    color white
+    .grid-item
+      text-align left
+      &__icon
+        width 3rem
+        height 3rem
+      &__title
+        margin-top 1.5rem
+        font-weight bold
+        font-size 1.75rem
+        line-height 1.285
+        letter-spacing -0.02em
+        color #FFFFFF
+      &__description
+        margin-top 1rem
+        font-size 1rem
+        line-height 162.5%
+        color #989BB9
 
 .section-prepare
   text-align center
