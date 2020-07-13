@@ -184,67 +184,77 @@
       <div class="grid-container">
         <div class="grid-item">
           <div class="grid-item__icon">
-            <icon-mask-oval />
+            <icon-validator />
           </div>
-          <div class="grid-item__title">State Sync</div>
+          <div class="grid-item__title">Validators</div>
           <div class="grid-item__description">
-            For blockchains built on top of Tendermint Core, the full-node
-            synchronization process will be reduced from 2 days to just 30 mins
-            or less.
+            Validators of chains that will implement Stargate upgrades -
+            beginning with the Cosmos Hub - should prepare by helping run
+            Stargate testnets in the coming weeks.
           </div>
         </div>
         <div class="grid-item">
           <div class="grid-item__icon">
-            <icon-mask-oval />
+            <icon-explore />
           </div>
-          <div class="grid-item__title">Automatic upgrades</div>
+          <div class="grid-item__title">Wallets & Explorers</div>
           <div class="grid-item__description">
-            The upgrade module facilitates the upgrade process of chains built
-            with Cosmos SDK. Migration from one version to the next will take
-            little to no time, as opposed to one hour or more before.
+            This release will bring breaking changes to all wallets and
+            explorers of chains that will implement the Stargate Upgrade
+            (including Cosmos Hub).
           </div>
         </div>
         <div class="grid-item">
           <div class="grid-item__icon">
-            <icon-mask-oval />
+            <icon-exchanges />
           </div>
-          <div class="grid-item__title">Full-featured Light Clients</div>
+          <div class="grid-item__title">Exchanges</div>
           <div class="grid-item__description">
-            Protobuf brings performance improvements and developer acceleration
-            to Cosmos SDK-based blockchains with efficiency gains of 10-100x,
-            and wider language support.
+            Make sure your signing and querying software is ready for the
+            Stargate upgrade by testing the features and your infrastructure
+            ahead of time, using the testnet.
           </div>
         </div>
         <div class="grid-item">
           <div class="grid-item__icon">
-            <icon-mask-oval />
+            <icon-sdk-hex />
           </div>
-          <div class="grid-item__title">Transition from Amino to Protobuf</div>
+          <div class="grid-item__title">Zone Developers</div>
           <div class="grid-item__description">
-            Protobuf brings performance improvements and developer acceleration
-            to Cosmos SDK-based blockchains with efficiency gains of 10-100x,
-            and wider language support.
+            If you're developing a blockchain with Cosmos SDK, please prepare to
+            join the Stargate testnet. More detailed guides to follow shortly.
           </div>
         </div>
       </div>
     </div>
 
     <div id="launchpad" class="section-launchpad section-width">
-      <div class="section-header">Cosmos SDK Launchpad</div>
+      <div class="section-header">a note for zone developers</div>
       <div class="section-left">
-        <div class="section-left__title">Not ready to upgrade?</div>
+        <div class="section-left__heading">Not ready to upgrade?</div>
+        <div class="section-left__title">Launchpad</div>
       </div>
       <div class="section-statement">
-        Long-term support will be provided via Launchpad, a branch of the Cosmos
-        SDK that supports the legacy version of the software, for those who wish
-        to continue using the current version.
+        <div class="section-statement__p">
+          Stargate involves a lot of breaking changes that may make it difficult
+          for you to upgrade, if you have already written a lot of code for
+          Cosmos SDK 0.37/0.38.
+        </div>
+        <br />
+        <div class="section-statement__p">
+          The community supports an SDK 0.39 Launchpad release that includes
+          backported bug fixes. The
+          <a v-scroll-to="'#contributors'">Cosmos development teams</a> are
+          working together to document a clean migration path from Launchpad to
+          a stable Stargate release.
+        </div>
         <div class="section-cta">
           <a
             href="https://www.youtube.com/watch?v=mlq5GzQTIAM"
             target="_blank"
             rel="noreferrer noopener"
           >
-            Check out the branch &#8594;
+            Check out the release &#8594;
           </a>
         </div>
       </div>
@@ -545,6 +555,7 @@ export default {
 .section-width
   display grid
   grid-template-columns repeat(12, 1fr)
+  // grid-column-gap 1rem
   max-width 74rem
   width 100%
   margin 0 auto
@@ -563,7 +574,7 @@ export default {
       margin-top 199px
       text-transform uppercase
       font-weight 900
-      font-size 90px
+      font-size 118px
       line-height 108.4%
       letter-spacing 0.28em
       color var(--white)
@@ -798,7 +809,7 @@ export default {
     text-align left
     max-width 677px
   .section-statement
-    grid-column 5 / span 11
+    grid-column 5 / span 12
     grid-row 3
     max-width 636px
     font-size 23px
@@ -866,6 +877,7 @@ export default {
     height 80px
     position relative
     box-shadow none
+    overflow scroll
     white-space nowrap
     &__list
       grid-template-columns repeat(auto-fit, minmax(120px, 1fr))
@@ -916,8 +928,14 @@ export default {
   .section-left
     grid-column 1/5
     grid-row 2
+    margin-top 3rem
+    &__heading
+      font-size 23px
+      line-height 121.7%
+      letter-spacing -0.01em
+      color #989BB9
     &__title
-      margin-top 3rem
+      margin-top 8px
       font-weight bold
       font-size 40px
       line-height 120%
@@ -926,16 +944,20 @@ export default {
       text-align start
   .section-statement
     margin-top 3rem
-    grid-column 6/11
+    grid-column 6/13
     font-size 23px
     line-height 1.565
     letter-spacing -0.01em
-    color #CFD1E7
+    color #989BB9
     display flex
     flex-direction column
     flex-wrap nowrap
     align-items flex-start
     justify-content left
+    &__p
+      color inherit
+      a
+        color #40B3FF
   .section-cta
     margin-top 2.25rem
     font-weight bold
@@ -1007,7 +1029,6 @@ export default {
     background linear-gradient(95.47deg, #320B93 0%, #3B2AB7 100%)
     color white
     grid-auto-flow column
-    text-decoration none
     border-radius 0.5rem
     transition all .25s
     .meter
@@ -1090,8 +1111,8 @@ export default {
   .section-statement
     margin-top 9.625rem
     margin-left 2rem
-    grid-column 7/12
-    font-size: 23px
+    grid-column 7/13
+    font-size 23px
     line-height 1.565
     letter-spacing -0.01em
     color #CFD1E7
@@ -1116,7 +1137,7 @@ export default {
     border-top 1px solid #282B53
     display flex
     flex-direction column
-    grid-column 6 / span 12
+    grid-column 6 / 12
     justify-content flex-end
     text-align left
   .section-title
@@ -1138,8 +1159,9 @@ export default {
   .content
     grid-column 6 / 12
     grid-row 2
+    margin-top -4rem
     .articles-wrapper
-      margin-top 4rem
+      // margin-top 4rem
       .articles-item
         text-align left
         padding 3rem
@@ -1258,7 +1280,7 @@ export default {
     border-top 1px solid #282B53
     display flex
     flex-direction column
-    grid-column 6 / span 12
+    grid-column 6 / 13
     justify-content flex-end
     text-align left
   .cards
@@ -1266,7 +1288,7 @@ export default {
     display grid
     grid-template-columns 1fr 1fr
     gap 2rem
-    grid-column 1 / span 12
+    grid-column 1 / 13
     &__item
       padding 3rem
       background linear-gradient(256.92deg, #120018 0%, #121435 100%)
@@ -1317,14 +1339,22 @@ export default {
 
 // @media all and (max-width: 1600px)
 // @media all and (max-width: 1400px)
-// @media all and (max-width: 1200px)
-// @media screen and (max-width: 900px)
+
+@media all and (max-width: 1200px)
+  .section-features
+    .grid-container
+      grid-column 1/span 12
+
+@media screen and (max-width: 900px)
+  .section-hero
+    .container
+      .title
+        font-size 80px
 
 @media screen and (max-width: 600px)
   .section-width
-    padding 4rem 1rem
+    padding 3rem 2.5rem
     display block
-    // margin 0 32px
 
   .section-hero
     .container
@@ -1340,9 +1370,9 @@ export default {
     .section-header
       grid-column 1 / span 12
 
-  .section-nav
-    .nav
-      display none
+  // .section-nav
+  //   .nav
+  //     display none
 
   .section-intro
     .section-title
@@ -1377,6 +1407,7 @@ export default {
       font-size 4rem
     .section-statement
       grid-column 1 / 12
+      margin-top 4rem
     .grid-container
       grid-template-columns repeat(1, 1fr)
 
@@ -1390,15 +1421,6 @@ export default {
     .section-left
       &__cta
         display none
-
-  // .section-roadmap .section-row .icon__wrapper
-  //   .icon
-  //     display none
-  //   .details
-  //     margin-left 1rem
-  //     margin-right 1rem
-  //     padding-top 1rem
-  //     padding-bottom 1rem
 
   .section-contributors
     .section-title
@@ -1418,6 +1440,7 @@ export default {
     .articles-wrapper
       grid-row 3
       grid-column 1/12
+      margin-top 4rem
 
   .section-features
     .data-container
@@ -1425,9 +1448,14 @@ export default {
     .grid-container
       grid-template-columns repeat(1, 1fr)
 
-  .section-videos .container
-    .frame, .text
-      grid-column 1/span 12
+  .section-videos
+    .container
+      .frame
+        grid-column 1/span 12
+      .text
+        grid-column 1/span 12
+        &__cta
+          display none
 
   .section-community .cards
     grid-template-columns repeat(1, 1fr)
