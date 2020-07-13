@@ -1,7 +1,7 @@
 <template>
   <footer>
     <div class="container">
-      <Logo />
+      <logo-wordmark />
 
       <div class="home-nav">
         <a

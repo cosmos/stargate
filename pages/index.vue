@@ -2,7 +2,7 @@
   <div>
     <div class="section-hero section-width">
       <div class="container">
-        <Logo />
+        <logo-wordmark />
         <div class="title">
           stargate
         </div>
@@ -452,13 +452,11 @@
 import querystring from 'querystring'
 import moment from 'moment'
 import axios from 'axios'
-import Logo from '~/components/Logo.vue'
 import IconIbc from '~/components/IconIbc.vue'
 import IconSdk from '~/components/IconSdk.vue'
 
 export default {
   components: {
-    Logo,
     IconIbc,
     IconSdk,
   },
