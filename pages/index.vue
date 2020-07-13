@@ -635,7 +635,9 @@ export default {
     color #FFFFFF
     max-width 677px
   .section-subtitle
-    margin-top 2rem
+    display flex
+    justify-content flex-end
+    flex-direction column
     grid-row 1
     grid-column 6 / span 12
     font-size 2rem
@@ -1348,6 +1350,7 @@ export default {
       grid-column 1 / span 12
       font-size 4rem
     .section-subtitle
+      margin-top 2rem
       grid-row 2
       grid-column 1 / span 12
     .section-statement
