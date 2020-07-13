@@ -6,7 +6,9 @@
         <div class="title">
           stargate
         </div>
-        <div class="subtitle">The Internet of Blockchains is here.</div>
+        <div class="subtitle">
+          The Internet of Blockchains is on the horizon.
+        </div>
         <div class="bottom">
           <code class="bottom__countdown">T minus {{ countdownTimer }}d</code>
           <div class="bottom__get-notified">
@@ -43,21 +45,19 @@
     <div class="section-nav">
       <nav class="nav">
         <ul class="nav__list">
-          <li class="nav__list-item">
-            <a v-scroll-to="'#intro'">
-              <span>What is Stargate?</span>
-            </a>
+          <li class="nav__list__item">
+            <a v-scroll-to="'#intro'">What is Stargate?</a>
           </li>
-          <li class="nav__list-item">
+          <li class="nav__list__item">
             <a v-scroll-to="'#features'">Features</a>
           </li>
-          <li class="nav__list-item">
+          <li class="nav__list__item">
             <a v-scroll-to="'#prepare'">Prepare</a>
           </li>
-          <li class="nav__list-item">
+          <li class="nav__list__item">
             <a v-scroll-to="'#roadmap'">Roadmap</a>
           </li>
-          <li class="nav__list-item">
+          <li class="nav__list__item">
             <a v-scroll-to="'#contributors'">Contributors</a>
           </li>
         </ul>
@@ -263,9 +263,9 @@
     <div id="roadmap" class="section-roadmap section-width">
       <div class="section-header">Roadmap</div>
       <div class="section-title">{{ progressTotal }}% complete</div>
-      <div class="section-left">
-        <div class="section-left__title">Milestones</div>
-        <div class="section-left__cta">
+      <div class="section-milestones">
+        <div class="section-milestones__title">Milestones</div>
+        <div class="section-milestones__cta">
           <a
             href="https://www.youtube.com/watch?v=mlq5GzQTIAM"
             target="_blank"
@@ -305,6 +305,9 @@
           </div>
         </div>
       </a>
+      <div class="section-status">
+        <div class="section-status__title">Status updates</div>
+      </div>
     </div>
 
     <div id="contributors" class="section-contributors section-width">
@@ -863,30 +866,18 @@ export default {
   z-index 10
   backdrop-filter blur(10px)
   -webkit-backdrop-filter blur(10px)
-  background-color transparent
-  transition background-color 300ms ease 0s;
+  transition background-color 300ms ease 0s
   .nav
-    display block
-    margin-top 167px
-    max-width 837px
-    width 100%
-    margin auto
-    transition height 250ms ease 0s
-    height 80px
-    position relative
-    box-shadow none
     overflow scroll
     white-space nowrap
+    margin-left 2.5rem
+    margin-right 2.5rem
     &__list
-      grid-template-columns repeat(auto-fit, minmax(120px, 1fr))
-      text-align center
-      list-style none
       display flex
       flex-direction row
-      align-items center
       justify-content center
-      transition transform 200ms ease 0s
-      &-item
+      list-style none
+      &__item
         margin 2rem
         color var(--white)
         a
@@ -992,8 +983,7 @@ export default {
     color #FFFFFF
     grid-column 6 / span 12
     justify-content flex-end
-  .section-left
-    position relative
+  .section-milestones
     grid-column 1 / 2
     grid-row 3 / 6
     &__title
@@ -1012,9 +1002,6 @@ export default {
       letter-spacing -0.005em
       border-radius 0.375rem
       padding 20px 0px
-      position absolute
-      bottom 0
-      left 0
       a
         color #40B3FF
   .section-row
@@ -1083,6 +1070,19 @@ export default {
           align-items center
           text-align right
           color #FFFFFF
+  .section-status
+    grid-column 1 / 3
+    grid-row 6
+    margin-top 6rem
+    &__title
+      margin-top 2rem
+      grid-column 1 / span 4
+      font-weight bold
+      font-size 2.5rem
+      line-height 120%
+      letter-spacing -0.03em
+      text-align start
+      color #FFFFFF
 
 .section-contributors
   .section-header
@@ -1343,13 +1343,13 @@ export default {
     .grid-container
       grid-column 1/span 12
 
-@media screen and (max-width: 900px)
-  .section-hero
-    .container
-      .title
-        font-size 80px
+// @media screen and (max-width: 900px)
+//   .section-hero
+//     .container
+//       .title
+//         font-size 80px
 
-@media screen and (max-width: 600px)
+@media screen and (max-width: 900px)
   .section-width
     padding 3rem 2.5rem
     display block
@@ -1357,7 +1357,7 @@ export default {
   .section-hero
     .container
       .title
-        font-size 3rem
+        font-size 48px
 
   .section-features,
   .section-launchpad,
@@ -1368,9 +1368,23 @@ export default {
     .section-header
       grid-column 1 / span 12
 
-  // .section-nav
-  //   .nav
-  //     display none
+  .section-nav
+    .nav
+      &::-webkit-scrollbar,
+      &::-moz-scrollbar
+        display none
+      &__list
+        display flex
+        flex-direction row
+        justify-content space-between
+        transition transform 200ms ease 0s
+        overflow-x scroll
+        overflow-y hidden
+        white-space nowrap
+        width fit-content
+        -webkit-overflow-scrolling touch
+        &:first-child
+          padding-left 0
 
   .section-intro
     .section-title
@@ -1416,7 +1430,7 @@ export default {
       font-size 4rem
     .section-row
       grid-column 1 / span 12
-    .section-left
+    .section-milestones
       &__cta
         display none
 
