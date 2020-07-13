@@ -44,21 +44,21 @@
       <nav class="nav">
         <ul class="nav__list">
           <li class="nav__list-item">
-            <a href="#intro">
+            <a v-scroll-to="'#intro'">
               <span>What is Stargate?</span>
             </a>
           </li>
           <li class="nav__list-item">
-            <a href="#features">Features</a>
+            <a v-scroll-to="'#features'">Features</a>
           </li>
           <li class="nav__list-item">
-            <a href="#prepare">Prepare</a>
+            <a v-scroll-to="'#prepare'">Prepare</a>
           </li>
           <li class="nav__list-item">
-            <a href="#roadmap">Roadmap</a>
+            <a v-scroll-to="'#roadmap'">Roadmap</a>
           </li>
           <li class="nav__list-item">
-            <a href="#contributors">Contributors</a>
+            <a v-scroll-to="'#contributors'">Contributors</a>
           </li>
         </ul>
       </nav>

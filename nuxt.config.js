@@ -57,7 +57,9 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: [],
+  // TODO: config scrolling speed
+  // https://vue-scrollto.netlify.app/docs/#options
+  modules: ['vue-scrollto/nuxt'],
   /*
    ** Build configuration
    ** See https://nuxtjs.org/api/configuration-build/
