@@ -145,7 +145,6 @@ export default {
 
 <style lang="stylus" scoped>
 footer
-  margin-top 8rem
   display flex
   justify-content center
   align-items center
@@ -154,13 +153,14 @@ footer
   background linear-gradient(180deg, #000000 0%, #030419 100%)
   .container
     margin 6rem 8rem
-    max-width 1184px
+    max-width 74rem
     width 100%
     .home-nav
       margin-top 2rem
       font-size 1rem
       line-height 1.625
-      color #40B3FF
+      a
+        color #40B3FF
     .nav
       display grid
       gap 2rem

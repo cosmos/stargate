@@ -1,12 +1,12 @@
 <template>
   <div>
-    <div class="section-hero">
+    <div class="section-hero section-width">
       <div class="container">
         <Logo />
-        <h1 class="title">
+        <div class="title">
           stargate
-        </h1>
-        <p class="subtitle">The Internet of Blockchains is here.</p>
+        </div>
+        <div class="subtitle">The Internet of Blockchains is here.</div>
         <div class="bottom">
           <code class="bottom__countdown">T minus {{ countdownTimer }}d</code>
           <div class="bottom__get-notified">
@@ -252,7 +252,7 @@
 
     <div id="roadmap" class="section-roadmap section-width">
       <div class="section-header">Roadmap</div>
-      <div class="section-progress-title">{{ progressTotal }}% complete</div>
+      <div class="section-title">{{ progressTotal }}% complete</div>
       <div class="section-left">
         <div class="section-left__title">Milestones</div>
         <div class="section-left__cta">
@@ -305,76 +305,80 @@
         dedicated teams contributing to development on Cosmos SDK, Tendermint
         Core, IBC and Gaia.
       </div>
+      <div class="team-img"></div>
     </div>
 
     <div id="articles" class="section-articles section-width">
-      <div class="section-title">Learn more about Stargate</div>
       <div class="section-header">3 Articles</div>
-      <div class="articles-wrapper">
-        <a
-          href="https://figment.network/resources/cosmos-stargate-upgrade-overview"
-          target="_blank"
-          rel="noreferrer noopener"
-        >
-          <div class="articles-item">
-            <span class="articles-item__icon">
-              <icon-arrow-top-right />
-            </span>
-            <div class="articles-item__date">June 22</div>
-            <div class="articles-item__title">
-              Cosmos Stargate Upgrade Overview
+      <div class="section-title">Learn more about Stargate</div>
+      <!-- <div class="learn-more-graphics"></div> -->
+      <div class="content">
+        <div class="articles-wrapper">
+          <a
+            href="https://figment.network/resources/cosmos-stargate-upgrade-overview"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            <div class="articles-item">
+              <span class="articles-item__icon">
+                <icon-arrow-top-right />
+              </span>
+              <div class="articles-item__date">June 22</div>
+              <div class="articles-item__title">
+                Cosmos Stargate Upgrade Overview
+              </div>
+              <div class="articles-item__description">
+                Introducing Stargate, the largest Cosmos upgrade yet. Stargate
+                will enable higher transaction throughput, cross-chain
+                transactions, accelerate UI development, and so much more.
+              </div>
             </div>
-            <div class="articles-item__description">
-              Introducing Stargate, the largest Cosmos upgrade yet. Stargate
-              will enable higher transaction throughput, cross-chain
-              transactions, accelerate UI development, and so much more.
+          </a>
+          <a
+            href="https://medium.com/tendermint/tendermint-0-34-protocol-buffers-and-you-8c40558939ae"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            <div class="articles-item">
+              <span class="articles-item__icon">
+                <icon-arrow-top-right />
+              </span>
+              <div class="articles-item__date">June 23</div>
+              <div class="articles-item__title">
+                Tendermint Ø.34, Protocol Buffers, and You
+              </div>
+              <div class="articles-item__description">
+                The upcoming Tendermint Ø.34 release contains a major change to
+                the way we serialize and encode data. Here’s what you need to
+                know.
+              </div>
             </div>
-          </div>
-        </a>
-        <a
-          href="https://medium.com/tendermint/tendermint-0-34-protocol-buffers-and-you-8c40558939ae"
-          target="_blank"
-          rel="noreferrer noopener"
-        >
-          <div class="articles-item">
-            <span class="articles-item__icon">
-              <icon-arrow-top-right />
-            </span>
-            <div class="articles-item__date">June 23</div>
-            <div class="articles-item__title">
-              Tendermint Ø.34, Protocol Buffers, and You
+          </a>
+          <a
+            href="https://medium.com/tendermint/everything-you-need-to-know-about-the-tendermint-light-client-f80d03856f98"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            <div class="articles-item">
+              <span class="articles-item__icon">
+                <icon-arrow-top-right />
+              </span>
+              <div class="articles-item__date">June 25</div>
+              <div class="articles-item__title">
+                Everything you need to know about the Tendermint Light Client
+              </div>
+              <div class="articles-item__description">
+                What is it, why it’s needed and how it works.
+              </div>
             </div>
-            <div class="articles-item__description">
-              The upcoming Tendermint Ø.34 release contains a major change to
-              the way we serialize and encode data. Here’s what you need to
-              know.
-            </div>
-          </div>
-        </a>
-        <a
-          href="https://medium.com/tendermint/everything-you-need-to-know-about-the-tendermint-light-client-f80d03856f98"
-          target="_blank"
-          rel="noreferrer noopener"
-        >
-          <div class="articles-item">
-            <span class="articles-item__icon">
-              <icon-arrow-top-right />
-            </span>
-            <div class="articles-item__date">June 25</div>
-            <div class="articles-item__title">
-              Everything you need to know about the Tendermint Light Client
-            </div>
-            <div class="articles-item__description">
-              What is it, why it’s needed and how it works.
-            </div>
-          </div>
-        </a>
+          </a>
+        </div>
       </div>
     </div>
 
-    <div id="videos" class="section-videos">
+    <div id="videos" class="section-videos section-width">
       <div class="section-header">Videos</div>
-      <div class="container section-width">
+      <div class="container">
         <div class="frame">
           <iframe
             src="https://www.youtube.com/embed/mlq5GzQTIAM?autoplay=0&controls=1&rel=0&modestbranding=1&fs=1&enablejsapi=1"
@@ -403,9 +407,9 @@
       </div>
     </div>
 
-    <div id="community" class="section-community">
+    <div id="community" class="section-community section-width">
       <div class="section-header">Community</div>
-      <div class="cards section-width">
+      <div class="cards">
         <div class="cards__item">
           <div class="cards__item__caption">connect</div>
           <div class="cards__item__title">Join the community</div>
@@ -532,13 +536,94 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+// testing
+// *
+//   background: #000 !important;
+//   color: #0f0 !important;
+//   outline: solid #f00 1px !important;
+
 .section-width
   display grid
   grid-template-columns repeat(12, 1fr)
   max-width 74rem
   width 100%
   margin 0 auto
-  padding 8rem 0
+  padding 8rem 1rem
+
+.section-hero
+  display flex
+  justify-content center
+  align-items center
+  text-align center
+  .container
+    margin 0 auto
+    max-width 879px
+    width 100%
+    .title
+      margin-top 199px
+      text-transform uppercase
+      font-weight 900
+      font-size 90px
+      line-height 108.4%
+      letter-spacing 0.28em
+      color var(--white)
+    .subtitle
+      margin-top 1rem
+      font-size 2rem
+      line-height 150%
+      letter-spacing -0.02em
+      color #989BB9
+    .bottom
+      margin-top 11.375rem
+      margin-left auto
+      margin-right auto
+      max-width 360px
+      width 100%
+      &__countdown
+        font-size 19px
+        line-height 1.579
+        letter-spacing -0.005em
+        color #CCD1FF
+        border 1px solid rgba(255, 255, 255, 0.1)
+        border-radius 0.5rem
+        padding 0.25rem 0.75rem
+      &__get-notified
+        margin-top 3rem
+        font-weight bold
+        font-size 1rem
+        line-height 1.375
+        color #CFD1E7
+      &__form
+        margin-top 16px
+        &__input
+          display flex
+          position relative
+          align-items center
+          &__icon
+            max-width 20%
+            position absolute
+            right 0
+            height 2rem
+            fill var(--white)
+          &__input
+            outline none
+            max-width 360px
+            width 100%
+            background rgba(255, 255, 255, 0.1)
+            box-shadow 0px 20px 44px rgba(0, 3, 66, 0.12), 0px 8px 16px rgba(0, 0, 0, 0.05), 0px 0px 1px rgba(0, 0, 0, 0.07)
+            border none
+            border-radius 10px
+            padding 20px 24px
+            height 64px
+            -webkit-backdrop-filter blur(10px)
+            backdrop-filter blur(10px)
+            font-weight 400
+            font-size 19px
+            line-height 1.263
+            letter-spacing -0.005em
+            color #989BB9
+            opacity 0.7
+            transition all 0.15s
 
 .section-intro
   .section-title
@@ -548,9 +633,9 @@ export default {
     line-height 112%
     letter-spacing -0.03em
     color #FFFFFF
-    width 677px
+    max-width 677px
   .section-subtitle
-    margin-top 168px
+    margin-top 2rem
     grid-row 1
     grid-column 6 / span 12
     font-size 2rem
@@ -561,7 +646,7 @@ export default {
     margin-top 3rem
     grid-column 6 / span 12
     grid-row 2
-    width 636px
+    max-width 636px
     font-size 23px
     line-height 1.565
     letter-spacing -0.01em
@@ -610,7 +695,7 @@ export default {
   .section-statement
     grid-row 3
     grid-column 6 / 11
-    width 636px
+    max-width 677px
     font-size 23px
     line-height 1.565
     letter-spacing -0.01em
@@ -709,11 +794,11 @@ export default {
     letter-spacing -0.025em
     color #FFFFFF
     text-align left
-    width 677px
+    max-width 677px
   .section-statement
     grid-column 5 / span 11
     grid-row 3
-    width 636px
+    max-width 636px
     font-size 23px
     line-height 1.565
     letter-spacing -0.01em
@@ -729,6 +814,7 @@ export default {
     color white
     .grid-item
       text-align left
+      display grid
       &__icon
         width 48px
         height 48px
@@ -745,83 +831,6 @@ export default {
         line-height:1.579
         letter-spacing -0.005em
         color #989BB9
-
-.section-hero
-  margin 4rem 8rem
-  display flex
-  justify-content center
-  align-items center
-  text-align center
-  .container
-    min-height 932px
-  .title
-    margin-top 12.4375rem
-    text-transform uppercase
-    font-weight 900
-    font-size 7.375rem
-    line-height 108.4%
-    display flex
-    align-items flex-end
-    text-align center
-    letter-spacing 0.28em
-    color var(--white)
-  .subtitle
-    margin-top 1rem
-    font-size 2rem
-    line-height 150%
-    letter-spacing -0.02em
-    color #989BB9
-  .bottom
-    margin-top 11.375rem
-    margin-left auto
-    margin-right auto
-    max-width 360px
-    width 100%
-    &__countdown
-      font-size 19px
-      line-height 1.579
-      letter-spacing -0.005em
-      color #CCD1FF
-      border 1px solid rgba(255, 255, 255, 0.1)
-      border-radius 0.5rem
-      padding 0.25rem 0.75rem
-    &__get-notified
-      margin-top 3rem
-      font-weight bold
-      font-size 1rem
-      line-height 1.375
-      color #CFD1E7
-    &__form
-      margin-top 16px
-      &__input
-        display flex
-        position relative
-        align-items center
-        &__icon
-          max-width 20%
-          position absolute
-          right 0
-          height 2rem
-          fill var(--white)
-        &__input
-          outline none
-          max-width 360px
-          width 100%
-          background rgba(255, 255, 255, 0.1)
-          box-shadow 0px 20px 44px rgba(0, 3, 66, 0.12), 0px 8px 16px rgba(0, 0, 0, 0.05), 0px 0px 1px rgba(0, 0, 0, 0.07)
-          border none
-          border-radius 10px
-          padding 20px 24px
-          height 64px
-          -webkit-backdrop-filter blur(10px)
-          backdrop-filter blur(10px)
-          font-weight 400
-          font-size 19px
-          line-height 1.263
-          letter-spacing -0.005em
-          color #989BB9
-          opacity 0.7
-          transition all 0.15s
 
 .section-intro
   .container
@@ -861,9 +870,9 @@ export default {
       text-align center
       list-style none
       display flex
+      flex-direction row
       align-items center
       justify-content center
-      height 100%
       transition transform 200ms ease 0s
       &-item
         margin 2rem
@@ -920,7 +929,11 @@ export default {
     line-height 1.565
     letter-spacing -0.01em
     color #CFD1E7
-    text-align initial
+    display flex
+    flex-direction column
+    flex-wrap nowrap
+    align-items flex-start
+    justify-content left
   .section-cta
     margin-top 2.25rem
     font-weight bold
@@ -946,11 +959,11 @@ export default {
     grid-column 6 / span 12
     justify-content flex-end
     text-align left
-  .section-progress-title
+  .section-title
     margin-top 2rem
     margin-bottom 2rem
     font-weight 900
-    font-size 90px
+    font-size 5rem
     line-height 112%
     text-align right
     letter-spacing -0.03em
@@ -1064,18 +1077,16 @@ export default {
     display flex
     flex-direction column
     grid-column 6 / span 12
-    text-align left
   .section-title
-    margin-top 48px
+    margin-top 3rem
     grid-column 1/4
     font-weight 900
-    font-size 82px
+    font-size 5.125rem
     line-height 1.121
     letter-spacing -0.025em
     color #FFFFFF
-    text-align left
   .section-statement
-    margin-top 154px
+    margin-top 9.625rem
     margin-left 2rem
     grid-column 7/12
     font-size: 23px
@@ -1083,17 +1094,15 @@ export default {
     letter-spacing -0.01em
     color #CFD1E7
     text-align initial
+    max-width 576px
+  // .team-img
+  //   grid-row 4
+  //   background-image url("/teams.svg")
+  //   background-position center
+  //   background-size contain
+  //   background-repeat no-repeat
 
 .section-articles
-  .section-title
-    font-weight 900
-    font-size 3.625rem
-    line-height 1.172
-    letter-spacing -0.02em
-    color #FFFFFF
-    width 379px
-    text-align left
-    grid-column 1 / 4
   .section-header
     height 48px
     font-weight 600
@@ -1108,47 +1117,62 @@ export default {
     grid-column 6 / span 12
     justify-content flex-end
     text-align left
-  .articles-wrapper
-    grid-column 6/ 12
-    color wheat
-    display flex
-    flex-direction column
-    margin-top -64px
-    .articles-item
-      text-align left
-      padding 3rem
-      background linear-gradient(249.43deg, #030419 0%, #121435 100%)
-      box-shadow 0px 15px 33px rgba(0, 3, 66, 0.11), 0px 6px 12px rgba(0, 0, 0, 0.06), 0px 0px 1px rgba(0, 0, 0, 0.07)
-      border-radius 1.25rem
-      margin-bottom 2rem
-      position relative
-      opacity 0.65
-      &:hover
-        opacity 1
-        transition opacity 0.15s
-      &__icon
-        position absolute
-        width 24px
-        height 24px
-        top 1.5rem
-        right 1.5rem
-      &__date
-        font-size 13px
-        line-height 1.538
-        letter-spacing 0.001em
-        color #989BB9
-      &__title
-        margin-top 12px
-        font-weight bold
-        font-size 28px
-        line-height 1.285
-        letter-spacing -0.02em
-        color #FFFFFF
-      &__description
-        margin-top 12px
-        font-size 16px
-        line-height 1.375
-        color #989BB9
+  .section-title
+    font-weight 900
+    font-size 3.625rem
+    line-height 1.172
+    letter-spacing -0.02em
+    color #FFFFFF
+    width 379px
+    text-align left
+    grid-column 1 / 4
+    grid-row 1
+  .learn-more-graphics
+    background-image url("/learn-more-graphics.svg")
+    background-position center
+    background-size contain
+    background-repeat no-repeat
+    grid-row 2
+  .content
+    grid-column 6 / 12
+    grid-row 2
+    .articles-wrapper
+      margin-top 4rem
+      .articles-item
+        text-align left
+        padding 3rem
+        background linear-gradient(249.43deg, #030419 0%, #121435 100%)
+        box-shadow 0px 15px 33px rgba(0, 3, 66, 0.11), 0px 6px 12px rgba(0, 0, 0, 0.06), 0px 0px 1px rgba(0, 0, 0, 0.07)
+        border-radius 1.25rem
+        margin-bottom 2rem
+        position relative
+        opacity 0.65
+        &:hover
+          opacity 1
+          transition opacity 0.15s
+        &__icon
+          position absolute
+          width 24px
+          height 24px
+          top 1.5rem
+          right 1.5rem
+        &__date
+          font-size 13px
+          line-height 1.538
+          letter-spacing 0.001em
+          color #989BB9
+        &__title
+          margin-top 12px
+          font-weight bold
+          font-size 28px
+          line-height 1.285
+          letter-spacing -0.02em
+          color #FFFFFF
+        &__description
+          margin-top 12px
+          font-size 16px
+          line-height 1.375
+          color #989BB9
 
 .section-videos
   display grid
@@ -1169,7 +1193,7 @@ export default {
     justify-content flex-end
     text-align left
   .container
-    padding-top 6rem
+    margin-top 6rem
     display grid
     grid-template-columns 1fr 1fr
     gap 2rem
@@ -1221,9 +1245,6 @@ export default {
           color #40B3FF
 
 .section-community
-  display grid
-  grid-template-columns repeat(12,1fr)
-  text-align center
   .section-header
     height 48px
     font-weight 600
@@ -1239,11 +1260,11 @@ export default {
     justify-content flex-end
     text-align left
   .cards
-    padding-top 6rem
+    margin-top 6rem
     display grid
     grid-template-columns 1fr 1fr
-    gap 1.5rem
-    grid-column 1/span 12
+    gap 2rem
+    grid-column 1 / span 12
     &__item
       padding 3rem
       background linear-gradient(256.92deg, #120018 0%, #121435 100%)
@@ -1251,11 +1272,21 @@ export default {
       border-radius 1.25rem
       display flex
       flex-direction column
+      flex-wrap nowrap
+      // align-items start
+      justify-content flex-start
       color var(--white)
-      text-align left
       height 338px
+      background url("/reverse-graphics.svg"), linear-gradient(256.92deg, #121435 0%, #030419 100%)
+      background-position bottom center
+      background-size contain
+      background-repeat no-repeat
       &:first-child
-        background: linear-gradient(256.92deg, #121435 0%, #030419 100%)
+        background url("/split-graphics.svg"), linear-gradient(256.92deg, #121435 0%, #030419 100%)
+        justify-content flex-end
+        background-position top center
+        background-size contain
+        background-repeat no-repeat
       &__caption
         font-weight 600
         font-size 16px
@@ -1282,15 +1313,119 @@ export default {
   .section-nav
     background-color rgba(255, 255, 255, 0.1)
 
+// @media all and (max-width: 1600px)
+// @media all and (max-width: 1400px)
+// @media all and (max-width: 1200px)
+// @media screen and (max-width: 900px)
+
 @media screen and (max-width: 600px)
+  .section-width
+    padding 4rem 1rem
+    display block
+    // margin 0 32px
+
+  .section-hero
+    .container
+      .title
+        font-size 3rem
+
+  .section-features,
+  .section-launchpad,
+  .section-roadmap,
+  .section-contributors,
+  .section-articles,
+  .section-videos
+    .section-header
+      grid-column 1 / span 12
+
+  .section-nav
+    .nav
+      display none
+
+  .section-intro
+    .section-title
+      grid-row 1
+      grid-column 1 / span 12
+      font-size 4rem
+    .section-subtitle
+      grid-row 2
+      grid-column 1 / span 12
+    .section-statement
+      grid-row 3
+      grid-column 1 / span 12
+    .section-cta
+      grid-row 4
+      grid-column 1 / span 12
+
+  .section-features
+    .section-title
+      grid-column 1 / 12
+      font-size 4rem
+    .section-statement
+      grid-column 1 / 12
+    .ibc-item
+      grid-column 1 / 12
+    .grid-container
+      grid-column 1 / 12
+
+  .section-prepare
+    .section-title
+      grid-column 1 / 12
+      font-size 4rem
+    .section-statement
+      grid-column 1 / 12
+    .grid-container
+      grid-template-columns repeat(1, 1fr)
+
   .section-roadmap
+    .section-title
+      grid-column 1 / span 12
+      text-align left
+      font-size 4rem
     .section-row
-      .icon__wrapper
-        .icon
-          display none
-      .details
-        margin-left: 1rem;
-        margin-right: 1rem;
-        padding-top: 1rem;
-        padding-bottom: 1rem;
+      grid-column 1 / span 12
+    .section-left
+      &__cta
+        display none
+
+  // .section-roadmap .section-row .icon__wrapper
+  //   .icon
+  //     display none
+  //   .details
+  //     margin-left 1rem
+  //     margin-right 1rem
+  //     padding-top 1rem
+  //     padding-bottom 1rem
+
+  .section-contributors
+    .section-title
+      font-size 4rem
+    .section-statement
+      grid-column 1/12
+      margin-top 4rem
+      margin-left 0rem
+
+  .section-articles
+    .section-header
+      grid-row 1
+    .section-title
+      grid-row 2
+      margin-top 6rem
+      font-size 4rem
+    .articles-wrapper
+      grid-row 3
+      grid-column 1/12
+
+  .section-features
+    .data-container
+      grid-template-columns repeat(2, 1fr)
+    .grid-container
+      grid-template-columns repeat(1, 1fr)
+
+  .section-videos .container
+    .frame, .text
+      grid-column 1/span 12
+
+  .section-community .cards
+    grid-template-columns repeat(1, 1fr)
 </style>
