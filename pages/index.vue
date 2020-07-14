@@ -281,12 +281,16 @@
         target="_blank"
         rel="noreferrer noopener"
         class="section-row"
+        :style="{
+          '--progress-bar-background-color': `${bgColor[item.logo][0]}`,
+          '--progress-bar-box-shadow': `${bgColor[item.logo][1]}`,
+        }"
       >
         <div
           class="meter"
           :style="{
             '--progress-bar-width': `${item.progress}%`,
-            '--progress-bar-background-color': `linear-gradient(95.47deg, #086108 0%, #018A01 100%)`,
+            '--progress-bar-background-color': `${bgColor[item.logo][0]}`,
           }"
         >
           <div class="icon__wrapper">
@@ -484,6 +488,21 @@ export default {
         ['tendermint/tendermint', 27, 'core', 'Tendermint Core 0.34'],
         ['cosmos/cosmos-sdk', 21, 'ibc', 'Cosmos SDK – IBC 1.0 Milestone'],
       ],
+      // TODO: fix negative horizontal offset value
+      bgColor: {
+        sdk: [
+          'linear-gradient(95.47deg, #320B93 0%, #3B2AB7 100%)',
+          'inset -140px 0px 0px rgba(0, 8, 85, 0.405)',
+        ],
+        core: [
+          'linear-gradient(95.47deg, #086108 0%, #018A01 100%)',
+          'inset -90px 0px 0px rgba(0, 8, 85, 0.405)',
+        ],
+        ibc: [
+          'linear-gradient(95.47deg, #121435 0%, #282B53 100%)',
+          'inset -155.8px 0px 0px rgba(0, 8, 85, 0.405)',
+        ],
+      },
     }
   },
   computed: {
@@ -1013,19 +1032,16 @@ button#op-button
     margin-top 2rem
     grid-column 6/span 12
     display grid
-    grid-auto-flow column
     align-items center
-    box-shadow inset -140px 0px 0px rgba(0, 8, 85, 0.405)
-    // background linear-gradient(95.47deg, #320B93 0%, #3B2AB7 100%)
-    background var(--progress-bar-background-color)
+    box-shadow var(--progress-bar-box-shadow)
+    background var(--progress-bar-background-color, linear-gradient(95.47deg, #121435 0%, #282B53 100%))
     color white
     grid-auto-flow column
     border-radius 0.5rem
     transition all .25s
     .meter
       width var(--progress-bar-width, 0)
-      // background linear-gradient(95.47deg, #320B93 0%, #3B2AB7 100%)
-      background var(--progress-bar-background-color)
+      background var(--progress-bar-background-color, linear-gradient(95.47deg, #121435 0%, #282B53 100%))
       border-radius 0.5rem
       display inline-flex
     .icon__wrapper
