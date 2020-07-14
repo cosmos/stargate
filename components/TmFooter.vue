@@ -176,6 +176,7 @@ footer
         line-height 137.5%
         color #CFD1E7
         border-radius 0.375rem
+        white-space nowrap
     .social-icons
       margin-top 3rem
       display flex
@@ -196,4 +197,11 @@ footer
       line-height 153.8%
       letter-spacing 0.001em
       color #989BB9
+
+@media screen and (max-width: 600px)
+  footer
+    .container
+      margin 3rem 4rem
+      .nav
+        display block
 </style>

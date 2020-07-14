@@ -32,7 +32,6 @@
                 />
                 <icon-arrow-right
                   class="bottom__form__input__icon"
-                  type="submit"
                   @click="actionSubmitEmail"
                 />
               </div>
@@ -267,7 +266,7 @@
         <div class="section-milestones__title">Milestones</div>
         <div class="section-milestones__cta">
           <a
-            href="https://www.youtube.com/watch?v=mlq5GzQTIAM"
+            href="https://github.com/orgs/cosmosdevs/projects/1"
             target="_blank"
             rel="noreferrer noopener"
           >
@@ -285,7 +284,10 @@
       >
         <div
           class="meter"
-          :style="{ '--progress-bar-width': `${item.progress}%` }"
+          :style="{
+            '--progress-bar-width': `${item.progress}%`,
+            '--progress-bar-background-color': `linear-gradient(95.47deg, #086108 0%, #018A01 100%)`,
+          }"
         >
           <div class="icon__wrapper">
             <div class="icon">
@@ -457,11 +459,13 @@ import moment from 'moment'
 import axios from 'axios'
 import IconIbc from '~/components/IconIbc.vue'
 import IconSdk from '~/components/IconSdk.vue'
+import IconCore from '~/components/IconCore.vue'
 
 export default {
   components: {
     IconIbc,
     IconSdk,
+    IconCore,
   },
   data() {
     return {
@@ -477,7 +481,7 @@ export default {
       milestoneList: [],
       sources: [
         ['cosmos/cosmos-sdk', 25, 'sdk', 'Cosmos SDK 0.40'],
-        ['tendermint/tendermint', 27, 'sdk', 'Tendermint Core 0.34'], // TODO: fix ibc-core svg
+        ['tendermint/tendermint', 27, 'core', 'Tendermint Core 0.34'],
         ['cosmos/cosmos-sdk', 21, 'ibc', 'Cosmos SDK – IBC 1.0 Milestone'],
       ],
     }
@@ -488,10 +492,7 @@ export default {
       return !re.test(String(this.email))
     },
     countdownTimer() {
-      const a = moment()
-      const b = moment('20200729', 'YYYYMMDD')
-      // return moment('20200729', 'YYYYMMDD').fromNow()
-      return b.diff(a, 'days')
+      return moment('20200729', 'YYYYMMDD').diff(moment(), 'days')
     },
     progressTotal() {
       const progressSum = this.milestoneList
@@ -552,6 +553,10 @@ export default {
 //   background: #000 !important;
 //   color: #0f0 !important;
 //   outline: solid #f00 1px !important;
+
+
+button#op-button
+  display none !important
 
 .section-width
   display grid
@@ -627,8 +632,8 @@ export default {
             border-radius 10px
             padding 20px 24px
             height 64px
-            -webkit-backdrop-filter blur(10px)
-            backdrop-filter blur(10px)
+            -webkit-backdrop-filter saturate(180%) blur(10px)
+            backdrop-filter saturate(180%) blur(10px)
             font-weight 400
             font-size 19px
             line-height 1.263
@@ -864,8 +869,8 @@ export default {
   top 0
   width 100%
   z-index 10
-  backdrop-filter blur(10px)
-  -webkit-backdrop-filter blur(10px)
+  backdrop-filter saturate(180%) blur(10px)
+  -webkit-backdrop-filter saturate(180%) blur(10px)
   transition background-color 300ms ease 0s
   .nav
     overflow scroll
@@ -1011,14 +1016,16 @@ export default {
     grid-auto-flow column
     align-items center
     box-shadow inset -140px 0px 0px rgba(0, 8, 85, 0.405)
-    background linear-gradient(95.47deg, #320B93 0%, #3B2AB7 100%)
+    // background linear-gradient(95.47deg, #320B93 0%, #3B2AB7 100%)
+    background var(--progress-bar-background-color)
     color white
     grid-auto-flow column
     border-radius 0.5rem
     transition all .25s
     .meter
       width var(--progress-bar-width, 0)
-      background linear-gradient(95.47deg, #320B93 0%, #3B2AB7 100%)
+      // background linear-gradient(95.47deg, #320B93 0%, #3B2AB7 100%)
+      background var(--progress-bar-background-color)
       border-radius 0.5rem
       display inline-flex
     .icon__wrapper
@@ -1124,6 +1131,7 @@ export default {
   //   background-repeat no-repeat
 
 .section-articles
+  // padding-bottom 0
   .section-header
     height 48px
     font-weight 600
@@ -1135,7 +1143,7 @@ export default {
     border-top 1px solid #282B53
     display flex
     flex-direction column
-    grid-column 6 / 12
+    grid-column 6 / span 12
     justify-content flex-end
     text-align left
   .section-title
@@ -1155,23 +1163,21 @@ export default {
     background-repeat no-repeat
     grid-row 2
   .content
-    grid-column 6 / 12
+    grid-column 6 / span 12
     grid-row 2
     margin-top -4rem
     .articles-wrapper
-      // margin-top 4rem
       .articles-item
         text-align left
         padding 3rem
         background linear-gradient(249.43deg, #030419 0%, #121435 100%)
         box-shadow 0px 15px 33px rgba(0, 3, 66, 0.11), 0px 6px 12px rgba(0, 0, 0, 0.06), 0px 0px 1px rgba(0, 0, 0, 0.07)
         border-radius 1.25rem
-        margin-bottom 2rem
+        margin-top 2rem
         position relative
-        opacity 0.65
         &:hover
-          opacity 1
-          transition opacity 0.15s
+          transform translateY(-5px)
+          transition all .25s ease-in-out
         &__icon
           position absolute
           width 24px
@@ -1200,6 +1206,8 @@ export default {
   display grid
   grid-template-columns repeat(12,1fr)
   text-align center
+  padding-top 0
+  padding-bottom 0
   .section-header
     height 48px
     font-weight 600
@@ -1333,7 +1341,10 @@ export default {
 // TODO: temp fix for moz
 @supports not (backdrop-filter: none)
   .section-nav
-    background-color rgba(255, 255, 255, 0.1)
+    background-color rgba(22, 22, 26, 0.9)
+    z-index 2
+    filter saturate(180%)
+    transition: background-color 300ms ease 0s
 
 // @media all and (max-width: 1600px)
 // @media all and (max-width: 1400px)
@@ -1343,16 +1354,11 @@ export default {
     .grid-container
       grid-column 1/span 12
 
-// @media screen and (max-width: 900px)
-//   .section-hero
-//     .container
-//       .title
-//         font-size 80px
-
 @media screen and (max-width: 900px)
   .section-width
     padding 3rem 2.5rem
     display block
+    padding-top 5.5rem
 
   .section-hero
     .container
@@ -1370,8 +1376,7 @@ export default {
 
   .section-nav
     .nav
-      &::-webkit-scrollbar,
-      &::-moz-scrollbar
+      &::-webkit-scrollbar
         display none
       &__list
         display flex
@@ -1449,7 +1454,7 @@ export default {
       grid-row 2
       margin-top 6rem
       font-size 4rem
-    .articles-wrapper
+    .content
       grid-row 3
       grid-column 1/12
       margin-top 4rem
@@ -1471,4 +1476,12 @@ export default {
 
   .section-community .cards
     grid-template-columns repeat(1, 1fr)
+
+@media screen and (max-width: 600px)
+  .section-roadmap
+    .section-row
+      .icon__wrapper
+        display none
+      .details
+        margin 2rem
 </style>
