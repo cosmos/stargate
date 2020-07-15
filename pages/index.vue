@@ -1,13 +1,27 @@
 <template>
-  <div>
-    <div class="section-hero section-width">
+  <main class="main">
+    <div class="section-hero section-container">
+      <div class="hero-graphics">
+        <span class="hero-graphics__star"></span>
+        <span class="hero-graphics__gate"></span>
+        <gate-notches class="hero-graphics__gate-notches" />
+        <span class="hero-graphics__planet"></span>
+      </div>
       <div class="container">
-        <logo-wordmark />
-        <div class="title">
-          stargate
-        </div>
-        <div class="subtitle">
-          The Internet of Blockchains is on the horizon.
+        <nav class="nav-primary">
+          <ul>
+            <li><a href="https://cosmos.network">← Cosmos Network</a></li>
+            <li><logo-wordmark /><span class="sr-only">Cosmos</span></li>
+          </ul>
+        </nav>
+        <div class="headings">
+          <h1 class="title">
+            <wordmark-stargate />
+            <span class="sr-only">Stargate</span>
+          </h1>
+          <div class="subtitle">
+            The Internet of Blockchains is on the horizon.
+          </div>
         </div>
         <div class="bottom">
           <code class="bottom__countdown">T minus {{ countdownTimer }}d</code>
@@ -63,7 +77,7 @@
       </nav>
     </div>
 
-    <div id="intro" class="section-intro section-width">
+    <div id="intro" class="section-intro section-container">
       <div class="section-title">A new era for Cosmos</div>
       <div class="section-subtitle">
         The biggest event in the ecosystem since the launch of the Cosmos Hub.
@@ -85,7 +99,7 @@
       </div>
     </div>
 
-    <div id="features" class="section-features section-width">
+    <div id="features" class="section-features section-container">
       <div class="section-header">Features</div>
       <div class="section-title">What’s new?</div>
       <div class="section-statement">
@@ -171,7 +185,7 @@
       </div>
     </div>
 
-    <div id="prepare" class="section-prepare section-width">
+    <div id="prepare" class="section-prepare section-container">
       <div class="section-header">Prepare</div>
       <div class="section-title">Get set for testnets</div>
       <div class="section-statement">
@@ -227,7 +241,7 @@
       </div>
     </div>
 
-    <div id="launchpad" class="section-launchpad section-width">
+    <div id="launchpad" class="section-launchpad section-container">
       <div class="section-header">a note for zone developers</div>
       <div class="section-left">
         <div class="section-left__heading">Not ready to upgrade?</div>
@@ -259,7 +273,7 @@
       </div>
     </div>
 
-    <div id="roadmap" class="section-roadmap section-width">
+    <div id="roadmap" class="section-roadmap section-container">
       <div class="section-header">Roadmap</div>
       <div class="section-title">{{ progressTotal }}% complete</div>
       <div class="section-milestones">
@@ -316,7 +330,7 @@
       </div>
     </div>
 
-    <div id="contributors" class="section-contributors section-width">
+    <div id="contributors" class="section-contributors section-container">
       <div class="section-header">Contributors</div>
       <div class="section-title">Core Developers</div>
       <div class="section-statement">
@@ -327,7 +341,7 @@
       <div class="team-img"></div>
     </div>
 
-    <div id="articles" class="section-articles section-width">
+    <div id="articles" class="section-articles section-container">
       <div class="section-header">3 Articles</div>
       <div class="section-title">Learn more about Stargate</div>
       <!-- <div class="learn-more-graphics"></div> -->
@@ -395,7 +409,7 @@
       </div>
     </div>
 
-    <div id="videos" class="section-videos section-width">
+    <div id="videos" class="section-videos section-container">
       <div class="section-header">Videos</div>
       <div class="container">
         <div class="frame">
@@ -426,7 +440,7 @@
       </div>
     </div>
 
-    <div id="community" class="section-community section-width">
+    <div id="community" class="section-community section-container">
       <div class="section-header">Community</div>
       <div class="cards">
         <div class="cards__item">
@@ -454,7 +468,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </main>
 </template>
 
 <script>
@@ -573,46 +587,87 @@ export default {
 //   color: #0f0 !important;
 //   outline: solid #f00 1px !important;
 
+:root
+  --container-mw-lg: 74rem
 
 button#op-button
   display none !important
 
-.section-width
+// Accessible/SEO friendly CSS hiding
+.sr-only
+  position absolute
+  height 1px
+  width 1px
+  overflow hidden
+  clip rect(1px, 1px, 1px, 1px)
+
+.main
+  overflow hidden
+
+.section-container
   display grid
   grid-template-columns repeat(12, 1fr)
   // grid-column-gap 1rem
-  max-width 74rem
   width 100%
   margin 0 auto
-  padding 8rem 1rem
+  padding 6rem 1rem
+
+.nav-primary
+  width 100%
+  ul
+    display grid
+    grid-template-columns repeat(3, 1fr)
+    align-items center
+    padding 0
+  li
+    list-style-type none
+    &:first-child
+      text-align left
+  a
+    display inline-block
+    font-size 1rem
+    line-height 1.625
+    padding 0.8125rem 0
+    color #989BB9
+    border-radius 0.375rem
+    &:hover,
+    &:focus
+      color #CFD1E7
+
 
 .section-hero
+  position relative
+  min-height 100vh
+  max-height 64rem
+  padding-top 4rem
   display flex
-  justify-content center
-  align-items center
+  justify-content stretch
+  align-items stretch
   text-align center
+  background linear-gradient(to bottom, #030419, #21255F)
+  background radial-gradient(60.92% 51.1% at 50% 57.31%, #21255F 26.56%, #030419 80.73%, #000000 100%)
   .container
-    margin 0 auto
-    max-width 879px
+    position relative
+    display flex
     width 100%
-    .title
-      margin-top 199px
-      text-transform uppercase
-      font-weight 900
-      font-size 118px
-      line-height 108.4%
-      letter-spacing 0.28em
-      color var(--white)
-    .subtitle
-      margin-top 1rem
-      font-size 2rem
-      line-height 150%
-      letter-spacing -0.02em
-      color #989BB9
+    flex-direction column
+    align-items center
+    justify-content space-between
+    max-width var(--container-mw-lg)
+    margin 0 auto
+    .headings
+      width 100%
+      margin auto 0
+      padding 6rem 0 12rem
+      .title svg
+        width 100%
+      .subtitle
+        margin-top 3rem
+        font-size 2rem
+        line-height 150%
+        letter-spacing -0.02em
+        color #989BB9
     .bottom
-      margin-top 11.375rem
-      margin-left auto
-      margin-right auto
       max-width 360px
       width 100%
       &__countdown
@@ -660,8 +715,67 @@ button#op-button
             color #989BB9
             opacity 0.7
             transition all 0.15s
+  .hero-graphics
+    position absolute
+    top 0
+    bottom 0
+    width 100%
+    left 0
+    &__gate,
+    &__gate-notches
+      position absolute
+      height 70rem
+      width 70rem
+      left 50%
+      margin-left -(70/2)rem
+      top 22%
+    &__gate
+      border-radius 50%
+      box-shadow inset 0 3px 1px 0 rgba(255, 255, 255, 0.3)
+      border 1px solid rgba(255, 255, 255, 0.1)
+      animation 3s gate infinite linear
+      &:after
+        content ""
+        position absolute
+        top 3.2%
+        left 3.2%
+        right 3.2%
+        bottom 3.2%
+        border-radius 50%
+        box-shadow inset 0 -3px 1px 0 rgba(255, 255, 255, 0.3)
+        border 1px solid rgba(255, 255, 255, 0.1)
+        animation 1.4s gate infinite linear reverse
+    &__gate-notches
+      animation 40s gate infinite linear
+    &__star
+      position absolute
+      width 38rem
+      height 38rem
+      left 50%
+      margin-left -(38/2)rem
+      top 51%
+      border-radius 50%
+      background #FFFFFF
+      box-shadow 0px 0px 40px #263CFF, 0px 0px 128px #2D74FF
+    &__planet
+      position absolute
+      width 112rem
+      height 112rem
+      left 50%
+      margin-left -(112/2)rem
+      top 60%
+      border-radius 50%
+      background radial-gradient(84.49% 66.22% at 50% 59.94%, #000000 5.73%, #030419 71.48%, #0E1247 81.25%, #36299B 91.15%)
+      box-shadow 0px -72px 64px rgba(28, 0, 238, 0.17), 0px -10px 8px rgba(92, 70, 255, 0.11), inset 0px 57px 56px rgba(48, 44, 245, 0.17), inset 0px 6px 12px rgba(104, 67, 252, 0.23)
+
+@keyframes gate
+  from
+    transform rotate(0deg)
+  to
+    transform rotate(360deg)
 
 .section-intro
+  position relative
   .section-title
     grid-column 1 / span 5
     font-weight 900
@@ -704,6 +818,7 @@ button#op-button
       color #40B3FF
 
 .section-features
+  position relative
   text-align left
   .section-header
     grid-row 1
@@ -1371,7 +1486,7 @@ button#op-button
       grid-column 1/span 12
 
 @media screen and (max-width: 900px)
-  .section-width
+  .section-container
     padding 3rem 2.5rem
     display block
     padding-top 5.5rem
