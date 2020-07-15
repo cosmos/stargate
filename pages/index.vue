@@ -50,10 +50,11 @@
                 <div class="bottom__form__input">
                   <input
                     v-model="email"
-                    name="CONTACT_EMAIL"
+                    name="fields[email]"
                     class="bottom__form__input__input"
                     type="email"
                     placeholder="Your email"
+                    autocomplete="on"
                   />
                   <button type="submit" class="bottom__form__input__button">
                     <icon-arrow-right
@@ -555,14 +556,13 @@ export default {
     return {
       email: null,
       state: 'default',
-      // TODO: update new segment group
-      url: 'https://app.mailerlite.com/webforms/submit/d7i4g7',
+      url: 'https://app.mailerlite.com/webforms/submit/l6o8i3',
       formData: {
-        callback: 'jQuery1830520133881537445_1594145870016',
+        callback: 'jQuery1830831967939860198_1594856018285',
         'ml-submit': '1',
         ajax: '1',
         guid: '6ca22b31-4124-e926-cf4f-272ff9f44ec3',
-        _: '1594145875469',
+        _: '1594856022563',
       },
       milestoneList: [],
       sources: [
