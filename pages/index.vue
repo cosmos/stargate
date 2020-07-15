@@ -587,9 +587,6 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-:root
-  --container-mw-lg: 74rem
-
 // Accessible/SEO friendly CSS hiding
 .sr-only
   position absolute
