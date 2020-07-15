@@ -346,28 +346,30 @@
           <div class="section-status__title">Status updates</div>
         </div>
         <div class="section-list">
-          <div class="section-list__item">
-            <div class="section-list__item__title">Week 1 status</div>
-            <div class="section-list__item__date">
-              <a
-                href="https://github.com/cosmosdevs/stargate/blob/master/week1.md"
-                target="_blank"
-                rel="noreferrer noopener"
-                >July 2, 2020</a
-              >
+          <a
+            href="https://github.com/cosmosdevs/stargate/blob/master/week1.md"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            <div class="section-list__item">
+              <div class="section-list__item__title">Week 1 status</div>
+              <div class="section-list__item__date">
+                July 2, 2020 &#8594;
+              </div>
             </div>
-          </div>
-          <div class="section-list__item">
-            <div class="section-list__item__title">Week 2 status</div>
-            <div class="section-list__item__date">
-              <a
-                href="https://github.com/cosmosdevs/stargate/blob/master/week2.md"
-                target="_blank"
-                rel="noreferrer noopener"
-                >July 13, 2020</a
-              >
+          </a>
+          <a
+            href="https://github.com/cosmosdevs/stargate/blob/master/week2.md"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            <div class="section-list__item">
+              <div class="section-list__item__title">Week 2 status</div>
+              <div class="section-list__item__date">
+                July 13, 2020 &#8594;
+              </div>
             </div>
-          </div>
+          </a>
         </div>
       </div>
     </div>
