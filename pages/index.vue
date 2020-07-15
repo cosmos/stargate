@@ -401,10 +401,10 @@
               </span>
               <div class="articles-item__date">June 23</div>
               <div class="articles-item__title">
-                Tendermint Ø.34, Protocol Buffers, and You
+                Tendermint 0.34, Protocol Buffers, and You
               </div>
               <div class="articles-item__description">
-                The upcoming Tendermint Ø.34 release contains a major change to
+                The upcoming Tendermint 0.34 release contains a major change to
                 the way we serialize and encode data. Here’s what you need to
                 know.
               </div>
@@ -531,7 +531,6 @@ export default {
         ['tendermint/tendermint', 27, 'core', 'Tendermint Core 0.34'],
         ['cosmos/cosmos-sdk', 21, 'ibc', 'Cosmos SDK – IBC 1.0 Milestone'],
       ],
-      // TODO: fix negative horizontal offset value
       bgColor: {
         sdk: 'linear-gradient(95.47deg, #320B93 0%, #3B2AB7 100%)',
         core: 'linear-gradient(95.47deg, #086108 0%, #018A01 100%)',
@@ -1091,7 +1090,6 @@ button#op-button
   z-index 10
   // backdrop-filter saturate(180%) blur(10px)
   // -webkit-backdrop-filter saturate(180%) blur(10px)
-  transition background-color 300ms ease 0s
   .nav
     overflow scroll
     white-space nowrap
@@ -1368,7 +1366,6 @@ button#op-button
   //   background-repeat no-repeat
 
 .section-articles
-  // padding-bottom 0
   .section-header
     height 3rem
     font-weight 600
@@ -1526,6 +1523,19 @@ button#op-button
     grid-column 6 / span 7
     justify-content flex-end
     text-align left
+  a
+    &:nth-child(1) .cards__item
+      justify-content flex-end
+      background url("/split-graphics.svg"), linear-gradient(256.92deg, #121435 0%, #030419 100%)
+      background-position top center
+      background-size contain
+      background-repeat no-repeat
+    &:nth-child(2) .cards__item
+      justify-content flex-start
+      background url("/reverse-graphics.svg"), linear-gradient(256.92deg, #121435 0%, #030419 100%)
+      background-position bottom center
+      background-size contain
+      background-repeat no-repeat
   .cards
     margin-top 6rem
     display grid
@@ -1535,9 +1545,10 @@ button#op-button
     &__item
       position relative
       padding 3rem
-      background linear-gradient(256.92deg, #120018 0%, #121435 100%)
+      height 338px
       box-shadow 0px 15px 33px rgba(0, 3, 66, 0.11), 0px 6px 12px rgba(0, 0, 0, 0.06), 0px 0px 1px rgba(0, 0, 0, 0.07)
-      border-radius 1.25rem
+      color var(--white)
+      position relative
       display flex
       flex-direction column
       flex-wrap nowrap
@@ -1602,10 +1613,7 @@ button#op-button
     background-color rgba(22, 22, 26, 0.9)
     z-index 2
     filter saturate(180%)
-    transition: background-color 300ms ease 0s
-
-// @media all and (max-width: 1600px)
-// @media all and (max-width: 1400px)
+    transition background-color 300ms ease 0s
 
 @media screen and (max-width: 1919px)
   .section-container
