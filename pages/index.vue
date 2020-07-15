@@ -92,6 +92,7 @@
           blockchains will be able to connect with each other using the first
           standardized protocol for inter-blockchain communication (IBC).
         </div>
+        <!-- TODO: update url -->
         <div class="section-cta">
           <a
             href="https://www.youtube.com/watch?v=mlq5GzQTIAM"
@@ -284,6 +285,7 @@
             to a stable Stargate release.
           </div>
           <div class="section-cta">
+            <!-- TODO: update url -->
             <a
               href="https://www.youtube.com/watch?v=mlq5GzQTIAM"
               target="_blank"
