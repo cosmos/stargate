@@ -150,10 +150,9 @@ footer
     width 100%
     .nav
       display flex
+      flex-direction row
       justify-content center
       margin-top 1rem
-      margin-left auto
-      margin-right auto
       &__item
         padding 1.25rem 0
         margin 0 1rem
@@ -202,5 +201,12 @@ footer
     .container
       margin 3rem 4rem
       .nav
-        display block
+        display grid
+        grid-template-columns repeat(2, 1fr)
+
+@media screen and (max-width: 320px)
+  footer
+    .container
+      .nav
+        grid-template-columns repeat(1, 1fr)
 </style>
