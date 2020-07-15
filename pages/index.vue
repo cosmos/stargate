@@ -296,8 +296,7 @@
         rel="noreferrer noopener"
         class="section-row"
         :style="{
-          '--progress-bar-background-color': `${bgColor[item.logo][0]}`,
-          '--progress-bar-box-shadow': `${bgColor[item.logo][1]}`,
+          '--progress-bar-background-color-opacity': `${bgColor[item.logo][1]}`,
         }"
       >
         <div
@@ -443,29 +442,37 @@
     <div id="community" class="section-community section-container">
       <div class="section-header">Community</div>
       <div class="cards">
-        <div class="cards__item">
-          <div class="cards__item__caption">connect</div>
-          <div class="cards__item__title">Join the community</div>
-          <div class="cards__item__description">
-            Learn about Cosmos, get to know the community, connect with other
-            Cosmonauts and more.
+        <a
+          href="https://cosmos.network/community"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          <div class="cards__item">
+            <div class="cards__item__caption">connect</div>
+            <div class="cards__item__title">Join the community</div>
+            <div class="cards__item__description">
+              Learn about Cosmos, get to know the community, connect with other
+              Cosmonauts and more.
+            </div>
           </div>
-        </div>
-        <div class="cards__item">
-          <div class="cards__item__caption">chat</div>
-          <div class="cards__item__title">Discuss Stargate</div>
-          <div class="cards__item__description">
-            Join the
-            <a
-              href="https://discord.com/channels/669268347736686612/723170066937413693"
-              target="_blank"
-              rel="noreferrer noopener"
-            >
-              <code>#stargate</code>
-            </a>
-            channel in the Cosmos community Discord and chat with developers.
+        </a>
+        <a
+          href="https://discord.com/channels/669268347736686612/723170066937413693"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          <div class="cards__item">
+            <span class="cards__item__top-right-logo">
+              <icon-arrow-top-right />
+            </span>
+            <div class="cards__item__caption">chat</div>
+            <div class="cards__item__title">Discuss Stargate</div>
+            <div class="cards__item__description">
+              Join the <code>#stargate</code> channel in the Cosmos community
+              Discord and chat with developers.
+            </div>
           </div>
-        </div>
+        </a>
       </div>
     </div>
   </main>
@@ -502,19 +509,18 @@ export default {
         ['tendermint/tendermint', 27, 'core', 'Tendermint Core 0.34'],
         ['cosmos/cosmos-sdk', 21, 'ibc', 'Cosmos SDK – IBC 1.0 Milestone'],
       ],
-      // TODO: fix negative horizontal offset value
       bgColor: {
         sdk: [
           'linear-gradient(95.47deg, #320B93 0%, #3B2AB7 100%)',
-          'inset -140px 0px 0px rgba(0, 8, 85, 0.405)',
+          'rgb(59, 42, 183, 0.7)',
         ],
         core: [
           'linear-gradient(95.47deg, #086108 0%, #018A01 100%)',
-          'inset -90px 0px 0px rgba(0, 8, 85, 0.405)',
+          'rgb(1, 138, 1, 0.7)',
         ],
         ibc: [
           'linear-gradient(95.47deg, #121435 0%, #282B53 100%)',
-          'inset -155.8px 0px 0px rgba(0, 8, 85, 0.405)',
+          'rgb(40, 43, 83, 0.7)',
         ],
       },
     }
@@ -1005,7 +1011,6 @@ button#op-button
   z-index 10
   backdrop-filter saturate(180%) blur(10px)
   -webkit-backdrop-filter saturate(180%) blur(10px)
-  transition background-color 300ms ease 0s
   .nav
     overflow scroll
     white-space nowrap
@@ -1148,16 +1153,15 @@ button#op-button
     grid-column 6/span 12
     display grid
     align-items center
-    box-shadow var(--progress-bar-box-shadow)
-    background var(--progress-bar-background-color, linear-gradient(95.47deg, #121435 0%, #282B53 100%))
+    background var(--progress-bar-background-color-opacity, rgb(40, 43, 83, 0.7))
     color white
     grid-auto-flow column
-    border-radius 0.5rem
+    border-radius 1.25rem
     transition all .25s
     .meter
       width var(--progress-bar-width, 0)
       background var(--progress-bar-background-color, linear-gradient(95.47deg, #121435 0%, #282B53 100%))
-      border-radius 0.5rem
+      border-radius 1.25rem
       display inline-flex
     .icon__wrapper
       display flex
@@ -1334,8 +1338,6 @@ button#op-button
           color #989BB9
 
 .section-videos
-  display grid
-  grid-template-columns repeat(12,1fr)
   text-align center
   padding-top 0
   padding-bottom 0
@@ -1420,6 +1422,19 @@ button#op-button
     grid-column 6 / 13
     justify-content flex-end
     text-align left
+  a
+    &:nth-child(1) .cards__item
+      justify-content flex-end
+      background url("/split-graphics.svg"), linear-gradient(256.92deg, #121435 0%, #030419 100%)
+      background-position top center
+      background-size contain
+      background-repeat no-repeat
+    &:nth-child(2) .cards__item
+      justify-content flex-start
+      background url("/reverse-graphics.svg"), linear-gradient(256.92deg, #121435 0%, #030419 100%)
+      background-position bottom center
+      background-size contain
+      background-repeat no-repeat
   .cards
     margin-top 6rem
     display grid
@@ -1428,26 +1443,20 @@ button#op-button
     grid-column 1 / 13
     &__item
       padding 3rem
-      background linear-gradient(256.92deg, #120018 0%, #121435 100%)
+      height 338px
       box-shadow 0px 15px 33px rgba(0, 3, 66, 0.11), 0px 6px 12px rgba(0, 0, 0, 0.06), 0px 0px 1px rgba(0, 0, 0, 0.07)
-      border-radius 1.25rem
+      color var(--white)
+      position relative
       display flex
       flex-direction column
       flex-wrap nowrap
-      // align-items start
-      justify-content flex-start
-      color var(--white)
-      height 338px
-      background url("/reverse-graphics.svg"), linear-gradient(256.92deg, #121435 0%, #030419 100%)
-      background-position bottom center
-      background-size contain
-      background-repeat no-repeat
-      &:first-child
-        background url("/split-graphics.svg"), linear-gradient(256.92deg, #121435 0%, #030419 100%)
-        justify-content flex-end
-        background-position top center
-        background-size contain
-        background-repeat no-repeat
+      border-radius 1.25rem
+      &__top-right-logo
+        position absolute
+        width 1.5rem
+        height 1.5rem
+        top 3rem
+        right 3rem
       &__caption
         font-weight 600
         font-size 16px
@@ -1476,9 +1485,6 @@ button#op-button
     z-index 2
     filter saturate(180%)
     transition: background-color 300ms ease 0s
-
-// @media all and (max-width: 1600px)
-// @media all and (max-width: 1400px)
 
 @media all and (max-width: 1200px)
   .section-features
