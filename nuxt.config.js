@@ -14,22 +14,22 @@ export default {
    ** See https://nuxtjs.org/api/configuration-head
    */
   head: {
-    title: process.env.npm_package_name || '',
+    title: 'Stargate',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
         hid: 'description',
         name: 'description',
-        content: process.env.npm_package_description || '',
+        content: 'Stargate Upgrade for the Cosmos ecosystem',
       },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
     link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       {
         rel: 'stylesheet',
         href:
-          'https://fonts.googleapis.com/css?family=Inter:100,200,300,400,500,600,700,800,900&display=swap',
+          'https://fonts.googleapis.com/css?family=Inter:400,700,900&display=swap',
       },
     ],
   },
@@ -64,5 +64,22 @@ export default {
    ** Build configuration
    ** See https://nuxtjs.org/api/configuration-build/
    */
-  build: {},
+  build: {
+    // https://nuxtjs.org/faq/postcss-plugins/#recommended-method
+    postcss: {
+      // Add plugin names as key and arguments as value
+      // Install them before as dependencies with npm or yarn
+      // plugins: {
+      //   // Disable a plugin by passing false as value
+      //   'postcss-url': false,
+      //   'postcss-nested': {},
+      //   'postcss-responsive-type': {},
+      //   'postcss-hexrgba': {},
+      // },
+      preset: {
+        // Change the postcss-preset-env settings
+        autoprefixer: {},
+      },
+    },
+  },
 }

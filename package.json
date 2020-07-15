@@ -1,6 +1,7 @@
 {
   "name": "stargate",
   "version": "1.0.0",
+  "description": "Stargate Upgrade for the Cosmos ecosystem",
   "private": true,
   "scripts": {
     "dev": "nuxt",
