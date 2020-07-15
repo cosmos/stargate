@@ -186,7 +186,7 @@ footer
       line-height 1.538
       letter-spacing 0.001em
       a
-        color #40B3FF
+        color #ECEDF7
         &:hover,
         &:focus
           color #99DAFF
