@@ -587,17 +587,8 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-// testing
-// *
-//   background: #000 !important;
-//   color: #0f0 !important;
-//   outline: solid #f00 1px !important;
-
 :root
   --container-mw-lg: 74rem
-
-button#op-button
-  display none !important
 
 // Accessible/SEO friendly CSS hiding
 .sr-only
@@ -613,7 +604,6 @@ button#op-button
 .section-container
   display grid
   grid-template-columns repeat(12, 1fr)
-  // grid-column-gap 1rem
   width 100%
   margin 0 auto
   padding 6rem 1rem
@@ -1266,7 +1256,6 @@ button#op-button
   //   background-repeat no-repeat
 
 .section-articles
-  // padding-bottom 0
   .section-header
     height 48px
     font-weight 600
