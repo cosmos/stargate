@@ -345,6 +345,30 @@
         <div class="section-status">
           <div class="section-status__title">Status updates</div>
         </div>
+        <div class="section-list">
+          <div class="section-list__item">
+            <div class="section-list__item__title">Week 1 status</div>
+            <div class="section-list__item__date">
+              <a
+                href="https://github.com/cosmosdevs/stargate/blob/master/week1.md"
+                target="_blank"
+                rel="noreferrer noopener"
+                >July 2, 2020</a
+              >
+            </div>
+          </div>
+          <div class="section-list__item">
+            <div class="section-list__item__title">Week 2 status</div>
+            <div class="section-list__item__date">
+              <a
+                href="https://github.com/cosmosdevs/stargate/blob/master/week2.md"
+                target="_blank"
+                rel="noreferrer noopener"
+                >July 13, 2020</a
+              >
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -1305,7 +1329,6 @@ export default {
         transition-duration 0s
   .section-status
     grid-column 1 / 5
-    grid-row 6
     margin-top 6rem
     &__title
       margin-top 2rem
@@ -1316,6 +1339,30 @@ export default {
       letter-spacing -0.03em
       text-align start
       color #FFFFFF
+  .section-list
+    color #fff
+    margin-top 6rem
+    grid-column 6 / span 7
+    &__item
+      padding-top 1.875rem
+      padding-bottom 1.875rem
+      display flex
+      flex-direction row
+      justify-content space-between
+      &:first-child
+        border-bottom 1px solid #282B53
+      &__title
+        font-weight bold
+        font-size 23px
+        line-height 121.7%
+        letter-spacing -0.01em
+        color #CCD1FF
+      &__date
+        font-size 19px
+        line-height 126.3%
+        text-align right
+        letter-spacing -0.005em
+        color #989BB9
 
 .section-contributors
   .section-header
@@ -1333,7 +1380,7 @@ export default {
     grid-column 6 / span 7
   .section-title
     margin-top 3rem
-    grid-column 1/5
+    grid-column 1/7
     font-weight 900
     font-size 5.125rem
     line-height 1.121
@@ -1347,7 +1394,6 @@ export default {
     line-height 1.565
     letter-spacing -0.01em
     color #CFD1E7
-    text-align initial
     max-width 30em
   // .team-img
   //   grid-row 4
@@ -1543,7 +1589,6 @@ export default {
       display flex
       flex-direction column
       flex-wrap nowrap
-      // align-items start
       justify-content flex-start
       color var(--white)
       height 338px
@@ -1551,6 +1596,7 @@ export default {
       background-position bottom center
       background-size contain
       background-repeat no-repeat
+      border-radius 1.25rem
       &:first-child
         background url("/split-graphics.svg"), linear-gradient(256.92deg, #121435 0%, #030419 100%)
         justify-content flex-end
@@ -1611,6 +1657,14 @@ export default {
     padding-left 8rem
     padding-right 8rem
 
+@media screen and (max-width: 1438px)
+  .section-videos
+    .container
+      .frame
+        grid-column 1 / 8
+      .text
+        grid-column 8 / span 4
+
 @media screen and (max-width: 1279px)
   .section
     padding-top 6rem
@@ -1620,7 +1674,6 @@ export default {
     padding-left 6rem
     padding-right 6rem
 
-@media all and (max-width: 1200px)
   .section-features
     .grid-container
       grid-column 1/span 12
@@ -1701,7 +1754,15 @@ export default {
       grid-column 1 / 12
       margin-top 4rem
     .grid-container
-      grid-template-columns repeat(1, 1fr)
+      .grid-item
+        &:nth-child(even),
+        &:nth-child(odd)
+          grid-column 1/12
+
+  .section-launchpad
+    .section-left,
+    .section-statement
+      grid-column 1 / 12
 
   .section-roadmap
     .section-title
@@ -1711,8 +1772,12 @@ export default {
     .section-row
       grid-column 1 / span 12
     .section-milestones
-      &__cta
-        display none
+      grid-column 1 / 12
+    .section-status
+      grid-column 1 / 12
+    .section-list
+      margin-top 0
+      grid-column 1 / span 12
 
   .section-contributors
     .section-title
@@ -1731,7 +1796,7 @@ export default {
       font-size 4rem
     .content
       grid-row 3
-      grid-column 1/12
+      grid-column 1/13
       margin-top 4rem
 
   .section-features
@@ -1745,9 +1810,11 @@ export default {
       .frame
         grid-column 1/span 12
       .text
+        margin-top 2rem
         grid-column 1/span 12
         &__cta
-          display none
+          position unset
+          text-align left
 
   .section-community .cards
     grid-template-columns repeat(1, 1fr)
@@ -1757,13 +1824,11 @@ export default {
     padding-left 1.5rem
     padding-right 1.5rem
 
-@media screen and (max-width: 600px)
-  .section-roadmap
-    .section-row
-      .icon__wrapper
-        display none
-      .details
-        margin 2rem
+// @media screen and (max-width: 600px)
+//   .section-roadmap
+//     .section-row
+//       .details
+//         margin 2rem
 
 @media screen and (min-width: 1920px)
   .section
