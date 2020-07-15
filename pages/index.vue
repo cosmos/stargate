@@ -377,10 +377,10 @@
               </span>
               <div class="articles-item__date">June 23</div>
               <div class="articles-item__title">
-                Tendermint Ø.34, Protocol Buffers, and You
+                Tendermint 0.34, Protocol Buffers, and You
               </div>
               <div class="articles-item__description">
-                The upcoming Tendermint Ø.34 release contains a major change to
+                The upcoming Tendermint 0.34 release contains a major change to
                 the way we serialize and encode data. Here’s what you need to
                 know.
               </div>
@@ -1311,8 +1311,7 @@ button#op-button
         margin-top 2rem
         position relative
         &:hover
-          transform translateY(-5px)
-          transition all .25s ease-in-out
+          background #121435
         &__icon
           position absolute
           width 24px
@@ -1484,7 +1483,7 @@ button#op-button
     background-color rgba(22, 22, 26, 0.9)
     z-index 2
     filter saturate(180%)
-    transition: background-color 300ms ease 0s
+    transition background-color 300ms ease 0s
 
 @media all and (max-width: 1200px)
   .section-features
