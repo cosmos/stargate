@@ -28,32 +28,44 @@
           <div class="bottom__get-notified">
             Get notified when testnets start
           </div>
-          <div class="bottom__form">
-            <form
-              :action="url"
-              method="POST"
-              target="_blank"
-              rel="noreferrer noopener"
-              @submit.prevent="actionSubmitEmail"
+          <transition name="fade" mode="out-in">
+            <div v-if="state === 'success'" key="success" class="bottom__state">
+              <h2 class="bottom__state__success">Success!</h2>
+            </div>
+            <div
+              v-else-if="state === 'error'"
+              key="error"
+              class="bottom__state"
             >
-              <div class="bottom__form__input">
-                <input
-                  v-model="email"
-                  name="CONTACT_EMAIL"
-                  class="bottom__form__input__input"
-                  type="email"
-                  placeholder="Your email"
-                />
-                <button type="submit" class="bottom__form__input__button">
-                  <icon-arrow-right
-                    class="bottom__form__input__icon"
-                    @click="actionSubmitEmail"
+              <h1 class="bottom__state__error">Uh oh! Something went wrong.</h1>
+            </div>
+            <div v-else key="default" class="bottom__form">
+              <form
+                :action="url"
+                method="POST"
+                target="_blank"
+                rel="noreferrer noopener"
+                @submit.prevent="actionSubmitEmail"
+              >
+                <div class="bottom__form__input">
+                  <input
+                    v-model="email"
+                    name="CONTACT_EMAIL"
+                    class="bottom__form__input__input"
+                    type="email"
+                    placeholder="Your email"
                   />
-                  <span class="sr-only">Submit</span>
-                </button>
-              </div>
-            </form>
-          </div>
+                  <button type="submit" class="bottom__form__input__button">
+                    <icon-arrow-right
+                      class="bottom__form__input__icon"
+                      @click="actionSubmitEmail"
+                    />
+                    <span class="sr-only">Submit</span>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </transition>
         </div>
       </div>
     </div>
@@ -92,10 +104,9 @@
           blockchains will be able to connect with each other using the first
           standardized protocol for inter-blockchain communication (IBC).
         </div>
-        <!-- TODO: update url -->
         <div class="section-cta">
           <a
-            href="https://www.youtube.com/watch?v=mlq5GzQTIAM"
+            href="https://blog.cosmos.network/cosmos-stargate-upgrade-overview-8939475fe673"
             target="_blank"
             rel="noreferrer noopener"
           >
@@ -352,24 +363,22 @@
             href="https://github.com/cosmosdevs/stargate/blob/master/week1.md"
             target="_blank"
             rel="noreferrer noopener"
+            class="section-list__item"
           >
-            <div class="section-list__item">
-              <div class="section-list__item__title">Week 1 status</div>
-              <div class="section-list__item__date">
-                July 2, 2020 &#8594;
-              </div>
+            <div class="section-list__item__title">Week 1 status</div>
+            <div class="section-list__item__date">
+              July 2, 2020 &#8594;
             </div>
           </a>
           <a
             href="https://github.com/cosmosdevs/stargate/blob/master/week2.md"
             target="_blank"
             rel="noreferrer noopener"
+            class="section-list__item"
           >
-            <div class="section-list__item">
-              <div class="section-list__item__title">Week 2 status</div>
-              <div class="section-list__item__date">
-                July 13, 2020 &#8594;
-              </div>
+            <div class="section-list__item__title">Week 2 status</div>
+            <div class="section-list__item__date">
+              July 13, 2020 &#8594;
             </div>
           </a>
         </div>
@@ -545,6 +554,8 @@ export default {
   data() {
     return {
       email: null,
+      state: 'default',
+      // TODO: update new segment group
       url: 'https://app.mailerlite.com/webforms/submit/d7i4g7',
       formData: {
         callback: 'jQuery1830520133881537445_1594145870016',
@@ -567,10 +578,6 @@ export default {
     }
   },
   computed: {
-    emailInvalid() {
-      const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-      return !re.test(String(this.email))
-    },
     countdownTimer() {
       return moment('20200729', 'YYYYMMDD').diff(moment(), 'days')
     },
@@ -602,6 +609,12 @@ export default {
         }),
       }
       fetch(this.url, options)
+        .then(() => {
+          this.state = 'success'
+        })
+        .catch(() => {
+          this.state = 'error'
+        })
     },
     async getMilestone(repo, id, logo, defaultTitle, defaultProgress) {
       const url = `https://github.com/${repo}/milestone/${id}`
@@ -628,6 +641,29 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+// Form state transition
+.fade-enter-active
+  transition all .4s ease-out
+
+.fade-leave-active
+  transition all .2s ease-out
+
+.fade-enter
+  opacity 0
+  transform scale(1.5)
+
+.fade-enter-to
+  opacity 1
+  transform scale(1)
+
+.fade-leave
+  opacity 1
+  transform scale(1)
+
+.fade-leave-to
+  opacity 0
+  transform scale(.85)
+
 // Accessible/SEO friendly CSS hiding
 .sr-only
   position absolute
@@ -726,6 +762,12 @@ export default {
         font-size 1rem
         line-height 1.375
         color #CFD1E7
+      &__state
+        margin-top 0.5rem
+        &__success
+          color #5bc75b
+        &__error
+          color #dd285e
       &__form
         margin 1rem auto 0
         max-width 25rem
