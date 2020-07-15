@@ -1,50 +1,35 @@
 <template>
   <footer>
     <div class="container">
-      <logo-wordmark />
-
-      <div class="home-nav">
+      <div class="nav">
         <a
-          href="http://cosmos.network"
+          class="nav__item"
+          href="https://docs.cosmos.network"
           target="blank_"
           rel="noreferrer noopener"
-          >cosmos.network</a
+          >Cosmos SDK</a
         >
-      </div>
-
-      <div class="nav">
-        <div class="nav__item">
-          <a
-            href="https://docs.cosmos.network"
-            target="blank_"
-            rel="noreferrer noopener"
-            >Cosmos SDK</a
-          >
-        </div>
-        <div class="nav__item">
-          <a
-            href="https://hub.cosmos.network"
-            target="blank_"
-            rel="noreferrer noopener"
-            >Cosmos Hub</a
-          >
-        </div>
-        <div class="nav__item">
-          <a
-            href="https://docs.tendermint.com"
-            target="blank_"
-            rel="noreferrer noopener"
-            >Tendermint Core</a
-          >
-        </div>
-        <div class="nav__item">
-          <a
-            href="https://github.com/cosmos/ics"
-            target="blank_"
-            rel="noreferrer noopener"
-            >Interchain Standards</a
-          >
-        </div>
+        <a
+          class="nav__item"
+          href="https://hub.cosmos.network"
+          target="blank_"
+          rel="noreferrer noopener"
+          >Cosmos Hub</a
+        >
+        <a
+          class="nav__item"
+          href="https://docs.tendermint.com"
+          target="blank_"
+          rel="noreferrer noopener"
+          >Tendermint Core</a
+        >
+        <a
+          class="nav__item"
+          href="https://github.com/cosmos/ics"
+          target="blank_"
+          rel="noreferrer noopener"
+          >Interchain Standards</a
+        >
       </div>
       <div ref="links" class="social-icons">
         <a
@@ -65,6 +50,14 @@
             <path :d="icon(link)" style="pointer-events: none;"></path>
           </svg>
         </a>
+      </div>
+      <div class="home-nav">
+        <a
+          href="http://cosmos.network"
+          target="blank_"
+          rel="noreferrer noopener"
+          >cosmos.network</a
+        >
       </div>
       <div class="smallprint">
         This website is maintained by Tendermint Inc. The contents and opinions
@@ -152,33 +145,28 @@ footer
   color var(--white)
   background linear-gradient(180deg, #000000 0%, #030419 100%)
   .container
-    margin 6rem 8rem
-    max-width 74rem
+    margin 3rem 8rem
+    max-width var(--container-mw-lg)
     width 100%
-    .home-nav
-      margin-top 2rem
-      font-size 1rem
-      line-height 1.625
-      a
-        color #40B3FF
     .nav
-      display grid
-      gap 2rem
-      grid-template-columns repeat(auto-fit, minmax(120px, 1fr))
-      max-width 45.9375rem
-      width 100%
-      margin-top 3rem
+      display flex
+      justify-content center
+      margin-top 1rem
       margin-left auto
       margin-right auto
       &__item
-        margin 1.25rem 0px
+        padding 1.25rem 0
+        margin 0 1rem
         font-size 1rem
         line-height 137.5%
-        color #CFD1E7
         border-radius 0.375rem
         white-space nowrap
+        color #989BB9
+        &:hover,
+        &:focus
+          color #FFFFFF
     .social-icons
-      margin-top 3rem
+      margin-top 2rem
       display flex
       flex-direction row
       flex-wrap wrap
@@ -187,14 +175,25 @@ footer
       text-align center
       &__item
         margin 0.75rem
+        svg
+          transition fill .15s ease-out
         &:hover svg,
         &:focus svg
-          transition fill .15s ease-out
           fill #FFF
-    .smallprint
-      margin-top 3rem
+    .home-nav
+      margin-top 1rem
       font-size 0.8125rem
-      line-height 153.8%
+      line-height 1.538
+      letter-spacing 0.001em
+      a
+        color #ECEDF7
+        &:hover,
+        &:focus
+          color #99DAFF
+    .smallprint
+      margin-top 1rem
+      font-size 0.8125rem
+      line-height 1.538
       letter-spacing 0.001em
       color #989BB9
 

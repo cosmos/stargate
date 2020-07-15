@@ -44,10 +44,13 @@
                   type="email"
                   placeholder="Your email"
                 />
-                <icon-arrow-right
-                  class="bottom__form__input__icon"
-                  @click="actionSubmitEmail"
-                />
+                <button type="submit" class="bottom__form__input__button">
+                  <icon-arrow-right
+                    class="bottom__form__input__icon"
+                    @click="actionSubmitEmail"
+                  />
+                  <span class="sr-only">Submit</span>
+                </button>
               </div>
             </form>
           </div>
@@ -77,189 +80,17 @@
       </nav>
     </div>
 
-    <div id="intro" class="section-intro section-container">
-      <div class="section-title">A new era for Cosmos</div>
-      <div class="section-subtitle">
-        The biggest event in the ecosystem since the launch of the Cosmos Hub.
-      </div>
-      <div class="section-statement">
-        Stargate is a set of upgrades that complete the original roadmap laid
-        out in the Cosmos Whitepaper. For the first time ever, Cosmos
-        blockchains will be able to connect with each other using the first
-        standardized protocol for inter-blockchain communication (IBC).
-      </div>
-      <div class="section-cta">
-        <a
-          href="https://www.youtube.com/watch?v=mlq5GzQTIAM"
-          target="_blank"
-          rel="noreferrer noopener"
-        >
-          Read more about Stargate &#8594;
-        </a>
-      </div>
-    </div>
-
-    <div id="features" class="section-features section-container">
-      <div class="section-header">Features</div>
-      <div class="section-title">What’s new?</div>
-      <div class="section-statement">
-        These upgrades bring significant performance improvements to blockchains
-        built with Cosmos SDK. Discover all the amazing features of the Stargate
-        upgrade below.
-      </div>
-      <div class="data-container">
-        <div class="data-item">
-          <div class="data-item__overline">Enabling</div>
-          <div class="data-item__heading">IBC</div>
+    <div id="intro" class="section section-intro section-container">
+      <div class="container">
+        <div class="section-title">A new era for Cosmos</div>
+        <div class="section-subtitle">
+          The biggest event in the ecosystem since the launch of the Cosmos Hub.
         </div>
-        <div class="data-item">
-          <div class="data-item__overline">Efficiency gains up to</div>
-          <div class="data-item__heading">100x</div>
-        </div>
-        <div class="data-item">
-          <div class="data-item__overline">Faster full node sync</div>
-          <div class="data-item__heading">96x</div>
-        </div>
-        <div class="data-item">
-          <div class="data-item__overline">Faster upgrades</div>
-          <div class="data-item__heading">20x</div>
-        </div>
-      </div>
-      <div class="ibc-item">
-        <div class="ibc-item__icon">
-          <icon-ibc-cropped />
-        </div>
-        <div class="ibc-item__title">Inter-Blockchain Communication</div>
-        <div class="ibc-item__description">
-          Cosmos SDK-based blockchains can incorporate the Inter-Blockchain
-          Communication (IBC) Protocol to communicate with other compatible
-          blockchains. The Cosmos Hub is the first blockchain to support IBC in
-          production.
-        </div>
-      </div>
-      <div class="grid-container">
-        <div class="grid-item">
-          <div class="grid-item__icon">
-            <icon-countdown />
-          </div>
-          <div class="grid-item__title">State Sync</div>
-          <div class="grid-item__description">
-            For blockchains built on top of Tendermint Core, the full-node
-            synchronization process will be reduced from 2 days to just 30 mins
-            or less.
-          </div>
-        </div>
-        <div class="grid-item">
-          <div class="grid-item__icon">
-            <icon-repeat />
-          </div>
-          <div class="grid-item__title">Automatic upgrades</div>
-          <div class="grid-item__description">
-            The upgrade module facilitates the upgrade process of chains built
-            with Cosmos SDK. Migration from one version to the next will take
-            little to no time, as opposed to one hour or more before.
-          </div>
-        </div>
-        <div class="grid-item">
-          <div class="grid-item__icon">
-            <icon-mask-oval />
-          </div>
-          <div class="grid-item__title">Full-featured Light Clients</div>
-          <div class="grid-item__description">
-            Protobuf brings performance improvements and developer acceleration
-            to Cosmos SDK-based blockchains with efficiency gains of 10-100x,
-            and wider language support.
-          </div>
-        </div>
-        <div class="grid-item">
-          <div class="grid-item__icon">
-            <icon-speedometer />
-          </div>
-          <div class="grid-item__title">Transition from Amino to Protobuf</div>
-          <div class="grid-item__description">
-            Protobuf brings performance improvements and developer acceleration
-            to Cosmos SDK-based blockchains with efficiency gains of 10-100x,
-            and wider language support.
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div id="prepare" class="section-prepare section-container">
-      <div class="section-header">Prepare</div>
-      <div class="section-title">Get set for testnets</div>
-      <div class="section-statement">
-        The following services will be affected by the upgrades with Stargate.
-        Make sure to schedule time in August for integration testing on the
-        testnet. More detailed instructions & guidelines on how services can
-        prepare for the upgrade will be published in August.
-      </div>
-      <div class="grid-container">
-        <div class="grid-item">
-          <div class="grid-item__icon">
-            <icon-validator />
-          </div>
-          <div class="grid-item__title">Validators</div>
-          <div class="grid-item__description">
-            Validators of chains that will implement Stargate upgrades -
-            beginning with the Cosmos Hub - should prepare by helping run
-            Stargate testnets in the coming weeks.
-          </div>
-        </div>
-        <div class="grid-item">
-          <div class="grid-item__icon">
-            <icon-explore />
-          </div>
-          <div class="grid-item__title">Wallets & Explorers</div>
-          <div class="grid-item__description">
-            This release will bring breaking changes to all wallets and
-            explorers of chains that will implement the Stargate Upgrade
-            (including Cosmos Hub).
-          </div>
-        </div>
-        <div class="grid-item">
-          <div class="grid-item__icon">
-            <icon-exchanges />
-          </div>
-          <div class="grid-item__title">Exchanges</div>
-          <div class="grid-item__description">
-            Make sure your signing and querying software is ready for the
-            Stargate upgrade by testing the features and your infrastructure
-            ahead of time, using the testnet.
-          </div>
-        </div>
-        <div class="grid-item">
-          <div class="grid-item__icon">
-            <icon-sdk-hex />
-          </div>
-          <div class="grid-item__title">Zone Developers</div>
-          <div class="grid-item__description">
-            If you're developing a blockchain with Cosmos SDK, please prepare to
-            join the Stargate testnet. More detailed guides to follow shortly.
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div id="launchpad" class="section-launchpad section-container">
-      <div class="section-header">a note for zone developers</div>
-      <div class="section-left">
-        <div class="section-left__heading">Not ready to upgrade?</div>
-        <div class="section-left__title">Launchpad</div>
-      </div>
-      <div class="section-statement">
-        <div class="section-statement__p">
-          Stargate involves a lot of breaking changes that may make it difficult
-          for you to upgrade, if you have already written a lot of code for
-          Cosmos SDK 0.37/0.38.
-        </div>
-        <br />
-        <div class="section-statement__p">
-          The community supports an SDK 0.39 Launchpad release that includes
-          backported bug fixes. The
-          <a v-scroll-to="'#contributors'">Cosmos development teams</a> are
-          working together to document a clean migration path from Launchpad to
-          a stable Stargate release.
+        <div class="section-statement">
+          Stargate is a set of upgrades that complete the original roadmap laid
+          out in the Cosmos Whitepaper. For the first time ever, Cosmos
+          blockchains will be able to connect with each other using the first
+          standardized protocol for inter-blockchain communication (IBC).
         </div>
         <div class="section-cta">
           <a
@@ -267,51 +98,239 @@
             target="_blank"
             rel="noreferrer noopener"
           >
-            Check out the release &#8594;
+            Read more about Stargate &#8594;
           </a>
         </div>
       </div>
     </div>
 
-    <div id="roadmap" class="section-roadmap section-container">
-      <div class="section-header">Roadmap</div>
-      <div class="section-title">{{ progressTotal }}% complete</div>
-      <div class="section-milestones">
-        <div class="section-milestones__title">Milestones</div>
-        <div class="section-milestones__cta">
-          <a
-            href="https://github.com/orgs/cosmosdevs/projects/1"
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            View on GitHub &#8594;
-          </a>
+    <div id="features" class="section section-features section-container">
+      <div class="container">
+        <div class="section-header">Features</div>
+        <div class="section-title">What’s new?</div>
+        <div class="section-statement">
+          These upgrades bring significant performance improvements to
+          blockchains built with Cosmos SDK. Discover all the amazing features
+          of the Stargate upgrade below.
+        </div>
+        <div class="data-container">
+          <div class="data-item">
+            <div class="data-item__overline">Enabling</div>
+            <div class="data-item__heading">IBC</div>
+          </div>
+          <div class="data-item">
+            <div class="data-item__overline">Efficiency gains up to</div>
+            <div class="data-item__heading">100x</div>
+          </div>
+          <div class="data-item">
+            <div class="data-item__overline">Faster full node sync</div>
+            <div class="data-item__heading">96x</div>
+          </div>
+          <div class="data-item">
+            <div class="data-item__overline">Faster upgrades</div>
+            <div class="data-item__heading">20x</div>
+          </div>
+        </div>
+        <div class="ibc-item">
+          <div class="ibc-item__icon">
+            <icon-ibc-cropped />
+          </div>
+          <div class="ibc-item__title">Inter-Blockchain Communication</div>
+          <div class="ibc-item__description">
+            Cosmos SDK-based blockchains can incorporate the Inter-Blockchain
+            Communication (IBC) Protocol to communicate with other compatible
+            blockchains. The Cosmos Hub is the first blockchain to support IBC
+            in production.
+          </div>
+        </div>
+        <div class="grid-container">
+          <div class="grid-item">
+            <div class="grid-item__icon">
+              <icon-countdown />
+            </div>
+            <div class="grid-item__title">State Sync</div>
+            <div class="grid-item__description">
+              For blockchains built on top of Tendermint Core, the full-node
+              synchronization process will be reduced from 2 days to just 30
+              mins or less.
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="grid-item__icon">
+              <icon-repeat />
+            </div>
+            <div class="grid-item__title">Automatic upgrades</div>
+            <div class="grid-item__description">
+              The upgrade module facilitates the upgrade process of chains built
+              with Cosmos SDK. Migration from one version to the next will take
+              little to no time, as opposed to one hour or more before.
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="grid-item__icon">
+              <icon-mask-oval />
+            </div>
+            <div class="grid-item__title">Full-featured Light Clients</div>
+            <div class="grid-item__description">
+              Protobuf brings performance improvements and developer
+              acceleration to Cosmos SDK-based blockchains with efficiency gains
+              of 10-100x, and wider language support.
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="grid-item__icon">
+              <icon-speedometer />
+            </div>
+            <div class="grid-item__title">
+              Transition from Amino to Protobuf
+            </div>
+            <div class="grid-item__description">
+              Protobuf brings performance improvements and developer
+              acceleration to Cosmos SDK-based blockchains with efficiency gains
+              of 10-100x, and wider language support.
+            </div>
+          </div>
         </div>
       </div>
-      <a
-        v-for="item in milestoneList"
-        :key="item.url"
-        :href="item.url"
-        target="_blank"
-        rel="noreferrer noopener"
-        class="section-row"
-        :style="{
-          '--progress-bar-background-color-opacity': `${bgColor[item.logo][1]}`,
-        }"
-      >
-        <div
-          class="meter"
-          :style="{
-            '--progress-bar-width': `${item.progress}%`,
-            '--progress-bar-background-color': `${bgColor[item.logo][0]}`,
-          }"
+    </div>
+
+    <div id="prepare" class="section section-prepare section-container">
+      <div class="container">
+        <div class="section-header">Prepare</div>
+        <div class="section-title">Get set for testnets</div>
+        <div class="section-statement">
+          <p>
+            The following services will be affected by the upgrades with
+            Stargate. Make sure to schedule time in August for integration
+            testing on the testnet.
+          </p>
+          <p>
+            More detailed instructions and guidelines on how services can
+            prepare for the upgrade will be published in August.
+          </p>
+        </div>
+        <div class="grid-container">
+          <div class="grid-item">
+            <prepare-hex-bg class="grid-item__hex" />
+            <div class="grid-item__icon">
+              <icon-validator />
+            </div>
+            <div class="grid-item__title">Validators</div>
+            <div class="grid-item__description">
+              Validators of chains that will implement Stargate upgrades -
+              beginning with the Cosmos Hub - should prepare by helping run
+              Stargate testnets in the coming weeks.
+            </div>
+          </div>
+          <div class="grid-item">
+            <prepare-hex-bg class="grid-item__hex" />
+            <div class="grid-item__icon">
+              <icon-explore />
+            </div>
+            <div class="grid-item__title">Wallets &amp; Explorers</div>
+            <div class="grid-item__description">
+              This release will bring breaking changes to all wallets and
+              explorers of chains that will implement the Stargate Upgrade
+              (including Cosmos Hub).
+            </div>
+          </div>
+          <div class="grid-item">
+            <prepare-hex-bg class="grid-item__hex" />
+            <div class="grid-item__icon">
+              <icon-exchanges />
+            </div>
+            <div class="grid-item__title">Exchanges</div>
+            <div class="grid-item__description">
+              Make sure your signing and querying software is ready for the
+              Stargate upgrade by testing the features and your infrastructure
+              ahead of time, using the testnet.
+            </div>
+          </div>
+          <div class="grid-item">
+            <prepare-hex-bg class="grid-item__hex" />
+            <div class="grid-item__icon">
+              <icon-sdk-hex />
+            </div>
+            <div class="grid-item__title">Zone Developers</div>
+            <div class="grid-item__description">
+              If you're developing a blockchain with Cosmos SDK, please prepare
+              to join the Stargate testnet. More detailed guides to follow
+              shortly.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="launchpad" class="section section-launchpad section-container">
+      <div class="container">
+        <div class="section-header">a note for zone developers</div>
+        <div class="section-left">
+          <div class="section-left__heading">Not ready to upgrade?</div>
+          <div class="section-left__title">Launchpad</div>
+        </div>
+        <div class="section-statement">
+          <div class="section-statement__p">
+            Stargate involves a lot of breaking changes that may make it
+            difficult for you to upgrade, if you have already written a lot of
+            code for Cosmos SDK 0.37/0.38.
+          </div>
+          <br />
+          <div class="section-statement__p">
+            The community supports an SDK 0.39 Launchpad release that includes
+            backported bug fixes. The
+            <a v-scroll-to="'#contributors'">Cosmos development teams</a> are
+            working together to document a clean migration path from Launchpad
+            to a stable Stargate release.
+          </div>
+          <div class="section-cta">
+            <a
+              href="https://www.youtube.com/watch?v=mlq5GzQTIAM"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              Check out the release &#8594;
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="roadmap" class="section section-roadmap section-container">
+      <div class="container">
+        <div class="section-header">Roadmap</div>
+        <div class="section-title">{{ progressTotal }}% complete</div>
+        <div class="section-milestones">
+          <div class="section-milestones__title">Milestones</div>
+          <div class="section-milestones__cta">
+            <a
+              href="https://github.com/orgs/cosmosdevs/projects/1"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              View on GitHub &#8594;
+            </a>
+          </div>
+        </div>
+        <a
+          v-for="item in milestoneList"
+          :key="item.url"
+          :href="item.url"
+          target="_blank"
+          rel="noreferrer noopener"
+          class="section-row"
         >
-          <div class="icon__wrapper">
+          <div
+            class="meter"
+            :style="{
+              '--progress-bar-width': `${item.progress}%`,
+              '--progress-bar-background-color': `${bgColor[item.logo]}`,
+            }"
+          ></div>
+          <div class="details">
             <div class="icon">
               <component :is="`icon-${item.logo}`" />
             </div>
-          </div>
-          <div class="details">
             <div class="text">
               <div class="title">{{ item.title }}</div>
               <div class="subtitle">{{ item.repo }}</div>
@@ -322,36 +341,42 @@
               </div>
             </div>
           </div>
+        </a>
+        <div class="section-status">
+          <div class="section-status__title">Status updates</div>
         </div>
-      </a>
-      <div class="section-status">
-        <div class="section-status__title">Status updates</div>
       </div>
     </div>
 
-    <div id="contributors" class="section-contributors section-container">
-      <div class="section-header">Contributors</div>
-      <div class="section-title">Core Developers</div>
-      <div class="section-statement">
-        Stargate is made possible through the hard work and coordination of many
-        dedicated teams contributing to development on Cosmos SDK, Tendermint
-        Core, IBC and Gaia.
+    <div
+      id="contributors"
+      class="section section-contributors section-container"
+    >
+      <div class="container">
+        <div class="section-header">Contributors</div>
+        <div class="section-title">Core Developers</div>
+        <div class="section-statement">
+          Stargate is made possible through the hard work and coordination of
+          many dedicated teams contributing to development on Cosmos SDK,
+          Tendermint Core, IBC and Gaia.
+        </div>
+        <div class="team-img"></div>
       </div>
-      <div class="team-img"></div>
     </div>
 
-    <div id="articles" class="section-articles section-container">
-      <div class="section-header">3 Articles</div>
-      <div class="section-title">Learn more about Stargate</div>
-      <!-- <div class="learn-more-graphics"></div> -->
-      <div class="content">
-        <div class="articles-wrapper">
-          <a
-            href="https://figment.network/resources/cosmos-stargate-upgrade-overview"
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            <div class="articles-item">
+    <div id="articles" class="section section-articles section-container">
+      <div class="container">
+        <div class="section-header">3 Articles</div>
+        <div class="section-title">Learn more about Stargate</div>
+        <!-- <div class="learn-more-graphics"></div> -->
+        <div class="content">
+          <div class="articles-wrapper">
+            <a
+              href="https://figment.network/resources/cosmos-stargate-upgrade-overview"
+              target="_blank"
+              rel="noreferrer noopener"
+              class="articles-item"
+            >
               <span class="articles-item__icon">
                 <icon-arrow-top-right />
               </span>
@@ -364,14 +389,13 @@
                 will enable higher transaction throughput, cross-chain
                 transactions, accelerate UI development, and so much more.
               </div>
-            </div>
-          </a>
-          <a
-            href="https://medium.com/tendermint/tendermint-0-34-protocol-buffers-and-you-8c40558939ae"
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            <div class="articles-item">
+            </a>
+            <a
+              href="https://medium.com/tendermint/tendermint-0-34-protocol-buffers-and-you-8c40558939ae"
+              target="_blank"
+              rel="noreferrer noopener"
+              class="articles-item"
+            >
               <span class="articles-item__icon">
                 <icon-arrow-top-right />
               </span>
@@ -384,14 +408,13 @@
                 the way we serialize and encode data. Here’s what you need to
                 know.
               </div>
-            </div>
-          </a>
-          <a
-            href="https://medium.com/tendermint/everything-you-need-to-know-about-the-tendermint-light-client-f80d03856f98"
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            <div class="articles-item">
+            </a>
+            <a
+              href="https://medium.com/tendermint/everything-you-need-to-know-about-the-tendermint-light-client-f80d03856f98"
+              target="_blank"
+              rel="noreferrer noopener"
+              class="articles-item"
+            >
               <span class="articles-item__icon">
                 <icon-arrow-top-right />
               </span>
@@ -402,15 +425,15 @@
               <div class="articles-item__description">
                 What is it, why it’s needed and how it works.
               </div>
-            </div>
-          </a>
+            </a>
+          </div>
         </div>
       </div>
     </div>
 
-    <div id="videos" class="section-videos section-container">
-      <div class="section-header">Videos</div>
+    <div id="videos" class="section section-videos section-container">
       <div class="container">
+        <div class="section-header">Videos</div>
         <div class="frame">
           <iframe
             src="https://www.youtube.com/embed/mlq5GzQTIAM?autoplay=0&controls=1&rel=0&modestbranding=1&fs=1&enablejsapi=1"
@@ -424,7 +447,7 @@
             June 23
           </div>
           <div class="text__title">
-            Stargate Q&A with Zaki Manian
+            Stargate Q&amp;A with Zaki Manian
           </div>
           <div class="text__cta">
             <a
@@ -439,40 +462,39 @@
       </div>
     </div>
 
-    <div id="community" class="section-community section-container">
-      <div class="section-header">Community</div>
-      <div class="cards">
-        <a
-          href="https://cosmos.network/community"
-          target="_blank"
-          rel="noreferrer noopener"
-        >
-          <div class="cards__item">
-            <div class="cards__item__caption">connect</div>
+    <div id="community" class="section section-community section-container">
+      <div class="container">
+        <div class="section-header">Community</div>
+        <div class="cards">
+          <a
+            href="https://cosmos.network/community"
+            rel="noreferrer noopener"
+            class="cards__item"
+          >
+            <div class="cards__item__caption">Connect</div>
             <div class="cards__item__title">Join the community</div>
             <div class="cards__item__description">
               Learn about Cosmos, get to know the community, connect with other
               Cosmonauts and more.
             </div>
-          </div>
-        </a>
-        <a
-          href="https://discord.com/channels/669268347736686612/723170066937413693"
-          target="_blank"
-          rel="noreferrer noopener"
-        >
-          <div class="cards__item">
-            <span class="cards__item__top-right-logo">
+          </a>
+          <a
+            href="https://discord.com/channels/669268347736686612/723170066937413693"
+            target="_blank"
+            rel="noreferrer noopener"
+            class="cards__item"
+          >
+            <span class="cards__item__disclosure">
               <icon-arrow-top-right />
             </span>
-            <div class="cards__item__caption">chat</div>
+            <div class="cards__item__caption">Chat</div>
             <div class="cards__item__title">Discuss Stargate</div>
             <div class="cards__item__description">
-              Join the <code>#stargate</code> channel in the Cosmos community
+              Join the<code>#stargate</code> channel in the Cosmos community
               Discord and chat with developers.
             </div>
-          </div>
-        </a>
+          </a>
+        </div>
       </div>
     </div>
   </main>
@@ -510,18 +532,9 @@ export default {
         ['cosmos/cosmos-sdk', 21, 'ibc', 'Cosmos SDK – IBC 1.0 Milestone'],
       ],
       bgColor: {
-        sdk: [
-          'linear-gradient(95.47deg, #320B93 0%, #3B2AB7 100%)',
-          'rgb(59, 42, 183, 0.7)',
-        ],
-        core: [
-          'linear-gradient(95.47deg, #086108 0%, #018A01 100%)',
-          'rgb(1, 138, 1, 0.7)',
-        ],
-        ibc: [
-          'linear-gradient(95.47deg, #121435 0%, #282B53 100%)',
-          'rgb(40, 43, 83, 0.7)',
-        ],
+        sdk: 'linear-gradient(95.47deg, #320B93 0%, #3B2AB7 100%)',
+        core: 'linear-gradient(95.47deg, #086108 0%, #018A01 100%)',
+        ibc: 'linear-gradient(95.47deg, #121435 0%, #282B53 100%)',
       },
     }
   },
@@ -598,12 +611,20 @@ export default {
 .main
   overflow hidden
 
+.section
+  padding-top 6rem
+  padding-bottom 6rem
+
 .section-container
-  display grid
-  grid-template-columns repeat(12, 1fr)
-  width 100%
-  margin 0 auto
-  padding 6rem 1rem
+  padding-left 1rem
+  padding-right 1rem
+
+  > .container
+    display grid
+    grid-template-columns repeat(12, 1fr)
+    gap 0 2rem
+    max-width var(--container-mw-lg)
+    margin 0 auto
 
 .nav-primary
   width 100%
@@ -627,12 +648,13 @@ export default {
     &:focus
       color #CFD1E7
 
-
 .section-hero
   position relative
-  min-height 100vh
+  height 100vh
+  min-height 52rem
   max-height 64rem
   padding-top 4rem
+  padding-bottom 6rem
   display flex
   justify-content stretch
   align-items stretch
@@ -646,12 +668,11 @@ export default {
     flex-direction column
     align-items center
     justify-content space-between
-    max-width var(--container-mw-lg)
-    margin 0 auto
+    .nav-primary
+      margin-bottom 4rem
     .headings
       width 100%
       margin auto 0
-      padding 6rem 0 12rem
       .title svg
         width 100%
       .subtitle
@@ -661,7 +682,7 @@ export default {
         letter-spacing -0.02em
         color #989BB9
     .bottom
-      max-width 360px
+      margin-top 10rem
       width 100%
       &__countdown
         font-size 19px
@@ -678,36 +699,62 @@ export default {
         line-height 1.375
         color #CFD1E7
       &__form
-        margin-top 16px
+        margin 1rem auto 0
+        max-width 25rem
         &__input
           display flex
           position relative
           align-items center
-          &__icon
-            max-width 20%
+          justify-content center
+          &__button
             position absolute
             right 0
+            width 4rem
+            appearance none
+            background none
+            border none
+            padding 1rem
+            border-radius 0.625rem
+            cursor pointer
+            outline none
+            &:hover,
+            &:focus
+              .bottom__form__input__icon
+                fill #FFFFFF
+                transform scale(1.05)
+          &__icon
+            display block
             height 2rem
-            fill var(--white)
+            fill #989BB9
+            transition fill .15s ease-out, transform .15s ease-out
           &__input
             outline none
-            max-width 360px
             width 100%
             background rgba(255, 255, 255, 0.1)
             box-shadow 0px 20px 44px rgba(0, 3, 66, 0.12), 0px 8px 16px rgba(0, 0, 0, 0.05), 0px 0px 1px rgba(0, 0, 0, 0.07)
             border none
-            border-radius 10px
-            padding 20px 24px
+            border-radius 0.625rem
+            padding 1.25rem 4rem 1.25rem 1.5rem
             height 64px
-            -webkit-backdrop-filter saturate(180%) blur(10px)
-            backdrop-filter saturate(180%) blur(10px)
-            font-weight 400
-            font-size 19px
+            -webkit-backdrop-filter saturate(150%) blur(10px)
+            backdrop-filter saturate(150%) blur(10px)
+            font-weight 350
+            font-size 1.1875rem
             line-height 1.263
             letter-spacing -0.005em
-            color #989BB9
+            color #F8F8FD
             opacity 0.7
-            transition all 0.15s
+            transition all 0.15s ease-out
+            &::placeholder
+              color #989BB9
+              transition color 0.15s ease-out
+            &:hover
+              background rgba(255, 255, 255, 0.15)
+              &:not(:focus)::placeholder
+                color #CFD1E7
+            &:focus
+              background rgba(255, 255, 255, 0.2)
+              color #FFFFFF
   .hero-graphics
     position absolute
     top 0
@@ -761,63 +808,73 @@ export default {
       background radial-gradient(84.49% 66.22% at 50% 59.94%, #000000 5.73%, #030419 71.48%, #0E1247 81.25%, #36299B 91.15%)
       box-shadow 0px -72px 64px rgba(28, 0, 238, 0.17), 0px -10px 8px rgba(92, 70, 255, 0.11), inset 0px 57px 56px rgba(48, 44, 245, 0.17), inset 0px 6px 12px rgba(104, 67, 252, 0.23)
 
-@keyframes gate
-  from
-    transform rotate(0deg)
-  to
-    transform rotate(360deg)
+// @keyframes gate
+//   from
+//     transform rotate(0deg)
+//   to
+//     transform rotate(360deg)
 
 .section-intro
   position relative
   .section-title
-    grid-column 1 / span 5
+    grid-column 1 / span 12
+    grid-row 1 / 2
     font-weight 900
     font-size 100px
     line-height 112%
     letter-spacing -0.03em
     color #FFFFFF
-    max-width 677px
+    max-width 50rem
   .section-subtitle
     display flex
     justify-content flex-end
     flex-direction column
-    grid-row 1
-    grid-column 6 / span 12
+    margin-top -1.5em
+    grid-row 2
+    grid-column 6 / span 7
     font-size 2rem
-    line-height 125%
+    line-height 1.25
     letter-spacing -0.02em
     color #FFFFFF
   .section-statement
     margin-top 3rem
-    grid-column 6 / span 12
-    grid-row 2
-    max-width 636px
-    font-size 23px
+    grid-column 6 / span 7
+    grid-row 3
+    max-width 30em
+    font-size 1.4375rem
     line-height 1.565
     letter-spacing -0.01em
     color #CFD1E7
     text-align left
   .section-cta
-    grid-row 3
+    grid-row 4
     margin-top 3rem
-    grid-column 6 / span 12
+    grid-column 6 / span 7
     font-weight bold
-    font-size 23px
-    line-height 121.7%
+    font-size 1.4375rem
+    line-height 1.217
     letter-spacing -0.01em
     border-radius 6px
     padding 22px 0
     a
       color #40B3FF
+  .title
+    font-weight 900
+    font-size 100px
+    line-height 112%
+    display flex
+    align-items center
+    letter-spacing -0.03em
+    color var(--white)
 
 .section-features
   position relative
   text-align left
   .section-header
     grid-row 1
-    height 48px
+    height 3rem
     font-weight 600
-    font-size 19px
+    font-size 1.1875rem
     line-height 1.263
     letter-spacing 0.08em
     text-transform uppercase
@@ -825,38 +882,39 @@ export default {
     border-top 1px solid #282B53
     display flex
     flex-direction column
-    grid-column 6 / span 12
+    grid-column 6 / span 7
     justify-content flex-end
   .section-title
     grid-row 2
-    margin-top 2rem
-    margin-bottom 2rem
+    margin-top 3rem
+    margin-bottom 3rem
     font-weight 900
-    font-size 82px
+    font-size 5.125rem
     line-height 1.121
     letter-spacing -0.025em
     color #FFFFFF
-    grid-column 6 / 12
+    grid-column 6 / span 7
     text-align left
   .section-statement
     grid-row 3
-    grid-column 6 / 11
-    max-width 677px
-    font-size 23px
+    grid-column 6 / span 7
+    max-width 30em
+    font-size 1.4375rem
     line-height 1.565
     letter-spacing -0.01em
     color #CFD1E7
   .data-container
     grid-row 4
-    margin-top 96px
+    margin-top 6rem
     display grid
     flex-direction row
-    grid-column 1/13
+    grid-column 1/ span 12
     grid-template-columns repeat(4, 1fr)
     gap 2rem
     .data-item
+      border-top 1px dashed #282B53
       &__overline
-        margin-top 16px
+        margin-top 1rem
         font-weight 600
         font-size 16px
         line-height 137.5%
@@ -871,35 +929,42 @@ export default {
         letter-spacing -0.03em
         color #CCD1FF
   .ibc-item
-    grid-column 9 / span 12
+    grid-column 9 / span 4
     grid-row 5
-    margin 4rem 0
+    margin 16rem 0 0
+    max-width 24em
+    font-size 1rem
+    line-height 1.625
+    color #989BB9
     &__icon
-      width 48px
-      height 48px
+      width 3em
+      height 3em
     &__title
-      margin-top 24px
+      margin-top 1.5rem
       font-weight bold
-      font-size 40px
-      line-height 120%
-      letter-spacing -0.03em
+      font-size 1.75rem
+      line-height 1.285
+      letter-spacing -0.02em
       color #FFFFFF
     &__description
-      margin-top 16px
-      font-size 19px
-      line-height:1.579
-      letter-spacing -0.005em
-      color #989BB9
+      margin-top 1rem
   .grid-container
-    margin-top 8rem
+    margin-top 24rem
     display grid
-    grid-template-columns repeat(2, 1fr)
-    gap 6rem
-    grid-column 4 / span 12
+    grid-template-columns repeat(9, 1fr)
+    gap 6rem 2rem
+    grid-column 4 / span 9
     grid-row 6
     color white
     .grid-item
+      grid-column 1 / span 4
       text-align left
+      max-width 24em
+      font-size 1rem
+      line-height 1.625
+      color #989BB9
+      &:nth-child(even)
+        grid-column 6 / span 4
       &__icon
         width 3rem
         height 3rem
@@ -912,15 +977,12 @@ export default {
         color #FFFFFF
       &__description
         margin-top 1rem
-        font-size 1rem
-        line-height 162.5%
-        color #989BB9
 
 .section-prepare
   .section-header
-    height 48px
+    height 3rem
     font-weight 600
-    font-size 19px
+    font-size 1.1875rem
     line-height 1.263
     letter-spacing 0.08em
     text-transform uppercase
@@ -929,66 +991,87 @@ export default {
     display flex
     flex-direction column
     grid-column 1 / span 12
+    grid-row 1
+    margin-right -1vw
     justify-content flex-end
     text-align left
   .section-title
     grid-column 1 / span 5
-    margin-top 4.25rem
+    grid-row 2 / 3
+    margin-top 3rem
     font-weight 900
-    font-size 82px
+    font-size 5.125rem
     line-height 1.121
     letter-spacing -0.025em
     color #FFFFFF
     text-align left
-    max-width 677px
+    max-width 50rem
   .section-statement
-    grid-column 5 / span 12
+    position relative
+    z-index 1
+    grid-column 6 / span 7
     grid-row 3
-    max-width 636px
-    font-size 23px
+    margin-top -2.5rem
+    max-width 30em
+    font-size 1.4375rem
     line-height 1.565
     letter-spacing -0.01em
     color #CFD1E7
     text-align left
   .grid-container
-    margin-top 136px
+    margin-top 8rem
     display grid
-    grid-template-columns repeat(2, 1fr)
-    gap 6rem
+    grid-template-columns repeat(12, 1fr)
+    gap 6rem 2rem
     grid-column 1 / span 12
     grid-row 4
-    color white
+    font-size 1.1875rem
+    line-height 1.579
+    letter-spacing -0.005em
+    color #989BB9
+    justify-items center
     .grid-item
-      text-align left
-      display grid
+      position relative
+      text-align center
+      max-width 24em
+      padding-top 1.5rem
+      grid-column-end span 5
+      display flex
+      flex-direction column
+      &:nth-child(even)
+        grid-column-start 8
+      &:before,
+      &:after
+        content ""
+        position absolute
+        top 0
+        width 3rem
+        border-top 1px dashed #282B53
+      &:before
+        left 0
+      &:after
+        right 0
+      &__hex
+        position absolute
+        bottom -3rem
+        left 30%
+        width 130%
       &__icon
+        position relative
         width 48px
         height 48px
+        margin 0 auto
       &__title
-        margin-top 24px
+        position relative
+        margin-top 1.5rem
         font-weight bold
-        font-size 40px
-        line-height 120%
+        font-size 2.5rem
+        line-height 1.2
         letter-spacing -0.03em
         color #FFFFFF
       &__description
-        margin-top 16px
-        font-size 19px
-        line-height:1.579
-        letter-spacing -0.005em
-        color #989BB9
-
-.section-intro
-  .container
-    margin 8rem
-    .title
-      font-weight 900
-      font-size 100px
-      line-height 112%
-      display flex
-      align-items center
-      letter-spacing -0.03em
-      color var(--white)
+        position relative
+        margin-top 1rem
 
 .section-nav
   position sticky
@@ -996,13 +1079,16 @@ export default {
   top 0
   width 100%
   z-index 10
-  backdrop-filter saturate(180%) blur(10px)
-  -webkit-backdrop-filter saturate(180%) blur(10px)
+  // backdrop-filter saturate(180%) blur(10px)
+  // -webkit-backdrop-filter saturate(180%) blur(10px)
   .nav
     overflow scroll
     white-space nowrap
     margin-left 2.5rem
     margin-right 2.5rem
+    font-size 1.1875rem
+    line-height 1.263
+    letter-spacing -0.005em
     &__list
       display flex
       flex-direction row
@@ -1010,10 +1096,13 @@ export default {
       list-style none
       &__item
         margin 2rem
-        color var(--white)
         a
           position relative
           z-index 1
+          color #989BB9
+          &:hover,
+          &:focus
+            color #ECEDF7
           &:hover:before
             visibility visible
             transform scaleX(1)
@@ -1025,7 +1114,7 @@ export default {
             bottom -1rem
             z-index -1
             border-radius 4px
-            background-color var(--link)
+            background-color #3B2AB7
             visibility hidden
             transform scaleX(0)
             transition all 300ms cubic-bezier(0.325, -0.075, 0, 1.65)
@@ -1042,7 +1131,7 @@ export default {
     border-top 1px solid #282B53
     display flex
     flex-direction column
-    grid-column 6 / span 12
+    grid-column 6 / span 7
     justify-content flex-end
     text-align left
   .section-left
@@ -1064,9 +1153,10 @@ export default {
       text-align start
   .section-statement
     margin-top 3rem
-    grid-column 6/13
-    font-size 23px
-    line-height 1.565
+    grid-column 6/12
+    max-width 30em
+    font-size 1.1875rem
+    line-height 1.579
     letter-spacing -0.01em
     color #989BB9
     display flex
@@ -1100,26 +1190,24 @@ export default {
     border-top 1px solid #282B53
     display flex
     flex-direction column
-    grid-column 6 / span 12
+    grid-column 6 / span 7
     justify-content flex-end
     text-align left
   .section-title
-    margin-top 2rem
-    margin-bottom 2rem
+    margin-top 3rem
+    margin-bottom 3rem
     font-weight 900
-    font-size 5rem
-    line-height 112%
+    font-size 6.25rem
+    line-height 1.12
     text-align right
     letter-spacing -0.03em
     color #FFFFFF
-    grid-column 6 / span 12
-    justify-content flex-end
+    grid-column 5 / span 8
   .section-milestones
-    grid-column 1 / 2
+    grid-column 1 / 5
     grid-row 3 / 6
     &__title
       margin-top 2rem
-      grid-column 1 / span 4
       font-weight bold
       font-size 2.5rem
       line-height 120%
@@ -1128,66 +1216,66 @@ export default {
       color #FFFFFF
     &__cta
       font-weight bold
-      font-size 19px
+      font-size 1.1875rem
       line-height 1.26
       letter-spacing -0.005em
       border-radius 0.375rem
       padding 20px 0px
+      margin-top 1rem
       a
         color #40B3FF
   .section-row
+    position relative
     margin-top 2rem
-    grid-column 6/span 12
-    display grid
-    align-items center
-    background var(--progress-bar-background-color-opacity, rgb(40, 43, 83, 0.7))
+    grid-column 5 / span 8
+    background linear-gradient(258.96deg, #121435 0%, #030419 100%)
     color white
-    grid-auto-flow column
     border-radius 1.25rem
-    transition all .25s
+    transition all .25s ease-out
     .meter
+      position absolute
+      top 0
+      left 0
+      bottom 0
       width var(--progress-bar-width, 0)
       background var(--progress-bar-background-color, linear-gradient(95.47deg, #121435 0%, #282B53 100%))
       border-radius 1.25rem
-      display inline-flex
-    .icon__wrapper
-      display flex
-      align-items center
-      .icon
-        grid-column-start 1
-        width 3rem
-        height 3rem
-        fill var(--white)
-        opacity 0.32
-        margin 2rem
-        display flex
-        align-items center
-        justify-content center
-        transition opacity .25s
+      transition opacity .15s
     .details
-      margin-right 2rem
+      position relative
+      grid-template-columns auto 1fr
+      gap 1.5rem
+      padding 3rem
       grid-column-start 2
       display grid
       grid-auto-flow column
       align-items center
-      gap 1rem
+      gap 1.5rem
       text-align left
       justify-content space-between
-      width -webkit-fill-available
-      width -moz-available
+      .icon
+        width 3rem
+        height 3rem
+        fill var(--white)
+        opacity 0.50
+        transition opacity .25s, transform .15s ease-out
       .title
-        font-weight 500
-        font-size 1.25rem
+        font-weight 600
+        font-size 1.4375rem
+        line-height 1.217
         letter-spacing -0.01em
-        display block
+        transition transform .15s ease-out
       .subtitle
-        font-size 16px
+        font-size 1rem
         line-height 1.375
         color rgba(255, 255, 255, 0.75)
+        margin-top 0.375rem
+        transition color .15s, transform .15s ease-out
       .indicator
         display flex
         flex-direction row
         align-items flex-end
+        background rgba(0, 0, 0, 0)
       .progress__wrapper
         display flex
         flex-direction column
@@ -1199,8 +1287,24 @@ export default {
           align-items center
           text-align right
           color #FFFFFF
+    &:hover
+      transform translateY(-2px)
+      .meter
+        opacity 0.9
+      .details
+        .icon
+          opacity 0.75
+          transform translate(-2px,-2px)
+        .title
+          transform translateY(-3px)
+        .subtitle
+          color #fff
+          transform translateY(-2px)
+      &:active
+        transform none
+        transition-duration 0s
   .section-status
-    grid-column 1 / 3
+    grid-column 1 / 5
     grid-row 6
     margin-top 6rem
     &__title
@@ -1226,25 +1330,25 @@ export default {
     border-top 1px solid #282B53
     display flex
     flex-direction column
-    grid-column 6 / span 12
+    grid-column 6 / span 7
   .section-title
     margin-top 3rem
-    grid-column 1/4
+    grid-column 1/5
     font-weight 900
     font-size 5.125rem
     line-height 1.121
     letter-spacing -0.025em
     color #FFFFFF
   .section-statement
-    margin-top 9.625rem
-    margin-left 2rem
-    grid-column 7/13
-    font-size 23px
+    margin-top 3rem
+    align-self end
+    grid-column 6 / span 7
+    font-size 1.4375rem
     line-height 1.565
     letter-spacing -0.01em
     color #CFD1E7
     text-align initial
-    max-width 576px
+    max-width 30em
   // .team-img
   //   grid-row 4
   //   background-image url("/teams.svg")
@@ -1254,9 +1358,9 @@ export default {
 
 .section-articles
   .section-header
-    height 48px
+    height 3rem
     font-weight 600
-    font-size 19px
+    font-size 1.1875rem
     line-height 1.263
     letter-spacing 0.08em
     text-transform uppercase
@@ -1264,7 +1368,7 @@ export default {
     border-top 1px solid #282B53
     display flex
     flex-direction column
-    grid-column 6 / span 12
+    grid-column 6 / span 7
     justify-content flex-end
     text-align left
   .section-title
@@ -1284,52 +1388,60 @@ export default {
     background-repeat no-repeat
     grid-row 2
   .content
-    grid-column 6 / span 12
+    grid-column 6 / span 7
     grid-row 2
     margin-top -4rem
     .articles-wrapper
       .articles-item
+        display block
         text-align left
-        padding 3rem
+        padding 2rem
         background linear-gradient(249.43deg, #030419 0%, #121435 100%)
         box-shadow 0px 15px 33px rgba(0, 3, 66, 0.11), 0px 6px 12px rgba(0, 0, 0, 0.06), 0px 0px 1px rgba(0, 0, 0, 0.07)
         border-radius 1.25rem
-        margin-top 2rem
+        margin-top 1.5rem
         position relative
-        &:hover
-          background #121435
+        transition all .25s ease-out
+        &:hover:not(:active)
+          background linear-gradient(246.27deg, #121435 0%, #121435 100%)
+          transform translateY(-2px)
+          .articles-item__icon
+            transform translate(3px, -3px)
+        &:active
+          transition-duration 0s
         &__icon
           position absolute
-          width 24px
-          height 24px
+          width 1.5rem
+          height 1.5rem
           top 1.5rem
           right 1.5rem
+          transition transform .25s ease-out
         &__date
-          font-size 13px
+          font-size 0.8125rem
           line-height 1.538
           letter-spacing 0.001em
           color #989BB9
         &__title
-          margin-top 12px
+          margin-top 0.75rem
           font-weight bold
-          font-size 28px
+          font-size 1.75rem
           line-height 1.285
           letter-spacing -0.02em
           color #FFFFFF
         &__description
-          margin-top 12px
-          font-size 16px
+          margin-top 0.75rem
+          font-size 1rem
           line-height 1.375
           color #989BB9
+          max-width 30em
 
 .section-videos
-  text-align center
   padding-top 0
   padding-bottom 0
   .section-header
-    height 48px
+    height 3rem
     font-weight 600
-    font-size 19px
+    font-size 1.1875rem
     line-height 1.263
     letter-spacing 0.08em
     text-transform uppercase
@@ -1337,60 +1449,55 @@ export default {
     border-top 1px solid #282B53
     display flex
     flex-direction column
-    grid-column 6 / span 12
+    grid-column 6 / span 7
     justify-content flex-end
     text-align left
-  .container
-    margin-top 6rem
-    display grid
-    grid-template-columns 1fr 1fr
-    gap 2rem
-    grid-column 1 / span 12
-    .frame
-      background-color rgb(22, 25, 49)
+    margin-bottom 4rem
+  .frame
+    background-color rgb(22, 25, 49)
+    border-radius 0.5rem
+    padding-top 1.5625rem
+    padding-bottom 56.25% /* 16:9 */
+    height 0
+    position relative
+    grid-column 1 / span 8
+    iframe
       border-radius 0.5rem
-      padding-top 1.5625rem
-      padding-bottom 56.25% /* 16:9 */
-      height 0
-      position relative
-      grid-column 1 / span 8
-      iframe
-        border-radius 0.5rem
-        top 0
-        left 0
-        width 100%
-        height 100%
-        position absolute
-    .text
-      text-align left
-      width 373px
-      grid-column 9 / span 12
-      position relative
-      &__caption
-        font-size 16px
-        line-height 1.625
-        color #989BB9
-      &__title
-        margin-top 8px
-        font-weight bold
-        font-size 32px
-        line-height 125%
-        letter-spacing -0.025em
-        color #FFFFFF
-      &__cta
-        font-weight bold
-        font-size 16px
-        line-height 137.5%
-        display flex
-        align-items center
-        text-align center
-        border-radius 8px
-        position absolute
-        bottom 0
-        right 0
-        padding 13px 0px
-        a
-          color #40B3FF
+      top 0
+      left 0
+      width 100%
+      height 100%
+      position absolute
+  .text
+    text-align left
+    width 373px
+    grid-column 9 / span 4
+    position relative
+    &__caption
+      font-size 16px
+      line-height 1.625
+      color #989BB9
+    &__title
+      margin-top 8px
+      font-weight bold
+      font-size 32px
+      line-height 125%
+      letter-spacing -0.025em
+      color #FFFFFF
+    &__cta
+      font-weight bold
+      font-size 16px
+      line-height 137.5%
+      display flex
+      align-items center
+      text-align center
+      border-radius 8px
+      position absolute
+      bottom 0
+      right 0
+      padding 13px 0px
+      a
+        color #40B3FF
 
 .section-community
   .section-header
@@ -1404,7 +1511,7 @@ export default {
     border-top 1px solid #282B53
     display flex
     flex-direction column
-    grid-column 6 / 13
+    grid-column 6 / span 7
     justify-content flex-end
     text-align left
   a
@@ -1425,8 +1532,9 @@ export default {
     display grid
     grid-template-columns 1fr 1fr
     gap 2rem
-    grid-column 1 / 13
+    grid-column 1 / span 12
     &__item
+      position relative
       padding 3rem
       height 338px
       box-shadow 0px 15px 33px rgba(0, 3, 66, 0.11), 0px 6px 12px rgba(0, 0, 0, 0.06), 0px 0px 1px rgba(0, 0, 0, 0.07)
@@ -1435,13 +1543,38 @@ export default {
       display flex
       flex-direction column
       flex-wrap nowrap
-      border-radius 1.25rem
-      &__top-right-logo
+      // align-items start
+      justify-content flex-start
+      color var(--white)
+      height 338px
+      background url("/reverse-graphics.svg"), linear-gradient(256.92deg, #120018 0%, #121435 100%)
+      background-position bottom center
+      background-size contain
+      background-repeat no-repeat
+      &:first-child
+        background url("/split-graphics.svg"), linear-gradient(256.92deg, #121435 0%, #030419 100%)
+        justify-content flex-end
+        background-position top center
+        background-size contain
+        background-repeat no-repeat
+      &:hover
+        transform translateY(-3px)
+        .cards__item__disclosure
+          transform translate(2px,-2px)
+        .cards__item__caption
+          transform translateY(-4px)
+        .cards__item__title
+          transform translateY(-2px)
+      &:active
+        transform none
+        transition-duration 0s
+      &__disclosure
         position absolute
-        width 1.5rem
-        height 1.5rem
         top 3rem
         right 3rem
+        width 1.5rem
+        height 1.5rem
+        transition transform .25s ease-out
       &__caption
         font-weight 600
         font-size 16px
@@ -1449,6 +1582,7 @@ export default {
         letter-spacing 0.08em
         text-transform uppercase
         color #989BB9
+        transition transform .25s ease-out
       &__title
         margin-top 12px
         font-weight bold
@@ -1456,6 +1590,7 @@ export default {
         line-height 125%
         letter-spacing -0.025em
         color #FFFFFF
+        transition transform .25s ease-out
       &__description
         margin-top 12px
         font-size 19px
@@ -1471,16 +1606,34 @@ export default {
     filter saturate(180%)
     transition background-color 300ms ease 0s
 
+@media screen and (max-width: 1919px)
+  .section-container
+    padding-left 8rem
+    padding-right 8rem
+
+@media screen and (max-width: 1279px)
+  .section
+    padding-top 6rem
+    padding-bottom 6rem
+
+  .section-container
+    padding-left 6rem
+    padding-right 6rem
+
 @media all and (max-width: 1200px)
   .section-features
     .grid-container
       grid-column 1/span 12
 
-@media screen and (max-width: 900px)
+@media screen and (max-width: 1024px)
+  .section
+    padding-top 4rem
+    padding-bottom 4rem
+
   .section-container
-    padding 3rem 2.5rem
+    padding-left 4rem
+    padding-right 4rem
     display block
-    padding-top 5.5rem
 
   .section-hero
     .container
@@ -1599,6 +1752,11 @@ export default {
   .section-community .cards
     grid-template-columns repeat(1, 1fr)
 
+@media screen and (max-width: 767px)
+  .section-container
+    padding-left 1.5rem
+    padding-right 1.5rem
+
 @media screen and (max-width: 600px)
   .section-roadmap
     .section-row
@@ -1606,4 +1764,13 @@ export default {
         display none
       .details
         margin 2rem
+
+@media screen and (min-width: 1920px)
+  .section
+    padding-top 8rem
+    padding-bottom 8rem
+
+  .section-container
+    padding-left 12rem
+    padding-right 12rem
 </style>

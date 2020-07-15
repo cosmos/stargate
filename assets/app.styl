@@ -3,7 +3,8 @@
 :root
   --container-mw-lg 74rem
   --white #FFFFFF
-  --link hsl(233, 96%, 65%)
+  --link #40B3FF
+  --container-mw-lg 74rem
 
 @font-face
     font-family 'JetBrains Mono'
@@ -42,12 +43,15 @@ a
   text-decoration none
   outline-color rgba(64, 179, 255, 0.92)
   cursor pointer
-  transition all 200ms ease-in-out
+  transition all .1s ease-out
   &:hover
     color var(--white)
   &:active
     opacity 0.7
     transition-duration 0s
+
+p + p
+  margin-top 1em
 
 code
   -webkit-font-feature-settings "liga" on, "calt" on
