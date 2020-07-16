@@ -436,7 +436,6 @@
             many dedicated teams contributing to development on Cosmos SDK,
             Tendermint Core, IBC and Gaia.
           </div>
-          <div class="team-img"></div>
         </div>
       </div>
     </div>
@@ -446,7 +445,6 @@
         <div class="container">
           <div class="section-header">3 Articles</div>
           <div class="section-title">Learn more about Stargate</div>
-          <!-- <div class="learn-more-graphics"></div> -->
           <div class="content">
             <div class="articles-wrapper">
               <a
@@ -1547,12 +1545,6 @@ export default {
     letter-spacing -0.01em
     color #CFD1E7
     max-width 30em
-  // .team-img
-  //   grid-row 4
-  //   background-image url("/teams.svg")
-  //   background-position center
-  //   background-size contain
-  //   background-repeat no-repeat
 
 .section-articles
   .section-header
@@ -1579,12 +1571,6 @@ export default {
     text-align left
     grid-column 1 / 4
     grid-row 1
-  .learn-more-graphics
-    background-image url("/learn-more-graphics.svg")
-    background-position center
-    background-size contain
-    background-repeat no-repeat
-    grid-row 2
   .content
     grid-column 6 / span 7
     grid-row 2
