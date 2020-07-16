@@ -114,6 +114,9 @@
           <li class="nav__list__item">
             <a v-scroll-to="'#contributors'">Contributors</a>
           </li>
+          <li class="nav__list__item">
+            <a v-scroll-to="'#articles'">Resources</a>
+          </li>
         </ul>
       </nav>
     </header>
