@@ -109,7 +109,8 @@ export default {
    */
   // TODO: config scrolling speed
   // https://vue-scrollto.netlify.app/docs/#options
-  modules: ['vue-scrollto/nuxt'],
+  modules: [['vue-scrollto/nuxt', { duration: 300, easing: 'linear' }]],
+
   /*
    ** Build configuration
    ** See https://nuxtjs.org/api/configuration-build/

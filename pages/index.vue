@@ -1,78 +1,97 @@
 <template>
   <main class="main">
-    <div class="section-hero section-container">
-      <div class="hero-graphics">
-        <span class="hero-graphics__star"></span>
-        <span class="hero-graphics__gate"></span>
-        <gate-notches class="hero-graphics__gate-notches" />
-        <span class="hero-graphics__planet"></span>
-      </div>
-      <div class="container">
-        <nav class="nav-primary">
-          <ul>
-            <li>
-              <a href="https://cosmos.network">
-                <span class="text">← Cosmos Network</span>
-                <icon-arrow-right class="icon" />
-              </a>
-            </li>
-            <li>
-              <logo-wordmark class="logo" /><span class="sr-only">Cosmos</span>
-            </li>
-          </ul>
-        </nav>
-        <div class="headings">
-          <h1 class="title">
-            <wordmark-stargate />
-            <span class="sr-only">Stargate</span>
-          </h1>
-          <div class="subtitle">
-            The Internet of Blockchains is on the horizon.
-          </div>
+    <div class="section-hero">
+      <div class="section-container">
+        <div class="hero-graphics">
+          <span class="hero-graphics__star"></span>
+          <span class="hero-graphics__gate"></span>
+          <gate-notches class="hero-graphics__gate-notches" />
+          <span class="hero-graphics__planet"></span>
         </div>
-        <div class="bottom">
-          <code class="bottom__countdown">T minus {{ countdownTimer }}d</code>
-          <div class="bottom__get-notified">
-            Get notified when testnets start
+        <div class="container">
+          <nav class="nav-primary">
+            <ul>
+              <li>
+                <a href="https://cosmos.network">
+                  <span class="text">← Cosmos Network</span>
+                  <icon-arrow-right class="icon" />
+                </a>
+              </li>
+              <li>
+                <logo-wordmark class="logo" /><span class="sr-only"
+                  >Cosmos</span
+                >
+              </li>
+            </ul>
+          </nav>
+          <div class="headings">
+            <h1 class="title">
+              <wordmark-stargate />
+              <span class="sr-only">Stargate</span>
+            </h1>
+            <div class="subtitle">
+              The Internet of Blockchains is on the horizon.
+            </div>
           </div>
-          <transition name="fade" mode="out-in">
-            <div v-if="state === 'success'" key="success" class="bottom__state">
-              <h2 class="bottom__state__success">Success!</h2>
-            </div>
-            <div
-              v-else-if="state === 'error'"
-              key="error"
-              class="bottom__state"
-            >
-              <h2 class="bottom__state__error">Uh oh! Something went wrong.</h2>
-            </div>
-            <div v-else key="default" class="bottom__form">
-              <form
-                :action="url"
-                method="POST"
-                target="_blank"
-                rel="noreferrer noopener"
-                @submit.prevent="actionSubmitEmail"
+          <div class="bottom">
+            <code class="bottom__countdown">T minus {{ countdownTimer }}d</code>
+            <transition name="fade" mode="out-in">
+              <div
+                v-if="state === 'success'"
+                key="success"
+                class="bottom__state"
               >
-                <div class="bottom__form__input">
-                  <input
-                    v-model="email"
-                    name="fields[email]"
-                    class="bottom__form__input__input"
-                    type="email"
-                    placeholder="Your email"
-                  />
-                  <button type="submit" class="bottom__form__input__button">
-                    <icon-arrow-right
-                      class="bottom__form__input__icon"
-                      @click="actionSubmitEmail"
-                    />
-                    <span class="sr-only">Submit</span>
-                  </button>
+                <div class="bottom__get-notified">
+                  Almost there&hellip;
                 </div>
-              </form>
-            </div>
-          </transition>
+                <h2 class="bottom__state__success">
+                  Check your inbox and confirm your email address
+                </h2>
+              </div>
+              <div
+                v-else-if="state === 'error'"
+                key="error"
+                class="bottom__state"
+              >
+                <div class="bottom__get-notified">
+                  Something went wrong
+                </div>
+                <h2 class="bottom__state__error">
+                  Uh oh! Refresh the page and try again.
+                </h2>
+              </div>
+              <div v-else key="default" class="bottom__form">
+                <div class="bottom__get-notified">
+                  Get notified when testnets start
+                </div>
+                <form
+                  :action="url"
+                  method="POST"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  @submit.prevent="actionSubmitEmail"
+                >
+                  <div class="bottom__form__input">
+                    <input
+                      v-model="email"
+                      name="fields[email]"
+                      class="bottom__form__input__input"
+                      type="email"
+                      placeholder="Your email"
+                      required="required"
+                    />
+                    <button type="submit" class="bottom__form__input__button">
+                      <icon-arrow-right
+                        class="bottom__form__input__icon"
+                        @click="actionSubmitEmail"
+                      />
+                      <span class="sr-only">Submit</span>
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </transition>
+          </div>
         </div>
       </div>
     </div>
@@ -99,445 +118,465 @@
       </nav>
     </div>
 
-    <div id="intro" class="section section-intro section-container">
-      <div class="container">
-        <div class="section-title">A new era for Cosmos</div>
-        <div class="section-subtitle">
-          The biggest event in the ecosystem since the launch of the Cosmos Hub.
-        </div>
-        <div class="section-statement">
-          Stargate is a set of upgrades that complete the original roadmap laid
-          out in the Cosmos Whitepaper. For the first time ever, Cosmos
-          blockchains will be able to connect with each other using the first
-          standardized protocol for inter-blockchain communication (IBC).
-        </div>
-        <div class="section-cta">
-          <a
-            href="https://blog.cosmos.network/cosmos-stargate-upgrade-overview-8939475fe673"
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            Read more about Stargate &#8594;
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <div id="features" class="section section-features section-container">
-      <div class="container">
-        <div class="section-header">Features</div>
-        <div class="section-title">What’s new?</div>
-        <div class="section-statement">
-          These upgrades bring significant performance improvements to
-          blockchains built with Cosmos SDK. Discover all the amazing features
-          of the Stargate upgrade below.
-        </div>
-        <div class="data-container">
-          <div class="data-item">
-            <div class="data-item__overline">Enabling</div>
-            <div class="data-item__heading">IBC</div>
+    <div id="intro" class="section section-intro">
+      <div class="section-container">
+        <div class="container">
+          <div class="section-title">A new era for Cosmos</div>
+          <div class="section-subtitle">
+            The biggest event in the ecosystem since the launch of the Cosmos
+            Hub.
           </div>
-          <div class="data-item">
-            <div class="data-item__overline">Efficiency gains up to</div>
-            <div class="data-item__heading">100x</div>
-          </div>
-          <div class="data-item">
-            <div class="data-item__overline">Faster full node sync</div>
-            <div class="data-item__heading">96x</div>
-          </div>
-          <div class="data-item">
-            <div class="data-item__overline">Faster upgrades</div>
-            <div class="data-item__heading">20x</div>
-          </div>
-        </div>
-        <div class="ibc-item">
-          <div class="ibc-item__icon">
-            <icon-ibc-cropped />
-          </div>
-          <div class="ibc-item__title">Inter-Blockchain Communication</div>
-          <div class="ibc-item__description">
-            Cosmos SDK-based blockchains can incorporate the Inter-Blockchain
-            Communication (IBC) Protocol to communicate with other compatible
-            blockchains. The Cosmos Hub is the first blockchain to support IBC
-            in production.
-          </div>
-        </div>
-        <div class="grid-container">
-          <div class="grid-item">
-            <div class="grid-item__icon">
-              <icon-countdown />
-            </div>
-            <div class="grid-item__title">State Sync</div>
-            <div class="grid-item__description">
-              For blockchains built on top of Tendermint Core, the full-node
-              synchronization process will be reduced from 2 days to just 30
-              mins or less.
-            </div>
-          </div>
-          <div class="grid-item">
-            <div class="grid-item__icon">
-              <icon-repeat />
-            </div>
-            <div class="grid-item__title">Automatic upgrades</div>
-            <div class="grid-item__description">
-              The upgrade module facilitates the upgrade process of chains built
-              with Cosmos SDK. Migration from one version to the next will take
-              little to no time, as opposed to one hour or more before.
-            </div>
-          </div>
-          <div class="grid-item">
-            <div class="grid-item__icon">
-              <icon-mask-oval />
-            </div>
-            <div class="grid-item__title">Full-featured Light Clients</div>
-            <div class="grid-item__description">
-              Protobuf brings performance improvements and developer
-              acceleration to Cosmos SDK-based blockchains with efficiency gains
-              of 10-100x, and wider language support.
-            </div>
-          </div>
-          <div class="grid-item">
-            <div class="grid-item__icon">
-              <icon-speedometer />
-            </div>
-            <div class="grid-item__title">
-              Transition from Amino to Protobuf
-            </div>
-            <div class="grid-item__description">
-              Protobuf brings performance improvements and developer
-              acceleration to Cosmos SDK-based blockchains with efficiency gains
-              of 10-100x, and wider language support.
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div id="prepare" class="section section-prepare section-container">
-      <div class="container">
-        <div class="section-header">Prepare</div>
-        <div class="section-title">Get set for testnets</div>
-        <div class="section-statement">
-          <p>
-            The following services will be affected by the upgrades with
-            Stargate. Make sure to schedule time in August for integration
-            testing on the testnet.
-          </p>
-          <p>
-            More detailed instructions and guidelines on how services can
-            prepare for the upgrade will be published in August.
-          </p>
-        </div>
-        <div class="grid-container">
-          <div class="grid-item">
-            <prepare-hex-bg class="grid-item__hex" />
-            <div class="grid-item__icon">
-              <icon-validator />
-            </div>
-            <div class="grid-item__title">Validators</div>
-            <div class="grid-item__description">
-              Validators of chains that will implement Stargate upgrades -
-              beginning with the Cosmos Hub - should prepare by helping run
-              Stargate testnets in the coming weeks.
-            </div>
-          </div>
-          <div class="grid-item">
-            <prepare-hex-bg class="grid-item__hex" />
-            <div class="grid-item__icon">
-              <icon-explore />
-            </div>
-            <div class="grid-item__title">Wallets &amp; Explorers</div>
-            <div class="grid-item__description">
-              This release will bring breaking changes to all wallets and
-              explorers of chains that will implement the Stargate Upgrade
-              (including Cosmos Hub).
-            </div>
-          </div>
-          <div class="grid-item">
-            <prepare-hex-bg class="grid-item__hex" />
-            <div class="grid-item__icon">
-              <icon-exchanges />
-            </div>
-            <div class="grid-item__title">Exchanges</div>
-            <div class="grid-item__description">
-              Make sure your signing and querying software is ready for the
-              Stargate upgrade by testing the features and your infrastructure
-              ahead of time, using the testnet.
-            </div>
-          </div>
-          <div class="grid-item">
-            <prepare-hex-bg class="grid-item__hex" />
-            <div class="grid-item__icon">
-              <icon-sdk-hex />
-            </div>
-            <div class="grid-item__title">Zone Developers</div>
-            <div class="grid-item__description">
-              If you're developing a blockchain with Cosmos SDK, please prepare
-              to join the Stargate testnet. More detailed guides to follow
-              shortly.
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div id="launchpad" class="section section-launchpad section-container">
-      <div class="container">
-        <div class="section-header">a note for zone developers</div>
-        <div class="section-left">
-          <div class="section-left__heading">Not ready to upgrade?</div>
-          <div class="section-left__title">Launchpad</div>
-        </div>
-        <div class="section-statement">
-          <div class="section-statement__p">
-            Stargate involves a lot of breaking changes that may make it
-            difficult for you to upgrade, if you have already written a lot of
-            code for Cosmos SDK 0.37/0.38.
-          </div>
-          <br />
-          <div class="section-statement__p">
-            The community supports an SDK 0.39 Launchpad release that includes
-            backported bug fixes. The
-            <a v-scroll-to="'#contributors'">Cosmos development teams</a> are
-            working together to document a clean migration path from Launchpad
-            to a stable Stargate release.
+          <div class="section-statement">
+            Stargate is a set of upgrades that complete the original roadmap
+            laid out in the Cosmos Whitepaper. For the first time ever, Cosmos
+            blockchains will be able to connect with each other using the first
+            standardized protocol for inter-blockchain communication (IBC).
           </div>
           <div class="section-cta">
-            <!-- TODO: update url -->
             <a
-              href="https://www.youtube.com/watch?v=mlq5GzQTIAM"
+              href="https://blog.cosmos.network/cosmos-stargate-upgrade-overview-8939475fe673"
               target="_blank"
               rel="noreferrer noopener"
             >
-              Check out the release &#8594;
+              Read more about Stargate &#8594;
             </a>
           </div>
         </div>
       </div>
     </div>
 
-    <div id="roadmap" class="section section-roadmap section-container">
-      <div class="container">
-        <div class="section-header">Roadmap</div>
-        <div class="section-title">{{ progressTotal }}% complete</div>
-        <div class="section-milestones">
-          <div class="section-milestones__title">Milestones</div>
-          <div class="section-milestones__cta">
-            <a
-              href="https://github.com/orgs/cosmosdevs/projects/1"
-              target="_blank"
-              rel="noreferrer noopener"
-            >
-              View on GitHub &#8594;
-            </a>
+    <div id="features" class="section section-features">
+      <div class="section-container">
+        <div class="container">
+          <div class="section-header">Features</div>
+          <div class="section-title">What’s new?</div>
+          <div class="section-statement">
+            These upgrades bring significant performance improvements to
+            blockchains built with Cosmos SDK. Discover all the amazing features
+            of the Stargate upgrade below.
           </div>
-        </div>
-        <a
-          v-for="item in milestoneList"
-          :key="item.url"
-          :href="item.url"
-          target="_blank"
-          rel="noreferrer noopener"
-          class="section-row"
-        >
-          <div
-            class="meter"
-            :style="{
-              '--progress-bar-width': `${item.progress}%`,
-              '--progress-bar-background-color': `${bgColor[item.logo]}`,
-            }"
-          ></div>
-          <div class="details">
-            <div class="icon">
-              <component :is="`icon-${item.logo}`" />
+          <div class="data-container">
+            <div class="data-item">
+              <div class="data-item__overline">Enabling</div>
+              <div class="data-item__heading">IBC</div>
             </div>
-            <div class="text">
-              <div class="title">{{ item.title }}</div>
-              <div class="subtitle">{{ item.repo }}</div>
+            <div class="data-item">
+              <div class="data-item__overline">Efficiency gains up to</div>
+              <div class="data-item__heading">100x</div>
             </div>
-            <div class="indicator">
-              <div v-if="item.progress" class="progress__wrapper">
-                <div class="h3">{{ item.progress }}% complete</div>
+            <div class="data-item">
+              <div class="data-item__overline">Faster full node sync</div>
+              <div class="data-item__heading">96x</div>
+            </div>
+            <div class="data-item">
+              <div class="data-item__overline">Faster upgrades</div>
+              <div class="data-item__heading">20x</div>
+            </div>
+          </div>
+          <div class="features-graphics">
+            <interoperable-planets />
+          </div>
+          <div class="ibc-item">
+            <div class="ibc-item__icon">
+              <icon-ibc-cropped />
+            </div>
+            <div class="ibc-item__title">Inter-Blockchain Communication</div>
+            <div class="ibc-item__description">
+              Cosmos SDK-based blockchains can incorporate the Inter-Blockchain
+              Communication (IBC) Protocol to communicate with other compatible
+              blockchains. The Cosmos Hub is the first blockchain to support IBC
+              in production.
+            </div>
+          </div>
+          <div class="grid-container">
+            <div class="grid-item">
+              <div class="grid-item__icon">
+                <icon-countdown />
+              </div>
+              <div class="grid-item__title">State Sync</div>
+              <div class="grid-item__description">
+                For blockchains built on top of Tendermint Core, the full-node
+                synchronization process will be reduced from 2 days to just 30
+                mins or less.
+              </div>
+            </div>
+            <div class="grid-item">
+              <div class="grid-item__icon">
+                <icon-repeat />
+              </div>
+              <div class="grid-item__title">Automatic upgrades</div>
+              <div class="grid-item__description">
+                The upgrade module facilitates the upgrade process of chains
+                built with Cosmos SDK. Migration from one version to the next
+                will take little to no time, as opposed to one hour or more
+                before.
+              </div>
+            </div>
+            <div class="grid-item">
+              <div class="grid-item__icon">
+                <icon-mask-oval />
+              </div>
+              <div class="grid-item__title">Full-featured Light Clients</div>
+              <div class="grid-item__description">
+                Protobuf brings performance improvements and developer
+                acceleration to Cosmos SDK-based blockchains with efficiency
+                gains of 10-100x, and wider language support.
+              </div>
+            </div>
+            <div class="grid-item">
+              <div class="grid-item__icon">
+                <icon-speedometer />
+              </div>
+              <div class="grid-item__title">
+                Transition from Amino to Protobuf
+              </div>
+              <div class="grid-item__description">
+                Protobuf brings performance improvements and developer
+                acceleration to Cosmos SDK-based blockchains with efficiency
+                gains of 10-100x, and wider language support.
               </div>
             </div>
           </div>
-        </a>
-        <div class="section-status">
-          <div class="section-status__title">Status updates</div>
         </div>
-        <div class="section-list">
+      </div>
+    </div>
+
+    <div id="prepare" class="section section-prepare">
+      <div class="section-container">
+        <div class="container">
+          <div class="section-header">Prepare</div>
+          <div class="section-title">Get set for testnets</div>
+          <div class="section-statement">
+            <p>
+              The following services will be affected by the upgrades with
+              Stargate. Make sure to schedule time in August for integration
+              testing on the testnet.
+            </p>
+            <p>
+              More detailed instructions and guidelines on how services can
+              prepare for the upgrade will be published in August.
+            </p>
+          </div>
+          <div class="grid-container">
+            <div class="grid-item">
+              <prepare-hex-bg class="grid-item__hex" />
+              <div class="grid-item__icon">
+                <icon-validator />
+              </div>
+              <div class="grid-item__title">Validators</div>
+              <div class="grid-item__description">
+                Validators of chains that will implement Stargate upgrades -
+                beginning with the Cosmos Hub - should prepare by helping run
+                Stargate testnets in the coming weeks.
+              </div>
+            </div>
+            <div class="grid-item">
+              <prepare-hex-bg class="grid-item__hex" />
+              <div class="grid-item__icon">
+                <icon-explore />
+              </div>
+              <div class="grid-item__title">Wallets &amp; Explorers</div>
+              <div class="grid-item__description">
+                This release will bring breaking changes to all wallets and
+                explorers of chains that will implement the Stargate Upgrade
+                (including Cosmos Hub).
+              </div>
+            </div>
+            <div class="grid-item">
+              <prepare-hex-bg class="grid-item__hex" />
+              <div class="grid-item__icon">
+                <icon-exchanges />
+              </div>
+              <div class="grid-item__title">Exchanges</div>
+              <div class="grid-item__description">
+                Make sure your signing and querying software is ready for the
+                Stargate upgrade by testing the features and your infrastructure
+                ahead of time, using the testnet.
+              </div>
+            </div>
+            <div class="grid-item">
+              <prepare-hex-bg class="grid-item__hex" />
+              <div class="grid-item__icon">
+                <icon-sdk-hex />
+              </div>
+              <div class="grid-item__title">Zone Developers</div>
+              <div class="grid-item__description">
+                If you're developing a blockchain with Cosmos SDK, please
+                prepare to join the Stargate testnet. More detailed guides to
+                follow shortly.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="launchpad" class="section section-launchpad">
+      <div class="section-container">
+        <div class="container">
+          <div class="section-header">a note for zone developers</div>
+          <div class="section-left">
+            <div class="section-left__heading">Not ready to upgrade?</div>
+            <div class="section-left__title">Launchpad</div>
+          </div>
+          <div class="section-statement">
+            <div class="section-statement__p">
+              Stargate involves a lot of breaking changes that may make it
+              difficult for you to upgrade, if you have already written a lot of
+              code for Cosmos SDK 0.37/0.38.
+            </div>
+            <br />
+            <div class="section-statement__p">
+              The community supports an SDK 0.39 Launchpad release that includes
+              backported bug fixes. The
+              <a v-scroll-to="'#contributors'">Cosmos development teams</a> are
+              working together to document a clean migration path from Launchpad
+              to a stable Stargate release.
+            </div>
+            <div class="section-cta">
+              <!-- TODO: update url -->
+              <a
+                href="https://www.youtube.com/watch?v=mlq5GzQTIAM"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                Check out the release &#8594;
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="roadmap" class="section section-roadmap">
+      <div class="section-container">
+        <div class="container">
+          <div class="section-header">Roadmap</div>
+          <div class="section-title">{{ progressTotal }}% complete</div>
+          <div class="section-milestones">
+            <div class="section-milestones__title">Milestones</div>
+            <div class="section-milestones__cta">
+              <a
+                href="https://github.com/orgs/cosmosdevs/projects/1"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                View on GitHub &#8594;
+              </a>
+            </div>
+          </div>
           <a
-            href="https://github.com/cosmosdevs/stargate/blob/master/week1.md"
+            v-for="item in milestoneList"
+            :key="item.url"
+            :href="item.url"
             target="_blank"
             rel="noreferrer noopener"
-            class="section-list__item"
+            class="section-row"
           >
-            <div class="section-list__item__title">Week 1 status</div>
-            <div class="section-list__item__date">
-              July 2, 2020 &#8594;
+            <div
+              class="meter"
+              :style="{
+                '--progress-bar-width': `${item.progress}%`,
+                '--progress-bar-background-color': `${bgColor[item.logo]}`,
+              }"
+            ></div>
+            <div class="details">
+              <div class="icon">
+                <component :is="`icon-${item.logo}`" />
+              </div>
+              <div class="text">
+                <div class="title">{{ item.title }}</div>
+                <div class="subtitle">{{ item.repo }}</div>
+              </div>
+              <div class="indicator">
+                <div v-if="item.progress" class="progress__wrapper">
+                  <div class="h3">{{ item.progress }}% complete</div>
+                </div>
+              </div>
             </div>
           </a>
-          <a
-            href="https://github.com/cosmosdevs/stargate/blob/master/week2.md"
-            target="_blank"
-            rel="noreferrer noopener"
-            class="section-list__item"
-          >
-            <div class="section-list__item__title">Week 2 status</div>
-            <div class="section-list__item__date">
-              July 13, 2020 &#8594;
-            </div>
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <div
-      id="contributors"
-      class="section section-contributors section-container"
-    >
-      <div class="container">
-        <div class="section-header">Contributors</div>
-        <div class="section-title">Core Developers</div>
-        <div class="section-statement">
-          Stargate is made possible through the hard work and coordination of
-          many dedicated teams contributing to development on Cosmos SDK,
-          Tendermint Core, IBC and Gaia.
-        </div>
-        <div class="team-img"></div>
-      </div>
-    </div>
-
-    <div id="articles" class="section section-articles section-container">
-      <div class="container">
-        <div class="section-header">3 Articles</div>
-        <div class="section-title">Learn more about Stargate</div>
-        <!-- <div class="learn-more-graphics"></div> -->
-        <div class="content">
-          <div class="articles-wrapper">
+          <div class="section-status">
+            <div class="section-status__title">Status updates</div>
+          </div>
+          <div class="section-list">
             <a
-              href="https://figment.network/resources/cosmos-stargate-upgrade-overview"
+              href="https://github.com/cosmosdevs/stargate/blob/master/week1.md"
               target="_blank"
               rel="noreferrer noopener"
-              class="articles-item"
+              class="section-list__item"
             >
-              <span class="articles-item__icon">
+              <div class="section-list__item__title">Week 1 status</div>
+              <div class="section-list__item__date">
+                July 2, 2020 &#8594;
+              </div>
+            </a>
+            <a
+              href="https://github.com/cosmosdevs/stargate/blob/master/week2.md"
+              target="_blank"
+              rel="noreferrer noopener"
+              class="section-list__item"
+            >
+              <div class="section-list__item__title">Week 2 status</div>
+              <div class="section-list__item__date">
+                July 13, 2020 &#8594;
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="contributors" class="section section-contributors">
+      <div class="section-container">
+        <div class="container">
+          <div class="section-header">Contributors</div>
+          <div class="section-title">Core Developers</div>
+          <div class="section-statement">
+            Stargate is made possible through the hard work and coordination of
+            many dedicated teams contributing to development on Cosmos SDK,
+            Tendermint Core, IBC and Gaia.
+          </div>
+          <div class="team-img"></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="articles" class="section section-articles">
+      <div class="section-container">
+        <div class="container">
+          <div class="section-header">3 Articles</div>
+          <div class="section-title">Learn more about Stargate</div>
+          <!-- <div class="learn-more-graphics"></div> -->
+          <div class="content">
+            <div class="articles-wrapper">
+              <a
+                href="https://figment.network/resources/cosmos-stargate-upgrade-overview"
+                target="_blank"
+                rel="noreferrer noopener"
+                class="articles-item"
+              >
+                <span class="articles-item__icon">
+                  <icon-arrow-top-right />
+                </span>
+                <div class="articles-item__date">June 22</div>
+                <div class="articles-item__title">
+                  Cosmos Stargate Upgrade Overview
+                </div>
+                <div class="articles-item__description">
+                  Introducing Stargate, the largest Cosmos upgrade yet. Stargate
+                  will enable higher transaction throughput, cross-chain
+                  transactions, accelerate UI development, and so much more.
+                </div>
+              </a>
+              <a
+                href="https://medium.com/tendermint/tendermint-0-34-protocol-buffers-and-you-8c40558939ae"
+                target="_blank"
+                rel="noreferrer noopener"
+                class="articles-item"
+              >
+                <span class="articles-item__icon">
+                  <icon-arrow-top-right />
+                </span>
+                <div class="articles-item__date">June 23</div>
+                <div class="articles-item__title">
+                  Tendermint 0.34, Protocol Buffers, and You
+                </div>
+                <div class="articles-item__description">
+                  The upcoming Tendermint 0.34 release contains a major change
+                  to the way we serialize and encode data. Here’s what you need
+                  to know.
+                </div>
+              </a>
+              <a
+                href="https://medium.com/tendermint/everything-you-need-to-know-about-the-tendermint-light-client-f80d03856f98"
+                target="_blank"
+                rel="noreferrer noopener"
+                class="articles-item"
+              >
+                <span class="articles-item__icon">
+                  <icon-arrow-top-right />
+                </span>
+                <div class="articles-item__date">June 25</div>
+                <div class="articles-item__title">
+                  Everything you need to know about the Tendermint Light Client
+                </div>
+                <div class="articles-item__description">
+                  What is it, why it’s needed and how it works.
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="videos" class="section section-videos">
+      <div class="section-container">
+        <div class="container">
+          <div class="section-header">Videos</div>
+          <div class="frame">
+            <iframe
+              src="https://www.youtube.com/embed/mlq5GzQTIAM?autoplay=0&controls=1&rel=0&modestbranding=1&fs=1&enablejsapi=1"
+              frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            />
+          </div>
+          <div class="text">
+            <div class="text__caption">
+              June 23
+            </div>
+            <div class="text__title">
+              Stargate Q&amp;A with Zaki Manian
+            </div>
+            <div class="text__cta">
+              <a
+                href="https://www.youtube.com/watch?v=mlq5GzQTIAM"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                Watch on YouTube &#8594;
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="community" class="section section-community">
+      <div class="section-container">
+        <div class="container">
+          <div class="section-header">Community</div>
+          <div class="cards">
+            <a
+              href="https://cosmos.network/community"
+              rel="noreferrer noopener"
+              class="cards__item"
+            >
+              <div class="cards__item__caption">Connect</div>
+              <div class="cards__item__title">Join the community</div>
+              <div class="cards__item__description">
+                Learn about Cosmos, get to know the community, connect with
+                other Cosmonauts and more.
+              </div>
+            </a>
+            <a
+              href="https://discord.com/channels/669268347736686612/723170066937413693"
+              target="_blank"
+              rel="noreferrer noopener"
+              class="cards__item"
+            >
+              <span class="cards__item__disclosure">
                 <icon-arrow-top-right />
               </span>
-              <div class="articles-item__date">June 22</div>
-              <div class="articles-item__title">
-                Cosmos Stargate Upgrade Overview
-              </div>
-              <div class="articles-item__description">
-                Introducing Stargate, the largest Cosmos upgrade yet. Stargate
-                will enable higher transaction throughput, cross-chain
-                transactions, accelerate UI development, and so much more.
-              </div>
-            </a>
-            <a
-              href="https://medium.com/tendermint/tendermint-0-34-protocol-buffers-and-you-8c40558939ae"
-              target="_blank"
-              rel="noreferrer noopener"
-              class="articles-item"
-            >
-              <span class="articles-item__icon">
-                <icon-arrow-top-right />
-              </span>
-              <div class="articles-item__date">June 23</div>
-              <div class="articles-item__title">
-                Tendermint 0.34, Protocol Buffers, and You
-              </div>
-              <div class="articles-item__description">
-                The upcoming Tendermint 0.34 release contains a major change to
-                the way we serialize and encode data. Here’s what you need to
-                know.
-              </div>
-            </a>
-            <a
-              href="https://medium.com/tendermint/everything-you-need-to-know-about-the-tendermint-light-client-f80d03856f98"
-              target="_blank"
-              rel="noreferrer noopener"
-              class="articles-item"
-            >
-              <span class="articles-item__icon">
-                <icon-arrow-top-right />
-              </span>
-              <div class="articles-item__date">June 25</div>
-              <div class="articles-item__title">
-                Everything you need to know about the Tendermint Light Client
-              </div>
-              <div class="articles-item__description">
-                What is it, why it’s needed and how it works.
+              <div class="cards__item__caption">Chat</div>
+              <div class="cards__item__title">Discuss Stargate</div>
+              <div class="cards__item__description">
+                Join the<code>#stargate</code> channel in the Cosmos community
+                Discord and chat with developers.
               </div>
             </a>
           </div>
-        </div>
-      </div>
-    </div>
-
-    <div id="videos" class="section section-videos section-container">
-      <div class="container">
-        <div class="section-header">Videos</div>
-        <div class="frame">
-          <iframe
-            src="https://www.youtube.com/embed/mlq5GzQTIAM?autoplay=0&controls=1&rel=0&modestbranding=1&fs=1&enablejsapi=1"
-            frameborder="0"
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          />
-        </div>
-        <div class="text">
-          <div class="text__caption">
-            June 23
-          </div>
-          <div class="text__title">
-            Stargate Q&amp;A with Zaki Manian
-          </div>
-          <div class="text__cta">
-            <a
-              href="https://www.youtube.com/watch?v=mlq5GzQTIAM"
-              target="_blank"
-              rel="noreferrer noopener"
-            >
-              Watch on YouTube &#8594;
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div id="community" class="section section-community section-container">
-      <div class="container">
-        <div class="section-header">Community</div>
-        <div class="cards">
-          <a
-            href="https://cosmos.network/community"
-            rel="noreferrer noopener"
-            class="cards__item"
-          >
-            <div class="cards__item__caption">Connect</div>
-            <div class="cards__item__title">Join the community</div>
-            <div class="cards__item__description">
-              Learn about Cosmos, get to know the community, connect with other
-              Cosmonauts and more.
-            </div>
-          </a>
-          <a
-            href="https://discord.com/channels/669268347736686612/723170066937413693"
-            target="_blank"
-            rel="noreferrer noopener"
-            class="cards__item"
-          >
-            <span class="cards__item__disclosure">
-              <icon-arrow-top-right />
-            </span>
-            <div class="cards__item__caption">Chat</div>
-            <div class="cards__item__title">Discuss Stargate</div>
-            <div class="cards__item__description">
-              Join the<code>#stargate</code> channel in the Cosmos community
-              Discord and chat with developers.
-            </div>
-          </a>
         </div>
       </div>
     </div>
@@ -662,11 +701,11 @@ export default {
 
 .fade-enter
   opacity 0
-  transform scale(1.5)
+  transform translateY(1rem)
 
 .fade-enter-to
   opacity 1
-  transform scale(1)
+  transform translateY(0)
 
 .fade-leave
   opacity 1
@@ -674,7 +713,7 @@ export default {
 
 .fade-leave-to
   opacity 0
-  transform scale(.85)
+  transform scale(.96)
 
 // Accessible/SEO friendly CSS hiding
 .sr-only
@@ -690,10 +729,12 @@ export default {
   padding-bottom 6rem
 
 .section-container
+  position relative
   padding-left 1rem
   padding-right 1rem
-
-  > .container
+  max-width 96rem
+  margin 0 auto
+  .container
     display grid
     grid-template-columns repeat(12, 1fr)
     gap 0 2rem
@@ -741,8 +782,11 @@ export default {
   justify-content stretch
   align-items stretch
   text-align center
-  background linear-gradient(to bottom, #030419, #21255F)
   background radial-gradient(60.92% 51.1% at 50% 57.31%, #21255F 26.56%, #030419 80.73%, #000000 100%)
+  .section-container
+    display flex
+    align-items stretch
+    width 100%
   .container
     position relative
     display flex
@@ -778,19 +822,24 @@ export default {
         border-radius 0.5rem
         padding 0.25rem 0.75rem
       &__get-notified
-        margin-top 3rem
+        margin 3rem auto 1rem
         font-weight bold
         font-size 1rem
         line-height 1.375
         color #CFD1E7
       &__state
-        margin-top 0.5rem
+        padding-bottom 2.3125rem
+        h2
+          margin-top 1.3125rem
+          font-size 1rem
+          line-height 1.375
+          font-weight normal
         &__success
-          color #5bc75b
+          color #989bb9
         &__error
-          color #dd285e
+          color #FF4C52
       &__form
-        margin 1rem auto 0
+        margin 0 auto
         max-width 25rem
         &__input
           display flex
@@ -853,8 +902,8 @@ export default {
     width 100%
     left 0
     padding-bottom 170%
-    overflow hidden
     font-size 1rem
+    overflow hidden
     &__gate,
     &__gate-notches
       position absolute
@@ -1022,10 +1071,16 @@ export default {
         line-height 117.2%
         letter-spacing -0.03em
         color #CCD1FF
+  .features-graphics
+    grid-column 1 / span 8
+    grid-row 5
+    position relative
+    font-size 1.5rem
   .ibc-item
+    position relative
     grid-column 9 / span 4
     grid-row 5
-    margin 16rem 0 0
+    align-self center
     max-width 24em
     font-size 1rem
     line-height 1.625
@@ -1043,7 +1098,7 @@ export default {
     &__description
       margin-top 1rem
   .grid-container
-    margin-top 24rem
+    margin-top 20%
     display grid
     grid-template-columns repeat(9, 1fr)
     gap 6rem 2rem
@@ -1072,7 +1127,6 @@ export default {
         margin-top 1rem
 
 .section-prepare
-  overflow hidden
   .section-header
     height 3rem
     font-weight 600
@@ -1173,7 +1227,7 @@ export default {
   width 100%
   z-index 10
   // TODO: uncomment before 🚢
-  backdrop-filter blur(10px)
+  backdrop-filter blur(20px)
   .nav
     overflow scroll
     white-space nowrap
@@ -1455,7 +1509,6 @@ export default {
     letter-spacing -0.025em
     color #FFFFFF
   .section-statement
-    margin-top 3rem
     align-self end
     grid-column 6 / span 7
     font-size 1.4375rem
@@ -1714,13 +1767,16 @@ export default {
 
 // TODO: temp fix for moz
 @supports not (backdrop-filter: none)
+  .section-hero
+    .container
+      .bottom__form__input__input
+        filter none
   .section-nav
-    background-color rgba(22, 22, 26, 0.9)
+    background linear-gradient(to bottom, #000000 10%, rgba(0,0,0,0.7))
     top -1px
     width 100%
     z-index 10
     filter saturate(180%)
-    transition background-color 300ms ease 0s
 
 @media screen and (max-width: 1919px)
   .section-container
@@ -1776,6 +1832,10 @@ export default {
           letter-spacing -0.015em
           margin-top 2rem
 
+  .section-features
+    .features-graphics
+      font-size 1rem
+
   .section-features,
   .section-launchpad,
   .section-roadmap,
@@ -1821,6 +1881,7 @@ export default {
       grid-column 1 / span 12
 
   .section-features
+    overflow hidden
     .section-title
       grid-column 1 / 12
       font-size 4rem
@@ -1834,6 +1895,7 @@ export default {
       grid-column 1 / 12
 
   .section-prepare
+    overflow hidden
     .section-title
       grid-column 1 / 12
       font-size 4rem
@@ -1918,6 +1980,10 @@ export default {
     .hero-graphics
       font-size 0.5rem
 
+  .section-features
+    .features-graphics
+      font-size 0.75rem
+
 @media screen and (max-width: 576px)
   .section
     .section-title
@@ -1986,6 +2052,8 @@ export default {
         &__heading
           font-size 2.5rem
           line-height 1.2
+    .features-graphics
+      font-size 0.5rem
     .grid-container
       .grid-item
         &:nth-child(even),
@@ -1993,9 +2061,21 @@ export default {
           grid-column 1/span 12
           grid-template-columns repeat(1, 1fr)
 
+  .section-roadmap
+    .section-row
+      .details
+        padding 1rem
+        grid-template-columns: unset;
+        grid-auto-flow: unset;
+
   .section-videos
     .text
       width auto
+
+@media screen and (min-width: 1536px)
+  .section-hero
+    .hero-graphics
+      overflow visible
 
 @media screen and (min-width: 1920px)
   .section
@@ -2005,19 +2085,4 @@ export default {
   .section-container
     padding-left 12rem
     padding-right 12rem
-
-  .section-nav .nav
-    margin-left 12rem
-    margin-right 12rem
-
-@media screen and (min-width: 2420px)
-  .section-hero
-    .hero-graphics
-      font-size 1.75rem
-      overflow visible
-      width 120rem
-      padding-bottom (120*1.7)rem
-      margin-top -26%
-      left 50%
-      margin-left -(120/2)rem
 </style>
