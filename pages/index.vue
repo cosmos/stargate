@@ -436,6 +436,26 @@
             many dedicated teams contributing to development on Cosmos SDK,
             Tendermint Core, IBC and Gaia.
           </div>
+          <div
+            v-for="i in contributorsList"
+            :key="i.name.toLowerCase()"
+            class="section-list"
+          >
+            <a
+              :href="i.url"
+              target="_blank"
+              rel="noreferrer noopener"
+              class="section-list__item"
+            >
+              <div class="section-list__item__title">
+                {{ i.name }}
+                <code v-if="i.role" class="section-list__item__title__role"
+                  >({{ i.role }})</code
+                >
+              </div>
+              <div class="section-list__item__date">&#8594;</div>
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -583,6 +603,7 @@
 
 <script>
 import querystring from 'querystring'
+import { orderBy } from 'lodash'
 import Headroom from 'headroom.js'
 import moment from 'moment'
 import axios from 'axios'
@@ -620,6 +641,37 @@ export default {
         core: 'linear-gradient(95.47deg, #086108 0%, #018A01 100%)',
         ibc: 'linear-gradient(95.47deg, #121435 0%, #282B53 100%)',
       },
+      contributors: [
+        {
+          name: 'Tendermint',
+          url: 'http://tendermint.com',
+        },
+        {
+          name: 'Iqlusion',
+          role: 'Coordinator',
+          url: 'https://www.iqlusion.io',
+        },
+        {
+          name: 'Interchain GmbG',
+          url: 'http://interchain.berlin',
+        },
+        {
+          name: 'Informal Systems',
+          url: 'https://informal.systems',
+        },
+        {
+          name: 'Regen Network',
+          url: 'https://www.regen.network',
+        },
+        {
+          name: 'Fission Labs',
+          url: 'https://fissionlabs.io',
+        },
+        {
+          name: 'Akash Network',
+          url: 'https://akash.network',
+        },
+      ],
     }
   },
   computed: {
@@ -632,6 +684,10 @@ export default {
         .reduce((a, b) => a + b, 0)
       const percentage = ((progressSum / 300) * 100).toFixed(0)
       return percentage
+    },
+    contributorsList() {
+      const sortedList = orderBy(this.contributors, 'name')
+      return sortedList
     },
   },
   // watch: {
@@ -1545,6 +1601,34 @@ export default {
     letter-spacing -0.01em
     color #CFD1E7
     max-width 30em
+    margin-bottom 3rem
+  .section-list
+    color #fff
+    grid-column 6 / span 7
+    &__item
+      padding-top 1.875rem
+      padding-bottom 1.875rem
+      display flex
+      flex-direction row
+      justify-content space-between
+      border-bottom 1px solid #282B53
+      &__title
+        font-weight bold
+        font-size 23px
+        line-height 121.7%
+        letter-spacing -0.01em
+        color #CCD1FF
+        &__role
+          font-size 1rem
+          color white
+          padding-left 0.5rem
+          vertical-align bottom
+      &__date
+        font-size 19px
+        line-height 126.3%
+        text-align right
+        letter-spacing -0.005em
+        color #989BB9
 
 .section-articles
   .section-header
@@ -1940,6 +2024,9 @@ export default {
       grid-column 1/12
       margin-top 4rem
       margin-left 0rem
+    .section-list
+      margin-top 0
+      grid-column 1 / span 12
 
   .section-articles
     .section-header

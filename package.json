@@ -16,6 +16,7 @@
   "dependencies": {
     "axios": "^0.19.2",
     "headroom.js": "^0.11.0",
+    "lodash": "^4.17.19",
     "moment": "^2.27.0",
     "normalize.css": "^8.0.1",
     "nuxt": "^2.13.0",
