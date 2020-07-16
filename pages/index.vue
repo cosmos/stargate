@@ -44,7 +44,7 @@
               key="error"
               class="bottom__state"
             >
-              <h1 class="bottom__state__error">Uh oh! Something went wrong.</h1>
+              <h2 class="bottom__state__error">Uh oh! Something went wrong.</h2>
             </div>
             <div v-else key="default" class="bottom__form">
               <form
@@ -61,7 +61,6 @@
                     class="bottom__form__input__input"
                     type="email"
                     placeholder="Your email"
-                    autocomplete="on"
                   />
                   <button type="submit" class="bottom__form__input__button">
                     <icon-arrow-right
@@ -1930,10 +1929,12 @@ export default {
     .section-statement
       font-size 1rem
       line-height 1.625
+    .section-cta
+      font-size 1rem
+      line-height 1.375
+      margin-top 1.5rem
 
   .nav-primary
-    // margin-left -0.75rem
-    // margin-right -0.75rem
     .logo
       height 1.25rem
     a
