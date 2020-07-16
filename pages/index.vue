@@ -648,6 +648,12 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+// TODO: remove before 🚢
+// *
+//   background #000 !important
+//   color #0f0 !important
+//   outline solid #f00 1px !important
+
 // Form state transition
 .fade-enter-active
   transition all .4s ease-out
@@ -896,11 +902,12 @@ export default {
       background radial-gradient(84.49% 66.22% at 50% 59.94%, #000000 5.73%, #030419 71.48%, #0E1247 81.25%, #36299B 91.15%)
       box-shadow 0px -4.5em 4em rgba(28, 0, 238, 0.17), 0px -0.625em 0.5em rgba(92, 70, 255, 0.11), inset 0px 3.5em 3.5em rgba(48, 44, 245, 0.17), inset 0px 0.375em 0.75em rgba(104, 67, 252, 0.23)
 
-@keyframes gate
-  from
-    transform rotate(0deg)
-  to
-    transform rotate(360deg)
+// TODO: uncomment before 🚢
+// @keyframes gate
+//   from
+//     transform rotate(0deg)
+//   to
+//     transform rotate(360deg)
 
 .section-intro
   position relative
@@ -1046,7 +1053,6 @@ export default {
     color white
     .grid-item
       grid-column 1 / span 4
-      text-align left
       max-width 24em
       font-size 1rem
       line-height 1.625
@@ -1081,7 +1087,6 @@ export default {
     flex-direction column
     grid-column 1 / span 12
     grid-row 1
-    margin-right -1vw
     justify-content flex-end
     text-align left
   .section-title
@@ -1165,11 +1170,11 @@ export default {
 .section-nav
   position sticky
   position -webkit-sticky
-  top 0
+  top -1px
   width 100%
   z-index 10
-  // backdrop-filter saturate(180%) blur(10px)
-  // -webkit-backdrop-filter saturate(180%) blur(10px)
+  // TODO: uncomment before 🚢
+  backdrop-filter blur(10px)
   .nav
     overflow scroll
     white-space nowrap
@@ -1590,13 +1595,13 @@ export default {
     &__title
       margin-top 8px
       font-weight bold
-      font-size 32px
+      font-size 2rem
       line-height 125%
       letter-spacing -0.025em
       color #FFFFFF
     &__cta
       font-weight bold
-      font-size 16px
+      font-size 1rem
       line-height 137.5%
       display flex
       align-items center
@@ -1712,7 +1717,9 @@ export default {
 @supports not (backdrop-filter: none)
   .section-nav
     background-color rgba(22, 22, 26, 0.9)
-    z-index 2
+    top -1px
+    width 100%
+    z-index 10
     filter saturate(180%)
     transition background-color 300ms ease 0s
 
@@ -1720,6 +1727,10 @@ export default {
   .section-container
     padding-left 8rem
     padding-right 8rem
+
+  .section-nav .nav
+    margin-left 8rem
+    margin-right 8rem
 
 @media screen and (max-width: 1438px)
   .section-videos
@@ -1737,6 +1748,10 @@ export default {
   .section-container
     padding-left 6rem
     padding-right 6rem
+
+  .section-nav .nav
+    margin-left 6rem
+    margin-right 6rem
 
   .section-features
     .grid-container
@@ -1773,6 +1788,8 @@ export default {
 
   .section-nav
     .nav
+      margin-left 4rem
+      margin-right 4rem
       &::-webkit-scrollbar
         display none
       &__list
@@ -1785,8 +1802,8 @@ export default {
         white-space nowrap
         width fit-content
         -webkit-overflow-scrolling touch
-        &:first-child
-          padding-left 0
+        // &:first-child
+        //   padding-left 0
 
   .section-intro
     .section-title
@@ -1810,6 +1827,8 @@ export default {
       font-size 4rem
     .section-statement
       grid-column 1 / 12
+    .data-container
+      grid-template-columns repeat(2, 1fr)
     .ibc-item
       grid-column 1 / 12
     .grid-container
@@ -1868,12 +1887,6 @@ export default {
       grid-column 1/13
       margin-top 4rem
 
-  .section-features
-    .data-container
-      grid-template-columns repeat(2, 1fr)
-    .grid-container
-      grid-template-columns repeat(1, 1fr)
-
   .section-videos
     .container
       .frame
@@ -1893,13 +1906,14 @@ export default {
     .section-header
       font-size 1rem
       line-height 1.375
-    .section-title
-      font-size: 2.5rem
-      line-height: 120%
 
   .section-container
     padding-left 1.5rem
     padding-right 1.5rem
+
+  .section-nav .nav
+    margin-left 1.5rem
+    margin-right 1.5rem
 
   .section-hero
     .hero-graphics
@@ -1908,12 +1922,18 @@ export default {
 @media screen and (max-width: 576px)
   .section
     .section-title
-      font-size: 2.5rem
-      line-height: 120%
+      font-size 2.5rem
+      line-height 1.20
+    .section-subtitle
+      font-size 1.4375rem
+      line-height 1.217
+    .section-statement
+      font-size 1rem
+      line-height 1.625
 
   .nav-primary
-    margin-left -0.75rem
-    margin-right -0.75rem
+    // margin-left -0.75rem
+    // margin-right -0.75rem
     .logo
       height 1.25rem
     a
@@ -1956,11 +1976,25 @@ export default {
     .hero-graphics
       font-size 0.36rem
 
-// @media screen and (max-width: 600px)
-//   .section-roadmap
-//     .section-row
-//       .details
-//         margin 2rem
+  .section-features
+    .data-container
+      .data-item
+        &__overline
+          font-size 0.8125rem
+          line-height 1.384
+        &__heading
+          font-size 2.5rem
+          line-height 1.2
+    .grid-container
+      .grid-item
+        &:nth-child(even),
+        &:nth-child(odd)
+          grid-column 1/span 12
+          grid-template-columns repeat(1, 1fr)
+
+  .section-videos
+    .text
+      width auto
 
 @media screen and (min-width: 1920px)
   .section
@@ -1970,6 +2004,10 @@ export default {
   .section-container
     padding-left 12rem
     padding-right 12rem
+
+  .section-nav .nav
+    margin-left 12rem
+    margin-right 12rem
 
 @media screen and (min-width: 2420px)
   .section-hero
