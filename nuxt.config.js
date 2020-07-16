@@ -14,26 +14,28 @@ export default {
    ** See https://nuxtjs.org/api/configuration-head
    */
   head: {
-    title: 'Stargate',
+    title: 'Stargate | Cosmos Network',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
         hid: 'description',
         name: 'description',
-        content: 'Stargate Upgrade for the Cosmos ecosystem',
+        content:
+          'The Internet of Blockchains is on the horizon, bringing interoperability and more to the Cosmos ecosystem.',
       },
       // Open Graph
-      { hid: 'og:site_name', property: 'og:site_name', content: 'NuxtJS' },
+      { hid: 'og:site_name', property: 'og:site_name', content: 'Stargate' },
       {
         hid: 'og:title',
         property: 'og:title',
-        content: 'Stargate',
+        content: 'Stargate | Cosmos Network',
       },
       {
         hid: 'og:description',
         property: 'og:description',
-        content: 'Stargate Upgrade for the Cosmos ecosystem',
+        content:
+          'The Internet of Blockchains is on the horizon, bringing interoperability and more to the Cosmos ecosystem.',
       },
       { hid: 'og:type', property: 'og:type', content: 'website' },
       {
@@ -56,12 +58,13 @@ export default {
       {
         hid: 'twitter:title',
         name: 'twitter:title',
-        content: 'Cosmos Stargate',
+        content: 'Stargate | Cosmos Network',
       },
       {
         hid: 'twitter:description',
         name: 'twitter:description',
-        content: 'Stargate Upgrade for the Cosmos ecosystem',
+        content:
+          'The Internet of Blockchains is on the horizon, bringing interoperability and more to the Cosmos ecosystem.',
       },
       {
         hid: 'twitter:image',
