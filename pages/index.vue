@@ -96,7 +96,7 @@
       </div>
     </div>
 
-    <div class="section-nav">
+    <header class="headroom section-nav">
       <nav class="nav">
         <ul class="nav__list">
           <li class="nav__list__item">
@@ -116,7 +116,7 @@
           </li>
         </ul>
       </nav>
-    </div>
+    </header>
 
     <div id="intro" class="section section-intro">
       <div class="section-container">
@@ -572,7 +572,7 @@
               <div class="cards__item__caption">Chat</div>
               <div class="cards__item__title">Discuss Stargate</div>
               <div class="cards__item__description">
-                Join the<code>#stargate</code> channel in the Cosmos community
+                Join the <code>#stargate</code> channel in the Cosmos community
                 Discord and chat with developers.
               </div>
             </a>
@@ -585,6 +585,7 @@
 
 <script>
 import querystring from 'querystring'
+import Headroom from 'headroom.js'
 import moment from 'moment'
 import axios from 'axios'
 import IconIbc from '~/components/IconIbc.vue'
@@ -599,6 +600,7 @@ export default {
   },
   data() {
     return {
+      headroom: null,
       email: null,
       state: 'default',
       url: 'https://app.mailerlite.com/webforms/submit/l6o8i3',
@@ -634,13 +636,35 @@ export default {
       return percentage
     },
   },
+  // watch: {
+  //   $route(to) {
+  //     if (to.name === 'index') {
+  //       this.enableHeadroom()
+  //     }
+  //   },
+  // },
   mounted() {
     this.sources.forEach(async (source) => {
       const milestone = await this.getMilestone.apply(null, source)
       this.milestoneList.push(milestone)
     })
+    this.enableHeadroom()
   },
   methods: {
+    disableHeadroom() {
+      if (this.headroom) {
+        this.headroom.destroy()
+        this.headroom = null
+      }
+    },
+    enableHeadroom() {
+      if (!this.headroom) {
+        // this.headroom = new Headroom(this.$el)
+        const header = document.querySelector('header')
+        this.headroom = new Headroom(header)
+        this.headroom.init()
+      }
+    },
     actionSubmitEmail() {
       const options = {
         method: 'POST',
@@ -692,7 +716,16 @@ export default {
 //   color #0f0 !important
 //   outline solid #f00 1px !important
 
-// Form state transition
+.headroom
+  will-change transform
+  transition transform 200ms linear
+
+.headroom--pinned
+  transform translateY(0%)
+
+.headroom--unpinned
+  transform translateY(-100%)
+
 .fade-enter-active
   transition all .4s ease-out
 
