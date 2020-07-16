@@ -1264,8 +1264,6 @@ export default {
   .nav
     overflow scroll
     white-space nowrap
-    margin-left 2.5rem
-    margin-right 2.5rem
     font-size 1.1875rem
     line-height 1.263
     letter-spacing -0.005em
@@ -1816,10 +1814,6 @@ export default {
     padding-left 8rem
     padding-right 8rem
 
-  .section-nav .nav
-    margin-left 8rem
-    margin-right 8rem
-
 @media screen and (max-width: 1438px)
   .section-videos
     .container
@@ -1836,10 +1830,6 @@ export default {
   .section-container
     padding-left 6rem
     padding-right 6rem
-
-  .section-nav .nav
-    margin-left 6rem
-    margin-right 6rem
 
   .section-features
     .grid-container
@@ -1880,8 +1870,6 @@ export default {
 
   .section-nav
     .nav
-      margin-left 4rem
-      margin-right 4rem
       &::-webkit-scrollbar
         display none
       &__list
@@ -1894,8 +1882,6 @@ export default {
         white-space nowrap
         width fit-content
         -webkit-overflow-scrolling touch
-        // &:first-child
-        //   padding-left 0
 
   .section-intro
     .section-title
@@ -2004,10 +1990,7 @@ export default {
   .section-container
     padding-left 1.5rem
     padding-right 1.5rem
-
-  .section-nav .nav
-    margin-left 1.5rem
-    margin-right 1.5rem
+    padding-top 1.5rem
 
   .section-hero
     .hero-graphics
@@ -2098,8 +2081,8 @@ export default {
     .section-row
       .details
         padding 1rem
-        grid-template-columns: unset;
-        grid-auto-flow: unset;
+        grid-template-columns unset
+        grid-auto-flow unset
 
   .section-videos
     .text
