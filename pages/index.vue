@@ -844,6 +844,20 @@ export default {
     max-width var(--container-mw-lg)
     margin 0 auto
 
+.section-header
+  padding-top 1rem
+  min-height 3rem
+  font-weight 600
+  font-size 1.1875rem
+  line-height 1.263
+  letter-spacing 0.08em
+  text-transform uppercase
+  color #989BB9
+  border-top 1px solid #282B53
+  display flex
+  flex-direction column
+  justify-content flex-end
+
 .nav-primary
   ul
     display grid
@@ -1128,18 +1142,7 @@ export default {
   background linear-gradient(180deg, rgba(0,0,0,0) 0%, #030419 24%, #030419 69%, rgba(0,0,0,0) 100%)
   .section-header
     grid-row 1
-    height 3rem
-    font-weight 600
-    font-size 1.1875rem
-    line-height 1.263
-    letter-spacing 0.08em
-    text-transform uppercase
-    color #989BB9
-    border-top 1px solid #282B53
-    display flex
-    flex-direction column
     grid-column 6 / span 7
-    justify-content flex-end
   .section-title
     grid-row 2
     margin-top 3rem
@@ -1243,20 +1246,8 @@ export default {
 
 .section-prepare
   .section-header
-    height 3rem
-    font-weight 600
-    font-size 1.1875rem
-    line-height 1.263
-    letter-spacing 0.08em
-    text-transform uppercase
-    color #989BB9
-    border-top 1px solid #282B53
-    display flex
-    flex-direction column
     grid-column 1 / span 12
     grid-row 1
-    justify-content flex-end
-    text-align left
   .section-title
     grid-column 1 / span 5
     grid-row 2 / 3
@@ -1391,19 +1382,7 @@ export default {
 
 .section-launchpad
   .section-header
-    height 48px
-    font-weight 600
-    font-size 19px
-    line-height 1.263
-    letter-spacing 0.08em
-    text-transform uppercase
-    color #989BB9
-    border-top 1px solid #282B53
-    display flex
-    flex-direction column
     grid-column 6 / span 7
-    justify-content flex-end
-    text-align left
   .section-left
     grid-column 1/5
     grid-row 2
@@ -1448,19 +1427,7 @@ export default {
 
 .section-roadmap
   .section-header
-    height 48px
-    font-weight 600
-    font-size 19px
-    line-height 1.263
-    letter-spacing 0.08em
-    text-transform uppercase
-    color #989BB9
-    border-top 1px solid #282B53
-    display flex
-    flex-direction column
     grid-column 6 / span 7
-    justify-content flex-end
-    text-align left
   .section-title
     margin-top 3rem
     margin-bottom 3rem
@@ -1616,17 +1583,6 @@ export default {
 
 .section-contributors
   .section-header
-    padding-top 1.5rem
-    height 48px
-    font-weight 600
-    font-size 19px
-    line-height 1.263
-    letter-spacing 0.08em
-    text-transform uppercase
-    color #989BB9
-    border-top 1px solid #282B53
-    display flex
-    flex-direction column
     grid-column 6 / span 7
   .section-title
     margin-top 3rem
@@ -1684,19 +1640,7 @@ export default {
 
 .section-articles
   .section-header
-    height 3rem
-    font-weight 600
-    font-size 1.1875rem
-    line-height 1.263
-    letter-spacing 0.08em
-    text-transform uppercase
-    color #989BB9
-    border-top 1px solid #282B53
-    display flex
-    flex-direction column
     grid-column 6 / span 7
-    justify-content flex-end
-    text-align left
   .section-title
     font-weight 900
     font-size 3.625rem
@@ -1760,19 +1704,7 @@ export default {
   padding-top 0
   padding-bottom 0
   .section-header
-    height 3rem
-    font-weight 600
-    font-size 1.1875rem
-    line-height 1.263
-    letter-spacing 0.08em
-    text-transform uppercase
-    color #989BB9
-    border-top 1px solid #282B53
-    display flex
-    flex-direction column
     grid-column 6 / span 7
-    justify-content flex-end
-    text-align left
     margin-bottom 4rem
   .frame
     background-color rgb(22, 25, 49)
@@ -1821,19 +1753,7 @@ export default {
 
 .section-community
   .section-header
-    height 48px
-    font-weight 600
-    font-size 19px
-    line-height 1.263
-    letter-spacing 0.08em
-    text-transform uppercase
-    color #989BB9
-    border-top 1px solid #282B53
-    display flex
-    flex-direction column
     grid-column 6 / span 7
-    justify-content flex-end
-    text-align left
   .cards
     margin-top 6rem
     display grid
@@ -1959,13 +1879,7 @@ export default {
           letter-spacing -0.015em
           margin-top 2rem
 
-  .section-features,
-  .section-launchpad,
-  .section-roadmap,
-  .section-contributors,
-  .section-articles,
-  .section-videos
-    .section-header
+  .section .section-header
       grid-column 1 / span 12
 
   .section-nav
@@ -2013,7 +1927,7 @@ export default {
     .ibc-item
       grid-row 6
       grid-column 1 / 12
-      margin-top 1rem
+      margin-top 2rem
     .grid-container
       grid-row 7
 
@@ -2112,62 +2026,31 @@ export default {
   .section-features
     .features-graphics
       font-size 1rem
-      // grid-column 2 / 12
 
   .section-prepare
     .grid-container
+      gap 3rem 2rem
+      margin-top 4rem
       .grid-item
         &__title
-          font-size 1rem
+          font-size 1.4375rem
+          line-height 1.217
+          letter-spacing -0.01em
         &__description
-          font-size 0.8125rem
+          font-size 1rem
+          line-height 1.625
+          letter-spacing 0
 
   .section-roadmap
-    .section-list__item
-      &__title
-        font-size 1rem
-        line-height 1.375
-      &__date
-        font-size 0.8125rem
-        line-height 1.384
-    .section-milestones
-      &__title
-        font-size 1rem
-        line-height 1.375
-      &__cta
-        font-size 1rem
-        line-height 1.375
-    .section-row
-      .details
-        .title
-          font-size 1rem
-          line-height 1.375
-        .subtitle
-          font-size 0.8125rem
-          line-height 1.384
-        .progress__wrapper .h3
-          font-size 0.8125rem
-          line-height 1.384
-
-  .section-contributors
-    .section-list__item
-      &__title
-        font-size 1rem
-        &__role
-          font-size 0.8125rem
-
-  .section-articles .content .articles-wrapper
-    .articles-item
-      &__title
-        font-size 1.1875rem
-        line-height 1.579
-      &__description
-        font-size 0.8125rem
-        line-height 1.384
+    .section-title
+      margin-bottom 1rem
+    .section-status
+      margin-top 3rem
 
 @media screen and (max-width: 576px)
   .section
     .section-title
+      margin-top 3rem
       font-size 2.5rem
       line-height 1.20
     .section-subtitle
@@ -2240,6 +2123,11 @@ export default {
     .section-graphics
       grid-column 1 / span 10
       font-size 0.5rem
+    .section-cta a
+      font-size 1rem
+      line-height 1.375
+      letter-spacing 0
+      padding 0.8125rem 0
 
   .section-features
     .data-container
@@ -2254,22 +2142,124 @@ export default {
     .features-graphics
       font-size 0.5rem
     .grid-container
+      margin-top 3rem
+      gap 3rem 2rem
       .grid-item
         &:nth-child(even),
         &:nth-child(odd)
           grid-column 1/span 12
           grid-template-columns repeat(1, 1fr)
 
+    .ibc-item__title,
+    .grid-container .grid-item__title
+      font-size 1.4375rem
+      line-height 1.217
+      letter-spacing -0.01em
+
+  .section-prepare
+    .section-statement
+      margin-top 2rem
+
   .section-roadmap
+    .section-milestones__title,
+    .section-status__title
+      font-size 1.75rem
+      line-height 1.285
+      letter-spacing -0.02em
+    .section-milestones
+      &__cta
+        margin-top 0.5rem
+        a
+          font-size 1rem
+          line-height 1.375
+          padding 0.8125rem 0
     .section-row
+      margin-top 1rem
+      &,
+      .meter
+        border-radius 0.75rem
       .details
-        padding 1rem
+        padding 1.5rem
         grid-template-columns unset
         grid-auto-flow unset
+        .title
+          font-size 1.4375rem
+          line-height 1.217
+          letter-spacing -0.01em
+        .subtitle
+          font-size 0.8125rem
+          line-height 1.384
+        .progress__wrapper .h3
+          font-size 1rem
+          line-height 1.375
+  .section-roadmap,
+  .section-contributors
+    .section-list__item
+      padding-top 1.25rem
+      padding-bottom 1.25rem
+      &__title
+        font-size 1rem
+        line-height 1.375
+      &__role,
+      &__date
+        font-size 0.8125rem
+        line-height 1.384
+
+  .section-contributors
+    .section-statement
+      margin-top 2rem
+
+  .section-articles .content
+    margin-top 2rem
+    .articles-wrapper .articles-item
+      padding 1.5rem
+      &__title
+        font-size 1.1875rem
+        line-height 1.263
+        letter-spacing -0.01em
+      &__description
+        font-size 0.8125rem
+        line-height 1.384
+        letter-spacing 0.001em
 
   .section-videos
-    .text
+    .section-header
+      margin-bottom 2rem
+    .container .text
       width auto
+      margin-top 0.5rem
+      &__caption
+        font-size 0.8125rem
+        line-height 1.384
+        letter-spacing 0.001em
+      &__title
+        font-size 1.1875rem
+        line-height 1.263
+        letter-spacing -0.01em
+
+  .section-community
+    .cards
+      margin-top 2rem
+      &__item
+        height auto
+        min-height 18rem
+        border-radius 0.75rem
+        &__caption
+          font-size 0.8125rem
+          line-height 1.384
+        &__title
+          font-size 1.4375rem
+          line-height 1.217
+          letter-spacing -0.01em
+        &__description
+          font-size 1rem
+          line-height 1.375
+          letter-spacing 0
+        &__disclosure
+          top 1rem
+          right 1rem
+
+
 
 @media screen and (max-width: 414px)
   main
@@ -2303,7 +2293,7 @@ export default {
 
   .section-articles
     .section-title
-      width 17rem
+      max-width 17rem
 
   .section-community .cards__item
     padding 1.5rem
