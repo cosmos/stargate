@@ -336,8 +336,8 @@
               working together to document a clean migration path from Launchpad
               to a stable Stargate release.
             </div>
-            <div class="section-cta">
-              <!-- TODO: update url -->
+            <!-- TODO: update url -->
+            <!-- <div class="section-cta">
               <a
                 href="https://www.youtube.com/watch?v=mlq5GzQTIAM"
                 target="_blank"
@@ -345,6 +345,10 @@
               >
                 Check out the release &#8594;
               </a>
+            </div> -->
+            <br />
+            <div class="section-statement__p">
+              More updates on the Launchpad release coming soon.
             </div>
           </div>
         </div>
@@ -655,7 +659,7 @@ export default {
           url: 'https://www.iqlusion.io',
         },
         {
-          name: 'Interchain GmbG',
+          name: 'Interchain GmbH',
           url: 'http://interchain.berlin',
         },
         {
@@ -767,12 +771,6 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-// TODO: remove before 🚢
-// *
-//   background #000 !important
-//   color #0f0 !important
-//   outline solid #f00 1px !important
-
 .headroom
   will-change transform
   transition transform 200ms linear
@@ -1040,12 +1038,11 @@ export default {
       background radial-gradient(84.49% 66.22% at 50% 59.94%, #000000 5.73%, #030419 71.48%, #0E1247 81.25%, #36299B 91.15%)
       box-shadow 0px -4.5em 4em rgba(28, 0, 238, 0.17), 0px -0.625em 0.5em rgba(92, 70, 255, 0.11), inset 0px 3.5em 3.5em rgba(48, 44, 245, 0.17), inset 0px 0.375em 0.75em rgba(104, 67, 252, 0.23)
 
-// TODO: uncomment before 🚢
-// @keyframes gate
-//   from
-//     transform rotate(0deg)
-//   to
-//     transform rotate(360deg)
+@keyframes gate
+  from
+    transform rotate(0deg)
+  to
+    transform rotate(360deg)
 
 .section-intro
   position relative
@@ -1316,7 +1313,6 @@ export default {
   top -1px
   width 100%
   z-index 10
-  // TODO: uncomment before 🚢
   backdrop-filter blur(20px)
   .nav
     overflow scroll
@@ -1871,10 +1867,6 @@ export default {
 
 // TODO: temp fix for moz
 @supports not (backdrop-filter: none)
-  .section-hero
-    .container
-      .bottom__form__input__input
-        filter none
   .section-nav
     background linear-gradient(to bottom, #000000 10%, rgba(0,0,0,0.7))
     top -1px
@@ -1928,10 +1920,6 @@ export default {
           letter-spacing -0.015em
           margin-top 2rem
 
-  .section-features
-    .features-graphics
-      font-size 1rem
-
   .section-features,
   .section-launchpad,
   .section-roadmap,
@@ -1981,10 +1969,14 @@ export default {
       grid-column 1 / 12
     .data-container
       grid-template-columns repeat(2, 1fr)
+    .features-graphics
+      grid-row 5
+      font-size 1rem
     .ibc-item
+      grid-row 6
       grid-column 1 / 12
     .grid-container
-      grid-column 1 / 12
+      grid-row 7
 
   .section-prepare
     overflow hidden
@@ -2163,6 +2155,46 @@ export default {
   .section-videos
     .text
       width auto
+
+@media screen and (max-width: 414px)
+  main
+    overflow-x hidden
+
+  .section-roadmap .section-row .meter
+    width 100%
+
+@media screen and (max-width: 375px)
+  .section-nav
+    width 130%
+
+  .section-container .container
+    grid-gap unset
+    gap unset
+
+  .section-features .grid-container .grid-item
+    max-width 20em
+
+@media screen and (max-width: 320px)
+  .section-features
+    .grid-container
+      .grid-item
+        &:nth-child(even),
+        &:nth-child(odd)
+          grid-column 1/span 9
+
+  .section-prepare
+    .grid-container
+      .grid-item
+        &:nth-child(even),
+        &:nth-child(odd)
+          grid-column 1/span 9
+
+  .section-articles
+    .section-title
+      width 17rem
+
+  .section-community .cards__item
+    padding 1.5rem
 
 @media screen and (min-width: 1536px)
   .section-hero
