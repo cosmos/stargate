@@ -863,8 +863,6 @@ export default {
   height 100vh
   min-height 52rem
   max-height 64rem
-  padding-top 4rem
-  padding-bottom 6rem
   margin-bottom 6rem
   display flex
   justify-content stretch
@@ -875,6 +873,8 @@ export default {
     display flex
     align-items stretch
     width 100%
+    padding-top 4rem
+    padding-bottom 6rem
   .container
     position relative
     display flex
@@ -1100,6 +1100,7 @@ export default {
 .section-features
   position relative
   text-align left
+  background linear-gradient(180deg, rgba(0,0,0,0) 0%, #030419 24%, #030419 69%, rgba(0,0,0,0) 100%)
   .section-header
     grid-row 1
     height 3rem
@@ -1134,6 +1135,8 @@ export default {
     letter-spacing -0.01em
     color #CFD1E7
   .data-container
+    position relative
+    z-index 1
     grid-row 4
     margin-top 6rem
     display grid
@@ -1884,6 +1887,8 @@ export default {
     padding-right 6rem
 
   .section-features
+    .features-graphics
+      font-size 1.25rem
     .grid-container
       grid-column 1/span 12
 
@@ -1957,8 +1962,7 @@ export default {
     .data-container
       grid-template-columns repeat(2, 1fr)
     .features-graphics
-      grid-row 5
-      font-size 1rem
+      grid-column 1 / span 10
     .ibc-item
       grid-row 6
       grid-column 1 / 12
@@ -2053,7 +2057,8 @@ export default {
 
   .section-features
     .features-graphics
-      font-size 0.75rem
+      font-size 1rem
+      // grid-column 2 / 12
 
 @media screen and (max-width: 576px)
   .section
@@ -2082,10 +2087,11 @@ export default {
         display block
 
   .section-hero
-    padding-top 0.75rem
-    padding-bottom 2rem
     min-height 32rem
     max-height 42rem
+    .section-container
+      padding-top 0.75rem
+      padding-bottom 2rem
     .container
       .headings
         .title
