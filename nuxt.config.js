@@ -94,7 +94,10 @@ export default {
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
    */
-  plugins: [{ src: '~plugins/ga.js', mode: 'client' }],
+  plugins: [
+    { src: '~plugins/ga.js', mode: 'client' },
+    { src: '~plugins/vue-scrollto.js', mode: 'client' },
+  ],
   /*
    ** Auto import components
    ** See https://nuxtjs.org/api/configuration-components
@@ -110,10 +113,7 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  // TODO: config scrolling speed
-  // https://vue-scrollto.netlify.app/docs/#options
-  modules: ['vue-scrollto/nuxt'],
-
+  modules: [],
   /*
    ** Build configuration
    ** See https://nuxtjs.org/api/configuration-build/
