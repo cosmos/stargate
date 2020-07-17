@@ -1,6 +1,11 @@
 <template>
   <main class="main">
-    <div class="section-hero">
+    <div
+      v-observe-visibility="{
+        callback: freezeNav,
+      }"
+      class="section-hero"
+    >
       <div class="section-container">
         <div class="hero-graphics">
           <span class="hero-graphics__star"></span>
@@ -155,7 +160,7 @@
     <div
       id="features"
       v-observe-visibility="{
-        callback: visibilityChanged,
+        callback: unfreezeNav,
       }"
       class="section section-features"
     >
@@ -636,7 +641,6 @@ export default {
   },
   data() {
     return {
-      show: false,
       headroom: null,
       email: null,
       state: 'default',
@@ -708,32 +712,24 @@ export default {
       return sortedList
     },
   },
-  // watch: {
-  //   $route(to) {
-  //     if (to.name === 'index') {
-  //       this.enableHeadroom()
-  //     }
-  //   },
-  // },
   mounted() {
     this.sources.forEach(async (source) => {
       const milestone = await this.getMilestone.apply(null, source)
       this.milestoneList.push(milestone)
     })
+    this.enableHeadroom()
   },
   methods: {
-    visibilityChanged(isVisible, entry) {
+    // freeze the headroom instance, no scroll events
+    freezeNav(isVisible) {
       if (isVisible) {
-        // console.log(entry)
-        this.show = true
-        this.enableHeadroom()
+        this.headroom.freeze()
       }
-      this.disableHeadroom()
     },
-    disableHeadroom() {
-      if (this.headroom) {
-        this.headroom.destroy()
-        this.headroom = null
+    // resume scroll events
+    unfreezeNav(isVisible) {
+      if (isVisible) {
+        this.headroom.unfreeze()
       }
     },
     enableHeadroom() {
@@ -788,6 +784,10 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+.headroom
+  will-change transform
+  transition transform 200ms linear
+
 .headroom--pinned
   transform translateY(0%)
 
@@ -1341,8 +1341,6 @@ export default {
   width 100%
   z-index 10
   backdrop-filter blur(30px)
-  will-change transform
-  transition transform 200ms linear
   .nav
     overflow scroll
     white-space nowrap
