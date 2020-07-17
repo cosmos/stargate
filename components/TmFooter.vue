@@ -163,7 +163,7 @@ footer
         color #989BB9
         &:hover,
         &:focus
-          color #FFFFFF
+          color inherit
     .social-icons
       margin-top 2rem
       display flex
@@ -188,7 +188,7 @@ footer
         color #ECEDF7
         &:hover,
         &:focus
-          color #99DAFF
+          color var(--link)
     .smallprint
       margin-top 1rem
       font-size 0.8125rem
@@ -199,12 +199,12 @@ footer
 @media screen and (max-width: 600px)
   footer
     .container
-      margin 3rem 4rem
+      margin 3rem 1.5rem
       .nav
         display grid
         grid-template-columns repeat(2, 1fr)
 
-@media screen and (max-width: 320px)
+@media screen and (max-width: 420px)
   footer
     .container
       .nav

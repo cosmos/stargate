@@ -1339,9 +1339,14 @@ export default {
       flex-direction row
       justify-content center
       list-style none
+      padding-left 1.5rem
+      padding-right 1.5rem
       &__item
-        margin 2rem
+        + .nav__list__item
+          margin-left 2rem
         a
+          display inline-block
+          padding 1.25rem 0
           position relative
           z-index 1
           color #989BB9
@@ -1356,7 +1361,7 @@ export default {
             position absolute
             width 100%
             height 2px
-            bottom -1rem
+            bottom 2px
             z-index -1
             border-radius 4px
             background-color #3B2AB7
@@ -2122,6 +2127,7 @@ export default {
   .section-hero
     min-height 32rem
     max-height 42rem
+    margin-bottom 3rem
     .section-container
       padding-top 0.75rem
       padding-bottom 2rem
@@ -2152,6 +2158,14 @@ export default {
               height 1.5rem
     .hero-graphics
       font-size 0.36rem
+
+  .section-nav
+    .nav
+      font-size 1rem
+      line-height 1.375
+      letter-spacing 0
+      &__list__item a
+        padding 0.8125rem 0
 
   .section-intro
     .section-graphics
@@ -2196,9 +2210,6 @@ export default {
     width 100%
 
 @media screen and (max-width: 375px)
-  .section-nav
-    width 130%
-
   .section-container .container
     grid-gap unset
     gap unset
