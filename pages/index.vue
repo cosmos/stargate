@@ -78,13 +78,13 @@
                 >
                   <div class="bottom__form__input">
                     <input
+                      id="field-email"
                       v-model="email"
                       name="fields[email]"
                       class="bottom__form__input__input"
                       type="email"
                       placeholder="Your email"
                       required="required"
-                      id="field-email"
                     />
                     <button type="submit" class="bottom__form__input__button">
                       <icon-arrow-right
@@ -544,6 +544,24 @@
                 </div>
                 <div class="articles-item__description">
                   What is it, why it’s needed and how it works.
+                </div>
+              </a>
+              <a
+                href="https://blog.cosmos.network/preparing-for-ibc-1-0-e6fe75f7b5ef"
+                target="_blank"
+                rel="noreferrer noopener"
+                class="articles-item"
+              >
+                <span class="articles-item__icon">
+                  <icon-arrow-top-right />
+                </span>
+                <div class="articles-item__date">July 16</div>
+                <div class="articles-item__title">
+                  Preparing for IBC 1.0
+                </div>
+                <div class="articles-item__description">
+                  Details on the upcoming 1.0 release of the inter-blockchain
+                  communication protocol.
                 </div>
               </a>
             </div>
