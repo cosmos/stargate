@@ -872,9 +872,6 @@ export default {
   text-transform uppercase
   color #989BB9
   border-top 1px solid #282B53
-  display flex
-  flex-direction column
-  justify-content flex-end
 
 .nav-primary
   ul
