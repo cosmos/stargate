@@ -115,7 +115,7 @@
     left 53%
   &__1 &__back
     background radial-gradient(92.47% 88.21% at 48.57% 86.43%, #ba41d8 5.21%, #660e7c 51.04%, #1e0a4f 86.46%)
-    box-shadow 0px 2.25em 1.75em rgba(141,14,192,0.4)
+    // box-shadow 0px 2.25em 1.75em rgba(141,14,192,0.4)
 
   &__2
     width 26%
@@ -124,7 +124,7 @@
     left -10%
   &__2 &__back
     background radial-gradient(95.47% 78.21% at 86.57% 31.43%, #4251fa 7.29%, #320b93 51.04%, #12072e 86.46%)
-    box-shadow 3em -2em 3.5em rgba(39, 54, 236, 0.36)
+    // box-shadow 3em -2em 3.5em rgba(39, 54, 236, 0.36)
 
   &__3
     width 31%
@@ -133,7 +133,7 @@
     left 122%
   &__3 &__back
     background radial-gradient(farthest-side at 25% 22%, #40b3ff 3%, #015ab5 34%, #0c2054 82%)
-    box-shadow -3.75em -2em 6.25em rgba(0, 105, 210, 0.5)
+    // box-shadow -3.75em -2em 6.25em rgba(0, 105, 210, 0.5)
   &__3 &__front
     background radial-gradient(farthest-side at -88% 16%, #40b3ff 58%, #016ad4 74%, #132c6d 92%, rgba(7,31,95,0) 100%)
 
@@ -204,6 +204,7 @@
 .satellite__container__small
   transform translate(-50%, 0%) rotate(var(--satelite-rotate))
   animation 5s orbit infinite linear
+  will-change transform
 
 .satellite
   background #E8E8FF
@@ -220,10 +221,8 @@
 @keyframes satellite
   0%
     box-shadow 0 0 0 0.75em rgba(187, 198, 255, 0.25)
-
   80%
     box-shadow 0 0 0 0.75em rgba(187, 198, 255, 0.25)
-
   100%
     box-shadow 0 0 0 1.25em rgba(187, 198, 255, 0.3)
 
@@ -257,7 +256,6 @@
     background #6ABDF3
   .orbit__container + .orbit__container &:after
     background #C75EE9
-
 
 @keyframes satellite__small__1
   0%,80%
@@ -324,7 +322,7 @@
   border-radius 50%
   box-shadow inset 0 0.1875em 0.0625em 0 #7C85EA
   position absolute
-  animation 3s orbit__outer infinite linear reverse
+  // animation 3s orbit__outer infinite linear reverse
   border 0.0625em solid #636CBD
   opacity 0.6
 
@@ -337,7 +335,7 @@
   border-radius 50%
   box-shadow inset 0 0.1875em 0.09375em 0 #7C85EA
   position absolute
-  animation 6s orbit__outer infinite linear
+  // animation 6s orbit__outer infinite linear
   border 0.0625em solid #636CBD
   opacity 0.3
 
@@ -354,10 +352,9 @@
   border 0.0625em solid #636CBD
   opacity 0.2
 
-@keyframes orbit__outer
-  from
-    transform translate(-50%, -49%) rotateX(50deg) rotateZ(0)
-
-  to
-    transform translate(-50%, -49%) rotateX(50deg) rotateZ(360deg)
+// @keyframes orbit__outer
+//   from
+//     transform translate(-50%, -49%) rotateX(50deg) rotateZ(0)
+//   to
+//     transform translate(-50%, -49%) rotateX(50deg) rotateZ(360deg)
 </style>

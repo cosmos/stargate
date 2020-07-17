@@ -129,20 +129,24 @@
             The biggest event in the ecosystem since the launch of the Cosmos
             Hub.
           </div>
+          <eclipsed-planet class="section-graphics" />
           <div class="section-statement">
-            Stargate is a set of upgrades that complete the original roadmap
-            laid out in the Cosmos Whitepaper. For the first time ever, Cosmos
-            blockchains will be able to connect with each other using the first
-            standardized protocol for inter-blockchain communication (IBC).
-          </div>
-          <div class="section-cta">
-            <a
-              href="https://blog.cosmos.network/cosmos-stargate-upgrade-overview-8939475fe673"
-              target="_blank"
-              rel="noreferrer noopener"
-            >
-              Read more about Stargate &#8594;
-            </a>
+            <p>
+              Stargate is a set of upgrades that complete the original roadmap
+              laid out in the Cosmos Whitepaper. For the first time ever, Cosmos
+              blockchains will be able to connect with each other using the
+              first standardized protocol for inter-blockchain communication
+              (IBC).
+            </p>
+            <div class="section-cta">
+              <a
+                href="https://blog.cosmos.network/cosmos-stargate-upgrade-overview-8939475fe673"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                Read more about Stargate &#8594;
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -1066,7 +1070,13 @@ export default {
     line-height 1.25
     letter-spacing -0.02em
     color #FFFFFF
+  .section-graphics
+    grid-row 3
+    grid-column 1 / span 6
+    position relative
+    font-size 1rem
   .section-statement
+    position relative
     margin-top 3rem
     grid-column 6 / span 7
     grid-row 3
@@ -1074,20 +1084,21 @@ export default {
     font-size 1.4375rem
     line-height 1.565
     letter-spacing -0.01em
-    color #CFD1E7
     text-align left
+    p
+      color #CFD1E7
   .section-cta
-    grid-row 4
     margin-top 3rem
-    grid-column 6 / span 7
-    font-weight bold
-    font-size 1.4375rem
-    line-height 1.217
-    letter-spacing -0.01em
-    border-radius 6px
-    padding 22px 0
     a
-      color #40B3FF
+      display inline-block
+      font-weight bold
+      font-size 1.4375rem
+      line-height 1.217
+      letter-spacing -0.01em
+      border-radius 6px
+      padding 22px 0
+      &:hover
+        color inherit
   .title
     font-weight 900
     font-size 100px
@@ -1316,7 +1327,7 @@ export default {
   top -1px
   width 100%
   z-index 10
-  backdrop-filter blur(20px)
+  backdrop-filter blur(30px)
   .nav
     overflow scroll
     white-space nowrap
@@ -1373,7 +1384,7 @@ export default {
     grid-row 2
     margin-top 3rem
     &__heading
-      font-size 23px
+      font-size 1.4375rem
       line-height 121.7%
       letter-spacing -0.01em
       color #989BB9
@@ -1400,17 +1411,15 @@ export default {
     justify-content left
     &__p
       color inherit
-      a
-        color #40B3FF
   .section-cta
     margin-top 2.25rem
-    font-weight bold
-    font-size 19px
-    line-height 1.263
-    letter-spacing -0.005em
-    border-radius 6px
     a
-      color #40B3FF
+      display inline-block
+      font-weight bold
+      font-size 19px
+      line-height 1.263
+      letter-spacing -0.005em
+      border-radius 6px
 
 .section-roadmap
   .section-header
@@ -1449,15 +1458,15 @@ export default {
       text-align start
       color #FFFFFF
     &__cta
-      font-weight bold
-      font-size 1.1875rem
-      line-height 1.26
-      letter-spacing -0.005em
-      border-radius 0.375rem
-      padding 20px 0px
       margin-top 1rem
       a
-        color #40B3FF
+        display inline-block
+        font-weight bold
+        font-size 1.1875rem
+        line-height 1.26
+        letter-spacing -0.005em
+        border-radius 0.375rem
+        padding 20px 0px
   .section-row
     position relative
     margin-top 2rem
@@ -1562,16 +1571,23 @@ export default {
         border-bottom 1px solid #282B53
       &__title
         font-weight bold
-        font-size 23px
+        font-size 1.4375rem
         line-height 121.7%
         letter-spacing -0.01em
         color #CCD1FF
+        transition color 0.1s ease-out
       &__date
-        font-size 19px
+        font-size 1.1875rem
         line-height 126.3%
         text-align right
         letter-spacing -0.005em
         color #989BB9
+        transition color 0.1s ease-out, transform 0.15s ease-out
+      &:hover .section-list__item__title,
+      &:hover .section-list__item__date
+        color #FFFFFF
+      &:hover .section-list__item__date
+        transform translateX(3px)
 
 .section-contributors
   .section-header
@@ -1616,21 +1632,30 @@ export default {
       border-bottom 1px solid #282B53
       &__title
         font-weight bold
-        font-size 23px
+        font-size 1.4375rem
         line-height 121.7%
         letter-spacing -0.01em
         color #CCD1FF
+        transition color .1s ease-out
         &__role
+          font-weight normal
           font-size 1rem
-          color white
+          color #989BB9
           padding-left 0.5rem
           vertical-align bottom
       &__date
-        font-size 19px
-        line-height 126.3%
+        font-size 1.4375rem
+        line-height 121.3%
         text-align right
         letter-spacing -0.005em
         color #989BB9
+        transition color 0.1s ease-out, transform 0.15s ease-out
+      &:hover .section-list__item__title,
+      &:hover .section-list__item__date
+        color #FFFFFF
+      &:hover .section-list__item__date
+        transform translateX(3px)
+
 
 .section-articles
   .section-header
@@ -1698,6 +1723,7 @@ export default {
           line-height 1.285
           letter-spacing -0.02em
           color #FFFFFF
+          max-width 20em
         &__description
           margin-top 0.75rem
           font-size 1rem
@@ -1945,10 +1971,10 @@ export default {
       margin-top 2rem
       grid-row 2
       grid-column 1 / span 12
-    .section-statement
+    .section-graphics
       grid-row 3
-      grid-column 1 / span 12
-    .section-cta
+      grid-column 2 / span 8
+    .section-statement
       grid-row 4
       grid-column 1 / span 12
 
@@ -1966,6 +1992,7 @@ export default {
     .ibc-item
       grid-row 6
       grid-column 1 / 12
+      margin-top 1rem
     .grid-container
       grid-row 7
 
@@ -2000,7 +2027,7 @@ export default {
     .section-status
       grid-column 1 / 12
     .section-list
-      margin-top 0
+      margin-top 1.5rem
       grid-column 1 / span 12
 
   .section-contributors
@@ -2054,6 +2081,12 @@ export default {
   .section-hero
     .hero-graphics
       font-size 0.5rem
+
+  .section-intro
+    .section-graphics
+      font-size 0.75rem
+    .section-statement
+      margin-top 1rem
 
   .section-features
     .features-graphics
@@ -2120,8 +2153,14 @@ export default {
     .hero-graphics
       font-size 0.36rem
 
+  .section-intro
+    .section-graphics
+      grid-column 1 / span 10
+      font-size 0.5rem
+
   .section-features
     .data-container
+      margin-top 3rem
       .data-item
         &__overline
           font-size 0.8125rem
