@@ -788,10 +788,6 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-.headroom
-  will-change transform
-  transition transform 200ms linear
-
 .headroom--pinned
   transform translateY(0%)
 
@@ -1345,6 +1341,8 @@ export default {
   width 100%
   z-index 10
   backdrop-filter blur(30px)
+  will-change transform
+  transition transform 200ms linear
   .nav
     overflow scroll
     white-space nowrap
