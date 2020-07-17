@@ -1341,6 +1341,8 @@ export default {
   width 100%
   z-index 10
   backdrop-filter blur(30px)
+  &.headroom--not-top
+    backdrop-filter blur(30px)
   .nav
     overflow scroll
     white-space nowrap
@@ -1900,11 +1902,8 @@ export default {
 
 // TODO: temp fix for moz
 @supports not (backdrop-filter: none)
-  .section-nav
+  .section-nav.headroom--not-top
     background linear-gradient(to bottom, #000000 10%, rgba(0,0,0,0.7))
-    top -1px
-    width 100%
-    z-index 10
     filter saturate(180%)
 
 @media screen and (max-width: 1919px)
