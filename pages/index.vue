@@ -39,7 +39,7 @@
             </div>
           </div>
           <div class="bottom">
-            <code class="bottom__countdown">T minus {{ countdownTimer }}d</code>
+            <!-- <code class="bottom__countdown">T minus {{ countdownTimer }}d</code> -->
             <transition name="fade" mode="out-in">
               <div
                 v-if="state === 'success'"
@@ -66,9 +66,9 @@
                 </h2>
               </div>
               <div v-else key="default" class="bottom__form">
-                <div class="bottom__get-notified">
+                <label class="bottom__get-notified" for="field-email">
                   Get notified when testnets start
-                </div>
+                </label>
                 <form
                   :action="url"
                   method="POST"
@@ -84,6 +84,7 @@
                       type="email"
                       placeholder="Your email"
                       required="required"
+                      id="field-email"
                     />
                     <button type="submit" class="bottom__form__input__button">
                       <icon-arrow-right
@@ -236,9 +237,10 @@
               </div>
               <div class="grid-item__title">Full-featured Light Clients</div>
               <div class="grid-item__description">
-                Protobuf brings performance improvements and developer
-                acceleration to Cosmos SDK-based blockchains with efficiency
-                gains of 10-100x, and wider language support.
+                Light clients are lightweight alternatives to a full node,
+                allowing a wide range of devices to safely and efficiently
+                receive blockchain data for new network nodes and
+                inter-blockchain communication.
               </div>
             </div>
             <div class="grid-item">
@@ -922,7 +924,10 @@ export default {
         border 1px solid rgba(255, 255, 255, 0.1)
         border-radius 0.5rem
         padding 0.25rem 0.75rem
+      &__countdown + .bottom__form
+        margin 3rem auto 0
       &__get-notified
+        display block
         margin 3rem auto 1rem
         font-weight bold
         font-size 1rem
@@ -940,7 +945,7 @@ export default {
         &__error
           color #FF4C52
       &__form
-        margin 0 auto
+        margin 3.5rem auto
         max-width 25rem
         &__input
           display flex
@@ -1903,7 +1908,7 @@ export default {
 // TODO: temp fix for moz
 @supports not (backdrop-filter: none)
   .section-nav.headroom--not-top
-    background linear-gradient(to bottom, #000000 10%, rgba(0,0,0,0.7))
+    background linear-gradient(to bottom, rgb(0,0,0) 30%, rgba(0,0,0,0) 100%)
     filter saturate(180%)
 
 @media screen and (max-width: 1919px)
@@ -2194,6 +2199,8 @@ export default {
       padding-top 0.75rem
       padding-bottom 2rem
     .container
+      .nav-primary
+        margin-bottom 3rem
       .headings
         .title
           padding-left 1rem
