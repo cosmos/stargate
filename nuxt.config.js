@@ -95,8 +95,9 @@ export default {
    ** https://nuxtjs.org/guide/plugins
    */
   plugins: [
-    { src: '~plugins/ga.js', mode: 'client' },
-    { src: '~plugins/vue-scrollto.js', mode: 'client' },
+    '~/plugins/ga.client.js',
+    '~/plugins/vue-scrollto.client.js',
+    '~/plugins/vue-observe-visibility.client.js',
   ],
   /*
    ** Auto import components
