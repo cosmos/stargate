@@ -392,7 +392,7 @@
                 <component :is="`icon-${item.logo}`" />
               </div>
               <div class="text">
-                <div class="title">{{ item.title }}</div>
+                <div class="title">{{ item.defaultTitle }}</div>
                 <div class="subtitle">{{ item.repo }}</div>
               </div>
               <div class="indicator">
@@ -641,7 +641,7 @@ export default {
       sources: [
         ['cosmos/cosmos-sdk', 25, 'sdk', 'Cosmos SDK 0.40'],
         ['tendermint/tendermint', 27, 'core', 'Tendermint Core 0.34'],
-        ['cosmos/cosmos-sdk', 21, 'ibc', 'Cosmos SDK – IBC 1.0 Milestone'],
+        ['cosmos/cosmos-sdk', 21, 'ibc', 'IBC 1.0'],
       ],
       bgColor: {
         sdk: 'linear-gradient(95.47deg, #320B93 0%, #3B2AB7 100%)',
@@ -720,7 +720,6 @@ export default {
     },
     enableHeadroom() {
       if (!this.headroom) {
-        // this.headroom = new Headroom(this.$el)
         const header = document.querySelector('header')
         this.headroom = new Headroom(header)
         this.headroom.init()
@@ -751,17 +750,17 @@ export default {
       try {
         const api = `https://api.github.com/repos/${repo}/milestones/${id}`
         const m = (await axios.get(api)).data
-        const title = m.title
+        // const title = m.title
         const open = parseInt(m.open_issues)
         const closed = parseInt(m.closed_issues)
         const progress = Math.floor((100 * closed) / (open + closed)).toFixed(0)
-        return { title, repo, progress, logo, url }
+        return { defaultTitle, repo, progress, logo, url }
       } catch {
         return {
           repo,
           logo,
           url,
-          title: defaultTitle,
+          defaultTitle,
           progress: null,
         }
       }
@@ -1309,6 +1308,10 @@ export default {
       &__description
         position relative
         margin-top 1rem
+        font-size 19px
+        line-height 1.579
+        letter-spacing -0.005em
+        color #989BB9
 
 .section-nav
   position sticky
@@ -2059,6 +2062,57 @@ export default {
     .features-graphics
       font-size 1rem
       // grid-column 2 / 12
+
+  .section-prepare
+    .grid-container
+      .grid-item
+        &__title
+          font-size 1rem
+        &__description
+          font-size 0.8125rem
+
+  .section-roadmap
+    .section-list__item
+      &__title
+        font-size 1rem
+        line-height 1.375
+      &__date
+        font-size 0.8125rem
+        line-height 1.384
+    .section-milestones
+      &__title
+        font-size 1rem
+        line-height 1.375
+      &__cta
+        font-size 1rem
+        line-height 1.375
+    .section-row
+      .details
+        .title
+          font-size 1rem
+          line-height 1.375
+        .subtitle
+          font-size 0.8125rem
+          line-height 1.384
+        .progress__wrapper .h3
+          font-size 0.8125rem
+          line-height 1.384
+
+  .section-contributors
+    .section-list__item
+      &__title
+        font-size 1rem
+        &__role
+          font-size 0.8125rem
+
+  .section-articles .content .articles-wrapper
+    .articles-item
+      &__title
+        font-size 1.1875rem
+        line-height 1.579
+      &__description
+        font-size 0.8125rem
+        line-height 1.384
 
 @media screen and (max-width: 576px)
   .section
