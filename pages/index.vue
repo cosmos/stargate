@@ -1789,19 +1789,18 @@ export default {
       letter-spacing -0.025em
       color #FFFFFF
     &__cta
-      font-weight bold
-      font-size 1rem
-      line-height 137.5%
       display flex
       align-items center
       text-align center
-      border-radius 8px
       position absolute
       bottom 0
       right 0
-      padding 13px 0px
       a
-        color #40B3FF
+        font-weight bold
+        font-size 1rem
+        line-height 137.5%
+        padding 0.8125rem 0
+        border-radius 0.5rem
 
 .section-community
   .section-header
