@@ -1781,19 +1781,6 @@ export default {
     grid-column 6 / span 7
     justify-content flex-end
     text-align left
-  a
-    &:nth-child(1) .cards__item
-      justify-content flex-end
-      background url("/split-graphics.svg"), linear-gradient(256.92deg, #121435 0%, #030419 100%)
-      background-position top center
-      background-size contain
-      background-repeat no-repeat
-    &:nth-child(2) .cards__item
-      justify-content flex-start
-      background url("/reverse-graphics.svg"), linear-gradient(256.92deg, #121435 0%, #030419 100%)
-      background-position bottom center
-      background-size contain
-      background-repeat no-repeat
   .cards
     margin-top 6rem
     display grid
@@ -1813,13 +1800,13 @@ export default {
       justify-content flex-start
       color var(--white)
       height 338px
-      background url("/reverse-graphics.svg"), linear-gradient(256.92deg, #120018 0%, #121435 100%)
+      background url("/top-half-graphics.svg"), linear-gradient(256.92deg, #120018 0%, #121435 100%)
       background-position bottom center
       background-size contain
       background-repeat no-repeat
       border-radius 1.25rem
       &:first-child
-        background url("/split-graphics.svg"), linear-gradient(256.92deg, #121435 0%, #030419 100%)
+        background url("/bottom-half-graphics.svg"), linear-gradient(256.92deg, #121435 0%, #030419 100%)
         justify-content flex-end
         background-position top center
         background-size contain
