@@ -152,7 +152,13 @@
       </div>
     </div>
 
-    <div id="features" class="section section-features">
+    <div
+      id="features"
+      v-observe-visibility="{
+        callback: visibilityChanged,
+      }"
+      class="section section-features"
+    >
       <div class="section-container">
         <div class="container">
           <div class="section-header">Features</div>
@@ -630,6 +636,7 @@ export default {
   },
   data() {
     return {
+      show: false,
       headroom: null,
       email: null,
       state: 'default',
@@ -713,9 +720,16 @@ export default {
       const milestone = await this.getMilestone.apply(null, source)
       this.milestoneList.push(milestone)
     })
-    this.enableHeadroom()
   },
   methods: {
+    visibilityChanged(isVisible, entry) {
+      if (isVisible) {
+        // console.log(entry)
+        this.show = true
+        this.enableHeadroom()
+      }
+      this.disableHeadroom()
+    },
     disableHeadroom() {
       if (this.headroom) {
         this.headroom.destroy()
