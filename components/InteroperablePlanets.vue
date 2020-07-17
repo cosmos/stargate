@@ -5,7 +5,7 @@
         <div class="orbit__container">
           <div
             v-for="i in 3"
-            :key="i"
+            :key="i.id"
             :style="{
               '--satelite-rotate': ((i + 0.5) * 360) / 3 + 360 / 4 + 'deg',
             }"
@@ -17,7 +17,7 @@
         <div class="orbit__container">
           <div
             v-for="i in 3"
-            :key="i"
+            :key="i.id"
             :style="{
               '--satelite-rotate': ((i + 0.5) * 360) / 3 - 360 / 4 + 'deg',
             }"
@@ -27,7 +27,7 @@
           </div>
           <div
             v-for="i in 3"
-            :key="i"
+            :key="i.id"
             :style="{ '--satelite-rotate': (i * 360) / 3 + 'deg' }"
             class="satellite__container"
           >
