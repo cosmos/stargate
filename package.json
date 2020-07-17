@@ -24,6 +24,7 @@
     "vue-scrollto": "^2.18.1"
   },
   "devDependencies": {
+    "@aceforth/nuxt-optimized-images": "^1.0.1",
     "@nuxtjs/eslint-config": "^3.0.0",
     "@nuxtjs/eslint-module": "^2.0.0",
     "babel-eslint": "^10.1.0",
@@ -31,6 +32,7 @@
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-nuxt": "^1.0.0",
     "eslint-plugin-prettier": "^3.1.4",
+    "imagemin-svgo": "^8.0.0",
     "prettier": "^2.0.5",
     "stylus": "^0.54.7",
     "stylus-loader": "^3.0.2"
