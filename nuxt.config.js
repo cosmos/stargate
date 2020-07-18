@@ -79,6 +79,13 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'preconnect', href: 'https://www.google-analytics.com' },
+      {
+        rel: 'preload',
+        as: 'style',
+        href:
+          'https://fonts.googleapis.com/css?family=Inter:400,700,900&display=swap',
+      },
       {
         rel: 'stylesheet',
         href:

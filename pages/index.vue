@@ -1,5 +1,5 @@
 <template>
-  <main class="main">
+  <main>
     <div
       v-observe-visibility="{
         callback: freezeNav,
@@ -487,12 +487,16 @@
     <div id="articles" class="section section-articles">
       <div class="section-container">
         <div class="container">
-          <div class="section-header">3 Articles</div>
+          <div class="section-header">{{ articles.length }} articles</div>
           <div class="section-title">Learn more about Stargate</div>
           <div class="content">
-            <div class="articles-wrapper">
+            <div
+              v-for="item in articles"
+              :key="item.name"
+              class="articles-wrapper"
+            >
               <a
-                href="https://figment.network/resources/cosmos-stargate-upgrade-overview"
+                :href="item.url"
                 target="_blank"
                 rel="noreferrer noopener"
                 class="articles-item"
@@ -500,68 +504,12 @@
                 <span class="articles-item__icon">
                   <icon-arrow-top-right />
                 </span>
-                <div class="articles-item__date">June 22</div>
+                <div class="articles-item__date">{{ item.date }}</div>
                 <div class="articles-item__title">
-                  Cosmos Stargate Upgrade Overview
+                  {{ item.title }}
                 </div>
                 <div class="articles-item__description">
-                  Introducing Stargate, the largest Cosmos upgrade yet. Stargate
-                  will enable higher transaction throughput, cross-chain
-                  transactions, accelerate UI development, and so much more.
-                </div>
-              </a>
-              <a
-                href="https://medium.com/tendermint/tendermint-0-34-protocol-buffers-and-you-8c40558939ae"
-                target="_blank"
-                rel="noreferrer noopener"
-                class="articles-item"
-              >
-                <span class="articles-item__icon">
-                  <icon-arrow-top-right />
-                </span>
-                <div class="articles-item__date">June 23</div>
-                <div class="articles-item__title">
-                  Tendermint 0.34, Protocol Buffers, and You
-                </div>
-                <div class="articles-item__description">
-                  The upcoming Tendermint 0.34 release contains a major change
-                  to the way we serialize and encode data. Here’s what you need
-                  to know.
-                </div>
-              </a>
-              <a
-                href="https://medium.com/tendermint/everything-you-need-to-know-about-the-tendermint-light-client-f80d03856f98"
-                target="_blank"
-                rel="noreferrer noopener"
-                class="articles-item"
-              >
-                <span class="articles-item__icon">
-                  <icon-arrow-top-right />
-                </span>
-                <div class="articles-item__date">June 25</div>
-                <div class="articles-item__title">
-                  Everything you need to know about the Tendermint Light Client
-                </div>
-                <div class="articles-item__description">
-                  What is it, why it’s needed and how it works.
-                </div>
-              </a>
-              <a
-                href="https://blog.cosmos.network/preparing-for-ibc-1-0-e6fe75f7b5ef"
-                target="_blank"
-                rel="noreferrer noopener"
-                class="articles-item"
-              >
-                <span class="articles-item__icon">
-                  <icon-arrow-top-right />
-                </span>
-                <div class="articles-item__date">July 16</div>
-                <div class="articles-item__title">
-                  Preparing for IBC 1.0
-                </div>
-                <div class="articles-item__description">
-                  Details on the upcoming 1.0 release of the inter-blockchain
-                  communication protocol.
+                  {{ item.description }}
                 </div>
               </a>
             </div>
@@ -712,6 +660,39 @@ export default {
         {
           name: 'Akash Network',
           url: 'https://akash.network',
+        },
+      ],
+      articles: [
+        {
+          url:
+            'https://figment.network/resources/cosmos-stargate-upgrade-overview',
+          date: 'June 22',
+          title: 'Cosmos Stargate Upgrade Overview',
+          description:
+            'Introducing Stargate, the largest Cosmos upgrade yet. Stargate will enable higher transaction throughput, cross-chain transactions, accelerate UI development, and so much more.',
+        },
+        {
+          url:
+            'https://medium.com/tendermint/tendermint-0-34-protocol-buffers-and-you-8c40558939ae',
+          date: 'June 23',
+          title: 'Tendermint 0.34, Protocol Buffers, and You',
+          description:
+            'The upcoming Tendermint 0.34 release contains a major change to the way we serialize and encode data. Here’s what you need to know.',
+        },
+        {
+          url:
+            'https://medium.com/tendermint/everything-you-need-to-know-about-the-tendermint-light-client-f80d03856f98',
+          date: 'June 25',
+          title:
+            'Everything you need to know about the Tendermint Light Client',
+          description: 'What is it, why it’s needed and how it works.',
+        },
+        {
+          url: 'https://blog.cosmos.network/preparing-for-ibc-1-0-e6fe75f7b5ef',
+          date: 'July 16',
+          title: 'Preparing for IBC 1.0',
+          description:
+            'Details on the upcoming 1.0 release of the inter-blockchain communication protocol.',
         },
       ],
     }
@@ -872,9 +853,6 @@ export default {
   text-transform uppercase
   color #989BB9
   border-top 1px solid #282B53
-  display flex
-  flex-direction column
-  justify-content flex-end
 
 .nav-primary
   ul
