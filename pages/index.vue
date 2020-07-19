@@ -424,25 +424,16 @@
           </div>
           <div class="section-list">
             <a
-              href="https://github.com/cosmosdevs/stargate/blob/master/week1.md"
+              v-for="item in updates"
+              :key="item.title"
+              :href="item.url"
               target="_blank"
               rel="noreferrer noopener"
               class="section-list__item"
             >
-              <div class="section-list__item__title">Week 1 status</div>
+              <div class="section-list__item__title">{{ item.title }}</div>
               <div class="section-list__item__date">
-                July 2, 2020 &#8594;
-              </div>
-            </a>
-            <a
-              href="https://github.com/cosmosdevs/stargate/blob/master/week2.md"
-              target="_blank"
-              rel="noreferrer noopener"
-              class="section-list__item"
-            >
-              <div class="section-list__item__title">Week 2 status</div>
-              <div class="section-list__item__date">
-                July 13, 2020 &#8594;
+                {{ item.date }} &#8594;
               </div>
             </a>
           </div>
@@ -693,6 +684,23 @@ export default {
           title: 'Preparing for IBC 1.0',
           description:
             'Details on the upcoming 1.0 release of the inter-blockchain communication protocol.',
+        },
+      ],
+      updates: [
+        {
+          url: 'https://github.com/cosmosdevs/stargate/blob/master/week1.md',
+          title: 'Week 1 status',
+          date: 'July 2, 2020',
+        },
+        {
+          url: 'https://github.com/cosmosdevs/stargate/blob/master/week2.md',
+          title: 'Week 2 status',
+          date: 'July 13, 2020',
+        },
+        {
+          url: 'https://github.com/cosmosdevs/stargate/blob/master/week3.md',
+          title: 'Week 3 status',
+          date: 'July 20, 2020',
         },
       ],
     }
@@ -1555,8 +1563,7 @@ export default {
       display flex
       flex-direction row
       justify-content space-between
-      &:first-child
-        border-bottom 1px solid #282B53
+      border-bottom 1px solid #282B53
       &__title
         font-weight bold
         font-size 1.4375rem
