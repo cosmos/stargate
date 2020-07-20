@@ -353,19 +353,14 @@
               working together to document a clean migration path from Launchpad
               to a stable Stargate release.
             </div>
-            <!-- TODO: update url -->
-            <!-- <div class="section-cta">
+            <div class="section-cta">
               <a
-                href="https://www.youtube.com/watch?v=mlq5GzQTIAM"
+                href="https://blog.cosmos.network/launchpad-a-pre-stargate-stable-version-of-the-cosmos-sdk-e0c58d8c4e24"
                 target="_blank"
                 rel="noreferrer noopener"
               >
                 Check out the release &#8594;
               </a>
-            </div> -->
-            <br />
-            <div class="section-statement__p">
-              More updates on the Launchpad release coming soon.
             </div>
           </div>
         </div>
