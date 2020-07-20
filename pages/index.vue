@@ -347,8 +347,14 @@
             </div>
             <br />
             <div class="section-statement__p">
-              The community supports an SDK 0.39 Launchpad release that includes
-              backported bug fixes. The
+              The community supports an
+              <a
+                href="https://github.com/cosmos/cosmos-sdk/releases/tag/v0.39.0"
+                target="_blank"
+                rel="noreferrer noopener"
+                >SDK 0.39 Launchpad release</a
+              >
+              that includes backported bug fixes. The
               <a v-scroll-to="'#contributors'">Cosmos development teams</a> are
               working together to document a clean migration path from Launchpad
               to a stable Stargate release.
@@ -359,7 +365,7 @@
                 target="_blank"
                 rel="noreferrer noopener"
               >
-                Check out the release &#8594;
+                Learn more &#8594;
               </a>
             </div>
           </div>
