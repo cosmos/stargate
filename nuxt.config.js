@@ -96,7 +96,11 @@ export default {
   /*
    ** Global CSS
    */
-  css: ['normalize.css', { src: '~/assets/app.styl', lang: 'stylus' }],
+  css: [
+    'normalize.css',
+    { src: '~/assets/app.styl', lang: 'stylus' },
+    { src: '~/assets/typography.styl', lang: 'stylus' },
+  ],
   /*
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins

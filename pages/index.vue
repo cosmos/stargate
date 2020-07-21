@@ -130,7 +130,7 @@
     <div id="intro" class="section section-intro">
       <div class="section-container">
         <div class="container">
-          <div class="section-title">A new era for Cosmos</div>
+          <div class="section-title display-10">A new era for Cosmos</div>
           <div class="section-subtitle">
             The biggest event in the ecosystem since the launch of the Cosmos
             Hub.
@@ -168,7 +168,7 @@
       <div class="section-container">
         <div class="container">
           <div class="section-header">Features</div>
-          <div class="section-title">What’s new?</div>
+          <div class="section-title display-9">What’s new?</div>
           <div class="section-statement measure">
             These upgrades bring significant performance improvements to
             blockchains built with Cosmos SDK. Discover all the amazing features
@@ -265,7 +265,7 @@
       <div class="section-container">
         <div class="container">
           <div class="section-header">Prepare</div>
-          <div class="section-title">Get set for testnets</div>
+          <div class="section-title display-09">Get set for testnets</div>
           <div class="section-statement measure">
             <p>
               The following services will be affected by the upgrades with
@@ -377,7 +377,9 @@
       <div class="section-container">
         <div class="container">
           <div class="section-header">Roadmap</div>
-          <div class="section-title">{{ progressTotal }}% complete</div>
+          <div class="section-title display-10">
+            {{ progressTotal }}% complete
+          </div>
           <div class="section-milestones">
             <div class="section-milestones__title">Milestones</div>
             <div class="section-milestones__cta">
@@ -446,7 +448,7 @@
       <div class="section-container">
         <div class="container">
           <div class="section-header">Contributors</div>
-          <div class="section-title">Core Developers</div>
+          <div class="section-title display-09">Core Developers</div>
           <div class="section-statement measure">
             Stargate is made possible through the hard work and coordination of
             many dedicated teams contributing to development on Cosmos SDK,
@@ -480,7 +482,7 @@
       <div class="section-container">
         <div class="container">
           <div class="section-header">{{ articles.length }} articles</div>
-          <div class="section-title">Learn more about Stargate</div>
+          <div class="section-title display-07">Learn more about Stargate</div>
           <div class="content">
             <div
               v-for="item in articles"
@@ -587,7 +589,7 @@
 import querystring from 'querystring'
 import { orderBy } from 'lodash'
 import Headroom from 'headroom.js'
-import moment from 'moment'
+// import moment from 'moment'
 import axios from 'axios'
 import IconIbc from '~/components/IconIbc.vue'
 import IconSdk from '~/components/IconSdk.vue'
@@ -707,9 +709,9 @@ export default {
     }
   },
   computed: {
-    countdownTimer() {
-      return moment('20200729', 'YYYYMMDD').diff(moment(), 'days')
-    },
+    // countdownTimer() {
+    //   return moment('20200729', 'YYYYMMDD').diff(moment(), 'days')
+    // },
     progressTotal() {
       const progressSum = this.milestoneList
         .map((i) => Math.floor(i.progress))
@@ -1086,10 +1088,6 @@ export default {
   .section-title
     grid-column 1 / span 12
     grid-row 1 / 2
-    font-weight 900
-    font-size 100px
-    line-height 112%
-    letter-spacing -0.03em
     color #FFFFFF
     max-width 50rem
   .section-subtitle
@@ -1151,10 +1149,6 @@ export default {
     grid-row 2
     margin-top 3rem
     margin-bottom 3rem
-    font-weight 900
-    font-size 5.125rem
-    line-height 1.121
-    letter-spacing -0.025em
     color #FFFFFF
     grid-column 6 / span 7
     text-align left
@@ -1255,10 +1249,6 @@ export default {
     grid-column 1 / span 5
     grid-row 2 / 3
     margin-top 3rem
-    font-weight 900
-    font-size 5.125rem
-    line-height 1.121
-    letter-spacing -0.025em
     color #FFFFFF
     text-align left
     max-width 50rem
@@ -1432,11 +1422,7 @@ export default {
   .section-title
     margin-top 3rem
     margin-bottom 3rem
-    font-weight 900
-    font-size 6.25rem
-    line-height 1.12
     text-align right
-    letter-spacing -0.03em
     color #FFFFFF
     grid-column 5 / span 8
   .section-milestones
@@ -1587,10 +1573,6 @@ export default {
   .section-title
     margin-top 3rem
     grid-column 1/7
-    font-weight 900
-    font-size 5.125rem
-    line-height 1.121
-    letter-spacing -0.025em
     color #FFFFFF
   .section-statement
     align-self end
@@ -1641,10 +1623,6 @@ export default {
   .section-header
     grid-column 6 / span 7
   .section-title
-    font-weight 900
-    font-size 3.625rem
-    line-height 1.172
-    letter-spacing -0.02em
     color #FFFFFF
     width 379px
     text-align left
@@ -1898,7 +1876,6 @@ export default {
     .section-title
       grid-row 1
       grid-column 1 / span 12
-      font-size 4rem
     .section-subtitle
       margin-top 2rem
       grid-row 2
@@ -1914,7 +1891,6 @@ export default {
     overflow hidden
     .section-title
       grid-column 1 / 12
-      font-size 4rem
     .section-statement
       grid-column 1 / 12
     .data-container
@@ -1932,7 +1908,6 @@ export default {
     overflow hidden
     .section-title
       grid-column 1 / 12
-      font-size 4rem
     .section-statement
       grid-column 1 / 12
       margin-top 4rem
@@ -1951,7 +1926,6 @@ export default {
     .section-title
       grid-column 1 / span 12
       text-align left
-      font-size 4rem
     .section-row
       grid-column 1 / span 12
     .section-milestones
@@ -1963,8 +1937,6 @@ export default {
       grid-column 1 / span 12
 
   .section-contributors
-    .section-title
-      font-size 4rem
     .section-statement
       grid-column 1/12
       margin-top 4rem
@@ -1979,7 +1951,6 @@ export default {
     .section-title
       grid-row 2
       margin-top 6rem
-      font-size 4rem
     .content
       grid-row 3
       grid-column 1/13
@@ -2048,8 +2019,6 @@ export default {
   .section
     .section-title
       margin-top 3rem
-      font-size 2.5rem
-      line-height 1.20
     .section-subtitle
       font-size 1.4375rem
       line-height 1.217
@@ -2255,8 +2224,6 @@ export default {
         &__disclosure
           top 1rem
           right 1rem
-
-
 
 @media screen and (max-width: 414px)
   main
