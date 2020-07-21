@@ -168,7 +168,7 @@
       <div class="section-container">
         <div class="container">
           <div class="section-header">Features</div>
-          <div class="section-title display-9">What’s new?</div>
+          <div class="section-title display-09">What’s new?</div>
           <div class="section-statement measure">
             These upgrades bring significant performance improvements to
             blockchains built with Cosmos SDK. Discover all the amazing features
