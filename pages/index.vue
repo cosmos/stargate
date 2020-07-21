@@ -136,7 +136,7 @@
             Hub.
           </div>
           <eclipsed-planet class="section-graphics" />
-          <div class="section-statement">
+          <div class="section-statement measure">
             <p>
               Stargate is a set of upgrades that complete the original roadmap
               laid out in the Cosmos Whitepaper. For the first time ever, Cosmos
@@ -169,7 +169,7 @@
         <div class="container">
           <div class="section-header">Features</div>
           <div class="section-title">What’s new?</div>
-          <div class="section-statement">
+          <div class="section-statement measure">
             These upgrades bring significant performance improvements to
             blockchains built with Cosmos SDK. Discover all the amazing features
             of the Stargate upgrade below.
@@ -266,7 +266,7 @@
         <div class="container">
           <div class="section-header">Prepare</div>
           <div class="section-title">Get set for testnets</div>
-          <div class="section-statement">
+          <div class="section-statement measure">
             <p>
               The following services will be affected by the upgrades with
               Stargate. Make sure to schedule time in August for integration
@@ -339,7 +339,7 @@
             <div class="section-left__heading">Not ready to upgrade?</div>
             <div class="section-left__title">Launchpad</div>
           </div>
-          <div class="section-statement">
+          <div class="section-statement measure">
             <div class="section-statement__p">
               Stargate involves a lot of breaking changes that may make it
               difficult for you to upgrade, if you have already written a lot of
@@ -447,7 +447,7 @@
         <div class="container">
           <div class="section-header">Contributors</div>
           <div class="section-title">Core Developers</div>
-          <div class="section-statement">
+          <div class="section-statement measure">
             Stargate is made possible through the hard work and coordination of
             many dedicated teams contributing to development on Cosmos SDK,
             Tendermint Core, IBC and Gaia.
@@ -497,10 +497,10 @@
                   <icon-arrow-top-right />
                 </span>
                 <div class="articles-item__date">{{ item.date }}</div>
-                <div class="articles-item__title">
+                <div class="articles-item__title measure-narrow">
                   {{ item.title }}
                 </div>
-                <div class="articles-item__description">
+                <div class="articles-item__description measure">
                   {{ item.description }}
                 </div>
               </a>
@@ -1113,7 +1113,6 @@ export default {
     margin-top 3rem
     grid-column 6 / span 7
     grid-row 3
-    max-width 30em
     font-size 1.4375rem
     line-height 1.565
     letter-spacing -0.01em
@@ -1162,7 +1161,6 @@ export default {
   .section-statement
     grid-row 3
     grid-column 6 / span 7
-    max-width 30em
     font-size 1.4375rem
     line-height 1.565
     letter-spacing -0.01em
@@ -1270,7 +1268,6 @@ export default {
     grid-column 6 / span 7
     grid-row 3
     margin-top -2.5rem
-    max-width 30em
     font-size 1.4375rem
     line-height 1.565
     letter-spacing -0.01em
@@ -1408,7 +1405,6 @@ export default {
   .section-statement
     margin-top 3rem
     grid-column 6/12
-    max-width 30em
     font-size 1.1875rem
     line-height 1.579
     letter-spacing -0.01em
@@ -1603,7 +1599,6 @@ export default {
     line-height 1.565
     letter-spacing -0.01em
     color #CFD1E7
-    max-width 30em
     margin-bottom 3rem
   .section-list
     color #fff
@@ -1696,13 +1691,11 @@ export default {
           line-height 1.285
           letter-spacing -0.02em
           color #FFFFFF
-          max-width 20em
         &__description
           margin-top 0.75rem
           font-size 1rem
           line-height 1.375
           color #989BB9
-          max-width 30em
 
 .section-videos
   padding-top 0
