@@ -1346,8 +1346,6 @@ main
   width 100%
   z-index 10
   backdrop-filter blur(30px)
-  // &.headroom--not-top
-  //   backdrop-filter blur(30px)
   .nav
     overflow scroll
     white-space nowrap
@@ -1838,6 +1836,14 @@ main
   .section-nav.headroom--not-top
     background linear-gradient(to bottom, rgb(0,0,0) 30%, rgba(0,0,0,0) 100%)
     filter saturate(180%)
+
+// TODO: temp fix for safari sticky bar
+@supports (position: -webkit-sticky)
+  .section-hero
+    margin-top 2rem
+
+  .section-nav
+    position fixed
 
 @media screen and (max-width: 1919px)
   .section-container
