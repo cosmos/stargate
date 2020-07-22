@@ -104,7 +104,7 @@
   &__sun &__back
     width 180%
     height 180%
-    background radial-gradient(50% 50% at 50% 50%, rgba(0, 71, 255, 0.8) 56%, rgba(0, 41, 255, 0.38) 70%, rgba(0, 30, 108, 0) 100%)
+    // background radial-gradient(50% 50% at 50% 50%, rgba(0, 71, 255, 0.8) 56%, rgba(0, 41, 255, 0.38) 70%, rgba(0, 30, 108, 0) 100%)
   &__sun &__front
     background #F8FAFF
 

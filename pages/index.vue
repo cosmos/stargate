@@ -794,6 +794,9 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+main
+  overflow -webkit-paged-x
+
 .headroom
   will-change transform
   transition transform 200ms linear
@@ -1001,8 +1004,8 @@ export default {
             border-radius 0.625rem
             padding 1.25rem 4rem 1.25rem 1.5rem
             height 64px
-            -webkit-backdrop-filter saturate(150%) blur(10px)
-            backdrop-filter saturate(150%) blur(10px)
+            -webkit-backdrop-filter blur(10px)
+            backdrop-filter blur(10px)
             font-weight 350
             font-size 1.1875rem
             line-height 1.263
@@ -1022,12 +1025,11 @@ export default {
               color #FFFFFF
   .hero-graphics
     position absolute
-    top 50%
-    margin-top -34%
-    width 100%
+    top 10%
     left 0
-    padding-bottom 170%
-    font-size 1rem
+    bottom -100%
+    padding-top 50%
+    width 100%
     overflow hidden
     &__gate,
     &__gate-notches
@@ -1062,6 +1064,7 @@ export default {
       padding-bottom 42%
       left 29%
       top 20%
+      // top 60vh
       border-radius 50%
       background #FFFFFF
       box-shadow 0px 0px 2.5em #263CFF, 0px 0px 8em #2D74FF
@@ -1071,6 +1074,7 @@ export default {
       padding-bottom 126%
       left -13%
       top 23.5%
+      // top 68vh
       border-radius 50%
       background radial-gradient(84.49% 66.22% at 50% 59.94%, #000000 5.73%, #030419 71.48%, #0E1247 81.25%, #36299B 91.15%)
       box-shadow 0px -4.5em 4em rgba(28, 0, 238, 0.17), 0px -0.625em 0.5em rgba(92, 70, 255, 0.11), inset 0px 3.5em 3.5em rgba(48, 44, 245, 0.17), inset 0px 0.375em 0.75em rgba(104, 67, 252, 0.23)
@@ -1107,7 +1111,7 @@ export default {
     grid-row 3
     grid-column 1 / span 6
     position relative
-    font-size 1rem
+    // font-size 1rem
   .section-statement
     position relative
     margin-top 3rem
@@ -1342,8 +1346,6 @@ export default {
   width 100%
   z-index 10
   backdrop-filter blur(30px)
-  &.headroom--not-top
-    backdrop-filter blur(30px)
   .nav
     overflow scroll
     white-space nowrap
@@ -1834,6 +1836,14 @@ export default {
   .section-nav.headroom--not-top
     background linear-gradient(to bottom, rgb(0,0,0) 30%, rgba(0,0,0,0) 100%)
     filter saturate(180%)
+
+// TODO: temp fix for safari sticky bar
+@supports (position: -webkit-sticky)
+  .section-hero
+    margin-top 2rem
+
+  .section-nav
+    position fixed
 
 @media screen and (max-width: 1919px)
   .section-container
