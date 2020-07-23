@@ -102,30 +102,32 @@
       </div>
     </div>
 
-    <header class="headroom section-nav">
-      <nav class="nav">
-        <ul class="nav__list">
-          <li class="nav__list__item">
-            <a v-scroll-to="'#intro'">What is Stargate?</a>
-          </li>
-          <li class="nav__list__item">
-            <a v-scroll-to="'#features'">Features</a>
-          </li>
-          <li class="nav__list__item">
-            <a v-scroll-to="'#prepare'">Prepare</a>
-          </li>
-          <li class="nav__list__item">
-            <a v-scroll-to="'#roadmap'">Roadmap</a>
-          </li>
-          <li class="nav__list__item">
-            <a v-scroll-to="'#contributors'">Contributors</a>
-          </li>
-          <li class="nav__list__item">
-            <a v-scroll-to="'#articles'">Resources</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
+    <div class="nav-container">
+      <header class="headroom section-nav">
+        <nav class="nav">
+          <ul class="nav__list">
+            <li class="nav__list__item">
+              <a v-scroll-to="'#intro'">What is Stargate?</a>
+            </li>
+            <li class="nav__list__item">
+              <a v-scroll-to="'#features'">Features</a>
+            </li>
+            <li class="nav__list__item">
+              <a v-scroll-to="'#prepare'">Prepare</a>
+            </li>
+            <li class="nav__list__item">
+              <a v-scroll-to="'#roadmap'">Roadmap</a>
+            </li>
+            <li class="nav__list__item">
+              <a v-scroll-to="'#contributors'">Contributors</a>
+            </li>
+            <li class="nav__list__item">
+              <a v-scroll-to="'#articles'">Resources</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+    </div>
 
     <div id="intro" class="section section-intro">
       <div class="section-container">
@@ -808,6 +810,7 @@ main
 
 .headroom--pinned
   transform translateY(0%)
+  position fixed
 
 .headroom--unpinned
   transform translateY(-100%)
@@ -1345,12 +1348,15 @@ main
         letter-spacing -0.005em
         color #989BB9
 
+.nav-container
+  height 63px
+
 .section-nav
-  position sticky
-  position -webkit-sticky
-  top -1px
+  top 0
   width 100%
   z-index 10
+  &.headroom--frozen
+    position revert
   &:not(.headroom--frozen)
     background linear-gradient(180deg, rgba(0,0,0,0.96) 50%, rgba(0,0,0,0.7))
   .nav
@@ -1837,12 +1843,6 @@ main
         line-height 1.579
         letter-spacing -0.005em
         color #989BB9
-
-// TODO: temp fix for moz
-@supports not (backdrop-filter: none)
-  .section-nav.headroom--not-top
-    background linear-gradient(to bottom, rgb(0,0,0) 30%, rgba(0,0,0,0) 100%)
-    filter saturate(180%)
 
 @media screen and (max-width: 1919px)
   .section-container
