@@ -773,8 +773,13 @@ export default {
       const url = `https://github.com/${repo}/milestone/${id}`
       try {
         const api = `https://api.github.com/repos/${repo}/milestones/${id}`
-        const m = (await axios.get(api)).data
-        // const title = m.title
+        const m = (
+          await axios.get(api, {
+            headers: {
+              Authorization: `Bearer ${process.env.GITHUB_PERSONAL_TOKEN}`,
+            },
+          })
+        ).data
         const open = parseInt(m.open_issues)
         const closed = parseInt(m.closed_issues)
         const progress = Math.floor((100 * closed) / (open + closed)).toFixed(0)
