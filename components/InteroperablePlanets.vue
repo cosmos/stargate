@@ -104,9 +104,9 @@
   &__sun &__back
     width 180%
     height 180%
-    // background radial-gradient(50% 50% at 50% 50%, rgba(0, 71, 255, 0.8) 56%, rgba(0, 41, 255, 0.38) 70%, rgba(0, 30, 108, 0) 100%)
   &__sun &__front
     background #F8FAFF
+    box-shadow 0px 0px 3.5em #2138ff, 0px 0px 8em #0057FF
 
   &__1
     width 18%
@@ -115,7 +115,6 @@
     left 53%
   &__1 &__back
     background radial-gradient(92.47% 88.21% at 48.57% 86.43%, #ba41d8 5.21%, #660e7c 51.04%, #1e0a4f 86.46%)
-    // box-shadow 0px 2.25em 1.75em rgba(141,14,192,0.4)
 
   &__2
     width 26%
@@ -124,7 +123,6 @@
     left -10%
   &__2 &__back
     background radial-gradient(95.47% 78.21% at 86.57% 31.43%, #4251fa 7.29%, #320b93 51.04%, #12072e 86.46%)
-    // box-shadow 3em -2em 3.5em rgba(39, 54, 236, 0.36)
 
   &__3
     width 31%
@@ -133,7 +131,6 @@
     left 122%
   &__3 &__back
     background radial-gradient(farthest-side at 25% 22%, #40b3ff 3%, #015ab5 34%, #0c2054 82%)
-    // box-shadow -3.75em -2em 6.25em rgba(0, 105, 210, 0.5)
   &__3 &__front
     background radial-gradient(farthest-side at -88% 16%, #40b3ff 58%, #016ad4 74%, #132c6d 92%, rgba(7,31,95,0) 100%)
 
