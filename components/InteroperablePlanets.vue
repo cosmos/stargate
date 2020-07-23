@@ -70,7 +70,6 @@
   width 100%
   padding-bottom 90%
   position relative
-  perspective 64em
   &:before
     content ""
     position absolute
@@ -111,8 +110,8 @@
   &__1
     width 18%
     padding-bottom 18%
-    top 0
-    left 53%
+    top 10%
+    left 33%
   &__1 &__back
     background radial-gradient(92.47% 88.21% at 48.57% 86.43%, #ba41d8 5.21%, #660e7c 51.04%, #1e0a4f 86.46%)
 
@@ -149,7 +148,7 @@
     transform-origin bottom left
     &__1
       width 45%
-      transform rotate(-86deg)
+      transform rotate(-116deg)
     &__2
       width 87%
       transform rotate(33deg)
@@ -314,7 +313,7 @@
   width 136%
   padding-bottom 136%
   left 50%
-  top 50%
+  top 60%
   transform translate(-50%, -50%) rotateX(50deg) rotateZ(0)
   border-radius 50%
   box-shadow inset 0 0.1875em 0.0625em 0 #7C85EA
@@ -327,7 +326,7 @@
   width 163%
   padding-bottom 163%
   left 50%
-  top 50%
+  top 70%
   transform translate(-50%, -49%) rotateX(45deg)
   border-radius 50%
   box-shadow inset 0 0.1875em 0.09375em 0 #7C85EA
@@ -340,7 +339,7 @@
   width 209%
   padding-bottom 209%
   left 50%
-  top 50%
+  top 81%
   transform translate(-50%, -48%) rotateX(45deg)
   border-radius 50%
   box-shadow inset 0 0.1875em 0.125em 0 #7C85EA

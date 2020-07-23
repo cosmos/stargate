@@ -1208,6 +1208,7 @@ main
     grid-row 5
     position relative
     font-size 1.5rem
+    z-index 9
   .ibc-item
     position relative
     grid-column 9 / span 4
