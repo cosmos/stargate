@@ -102,30 +102,32 @@
       </div>
     </div>
 
-    <header class="headroom section-nav">
-      <nav class="nav">
-        <ul class="nav__list">
-          <li class="nav__list__item">
-            <a v-scroll-to="'#intro'">What is Stargate?</a>
-          </li>
-          <li class="nav__list__item">
-            <a v-scroll-to="'#features'">Features</a>
-          </li>
-          <li class="nav__list__item">
-            <a v-scroll-to="'#prepare'">Prepare</a>
-          </li>
-          <li class="nav__list__item">
-            <a v-scroll-to="'#roadmap'">Roadmap</a>
-          </li>
-          <li class="nav__list__item">
-            <a v-scroll-to="'#contributors'">Contributors</a>
-          </li>
-          <li class="nav__list__item">
-            <a v-scroll-to="'#articles'">Resources</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
+    <div class="nav-container">
+      <header id="section-nav" class="headroom section-nav">
+        <nav class="nav">
+          <ul class="nav__list">
+            <li class="nav__list__item">
+              <a v-scroll-to="'#intro'">What is Stargate?</a>
+            </li>
+            <li class="nav__list__item">
+              <a v-scroll-to="'#features'">Features</a>
+            </li>
+            <li class="nav__list__item">
+              <a v-scroll-to="'#prepare'">Prepare</a>
+            </li>
+            <li class="nav__list__item">
+              <a v-scroll-to="'#roadmap'">Roadmap</a>
+            </li>
+            <li class="nav__list__item">
+              <a v-scroll-to="'#contributors'">Contributors</a>
+            </li>
+            <li class="nav__list__item">
+              <a v-scroll-to="'#articles'">Resources</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+    </div>
 
     <div id="intro" class="section section-intro">
       <div class="section-container">
@@ -744,7 +746,7 @@ export default {
     },
     enableHeadroom() {
       if (!this.headroom) {
-        const header = document.querySelector('header')
+        const header = document.getElementById('section-nav')
         this.headroom = new Headroom(header)
         this.headroom.init()
       }
@@ -804,7 +806,7 @@ main
 
 .headroom
   will-change transform
-  transition transform 200ms linear
+  transition transform .2s ease-out
 
 .headroom--pinned
   transform translateY(0%)
@@ -1042,6 +1044,7 @@ main
       width 78%
       left 11%
       top 9.3%
+      transform translate3d(0,0,0)
     &__gate
       padding-bottom 78%
       border-radius 50%
@@ -1086,9 +1089,9 @@ main
 
 @keyframes gate
   from
-    transform rotate(0deg)
+    transform translate3d(0,0,0) rotate(0deg)
   to
-    transform rotate(360deg)
+    transform translate3d(0,0,0) rotate(360deg)
 
 .section-intro
   position relative
@@ -1153,7 +1156,6 @@ main
 .section-features
   position relative
   text-align left
-  background linear-gradient(180deg, rgba(0,0,0,0) 0%, #030419 24%, #030419 69%, rgba(0,0,0,0) 100%)
   .section-header
     grid-row 1
     grid-column 6 / span 7
@@ -1178,7 +1180,7 @@ main
     color #CFD1E7
   .data-container
     position relative
-    z-index 1
+    z-index 1 // above .feature-graphics
     grid-row 4
     margin-top 6rem
     display grid
@@ -1208,6 +1210,7 @@ main
     grid-row 5
     position relative
     font-size 1.5rem
+    z-index 0
   .ibc-item
     position relative
     grid-column 9 / span 4
@@ -1259,6 +1262,7 @@ main
         margin-top 1rem
 
 .section-prepare
+  background linear-gradient(180deg, rgba(0,0,0,0) 0%, #030419 24%, #030419 69%, rgba(0,0,0,0) 100%)
   .section-header
     grid-column 1 / span 12
     grid-row 1
@@ -1344,13 +1348,21 @@ main
         letter-spacing -0.005em
         color #989BB9
 
+.nav-container
+  height 4rem
+
 .section-nav
-  position sticky
-  position -webkit-sticky
-  top -1px
+  top 0
   width 100%
-  z-index 10
-  backdrop-filter blur(30px)
+  z-index 1000
+  &.headroom--pinned,
+  &.headroom--unpinned
+    position fixed
+    &:not(.headroom--frozen)
+      background linear-gradient(180deg, rgba(0,0,0,0.96) 41%, rgba(0, 0, 0, 0))
+      padding-bottom 1rem
+  &.headroom--frozen
+    position static
   .nav
     overflow scroll
     white-space nowrap
@@ -1835,20 +1847,6 @@ main
         line-height 1.579
         letter-spacing -0.005em
         color #989BB9
-
-// TODO: temp fix for moz
-@supports not (backdrop-filter: none)
-  .section-nav.headroom--not-top
-    background linear-gradient(to bottom, rgb(0,0,0) 30%, rgba(0,0,0,0) 100%)
-    filter saturate(180%)
-
-// TODO: temp fix for safari sticky bar
-@supports (position: -webkit-sticky)
-  .section-hero
-    margin-top 2rem
-
-  .section-nav
-    position fixed
 
 @media screen and (max-width: 1919px)
   .section-container
