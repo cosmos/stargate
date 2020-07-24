@@ -82,7 +82,6 @@
 .planet
   position absolute
   transform translate3d(-50%, -50%, 220px)
-  -webkit-transform translate3d(-50%, -50%, 220px)
   z-index 1000
   &__surface
     width 100%
@@ -92,7 +91,6 @@
     left 50%
     top 50%
     transform translate3d(-50%, -50%, 0)
-    -webkit-transform translate3d(-50%, -50%, 0)
   &__back
     z-index 1
   &__moon
@@ -166,7 +164,6 @@
   left 50%
   top 50%
   transform translate3d(-50%, -47%, 0) rotateX(45deg) rotateZ(45deg)
-  -webkit-transform translate3d(-50%, -47%, 0) rotateX(45deg) rotateZ(45deg)
   // TODO: might be related to safari https://bugs.webkit.org/show_bug.cgi?id=209930
   // safari - box-shadow inset rendering
   box-shadow 0 0 0 0.5em rgba(52, 97, 255, 0.19),
@@ -183,7 +180,6 @@
       width 10%
       padding-bottom 10%
       transform translate3d(-50%, -18%, 0)
-      -webkit-transform translate3d(-50%, -18%, 0)
 
 @keyframes orbit
   0%
@@ -195,7 +191,6 @@
 
 .satellite__container
   transform translate3d(-50%, 0%, 0) rotate(var(--satelite-rotate))
-  -webkit-transform translate3d(-50%, 0, 0) rotate(var(--satelite-rotate))
   width 100%
   height 50%
   position absolute
@@ -205,7 +200,6 @@
 
 .satellite__container__small
   transform translate3d(-50%, 0%, 0) rotate(var(--satelite-rotate))
-  -webkit-transform translate3d(-50%, 0, 0) rotate(var(--satelite-rotate))
   animation 5s orbit infinite linear
   will-change transform
 
@@ -238,7 +232,6 @@
   padding-bottom 4.25%
   border-radius 50%
   transform translate3d(-50%, -50%, 0)
-  -webkit-transform translate3d(-50%, -50%, 0)
   transform-origin bottom center
   &:before,
   &:after
@@ -284,7 +277,6 @@
   left 50%
   top 50%
   transform translate3d(-50%, -50%, 0)
-  -webkit-transform translate3d(-50%, -50%, 0)
   animation planet__moon 3s infinite linear
   will-change transform
 
@@ -294,7 +286,6 @@
   height 100%
   top 50%
   transform translate3d(-50%, -50%, 0)
-  -webkit-transform translate3d(-50%, -50%, 0)
   box-shadow inset 0 0.125em 0 0px #40B3FF
   border-radius 100%
   position absolute
@@ -309,7 +300,6 @@
   left 50%
   top 0
   transform translate3d(-50%, -25%, 0)
-  -webkit-transform translate3d(-50%, -25%, 0)
 
 @keyframes planet__moon
   from
@@ -323,7 +313,6 @@
   left 50%
   top 60%
   transform translate3d(-50%, -50%, 0) rotateX(50deg) rotateZ(0)
-  -webkit-transform translate3d(-50%, -50%, 0) rotateX(50deg) rotateZ(0)
   border-radius 50%
   box-shadow inset 0 -0.1875em 0.0625em 0 #7C85EA
   position absolute
@@ -337,7 +326,6 @@
   left 50%
   top 71%
   transform translate3d(-50%, -50%, 0) rotateX(45deg)
-  -webkit-transform translate3d(-50%, -50%, 0) rotateX(45deg)
   border-radius 50%
   box-shadow inset -0.1875em -0.1875em 0.09375em 0 #7C85EA
   position absolute
@@ -351,7 +339,6 @@
   left 50%
   top 82%
   transform translate3d(-50%, -50%, 0) rotateX(45deg)
-  -webkit-transform translate3d(-50%, -50%, 0) rotateX(45deg)
   border-radius 50%
   box-shadow inset 0.1875em -0.1875em 0.125em 0 #7C85EA
   position absolute
