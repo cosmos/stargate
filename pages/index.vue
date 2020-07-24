@@ -1156,7 +1156,6 @@ main
 .section-features
   position relative
   text-align left
-  background linear-gradient(180deg, rgba(0,0,0,0) 0%, #030419 24%, #030419 69%, rgba(0,0,0,0) 100%)
   .section-header
     grid-row 1
     grid-column 6 / span 7
@@ -1263,6 +1262,7 @@ main
         margin-top 1rem
 
 .section-prepare
+  background linear-gradient(180deg, rgba(0,0,0,0) 0%, #030419 24%, #030419 69%, rgba(0,0,0,0) 100%)
   .section-header
     grid-column 1 / span 12
     grid-row 1
