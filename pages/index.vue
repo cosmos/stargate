@@ -1211,7 +1211,6 @@ main
     grid-row 5
     position relative
     font-size 1.5rem
-    z-index 9
   .ibc-item
     position relative
     grid-column 9 / span 4
@@ -1354,7 +1353,8 @@ main
 .section-nav
   top 0
   width 100%
-  z-index 10
+  // since most of z-indexes in interoperable-planets are 1000
+  z-index 10000
   &.headroom--frozen
     position revert
   &:not(.headroom--frozen)

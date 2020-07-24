@@ -82,7 +82,8 @@
 
 .planet
   position absolute
-  transform translate(-50%, -50%)
+  transform translate3d(-50%, -50%, 220px)
+  -webkit-transform translate3d(-50%, -50%, 220px)
   z-index 1000
   &__surface
     width 100%
@@ -91,7 +92,8 @@
     position absolute
     left 50%
     top 50%
-    transform translate(-50%, -50%)
+    transform translate3d(-50%, -50%)
+    -webkit-transform translate3d(-50%, -50%, 0)
   &__front
     z-index 1000
 
@@ -105,6 +107,7 @@
     height 180%
   &__sun &__front
     background #F8FAFF
+    // TODO: might cause performance on firefox
     box-shadow 0px 0px 3.5em #2138ff, 0px 0px 8em #0057FF
 
   &__1
@@ -130,6 +133,7 @@
     left 122%
   &__3 &__back
     background radial-gradient(farthest-side at 25% 22%, #40b3ff 3%, #015ab5 34%, #0c2054 82%)
+    z-index 999
   &__3 &__front
     background radial-gradient(farthest-side at -88% 16%, #40b3ff 58%, #016ad4 74%, #132c6d 92%, rgba(7,31,95,0) 100%)
 
@@ -164,7 +168,10 @@
   position absolute
   left 50%
   top 50%
-  transform translate(-50%, -47%) rotateX(45deg) rotateZ(45deg)
+  transform translate3d(-50%, -47%, 0) rotateX(45deg) rotateZ(45deg)
+  -webkit-transform translate3d(-50%, -47%, 0) rotateX(45deg) rotateZ(45deg)
+  // TODO: might be related to safari https://bugs.webkit.org/show_bug.cgi?id=209930
+  // safari - box-shadow inset rendering
   box-shadow 0 0 0 0.5em rgba(52, 97, 255, 0.19),
     inset 0 0 0 0.5em rgba(52, 97, 255, 0.19)
   & + &
@@ -178,7 +185,8 @@
     .satellite
       width 10%
       padding-bottom 10%
-      transform translate(-50%, -18%)
+      transform translate3d(-50%, -18%, 0)
+      -webkit-transform translate3d(-50%, -18%, 0)
 
 @keyframes orbit
   0%
@@ -189,7 +197,8 @@
     transform translate(-50%, 0%) rotate(var(--satelite-rotate)) rotateZ(360deg)
 
 .satellite__container
-  transform translate(-50%, 0%) rotate(var(--satelite-rotate))
+  transform translate3d(-50%, 0%) rotate(var(--satelite-rotate))
+  -webkit-transform translate3d(-50%, 0, 0) rotate(var(--satelite-rotate))
   width 100%
   height 50%
   position absolute
@@ -198,7 +207,8 @@
   transform-origin bottom center
 
 .satellite__container__small
-  transform translate(-50%, 0%) rotate(var(--satelite-rotate))
+  transform translate3d(-50%, 0%) rotate(var(--satelite-rotate))
+  -webkit-transform translate3d(-50%, 0, 0) rotate(var(--satelite-rotate))
   animation 5s orbit infinite linear
   will-change transform
 
@@ -230,7 +240,8 @@
   width 4.25%
   padding-bottom 4.25%
   border-radius 50%
-  transform translate(-50%, -50%)
+  transform translate3d(-50%, -50%, 0)
+  -webkit-transform translate3d(-50%, -50%, 0)
   transform-origin bottom center
   &:before,
   &:after
@@ -275,7 +286,8 @@
   position absolute
   left 50%
   top 50%
-  transform translate(-50%, -50%)
+  transform translate3d(-50%, -50%, 0)
+  -webkit-transform translate3d(-50%, -50%, 0)
   animation planet__moon 3s infinite linear
   z-index 1000
   will-change transform
@@ -285,7 +297,8 @@
   width 100%
   height 100%
   top 50%
-  transform translate(-50%, -50%)
+  transform translate3d(-50%, -50%, 0)
+  -webkit-transform translate3d(-50%, -50%, 0)
   box-shadow inset 0 0.125em 0 0px #40B3FF
   border-radius 100%
   position absolute
@@ -300,7 +313,8 @@
   border-radius 50%
   left 50%
   top 0
-  transform translate(-50%, -25%)
+  transform translate3d(-50%, -25%, 0)
+  -webkit-transform translate3d(-50%, -25%, 0)
   z-index 1000
 
 @keyframes planet__moon
@@ -314,7 +328,8 @@
   padding-bottom 136%
   left 50%
   top 60%
-  transform translate(-50%, -50%) rotateX(50deg) rotateZ(0)
+  transform translate3d(-50%, -50%, 0) rotateX(50deg) rotateZ(0)
+  -webkit-transform translate3d(-50%, -50%, 0) rotateX(50deg) rotateZ(0)
   border-radius 50%
   box-shadow inset 0 0.1875em 0.0625em 0 #7C85EA
   position absolute
@@ -327,7 +342,8 @@
   padding-bottom 163%
   left 50%
   top 70%
-  transform translate(-50%, -49%) rotateX(45deg)
+  transform translate3d(-50%, -49%, 0) rotateX(45deg)
+  -webkit-transform translate3d(-50%, -49%, 0) rotateX(45deg)
   border-radius 50%
   box-shadow inset 0 0.1875em 0.09375em 0 #7C85EA
   position absolute
@@ -340,7 +356,8 @@
   padding-bottom 209%
   left 50%
   top 81%
-  transform translate(-50%, -48%) rotateX(45deg)
+  transform translate3d(-50%, -48%, 0) rotateX(45deg)
+  -webkit-transform translate3d(-50%, -48%, 0) rotateX(45deg)
   border-radius 50%
   box-shadow inset 0 0.1875em 0.125em 0 #7C85EA
   position absolute
@@ -348,9 +365,9 @@
   border 0.0625em solid #636CBD
   opacity 0.2
 
-// @keyframes orbit__outer
-//   from
-//     transform translate(-50%, -49%) rotateX(50deg) rotateZ(0)
-//   to
-//     transform translate(-50%, -49%) rotateX(50deg) rotateZ(360deg)
+@keyframes orbit__outer
+  from
+    transform translate(-50%, -49%) rotateX(50deg) rotateZ(0)
+  to
+    transform translate(-50%, -49%) rotateX(50deg) rotateZ(360deg)
 </style>
