@@ -98,7 +98,7 @@ export default {
    */
   css: [
     'normalize.css',
-    { src: '~/assets/app.styl', lang: 'stylus' },
+    { src: '~/assets/css/app.styl', lang: 'stylus' },
     { src: '~/assets/typography.styl', lang: 'stylus' },
   ],
   /*
