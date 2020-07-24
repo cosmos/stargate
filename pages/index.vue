@@ -103,7 +103,7 @@
     </div>
 
     <div class="nav-container">
-      <header class="headroom section-nav">
+      <header id="section-nav" class="headroom section-nav">
         <nav class="nav">
           <ul class="nav__list">
             <li class="nav__list__item">
@@ -746,7 +746,7 @@ export default {
     },
     enableHeadroom() {
       if (!this.headroom) {
-        const header = document.querySelector('header')
+        const header = document.getElementById('section-nav')
         this.headroom = new Headroom(header)
         this.headroom.init()
       }
@@ -806,11 +806,10 @@ main
 
 .headroom
   will-change transform
-  transition transform 200ms linear
+  transition transform .2s ease-out
 
 .headroom--pinned
   transform translateY(0%)
-  position fixed
 
 .headroom--unpinned
   transform translateY(-100%)
@@ -1350,17 +1349,20 @@ main
         color #989BB9
 
 .nav-container
-  height 63px
+  height 4rem
 
 .section-nav
   top 0
   width 100%
-  // since most of z-indexes in interoperable-planets are 1000
-  z-index 10000
+  z-index 1000
+  &.headroom--pinned,
+  &.headroom--unpinned
+    position fixed
+    &:not(.headroom--frozen)
+      background linear-gradient(180deg, rgba(0,0,0,0.96) 41%, rgba(0, 0, 0, 0))
+      padding-bottom 1rem
   &.headroom--frozen
-    position revert
-  &:not(.headroom--frozen)
-    background linear-gradient(180deg, rgba(0,0,0,0.96) 50%, rgba(0,0,0,0.7))
+    position static
   .nav
     overflow scroll
     white-space nowrap
