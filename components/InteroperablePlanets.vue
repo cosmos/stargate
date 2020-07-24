@@ -44,7 +44,6 @@
         </div>
         <div class="planet planet__sun">
           <div class="planet__surface planet__front"></div>
-          <div class="planet__surface planet__back"></div>
         </div>
         <div class="planet planet__2">
           <div class="planet__surface planet__back"></div>
@@ -78,7 +77,7 @@
     left -23% // (146 - 100) / 2
     top 0
     margin-top -33% // (146 - 80) / 2
-    background radial-gradient(50% 50% at 50% 50%, rgba(75, 125, 254, 0.26) 20%, rgba(66, 81, 250, 0) 100%)
+    background radial-gradient(50% 50% at 50% 53.5%, #1440c9 28.99%, #121e4d 44.96%, #0d1236 70.17%, #000)
 
 .planet
   position absolute
@@ -92,29 +91,28 @@
     position absolute
     left 50%
     top 50%
-    transform translate3d(-50%, -50%)
+    transform translate3d(-50%, -50%, 0)
     -webkit-transform translate3d(-50%, -50%, 0)
+  &__back
+    z-index 1
+  &__moon
+    z-index 2
   &__front
-    z-index 1000
+    z-index 3
 
   &__sun
     top 50%
     left 50%
     width 41%
     padding-bottom 41%
-  &__sun &__back
-    width 180%
-    height 180%
   &__sun &__front
     background #F8FAFF
-    // TODO: might cause performance on firefox
-    box-shadow 0px 0px 3.5em #2138ff, 0px 0px 8em #0057FF
 
   &__1
     width 18%
     padding-bottom 18%
-    top 10%
-    left 33%
+    top 0%
+    left 54%
   &__1 &__back
     background radial-gradient(92.47% 88.21% at 48.57% 86.43%, #ba41d8 5.21%, #660e7c 51.04%, #1e0a4f 86.46%)
 
@@ -133,7 +131,6 @@
     left 122%
   &__3 &__back
     background radial-gradient(farthest-side at 25% 22%, #40b3ff 3%, #015ab5 34%, #0c2054 82%)
-    z-index 999
   &__3 &__front
     background radial-gradient(farthest-side at -88% 16%, #40b3ff 58%, #016ad4 74%, #132c6d 92%, rgba(7,31,95,0) 100%)
 
@@ -152,7 +149,7 @@
     transform-origin bottom left
     &__1
       width 45%
-      transform rotate(-116deg)
+      transform rotate(-85deg)
     &__2
       width 87%
       transform rotate(33deg)
@@ -190,14 +187,14 @@
 
 @keyframes orbit
   0%
-    transform translate(-50%, 0%) rotate(var(--satelite-rotate)) rotateZ(0)
+    transform translate3d(-50%, 0%, 0) rotate(var(--satelite-rotate)) rotateZ(0)
   68%
-    transform translate(-50%, 0%) rotate(var(--satelite-rotate)) rotateZ(270deg)
+    transform translate3d(-50%, 0%, 0) rotate(var(--satelite-rotate)) rotateZ(270deg)
   100%
-    transform translate(-50%, 0%) rotate(var(--satelite-rotate)) rotateZ(360deg)
+    transform translate3d(-50%, 0%, 0) rotate(var(--satelite-rotate)) rotateZ(360deg)
 
 .satellite__container
-  transform translate3d(-50%, 0%) rotate(var(--satelite-rotate))
+  transform translate3d(-50%, 0%, 0) rotate(var(--satelite-rotate))
   -webkit-transform translate3d(-50%, 0, 0) rotate(var(--satelite-rotate))
   width 100%
   height 50%
@@ -207,7 +204,7 @@
   transform-origin bottom center
 
 .satellite__container__small
-  transform translate3d(-50%, 0%) rotate(var(--satelite-rotate))
+  transform translate3d(-50%, 0%, 0) rotate(var(--satelite-rotate))
   -webkit-transform translate3d(-50%, 0, 0) rotate(var(--satelite-rotate))
   animation 5s orbit infinite linear
   will-change transform
@@ -221,7 +218,7 @@
   position absolute
   left 50%
   top 0%
-  transform translate(-50%, -50%)
+  transform translate3d(-50%, -50%, 0)
   animation satellite 2s ease-out infinite alternate-reverse
 
 @keyframes satellite
@@ -289,7 +286,6 @@
   transform translate3d(-50%, -50%, 0)
   -webkit-transform translate3d(-50%, -50%, 0)
   animation planet__moon 3s infinite linear
-  z-index 1000
   will-change transform
 
 .planet__moon__tail
@@ -302,7 +298,6 @@
   box-shadow inset 0 0.125em 0 0px #40B3FF
   border-radius 100%
   position absolute
-  z-index 1000
   clip-path polygon(0 0, 50% 0, 50% 100%, 0 100%)
 
 .planet__moon__surface
@@ -315,13 +310,12 @@
   top 0
   transform translate3d(-50%, -25%, 0)
   -webkit-transform translate3d(-50%, -25%, 0)
-  z-index 1000
 
 @keyframes planet__moon
   from
-    transform translate(-50%, -50%) rotateX(-55deg) rotateY(20deg) rotate(0)
+    transform translate3d(-50%, -50%, 0) rotateX(-55deg) rotateY(20deg) rotate(0)
   to
-    transform translate(-50%, -50%) rotateX(-55deg) rotateY(20deg) rotate(360deg)
+    transform translate3d(-50%, -50%, 0) rotateX(-55deg) rotateY(20deg) rotate(360deg)
 
 .orbit__outer__1
   width 136%
@@ -331,7 +325,7 @@
   transform translate3d(-50%, -50%, 0) rotateX(50deg) rotateZ(0)
   -webkit-transform translate3d(-50%, -50%, 0) rotateX(50deg) rotateZ(0)
   border-radius 50%
-  box-shadow inset 0 0.1875em 0.0625em 0 #7C85EA
+  box-shadow inset 0 -0.1875em 0.0625em 0 #7C85EA
   position absolute
   // animation 3s orbit__outer infinite linear reverse
   border 0.0625em solid #636CBD
@@ -341,11 +335,11 @@
   width 163%
   padding-bottom 163%
   left 50%
-  top 70%
-  transform translate3d(-50%, -49%, 0) rotateX(45deg)
-  -webkit-transform translate3d(-50%, -49%, 0) rotateX(45deg)
+  top 71%
+  transform translate3d(-50%, -50%, 0) rotateX(45deg)
+  -webkit-transform translate3d(-50%, -50%, 0) rotateX(45deg)
   border-radius 50%
-  box-shadow inset 0 0.1875em 0.09375em 0 #7C85EA
+  box-shadow inset -0.1875em -0.1875em 0.09375em 0 #7C85EA
   position absolute
   // animation 6s orbit__outer infinite linear
   border 0.0625em solid #636CBD
@@ -355,11 +349,11 @@
   width 209%
   padding-bottom 209%
   left 50%
-  top 81%
-  transform translate3d(-50%, -48%, 0) rotateX(45deg)
-  -webkit-transform translate3d(-50%, -48%, 0) rotateX(45deg)
+  top 82%
+  transform translate3d(-50%, -50%, 0) rotateX(45deg)
+  -webkit-transform translate3d(-50%, -50%, 0) rotateX(45deg)
   border-radius 50%
-  box-shadow inset 0 0.1875em 0.125em 0 #7C85EA
+  box-shadow inset 0.1875em -0.1875em 0.125em 0 #7C85EA
   position absolute
   // animation 12s orbit__outer infinite linear reverse
   border 0.0625em solid #636CBD
@@ -367,7 +361,7 @@
 
 @keyframes orbit__outer
   from
-    transform translate(-50%, -49%) rotateX(50deg) rotateZ(0)
+    transform translate3d(-50%, -49%, 0) rotateX(50deg) rotateZ(0)
   to
-    transform translate(-50%, -49%) rotateX(50deg) rotateZ(360deg)
+    transform translate3d(-50%, -49%, 0) rotateX(50deg) rotateZ(360deg)
 </style>

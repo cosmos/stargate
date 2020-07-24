@@ -1045,6 +1045,7 @@ main
       width 78%
       left 11%
       top 9.3%
+      transform translate3d(0,0,0)
     &__gate
       padding-bottom 78%
       border-radius 50%
@@ -1089,9 +1090,9 @@ main
 
 @keyframes gate
   from
-    transform rotate(0deg)
+    transform translate3d(0,0,0) rotate(0deg)
   to
-    transform rotate(360deg)
+    transform translate3d(0,0,0) rotate(360deg)
 
 .section-intro
   position relative
@@ -1181,7 +1182,7 @@ main
     color #CFD1E7
   .data-container
     position relative
-    z-index 1
+    z-index 1 // above .feature-graphics
     grid-row 4
     margin-top 6rem
     display grid
@@ -1211,6 +1212,7 @@ main
     grid-row 5
     position relative
     font-size 1.5rem
+    z-index 0
   .ibc-item
     position relative
     grid-column 9 / span 4
