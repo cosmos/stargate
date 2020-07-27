@@ -139,7 +139,8 @@
   width 100%
   .connection
     position absolute
-    background-image radial-gradient(20% 100%, rgba(204, 209, 255, 0.6) 50%, rgba(255,255,255,0) 50%)
+    // TODO: not being used, syntax error: https://github.com/postcss/autoprefixer/issues/530
+    // background-image radial-gradient(20% 100%, rgba(204, 209, 255, 0.6) 50%, rgba(255,255,255,0) 50%)
     background-position top
     background-size 0.416em 0.083em
     background-repeat repeat-x
