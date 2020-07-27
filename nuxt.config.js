@@ -99,7 +99,7 @@ export default {
   css: [
     'normalize.css',
     { src: '~/assets/css/app.styl', lang: 'stylus' },
-    { src: '~/assets/typography.styl', lang: 'stylus' },
+    { src: '~/assets/css/typography.styl', lang: 'stylus' },
   ],
   /*
    ** Plugins to load before mounting the App
