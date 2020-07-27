@@ -110,6 +110,9 @@ export default {
     '~/plugins/vue-scrollto.client.js',
     '~/plugins/vue-observe-visibility.client.js',
   ],
+  env: {
+    GITHUB_PERSONAL_TOKEN: process.env.GITHUB_PERSONAL_TOKEN,
+  },
   /*
    ** Auto import components
    ** See https://nuxtjs.org/api/configuration-components
