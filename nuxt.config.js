@@ -96,11 +96,7 @@ export default {
   /*
    ** Global CSS
    */
-  css: [
-    'normalize.css',
-    { src: '~/assets/css/app.styl', lang: 'stylus' },
-    { src: '~/assets/css/typography.styl', lang: 'stylus' },
-  ],
+  css: ['normalize.css', { src: '~/assets/styles/index.styl', lang: 'stylus' }],
   /*
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
@@ -122,13 +118,18 @@ export default {
    ** Nuxt.js dev-modules
    */
   buildModules: [
-    // Doc: https://github.com/nuxt-community/eslint-module
+    // https://github.com/nuxt-community/eslint-module
     '@nuxtjs/eslint-module',
     // https://github.com/juliomrqz/nuxt-optimized-images
     '@aceforth/nuxt-optimized-images',
+    // https://github.com/nuxt-community/style-resources-module
+    '@nuxtjs/style-resources',
   ],
   optimizedImages: {
     optimizeImages: true,
+  },
+  styleResources: {
+    stylus: ['~/assets/styles/_*.styl'],
   },
   /*
    ** Nuxt.js modules
@@ -141,17 +142,8 @@ export default {
   build: {
     // https://nuxtjs.org/faq/postcss-plugins/#recommended-method
     postcss: {
-      // Add plugin names as key and arguments as value
-      // Install them before as dependencies with npm or yarn
-      // plugins: {
-      //   // Disable a plugin by passing false as value
-      //   'postcss-url': false,
-      //   'postcss-nested': {},
-      //   'postcss-responsive-type': {},
-      //   'postcss-hexrgba': {},
-      // },
       preset: {
-        // Change the postcss-preset-env settings
+        // To change the postcss-preset-env settings
         autoprefixer: {},
       },
     },
