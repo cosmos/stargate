@@ -811,6 +811,42 @@ export default {
 main
   overflow -webkit-paged-x
 
+// TODO
+.fw9
+  font-weight 900
+
+.display-10
+  @extend .fw9
+  step-10()
+
+.display-09
+  @extend .fw9
+  step-09()
+
+.display-07
+  @extend .fw9
+  step-07()
+
+@media screen and (max-width: 1024px)
+  .display-10
+    step-08()
+
+  .display-09
+    step-07()
+    // letter-spacing -0.02em
+
+  .display-07
+    step-05()
+    // letter-spacing -0.01em
+
+@media screen and (max-width: 640px)
+  .display-09
+    step-05()
+    // letter-spacing -0.01em
+
+  .display-10
+    step-06()
+
 .headroom
   will-change transform
   transition transform .2s ease-out
