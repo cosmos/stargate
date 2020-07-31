@@ -1187,7 +1187,7 @@ main
     position relative
     z-index 1 // above .feature-graphics
     grid-row 4
-    margin-top 6rem
+    margin-top 9rem
     display grid
     flex-direction row
     grid-column 1/ span 12
