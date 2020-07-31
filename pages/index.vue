@@ -1136,10 +1136,7 @@ main
     margin-top 3rem
     a
       display inline-block
-      font-weight bold
-      font-size 1.4375rem
-      line-height 1.217
-      letter-spacing -0.01em
+      heading-02()
       border-radius 6px
       padding 22px 0
       &:hover
@@ -1434,10 +1431,7 @@ main
     margin-top 2.25rem
     a
       display inline-block
-      font-weight bold
-      font-size 19px
-      line-height 1.263
-      letter-spacing -0.005em
+      heading-01()
       border-radius 6px
 
 .section-roadmap
@@ -1465,10 +1459,7 @@ main
       margin-top 1rem
       a
         display inline-block
-        font-weight bold
-        font-size 1.1875rem
-        line-height 1.26
-        letter-spacing -0.005em
+        heading-01()
         border-radius 0.375rem
         padding 20px 0px
   .section-row
@@ -1747,9 +1738,7 @@ main
       bottom 0
       right 0
       a
-        font-weight bold
-        font-size 1rem
-        line-height 137.5%
+        heading-00()
         padding 0.8125rem 0
         border-radius 0.5rem
 
