@@ -1,4 +1,22 @@
-/* Steps based on DS 2.0 */
+/* 
+
+Steps: -1 ~ 11
+* repeated declaractions: font-size and line-height
+
+letter-spacing: 2 variants
+
+Display: 5 ~ 11
+Heading: -1 ~ 7
+Subtitle: -1 ~ 5
+Paragraph: -1 ~ 4
+Overline: -1 ~ 1
+Code: -1 ~ 4
+
+usage:
+.section-title
+  display-10()
+
+*/
 
 step-11()
   font-size 7.375rem
@@ -51,3 +69,38 @@ step-00()
 step--1()
   font-size 0.8125rem
   line-height 1.384
+
+display-05()
+  step-05()
+  font-weight 900
+  letter-spacing -0.01em
+
+display-06()
+  step-06()
+  font-weight 900
+  letter-spacing -0.015em
+
+display-07()
+  step-07()
+  font-weight 900
+  letter-spacing -0.02em
+
+display-08()
+  step-08()
+  font-weight 900
+  letter-spacing -0.02em
+
+display-09()
+  font-weight 900
+  step-09()
+  letter-spacing -0.025em
+
+display-10()
+  step-10()
+  font-weight 900
+  letter-spacing -0.03em
+
+display-11()
+  step-11()
+  font-weight 900
+  letter-spacing -0.035em

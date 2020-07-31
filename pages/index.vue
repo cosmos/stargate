@@ -132,7 +132,7 @@
     <div id="intro" class="section section-intro">
       <div class="section-container">
         <div class="container">
-          <div class="section-title display-10">A new era for Cosmos</div>
+          <div class="section-title">A new era for Cosmos</div>
           <div class="section-subtitle">
             The biggest event in the ecosystem since the launch of the Cosmos
             Hub.
@@ -170,7 +170,7 @@
       <div class="section-container">
         <div class="container">
           <div class="section-header">Features</div>
-          <div class="section-title display-09">What’s new?</div>
+          <div class="section-title">What’s new?</div>
           <div class="section-statement measure">
             These upgrades bring significant performance improvements to
             blockchains built with Cosmos SDK. Discover all the amazing features
@@ -267,7 +267,7 @@
       <div class="section-container">
         <div class="container">
           <div class="section-header">Prepare</div>
-          <div class="section-title display-09">Get set for testnets</div>
+          <div class="section-title">Get set for testnets</div>
           <div class="section-statement measure">
             <p>
               The following services will be affected by the upgrades with
@@ -379,9 +379,7 @@
       <div class="section-container">
         <div class="container">
           <div class="section-header">Roadmap</div>
-          <div class="section-title display-10">
-            {{ progressTotal }}% complete
-          </div>
+          <div class="section-title">{{ progressTotal }}% complete</div>
           <div class="section-milestones">
             <div class="section-milestones__title">Milestones</div>
             <div class="section-milestones__cta">
@@ -450,7 +448,7 @@
       <div class="section-container">
         <div class="container">
           <div class="section-header">Contributors</div>
-          <div class="section-title display-09">Core Developers</div>
+          <div class="section-title">Core Developers</div>
           <div class="section-statement measure">
             Stargate is made possible through the hard work and coordination of
             many dedicated teams contributing to development on Cosmos SDK,
@@ -484,7 +482,7 @@
       <div class="section-container">
         <div class="container">
           <div class="section-header">{{ articles.length }} articles</div>
-          <div class="section-title display-07">Learn more about Stargate</div>
+          <div class="section-title">Learn more about Stargate</div>
           <div class="content">
             <div
               v-for="item in articles"
@@ -811,42 +809,6 @@ export default {
 main
   overflow -webkit-paged-x
 
-// TODO
-.fw9
-  font-weight 900
-
-.display-10
-  @extend .fw9
-  step-10()
-
-.display-09
-  @extend .fw9
-  step-09()
-
-.display-07
-  @extend .fw9
-  step-07()
-
-@media screen and (max-width: 1024px)
-  .display-10
-    step-08()
-
-  .display-09
-    step-07()
-    // letter-spacing -0.02em
-
-  .display-07
-    step-05()
-    // letter-spacing -0.01em
-
-@media screen and (max-width: 640px)
-  .display-09
-    step-05()
-    // letter-spacing -0.01em
-
-  .display-10
-    step-06()
-
 .headroom
   will-change transform
   transition transform .2s ease-out
@@ -1143,6 +1105,7 @@ main
     grid-row 1 / 2
     color #FFFFFF
     max-width 50rem
+    display-10()
   .section-subtitle
     display flex
     justify-content flex-end
@@ -1158,7 +1121,6 @@ main
     grid-row 3
     grid-column 1 / span 6
     position relative
-    // font-size 1rem
   .section-statement
     position relative
     margin-top 3rem
@@ -1184,7 +1146,7 @@ main
         color inherit
   .title
     font-weight 900
-    font-size 100px
+    font-size 6.25rem
     line-height 112%
     display flex
     align-items center
@@ -1204,6 +1166,7 @@ main
     color #FFFFFF
     grid-column 6 / span 7
     text-align left
+    display-09()
   .section-statement
     grid-row 3
     grid-column 6 / span 7
@@ -1306,6 +1269,7 @@ main
     color #FFFFFF
     text-align left
     max-width 50rem
+    display-09()
   .section-statement
     position relative
     z-index 1
@@ -1485,6 +1449,7 @@ main
     text-align right
     color #FFFFFF
     grid-column 5 / span 8
+    display-10()
   .section-milestones
     grid-column 1 / 5
     grid-row 3 / 6
@@ -1634,6 +1599,7 @@ main
     margin-top 3rem
     grid-column 1/7
     color #FFFFFF
+    display-09()
   .section-statement
     align-self end
     grid-column 6 / span 7
@@ -1688,6 +1654,7 @@ main
     text-align left
     grid-column 1 / 4
     grid-row 1
+    display-07()
   .content
     grid-column 6 / span 7
     grid-row 2
@@ -1930,6 +1897,7 @@ main
     .section-title
       grid-row 1
       grid-column 1 / span 12
+      display-08()
     .section-subtitle
       margin-top 2rem
       grid-row 2
@@ -1945,6 +1913,7 @@ main
     overflow hidden
     .section-title
       grid-column 1 / 12
+      display-07()
     .section-statement
       grid-column 1 / 12
     .data-container
@@ -1962,6 +1931,7 @@ main
     overflow hidden
     .section-title
       grid-column 1 / 12
+      display-07()
     .section-statement
       grid-column 1 / 12
       margin-top 4rem
@@ -1980,6 +1950,7 @@ main
     .section-title
       grid-column 1 / span 12
       text-align left
+      display-08()
     .section-row
       grid-column 1 / span 12
     .section-milestones
@@ -1991,6 +1962,8 @@ main
       grid-column 1 / span 12
 
   .section-contributors
+    .section-title
+      display-07()
     .section-statement
       grid-column 1/12
       margin-top 4rem
@@ -2005,6 +1978,7 @@ main
     .section-title
       grid-row 2
       margin-top 6rem
+      display-05()
     .content
       grid-row 3
       grid-column 1/13
@@ -2068,6 +2042,15 @@ main
       margin-bottom 1rem
     .section-status
       margin-top 3rem
+
+@media screen and (max-width: 640px)
+  .section-intro, .sectio-roadmap
+    .section-title
+      display-05()
+
+  .section-features, .section-prepare, .section-contributors
+    .section-title
+      display-05()
 
 @media screen and (max-width: 576px)
   .section
