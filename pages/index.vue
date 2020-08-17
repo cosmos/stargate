@@ -720,6 +720,11 @@ export default {
           title: 'Week 6 status',
           date: 'August 12, 2020',
         },
+        {
+          url: 'https://github.com/cosmosdevs/stargate/blob/master/week7.md',
+          title: 'Week 7 status',
+          date: 'August 19, 2020',
+        },
       ],
     }
   },
