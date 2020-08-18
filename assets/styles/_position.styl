@@ -1,0 +1,37 @@
+/*
+
+   POSITIONING
+   Docs: http://tachyons.io/docs/layout/position/
+
+   Media Query Extensions:
+     -m-up = medium upwards
+     -m  = medium
+     -l-up = large
+
+*/
+
+.static { position: static; }
+.relative  { position: relative; }
+.absolute  { position: absolute; }
+.fixed  { position: fixed; }
+
+@media $breakpoint-medium {
+  .static-m-up { position: static; }
+  .relative-m-up  { position: relative; }
+  .absolute-m-up  { position: absolute; }
+  .fixed-m-up  { position: fixed; }
+}
+
+@media $breakpoint-medium-only {
+  .static-m { position: static; }
+  .relative-m  { position: relative; }
+  .absolute-m  { position: absolute; }
+  .fixed-m  { position: fixed; }
+}
+
+@media $breakpoint-large {
+  .static-l-up{ position: static; }
+  .relative-l-up { position: relative; }
+  .absolute-l-up { position: absolute; }
+  .fixed-l-up { position: fixed; }
+}

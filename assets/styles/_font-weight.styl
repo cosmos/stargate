@@ -1,0 +1,71 @@
+//  This doesn't seem to be working with RFS?
+:root
+  for size in -1...8
+    rfs((690 + size * 30), '--font-weight-b-%s' % size)
+    if size <= 3
+      rfs((356 - size * 24), '--font-weight-n-%s' % size)
+
+/*
+
+   FONT WEIGHT
+   Docs: http://tachyons.io/docs/typography/font-weight/
+
+   Base
+     fw = font-weight
+
+   Modifiers:
+     1 = literal value 100
+     2 = literal value 200
+     3 = literal value 300
+     4 = literal value 400
+     5 = literal value 500
+     6 = literal value 600
+     7 = literal value 700
+     8 = literal value 800
+     9 = literal value 900
+
+   Media Query Extensions:
+     -m-up = medium upwards
+     -m  = medium
+     -l-up = large
+
+*/
+
+.normal
+  font-weight normal
+.b
+  font-weight bold
+// .fw1 - .fw9
+for weight in 1...9
+  .fw{weight}
+    font-weight weight * 100
+
+@media $breakpoint-medium
+  .normal-m-up
+    font-weight normal
+  .b-m-up
+    font-weight bold
+  // .fw1 - .fw9
+  for weight in 1...9
+    .fw{weight}-m-up
+      font-weight weight * 100
+
+@media $breakpoint-medium-only
+  .normal-m
+    font-weight normal
+  .b-m
+    font-weight bold
+  // .fw1 - .fw9
+  for weight in 1...9
+    .fw{weight}-m
+      font-weight weight * 100
+
+@media $breakpoint-large
+  .normal-l-up
+    font-weight normal
+  .b-l-up
+    font-weight bold
+  // .fw1 - .fw9
+  for weight in 1...9
+    .fw{weight}-l-up
+      font-weight weight * 100

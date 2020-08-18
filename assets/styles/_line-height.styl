@@ -1,0 +1,41 @@
+/*
+
+   LINE HEIGHT / LEADING
+   Docs: http://tachyons.io/docs/typography/line-height
+
+   Media Query Extensions:
+     -m-up = medium upwards
+     -m  = medium
+     -l-up = large
+
+*/
+
+.lh-solid
+  line-height $line-height-solid
+.lh-title
+  line-height $line-height-title
+.lh-copy
+  line-height $line-height-copy
+@media $breakpoint-medium
+  .lh-solid-m-up
+    line-height $line-height-solid
+  .lh-title-m-up
+    line-height $line-height-title
+  .lh-copy-m-up
+    line-height $line-height-copy
+
+@media $breakpoint-medium-only
+  .lh-solid-m
+    line-height $line-height-solid
+  .lh-title-m
+    line-height $line-height-title
+  .lh-copy-m
+    line-height $line-height-copy
+
+@media $breakpoint-large
+  .lh-solid-l-up
+    line-height $line-height-solid
+  .lh-title-l-up
+    line-height $line-height-title
+  .lh-copy-l-up
+    line-height $line-height-copy

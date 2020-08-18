@@ -1,0 +1,98 @@
+/*
+
+  HOVER EFFECTS
+  Docs: http://tachyons.io/docs/themes/hovers/
+
+    - Underline text
+    - Grow
+    - Pointer
+    - Elevation
+
+*/
+
+/*
+  Underline text on hover
+*/
+
+.underline-hover:hover,
+.underline-hover:focus
+  text-decoration underline
+
+
+/* Can combine this with overflow-hidden to make background images grow on hover
+ * even if you are using background-size: cover */
+
+.grow
+  -moz-osx-font-smoothing grayscale
+  backface-visibility hidden
+  transform translateZ(0)
+  transition transform .25s ease-out
+
+.grow:hover,
+.grow:focus
+  transform scale(1.05)
+
+.grow:active
+  transform scale(.90)
+
+.grow-large
+  -moz-osx-font-smoothing grayscale
+  backface-visibility hidden
+  transform translateZ(0)
+  transition transform .25s ease-in-out
+
+.grow-large:hover,
+.grow-large:focus
+  transform scale(1.2)
+
+.grow-large:active
+  transform scale(.95)
+  transition-duration 0s
+
+/* Add pointer on hover */
+
+.pointer:hover
+  cursor pointer
+
+/*
+   Add shadow on hover.
+
+   Performant box-shadow animation pattern from
+   http://tobiasahlin.com/blog/how-to-animate-box-shadow/
+*/
+
+.elevation-hover
+  cursor pointer
+  position relative
+  transition all .4s cubic-bezier(0.165, 0.84, 0.44, 1)
+  ::after
+    content ''
+    border-radius inherit
+    opacity 0
+    position absolute
+    top 0
+    left 0
+    width 100%
+    height 100%
+    z-index -1
+    transition opacity .4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  &-1::after
+    box-shadow var(--elevation-1)
+  &-4::after
+    box-shadow var(--elevation-4)
+  &-8::after
+    box-shadow var(--elevation-8)
+  &-12::after
+    box-shadow var(--elevation-12)
+  &-16::after
+    box-shadow var(--elevation-16)
+  &-24::after
+    box-shadow var(--elevation-24)
+  &:hover::after,
+  &:focus::after
+    opacity 1
+  &:active
+    transition-duration 0s
+    &::after
+      opacity 0
+      transition-duration 0s

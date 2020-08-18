@@ -1,0 +1,26 @@
+:root
+  --container-mw-lg 74rem
+
+html
+  font 400 100%/1.5 $font-family-sans-serif
+  font-feature-settings 'kern' 1, 'liga' 1, 'calt' 1, 'zero' on
+  text-size-adjust 100%
+  -moz-osx-font-smoothing grayscale
+  font-smoothing antialiased
+  font-variant-ligatures contextual common-ligatures
+  font-kerning normal
+  text-rendering optimizeLegibility
+  background-color #000000
+  color #CFD1E7
+  scroll-behavior smooth
+
+  // @media ($breakpoint-xl)
+  //   font-size 112.5%
+
+@supports (font-variation-settings: normal)
+  html
+    font-family $font-family-sans-serif-var
+    font-weight $fw-base
+
+body
+  overflow-x hidden

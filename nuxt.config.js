@@ -96,7 +96,7 @@ export default {
   /*
    ** Global CSS
    */
-  css: ['normalize.css', { src: '~/assets/styles/index.styl', lang: 'stylus' }],
+  css: [{ src: '~/assets/styles/main.styl', lang: 'stylus' }],
   /*
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
@@ -129,7 +129,10 @@ export default {
     optimizeImages: true,
   },
   styleResources: {
-    stylus: ['~/assets/styles/_*.styl'],
+    stylus: [
+      '~/assets/styles/abstracts/_*.styl',
+      '~/node_modules/rfs/stylus.styl',
+    ],
   },
   /*
    ** Nuxt.js modules

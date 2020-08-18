@@ -1,11 +1,97 @@
-/* Measure is limited to ~80 characters */
-.measure-wide
-  max-width 34em
+/*
+
+   TYPOGRAPHY
+   http://tachyons.io/docs/typography/measure/
+
+   Media Query Extensions:
+     -m-up = medium upwards
+     -m  = medium
+     -l-up = large
+
+*/
+
+/* Paragraph spacing */
+p + p
+  margin-top 1em
 
 /* Measure is limited to ~66 characters */
 .measure
   max-width 30em
 
+/* Measure is limited to ~80 characters */
+.measure-wide
+  max-width 34em
+
 /* Measure is limited to ~45 characters */
 .measure-narrow
   max-width 20em
+
+/* Book paragraph style - paragraphs are indented with no vertical spacing. */
+.indent
+  text-indent 1em
+  margin-top 0
+  margin-bottom 0
+
+.small-caps
+  font-variant small-caps
+
+/* Combine this class with a width to truncate text (or just leave as is to truncate at width of containing element. */
+
+.truncate
+  white-space nowrap
+  overflow hidden
+  text-overflow ellipsis
+
+@media $breakpoint-medium
+  .measure-m-up
+    max-width 30em
+  .measure-wide-m-up
+    max-width 34em
+  .measure-narrow-m-up
+    max-width 20em
+  .indent-m-up
+    text-indent 1em
+    margin-top 0
+    margin-bottom 0
+  .small-caps-m-up
+    font-variant small-caps
+  .truncate-m-up
+    white-space nowrap
+    overflow hidden
+    text-overflow ellipsis
+
+@media $breakpoint-medium-only
+  .measure-m
+    max-width 30em
+  .measure-wide-m
+    max-width 34em
+  .measure-narrow-m
+    max-width 20em
+  .indent-m
+    text-indent 1em
+    margin-top 0
+    margin-bottom 0
+  .small-caps-m
+    font-variant small-caps
+  .truncate-m
+    white-space nowrap
+    overflow hidden
+    text-overflow ellipsis
+
+@media $breakpoint-large
+  .measure-l-up
+    max-width 30em
+  .measure-wide-l-up
+    max-width 34em
+  .measure-narrow-l-up
+    max-width 20em
+  .indent-l-up
+    text-indent 1em
+    margin-top 0
+    margin-bottom 0
+  .small-caps-l-up
+    font-variant small-caps
+  .truncate-l-up
+    white-space nowrap
+    overflow hidden
+    text-overflow ellipsis

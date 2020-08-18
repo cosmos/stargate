@@ -132,7 +132,7 @@
     <div id="intro" class="section section-intro">
       <div class="section-container">
         <div class="container">
-          <div class="section-title">A new era for Cosmos</div>
+          <div class="section-title f6 b lh-title">A new era for Cosmos</div>
           <div class="section-subtitle">
             The biggest event in the ecosystem since the launch of the Cosmos
             Hub.
@@ -806,6 +806,19 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+// Links
+a
+  color var(--link)
+  text-decoration none
+  outline-color rgba(64, 179, 255, 0.92)
+  cursor pointer
+  transition all .1s ease-out
+  &:hover
+    color var(--link-hover)
+  &:active
+    opacity 0.7
+    transition-duration 0s
+
 main
   overflow -webkit-paged-x
 
@@ -1886,7 +1899,6 @@ main
     .section-title
       grid-row 1
       grid-column 1 / span 12
-      display-08()
     .section-subtitle
       margin-top 2rem
       grid-row 2

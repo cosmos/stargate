@@ -1,0 +1,35 @@
+/*
+
+   FONT STYLE
+   Docs: http://tachyons.io/docs/typography/font-style/
+
+   Media Query Extensions:
+     -m-up = medium upwards
+     -m  = medium
+     -l-up = large
+
+*/
+
+.i
+  font-style italic
+
+.fs-normal
+  font-style normal
+
+@media $breakpoint-medium
+  .i-m-up
+    font-style italic
+  .fs-normal-m-up
+    font-style normal
+
+@media $breakpoint-medium-only
+  .i-m
+    font-style italic
+  .fs-normal-m
+    font-style normal
+
+@media $breakpoint-large
+  .i-l-up
+    font-style italic
+  .fs-normal-l-up
+    font-style normal

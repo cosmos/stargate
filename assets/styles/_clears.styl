@@ -1,0 +1,61 @@
+/*
+
+   CLEARFIX
+   http://tachyons.io/docs/layout/clearfix/
+
+*/
+
+/* Nicolas Gallaghers Clearfix solution
+   Ref: http://nicolasgallagher.com/micro-clearfix-hack/ */
+
+.cf:before,
+.cf:after
+  content " "
+  display table
+
+.cf
+  *zoom 1
+  &:after
+    clear both
+
+.cl
+  clear left
+
+.cr
+  clear right
+
+.cb
+  clear both
+
+.cn
+  clear none
+
+@media $breakpoint-medium
+  .cl-m-up
+    clear left
+  .cr-m-up
+    clear right
+  .cb-m-up
+    clear both
+  .cn-m-up
+    clear none
+
+@media $breakpoint-medium-only
+  .cl-m
+    clear left
+  .cr-m
+    clear right
+  .cb-m
+    clear both
+  .cn-m
+    clear none
+
+@media $breakpoint-large
+  .cl-l-up
+    clear left
+  .cr-l-up
+    clear right
+  .cb-l-up
+    clear both
+  .cn-l-up
+    clear none

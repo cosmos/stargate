@@ -1,100 +1,81 @@
+/*
+
+   Tachyons
+   COLOR VARIABLES
+
+   Grayscale
+   - Solids
+   - Transparencies
+   Colors
+   Utility
+
+*/
+
 :root
-  --white #FFFFFF
+  --black #000
+  --near-black #111
+  --dark-gray #333
+  --mid-gray #555
+  --gray #777
+  --silver #999
+  --light-silver #aaa
+  --moon-gray #ccc
+  --light-gray #eee
+  --near-white #f4f4f4
+  --white #fff
+
+  --transparent transparent
+
+ --black-90 rgba(0,0,0,.9)
+ --black-80 rgba(0,0,0,.8)
+ --black-70 rgba(0,0,0,.7)
+ --black-60 rgba(0,0,0,.6)
+ --black-50 rgba(0,0,0,.5)
+ --black-40 rgba(0,0,0,.4)
+ --black-30 rgba(0,0,0,.3)
+ --black-20 rgba(0,0,0,.2)
+ --black-10 rgba(0,0,0,.1)
+ --black-05 rgba(0,0,0,.05)
+ --black-025 rgba(0,0,0,.025)
+ --black-0125 rgba(0,0,0,.0125)
+
+ --white-90 rgba(255,255,255,.9)
+ --white-80 rgba(255,255,255,.8)
+ --white-70 rgba(255,255,255,.7)
+ --white-60 rgba(255,255,255,.6)
+ --white-50 rgba(255,255,255,.5)
+ --white-40 rgba(255,255,255,.4)
+ --white-30 rgba(255,255,255,.3)
+ --white-20 rgba(255,255,255,.2)
+ --white-10 rgba(255,255,255,.1)
+ --white-05 rgba(255,255,255,.05)
+ --white-025 rgba(255,255,255,.025)
+ --white-0125 rgba(255,255,255,.0125)
+
+  --dark-red #e7040f
+  --red #ff4136
+  --light-red #ff725c
+  --orange #ff6300
+  --gold #ffb700
+  --yellow #ffd700
+  --light-yellow #fbf1a9
+  --purple #5e2ca5
+  --light-purple #a463f2
+  --dark-pink #d5008f
+  --hot-pink #ff41b4
+  --pink #ff80cc
+  --light-pink #ffa3d7
+  --dark-green #137752
+  --green #19a974
+  --light-green #9eebcf
+  --navy #001b44
+  --dark-blue #00449e
+  --blue #357edd
+  --light-blue #96ccff
+  --lightest-blue #cdecff
+  --washed-blue #f6fffe
+  --washed-green #e8fdf5
+  --washed-yellow #fffceb
+  --washed-red #ffdfdf
+
   --link #40B3FF
-  
-  
-// Font-sizes
-$step-11-fs = 7.375rem
-$step-10-fs = 6.25rem
-$step-9-fs  = 5.125rem
-$step-8-fs  = 4.25rem
-$step-7-fs  = 3.625rem
-$step-6-fs  = 3rem
-$step-5-fs  = 2.5rem
-$step-4-fs  = 2rem
-$step-3-fs  = 1.75rem
-$step-2-fs  = 1.4375rem
-$step-1-fs  = 1.1875rem
-$step-0-fs  = 1rem
-$step--1-fs = 0.8125rem
-
-// Paragraph line-heights
-$step-4-lh-paragraph  = 1.25
-$step-3-lh-paragraph  = 1.285
-$step-2-lh-paragraph  = 1.217
-$step-1-lh-paragraph  = 1.263
-$step-0-lh-paragraph  = 1.375
-$step--1-lh-paragraph = 1.384
-
-// Heading line-heights
-$step-11-lh-heading = 1.084
-$step-10-lh-heading = 1.12
-$step-9-lh-heading  = 1.121
-$step-8-lh-heading  = 1.176
-$step-7-lh-heading  = 1.172
-$step-6-lh-heading  = 1.166
-$step-5-lh-heading  = 1.2
-$step-4-lh-heading  = 1.25
-$step-3-lh-heading  = 1.285
-$step-2-lh-heading  = 1.217
-$step-1-lh-heading  = 1.263
-$step-0-lh-heading  = 1.375
-$step--1-lh-heading = 1.384
-
-// Regular weights
-$step-5-fw-regular  = 260
-$step-4-fw-regular  = 280
-$step-3-fw-regular  = 300
-$step-2-fw-regular  = 320
-$step-1-fw-regular  = 340
-$step-0-fw-regular  = 360
-$step--1-fw-regular = 380
-
-// Bold weights
-$step-7-fw-bold  = 700
-$step-6-fw-bold  = 700
-$step-5-fw-bold  = 750
-$step-4-fw-bold  = 700
-$step-3-fw-bold  = 700
-$step-2-fw-bold  = 700
-$step-1-fw-bold  = 700
-$step-0-fw-bold  = 700
-$step--1-fw-bold = 700
-
-// Heavy weights
-$step-11-fw-heavy = 700
-$step-10-fw-heavy = 700
-$step-9-fw-heavy  = 700
-$step-8-fw-heavy  = 700
-$step-7-fw-heavy  = 700
-$step-6-fw-heavy  = 700
-$step-5-fw-heavy  = 700
-
-// Regular letter-spacing
-$step-5-ls-regular  = -0.025em
-$step-4-ls-regular  = -0.02em
-$step-3-ls-regular  = -0.015em
-$step-2-ls-regular  = -0.01em
-$step-1-ls-regular  = -0.005em
-$step-0-ls-regular  = 0
-$step--1-ls-regular = 0.001em
-
-// Bold letter-spacing
-$step-7-ls-bold  = -0.03em
-$step-6-ls-bold  = -0.035em
-$step-5-ls-bold  = -0.03em
-$step-4-ls-bold  = -0.025em
-$step-3-ls-bold  = -0.02em
-$step-2-ls-bold  = -0.01em
-$step-1-ls-bold  = -0.005em
-$step-0-ls-bold  = 0
-$step--1-ls-bold = 0
-
-// Heavy letter-spacing
-$step-11-ls-heavy = -0.035em
-$step-10-ls-heavy = -0.03em
-$step-9-ls-heavy  = -0.025em
-$step-8-ls-heavy  = -0.02em
-$step-7-ls-heavy  = -0.02em
-$step-6-ls-heavy  = -0.015em
-$step-5-ls-heavy  = -0.01em

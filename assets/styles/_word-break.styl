@@ -1,0 +1,36 @@
+/*
+
+  WORD BREAK
+
+   Base:
+     word = word-break
+
+   Media Query Extensions:
+     -m-up = medium upwards
+     -m  = medium
+     -l-up = large
+
+*/
+
+.word-normal { word-break: normal; }
+.word-wrap { word-break: break-all; }
+.word-nowrap { word-break: keep-all; }
+
+@media $breakpoint-medium {
+  .word-normal-m-up { word-break: normal; }
+  .word-wrap-m-up { word-break: break-all; }
+  .word-nowrap-m-up { word-break: keep-all; }
+}
+
+@media $breakpoint-medium-only {
+  .word-normal-m { word-break: normal; }
+  .word-wrap-m { word-break: break-all; }
+  .word-nowrap-m { word-break: keep-all; }
+}
+
+@media $breakpoint-large {
+  .word-normal-l-up{ word-break: normal; }
+  .word-wrap-l-up{ word-break: break-all; }
+  .word-nowrap-l-up{ word-break: keep-all; }
+}
+

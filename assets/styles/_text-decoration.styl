@@ -1,0 +1,35 @@
+/*
+
+   TEXT DECORATION
+   Docs: http://tachyons.io/docs/typography/text-decoration/
+
+
+   Media Query Extensions:
+     -m-up = medium upwards
+     -m  = medium
+     -l-up = large
+
+*/
+
+.strike       { text-decoration: line-through; }
+.underline    { text-decoration: underline; }
+.no-underline { text-decoration: none; }
+
+
+@media $breakpoint-medium {
+  .strike-m-up       { text-decoration: line-through; }
+  .underline-m-up    { text-decoration: underline; }
+  .no-underline-m-up { text-decoration: none; }
+}
+
+@media $breakpoint-medium-only {
+  .strike-m       { text-decoration: line-through; }
+  .underline-m    { text-decoration: underline; }
+  .no-underline-m { text-decoration: none; }
+}
+
+@media $breakpoint-large {
+  .strike-l-up      { text-decoration: line-through; }
+  .underline-l-up{    text-decoration: underline; }
+  .no-underline-l-up{ text-decoration: none; }
+}

@@ -1,0 +1,34 @@
+/*
+
+   WHITE SPACE
+
+   Media Query Extensions:
+     -m-up = medium upwards
+     -m  = medium
+     -l-up = large
+
+*/
+
+
+.ws-normal { white-space: normal; }
+.nowrap { white-space: nowrap; }
+.pre { white-space: pre; }
+
+@media $breakpoint-medium {
+  .ws-normal-m-up { white-space: normal; }
+  .nowrap-m-up { white-space: nowrap; }
+  .pre-m-up { white-space: pre; }
+}
+
+@media $breakpoint-medium-only {
+  .ws-normal-m { white-space: normal; }
+  .nowrap-m { white-space: nowrap; }
+  .pre-m { white-space: pre; }
+}
+
+@media $breakpoint-large {
+  .ws-normal-l-up{ white-space: normal; }
+  .nowrap-l-up{ white-space: nowrap; }
+  .pre-l-up{ white-space: pre; }
+}
+

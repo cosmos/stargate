@@ -1,153 +1,91 @@
-/* 
+// Not sure why this won't generate properly using a loop?
+:root
+  --font-size--1: $font-size-step['-1']
+  --font-size-0: $font-size-step['0']
+  --font-size-1: $font-size-step['1']
+  --font-size-2: $font-size-step['2']
+  --font-size-3: $font-size-step['3']
+  --font-size-4: $font-size-step['4']
+  --font-size-5: $font-size-step['5']
+  --font-size-6: $font-size-step['6']
+  --font-size-7: $font-size-step['7']
 
-Steps: -1 ~ 11
-* repeated declaractions: font-size and line-height
+:root
+  for size in -1...8
+    rfs($font-size-step['' + size], ('--r-font-size-%s' % size))
 
-letter-spacing: 2 variants
+/*
 
-Display: 5 ~ 11
-Heading: -1 ~ 7
-Subtitle: -1 ~ 5
-Paragraph: -1 ~ 4
-Overline: -1 ~ 1
-Code: -1 ~ 4
+   TYPE SCALE
+   Docs: http://tachyons.io/docs/typography/scale/
 
-usage:
-.section-title
-  display-10()
+   Base:
+    f = font-size
 
+   Modifiers
+     1 = 1st step in size scale
+     2 = 2nd step in size scale
+     3 = 3rd step in size scale
+     4 = 4th step in size scale
+     5 = 5th step in size scale
+     6 = 6th step in size scale
+     7 = 7th step in size scale
+
+   Media Query Extensions:
+     -m-up = medium upwards
+     -m  = medium
+     -l-up = large
 */
 
-step-11()
-  font-size 7.375rem
-  line-height 1.084
+/* Type scale */
+/* Modular type scale + relative weights */
+for size in -1...8
+  .rf{size}
+    font-size 'var(--r-font-size-%s)' % size
+  .f{size}
+    font-size 'var(--font-size-%s)' % size
+  .f{size},
+  .rf{size}
+    if size <= 3
+      font-weight 'var(--font-weight-n-%s)' % size
+      letter-spacing 'var(--letter-spacing-n-%s)' % size
+    &.b
+      font-weight 'var(--font-weight-b-%s)' % size
+      letter-spacing 'var(--letter-spacing-b-%s)' % size
 
-step-10()
-  font-size 6.25rem
-  line-height 1.12
+@media $breakpoint-medium
+  for size in -1...8
+    .rf{size}-m-up
+      font-size 'var(--r-font-size-%s)' % size
+    .f{size}-m-up
+      font-size: $font-size-step['' + size]
+      if size <= 3
+        font-weight 'var(--font-weight-n-%s)' % size
+        letter-spacing 'var(--letter-spacing-n-%s)' % size
+      &.b
+        font-weight 'var(--font-weight-b-%s)' % size
+        letter-spacing 'var(--letter-spacing-b-%s)' % size
 
-step-09()
-  font-size 5.125rem
-  line-height 1.121
+@media $breakpoint-medium-only
+  for size in -1...8
+    .f{size}-m
+      font-size: $font-size-step['' + size]
+      if size <= 3
+        font-weight 'var(--font-weight-n-%s)' % size
+        letter-spacing 'var(--letter-spacing-n-%s)' % size
+      &.b
+        font-weight 'var(--font-weight-b-%s)' % size
+        letter-spacing 'var(--letter-spacing-b-%s)' % size
 
-step-08()
-  font-size 4.25rem
-  line-height 1.176
-
-step-07()
-  font-size 3.625rem
-  line-height 1.172
-
-step-06()
-  font-size 3rem
-  line-height 1.166
-
-step-05()
-  font-size 2.5rem
-  line-height 1.2
-
-step-04()
-  font-size 2rem
-  line-height 1.25
-
-step-03()
-  font-size 1.75rem
-  line-height 1.285
-
-step-02()
-  font-size 1.437rem
-  line-height 1.217
-
-step-01()
-  font-size 1.1875rem
-  line-height 1.263
-
-step-00()
-  font-size 1rem
-  line-height 1.375
-
-step--1()
-  font-size 0.8125rem
-  line-height 1.384
-
-/* DISPLAY */
-
-display-05()
-  step-05()
-  font-weight 900
-  letter-spacing -0.01em
-
-display-06()
-  step-06()
-  font-weight 900
-  letter-spacing -0.015em
-
-display-07()
-  step-07()
-  font-weight 900
-  letter-spacing -0.02em
-
-display-08()
-  step-08()
-  font-weight 900
-  letter-spacing -0.02em
-
-display-09()
-  font-weight 900
-  step-09()
-  letter-spacing -0.025em
-
-display-10()
-  step-10()
-  font-weight 900
-  letter-spacing -0.03em
-
-display-11()
-  step-11()
-  font-weight 900
-  letter-spacing -0.035em
-
-/* HEADING */
-
-heading--1()
-  step--1()
-  font-weight bold
-
-heading-00()
-  step-00()
-  font-weight bold
-
-heading-01()
-  step-01()
-  font-weight bold
-  letter-spacing -0.005em
-
-heading-02()
-  step-02()
-  font-weight bold
-  letter-spacing -0.01em
-
-heading-03()
-  step-03()
-  font-weight bold
-  letter-spacing -0.02em
-
-heading-04()
-  step-04()
-  font-weight bold
-  letter-spacing -0.025em
-
-heading-05()
-  step-05()
-  font-weight bold
-  letter-spacing -0.03em
-
-heading-06()
-  step-06()
-  font-weight bold
-  letter-spacing -0.035em
-
-heading-07()
-  step-07()
-  font-weight bold
-  letter-spacing -0.03em
+@media $breakpoint-large
+  for size in -1...8
+    .rf{size}-l-up
+      font-size 'var(--r-font-size-%s)' % size
+    .f{size}-l-up
+      font-size: $font-size-step['' + size]
+      if size <= 3
+        font-weight 'var(--font-weight-n-%s)' % size
+        letter-spacing 'var(--letter-spacing-n-%s)' % size
+      &.b
+        font-weight 'var(--font-weight-b-%s)' % size
+        letter-spacing 'var(--letter-spacing-b-%s)' % size
