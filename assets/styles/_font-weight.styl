@@ -1,9 +1,9 @@
 //  This doesn't seem to be working with RFS?
 :root
   for size in -1...8
-    rfs((690 + size * 30), '--font-weight-b-%s' % size)
+    rfs((690 + size * 30), ('--font-weight-b-%s' % size))
     if size <= 3
-      rfs((356 - size * 24), '--font-weight-n-%s' % size)
+      rfs((356 - size * 24), ('--font-weight-n-%s' % size))
 
 /*
 

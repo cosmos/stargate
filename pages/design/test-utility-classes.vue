@@ -7,7 +7,7 @@
         <div class="f-1 rf1-m-up fw5 lh-title ttu tracked">
           Welcome to Cosmos
         </div>
-        <h1 class="title rf7 b lh-solid mt5 mb0">
+        <h1 class="title rf7 b lh-title mt5 mb0">
           The open economy for everyone
         </h1>
         <p class="rf2 lh-copy measure mt7 mb8 center">
@@ -38,4 +38,16 @@ export default {
 .hero
   .title
     max-width 10em
+
+
+// class .rf* --> font-size
+// class .b --> font-weight + letter-spacing (determined by size)
+// class .lh-copy/.lh-title/.lh-solid --> line-height
+//
+// .display-7-title --> font-size + font-weight + letter-spacing + line-height
+// .display-7-solid
+//
+// .text-3-solid --> font-size + font-weight + letter-spacing + line-height
+// .text-3-title
+// .text-3-copy
 </style>

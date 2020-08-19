@@ -1,8 +1,8 @@
 :root
   for size in -1...8
-    rfs(size * -0.005 * 1em, '--letter-spacing-b-%s' % size)
+    rfs((size * -0.005 * 1em), ('--letter-spacing-b-%s' % size))
     if size <= 3
-      rfs((size * -0.01 * 1em), '--letter-spacing-n-%s' % size)
+      rfs((size * -0.01 * 1em), ('--letter-spacing-n-%s' % size))
 
 /*
 

@@ -54,7 +54,7 @@
 
 */
 
-for size in 0...10
+for size in 0...13
   .pa{size}
     padding 'var(--spacing-%s)' % (size > 0 ? size : none)
   .pl{size}
@@ -89,7 +89,7 @@ for size in 0...10
     margin-right 'var(--spacing-%s)' % (size > 0 ? size : none)
 
 @media $breakpoint-medium
-  for size in 0...10
+  for size in 0...13
     .pa{size}-m-up
       padding 'var(--spacing-%s)' % (size > 0 ? size : none)
     .pl{size}-m-up
@@ -125,7 +125,7 @@ for size in 0...10
 
 
 @media $breakpoint-medium-only
-  for size in 0...10
+  for size in 0...13
     .pa{size}-m
       padding 'var(--spacing-%s)' % (size > 0 ? size : none)
     .pl{size}-m
@@ -160,7 +160,7 @@ for size in 0...10
       margin-right 'var(--spacing-%s)' % (size > 0 ? size : none)
 
 @media $breakpoint-large
-  for size in 0...10
+  for size in 0...13
     .pa{size}-l-up
       padding 'var(--spacing-%s)' % (size > 0 ? size : none)
     .pl{size}-l-up

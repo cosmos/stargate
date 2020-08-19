@@ -49,9 +49,13 @@ for size in -1...8
     if size <= 3
       font-weight 'var(--font-weight-n-%s)' % size
       letter-spacing 'var(--letter-spacing-n-%s)' % size
+      &.lh-copy
+        line-height 'var(--line-height-copy-%s)' % size
     &.b
       font-weight 'var(--font-weight-b-%s)' % size
       letter-spacing 'var(--letter-spacing-b-%s)' % size
+    &.lh-title
+      line-height 'var(--line-height-title-%s)' % size
 
 @media $breakpoint-medium
   for size in -1...8
