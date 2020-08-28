@@ -132,7 +132,7 @@
     <div id="intro" class="section section-intro">
       <div class="section-container">
         <div class="container">
-          <div class="section-title f6 b lh-title">A new era for Cosmos</div>
+          <div class="section-title">A new era for Cosmos</div>
           <div class="section-subtitle">
             The biggest event in the ecosystem since the launch of the Cosmos
             Hub.
@@ -869,8 +869,6 @@ main
 
 .section-container
   position relative
-  padding-left 1rem
-  padding-right 1rem
   max-width 96rem
   margin 0 auto
   .container
@@ -1116,9 +1114,12 @@ main
   .section-title
     grid-column 1 / span 12
     grid-row 1 / 2
+    font-weight 900
+    font-size 100px
+    line-height 112%
+    letter-spacing -0.03em
     color #FFFFFF
     max-width 50rem
-    display-10()
   .section-subtitle
     display flex
     justify-content flex-end
@@ -1149,7 +1150,10 @@ main
     margin-top 3rem
     a
       display inline-block
-      heading-02()
+      font-weight bold
+      font-size 1.4375rem
+      line-height 1.217
+      letter-spacing -0.01em
       border-radius 6px
       padding 22px 0
       &:hover
@@ -1173,10 +1177,13 @@ main
     grid-row 2
     margin-top 3rem
     margin-bottom 3rem
+    font-weight 900
+    font-size 5.125rem
+    line-height 1.121
+    letter-spacing -0.025em
     color #FFFFFF
     grid-column 6 / span 7
     text-align left
-    display-09()
   .section-statement
     grid-row 3
     grid-column 6 / span 7
@@ -1276,10 +1283,13 @@ main
     grid-column 1 / span 5
     grid-row 2 / 3
     margin-top 3rem
+    font-weight 900
+    font-size 5.125rem
+    line-height 1.121
+    letter-spacing -0.025em
     color #FFFFFF
     text-align left
     max-width 50rem
-    display-09()
   .section-statement
     position relative
     z-index 1
@@ -1444,7 +1454,10 @@ main
     margin-top 2.25rem
     a
       display inline-block
-      heading-01()
+      font-weight bold
+      font-size 19px
+      line-height 1.263
+      letter-spacing -0.005em
       border-radius 6px
 
 .section-roadmap
@@ -1453,10 +1466,13 @@ main
   .section-title
     margin-top 3rem
     margin-bottom 3rem
+    font-weight 900
+    font-size 6.25rem
+    line-height 1.12
     text-align right
+    letter-spacing -0.03em
     color #FFFFFF
     grid-column 5 / span 8
-    display-10()
   .section-milestones
     grid-column 1 / 5
     grid-row 3 / 6
@@ -1472,7 +1488,10 @@ main
       margin-top 1rem
       a
         display inline-block
-        heading-01()
+        font-weight bold
+        font-size 1.1875rem
+        line-height 1.26
+        letter-spacing -0.005em
         border-radius 0.375rem
         padding 20px 0px
   .section-row
@@ -1602,8 +1621,11 @@ main
   .section-title
     margin-top 3rem
     grid-column 1/7
+    font-weight 900
+    font-size 5.125rem
+    line-height 1.121
+    letter-spacing -0.025em
     color #FFFFFF
-    display-09()
   .section-statement
     align-self end
     grid-column 6 / span 7
@@ -1653,12 +1675,15 @@ main
   .section-header
     grid-column 6 / span 7
   .section-title
+    font-weight 900
+    font-size 3.625rem
+    line-height 1.172
+    letter-spacing -0.02em
     color #FFFFFF
     width 379px
     text-align left
     grid-column 1 / 4
     grid-row 1
-    display-07()
   .content
     grid-column 6 / span 7
     grid-row 2
@@ -1751,7 +1776,9 @@ main
       bottom 0
       right 0
       a
-        heading-00()
+        font-weight bold
+        font-size 1rem
+        line-height 137.5%
         padding 0.8125rem 0
         border-radius 0.5rem
 
@@ -1829,11 +1856,6 @@ main
         letter-spacing -0.005em
         color #989BB9
 
-@media screen and (max-width: 1919px)
-  .section-container
-    padding-left 8rem
-    padding-right 8rem
-
 @media screen and (max-width: 1438px)
   .section-videos
     .container
@@ -1847,10 +1869,6 @@ main
     padding-top 6rem
     padding-bottom 6rem
 
-  .section-container
-    padding-left 6rem
-    padding-right 6rem
-
   .section-features
     .features-graphics
       font-size 1.25rem
@@ -1861,11 +1879,6 @@ main
   .section
     padding-top 4rem
     padding-bottom 4rem
-
-  .section-container
-    padding-left 4rem
-    padding-right 4rem
-    display block
 
   .section-hero
     display grid
@@ -1914,7 +1927,7 @@ main
     overflow hidden
     .section-title
       grid-column 1 / 12
-      display-07()
+      font-size 4rem
     .section-statement
       grid-column 1 / 12
     .data-container
@@ -1932,7 +1945,7 @@ main
     overflow hidden
     .section-title
       grid-column 1 / 12
-      display-07()
+      font-size 4rem
     .section-statement
       grid-column 1 / 12
       margin-top 4rem
@@ -1951,7 +1964,7 @@ main
     .section-title
       grid-column 1 / span 12
       text-align left
-      display-08()
+      font-size 4rem
     .section-row
       grid-column 1 / span 12
     .section-milestones
@@ -1964,7 +1977,13 @@ main
 
   .section-contributors
     .section-title
-      display-07()
+      margin-top 3rem
+      grid-column 1/7
+      font-weight 900
+      font-size 5.125rem
+      line-height 1.121
+      letter-spacing -0.025em
+      color #FFFFFF
     .section-statement
       grid-column 1/12
       margin-top 4rem
@@ -1979,7 +1998,7 @@ main
     .section-title
       grid-row 2
       margin-top 6rem
-      display-05()
+      font-size 4rem
     .content
       grid-row 3
       grid-column 1/13
@@ -2006,9 +2025,7 @@ main
       line-height 1.375
 
   .section-container
-    padding-left 1.5rem
-    padding-right 1.5rem
-    padding-top 1.5rem
+    padding-top var(--spacing-6)
 
   .section-hero
     .hero-graphics
@@ -2044,19 +2061,12 @@ main
     .section-status
       margin-top 3rem
 
-@media screen and (max-width: 640px)
-  .section-intro, .sectio-roadmap
-    .section-title
-      display-05()
-
-  .section-features, .section-prepare, .section-contributors
-    .section-title
-      display-05()
-
 @media screen and (max-width: 576px)
   .section
     .section-title
       margin-top 3rem
+      font-size 2.5rem
+      line-height 1.2
     .section-subtitle
       font-size 1.4375rem
       line-height 1.217
@@ -2309,8 +2319,4 @@ main
   .section
     padding-top 8rem
     padding-bottom 8rem
-
-  .section-container
-    padding-left 12rem
-    padding-right 12rem
 </style>
