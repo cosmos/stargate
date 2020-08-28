@@ -947,7 +947,6 @@ main
     .headings
       width 100%
       .title
-        margin 0
         svg
           width 100%
           height auto
@@ -1088,7 +1087,6 @@ main
       padding-bottom 42%
       left 29%
       top 20%
-      // top 60vh
       border-radius 50%
       background #FFFFFF
       box-shadow 0px 0px 2.5em #263CFF, 0px 0px 8em #2D74FF
@@ -1098,7 +1096,6 @@ main
       padding-bottom 126%
       left -13%
       top 23.5%
-      // top 68vh
       border-radius 50%
       background radial-gradient(84.49% 66.22% at 50% 59.94%, #000000 5.73%, #030419 71.48%, #0E1247 81.25%, #36299B 91.15%)
       box-shadow 0px -4.5em 4em rgba(28, 0, 238, 0.17), 0px -0.625em 0.5em rgba(92, 70, 255, 0.11), inset 0px 3.5em 3.5em rgba(48, 44, 245, 0.17), inset 0px 0.375em 0.75em rgba(104, 67, 252, 0.23)
@@ -1114,10 +1111,7 @@ main
   .section-title
     grid-column 1 / span 12
     grid-row 1 / 2
-    font-weight 900
-    font-size 100px
-    line-height 112%
-    letter-spacing -0.03em
+    title(7)
     color #FFFFFF
     max-width 50rem
   .section-subtitle
@@ -1159,12 +1153,9 @@ main
       &:hover
         color inherit
   .title
-    font-weight 900
-    font-size 6.25rem
-    line-height 112%
+    title(7)
     display flex
     align-items center
-    letter-spacing -0.03em
     color var(--white)
 
 .section-features
@@ -1175,12 +1166,9 @@ main
     grid-column 6 / span 7
   .section-title
     grid-row 2
-    margin-top 3rem
-    margin-bottom 3rem
-    font-weight 900
-    font-size 5.125rem
-    line-height 1.121
-    letter-spacing -0.025em
+    margin-top var(--spacing-8)
+    margin-bottom var(--spacing-8)
+    title(6)
     color #FFFFFF
     grid-column 6 / span 7
     text-align left
@@ -1205,16 +1193,12 @@ main
       border-top 1px dashed #282B53
       &__overline
         margin-top 1rem
-        font-weight 600
-        font-size 16px
-        line-height 137.5%
-        letter-spacing 0.08em
-        text-transform uppercase
+        overline(0)
         color #989BB9
       &__heading
         margin-top 16px
         font-weight bold
-        font-size 58px
+        font-size 3.625rem
         line-height 117.2%
         letter-spacing -0.03em
         color #CCD1FF
@@ -1283,10 +1267,7 @@ main
     grid-column 1 / span 5
     grid-row 2 / 3
     margin-top 3rem
-    font-weight 900
-    font-size 5.125rem
-    line-height 1.121
-    letter-spacing -0.025em
+    title(6)
     color #FFFFFF
     text-align left
     max-width 50rem
@@ -1376,7 +1357,7 @@ main
   &.headroom--frozen
     position static
   .nav
-    overflow scroll
+    overflow-x auto
     white-space nowrap
     font-size 1.1875rem
     line-height 1.263
@@ -1466,11 +1447,8 @@ main
   .section-title
     margin-top 3rem
     margin-bottom 3rem
-    font-weight 900
-    font-size 6.25rem
-    line-height 1.12
+    title(7)
     text-align right
-    letter-spacing -0.03em
     color #FFFFFF
     grid-column 5 / span 8
   .section-milestones
@@ -1621,10 +1599,7 @@ main
   .section-title
     margin-top 3rem
     grid-column 1/7
-    font-weight 900
-    font-size 5.125rem
-    line-height 1.121
-    letter-spacing -0.025em
+    title(6)
     color #FFFFFF
   .section-statement
     align-self end
@@ -1979,10 +1954,7 @@ main
     .section-title
       margin-top 3rem
       grid-column 1/7
-      font-weight 900
-      font-size 5.125rem
-      line-height 1.121
-      letter-spacing -0.025em
+      title(6)
       color #FFFFFF
     .section-statement
       grid-column 1/12
@@ -2147,9 +2119,9 @@ main
     .data-container
       margin-top 3rem
       .data-item
-        &__overline
-          font-size 0.8125rem
-          line-height 1.384
+        // &__overline
+        //   font-size 0.8125rem
+        //   line-height 1.384
         &__heading
           font-size 2.5rem
           line-height 1.2
