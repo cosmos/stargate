@@ -39,7 +39,6 @@
             </div>
           </div>
           <div class="bottom">
-            <!-- <code class="bottom__countdown">T minus {{ countdownTimer }}d</code> -->
             <transition name="fade" mode="out-in">
               <div
                 v-if="state === 'success'"
@@ -524,7 +523,7 @@
               allowfullscreen
             />
           </div>
-          <div class="text">
+          <div class="text measure-narrow">
             <div class="text__caption">
               June 23
             </div>
@@ -589,7 +588,6 @@
 import querystring from 'querystring'
 import { orderBy } from 'lodash'
 import Headroom from 'headroom.js'
-// import moment from 'moment'
 import axios from 'axios'
 import IconIbc from '~/components/IconIbc.vue'
 import IconSdk from '~/components/IconSdk.vue'
@@ -714,9 +712,6 @@ export default {
     }
   },
   computed: {
-    // countdownTimer() {
-    //   return moment('20200729', 'YYYYMMDD').diff(moment(), 'days')
-    // },
     progressTotal() {
       const progressSum = this.milestoneList
         .map((i) => Math.floor(i.progress))
@@ -960,16 +955,6 @@ main
     .bottom
       margin-top 15%
       width 100%
-      &__countdown
-        font-size 19px
-        line-height 1.579
-        letter-spacing -0.005em
-        color #CCD1FF
-        border 1px solid rgba(255, 255, 255, 0.1)
-        border-radius 0.5rem
-        padding 0.25rem 0.75rem
-      &__countdown + .bottom__form
-        margin 3rem auto 0
       &__get-notified
         display block
         margin 3rem auto 1rem
@@ -1196,7 +1181,7 @@ main
         overline(0)
         color #989BB9
       &__heading
-        margin-top 16px
+        margin-top 1rem
         font-weight bold
         font-size 3.625rem
         line-height 117.2%
@@ -1214,21 +1199,16 @@ main
     grid-row 5
     align-self center
     max-width 24em
-    font-size 1rem
-    line-height 1.625
-    color #989BB9
     &__icon
       width 3em
       height 3em
     &__title
       margin-top 1.5rem
-      font-weight bold
-      font-size 1.75rem
-      line-height 1.285
-      letter-spacing -0.02em
+      title(2)
       color #FFFFFF
     &__description
       margin-top 1rem
+      color #989BB9
   .grid-container
     margin-top 20%
     display grid
@@ -1336,7 +1316,7 @@ main
       &__description
         position relative
         margin-top 1rem
-        font-size 19px
+        font-size 1.1875rem
         line-height 1.579
         letter-spacing -0.005em
         color #989BB9
@@ -1436,7 +1416,7 @@ main
     a
       display inline-block
       font-weight bold
-      font-size 19px
+      font-size 1.1875rem
       line-height 1.263
       letter-spacing -0.005em
       border-radius 6px
@@ -1528,7 +1508,7 @@ main
         flex-direction column
         align-items flex-end
         .h3
-          font-size 16px
+          font-size 1rem
           line-height 1.375
           display flex
           align-items center
@@ -1574,17 +1554,12 @@ main
       justify-content space-between
       border-bottom 1px solid #282B53
       &__title
-        font-weight bold
-        font-size 1.4375rem
-        line-height 121.7%
-        letter-spacing -0.01em
+        title(1)
         color #CCD1FF
         transition color 0.1s ease-out
       &__date
-        font-size 1.1875rem
-        line-height 126.3%
+        title(0)
         text-align right
-        letter-spacing -0.005em
         color #989BB9
         transition color 0.1s ease-out, transform 0.15s ease-out
       &:hover .section-list__item__title,
@@ -1620,10 +1595,7 @@ main
       justify-content space-between
       border-bottom 1px solid #282B53
       &__title
-        font-weight bold
-        font-size 1.4375rem
-        line-height 121.7%
-        letter-spacing -0.01em
+        title(1)
         color #CCD1FF
         transition color .1s ease-out
         &__role
@@ -1633,10 +1605,11 @@ main
           padding-left 0.5rem
           vertical-align bottom
       &__date
-        font-size 1.4375rem
-        line-height 121.3%
+        // font-size 1.4375rem
+        // line-height 121.3%
+        // letter-spacing -0.005em
+        title(0)
         text-align right
-        letter-spacing -0.005em
         color #989BB9
         transition color 0.1s ease-out, transform 0.15s ease-out
       &:hover .section-list__item__title,
@@ -1695,15 +1668,11 @@ main
           color #989BB9
         &__title
           margin-top 0.75rem
-          font-weight bold
-          font-size 1.75rem
-          line-height 1.285
-          letter-spacing -0.02em
+          title(2)
           color #FFFFFF
         &__description
           margin-top 0.75rem
-          font-size 1rem
-          line-height 1.375
+          paragraph(0)
           color #989BB9
 
 .section-videos
@@ -1728,20 +1697,15 @@ main
       height 100%
       position absolute
   .text
-    text-align left
-    width 373px
     grid-column 9 / span 4
     position relative
     &__caption
-      font-size 16px
+      font-size 1rem
       line-height 1.625
       color #989BB9
     &__title
       margin-top 8px
-      font-weight bold
-      font-size 2rem
-      line-height 125%
-      letter-spacing -0.025em
+      title(3)
       color #FFFFFF
     &__cta
       display flex
@@ -1809,26 +1773,17 @@ main
         height 1.5rem
         transition transform .25s ease-out
       &__caption
-        font-weight 600
-        font-size 16px
-        line-height 1.375
-        letter-spacing 0.08em
-        text-transform uppercase
+        overline(0)
         color #989BB9
         transition transform .25s ease-out
       &__title
         margin-top 12px
-        font-weight bold
-        font-size 32px
-        line-height 125%
-        letter-spacing -0.025em
+        title(2)
         color #FFFFFF
         transition transform .25s ease-out
       &__description
         margin-top 12px
-        font-size 19px
-        line-height 1.579
-        letter-spacing -0.005em
+        paragraph(1)
         color #989BB9
 
 @media screen and (max-width: 1438px)
@@ -1951,15 +1906,9 @@ main
       grid-column 1 / span 12
 
   .section-contributors
-    .section-title
-      margin-top 3rem
-      grid-column 1/7
-      title(6)
-      color #FFFFFF
     .section-statement
       grid-column 1/12
       margin-top 4rem
-      margin-left 0rem
     .section-list
       margin-top 0
       grid-column 1 / span 12
@@ -2119,9 +2068,6 @@ main
     .data-container
       margin-top 3rem
       .data-item
-        // &__overline
-        //   font-size 0.8125rem
-        //   line-height 1.384
         &__heading
           font-size 2.5rem
           line-height 1.2
@@ -2135,12 +2081,6 @@ main
         &:nth-child(odd)
           grid-column 1/span 12
           grid-template-columns repeat(1, 1fr)
-
-    .ibc-item__title,
-    .grid-container .grid-item__title
-      font-size 1.4375rem
-      line-height 1.217
-      letter-spacing -0.01em
 
   .section-prepare
     .section-statement
@@ -2183,11 +2123,7 @@ main
     .section-list__item
       padding-top 1.25rem
       padding-bottom 1.25rem
-      &__title
-        font-size 1rem
-        line-height 1.375
-      &__role,
-      &__date
+      &__role
         font-size 0.8125rem
         line-height 1.384
 
@@ -2199,14 +2135,6 @@ main
     margin-top 2rem
     .articles-wrapper .articles-item
       padding 1.5rem
-      &__title
-        font-size 1.1875rem
-        line-height 1.263
-        letter-spacing -0.01em
-      &__description
-        font-size 0.8125rem
-        line-height 1.384
-        letter-spacing 0.001em
 
   .section-videos
     .section-header
@@ -2218,10 +2146,6 @@ main
         font-size 0.8125rem
         line-height 1.384
         letter-spacing 0.001em
-      &__title
-        font-size 1.1875rem
-        line-height 1.263
-        letter-spacing -0.01em
 
   .section-community
     .cards
@@ -2230,17 +2154,6 @@ main
         height auto
         min-height 18rem
         border-radius 0.75rem
-        &__caption
-          font-size 0.8125rem
-          line-height 1.384
-        &__title
-          font-size 1.4375rem
-          line-height 1.217
-          letter-spacing -0.01em
-        &__description
-          font-size 1rem
-          line-height 1.375
-          letter-spacing 0
         &__disclosure
           top 1rem
           right 1rem
