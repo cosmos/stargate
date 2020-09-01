@@ -39,64 +39,9 @@
             </div>
           </div>
           <div class="bottom">
-            <!-- <code class="bottom__countdown">T minus {{ countdownTimer }}d</code> -->
-            <transition name="fade" mode="out-in">
-              <div
-                v-if="state === 'success'"
-                key="success"
-                class="bottom__state"
-              >
-                <div class="bottom__get-notified">
-                  Almost there&hellip;
-                </div>
-                <h2 class="bottom__state__success">
-                  Check your inbox and confirm your email address
-                </h2>
-              </div>
-              <div
-                v-else-if="state === 'error'"
-                key="error"
-                class="bottom__state"
-              >
-                <div class="bottom__get-notified">
-                  Something went wrong
-                </div>
-                <h2 class="bottom__state__error">
-                  Uh oh! Refresh the page and try again.
-                </h2>
-              </div>
-              <div v-else key="default" class="bottom__form">
-                <label class="bottom__get-notified" for="field-email">
-                  Get notified when testnets start
-                </label>
-                <form
-                  :action="url"
-                  method="POST"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  @submit.prevent="actionSubmitEmail"
-                >
-                  <div class="bottom__form__input">
-                    <input
-                      id="field-email"
-                      v-model="email"
-                      name="fields[email]"
-                      class="bottom__form__input__input"
-                      type="email"
-                      placeholder="Your email"
-                      required="required"
-                    />
-                    <button type="submit" class="bottom__form__input__button">
-                      <icon-arrow-right
-                        class="bottom__form__input__icon"
-                        @click="actionSubmitEmail"
-                      />
-                      <span class="sr-only">Submit</span>
-                    </button>
-                  </div>
-                </form>
-              </div>
-            </transition>
+            <a v-scroll-to="'#testnets'">
+              <div role="button" class="button">Join testnets</div>
+            </a>
           </div>
         </div>
       </div>
@@ -113,7 +58,7 @@
               <a v-scroll-to="'#features'">Features</a>
             </li>
             <li class="nav__list__item">
-              <a v-scroll-to="'#prepare'">Prepare</a>
+              <a v-scroll-to="'#testnets'">Testnets</a>
             </li>
             <li class="nav__list__item">
               <a v-scroll-to="'#roadmap'">Roadmap</a>
@@ -263,77 +208,202 @@
       </div>
     </div>
 
-    <div id="prepare" class="section section-prepare">
+    <div id="testnets" class="section section-testnets">
       <div class="section-container">
         <div class="container">
-          <div class="section-header">Prepare</div>
+          <div class="section-header">Tesnets</div>
+          <img
+            src="~/assets/illustrations/multiple-zones.svg"
+            class="section-graphics"
+          />
           <div class="section-title">Get set for testnets</div>
           <div class="section-statement">
             <p>
-              The following services will be affected by the upgrades with
-              Stargate. Make sure to schedule time in August for integration
-              testing on the testnet.
-            </p>
-            <p>
-              More detailed instructions and guidelines on how services can
-              prepare for the upgrade will be published in August.
+              Validators, wallets, block explorers, exchanges and zone
+              developers are among the primary services affected by the upgrades
+              with Stargate. Make sure to schedule time for integration testing
+              on the various testnets.
             </p>
           </div>
-          <div class="grid-container">
-            <div class="grid-item">
-              <prepare-hex-bg class="grid-item__hex" />
-              <div class="grid-item__icon">
-                <icon-validator />
+          <div class="section-status">
+            <div class="section-status__title">Preparing to upgrade</div>
+          </div>
+          <div class="section-tabs">
+            <tm-tabs>
+              <tm-tab name="Validators" :selected="true">
+                <div class="section-tabs__text">
+                  <p class="section-tabs__text__paragraph">
+                    Validators of chains that will implement Stargate upgrades –
+                    beginning with the Cosmos Hub – should prepare by helping
+                    run the Stargate testnets above.
+                  </p>
+                  <p class="section-tabs__text__paragraph">
+                    More detailed instructions and guidelines on how validators
+                    can prepare for the upgrade will be published in due course.
+                  </p>
+                </div>
+                <div class="section-tabs__text">
+                  <div class="section-tabs__text__heading">
+                    Cosmos Hub Validators
+                  </div>
+                  <div class="section-tabs__text__title">
+                    Joining stargate-1
+                  </div>
+                  <p class="section-tabs__text__paragraph">
+                    Your current <strong>"operator_address"</strong> and your
+                    <strong>"consensus_pubkey"</strong> are required via pull
+                    request. These keys will be used to generate a genesis file
+                    for the upcoming testnets.
+                  </p>
+                  <div class="section-tabs__text__cta">
+                    <a
+                      href="https://github.com/cosmosdevs/stargate/tree/master/validator_pub_keys"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                    >
+                      Submit validator key &#8594;
+                    </a>
+                  </div>
+                </div>
+              </tm-tab>
+              <tm-tab name="Wallets &amp; Explorers">
+                <div class="section-tabs__text">
+                  <p class="section-tabs__text__paragraph">
+                    More detailed instructions and guidelines on how wallets and
+                    block explorers can prepare for the upgrade will be
+                    published in due course.
+                  </p>
+                </div>
+              </tm-tab>
+              <tm-tab name="Exchanges">
+                <div class="section-tabs__text">
+                  <p class="section-tabs__text__paragraph">
+                    Use the
+                    <a
+                      href="https://github.com/cosmosdevs/stargate/blob/master/ibc_readiness_matrix.md"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      >Stargate IBC Skill Matrix</a
+                    >
+                    to guide you in supporting IBC with your upgrades.
+                  </p>
+                  <p class="section-tabs__text__paragraph">
+                    Make sure your signing and querying software is ready for
+                    the Stargate upgrade by testing the features and your
+                    infrastructure ahead of time, using the
+                    <code class="section-tabs__text__paragraph__stargate"
+                      >stargate-1</code
+                    >
+                    testnet.
+                  </p>
+                  <p class="section-tabs__text__paragraph">
+                    More detailed instructions and guidelines on how exchanges
+                    can prepare for the upgrade will be published in due course.
+                  </p>
+                </div>
+              </tm-tab>
+              <tm-tab name="Zone Developers">
+                <div class="section-tabs__text">
+                  <p class="section-tabs__text__paragraph">
+                    More detailed instructions and guidelines on how zone
+                    developers can prepare for the upgrade will be published in
+                    due course.
+                  </p>
+                </div>
+                <div class="section-tabs__text">
+                  <div class="section-tabs__text__heading">
+                    Not ready to upgrade?
+                  </div>
+                  <div class="section-tabs__text__title">
+                    Launchpad
+                  </div>
+                  <p class="section-tabs__text__paragraph">
+                    Stargate involves a lot of breaking changes that may make it
+                    difficult for you to upgrade, if you have already written a
+                    lot of code for Cosmos SDK 0.37/0.38.
+                  </p>
+                  <p class="section-tabs__text__paragraph">
+                    The community supports an SDK 0.39 Launchpad release that
+                    includes backported bug fixes. The
+                    <a v-scroll-to="'#contributors'"
+                      >Cosmos development teams</a
+                    >
+                    are working together to document a clean migration path from
+                    Launchpad to a stable Stargate release.
+                  </p>
+                  <div class="section-tabs__text__cta">
+                    <a
+                      href="https://blog.cosmos.network/launchpad-a-pre-stargate-stable-version-of-the-cosmos-sdk-e0c58d8c4e24"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                    >
+                      Learn more &#8594;
+                    </a>
+                  </div>
+                </div>
+              </tm-tab>
+            </tm-tabs>
+            <div class="section-tabs__text">
+              <div class="section-tabs__text__title">
+                Migration guides
               </div>
-              <div class="grid-item__title">Validators</div>
-              <div class="grid-item__description">
-                Validators of chains that will implement Stargate upgrades -
-                beginning with the Cosmos Hub - should prepare by helping run
-                Stargate testnets in the coming weeks.
+              <p class="section-tabs__text__paragraph">
+                Help the Cosmos ecosystem upgrade by contributing your own
+                migration guides to the community.
+              </p>
+              <div class="section-tabs__text__cta">
+                <a
+                  href="https://github.com/cosmosdevs/stargate/pulls"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  Submit a guide &#8594;
+                </a>
               </div>
             </div>
-            <div class="grid-item">
-              <prepare-hex-bg class="grid-item__hex" />
-              <div class="grid-item__icon">
-                <icon-explore />
-              </div>
-              <div class="grid-item__title">Wallets &amp; Explorers</div>
-              <div class="grid-item__description">
-                This release will bring breaking changes to all wallets and
-                explorers of chains that will implement the Stargate Upgrade
-                (including Cosmos Hub).
-              </div>
+          </div>
+          <div class="section-status">
+            <div class="section-status__title">Testnet office hours</div>
+          </div>
+          <div class="section-text">
+            <div class="section-text__paragraph">
+              As part of the <code><strong>stargate-1</strong></code> testnet,
+              the team at Iqlusion are offering live support for testnet users
+              at the following times:
             </div>
-            <div class="grid-item">
-              <prepare-hex-bg class="grid-item__hex" />
-              <div class="grid-item__icon">
-                <icon-exchanges />
-              </div>
-              <div class="grid-item__title">Exchanges</div>
-              <div class="grid-item__description">
-                Make sure your signing and querying software is ready for the
-                Stargate upgrade by testing the features and your infrastructure
-                ahead of time, using the testnet.
-              </div>
-            </div>
-            <div class="grid-item">
-              <prepare-hex-bg class="grid-item__hex" />
-              <div class="grid-item__icon">
-                <icon-sdk-hex />
-              </div>
-              <div class="grid-item__title">Zone Developers</div>
-              <div class="grid-item__description">
-                If you're developing a blockchain with Cosmos SDK, please
-                prepare to join the Stargate testnet. More detailed guides to
-                follow shortly.
-              </div>
+            <table>
+              <tbody>
+                <tr>
+                  <td>Sept 1-17</td>
+                  <td>Tuesdays</td>
+                  <td>16:00-17:00 UTC</td>
+                </tr>
+                <tr>
+                  <td>Sept 1-17</td>
+                  <td>Wednesdays</td>
+                  <td>16:00-17:00 UTC</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="section-text__paragraph">
+              Post your questions in the
+              <a
+                href="https://discord.com/channels/669268347736686612/723170066937413693"
+                target="_blank"
+                rel="noreferrer noopener"
+                ><code class="section-tabs__text__paragraph__stargate"
+                  >#stargate</code
+                >
+              </a>
+              Discord channel. Zoom call links will be provided in this channel
+              weekly.
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <div id="launchpad" class="section section-launchpad">
+    <!-- <div id="launchpad" class="section section-launchpad">
       <div class="section-container">
         <div class="container">
           <div class="section-header">a note for zone developers</div>
@@ -373,7 +443,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <div id="roadmap" class="section section-roadmap">
       <div class="section-container">
@@ -427,18 +497,29 @@
           </div>
           <div class="section-list">
             <a
-              v-for="item in updates"
-              :key="item.title"
-              :href="item.url"
+              v-for="item in currentUpdates"
+              :key="updatesList[item - 1].title"
+              :href="updatesList[item - 1].url"
               target="_blank"
               rel="noreferrer noopener"
               class="section-list__item"
             >
-              <div class="section-list__item__title">{{ item.title }}</div>
+              <div class="section-list__item__title">
+                {{ updatesList[item - 1].title }}
+              </div>
               <div class="section-list__item__date">
-                {{ item.date }} &#8594;
+                {{ updatesList[item - 1].date }} &#8594;
               </div>
             </a>
+            <div class="section-list__bottom">
+              <div
+                v-if="currentUpdates != updatesList.length"
+                class="section-list__bottom__cta"
+                @click="currentUpdates = updatesList.length"
+              >
+                View all updates
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -465,13 +546,16 @@
               rel="noreferrer noopener"
               class="section-list__item"
             >
+              <div class="section-list__item__logo">
+                <img :src="i.logo" />
+              </div>
               <div class="section-list__item__title">
                 {{ i.name }}
-                <code v-if="i.role" class="section-list__item__title__role"
-                  >({{ i.role }})</code
-                >
+                <code v-if="i.role" class="section-list__item__title__role">{{
+                  i.role
+                }}</code>
               </div>
-              <div class="section-list__item__date">&#8594;</div>
+              <div class="section-list__item__date">&#8599;</div>
             </a>
           </div>
         </div>
@@ -582,6 +666,58 @@
         </div>
       </div>
     </div>
+
+    <div class="bottom">
+      <transition name="fade" mode="out-in">
+        <div v-if="state === 'success'" key="success" class="bottom__state">
+          <div class="bottom__get-notified">
+            Almost there&hellip;
+          </div>
+          <h2 class="bottom__state__success">
+            Check your inbox and confirm your email address
+          </h2>
+        </div>
+        <div v-else-if="state === 'error'" key="error" class="bottom__state">
+          <div class="bottom__get-notified">
+            Something went wrong
+          </div>
+          <h2 class="bottom__state__error">
+            Uh oh! Refresh the page and try again.
+          </h2>
+        </div>
+        <div v-else key="default" class="bottom__form">
+          <label class="bottom__get-notified" for="field-email">
+            Get Stargates updates
+          </label>
+          <form
+            :action="url"
+            method="POST"
+            target="_blank"
+            rel="noreferrer noopener"
+            @submit.prevent="actionSubmitEmail"
+          >
+            <div class="bottom__form__input">
+              <input
+                id="field-email"
+                v-model="email"
+                name="fields[email]"
+                class="bottom__form__input__input"
+                type="email"
+                placeholder="Your email"
+                required="required"
+              />
+              <button type="submit" class="bottom__form__input__button">
+                <icon-arrow-right
+                  class="bottom__form__input__icon"
+                  @click="actionSubmitEmail"
+                />
+                <span class="sr-only">Submit</span>
+              </button>
+            </div>
+          </form>
+        </div>
+      </transition>
+    </div>
   </main>
 </template>
 
@@ -589,7 +725,6 @@
 import querystring from 'querystring'
 import { orderBy } from 'lodash'
 import Headroom from 'headroom.js'
-import moment from 'moment'
 import axios from 'axios'
 import IconIbc from '~/components/IconIbc.vue'
 import IconSdk from '~/components/IconSdk.vue'
@@ -603,6 +738,7 @@ export default {
   },
   data() {
     return {
+      tabs: [],
       headroom: null,
       email: null,
       state: 'default',
@@ -627,31 +763,38 @@ export default {
       },
       contributors: [
         {
+          logo: '/logos/tendermint.svg',
           name: 'Tendermint',
           url: 'http://tendermint.com',
         },
         {
+          logo: '/logos/iqlusion.svg',
           name: 'Iqlusion',
           role: 'Coordinator',
           url: 'https://www.iqlusion.io',
         },
         {
+          logo: '/logos/interchain-gmbh.svg',
           name: 'Interchain GmbH',
           url: 'http://interchain.berlin',
         },
         {
+          logo: '/logos/informal-systems.svg',
           name: 'Informal Systems',
           url: 'https://informal.systems',
         },
         {
+          logo: '/logos/regen-network.svg',
           name: 'Regen Network',
           url: 'https://www.regen.network',
         },
         {
+          logo: '/logos/fission-labs.svg',
           name: 'Fission Labs',
           url: 'https://fissionlabs.io',
         },
         {
+          logo: '/logos/akash-network.svg',
           name: 'Akash Network',
           url: 'https://akash.network',
         },
@@ -689,6 +832,7 @@ export default {
             'Details on the upcoming 1.0 release of the inter-blockchain communication protocol.',
         },
       ],
+      currentUpdates: 3,
       updates: [
         {
           url: 'https://github.com/cosmosdevs/stargate/blob/master/week1.md',
@@ -734,9 +878,6 @@ export default {
     }
   },
   computed: {
-    countdownTimer() {
-      return moment('20200729', 'YYYYMMDD').diff(moment(), 'days')
-    },
     progressTotal() {
       const progressSum = this.milestoneList
         .map((i) => Math.floor(i.progress))
@@ -747,6 +888,9 @@ export default {
     contributorsList() {
       const sortedList = orderBy(this.contributors, 'name')
       return sortedList
+    },
+    updatesList() {
+      return this.updates.slice().reverse()
     },
   },
   mounted() {
@@ -820,6 +964,11 @@ export default {
           progress: null,
         }
       }
+    },
+    selectTab(selectedTab) {
+      this.tabs.forEach((tab) => {
+        tab.isActive = tab.name === selectedTab.name
+      })
     },
   },
 }
@@ -967,94 +1116,8 @@ main
         line-height 150%
         letter-spacing -0.02em
         color #989BB9
-    .bottom
-      margin-top 15%
-      width 100%
-      &__countdown
-        font-size 19px
-        line-height 1.579
-        letter-spacing -0.005em
-        color #CCD1FF
-        border 1px solid rgba(255, 255, 255, 0.1)
-        border-radius 0.5rem
-        padding 0.25rem 0.75rem
-      &__countdown + .bottom__form
-        margin 3rem auto 0
-      &__get-notified
-        display block
-        margin 3rem auto 1rem
-        font-weight bold
-        font-size 1rem
-        line-height 1.375
-        color #CFD1E7
-      &__state
-        padding-bottom 2.3125rem
-        h2
-          margin-top 1.3125rem
-          font-size 1rem
-          line-height 1.375
-          font-weight normal
-        &__success
-          color #989bb9
-        &__error
-          color #FF4C52
-      &__form
-        margin 3.5rem auto
-        max-width 25rem
-        &__input
-          display flex
-          position relative
-          align-items center
-          justify-content center
-          &__button
-            position absolute
-            right 0
-            width 4rem
-            appearance none
-            background none
-            border none
-            padding 1rem
-            border-radius 0.625rem
-            cursor pointer
-            outline none
-            &:hover,
-            &:focus
-              .bottom__form__input__icon
-                fill #FFFFFF
-                transform scale(1.05)
-          &__icon
-            display block
-            height 2rem
-            fill #989BB9
-            transition fill .15s ease-out, transform .15s ease-out
-          &__input
-            outline none
-            width 100%
-            background rgba(255, 255, 255, 0.1)
-            box-shadow 0px 20px 44px rgba(0, 3, 66, 0.12), 0px 8px 16px rgba(0, 0, 0, 0.05), 0px 0px 1px rgba(0, 0, 0, 0.07)
-            border none
-            border-radius 0.625rem
-            padding 1.25rem 4rem 1.25rem 1.5rem
-            height 64px
-            -webkit-backdrop-filter blur(10px)
-            backdrop-filter blur(10px)
-            font-weight 350
-            font-size 1.1875rem
-            line-height 1.263
-            letter-spacing -0.005em
-            color #F8F8FD
-            opacity 0.7
-            transition color 0.15s ease-out, background 0.15s ease-out
-            &::placeholder
-              color #989BB9
-              transition color 0.15s ease-out
-            &:hover
-              background rgba(255, 255, 255, 0.15)
-              &:not(:focus)::placeholder
-                color #CFD1E7
-            &:focus
-              background rgba(255, 255, 255, 0.2)
-              color #FFFFFF
+
+.section-hero
   .hero-graphics
     position absolute
     top 10%
@@ -1097,7 +1160,6 @@ main
       padding-bottom 42%
       left 29%
       top 20%
-      // top 60vh
       border-radius 50%
       background #FFFFFF
       box-shadow 0px 0px 2.5em #263CFF, 0px 0px 8em #2D74FF
@@ -1107,10 +1169,34 @@ main
       padding-bottom 126%
       left -13%
       top 23.5%
-      // top 68vh
       border-radius 50%
       background radial-gradient(84.49% 66.22% at 50% 59.94%, #000000 5.73%, #030419 71.48%, #0E1247 81.25%, #36299B 91.15%)
       box-shadow 0px -4.5em 4em rgba(28, 0, 238, 0.17), 0px -0.625em 0.5em rgba(92, 70, 255, 0.11), inset 0px 3.5em 3.5em rgba(48, 44, 245, 0.17), inset 0px 0.375em 0.75em rgba(104, 67, 252, 0.23)
+
+.bottom
+  .button
+    margin 3.5rem auto
+    user-select none
+    transition background 20ms ease-in 0s
+    cursor pointer
+    display inline-flex
+    align-items center
+    justify-content center
+    white-space nowrap
+    color white
+    padding-left 12px
+    padding-right 12px
+    border none
+    text-align center
+    width 17.5rem
+    height 4rem
+    background #4251FA
+    box-shadow 0px 16px 28px rgba(65, 81, 250, 0.31)
+    border-radius 0.625rem
+    font-weight bold
+    font-size 1.1875rem
+    line-height 126.3%
+    letter-spacing -0.005em
 
 @keyframes gate
   from
@@ -1258,7 +1344,7 @@ main
     &__description
       margin-top 1rem
   .grid-container
-    margin-top 20%
+    margin-top 21%
     display grid
     grid-template-columns repeat(9, 1fr)
     gap 6rem 2rem
@@ -1286,15 +1372,15 @@ main
       &__description
         margin-top 1rem
 
-.section-prepare
+.section-testnets
   background linear-gradient(180deg, rgba(0,0,0,0) 0%, #030419 24%, #030419 69%, rgba(0,0,0,0) 100%)
   .section-header
-    grid-column 1 / span 12
+    grid-column 6/span 7
     grid-row 1
   .section-title
     grid-column 1 / span 5
-    grid-row 2 / 3
-    margin-top 3rem
+    grid-row 1 / 3
+    margin-top 6rem
     font-weight 900
     font-size 5.125rem
     line-height 1.121
@@ -1302,76 +1388,133 @@ main
     color #FFFFFF
     text-align left
     max-width 50rem
+  .section-graphics
+    grid-column 7 / 12
+    grid-row 1/3
   .section-statement
     position relative
     z-index 1
-    grid-column 6 / span 7
-    grid-row 3
-    margin-top -2.5rem
+    grid-column 1 / span 7
+    grid-row 2/3
+    margin-top 3rem
     max-width 30em
     font-size 1.4375rem
     line-height 1.565
     letter-spacing -0.01em
     color #CFD1E7
     text-align left
-  .grid-container
-    margin-top 8rem
-    display grid
-    grid-template-columns repeat(12, 1fr)
-    gap 6rem 2rem
-    grid-column 1 / span 12
-    grid-row 4
-    font-size 1.1875rem
-    line-height 1.579
-    letter-spacing -0.005em
-    color #989BB9
-    justify-items center
-    .grid-item
-      position relative
-      text-align center
-      max-width 24em
-      padding-top 1.5rem
-      grid-column-end span 5
+  .section-status
+    grid-column 1 / 5
+    margin-top 6rem
+    &__title
+      margin-top 2rem
+      grid-column 1 / span 4
+      font-weight bold
+      font-size 2.5rem
+      line-height 120%
+      letter-spacing -0.03em
+      text-align start
+      color #FFFFFF
+  .section-list
+    color #fff
+    margin-top 6rem
+    grid-column 6 / span 7
+    &__item
+      padding-top 1.875rem
+      padding-bottom 1.875rem
       display flex
-      flex-direction column
-      &:nth-child(even)
-        grid-column-start 8
-      &:before,
-      &:after
-        content ""
-        position absolute
-        top 0
-        width 3rem
-        border-top 1px dashed #282B53
-      &:before
-        left 0
-      &:after
-        right 0
-      &__hex
-        position absolute
-        bottom -3rem
-        left 30%
-        width 130%
-      &__icon
-        position relative
-        width 48px
-        height 48px
-        margin 0 auto
+      flex-direction row
+      justify-content space-between
+      border-bottom 1px solid #282B53
       &__title
-        position relative
-        margin-top 1.5rem
         font-weight bold
-        font-size 2.5rem
-        line-height 1.2
-        letter-spacing -0.03em
-        color #FFFFFF
-      &__description
-        position relative
-        margin-top 1rem
-        font-size 19px
-        line-height 1.579
+        font-size 1.4375rem
+        line-height 121.7%
+        letter-spacing -0.01em
+        color #CCD1FF
+        transition color 0.1s ease-out
+      &__date
+        font-size 1.1875rem
+        line-height 126.3%
+        text-align right
         letter-spacing -0.005em
         color #989BB9
+        transition color 0.1s ease-out, transform 0.15s ease-out
+      &:hover .section-list__item__title,
+      &:hover .section-list__item__date
+        color #FFFFFF
+      &:hover .section-list__item__date
+        transform translateX(3px)
+  .section-tabs
+    margin-top 8rem
+    grid-column 6 / span 7
+    &__text
+      margin-top 3rem
+      &__heading
+        text-transform uppercase
+        font-weight 600
+        font-size 1rem
+        line-height 137.5%
+        letter-spacing 0.08em
+        text-transform uppercase
+        color #989BB9
+      &__title
+        margin-top 0.5rem
+        font-weight bold
+        font-size 1.75rem
+        line-height 128.5%
+        letter-spacing -0.02em
+        color #FFFFFF
+      &__paragraph
+        margin-top 1rem
+        font-size 1.1875rem
+        line-height 157.9%
+        letter-spacing -0.005em
+        color #CFD1E7
+        &__stargate
+          color #40B3FF
+      &__cta
+        margin-top 2.25rem
+        font-weight bold
+        font-size 1.1875rem
+        line-height 126.3%
+        letter-spacing -0.005em
+        color #40B3FF
+
+  .section-text
+    margin-top 6rem
+    grid-column 6 / span 7
+    &__paragraph
+      margin-top 2rem
+      font-size 1.1875rem
+      line-height 157.9%
+      letter-spacing -0.005em
+      color #CFD1E7
+
+table
+  border-collapse collapse
+  border-radius 0.5rem
+  overflow hidden
+  width 100%
+  margin-top 2rem
+
+td, th
+  text-align left
+  padding 1rem 2rem
+  font-size 16px
+  line-height 24px
+  letter-spacing 0.02em
+  color #ECEDF7
+
+tr
+  background-color #121435
+  height 3.5rem
+  &:first-child
+    border-bottom 1px solid #282B53
+
+td
+  &:nth-child(2)
+    font-weight 600
 
 .nav-container
   height 4rem
@@ -1628,13 +1771,22 @@ main
         color #FFFFFF
       &:hover .section-list__item__date
         transform translateX(3px)
+    &__bottom
+      text-align center
+      padding 1.25rem 0
+      &__cta
+        font-weight bold
+        font-size 1.1875rem
+        line-height 126.3%
+        letter-spacing -0.005em
+        color #40B3FF
 
 .section-contributors
   .section-header
     grid-column 6 / span 7
   .section-title
     margin-top 3rem
-    grid-column 1/7
+    grid-column 6/10
     font-weight 900
     font-size 5.125rem
     line-height 1.121
@@ -1648,6 +1800,7 @@ main
     letter-spacing -0.01em
     color #CFD1E7
     max-width 30em
+    margin-top 3rem
     margin-bottom 3rem
   .section-list
     color #fff
@@ -1658,6 +1811,7 @@ main
       display flex
       flex-direction row
       justify-content space-between
+      align-items center
       border-bottom 1px solid #282B53
       &__title
         font-weight bold
@@ -1666,12 +1820,16 @@ main
         letter-spacing -0.01em
         color #CCD1FF
         transition color .1s ease-out
+        width 70%
         &__role
           font-weight normal
           font-size 1rem
           color #989BB9
-          padding-left 0.5rem
+          margin-left 0.5rem
           vertical-align bottom
+          background #282B53
+          border-radius 14px
+          padding 0px 12px
       &__date
         font-size 1.4375rem
         line-height 121.3%
@@ -1683,8 +1841,8 @@ main
       &:hover .section-list__item__date
         color #FFFFFF
       &:hover .section-list__item__date
-        transform translateX(3px)
-
+        // transform translateY(-3px)
+        transform translate(3px, -3px)
 
 .section-articles
   .section-header
@@ -1704,18 +1862,21 @@ main
     grid-row 2
     margin-top -4rem
     .articles-wrapper
+      border-bottom 1px solid #282b53
+      &:last-child
+        border-bottom 0
       .articles-item
         display block
         text-align left
-        padding 2rem
-        background linear-gradient(249.43deg, #030419 0%, #121435 100%)
+        padding 2rem 0
+        // background linear-gradient(249.43deg, #030419 0%, #121435 100%)
         box-shadow 0px 15px 33px rgba(0, 3, 66, 0.11), 0px 6px 12px rgba(0, 0, 0, 0.06), 0px 0px 1px rgba(0, 0, 0, 0.07)
         border-radius 1.25rem
         margin-top 1.5rem
         position relative
         transition all .25s ease-out
         &:hover:not(:active)
-          background linear-gradient(246.27deg, #121435 0%, #121435 100%)
+          // background linear-gradient(246.27deg, #121435 0%, #121435 100%)
           transform translateY(-2px)
           .articles-item__icon
             transform translate(3px, -3px)
@@ -1739,7 +1900,7 @@ main
           font-size 1.75rem
           line-height 1.285
           letter-spacing -0.02em
-          color #FFFFFF
+          color #CCD1FF
           max-width 20em
         &__description
           margin-top 0.75rem
@@ -1873,6 +2034,85 @@ main
         letter-spacing -0.005em
         color #989BB9
 
+.bottom
+  width 100%
+  text-align center
+  &__get-notified
+    display block
+    margin 3rem auto 1rem
+    font-weight bold
+    font-size 1.1875rem
+    line-height 1.263
+    color #CFD1E7
+  &__state
+    padding-bottom 2.3125rem
+    h2
+      margin-top 1.3125rem
+      font-size 1rem
+      line-height 1.375
+      font-weight normal
+    &__success
+      color #989bb9
+    &__error
+      color #FF4C52
+  &__form
+    margin 3.5rem auto
+    max-width 25rem
+    &__input
+      display flex
+      position relative
+      align-items center
+      justify-content center
+      &__button
+        position absolute
+        right 0
+        width 4rem
+        appearance none
+        background none
+        border none
+        padding 1rem
+        border-radius 0.625rem
+        cursor pointer
+        outline none
+        &:hover,
+        &:focus
+          .bottom__form__input__icon
+            fill #FFFFFF
+            transform scale(1.05)
+      &__icon
+        display block
+        height 2rem
+        fill #989BB9
+        transition fill .15s ease-out, transform .15s ease-out
+      &__input
+        outline none
+        width 100%
+        background rgba(255, 255, 255, 0.1)
+        box-shadow 0px 20px 44px rgba(0, 3, 66, 0.12), 0px 8px 16px rgba(0, 0, 0, 0.05), 0px 0px 1px rgba(0, 0, 0, 0.07)
+        border none
+        border-radius 0.625rem
+        padding 1.25rem 4rem 1.25rem 1.5rem
+        height 64px
+        -webkit-backdrop-filter blur(10px)
+        backdrop-filter blur(10px)
+        font-weight 350
+        font-size 1.1875rem
+        line-height 1.263
+        letter-spacing -0.005em
+        color #F8F8FD
+        opacity 0.7
+        transition color 0.15s ease-out, background 0.15s ease-out
+        &::placeholder
+          color #989BB9
+          transition color 0.15s ease-out
+        &:hover
+          background rgba(255, 255, 255, 0.15)
+          &:not(:focus)::placeholder
+            color #CFD1E7
+        &:focus
+          background rgba(255, 255, 255, 0.2)
+          color #FFFFFF
+
 @media screen and (max-width: 1919px)
   .section-container
     padding-left 8rem
@@ -1973,7 +2213,7 @@ main
     .grid-container
       grid-row 7
 
-  .section-prepare
+  .section-testnets
     overflow hidden
     .section-title
       grid-column 1 / 12
@@ -1981,11 +2221,11 @@ main
     .section-statement
       grid-column 1 / 12
       margin-top 4rem
-    .grid-container
-      .grid-item
-        &:nth-child(even),
-        &:nth-child(odd)
-          grid-column 1/12
+    .section-graphics
+      grid-column 1 / 12
+    .section-tabs
+      margin-top 3rem
+      grid-column 1 / span 12
 
   .section-launchpad
     .section-left,
@@ -2009,6 +2249,7 @@ main
 
   .section-contributors
     .section-title
+      grid-column 1/12
       font-size 4rem
     .section-statement
       grid-column 1/12
@@ -2069,19 +2310,12 @@ main
     .features-graphics
       font-size 1rem
 
-  .section-prepare
-    .grid-container
-      gap 3rem 2rem
-      margin-top 4rem
-      .grid-item
-        &__title
-          font-size 1.4375rem
-          line-height 1.217
-          letter-spacing -0.01em
-        &__description
-          font-size 1rem
-          line-height 1.625
-          letter-spacing 0
+  .section-testnets
+    .section-status
+      grid-column 1/12
+    .section-text
+      margin-top 0
+      grid-column 1 / span 12
 
   .section-roadmap
     .section-title
@@ -2198,7 +2432,7 @@ main
       line-height 1.217
       letter-spacing -0.01em
 
-  .section-prepare
+  .section-testnets
     .section-statement
       margin-top 2rem
 
@@ -2320,13 +2554,6 @@ main
 
 @media screen and (max-width: 320px)
   .section-features
-    .grid-container
-      .grid-item
-        &:nth-child(even),
-        &:nth-child(odd)
-          grid-column 1/span 9
-
-  .section-prepare
     .grid-container
       .grid-item
         &:nth-child(even),
