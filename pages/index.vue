@@ -38,7 +38,7 @@
               The Internet of Blockchains is on the horizon.
             </div>
           </div>
-          <div class="bottom">
+          <div class="hero-bottom">
             <a v-scroll-to="'#testnets'">
               <div role="button" class="button">Join testnets</div>
             </a>
@@ -611,51 +611,59 @@
             class="section-graphics"
           />
           <div class="section-list">
-            <div
-              v-for="i in contributorsList.slice(0, 3)"
-              :key="i.name.toLowerCase()"
-              class="left-half"
-            >
-              <a
-                :href="i.url"
-                target="_blank"
-                rel="noreferrer noopener"
-                class="section-list__item"
+            <div class="left-half__container">
+              <div
+                v-for="i in contributorsList.slice(0, 3)"
+                :key="i.name.toLowerCase()"
+                class="left-half__container__item"
               >
-                <div class="section-list__item__logo">
-                  <img :src="i.logo" />
-                </div>
-                <div class="section-list__item__title">
-                  {{ i.name }}
-                  <code v-if="i.role" class="section-list__item__title__role">{{
-                    i.role
-                  }}</code>
-                </div>
-                <div class="section-list__item__date">&#8599;</div>
-              </a>
+                <a
+                  :href="i.url"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  class="section-list__item"
+                >
+                  <div class="section-list__item__logo">
+                    <img :src="i.logo" />
+                  </div>
+                  <div class="section-list__item__title">
+                    {{ i.name }}
+                    <code
+                      v-if="i.role"
+                      class="section-list__item__title__role"
+                      >{{ i.role }}</code
+                    >
+                  </div>
+                  <div class="section-list__item__date">&#8599;</div>
+                </a>
+              </div>
             </div>
-            <div
-              v-for="i in contributorsList.slice(3, contributorsList.length)"
-              :key="i.name.toLowerCase()"
-              class="right-half"
-            >
-              <a
-                :href="i.url"
-                target="_blank"
-                rel="noreferrer noopener"
-                class="section-list__item"
+            <div class="right-half__container">
+              <div
+                v-for="i in contributorsList.slice(3, contributorsList.length)"
+                :key="i.name.toLowerCase()"
+                class="right-half__container__item"
               >
-                <div class="section-list__item__logo">
-                  <img :src="i.logo" />
-                </div>
-                <div class="section-list__item__title">
-                  {{ i.name }}
-                  <code v-if="i.role" class="section-list__item__title__role">{{
-                    i.role
-                  }}</code>
-                </div>
-                <div class="section-list__item__date">&#8599;</div>
-              </a>
+                <a
+                  :href="i.url"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  class="section-list__item"
+                >
+                  <div class="section-list__item__logo">
+                    <img :src="i.logo" />
+                  </div>
+                  <div class="section-list__item__title">
+                    {{ i.name }}
+                    <code
+                      v-if="i.role"
+                      class="section-list__item__title__role"
+                      >{{ i.role }}</code
+                    >
+                  </div>
+                  <div class="section-list__item__date">&#8599;</div>
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -1273,7 +1281,8 @@ main
       background radial-gradient(84.49% 66.22% at 50% 59.94%, #000000 5.73%, #030419 71.48%, #0E1247 81.25%, #36299B 91.15%)
       box-shadow 0px -4.5em 4em rgba(28, 0, 238, 0.17), 0px -0.625em 0.5em rgba(92, 70, 255, 0.11), inset 0px 3.5em 3.5em rgba(48, 44, 245, 0.17), inset 0px 0.375em 0.75em rgba(104, 67, 252, 0.23)
 
-.bottom
+.hero-bottom
+  margin-top 15%
   .button
     margin 3.5rem auto
     user-select none
@@ -1992,9 +2001,10 @@ td
     width 110%
     z-index 1
     position relative
-    .left-half
+    .left-half__container
       grid-column 1
-    .right-half
+      margin-top auto
+    .right-half__container
       grid-column 2
     &__item
       padding-top 1.875rem
@@ -2221,7 +2231,6 @@ td
         color #989BB9
 
 .bottom
-  margin-top 15%
   width 100%
   text-align center
   &__get-notified
