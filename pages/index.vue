@@ -993,6 +993,11 @@ export default {
           title: 'Week 8 status',
           date: 'August 26, 2020',
         },
+                {
+          url: 'https://github.com/cosmosdevs/stargate/blob/master/week8.md',
+          title: 'Week 8 status',
+          date: 'September 9, 2020',
+        },
       ],
     }
   },
