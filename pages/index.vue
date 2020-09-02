@@ -8,9 +8,9 @@
     >
       <div class="section-container">
         <div class="hero-graphics">
-          <span class="hero-graphics__star"></span>
           <span class="hero-graphics__gate"></span>
           <gate-notches class="hero-graphics__gate-notches" />
+          <span class="hero-graphics__star"></span>
           <span class="hero-graphics__planet"></span>
         </div>
         <div class="container">
@@ -211,7 +211,7 @@
     <div id="testnets" class="section section-testnets">
       <div class="section-container">
         <div class="container">
-          <div class="section-header">Tesnets</div>
+          <div class="section-header">Testnets</div>
           <img
             src="~/assets/illustrations/multiple-zones.svg"
             class="section-graphics"
@@ -236,7 +236,7 @@
                   <div class="testnets-list__item__text__top__title">
                     <code>stargate-1</code>
                   </div>
-                  <div class="testnets-list__item__text__top__status">live</div>
+                  <div class="testnets-list__item__text__top__status">Live</div>
                 </div>
                 <div class="testnets-list__item__text__mid">
                   <div class="testnets-list__item__text__mid__desc">
@@ -294,7 +294,7 @@
                   <div
                     class="testnets-list__item__text__top__status outline-btn"
                   >
-                    coming soon
+                    Coming soon
                   </div>
                 </div>
                 <div class="testnets-list__item__text__mid">
@@ -318,14 +318,18 @@
                 </div>
               </div>
               <div class="testnets-list__item__cta">
-                <a
+                <!-- <a
                   href="https://github.com/cosmosdevs/stargate#testnet"
                   target="_blank"
                   rel="noreferrer noopener"
-                  ><div class="testnets-list__item__cta__join outline-btn">
-                    Join
-                  </div>
-                </a>
+                  > -->
+                <div
+                  class="testnets-list__item__cta__join outline-btn disabled"
+                  aria-disabled="true"
+                >
+                  Join
+                </div>
+                <!-- </a> -->
                 <a
                   href="https://discord.com/channels/669268347736686612/723170066937413693"
                   target="_blank"
@@ -1267,7 +1271,7 @@ main
       width 42%
       padding-bottom 42%
       left 29%
-      top 20%
+      top 22%
       border-radius 50%
       background #FFFFFF
       box-shadow 0px 0px 2.5em #263CFF, 0px 0px 8em #2D74FF
@@ -1276,7 +1280,7 @@ main
       width 126%
       padding-bottom 126%
       left -13%
-      top 23.5%
+      top 42%
       border-radius 50%
       background radial-gradient(84.49% 66.22% at 50% 59.94%, #000000 5.73%, #030419 71.48%, #0E1247 81.25%, #36299B 91.15%)
       box-shadow 0px -4.5em 4em rgba(28, 0, 238, 0.17), 0px -0.625em 0.5em rgba(92, 70, 255, 0.11), inset 0px 3.5em 3.5em rgba(48, 44, 245, 0.17), inset 0px 0.375em 0.75em rgba(104, 67, 252, 0.23)
@@ -1315,6 +1319,7 @@ main
 
 .section-intro
   position relative
+  overflow hidden
   .section-title
     grid-column 1 / span 12
     grid-row 1 / 2
@@ -1522,10 +1527,12 @@ main
     &__item
       display grid
       width 100%
-      grid-template-columns auto 40em auto
+      grid-template-columns 10rem auto auto
       gap 1.5rem
       align-items center
       &__graphics
+        width 100%
+        max-width 9.875rem
       &__text
         &__top
           display flex
@@ -1548,7 +1555,6 @@ main
             font-size 0.8125rem
             line-height 138.4%
             letter-spacing 0.08em
-            text-transform uppercase
             color #FFFFFF
         &__mid
           &__desc
@@ -1557,11 +1563,14 @@ main
             line-height 157.9%
             letter-spacing -0.005em
             color #989BB9
+            max-width 30em
         &__bot
           margin-top 1rem
           display flex
           align-items center
+          flex-wrap wrap
           &__display
+            margin-right 10px
             font-weight 600
             font-size 1rem
             line-height 137.5%
@@ -1578,7 +1587,6 @@ main
               border-radius 0.875rem
               align-items center
               display flex
-              margin-left 1rem
               text-align center
       &__cta
         display flex
@@ -1602,7 +1610,6 @@ main
           background #FFFFFF
           border-radius 0.375rem
           font-weight bold
-          font-size 1.1875rem
           line-height 126.3%
           letter-spacing -0.005em
         &__discuss
@@ -1712,6 +1719,9 @@ main
       letter-spacing -0.005em
       color #CFD1E7
 
+.testnets-list__item__text__bot__labels__item + .testnets-list__item__text__bot__labels__item
+  margin-left 0.75rem
+
 table
   border-collapse collapse
   border-radius 0.5rem
@@ -1805,7 +1815,7 @@ td
     text-align right
     letter-spacing -0.03em
     color #FFFFFF
-    grid-column 5 / span 8
+    grid-column 1 / span 12
   .section-milestones
     grid-column 1 / 5
     grid-row 3 / 6
@@ -2523,7 +2533,7 @@ td
       margin-top 0
       grid-column 1 / span 12
 
-  .testnets-list__item__text__bot__display
+  .testnets-list__item__graphics
     display none
 
   .testnets-list__item__text__bot__labels
