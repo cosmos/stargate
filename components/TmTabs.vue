@@ -1,13 +1,15 @@
 <template>
   <div>
-    <div class="tabs">
+    <div class="tabs" role="tablist">
       <ul>
         <li
           v-for="(tab, index) in tabs"
           :key="index"
           :class="{ 'is-active': tab.isActive }"
         >
-          <a :href="tab.href" @click="selectTab(tab)">{{ tab.name }}</a>
+          <a :href="tab.href" role="tab" @click.prevent="selectTab(tab)">{{
+            tab.name
+          }}</a>
         </li>
       </ul>
     </div>
@@ -79,13 +81,12 @@ export default {
   position relative
   z-index 1
   color #989BB9
-  font-weight bold
-  font-size 1.1875rem
   line-height 126.3%
   letter-spacing -0.005em
   border-bottom 2px solid #3b2ab7
   &:hover,
-  &:focus
+  &:focus,
+  &:active
     color #ECEDF7
 
 .tabs-details
