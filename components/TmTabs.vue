@@ -21,7 +21,9 @@
 <script>
 export default {
   data() {
-    return { tabs: [] }
+    return {
+      tabs: [],
+    }
   },
   created() {
     this.tabs = this.$children
@@ -43,6 +45,9 @@ export default {
   display flex
   font-size 1rem
   justify-content space-between
+  overflow scroll
+  &::-webkit-scrollbar
+    display none
 
 .tabs ul
   align-items center
@@ -51,28 +56,37 @@ export default {
   flex-shrink 0
   padding 0
   margin 0
+  overflow-x scroll
+  overflow-y hidden
+  white-space nowrap
 
 .tabs li
-  display block
+  margin-right 2rem
+  display inline-block
 
 .tabs a
   align-items center
-  color #989BB9
-  display flex
+  color #989bb9
   justify-content center
+  display inline-block
+  padding 1.25rem 0
   margin-bottom -1px
-  padding .5em 1em
   vertical-align top
 
-.is-active
+.is-active a
+  display inline-block
+  padding 1.25rem 0
+  position relative
+  z-index 1
+  color #989BB9
   font-weight bold
   font-size 1.1875rem
   line-height 126.3%
   letter-spacing -0.005em
-  color #ECEDF7
-
-.is-active a
-  border-bottom 2px solid #4251FA
+  border-bottom 2px solid #3b2ab7
+  &:hover,
+  &:focus
+    color #ECEDF7
 
 .tabs-details
   border-bottom 1px solid #282B53

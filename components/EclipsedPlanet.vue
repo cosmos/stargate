@@ -78,7 +78,7 @@
   opacity 0.35
 
 .orbit__outer__3
-  width 289%
+  width 260%
   padding-bottom 289%
   left 20%
   top 52%
