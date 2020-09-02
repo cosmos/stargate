@@ -16,8 +16,6 @@
 </template>
 
 <style lang="stylus" scoped>
-.container *
-  position absolute
 .container
   width 100%
   padding-bottom 100%
@@ -25,6 +23,8 @@
 
 .planet
   transform translate(-50%, -50%)
+  *, &
+    position absolute
   &__surface
     width 100%
     height 100%
@@ -56,6 +56,7 @@
     box-shadow inset 3em -2em 3em rgba(0,0,0,0.49), inset 0.33em 0.218em 0.43em rgba(152, 160, 220, 0.34), 0 0 0 2em rgba(255, 255, 255, 0.03)
 
 .orbit__outer__1
+  position absolute
   width 188%
   padding-bottom 188%
   left 20%
@@ -67,6 +68,7 @@
   opacity 0.8
 
 .orbit__outer__2
+  position absolute
   width 210%
   padding-bottom 225%
   left 20%
@@ -78,6 +80,7 @@
   opacity 0.35
 
 .orbit__outer__3
+  position absolute
   width 230%
   padding-bottom 289%
   left 20%

@@ -212,18 +212,17 @@
       <div class="section-container">
         <div class="container">
           <div class="section-header">Tesnets</div>
-          <img
-            src="~/assets/illustrations/multiple-zones.svg"
-            class="section-graphics"
-          />
-          <div class="section-title">Get set for testnets</div>
-          <div class="section-statement">
-            <p>
-              Validators, wallets, block explorers, exchanges and zone
-              developers are among the primary services affected by the upgrades
-              with Stargate. Make sure to schedule time for integration testing
-              on the various testnets.
-            </p>
+          <planets-cluster class="section-graphics" />
+          <div class="section-top">
+            <div class="section-title">Get set for testnets</div>
+            <div class="section-statement">
+              <p>
+                Validators, wallets, block explorers, exchanges and zone
+                developers are among the primary services affected by the
+                upgrades with Stargate. Make sure to schedule time for
+                integration testing on the various testnets.
+              </p>
+            </div>
           </div>
           <div class="testnets-list">
             <div class="testnets-list__item">
@@ -1486,39 +1485,40 @@ main
   color #989BB9 !important
 
 .section-testnets
+  position relative
+  overflow hidden
   background linear-gradient(180deg, rgba(0,0,0,0) 0%, #030419 24%, #030419 69%, rgba(0,0,0,0) 100%)
   .section-header
     grid-column 6/span 7
     grid-row 1
-  .section-title
-    grid-column 1 / span 6
+  .section-graphics
+    grid-column 8 / 13
+    grid-row 1
+    display flex
+    align-items flex-end
+  .section-top
+    position relative
+    grid-column 1 / span 12
     grid-row 1
     margin-top 6rem
+  .section-title
+    max-width 35rem
     font-weight 900
     font-size 5.125rem
     line-height 1.121
     letter-spacing -0.025em
     color #FFFFFF
-    text-align left
-    max-width 50rem
-  .section-graphics
-    grid-column 7 / 12
-    grid-row 2
-    margin-top -50%
   .section-statement
-    position relative
-    z-index 1
-    grid-column 1 / span 7
-    grid-row 2/3
     margin-top 3rem
     max-width 30em
     font-size 1.4375rem
     line-height 1.565
     letter-spacing -0.01em
     color #CFD1E7
-    text-align left
   .testnets-list
     grid-column 1/ span 12
+    margin-top 6rem
+    position relative
     &__item
       display grid
       width 100%
@@ -2410,17 +2410,13 @@ td
 
   .section-testnets
     overflow hidden
-    .section-title
-      grid-column 1 / 12
-      font-size 4rem
-    .section-statement
-      grid-column 1 / 12
-      margin-top 4rem
     .section-graphics
-      grid-row 2
-      grid-column 1 / 12
-      margin-top revert
-      width 100%
+      grid-column 6 / span 7
+      align-items flex-start
+    .section-top
+      margin-top 4rem
+    .section-title
+      font-size 4rem
     .testnets-list__item
       grid-auto-flow dense
       grid-template-columns auto
