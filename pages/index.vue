@@ -1483,7 +1483,7 @@ main
     grid-row 1
   .section-title
     grid-column 1 / span 6
-    grid-row 1 / 3
+    grid-row 1
     margin-top 6rem
     font-weight 900
     font-size 5.125rem
@@ -1494,7 +1494,8 @@ main
     max-width 50rem
   .section-graphics
     grid-column 7 / 12
-    grid-row 1/3
+    grid-row 2
+    margin-top -50%
   .section-statement
     position relative
     z-index 1
@@ -1572,6 +1573,8 @@ main
               text-align center
       &__cta
         display flex
+        justify-content flex-end
+        align-items flex-end
         flex-direction column
         gap 0.5rem
         &__join
@@ -1948,12 +1951,12 @@ td
 
 .section-contributors
   .section-header
-    grid-column 6 / span 7
+    grid-column 6 / span 10
     grid-row 1
   .section-title
     margin-top 3rem
     align-self flex-start
-    grid-column 6/span 10
+    grid-column 6 / span 7
     font-weight 900
     font-size 5.125rem
     line-height 1.121
@@ -1963,6 +1966,7 @@ td
     z-index 1
     position relative
   .section-statement
+    margin-top 3rem
     align-self flex-end
     grid-column 6 / span 7
     font-size 1.4375rem
@@ -1970,22 +1974,24 @@ td
     letter-spacing -0.01em
     color #CFD1E7
     max-width 30em
-    grid-row 2
+    grid-row 3
     z-index 1
   .section-graphics
-    grid-row 2
-    grid-column 1 / span 6
+    grid-row 3
+    grid-column 1/span 3
     z-index 0
-    position relative
-    width 190%
+    position absolute
   .section-list
     margin-top 6rem
-    color #fff
-    grid-column: 1/span 12
+    grid-column 1/span 12
     display grid
     grid-template-columns auto auto
     grid-column-gap 14.625rem
     grid-auto-flow column
+    padding-top 20%
+    width 110%
+    z-index 1
+    position relative
     .left-half
       grid-column 1
     .right-half
@@ -2026,7 +2032,6 @@ td
       &:hover .section-list__item__date
         color #FFFFFF
       &:hover .section-list__item__date
-        // transform translateY(-3px)
         transform translate(3px, -3px)
 
 .section-articles
@@ -2216,6 +2221,7 @@ td
         color #989BB9
 
 .bottom
+  margin-top 15%
   width 100%
   text-align center
   &__get-notified
@@ -2402,13 +2408,17 @@ td
       grid-column 1 / 12
       margin-top 4rem
     .section-graphics
+      grid-row 2
       grid-column 1 / 12
+      margin-top revert
+      width 100%
     .testnets-list__item
       grid-auto-flow dense
       grid-template-columns auto
       margin-bottom 2rem
       &__cta
         flex-direction row
+        justify-content flex-start
     .section-tabs
       margin-top 3rem
       grid-column 1 / span 12
@@ -2434,9 +2444,12 @@ td
       font-size 4rem
     .section-statement
       grid-column 1/12
+    .section-graphics
+      top 10%
+      width 90%
     .section-list
       margin-top 3rem
-      grid-column 1 / span 12
+      grid-column 1/12
       display block
       .left-half
         grid-column unset
@@ -2629,7 +2642,7 @@ td
       margin-top 2rem
 
   img.testnets-list__item__graphics
-    width 30%
+    width 20%
 
   .section-roadmap
     .section-milestones__title,
@@ -2683,7 +2696,6 @@ td
   .section-articles .content
     margin-top 2rem
     .articles-wrapper .articles-item
-      padding 1.5rem
       &__title
         font-size 1.1875rem
         line-height 1.263
