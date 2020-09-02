@@ -593,6 +593,14 @@
               >
                 View all updates
               </div>
+              <div
+                v-else
+                class="section-list__bottom__cta"
+                role="button"
+                @click="currentUpdates = 3"
+              >
+                View less
+              </div>
             </div>
           </div>
         </div>
@@ -1544,17 +1552,16 @@ main
             letter-spacing -0.015em
             color #FFFFFF
           &__status
-            padding 0 0.75rem
+            padding 0.1875rem 0.75rem
             height 1.75rem
             background #E644F8
             border-radius 0.875rem
             align-items center
             display flex
             margin-left 1rem
-            font-weight 600
+            font-weight bold
             font-size 0.8125rem
-            line-height 138.4%
-            letter-spacing 0.08em
+            line-height 137.5%
             color #FFFFFF
         &__mid
           &__desc
@@ -1726,6 +1733,7 @@ table
   border-collapse collapse
   border-radius 0.5rem
   overflow hidden
+  table-layout fixed
   width 100%
   margin-top 2rem
 
@@ -2243,6 +2251,9 @@ td
 .bottom
   width 100%
   text-align center
+  display flex
+  justify-content center
+  align-items center
   &__get-notified
     display block
     margin 3rem auto 1rem
@@ -2430,7 +2441,9 @@ td
     .testnets-list__item
       grid-auto-flow dense
       grid-template-columns auto
-      margin-bottom 2rem
+      padding 2rem 0
+      &:first-child
+        border-bottom 1px solid #282B53
       &__cta
         flex-direction row
         justify-content flex-start
@@ -2763,6 +2776,23 @@ td
 
   .section-roadmap .section-row .meter
     width 100%
+
+  .testnets-list__item__text__bot__labels__item + .testnets-list__item__text__bot__labels__item
+    margin-left 0
+
+  .section-testnets
+    .testnets-list__item__text__top__title
+      font-size 1.4375rem
+    .testnets-list__item__text__mid__desc
+      font-size 0.8125rem
+    .testnets-list__item__text__bot__display
+      font-size 0.8125rem
+    .testnets-list__item__text__bot__labels
+      display flex
+      max-width 280px
+      &__item
+        width fit-content
+        margin-right 0.5rem
 
 @media screen and (max-width: 375px)
   .section-container .container
