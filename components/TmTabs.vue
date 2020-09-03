@@ -61,6 +61,7 @@ export default {
   overflow-x scroll
   overflow-y hidden
   white-space nowrap
+  user-select none
 
 .tabs li
   margin-right 2rem

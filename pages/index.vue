@@ -2667,6 +2667,13 @@ td
       font-size 0.5rem
     .section-statement
       margin-top 2rem
+    .section-tabs
+      >>> .tabs
+        margin-left -1.5rem
+        margin-right -1.5rem
+        ul
+          padding-left 1.5rem
+          padding-right 1.5rem
 
   img.testnets-list__item__graphics
     width 20%
