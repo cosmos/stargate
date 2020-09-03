@@ -268,15 +268,15 @@
                   href="https://github.com/cosmosdevs/stargate#testnet"
                   target="_blank"
                   rel="noreferrer noopener"
-                  ><div class="testnets-list__item__cta__join">Join</div>
-                </a>
+                  class="testnets-list__item__cta__join"
+                  >Join</a
+                >
                 <a
                   href="https://discord.com/channels/669268347736686612/723170066937413693"
                   target="_blank"
                   rel="noreferrer noopener"
-                  ><div class="testnets-list__item__cta__discuss">
-                    Discuss
-                  </div></a
+                  class="testnets-list__item__cta__discuss"
+                  >Discuss</a
                 >
               </div>
             </div>
@@ -333,10 +333,10 @@
                   href="https://discord.com/channels/669268347736686612/723170066937413693"
                   target="_blank"
                   rel="noreferrer noopener"
-                  ><div class="testnets-list__item__cta__discuss">
-                    Discuss
-                  </div></a
+                  class="testnets-list__item__cta__discuss"
                 >
+                  Discuss
+                </a>
               </div>
             </div>
           </div>
@@ -1582,7 +1582,7 @@ main
           &__title
             font-weight bold
             font-size 1.75rem
-            line-height 157.1%
+            line-height 1.571
             letter-spacing -0.015em
             color #FFFFFF
           &__status
@@ -1595,26 +1595,26 @@ main
             margin-left 1rem
             font-weight bold
             font-size 0.8125rem
-            line-height 137.5%
+            line-height 1.375
             color #FFFFFF
         &__mid
           &__desc
             margin-top 0.25rem
             font-size 1.1875rem
-            line-height 157.9%
+            line-height 1.579
             letter-spacing -0.005em
             color #989BB9
             max-width 30em
         &__bot
           margin-top 1rem
           display flex
-          align-items center
+          align-items baseline
           flex-wrap wrap
           &__display
-            margin-right 10px
+            margin 0.5rem 0.75rem 0.5rem 0
             font-weight 600
             font-size 1rem
-            line-height 137.5%
+            line-height 1.375
             letter-spacing 0.08em
             text-transform uppercase
             color #CFD1E7
@@ -1623,6 +1623,7 @@ main
             display flex
             &__item
               color #cfd1e7
+              line-height 1.375
               padding 0.1875rem 0.75rem
               background #282b53
               border-radius 0.875rem
@@ -1635,6 +1636,14 @@ main
         align-items flex-end
         flex-direction column
         gap 0.5rem
+        a
+          transition transform .2s ease-out
+          &:hover,
+          &:focus
+            transform translateY(-2px)
+          &:active
+            transform none
+            transition-duration 0s
         &__join
           user-select none
           transition background 20ms ease-in 0s
@@ -1650,8 +1659,9 @@ main
           padding 1.25rem 3rem
           background #FFFFFF
           border-radius 0.375rem
-          font-weight bold
-          line-height 126.3%
+          font-weight 700
+          font-size 1.1875rem
+          line-height 1.263
           letter-spacing -0.005em
         &__discuss
           user-select none
@@ -1667,10 +1677,10 @@ main
           width 8.5rem
           padding 1.25rem 3rem
           background transparent
-          border-radius 6px
-          font-weight bold
+          border-radius 0.375rem
+          font-weight 700
           font-size 1.1875rem
-          line-height 126.3%
+          line-height 1.263
           letter-spacing -0.005em
   .section-status
     grid-column 1 / 5
