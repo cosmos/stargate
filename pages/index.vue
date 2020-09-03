@@ -39,9 +39,9 @@
             </div>
           </div>
           <div class="hero-bottom">
-            <a v-scroll-to="'#testnets'">
-              <div role="button" class="button">Join testnets</div>
-            </a>
+            <a v-scroll-to="'#testnets'" role="button" class="button"
+              >Join testnets</a
+            >
           </div>
         </div>
       </div>
@@ -1312,19 +1312,45 @@ main
     justify-content center
     white-space nowrap
     color white
-    padding-left 12px
-    padding-right 12px
+    padding-left 3rem
+    padding-right 3rem
     border none
     text-align center
-    width 17.5rem
+    width 100%
+    max-width 17.5rem
     height 4rem
-    background #4251FA
-    box-shadow 0px 16px 28px rgba(65, 81, 250, 0.31)
+    background #4251FA linear-gradient(92.99deg, #8D0EC0 0%, #4251FA 100%)
+    box-shadow 0px 10px 22px rgba(65, 81, 250, 0.21)
     border-radius 0.625rem
-    font-weight bold
+    font-weight 700
     font-size 1.1875rem
-    line-height 126.3%
+    line-height 1.263
     letter-spacing -0.005em
+    position relative
+    transition transform .2s ease-out, background-color .2s ease-out
+    &::after
+      content ""
+      position absolute
+      top 0
+      right 0
+      left 0
+      bottom 0
+      border-radius inherit
+      background linear-gradient(92.99deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0) 100%)
+      box-shadow 0px 15px 33px rgba(65, 81, 250, 0.25)
+      opacity 0
+      transition opacity .2s ease-out
+    &:hover,
+    &:focus
+      transform translateY(-2px)
+      &::after
+        opacity 1
+    &:active
+      transform none
+      transition-duration 0s
+      &::after
+        transition-duration 0s
+        opacity 0
 
 @keyframes gate
   from
@@ -1695,6 +1721,7 @@ main
       margin-top 3rem
       &__heading
         text-transform uppercase
+        max-width 30em
         font-weight 600
         font-size 1rem
         line-height 137.5%
@@ -1703,6 +1730,7 @@ main
         color #989BB9
       &__title
         margin-top 0.5rem
+        max-width 30em
         font-weight bold
         font-size 1.75rem
         line-height 128.5%
@@ -1710,6 +1738,7 @@ main
         color #FFFFFF
       &__paragraph
         margin-top 1rem
+        max-width 30em
         font-size 1.1875rem
         line-height 157.9%
         letter-spacing -0.005em
@@ -1741,23 +1770,21 @@ table
   border-collapse collapse
   border-radius 0.5rem
   overflow hidden
-  table-layout fixed
   width 100%
   margin-top 2rem
 
 td, th
   text-align left
   padding 1rem 2rem
-  font-size 16px
-  line-height 24px
+  font-size 1rem
+  line-height 1.5
   letter-spacing 0.02em
   color #ECEDF7
 
 tr
   background-color #121435
-  height 3.5rem
-  &:first-child
-    border-bottom 1px solid #282B53
+  & + &
+    border-top 1px solid #282B53
 
 td
   &:nth-child(2)
@@ -1789,8 +1816,8 @@ td
       flex-direction row
       justify-content center
       list-style none
-      padding-left 1.5rem
-      padding-right 1.5rem
+      padding-left 4rem
+      padding-right 4rem
       &__item
         + .nav__list__item
           margin-left 2rem
@@ -2449,6 +2476,8 @@ td
       &__cta
         flex-direction row
         justify-content flex-start
+    .section-status__title
+      grid-column 1 / span 12
     .section-tabs
       margin-top 3rem
       grid-column 1 / span 12
@@ -2517,6 +2546,12 @@ td
     padding-left 1.5rem
     padding-right 1.5rem
     padding-top 1.5rem
+
+  .section-nav
+    .nav
+      &__list
+        padding-left 1.5rem
+        padding-right 1.5rem
 
   .section-hero
     .hero-graphics
@@ -2677,6 +2712,14 @@ td
 
   img.testnets-list__item__graphics
     width 20%
+
+  th,td
+    padding 0.125rem 1rem
+    display block
+    &:first-child
+      padding-top 1rem
+    &:last-child
+      padding-bottom 1rem
 
   .section-roadmap
     .section-milestones__title,
