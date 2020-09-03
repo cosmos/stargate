@@ -1,0 +1,34 @@
+/*
+   Add shadow on hover.
+
+   Performant box-shadow animation pattern from
+   http://tobiasahlin.com/blog/how-to-animate-box-shadow/
+*/
+
+hover-elevation(size = 8, speed = 0.2s, speed-active = 0s, offset = 0, shadow)
+  cursor pointer
+  position relative
+  transition all speed cubic-bezier(0.165, 0.84, 0.44, 1)
+  &::after
+    content ''
+    if shadow
+      box-shadow var(('--elevation-%s' % size)), shadow
+    else
+      box-shadow var(('--elevation-%s' % size))
+    border-radius inherit
+    opacity 0
+    position absolute
+    top offset
+    left offset
+    right offset
+    bottom offset
+    z-index -1
+    transition opacity speed cubic-bezier(0.165, 0.84, 0.44, 1);
+  &:hover::after,
+  &:focus::after
+    opacity 1
+  &:active
+    transition-duration speed-active
+    &::after
+      opacity 0
+      transition-duration speed-active

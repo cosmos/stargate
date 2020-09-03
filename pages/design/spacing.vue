@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="section-container">
     <h5>FUNCTIONAL</h5>
     <div class="box pa7">
       <div class="rf1">Top text</div>

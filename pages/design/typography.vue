@@ -157,13 +157,13 @@ code
   &:last-child
     grid-column 6/span 4
 
-// for size in -1...6
-//   .var-weight .rf{size}:not(.b)
-//     // weight - starting col (300 weight) / 3 colspan * %
-//     transform: translateX(((356 - size * 24) - 300)/3 * 1%)
-//
-// for size in -1...12
-//   .var-weight .rf{size}.b
-//     // weight - starting col (600 weight) / 4 colspan * %
-//     transform: translateX(((690 + size * 30) - 600)/4 * 1%)
+for size in -1...6
+  .var-weight .rf{size}:not(.b):not(.rowhead)
+    // weight - starting col (300 weight) / 3 colspan * %
+    transform: translateX(((356 - size * 24) - 300)/3 * 1%)
+
+for size in -1...12
+  .var-weight .rf{size}.b
+    // weight - starting col (600 weight) / 4 colspan * %
+    transform: translateX(((690 + size * 30) - 600)/4 * 1%)
 </style>

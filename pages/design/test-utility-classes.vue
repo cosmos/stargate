@@ -3,7 +3,7 @@
     <div
       class="hero tc pv9 min-vh-100 flex flex-column items-center justify-center"
     >
-      <div class="container ph7 ph9-m-up ph10-l-up ph11-xl-up ph12-xxl">
+      <div class="section-container ph7 ph9-m-up ph10-l-up ph11-xl-up ph12-xxl">
         <div class="f-1 rf1-m-up fw5 lh-title ttu tracked">
           Welcome to Cosmos
         </div>
@@ -16,6 +16,9 @@
           technology.
         </p>
         <tm-button size="l">Beam me up</tm-button>
+        <tm-button size="l" borderColor="black" color="black" variant="outlined"
+          >Beam me up</tm-button
+        >
         <p class="rf-1 rf0-l-up lh-copy measure-narrow mt5 center">
           Here's some smallprint that no one should be able to read. Just
           kidding.
@@ -36,6 +39,7 @@ export default {
 
 <style lang="stylus" scoped>
 .hero
+  background white
   .title
     max-width 10em
 
