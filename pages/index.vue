@@ -611,17 +611,18 @@
       <div class="section-container">
         <div class="container">
           <div class="section-header">Contributors</div>
-          <div class="section-title">Core Developers</div>
-          <div class="section-statement">
-            Stargate is made possible through the hard work and coordination of
-            many dedicated teams contributing to development on Cosmos SDK,
-            Tendermint Core, IBC and Gaia.
+          <div class="section-graphics">
+            <consortium-graphics class="section-graphics__canvas" />
           </div>
-          <img
-            src="~/assets/illustrations/team-zones.svg"
-            class="section-graphics"
-          />
-          <div class="section-list">
+          <div class="section-top">
+            <div class="section-title">Core Developers</div>
+            <div class="section-statement">
+              Stargate is made possible through the hard work and coordination
+              of many dedicated teams contributing to development on Cosmos SDK,
+              Tendermint Core, IBC and Gaia.
+            </div>
+          </div>
+          <div class="section-list container">
             <div class="left-half__container">
               <div
                 v-for="i in contributorsList.slice(0, 3)"
@@ -786,56 +787,58 @@
       </div>
     </div>
 
-    <div class="bottom">
-      <transition name="fade" mode="out-in">
-        <div v-if="state === 'success'" key="success" class="bottom__state">
-          <div class="bottom__get-notified">
-            Almost there&hellip;
-          </div>
-          <h2 class="bottom__state__success">
-            Check your inbox and confirm your email address
-          </h2>
-        </div>
-        <div v-else-if="state === 'error'" key="error" class="bottom__state">
-          <div class="bottom__get-notified">
-            Something went wrong
-          </div>
-          <h2 class="bottom__state__error">
-            Uh oh! Refresh the page and try again.
-          </h2>
-        </div>
-        <div v-else key="default" class="bottom__form">
-          <label class="bottom__get-notified" for="field-email">
-            Get Stargates updates
-          </label>
-          <form
-            :action="url"
-            method="POST"
-            target="_blank"
-            rel="noreferrer noopener"
-            @submit.prevent="actionSubmitEmail"
-          >
-            <div class="bottom__form__input">
-              <input
-                id="field-email"
-                v-model="email"
-                name="fields[email]"
-                class="bottom__form__input__input"
-                type="email"
-                placeholder="Your email"
-                required="required"
-              />
-              <button type="submit" class="bottom__form__input__button">
-                <icon-arrow-right
-                  class="bottom__form__input__icon"
-                  @click="actionSubmitEmail"
-                />
-                <span class="sr-only">Submit</span>
-              </button>
+    <div class="bottom section-container">
+      <div class="container">
+        <transition name="fade" mode="out-in">
+          <div v-if="state === 'success'" key="success" class="bottom__state">
+            <div class="bottom__get-notified">
+              Almost there&hellip;
             </div>
-          </form>
-        </div>
-      </transition>
+            <h2 class="bottom__state__success">
+              Check your inbox and confirm your email address
+            </h2>
+          </div>
+          <div v-else-if="state === 'error'" key="error" class="bottom__state">
+            <div class="bottom__get-notified">
+              Something went wrong
+            </div>
+            <h2 class="bottom__state__error">
+              Uh oh! Refresh the page and try again.
+            </h2>
+          </div>
+          <div v-else key="default" class="bottom__form">
+            <label class="bottom__get-notified" for="field-email">
+              Get Stargates updates
+            </label>
+            <form
+              :action="url"
+              method="POST"
+              target="_blank"
+              rel="noreferrer noopener"
+              @submit.prevent="actionSubmitEmail"
+            >
+              <div class="bottom__form__input">
+                <input
+                  id="field-email"
+                  v-model="email"
+                  name="fields[email]"
+                  class="bottom__form__input__input"
+                  type="email"
+                  placeholder="Your email"
+                  required="required"
+                />
+                <button type="submit" class="bottom__form__input__button">
+                  <icon-arrow-right
+                    class="bottom__form__input__icon"
+                    @click="actionSubmitEmail"
+                  />
+                  <span class="sr-only">Submit</span>
+                </button>
+              </div>
+            </form>
+          </div>
+        </transition>
+      </div>
     </div>
   </main>
 </template>
@@ -1982,53 +1985,49 @@ td
         cursor pointer
 
 .section-contributors
+  overflow hidden
   .section-header
-    grid-column 6 / span 10
-    grid-row 1
-  .section-title
-    margin-top 3rem
-    align-self flex-start
     grid-column 6 / span 7
+    grid-row 1
+  .section-graphics
+    grid-column 7 / span 6
+    grid-row 2
+    position relative
+    .section-graphics__canvas
+      position absolute
+      width 130%
+      margin-left -15%
+      margin-top 0
+  .section-top
+    grid-column 1 / span 7
+    margin-top 12rem
+    position relative
+  .section-title
+    align-self flex-start
     font-weight 900
     font-size 5.125rem
     line-height 1.121
     letter-spacing -0.025em
     color #FFFFFF
-    grid-row 2
-    z-index 1
-    position relative
+    max-width 6em
   .section-statement
     margin-top 3rem
-    align-self flex-end
-    grid-column 6 / span 7
     font-size 1.4375rem
     line-height 1.565
     letter-spacing -0.01em
     color #CFD1E7
     max-width 30em
-    grid-row 3
-    z-index 1
-  .section-graphics
-    grid-row 3
-    grid-column 1/span 3
-    z-index 0
-    position absolute
   .section-list
-    margin-top 6rem
     grid-column 1/span 12
-    display grid
-    grid-template-columns auto auto
-    grid-column-gap 14.625rem
     grid-auto-flow column
-    padding-top 20%
-    width 110%
-    z-index 1
+    width 100%
+    max-width none
     position relative
     .left-half__container
-      grid-column 1
+      grid-column 1/span 5
       margin-top auto
     .right-half__container
-      grid-column 2
+      grid-column 8/span 5
     &__item
       padding-top 1.875rem
       padding-bottom 1.875rem
@@ -2254,11 +2253,10 @@ td
         color #989BB9
 
 .bottom
-  width 100%
   text-align center
-  display flex
-  justify-content center
-  align-items center
+  .container
+    display flex
+    justify-content center
   &__get-notified
     display block
     margin 3rem auto 1rem
@@ -2280,6 +2278,7 @@ td
   &__form
     margin 3.5rem auto
     max-width 25rem
+    width 100%
     &__input
       display flex
       position relative
@@ -2309,13 +2308,11 @@ td
       &__input
         outline none
         width 100%
-        background rgba(255, 255, 255, 0.1)
+        background #121435
         border none
         border-radius 0.625rem
         padding 1.25rem 4rem 1.25rem 1.5rem
         height 64px
-        -webkit-backdrop-filter blur(10px)
-        backdrop-filter blur(10px)
         font-weight 350
         font-size 1.1875rem
         line-height 1.263
@@ -2327,11 +2324,11 @@ td
           color #989BB9
           transition color 0.15s ease-out
         &:hover
-          background rgba(255, 255, 255, 0.15)
+          background #282B53
           &:not(:focus)::placeholder
             color #CFD1E7
         &:focus
-          background rgba(255, 255, 255, 0.2)
+          background #282B53
           color #FFFFFF
 
 @media screen and (max-width: 1919px)
@@ -2472,17 +2469,12 @@ td
       grid-column 1 / span 12
 
   .section-contributors
+    .section-top
+      grid-column 1/span 12
     .section-title
-      grid-column 1/12
       font-size 4rem
-    .section-statement
-      grid-column 1/12
-    .section-graphics
-      top 10%
-      width 90%
     .section-list
-      margin-top 3rem
-      grid-column 1/12
+      margin-top 4rem
       display block
       .left-half
         grid-column unset
@@ -2671,6 +2663,8 @@ td
       letter-spacing -0.01em
 
   .section-testnets
+    .section-graphics
+      font-size 0.5rem
     .section-statement
       margin-top 2rem
 
@@ -2723,7 +2717,13 @@ td
         line-height 1.384
 
   .section-contributors
-    .section-statement
+    .section-graphics
+      grid-column 4/span 8
+      font-size 0.5rem
+    .section-top
+      margin-top 34%
+    .section-statement,
+    .section-list
       margin-top 2rem
 
   .section-articles .content
