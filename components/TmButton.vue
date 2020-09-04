@@ -7,13 +7,13 @@
       `tm-button__size__${size}`,
       `tm-button__variant__${variant}`,
       'tm-lh-solid',
+      glow && 'tm-button__glow',
       styles,
     ]"
     :style="{
       '--background-color': backgroundColor,
       '--border-color': borderColor,
       '--color': color,
-      '--glow-color': glowColor,
     }"
   >
     <slot />
@@ -59,11 +59,11 @@ export default {
       default: '#ffffff', // TODO: use a color variable
     },
     /**
-     * CSS color of glow
+     * Glow style
      */
-    glowColor: {
-      type: String,
-      default: null, // TODO: use a color variable
+    glow: {
+      type: Boolean,
+      default: false,
     },
     /**
      * Disabled
@@ -136,6 +136,8 @@ export default {
   appearance none
   text-rendering inherit
   font-family inherit
+  background none
+  border none
   outline 0
   cursor pointer
   user-select none
@@ -145,13 +147,73 @@ export default {
     padding 0
 
   // base
+  position relative
   display inline-block
   text-align center
-  font-weight var(--font-weight-b--1)
+  font-weight var(--font-weight-b--1) // TODO: replace with responsive font-weight
   color var(--color)
-  border 0.125rem solid transparent
   border-radius 0.5em // relative border-radius
-  hover-raise()
+
+  /* glow styling (optional) */
+  &__glow
+    &::before
+      content ''
+      position absolute
+      border-radius inherit
+      transform translateZ(0)
+      z-index -1
+      opacity 0.5
+      transition background-position .25s ease-out, opacity .5s $ease-out
+    &:hover,
+    &:focus
+      &,
+      &::before
+        background-position right bottom
+      &::before
+        transition-duration .1s
+        opacity 0.8
+
+  /* text variant */
+  &__variant__text
+    &:hover,
+    &:focus
+      opacity 0.8
+    &:active
+      opacity 0.5
+
+  /* outlined variant */
+  &__variant__outlined
+    hover-raise()
+    &::after,
+    &.tm-button__glow::before
+      border 0.125rem solid var(--border-color)
+    &::after // border
+      content ''
+      position absolute
+      trbl 0
+      border-radius inherit
+      opacity 0.2
+      transition opacity .25s $ease-out
+    &.tm-button__glow::before // glow
+      trbl -0.125em
+      filter blur(0.4rem)
+    &:hover,
+    &:focus
+      &::after
+        opacity 1
+
+  /* contained varient */
+  &__variant__contained
+    background var(--background-color)
+    background-size 200% auto
+    box-shadow var(--elevation-4)
+    hover-raise()
+    hover-elevation 8
+    &::before // glow
+      trbl 0.25em 1em -0.25em
+      background-size inherit
+      background-image inherit
+      filter blur(1.25rem) brightness(1.5)
 
   // sizes
   &__size__s
@@ -163,15 +225,19 @@ export default {
   &__size__xl
     padding var(--spacing-7) var(--spacing-9)
 
-  &__variant__text
-    background-color transparent
-  &__variant__outlined
-    background-color transparent
-    border-color var(--border-color)
-  &__variant__contained
-    background-color var(--background-color)
-    box-shadow var(--elevation-4)
-    hover-elevation(8, offset: -0.125rem, shadow: var(--glow-12) var(--glow-color, var(--background-color, #00ff00)))
+  /* icons */
+  >>> .icon__right
+  >>> .icon__left
+    display inline-block
+    transform-fix()
+    transition transform 0.25s $ease-out
+  &:hover,
+  &:focus
+    >>> .icon__right
+      transform translateX(0.25rem)
+    >>> .icon__left
+      transform rotate(5deg) scale(1.05)
+
 
 button:disabled
   opacity 0.5

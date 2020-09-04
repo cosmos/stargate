@@ -13,9 +13,19 @@
           interconnected applications, built with powerful blockchain
           technology.
         </p>
-        <tm-button size="l">Beam me up</tm-button>
-        <tm-button size="l" borderColor="white" color="white" variant="outlined"
-          >Show me more</tm-button
+        <tm-button
+          size="l"
+          backgroundColor="linear-gradient(90deg, #C01AEA, #4251FA, #36D0E6)"
+          glow
+          >Beam me up</tm-button
+        >
+        <tm-button
+          size="l"
+          borderColor="#fff"
+          color="#fff"
+          variant="outlined"
+          glow
+          >Get knowledge</tm-button
         >
         <p
           class="smallprint tm-rf-1 tm-rf0-l-up tm-lh-copy tm-measure-narrower"
@@ -49,6 +59,12 @@ export default {
   .title
     max-width 10em
     margin var(--spacing-5) 0 0
+    color #fff
+    .highlight
+      color red
+      background linear-gradient(90deg, #C01AEA, #4251FA, #36D0E6)
+      background-clip text
+      -webkit-text-fill-color transparent
   .subtitle
     margin var(--spacing-7) auto var(--spacing-8)
   .smallprint

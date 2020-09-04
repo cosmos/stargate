@@ -2,29 +2,32 @@
  * even if you are using background-size: cover */
 
 hover-grow(scale-hover = 1.05, scale-active = .9, speed = .25s, speed-hover = .1s, speed-active = 0s)
-  -moz-osx-font-smoothing grayscale
-  backface-visibility hidden
-  transform translateZ(0)
+  transform-fix()
   transition transform speed ease-out
 
   &:hover,
   &:focus
     transform scale(scale-hover)
+    transition-duration speed-hover
 
   &:active
     transform scale(scale-active)
     transition-duration speed-active
 
-hover-raise(raise-hover = -2px, raise-active = 0, speed = .25s, speed-active = 0s)
-  -moz-osx-font-smoothing grayscale
-  backface-visibility hidden
-  transform translateZ(0)
-  transition transform speed ease-out
+hover-raise(raise-hover = -2px, raise-active = 0, speed = .25s, speed-hover = .1s, speed-active = 0s)
+  transform-fix()
+  transition all speed ease-out
 
   &:hover,
   &:focus
     transform translateY(raise-hover)
+    transition-duration speed-hover
 
   &:active
     transform translateY(raise-active)
     transition-duration speed-active
+
+transform-fix()
+  -moz-osx-font-smoothing grayscale
+  backface-visibility hidden
+  transform translateZ(0)

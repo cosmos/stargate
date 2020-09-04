@@ -3,7 +3,9 @@
 
 html
   font 400 100%/1.5 $font-family-sans-serif
-  font-feature-settings 'kern' 1, 'liga' 1, 'calt' 1, 'zero' on
+  font-feature-settings 'kern' on, 'liga' on, 'calt' on, 'zero' on
+  // TODO: figure out why nuxt isn't using postcss-font-variant to generate these vendor prefixes
+  -webkit-font-feature-settings 'kern' on, 'liga' on, 'calt' on, 'zero' on
   text-size-adjust 100%
   -moz-osx-font-smoothing grayscale
   font-smoothing antialiased

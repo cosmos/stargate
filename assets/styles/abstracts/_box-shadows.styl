@@ -5,10 +5,9 @@
    http://tobiasahlin.com/blog/how-to-animate-box-shadow/
 */
 
-hover-elevation(size = 8, speed = 0.2s, speed-active = 0s, offset = 0, shadow)
+hover-elevation(size = 8, speed = .25s, speed-hover = .1s, speed-active = 0s, shadow = null)
   cursor pointer
   position relative
-  transition all speed cubic-bezier(0.165, 0.84, 0.44, 1)
   &::after
     content ''
     if shadow
@@ -18,17 +17,13 @@ hover-elevation(size = 8, speed = 0.2s, speed-active = 0s, offset = 0, shadow)
     border-radius inherit
     opacity 0
     position absolute
-    top offset
-    left offset
-    right offset
-    bottom offset
+    trbl 0 0 0 0
     z-index -1
-    transition opacity speed cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition opacity speed $ease-out
   &:hover::after,
   &:focus::after
     opacity 1
-  &:active
+    transition-duration speed-hover
+  &:active::after
+    opacity 0
     transition-duration speed-active
-    &::after
-      opacity 0
-      transition-duration speed-active
