@@ -1,6 +1,4 @@
 :root
-  --white #FFFFFF
-  --link #40B3FF
   --container-mw-lg 74rem
 
 @font-face
@@ -30,7 +28,7 @@ html
   -moz-osx-font-smoothing grayscale
   -webkit-font-smoothing antialiased
   text-rendering optimizeLegibility
-  background-color #000000
+  background-color var(--black)
   color #CFD1E7
   scroll-behavior smooth
 
@@ -49,7 +47,7 @@ body
 
 ::selection
   background #4251FA
-  color #fff
+  color var(--white)
 
 a
   color var(--link)
@@ -69,9 +67,3 @@ p + p
 code
   -webkit-font-feature-settings "liga" on, "calt" on
   font-family "JetBrains Mono", "Menlo", "Monaco", "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace
-
-// TODO: move to tm-btn
-.disabled
-  opacity 0.65
-  user-select none
-  pointer-events none
