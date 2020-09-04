@@ -238,10 +238,28 @@
                   <div class="testnets-list__item__text__top__status">Live</div>
                 </div>
                 <div class="testnets-list__item__text__mid">
-                  <div class="testnets-list__item__text__mid__desc">
+                  <p class="testnets-list__item__text__mid__desc">
                     The first simulated upgrade of the Cosmos Hub and the
                     primary public integration testnet for Stargate-readiness.
-                  </div>
+                  </p>
+                  <p class="testnets-list__item__text__mid__note">
+                    <strong>Update:</strong> This testnet will restart as
+                    <code><strong>stargate-2</strong></code> upon merging these
+                    PRs:
+                    <a
+                      href="https://github.com/cosmos/cosmos-sdk/pull/7234"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      >#7234</a
+                    >
+                    &
+                    <a
+                      href="https://github.com/cosmos/cosmos-sdk/pull/7221"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      >#7221</a
+                    >
+                  </p>
                 </div>
                 <div class="testnets-list__item__text__bot">
                   <div class="testnets-list__item__text__bot__display">
@@ -1605,6 +1623,12 @@ main
             letter-spacing -0.005em
             color #989BB9
             max-width 30em
+          &__note
+            margin-top 0.5rem
+            font-size 0.8125rem
+            line-height 1.538
+            letter-spacing 0.001em
+            color #989BB9
         &__bot
           margin-top 1rem
           display flex
