@@ -15,4 +15,8 @@ export default {
 }
 </script>
 
-<style lang="stylus"></style>
+<style lang="stylus">
+a[href]
+  color inherit
+  text-decoration initial
+</style>

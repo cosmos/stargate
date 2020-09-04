@@ -15,13 +15,13 @@
         </p>
         <tm-button
           size="l"
-          backgroundColor="linear-gradient(90deg, #C01AEA, #4251FA, #36D0E6)"
+          background-color="linear-gradient(90deg, #C01AEA, #4251FA, #36D0E6)"
           glow
           >Beam me up</tm-button
         >
         <tm-button
           size="l"
-          borderColor="#fff"
+          border-color="#fff"
           color="#fff"
           variant="outlined"
           glow
