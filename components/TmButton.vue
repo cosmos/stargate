@@ -1,7 +1,88 @@
 <template>
+  <!-- INTERNAL -->
+  <nuxt-link v-if="toLink === 'internal'" :to="to" class="tm-button">
+    <component
+      :is="tag"
+      v-bind="{ type, disabled }"
+      :class="[
+        'tm-button',
+        `tm-button__size__${size}`,
+        `tm-button__variant__${variant}`,
+        'tm-lh-solid',
+        glow && 'tm-button__glow',
+        styles,
+      ]"
+      :style="{
+        '--background-color': backgroundColor,
+        '--border-color': borderColor,
+        '--color': color,
+      }"
+    >
+      <span>
+        <slot />
+      </span>
+    </component>
+  </nuxt-link>
+  <!-- EXTERNAL -->
+  <a
+    v-else-if="toLink === 'external'"
+    :href="href"
+    target="_blank"
+    rel="noreferrer noopener"
+    class="tm-button"
+  >
+    <component
+      :is="tag"
+      v-bind="{ type, target, href, rel, disabled }"
+      :class="[
+        'tm-button',
+        `tm-button__size__${size}`,
+        `tm-button__variant__${variant}`,
+        'tm-lh-solid',
+        glow && 'tm-button__glow',
+        styles,
+      ]"
+      :style="{
+        '--background-color': backgroundColor,
+        '--border-color': borderColor,
+        '--color': color,
+      }"
+    >
+      <span>
+        <slot />
+      </span>
+    </component>
+  </a>
+  <!-- DISABLED -->
   <component
     :is="tag"
-    v-bind="{ target, type, disabled, href, variant, size }"
+    v-else-if="disabled"
+    v-bind="{ type, target, href, rel, disabled }"
+    :class="[
+      'tm-button',
+      `tm-button__size__${size}`,
+      `tm-button__variant__${variant}`,
+      'tm-lh-solid',
+      glow && 'tm-button__glow',
+      styles,
+    ]"
+    :style="{
+      '--background-color': backgroundColor,
+      '--border-color': borderColor,
+      '--color': color,
+    }"
+    aria-disabled="true"
+  >
+    <span>
+      <slot />
+    </span>
+  </component>
+
+  <!-- DEFAULT -->
+  <component
+    :is="tag"
+    v-else
+    v-bind="{ type, target, href, rel, disabled }"
     :class="[
       'tm-button',
       `tm-button__size__${size}`,
@@ -16,7 +97,9 @@
       '--color': color,
     }"
   >
-    <slot />
+    <span>
+      <slot />
+    </span>
   </component>
 </template>
 
@@ -73,18 +156,32 @@ export default {
       default: false,
     },
     /**
-     * Type
+     * Type: `submit`
      */
     type: {
       type: String,
       default: 'submit',
     },
     /**
-     * Tag
+     * Tag: `button`
      */
     tag: {
       type: String,
       default: 'button',
+    },
+    /**
+     * toLink: `anchor` | `internal` | `external`
+     */
+    toLink: {
+      type: String,
+      default: null,
+    },
+    /**
+     * to
+     */
+    to: {
+      type: String,
+      default: null,
     },
     /**
      * href
@@ -101,6 +198,13 @@ export default {
       default: null,
     },
     /**
+     * rel
+     */
+    rel: {
+      type: String,
+      default: null,
+    },
+    /**
      * Classes
      */
     classes: {
@@ -113,16 +217,16 @@ export default {
       let classes = this.classes
       switch (this.size) {
         case 's':
-          classes += ' tm-rf-1'
+          classes += 'tm-rf-1'
           break
         case 'l':
-          classes += ' tm-rf1'
+          classes += 'tm-rf1'
           break
         case 'xl':
-          classes += ' tm-rf2'
+          classes += 'tm-rf2'
           break
         default:
-          classes += ' tm-rf0'
+          classes += 'tm-rf0'
       }
       return classes
     },
@@ -148,11 +252,18 @@ export default {
 
   // base
   position relative
-  display inline-block
+  display inline-flex
+  align-items center
+  justify-content center
   text-align center
   font-weight var(--font-weight-b--1) // TODO: replace with responsive font-weight
   color var(--color)
   border-radius 0.5em // relative border-radius
+
+  &[disabled]
+    cursor not-allowed !important
+    opacity 0.65 !important
+    pointer-events none
 
   /* glow styling (optional) */
   &__glow
@@ -183,6 +294,8 @@ export default {
 
   /* outlined variant */
   &__variant__outlined
+    border 0.125rem solid var(--border-color)
+    background transparent !important
     hover-raise()
     &::after,
     &.tm-button__glow::before
@@ -202,7 +315,7 @@ export default {
       &::after
         opacity 1
 
-  /* contained varient */
+  /* contained variant */
   &__variant__contained
     background var(--background-color)
     background-size 200% auto
@@ -237,8 +350,4 @@ export default {
       transform translateX(0.25rem)
     >>> .icon__left
       transform rotate(5deg) scale(1.05)
-
-
-button:disabled
-  opacity 0.5
 </style>
