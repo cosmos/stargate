@@ -1,4 +1,5 @@
 //  This doesn't seem to be working with RFS?
+// TODO: remove these once we have the responsive font-weight classes below
 :root
   for size in -1...8
     rfs((690 + size * 30), ('--font-weight-b-%s' % size))
@@ -8,21 +9,6 @@
 /*
 
    FONT WEIGHT
-   Docs: http://tachyons.io/docs/typography/font-weight/
-
-   Base
-     fw = font-weight
-
-   Modifiers:
-     1 = literal value 100
-     2 = literal value 200
-     3 = literal value 300
-     4 = literal value 400
-     5 = literal value 500
-     6 = literal value 600
-     7 = literal value 700
-     8 = literal value 800
-     9 = literal value 900
 
    Media Query Extensions:
      -m-up = medium upwards
@@ -31,41 +17,27 @@
 
 */
 
-.normal
-  font-weight normal
-.b
-  font-weight bold
-// .fw1 - .fw9
-for weight in 1...9
-  .fw{weight}
-    font-weight weight * 100
+// TODO: convert these to responsive values with calc() + vw
+.tm-normal
+  font-weight $fw-base
+.tm-bold
+  font-weight $fw-bold
 
+// TODO: remove these once we have the responsive font-weight classes
 @media $breakpoint-medium
-  .normal-m-up
+  .tm-normal-m-up
     font-weight normal
-  .b-m-up
+  .tm-bold-m-up
     font-weight bold
-  // .fw1 - .fw9
-  for weight in 1...9
-    .fw{weight}-m-up
-      font-weight weight * 100
 
 @media $breakpoint-medium-only
-  .normal-m
+  .tm-normal-m
     font-weight normal
-  .b-m
+  .tm-bold-m
     font-weight bold
-  // .fw1 - .fw9
-  for weight in 1...9
-    .fw{weight}-m
-      font-weight weight * 100
 
 @media $breakpoint-large
-  .normal-l-up
+  .tm-normal-l-up
     font-weight normal
-  .b-l-up
+  .tm-bold-l-up
     font-weight bold
-  // .fw1 - .fw9
-  for weight in 1...9
-    .fw{weight}-l-up
-      font-weight weight * 100

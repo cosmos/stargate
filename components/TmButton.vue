@@ -6,7 +6,7 @@
       'tm-button',
       `tm-button__size__${size}`,
       `tm-button__variant__${variant}`,
-      'lh-solid',
+      'tm-lh-solid',
       styles,
     ]"
     :style="{
@@ -113,16 +113,16 @@ export default {
       let classes = this.classes
       switch (this.size) {
         case 's':
-          classes += ' rf-1'
+          classes += ' tm-rf-1'
           break
         case 'l':
-          classes += ' rf1'
+          classes += ' tm-rf1'
           break
         case 'xl':
-          classes += ' rf2'
+          classes += ' tm-rf2'
           break
         default:
-          classes += ' rf0'
+          classes += ' tm-rf0'
       }
       return classes
     },
@@ -132,17 +132,26 @@ export default {
 
 <style lang="stylus" scoped>
 .tm-button
+  // resets
+  appearance none
+  text-rendering inherit
+  font-family inherit
+  outline 0
+  cursor pointer
+  user-select none
+  text-decoration none
+  &::-moz-focus-inner
+    border 0
+    padding 0
+
+  // base
   display inline-block
+  text-align center
   font-weight var(--font-weight-b--1)
   color var(--color)
   border 0.125rem solid transparent
   border-radius 0.5em // relative border-radius
-  outline 0
-  cursor pointer
-  user-select none
   hover-raise()
-  text-align center
-  text-decoration none
 
   // sizes
   &__size__s

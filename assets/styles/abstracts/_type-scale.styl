@@ -31,28 +31,3 @@ $font-size-step = {
   '6': 5.61rem,
   '7': 7.478rem
 }
-
-
-// Test mixins
-
-title(size) {
-  font-size 'var(--r-font-size-%s)' % size
-  font-weight 'var(--font-weight-b-%s)' % size
-  line-height $line-height-solid
-  letter-spacing 'var(--letter-spacing-b-%s)' % size
-}
-
-paragraph(size) {
-  font-size 'var(--r-font-size-%s)' % size
-  font-weight 'var(--font-weight-n-%s)' % size
-  line-height $line-height-copy
-  letter-spacing 'var(--letter-spacing-n-%s)' % size
-}
-
-overline(size) {
-  font-size 'var(--r-font-size-%s)' % size
-  font-weight 500
-  line-height $line-height-title
-  letter-spacing 0.08em
-  text-transform uppercase
-}

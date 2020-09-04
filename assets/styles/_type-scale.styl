@@ -1,14 +1,4 @@
-// Not sure why this won't generate properly using a loop?
-:root
-  --font-size--1: $font-size-step['-1']
-  --font-size-0: $font-size-step['0']
-  --font-size-1: $font-size-step['1']
-  --font-size-2: $font-size-step['2']
-  --font-size-3: $font-size-step['3']
-  --font-size-4: $font-size-step['4']
-  --font-size-5: $font-size-step['5']
-  --font-size-6: $font-size-step['6']
-  --font-size-7: $font-size-step['7']
+/* Variables */
 
 :root
   for size in -1...8
@@ -20,7 +10,7 @@
    Docs: http://tachyons.io/docs/typography/scale/
 
    Base:
-    f = font-size
+    rf = responsive font-size
 
    Modifiers
      1 = 1st step in size scale
@@ -40,56 +30,45 @@
 /* Type scale */
 /* Modular type scale + relative weights */
 for size in -1...8
-  .rf{size}
+  .tm-rf{size}
     font-size 'var(--r-font-size-%s)' % size
-  .f{size}
-    font-size 'var(--font-size-%s)' % size
-  .f{size},
-  .rf{size}
     if size <= 3
+      // TODO: remove once we have responsive font-weight classes
       font-weight 'var(--font-weight-n-%s)' % size
+      // TODO: refactor to single variable once we have responsive letter-spacing variables
       letter-spacing 'var(--letter-spacing-n-%s)' % size
-      &.lh-copy
+      // TODO: remove once we have responsive line-height classes
+      &.tm-lh-copy
         line-height 'var(--line-height-copy-%s)' % size
-    &.b
+    // TODO: remove once we have responsive font-weight classes
+    &.tm-bold
       font-weight 'var(--font-weight-b-%s)' % size
       letter-spacing 'var(--letter-spacing-b-%s)' % size
-    &.lh-title
+    // TODO: remove once we have responsive line-height classes
+    &.tm-lh-title
       line-height 'var(--line-height-title-%s)' % size
 
 @media $breakpoint-medium
   for size in -1...8
-    .rf{size}-m-up
+    .tm-rf{size}-m-up
       font-size 'var(--r-font-size-%s)' % size
-    .f{size}-m-up
-      font-size: $font-size-step['' + size]
-      if size <= 3
-        font-weight 'var(--font-weight-n-%s)' % size
-        letter-spacing 'var(--letter-spacing-n-%s)' % size
-      &.b
-        font-weight 'var(--font-weight-b-%s)' % size
-        letter-spacing 'var(--letter-spacing-b-%s)' % size
 
 @media $breakpoint-medium-only
   for size in -1...8
-    .f{size}-m
-      font-size: $font-size-step['' + size]
-      if size <= 3
-        font-weight 'var(--font-weight-n-%s)' % size
-        letter-spacing 'var(--letter-spacing-n-%s)' % size
-      &.b
-        font-weight 'var(--font-weight-b-%s)' % size
-        letter-spacing 'var(--letter-spacing-b-%s)' % size
+    .tm-rf{size}-m
+      font-size 'var(--r-font-size-%s)' % size
 
 @media $breakpoint-large
   for size in -1...8
-    .rf{size}-l-up
+    .tm-rf{size}-l-up
       font-size 'var(--r-font-size-%s)' % size
-    .f{size}-l-up
-      font-size: $font-size-step['' + size]
-      if size <= 3
-        font-weight 'var(--font-weight-n-%s)' % size
-        letter-spacing 'var(--letter-spacing-n-%s)' % size
-      &.b
-        font-weight 'var(--font-weight-b-%s)' % size
-        letter-spacing 'var(--letter-spacing-b-%s)' % size
+
+@media $breakpoint-large-only
+  for size in -1...8
+    .tm-rf{size}-l
+      font-size 'var(--r-font-size-%s)' % size
+
+@media $breakpoint-xl
+  for size in -1...8
+    .tm-rf{size}-xl-up
+      font-size 'var(--r-font-size-%s)' % size

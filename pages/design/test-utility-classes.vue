@@ -1,25 +1,25 @@
 <template>
   <main>
-    <div
-      class="hero tc pv9 min-vh-100 flex flex-column items-center justify-center"
-    >
-      <div class="section-container ph7 ph9-m-up ph10-l-up ph11-xl-up ph12-xxl">
-        <div class="f-1 rf1-m-up fw5 lh-title ttu tracked">
+    <div class="hero">
+      <div class="section-container">
+        <div class="tm-rf0 tm-rf1-m-up tm-lh-title tm-overline">
           Welcome to Cosmos
         </div>
-        <h1 class="title rf7 b lh-title mt5 mb0">
-          The open economy for everyone
+        <h1 class="title tm-rf7 tm-bold tm-lh-title">
+          The open economy for <span class="highlight">everyone</span>
         </h1>
-        <p class="rf2 lh-copy measure mt7 mb8 center">
+        <p class="subtitle tm-rf1 tm-rf2-m-up tm-lh-copy tm-measure">
           Cosmos is an ever-expanding network of decentralized and
           interconnected applications, built with powerful blockchain
           technology.
         </p>
         <tm-button size="l">Beam me up</tm-button>
-        <tm-button size="l" borderColor="black" color="black" variant="outlined"
-          >Beam me up</tm-button
+        <tm-button size="l" borderColor="white" color="white" variant="outlined"
+          >Show me more</tm-button
         >
-        <p class="rf-1 rf0-l-up lh-copy measure-narrow mt5 center">
+        <p
+          class="smallprint tm-rf-1 tm-rf0-l-up tm-lh-copy tm-measure-narrower"
+        >
           Here's some smallprint that no one should be able to read. Just
           kidding.
         </p>
@@ -39,19 +39,29 @@ export default {
 
 <style lang="stylus" scoped>
 .hero
-  background white
+  text-align center
+  padding var(--spacing-9) 0
+  min-height 100vh
+  display flex
+  flex-direction column
+  align-items center
+  justify-content center
   .title
     max-width 10em
+    margin var(--spacing-5) 0 0
+  .subtitle
+    margin var(--spacing-7) auto var(--spacing-8)
+  .smallprint
+    margin var(--spacing-5) auto 0
+  .tm-button
+    margin var(--spacing-4)
 
-
-// class .rf* --> font-size
-// class .b --> font-weight + letter-spacing (determined by size)
-// class .lh-copy/.lh-title/.lh-solid --> line-height
-//
-// .display-7-title --> font-size + font-weight + letter-spacing + line-height
-// .display-7-solid
-//
-// .text-3-solid --> font-size + font-weight + letter-spacing + line-height
-// .text-3-title
-// .text-3-copy
+@media $breakpoint-xsmall-only
+  .hero
+    .tm-button
+      margin-left auto
+      margin-right auto
+      display block
+      width 100%
+      max-width $max-width-6
 </style>

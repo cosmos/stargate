@@ -1,112 +1,112 @@
 <template>
   <main>
     <div class="row">
-      <div class="colhead rf-1 lh-solid">Step</div>
-      <div class="colhead rf-1 lh-solid">Light</div>
-      <div class="colhead rf-1 lh-solid">Regular</div>
-      <div class="colhead rf-1 lh-solid">Medium</div>
-      <div class="colhead rf-1 lh-solid">Semi Bold</div>
-      <div class="colhead rf-1 lh-solid">Bold</div>
-      <div class="colhead rf-1 lh-solid">Extra Bold</div>
-      <div class="colhead rf-1 lh-solid">Black</div>
+      <div class="colhead tm-rf-1 tm-lh-solid">Step</div>
+      <div class="colhead tm-rf-1 tm-lh-solid">Light</div>
+      <div class="colhead tm-rf-1 tm-lh-solid">Regular</div>
+      <div class="colhead tm-rf-1 tm-lh-solid">Medium</div>
+      <div class="colhead tm-rf-1 tm-lh-solid">Semi Bold</div>
+      <div class="colhead tm-rf-1 tm-lh-solid">Bold</div>
+      <div class="colhead tm-rf-1 tm-lh-solid">Extra Bold</div>
+      <div class="colhead tm-rf-1 tm-lh-solid">Black</div>
     </div>
     <div class="row var-weight">
-      <div class="rowhead rf-1 lh-solid">7</div>
-      <div class="text rf7 b lh-title">Heading</div>
+      <div class="rowhead tm-rf-1 tm-lh-solid">7</div>
+      <div class="text tm-rf7 tm-bold tm-lh-title">Heading</div>
     </div>
     <div class="row var-weight">
-      <div class="rowhead rf-1 lh-solid">6</div>
-      <div class="text rf6 b lh-title">Heading</div>
+      <div class="rowhead tm-rf-1 tm-lh-solid">6</div>
+      <div class="text tm-rf6 tm-bold tm-lh-title">Heading</div>
     </div>
     <div class="row var-weight">
-      <div class="rowhead rf-1 lh-solid">5</div>
-      <div class="text rf5 b lh-title">Heading</div>
+      <div class="rowhead tm-rf-1 tm-lh-solid">5</div>
+      <div class="text tm-rf5 tm-bold tm-lh-title">Heading</div>
     </div>
     <div class="row var-weight">
-      <div class="rowhead rf-1 lh-solid">4</div>
-      <div class="text rf4 b lh-title">Heading</div>
+      <div class="rowhead tm-rf-1 tm-lh-solid">4</div>
+      <div class="text tm-rf4 tm-bold tm-lh-title">Heading</div>
     </div>
     <div class="row var-weight">
-      <div class="rowhead rf-1 lh-solid">3</div>
-      <div class="text rf3 lh-title">Subtitle</div>
-      <div class="text rf3 b lh-title">Heading</div>
+      <div class="rowhead tm-rf-1 tm-lh-solid">3</div>
+      <div class="text tm-rf3 tm-lh-title">Subtitle</div>
+      <div class="text tm-rf3 tm-bold tm-lh-title">Heading</div>
     </div>
     <div class="row var-weight">
-      <div class="rowhead rf-1 lh-solid">2</div>
-      <div class="text rf2 lh-title">Subtitle</div>
-      <div class="text rf2 b lh-title">Heading</div>
+      <div class="rowhead tm-rf-1 tm-lh-solid">2</div>
+      <div class="text tm-rf2 tm-lh-title">Subtitle</div>
+      <div class="text tm-rf2 tm-bold tm-lh-title">Heading</div>
     </div>
     <div class="row var-weight">
-      <div class="rowhead rf-1 lh-solid">1</div>
-      <div class="text rf1 lh-title">Subtitle</div>
-      <div class="text rf1 b lh-title">Heading</div>
+      <div class="rowhead tm-rf-1 tm-lh-solid">1</div>
+      <div class="text tm-rf1 tm-lh-title">Subtitle</div>
+      <div class="text tm-rf1 tm-bold tm-lh-title">Heading</div>
     </div>
     <div class="row var-weight">
-      <div class="rowhead rf-1 lh-solid">0</div>
-      <div class="text rf0 lh-title">Subtitle</div>
-      <div class="text rf0 b lh-title">Heading</div>
+      <div class="rowhead tm-rf-1 tm-lh-solid">0</div>
+      <div class="text tm-rf0 tm-lh-title">Subtitle</div>
+      <div class="text tm-rf0 tm-bold tm-lh-title">Heading</div>
     </div>
     <div class="row var-weight">
-      <div class="rowhead rf-1 lh-solid">-1</div>
-      <div class="text rf-1 lh-title">Subtitle</div>
-      <div class="text rf-1 b lh-title">Heading</div>
+      <div class="rowhead tm-rf-1 tm-lh-solid">-1</div>
+      <div class="text tm-rf-1 tm-lh-title">Subtitle</div>
+      <div class="text tm-rf-1 tm-bold tm-lh-title">Heading</div>
     </div>
     <div class="row var-weight">
-      <div class="rowhead rf-1 lh-solid">3</div>
-      <div class="text rf3 lh-copy">Paragraph</div>
-      <div class="text rf3 b lh-copy">Paragraph</div>
+      <div class="rowhead tm-rf-1 tm-lh-solid">3</div>
+      <div class="text tm-rf3 tm-lh-copy">Paragraph</div>
+      <div class="text tm-rf3 tm-bold tm-lh-copy">Paragraph</div>
     </div>
     <div class="row var-weight">
-      <div class="rowhead rf-1 lh-solid">2</div>
-      <div class="text rf2 lh-copy">Paragraph</div>
-      <div class="text rf2 b lh-copy">Paragraph</div>
+      <div class="rowhead tm-rf-1 tm-lh-solid">2</div>
+      <div class="text tm-rf2 tm-lh-copy">Paragraph</div>
+      <div class="text tm-rf2 tm-bold tm-lh-copy">Paragraph</div>
     </div>
     <div class="row var-weight">
-      <div class="rowhead rf-1 lh-solid">1</div>
-      <div class="text rf1 lh-copy">Paragraph</div>
-      <div class="text rf1 b lh-copy">Paragraph</div>
+      <div class="rowhead tm-rf-1 tm-lh-solid">1</div>
+      <div class="text tm-rf1 tm-lh-copy">Paragraph</div>
+      <div class="text tm-rf1 tm-bold tm-lh-copy">Paragraph</div>
     </div>
     <div class="row var-weight">
-      <div class="rowhead rf-1 lh-solid">0</div>
-      <div class="text rf0 lh-copy">Paragraph</div>
-      <div class="text rf0 b lh-copy">Paragraph</div>
+      <div class="rowhead tm-rf-1 tm-lh-solid">0</div>
+      <div class="text tm-rf0 tm-lh-copy">Paragraph</div>
+      <div class="text tm-rf0 tm-bold tm-lh-copy">Paragraph</div>
     </div>
     <div class="row var-weight">
-      <div class="rowhead rf-1 lh-solid">-1</div>
-      <div class="text rf-1 lh-copy">Paragraph</div>
-      <div class="text rf-1 b lh-copy">Paragraph</div>
+      <div class="rowhead tm-rf-1 tm-lh-solid">-1</div>
+      <div class="text tm-rf-1 tm-lh-copy">Paragraph</div>
+      <div class="text tm-rf-1 tm-bold tm-lh-copy">Paragraph</div>
     </div>
     <div class="row">
-      <div class="rowhead rf-1 lh-solid">1</div>
-      <div class="text rf1 lh-title ttu fw6 tracked-mega">Overline</div>
+      <div class="rowhead tm-rf-1 tm-lh-solid">1</div>
+      <div class="text tm-rf1 tm-lh-title tm-overline">Overline</div>
     </div>
     <div class="row">
-      <div class="rowhead rf-1 lh-solid">0</div>
-      <div class="text rf0 lh-title ttu fw6 tracked-mega">Overline</div>
+      <div class="rowhead tm-rf-1 tm-lh-solid">0</div>
+      <div class="text tm-rf0 tm-lh-title tm-overline">Overline</div>
     </div>
     <div class="row">
-      <div class="rowhead rf-1 lh-solid">-1</div>
-      <div class="text rf-1 lh-title ttu fw6 tracked-mega">Overline</div>
+      <div class="rowhead tm-rf-1 tm-lh-solid">-1</div>
+      <div class="text tm-rf-1 tm-lh-title tm-overline">Overline</div>
     </div>
     <div class="row">
-      <div class="rowhead rf-1 lh-solid">2</div>
-      <code class="rf2 lh-copy">Code</code>
-      <code class="rf2 fw7 lh-copy">Code</code>
+      <div class="rowhead tm-rf-1 tm-lh-solid">2</div>
+      <code class="tm-rf2 tm-lh-copy">Code</code>
+      <code class="tm-rf2 tm-bold tm-lh-copy">Code</code>
     </div>
     <div class="row">
-      <div class="rowhead rf-1 lh-solid">1</div>
-      <code class="rf1 lh-copy">Code</code>
-      <code class="rf1 fw7 lh-copy">Code</code>
+      <div class="rowhead tm-rf-1 tm-lh-solid">1</div>
+      <code class="tm-rf1 tm-lh-copy">Code</code>
+      <code class="tm-rf1 tm-bold tm-lh-copy">Code</code>
     </div>
     <div class="row">
-      <div class="rowhead rf-1 lh-solid">0</div>
-      <code class="rf0 lh-copy">Code</code>
-      <code class="rf0 fw7 lh-copy">Code</code>
+      <div class="rowhead tm-rf-1 tm-lh-solid">0</div>
+      <code class="tm-rf0 tm-lh-copy">Code</code>
+      <code class="tm-rf0 tm-bold tm-lh-copy">Code</code>
     </div>
     <div class="row">
-      <div class="rowhead rf-1 lh-solid">-1</div>
-      <code class="rf-1 lh-copy">Code</code>
-      <code class="rf-1 fw7 lh-copy">Code</code>
+      <div class="rowhead tm-rf-1 tm-lh-solid">-1</div>
+      <code class="tm-rf-1 tm-lh-copy">Code</code>
+      <code class="tm-rf-1 tm-bold tm-lh-copy">Code</code>
     </div>
   </main>
 </template>
@@ -158,12 +158,12 @@ code
     grid-column 6/span 4
 
 for size in -1...6
-  .var-weight .rf{size}:not(.b):not(.rowhead)
+  .var-weight .tm-rf{size}:not(.tm-bold):not(.rowhead)
     // weight - starting col (300 weight) / 3 colspan * %
     transform: translateX(((356 - size * 24) - 300)/3 * 1%)
 
 for size in -1...12
-  .var-weight .rf{size}.b
+  .var-weight .tm-rf{size}.tm-bold
     // weight - starting col (600 weight) / 4 colspan * %
     transform: translateX(((690 + size * 30) - 600)/4 * 1%)
 </style>

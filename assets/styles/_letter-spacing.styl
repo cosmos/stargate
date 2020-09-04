@@ -1,40 +1,8 @@
+/* Variables */
+
+// TODO: consolidate these into two responsive values: normal | bold
 :root
   for size in -1...8
     rfs((size * -0.005 * 1em), ('--letter-spacing-b-%s' % size))
     if size <= 3
       rfs((size * -0.01 * 1em), ('--letter-spacing-n-%s' % size))
-
-/*
-
-   LETTER SPACING
-   Docs: http://tachyons.io/docs/typography/tracking/
-
-   Media Query Extensions:
-     -m-up = medium upwards
-     -m  = medium
-     -l-up = large
-
-*/
-
-.tracked
-  letter-spacing .08em
-.tracked-mega
-  letter-spacing .2em
-
-@media $breakpoint-medium
-  .tracked-m-up
-    letter-spacing .08em
-  .tracked-mega-m-up
-    letter-spacing .2em
-
-@media $breakpoint-medium-only
-  .tracked-m
-    letter-spacing .08em
-  .tracked-mega-m
-    letter-spacing .2em
-
-@media $breakpoint-large
-  .tracked-l
-    letter-spacing .08em
-  .tracked-mega-l
-    letter-spacing .2em

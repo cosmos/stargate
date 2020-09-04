@@ -1,3 +1,4 @@
+// TODO: remove these once we have the responsive lh classes below
 :root
   for size in -1...8
     rfs((max(1, 1.3 - (size * 0.05))), ('--line-height-title-%s' % size))
@@ -7,7 +8,6 @@
 /*
 
    LINE HEIGHT / LEADING
-   Docs: http://tachyons.io/docs/typography/line-height
 
    Media Query Extensions:
      -m-up = medium upwards
@@ -16,6 +16,7 @@
 
 */
 
+// TODO: convert these to responsive values with calc() + vw
 .lh-solid
   line-height $line-height-solid
 .lh-title

@@ -2,23 +2,23 @@
   <div class="section-container">
     <h5>FUNCTIONAL</h5>
     <div class="box pa7">
-      <div class="rf1">Top text</div>
-      <div class="rf1 mt5">Bottom text</div>
+      <div class="tm-rf1">Top text</div>
+      <div class="tm-rf1 mt5">Bottom text</div>
     </div>
 
     <h5>SCOPED</h5>
     <div class="box scoped-box">
-      <div class="rf1">Top text</div>
-      <div class="rf1 text-bottom">Bottom text</div>
+      <div class="tm-rf1">Top text</div>
+      <div class="tm-rf1 text-bottom">Bottom text</div>
     </div>
 
     <h5>MANUAL</h5>
     <div class="box manual-box">
-      <div class="rf1">Top text</div>
-      <div class="rf1 text-bottom">Bottom text</div>
+      <div class="tm-rf1">Top text</div>
+      <div class="tm-rf1 text-bottom">Bottom text</div>
     </div>
 
-    <h5>Max-widths</h5>
+    <h5>Measures</h5>
     <p class="measure-example-wide">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean placerat
       tortor et pellentesque lobortis. Sed aliquam eros ex, vitae gravida dolor
@@ -84,6 +84,10 @@
 // FUNCTIONAL
 // DESIGN ----------- DEVELOPMENT
 // ~2rem -----------> .pa7
+.pa7
+  padding var(--spacing-7)
+.mt5
+  margin-top var(--spacing-5)
 
 // SCOPED
 .scoped-box
@@ -104,7 +108,6 @@
   padding var(--spacing-7)
   max-width $max-width-7
   margin 0 auto
-
 
 // MANUAL
 .manual-box
