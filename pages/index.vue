@@ -39,8 +39,14 @@
             </div>
           </div>
           <div class="hero-bottom">
-            <a v-scroll-to="'#testnets'" role="button" class="button"
-              >Join testnets</a
+            <tm-button
+              v-scroll-to="'#testnets'"
+              size="l"
+              color="#fff"
+              variant="contained"
+              glow
+              class="hero-btn"
+              >Join testnets</tm-button
             >
           </div>
         </div>
@@ -264,19 +270,26 @@
                 </div>
               </div>
               <div class="testnets-list__item__cta">
-                <a
+                <tm-button
+                  to-link="external"
                   href="https://github.com/cosmosdevs/stargate#testnet"
-                  target="_blank"
-                  rel="noreferrer noopener"
+                  size="l"
+                  color="#3B2AB7"
+                  background-color="var(--white)"
+                  variant="contained"
+                  glow
                   class="testnets-list__item__cta__join"
-                  >Join</a
+                  >Join</tm-button
                 >
-                <a
+                <tm-button
+                  to-link="external"
                   href="https://discord.com/channels/669268347736686612/723170066937413693"
-                  target="_blank"
-                  rel="noreferrer noopener"
+                  size="l"
+                  color="var(--white)"
+                  variant="text"
+                  glow
                   class="testnets-list__item__cta__discuss"
-                  >Discuss</a
+                  >Discuss</tm-button
                 >
               </div>
             </div>
@@ -317,26 +330,25 @@
                 </div>
               </div>
               <div class="testnets-list__item__cta">
-                <!-- <a
-                  href="https://github.com/cosmosdevs/stargate#testnet"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  > -->
-                <div
-                  class="testnets-list__item__cta__join outline-btn disabled"
-                  aria-disabled="true"
+                <tm-button
+                  size="l"
+                  color="#616489"
+                  border-color="#43466D"
+                  variant="outlined"
+                  class="testnets-list__item__cta__join"
+                  disabled
+                  >Join</tm-button
                 >
-                  Join
-                </div>
-                <!-- </a> -->
-                <a
+                <tm-button
+                  to-link="external"
                   href="https://discord.com/channels/669268347736686612/723170066937413693"
-                  target="_blank"
-                  rel="noreferrer noopener"
+                  size="l"
+                  color="var(--white)"
+                  variant="text"
+                  glow
                   class="testnets-list__item__cta__discuss"
+                  >Discuss</tm-button
                 >
-                  Discuss
-                </a>
               </div>
             </div>
           </div>
@@ -1102,6 +1114,12 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+// TODO: outlined pill badge
+.outline-btn
+  border 2px solid #43466D !important
+  background transparent !important
+  color #989BB9 !important
+
 main
   overflow -webkit-paged-x
 
@@ -1302,26 +1320,13 @@ main
 
 .hero-bottom
   margin-top 15%
-  .button
+  .hero-btn
     margin 3.5rem auto
-    user-select none
-    transition background 20ms ease-in 0s
-    cursor pointer
-    display inline-flex
-    align-items center
-    justify-content center
-    white-space nowrap
-    color white
-    padding-left 3rem
-    padding-right 3rem
-    border none
-    text-align center
     width 100%
     max-width 17.5rem
     height 4rem
     background #4251FA linear-gradient(92.99deg, #8D0EC0 0%, #4251FA 100%)
     box-shadow 0px 10px 22px rgba(65, 81, 250, 0.21)
-    border-radius 0.625rem
     font-weight 700
     font-size 1.1875rem
     line-height 1.263
@@ -1526,11 +1531,6 @@ main
       &__description
         margin-top 1rem
 
-.outline-btn
-  border 2px solid #43466D !important
-  background transparent !important
-  color #989BB9 !important
-
 .section-testnets
   position relative
   overflow hidden
@@ -1644,41 +1644,9 @@ main
           &:active
             transform none
             transition-duration 0s
-        &__join
-          user-select none
-          transition background 20ms ease-in 0s
-          cursor pointer
-          display inline-flex
-          align-items center
-          justify-content center
-          white-space nowrap
-          color #3B2AB7
-          border none
-          text-align center
-          width 8.5rem
-          padding 1.25rem 3rem
-          background #FFFFFF
-          border-radius 0.375rem
-          font-weight 700
-          font-size 1.1875rem
-          line-height 1.263
-          letter-spacing -0.005em
-        &__discuss
-          user-select none
-          transition background 20ms ease-in 0s
-          cursor pointer
-          display inline-flex
-          align-items center
-          justify-content center
-          white-space nowrap
-          color #FFFFFF
-          border none
-          text-align center
-          width 8.5rem
-          padding 1.25rem 3rem
-          background transparent
-          border-radius 0.375rem
-          font-weight 700
+        &__join, &__discuss
+          max-width 8.5rem
+          height 4rem
           font-size 1.1875rem
           line-height 1.263
           letter-spacing -0.005em
