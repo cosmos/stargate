@@ -6,7 +6,7 @@
       }"
       class="section-hero"
     >
-      <div class="section-container">
+      <div class="tm-section-container section-container">
         <div class="hero-graphics">
           <span class="hero-graphics__gate"></span>
           <gate-notches class="hero-graphics__gate-notches" />
@@ -81,7 +81,7 @@
     </div>
 
     <div id="intro" class="section section-intro">
-      <div class="section-container">
+      <div class="tm-section-container section-container">
         <div class="container">
           <div class="section-title">A new era for Cosmos</div>
           <div class="section-subtitle">
@@ -118,7 +118,7 @@
       }"
       class="section section-features"
     >
-      <div class="section-container">
+      <div class="tm-section-container section-container">
         <div class="container">
           <div class="section-header">Features</div>
           <div class="section-title">What’s new?</div>
@@ -215,7 +215,7 @@
     </div>
 
     <div id="testnets" class="section section-testnets">
-      <div class="section-container">
+      <div class="tm-section-container section-container">
         <div class="container">
           <div class="section-header">Testnets</div>
           <planets-cluster class="section-graphics" />
@@ -531,7 +531,7 @@
     </div>
 
     <div id="roadmap" class="section section-roadmap">
-      <div class="section-container">
+      <div class="tm-section-container section-container">
         <div class="container">
           <div class="section-header">Roadmap</div>
           <div class="section-title">{{ progressTotal }}% complete</div>
@@ -620,7 +620,7 @@
     </div>
 
     <div id="contributors" class="section section-contributors">
-      <div class="section-container">
+      <div class="tm-section-container section-container">
         <div class="container">
           <div class="section-header">Contributors</div>
           <div class="section-graphics">
@@ -695,7 +695,7 @@
     </div>
 
     <div id="articles" class="section section-articles">
-      <div class="section-container">
+      <div class="tm-section-container section-container">
         <div class="container">
           <div class="section-header">{{ articles.length }} articles</div>
           <div class="section-title">Learn more about Stargate</div>
@@ -729,7 +729,7 @@
     </div>
 
     <div id="videos" class="section section-videos">
-      <div class="section-container">
+      <div class="tm-section-container section-container">
         <div class="container">
           <div class="section-header">Videos</div>
           <div class="frame">
@@ -762,7 +762,7 @@
     </div>
 
     <div id="community" class="section section-community">
-      <div class="section-container">
+      <div class="tm-section-container section-container">
         <div class="container">
           <div class="section-header">Community</div>
           <div class="cards">
@@ -799,57 +799,63 @@
       </div>
     </div>
 
-    <div class="bottom section-container">
-      <div class="container">
-        <transition name="fade" mode="out-in">
-          <div v-if="state === 'success'" key="success" class="bottom__state">
-            <div class="bottom__get-notified">
-              Almost there&hellip;
-            </div>
-            <h2 class="bottom__state__success">
-              Check your inbox and confirm your email address
-            </h2>
-          </div>
-          <div v-else-if="state === 'error'" key="error" class="bottom__state">
-            <div class="bottom__get-notified">
-              Something went wrong
-            </div>
-            <h2 class="bottom__state__error">
-              Uh oh! Refresh the page and try again.
-            </h2>
-          </div>
-          <div v-else key="default" class="bottom__form">
-            <label class="bottom__get-notified" for="field-email">
-              Get Stargates updates
-            </label>
-            <form
-              :action="url"
-              method="POST"
-              target="_blank"
-              rel="noreferrer noopener"
-              @submit.prevent="actionSubmitEmail"
-            >
-              <div class="bottom__form__input">
-                <input
-                  id="field-email"
-                  v-model="email"
-                  name="fields[email]"
-                  class="bottom__form__input__input"
-                  type="email"
-                  placeholder="Your email"
-                  required="required"
-                />
-                <button type="submit" class="bottom__form__input__button">
-                  <icon-arrow-right
-                    class="bottom__form__input__icon"
-                    @click="actionSubmitEmail"
-                  />
-                  <span class="sr-only">Submit</span>
-                </button>
+    <div class="section-form">
+      <div class="tm-section-container section-container bottom">
+        <div class="container">
+          <transition name="fade" mode="out-in">
+            <div v-if="state === 'success'" key="success" class="bottom__state">
+              <div class="bottom__get-notified">
+                Almost there&hellip;
               </div>
-            </form>
-          </div>
-        </transition>
+              <div class="bottom__state__success">
+                Check your inbox and confirm your email address
+              </div>
+            </div>
+            <div
+              v-else-if="state === 'error'"
+              key="error"
+              class="bottom__state"
+            >
+              <div class="bottom__get-notified">
+                Something went wrong
+              </div>
+              <div class="bottom__state__error">
+                Uh oh! Refresh the page and try again.
+              </div>
+            </div>
+            <div v-else key="default" class="bottom__form">
+              <label class="bottom__get-notified" for="field-email">
+                Get Stargates updates
+              </label>
+              <form
+                :action="url"
+                method="POST"
+                target="_blank"
+                rel="noreferrer noopener"
+                @submit.prevent="actionSubmitEmail"
+              >
+                <div class="bottom__form__input">
+                  <input
+                    id="field-email"
+                    v-model="email"
+                    name="fields[email]"
+                    class="bottom__form__input__input"
+                    type="email"
+                    placeholder="Your email"
+                    required="required"
+                  />
+                  <button type="submit" class="bottom__form__input__button">
+                    <icon-arrow-right
+                      class="bottom__form__input__icon"
+                      @click="actionSubmitEmail"
+                    />
+                    <span class="sr-only">Submit</span>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </transition>
+        </div>
       </div>
     </div>
   </main>
@@ -1164,14 +1170,13 @@ main
   clip rect(1px, 1px, 1px, 1px)
 
 .section
+  overflow hidden
   position relative
   padding-top 6rem
   padding-bottom 6rem
 
 .section-container
   position relative
-  padding-left 1rem
-  padding-right 1rem
   max-width 96rem
   margin 0 auto
   .container
@@ -1365,7 +1370,6 @@ main
 
 .section-intro
   position relative
-  overflow hidden
   .section-title
     grid-column 1 / span 12
     grid-row 1 / 2
@@ -1533,7 +1537,6 @@ main
 
 .section-testnets
   position relative
-  overflow hidden
   background linear-gradient(180deg, rgba(0,0,0,0) 0%, #030419 24%, #030419 69%, rgba(0,0,0,0) 100%)
   .section-header
     grid-column 6/span 7
@@ -1990,7 +1993,6 @@ td
         cursor pointer
 
 .section-contributors
-  overflow hidden
   .section-header
     grid-column 6 / span 7
     grid-row 1
@@ -2258,30 +2260,28 @@ td
         color #989BB9
 
 .bottom
-  text-align center
   .container
     display flex
     justify-content center
   &__get-notified
     display block
-    margin 3rem auto 1rem
+    margin-bottom 2rem
     font-weight bold
     font-size 1.1875rem
     line-height 1.263
     color #CFD1E7
+    text-align center
   &__state
-    padding-bottom 2.3125rem
-    h2
-      margin-top 1.3125rem
-      font-size 1rem
-      line-height 1.375
-      font-weight normal
+    margin 2rem auto
+    font-size 1rem
+    line-height 1.375
+    font-weight normal
     &__success
       color #989bb9
     &__error
       color #FF4C52
   &__form
-    margin 3.5rem auto
+    margin 2rem auto
     max-width 25rem
     width 100%
     &__input
@@ -2336,11 +2336,6 @@ td
           background #282B53
           color #FFFFFF
 
-@media screen and (max-width: 1919px)
-  .section-container
-    padding-left 8rem
-    padding-right 8rem
-
 @media screen and (max-width: 1438px)
   .section-videos
     .container
@@ -2354,10 +2349,6 @@ td
     padding-top 6rem
     padding-bottom 6rem
 
-  .section-container
-    padding-left 6rem
-    padding-right 6rem
-
   .section-features
     .features-graphics
       font-size 1.25rem
@@ -2368,11 +2359,6 @@ td
   .section
     padding-top 4rem
     padding-bottom 4rem
-
-  .section-container
-    padding-left 4rem
-    padding-right 4rem
-    display block
 
   .section-hero
     display grid
@@ -2419,7 +2405,6 @@ td
       grid-column 1 / span 12
 
   .section-features
-    overflow hidden
     .section-title
       grid-column 1 / 12
       font-size 4rem
@@ -2437,7 +2422,6 @@ td
       grid-row 7
 
   .section-testnets
-    overflow hidden
     .section-graphics
       grid-column 6 / span 7
       align-items flex-start
@@ -2521,8 +2505,6 @@ td
       line-height 1.375
 
   .section-container
-    padding-left 1.5rem
-    padding-right 1.5rem
     padding-top 1.5rem
 
   .section-nav
@@ -2612,21 +2594,6 @@ td
           line-height 1.579
           letter-spacing -0.005em
           margin-top 1.5rem
-      .bottom
-        margin-top 45%
-        &__form
-          &__input
-            &__input
-              font-size 1rem
-              line-height 1.375
-              letter-spacing 0
-              height 3rem
-              padding 0.8125rem 3rem 0.8125rem 1rem
-            &__button
-              width 3rem
-              padding 0.75rem
-            &__icon
-              height 1.5rem
     .hero-graphics
       font-size 0.36rem
 
@@ -2803,6 +2770,21 @@ td
           top 1rem
           right 1rem
 
+  .bottom
+    &__form
+      &__input
+        &__input
+          font-size 1rem
+          line-height 1.375
+          letter-spacing 0
+          height 3rem
+          padding 0.8125rem 3rem 0.8125rem 1rem
+        &__button
+          width 3rem
+          padding 0.75rem
+        &__icon
+          height 1.5rem
+
 @media screen and (max-width: 414px)
   main
     overflow-x hidden
@@ -2829,7 +2811,6 @@ td
 
 @media screen and (max-width: 375px)
   .section-container .container
-    grid-gap unset
     gap unset
 
   .section-features .grid-container .grid-item
@@ -2859,8 +2840,4 @@ td
   .section
     padding-top 8rem
     padding-bottom 8rem
-
-  .section-container
-    padding-left 12rem
-    padding-right 12rem
 </style>
