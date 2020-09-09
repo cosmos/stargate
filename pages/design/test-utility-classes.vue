@@ -82,5 +82,5 @@ export default {
       margin-right auto
       display block
       width 100%
-      max-width $max-width-6
+      max-width $max-width['6']
 </style>

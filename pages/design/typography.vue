@@ -397,7 +397,7 @@ main
   align-items baseline
   .type-scale-wrap &
     display block
-    max-width $max-width-8
+    max-width $max-width['8']
 
 .rowhead,
 .colhead
