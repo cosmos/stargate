@@ -9,6 +9,7 @@
         `tm-button__size__${size}`,
         `tm-button__variant__${variant}`,
         'tm-lh-solid',
+        'tm-medium',
         glow && 'tm-button__glow',
         styles,
       ]"
@@ -39,6 +40,7 @@
         `tm-button__size__${size}`,
         `tm-button__variant__${variant}`,
         'tm-lh-solid',
+        'tm-medium',
         glow && 'tm-button__glow',
         styles,
       ]"
@@ -63,6 +65,7 @@
       `tm-button__size__${size}`,
       `tm-button__variant__${variant}`,
       'tm-lh-solid',
+      'tm-medium',
       glow && 'tm-button__glow',
       styles,
     ]"
@@ -88,6 +91,7 @@
       `tm-button__size__${size}`,
       `tm-button__variant__${variant}`,
       'tm-lh-solid',
+      'tm-medium',
       glow && 'tm-button__glow',
       styles,
     ]"
@@ -217,16 +221,16 @@ export default {
       let classes = this.classes
       switch (this.size) {
         case 's':
-          classes += 'tm-rf-1'
+          classes += ' tm-rf-1 tm-rf0-l-up'
           break
         case 'l':
-          classes += 'tm-rf1'
+          classes += ' tm-rf1'
           break
         case 'xl':
-          classes += 'tm-rf2'
+          classes += ' tm-rf2'
           break
         default:
-          classes += 'tm-rf0'
+          classes += ' tm-rf0'
       }
       return classes
     },
@@ -238,6 +242,7 @@ export default {
 .tm-button
   // resets
   appearance none
+  padding 0
   text-rendering inherit
   font-family inherit
   background none
@@ -256,9 +261,12 @@ export default {
   align-items center
   justify-content center
   text-align center
-  font-weight var(--font-weight-b--1) // TODO: replace with responsive font-weight
   color var(--color)
-  border-radius 0.5em // relative border-radius
+  border-radius 0.35em // relative border-radius
+  transition all .25s $ease-out
+  &:active
+    opacity 0.88
+    transition-duration .05s
 
   &[disabled]
     cursor not-allowed !important
@@ -273,16 +281,16 @@ export default {
       border-radius inherit
       transform translateZ(0)
       z-index -1
-      opacity 0.5
-      transition background-position .25s ease-out, opacity .5s $ease-out
+      opacity 0.4
+      transition background-position .4s $ease-out, opacity .5s $ease-out
     &:hover,
     &:focus
       &,
       &::before
         background-position right bottom
       &::before
-        transition-duration .1s
-        opacity 0.8
+        transition-duration .2s
+        opacity 0.5
 
   /* text variant */
   &__variant__text
@@ -290,16 +298,13 @@ export default {
     &:focus
       opacity 0.8
     &:active
-      opacity 0.5
+      opacity 0.6
 
   /* outlined variant */
   &__variant__outlined
-    border 0.125rem solid var(--border-color)
-    background transparent !important
-    hover-raise()
     &::after,
     &.tm-button__glow::before
-      border 0.125rem solid var(--border-color)
+      border 0.0625rem solid var(--border-color)
     &::after // border
       content ''
       position absolute
@@ -308,7 +313,7 @@ export default {
       opacity 0.2
       transition opacity .25s $ease-out
     &.tm-button__glow::before // glow
-      trbl -0.125em
+      trbl -0.0625em
       filter blur(0.4rem)
     &:hover,
     &:focus
@@ -320,23 +325,38 @@ export default {
     background var(--background-color)
     background-size 200% auto
     box-shadow var(--elevation-4)
-    hover-raise()
-    hover-elevation 8
+    hover-raise -1px
+    hover-elevation(16, $active-opacity:0.4)
     &::before // glow
-      trbl 0.25em 1em -0.25em
-      background-size inherit
-      background-image inherit
+      trbl 0.125em 1em 0
+      background inherit
       filter blur(1.25rem) brightness(1.5)
 
   // sizes
   &__size__s
-    padding var(--spacing-4) var(--spacing-6)
+    padding-top var(--spacing-4)
+    padding-bottom var(--spacing-4)
+    &.tm-button__variant__contained,
+    &.tm-button__variant__outlined
+       padding-left var(--spacing-6)
+       padding-right var(--spacing-6)
   &__size__m
-    padding var(--spacing-5) var(--spacing-7)
+    padding-top var(--spacing-5)
+    padding-bottom var(--spacing-5)
+    &.tm-button__variant__contained,
+    &.tm-button__variant__outlined
+       padding-left var(--spacing-8)
+       padding-right var(--spacing-8)
   &__size__l
-    padding var(--spacing-6) var(--spacing-8)
+    padding-top var(--spacing-6)
+    padding-bottom var(--spacing-6)
+    &.tm-button__variant__contained,
+    &.tm-button__variant__outlined
+       padding-left var(--spacing-9)
+       padding-right var(--spacing-9)
   &__size__xl
-    padding var(--spacing-7) var(--spacing-9)
+    padding-top var(--spacing-6)
+    padding-bottom var(--spacing-6)
 
   /* icons */
   >>> .icon__right
@@ -344,6 +364,10 @@ export default {
     display inline-block
     transform-fix()
     transition transform 0.25s $ease-out
+  >>> .icon__left
+    margin-right 0.5em
+  >>> .icon__right
+    margin-left 0.5em
   &:hover,
   &:focus
     >>> .icon__right

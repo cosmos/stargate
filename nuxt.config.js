@@ -176,6 +176,9 @@ export default {
   build: {
     // https://nuxtjs.org/faq/postcss-plugins/#recommended-method
     postcss: {
+      plugins: {
+        'postcss-font-variant': {},
+      },
       preset: {
         // To change the postcss-preset-env settings
         autoprefixer: {},

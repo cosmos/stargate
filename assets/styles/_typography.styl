@@ -12,8 +12,7 @@
 
 /* Overline type style */
 .tm-overline
-  letter-spacing 0.08em // TODO: convert to responsive value
-  font-weight 600 // TODO: convert to responsive value
+  css-lock('letter-spacing', 0, $letter-spacing-overline-base, $letter-spacing-overline-max, 'em')
   text-transform uppercase
 
 /* Paragraph spacing */

@@ -1,48 +1,18 @@
-// TODO: remove these once we have the responsive lh classes below
 :root
-  for size in -1...8
-    rfs((max(1, 1.3 - (size * 0.05))), ('--line-height-title-%s' % size))
-    if size <= 3
-      rfs((1.625 - (size * 0.05)), ('--line-height-copy-%s' % size))
+  for $step in -1...8
+    css-lock-line-height('--line-height-title-'+$step, 'title', $step)
+  for $step in -1...4
+    css-lock-line-height('--line-height-copy-'+$step, 'copy', $step, true)
 
 /*
 
    LINE HEIGHT / LEADING
 
-   Media Query Extensions:
-     -m-up = medium upwards
-     -m  = medium
-     -l-up = large
-
 */
 
-// TODO: convert these to responsive values with calc() + vw
-.lh-solid
+.tm-lh-solid
   line-height $line-height-solid
-.lh-title
-  line-height $line-height-title
-.lh-copy
-  line-height $line-height-copy
-@media $breakpoint-medium
-  .lh-solid-m-up
-    line-height $line-height-solid
-  .lh-title-m-up
-    line-height $line-height-title
-  .lh-copy-m-up
-    line-height $line-height-copy
-
-@media $breakpoint-medium-only
-  .lh-solid-m
-    line-height $line-height-solid
-  .lh-title-m
-    line-height $line-height-title
-  .lh-copy-m
-    line-height $line-height-copy
-
-@media $breakpoint-large
-  .lh-solid-l-up
-    line-height $line-height-solid
-  .lh-title-l-up
-    line-height $line-height-title
-  .lh-copy-l-up
-    line-height $line-height-copy
+.tm-lh-title
+  line-height var(--line-height-title-0)
+.tm-lh-copy
+  line-height var(--line-height-copy-0)

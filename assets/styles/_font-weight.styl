@@ -1,8 +1,10 @@
 :root
-  for size in -1...8
-    rfs((690 + size * 30), ('--font-weight-b-%s' % size))
-    if size <= 3
-      rfs((356 - size * 24), ('--font-weight-n-%s' % size))
+  for $step in -1...8
+    relative-font-weight('--font-weight-bold-'+$step, 'bold', $step)
+  for $step in -1...3
+    relative-font-weight('--font-weight-medium-'+$step, 'medium', $step)
+  for $step in -1...4
+    relative-font-weight('--font-weight-normal-'+$step, 'normal', $step)
 
 /*
 
@@ -12,6 +14,9 @@
 
 // Note: these values are often overridden when combined with a .tm-rf* class
 .tm-normal
-  font-weight $fw-base
+  font-weight $font-weight-normal-base
+.tm-medium
+  font-weight $font-weight-medium-base
+  letter-spacing var(--letter-spacing-bold-1) // medium weight doesn't need responsive tracking
 .tm-bold
-  font-weight $fw-bold
+  font-weight $font-weight-bold-base

@@ -1,70 +1,182 @@
 <template>
   <main>
     <div class="dark">
-      <div class="section-container">
-        <h2>Dark background + glowing buttons</h2>
-        <tm-button
-          size="l"
-          background-color="linear-gradient(90deg, #C01AEA, #4251FA, #36D0E6)"
-          glow
-          >Beam me up</tm-button
-        >
-        <tm-button
-          size="l"
-          border-color="#fff"
-          color="#fff"
-          variant="outlined"
-          glow
-          >To infinity</tm-button
-        >
-        <tm-button size="l" color="#fff" variant="text" glow
-          >And beyond <span class="icon__right">--></span></tm-button
-        >
+      <div class="tm-section-container">
+        <h2 class="tm-rf3 lh-title tm-bold">
+          Dark background + glowing buttons
+        </h2>
+        <div class="row">
+          <tm-button size="xl" color="#fff" variant="text" glow
+            >And beyond<span class="icon__right">--></span></tm-button
+          >
+        </div>
+        <div class="row">
+          <tm-button
+            size="l"
+            background-color="linear-gradient(90deg, #C01AEA, #4251FA, #36D0E6)"
+            glow
+            >Beam me up</tm-button
+          >
+          <tm-button size="l" background-color="#fff" color="#000"
+            >Cosmonaut</tm-button
+          >
+          <tm-button
+            size="l"
+            border-color="#fff"
+            color="#fff"
+            variant="outlined"
+            glow
+            >To infinity</tm-button
+          >
+          <tm-button size="l" color="#fff" variant="text" glow
+            >And beyond<span class="icon__right">--></span></tm-button
+          >
+        </div>
+        <div class="row">
+          <tm-button
+            size="m"
+            background-color="linear-gradient(90deg, #C01AEA, #4251FA, #36D0E6)"
+            glow
+            >Beam me up</tm-button
+          >
+          <tm-button size="m" background-color="#fff" color="#000"
+            >Cosmonaut</tm-button
+          >
+          <tm-button
+            size="m"
+            border-color="#fff"
+            color="#fff"
+            variant="outlined"
+            glow
+            >To infinity</tm-button
+          >
+          <tm-button size="m" color="#fff" variant="text" glow
+            >And beyond<span class="icon__right">--></span></tm-button
+          >
+        </div>
+        <div class="row">
+          <tm-button
+            size="s"
+            background-color="linear-gradient(90deg, #C01AEA, #4251FA, #36D0E6)"
+            glow
+            >Beam me up</tm-button
+          >
+          <tm-button size="s" background-color="#fff" color="#000"
+            >Cosmonaut</tm-button
+          >
+          <tm-button
+            size="s"
+            border-color="#fff"
+            color="#fff"
+            variant="outlined"
+            glow
+            >To infinity</tm-button
+          >
+          <tm-button size="s" color="#fff" variant="text" glow
+            >And beyond<span class="icon__right">--></span></tm-button
+          >
+        </div>
       </div>
     </div>
     <div class="light">
-      <div class="section-container">
-        <h2>Light background + glowing buttons</h2>
-        <tm-button
-          size="l"
-          background-color="linear-gradient(90deg, #C01AEA, #4251FA, #36D0E6)"
-          glow
-          >Beam me up</tm-button
-        >
-        <tm-button
-          size="l"
-          border-color="#4251fa"
-          color="#4251fa"
-          variant="outlined"
-          >To infinity</tm-button
-        >
-        <tm-button size="l" color="#4251fa" variant="text" glow
-          >And beyond <span class="icon__right">--></span></tm-button
-        >
+      <div class="tm-section-container">
+        <h2 class="tm-rf3 tm-lh-title tm-bold">
+          Light background + glowing buttons
+        </h2>
+        <div class="row">
+          <tm-button size="xl" color="#4251fa" variant="text" glow
+            >And beyond<span class="icon__right">--></span></tm-button
+          >
+        </div>
+        <div class="row">
+          <tm-button
+            size="l"
+            background-color="linear-gradient(90deg, #C01AEA, #4251FA, #36D0E6)"
+            glow
+            >Beam me up</tm-button
+          >
+          <tm-button size="l" background-color="#fff" color="#000"
+            >Cosmonaut</tm-button
+          >
+          <tm-button
+            size="l"
+            border-color="#4251fa"
+            color="#4251fa"
+            variant="outlined"
+            >To infinity</tm-button
+          >
+          <tm-button size="l" color="#4251fa" variant="text" glow
+            >And beyond<span class="icon__right">--></span></tm-button
+          >
+        </div>
+        <div class="row">
+          <tm-button
+            size="m"
+            background-color="linear-gradient(90deg, #C01AEA, #4251FA, #36D0E6)"
+            glow
+            >Beam me up</tm-button
+          >
+          <tm-button size="m" background-color="#fff" color="#000"
+            >Cosmonaut</tm-button
+          >
+          <tm-button
+            size="m"
+            border-color="#4251fa"
+            color="#4251fa"
+            variant="outlined"
+            >To infinity</tm-button
+          >
+          <tm-button size="m" color="#4251fa" variant="text" glow
+            >And beyond<span class="icon__right">--></span></tm-button
+          >
+        </div>
+        <div class="row">
+          <tm-button
+            size="s"
+            background-color="linear-gradient(90deg, #C01AEA, #4251FA, #36D0E6)"
+            glow
+            >Beam me up</tm-button
+          >
+          <tm-button size="s" background-color="#fff" color="#000"
+            >Cosmonaut</tm-button
+          >
+          <tm-button
+            size="s"
+            border-color="#4251fa"
+            color="#4251fa"
+            variant="outlined"
+            >To infinity</tm-button
+          >
+          <tm-button size="s" color="#4251fa" variant="text" glow
+            >And beyond<span class="icon__right">--></span></tm-button
+          >
+        </div>
       </div>
     </div>
     <div class="dark">
-      <div class="section-container">
-        <h2>Dark background + internal + external</h2>
-        <tm-button
-          to-link="internal"
-          to="/design/typography"
-          size="l"
-          color="var(--white)"
-          variant="contained"
-          glow
-          >Internal</tm-button
-        >
-        <tm-button
-          to-link="external"
-          href="https://github.com/cosmos/stargate"
-          size="l"
-          color="#3B2AB7"
-          background-color="var(--white)"
-          variant="contained"
-          glow
-          >External</tm-button
-        >
+      <div class="tm-section-container">
+        <h2 class="tm-rf3 tm-lh-title tm-bold">
+          Dark background + internal + external
+        </h2>
+        <div class="row">
+          <tm-button
+            to-link="internal"
+            to="/design/typography"
+            size="l"
+            color="var(--white)"
+            glow
+            >Internal</tm-button
+          >
+          <tm-button
+            to-link="external"
+            href="https://github.com/cosmos/stargate"
+            size="l"
+            color="#3B2AB7"
+            background-color="var(--white)"
+            glow
+            >External</tm-button
+          >
+        </div>
       </div>
     </div>
   </main>
@@ -100,6 +212,6 @@ export default {
   background white
   color black
 
-a, .tm-button
-  margin 0 var(--spacing-7)
+.tm-button
+  margin var(--spacing-7) var(--spacing-7) var(--spacing-7) 0
 </style>

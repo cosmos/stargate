@@ -1,3 +1,25 @@
-// Default base font-weights
-$fw-base = 356
-$fw-bold = 750
+// bold weight
+$font-weight-bold-base = 680
+$font-weight-bold-max = 850
+$font-weight-bold-factor = 0.028
+// medium weight
+$font-weight-medium-base = 480
+$font-weight-medium-max = 550
+$font-weight-medium-factor = 0.1
+// normal weight
+$font-weight-normal-base = 356
+$font-weight-normal-max = 400
+$font-weight-normal-factor = -0.22
+
+// calculate font weight relative to the type scale
+// TODO: since we can't use vw or calc(), generate relative breakpoints for responsive font-weights
+relative-font-weight($prop = 'font-weight', $variant, $step)
+  // $fs-min = rfs-computed-min($step)
+  $fs-max = unit($font-size-step[''+$step],'')
+  $fw-factor = lookup('$font-weight-'+$variant+'-factor')
+  $fw-base = lookup('$font-weight-'+$variant+'-base')
+  $fw-max = lookup('$font-weight-'+$variant+'-max')
+  // $min = round($fw-base + (((-1 + $fs-min) * $fw-factor) * $fw-base))
+  $max = round(min($fw-max, $fw-base + (((-1 + $fs-max) * $fw-factor) * $fw-base)))
+  &
+    {$prop}: $max
