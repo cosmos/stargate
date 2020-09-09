@@ -233,7 +233,7 @@
               <div class="testnets-list__item__text">
                 <div class="testnets-list__item__text__top">
                   <div class="testnets-list__item__text__top__title">
-                    <code>stargate-1</code>
+                    <code>stargate-2</code>
                   </div>
                   <div class="testnets-list__item__text__top__status">Live</div>
                 </div>
@@ -241,24 +241,6 @@
                   <p class="testnets-list__item__text__mid__desc">
                     The first simulated upgrade of the Cosmos Hub and the
                     primary public integration testnet for Stargate-readiness.
-                  </p>
-                  <p class="testnets-list__item__text__mid__note">
-                    <strong>Update:</strong> This testnet will restart as
-                    <code><strong>stargate-2</strong></code> upon merging these
-                    PRs:
-                    <a
-                      href="https://github.com/cosmos/cosmos-sdk/pull/7234"
-                      target="_blank"
-                      rel="noreferrer noopener"
-                      >#7234</a
-                    >
-                    &
-                    <a
-                      href="https://github.com/cosmos/cosmos-sdk/pull/7221"
-                      target="_blank"
-                      rel="noreferrer noopener"
-                      >#7221</a
-                    >
                   </p>
                 </div>
                 <div class="testnets-list__item__text__bot">
@@ -380,7 +362,7 @@
                     Cosmos Hub Validators
                   </div>
                   <div class="section-tabs__text__title">
-                    Joining stargate-1
+                    Joining stargate-2
                   </div>
                   <p class="section-tabs__text__paragraph">
                     Your current <strong>"operator_address"</strong> and your
@@ -425,7 +407,7 @@
                     the Stargate upgrade by testing the features and your
                     infrastructure ahead of time, using the
                     <code class="section-tabs__text__paragraph__stargate"
-                      >stargate-1</code
+                      >stargate-2</code
                     >
                     testnet.
                   </p>
@@ -500,7 +482,7 @@
           </div>
           <div class="section-text">
             <div class="section-text__paragraph">
-              As part of the <code><strong>stargate-1</strong></code> testnet,
+              As part of the <code><strong>stargate-2</strong></code> testnet,
               the team at Iqlusion are offering live support for testnet users
               at the following times:
             </div>
