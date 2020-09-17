@@ -977,65 +977,6 @@ main
   opacity 0
   transform scale(.96)
 
-// .section-intro
-//   position relative
-//   .section-title
-//     grid-column 1 / span 12
-//     grid-row 1 / 2
-//     font-weight 900
-//     font-size 100px
-//     line-height 112%
-//     letter-spacing -0.03em
-//     color #FFFFFF
-//     max-width 50rem
-//   .section-subtitle
-//     display flex
-//     justify-content flex-end
-//     flex-direction column
-//     margin-top -1.5em
-//     grid-row 2
-//     grid-column 6 / span 7
-//     font-size 2rem
-//     line-height 1.25
-//     letter-spacing -0.02em
-//     color #FFFFFF
-//   .section-graphics
-//     grid-row 3
-//     grid-column 1 / span 6
-//     position relative
-//   .section-statement
-//     position relative
-//     margin-top 3rem
-//     grid-column 6 / span 7
-//     grid-row 3
-//     max-width 30em
-//     font-size 1.4375rem
-//     line-height 1.565
-//     letter-spacing -0.01em
-//     text-align left
-//     p
-//       color #CFD1E7
-//   .section-cta
-//     margin-top 3rem
-//     a
-//       display inline-block
-//       font-weight bold
-//       font-size 1.4375rem
-//       line-height 1.217
-//       letter-spacing -0.01em
-//       border-radius 6px
-//       padding 22px 0
-//       &:hover
-//         color inherit
-//   .title
-//     font-weight 900
-//     font-size 100px
-//     line-height 112%
-//     display flex
-//     align-items center
-//     letter-spacing -0.03em
-//     color var(--white)
-
 .section-testnets
   position relative
   background linear-gradient(180deg, rgba(0,0,0,0) 0%, #030419 24%, #030419 69%, rgba(0,0,0,0) 100%)
@@ -1793,37 +1734,6 @@ td
   .section .section-header
       grid-column 1 / span 12
 
-  // .section-nav
-  //   .nav
-  //     &::-webkit-scrollbar
-  //       display none
-  //     &__list
-  //       display flex
-  //       flex-direction row
-  //       justify-content space-between
-  //       transition transform 200ms ease 0s
-  //       overflow-x scroll
-  //       overflow-y hidden
-  //       white-space nowrap
-  //       width fit-content
-  //       -webkit-overflow-scrolling touch
-
-  .section-intro
-    .section-title
-      grid-row 1
-      grid-column 1 / span 12
-      font-size 4rem
-    .section-subtitle
-      margin-top 2rem
-      grid-row 2
-      grid-column 1 / span 12
-    .section-graphics
-      grid-row 3
-      grid-column 2 / span 8
-    .section-statement
-      grid-row 4
-      grid-column 1 / span 12
-
   .section-testnets
     .section-graphics
       grid-column 6 / span 7
@@ -1902,18 +1812,6 @@ td
     grid-template-columns repeat(1, 1fr)
 
 @media screen and (max-width: 767px)
-  // .section-nav
-  //   .nav
-  //     &__list
-  //       padding-left 1.5rem
-  //       padding-right 1.5rem
-
-  .section-intro
-    .section-graphics
-      font-size 0.75rem
-    .section-statement
-      margin-top 1rem
-
   .section-testnets
     .section-status
       grid-column 1/12
@@ -1951,24 +1849,6 @@ td
       font-size 1rem
       line-height 1.375
       margin-top 1.5rem
-
-  // .section-nav
-  //   .nav
-  //     font-size 1rem
-  //     line-height 1.375
-  //     letter-spacing 0
-  //     &__list__item a
-  //       padding 0.8125rem 0
-
-  .section-intro
-    .section-graphics
-      grid-column 1 / span 10
-      font-size 0.5rem
-    .section-cta a
-      font-size 1rem
-      line-height 1.375
-      letter-spacing 0
-      padding 0.8125rem 0
 
   .section-testnets
     .section-graphics
