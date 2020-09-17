@@ -34,6 +34,7 @@
     "eslint-plugin-nuxt": "^1.0.0",
     "eslint-plugin-prettier": "^3.1.4",
     "imagemin-svgo": "^8.0.0",
+    "node-fetch": "^2.6.1",
     "prettier": "^2.0.5",
     "stylus": "^0.54.7",
     "stylus-loader": "^3.0.2"
