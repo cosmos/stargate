@@ -1,27 +1,31 @@
 <template>
-  <div class="section section-intro">
-    <div class="tm-section-container section-container">
-      <div class="container">
-        <div class="section-title">A new era for Cosmos</div>
-        <div class="section-subtitle">
-          The biggest event in the ecosystem since the launch of the Cosmos Hub.
-        </div>
-        <eclipsed-planet class="section-graphics" />
-        <div class="section-statement">
-          <p>
-            Stargate is a set of upgrades that complete the original roadmap
-            laid out in the Cosmos Whitepaper. For the first time ever, Cosmos
-            blockchains will be able to connect with each other using the first
-            standardized protocol for inter-blockchain communication (IBC).
-          </p>
-          <div class="section-cta">
-            <a
-              href="https://blog.cosmos.network/cosmos-stargate-upgrade-overview-8939475fe673"
-              target="_blank"
-              rel="noreferrer noopener"
-            >
-              Read more about Stargate &#8594;
-            </a>
+  <div id="intro">
+    <div class="section section-intro">
+      <div class="tm-section-container section-container">
+        <div class="container">
+          <div class="section-title">A new era for Cosmos</div>
+          <div class="section-subtitle">
+            The biggest event in the ecosystem since the launch of the Cosmos
+            Hub.
+          </div>
+          <eclipsed-planet class="section-graphics" />
+          <div class="section-statement">
+            <p>
+              Stargate is a set of upgrades that complete the original roadmap
+              laid out in the Cosmos Whitepaper. For the first time ever, Cosmos
+              blockchains will be able to connect with each other using the
+              first standardized protocol for inter-blockchain communication
+              (IBC).
+            </p>
+            <div class="section-cta">
+              <a
+                href="https://blog.cosmos.network/cosmos-stargate-upgrade-overview-8939475fe673"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                Read more about Stargate &#8594;
+              </a>
+            </div>
           </div>
         </div>
       </div>
