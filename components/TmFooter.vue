@@ -47,7 +47,7 @@
             clip-rule="evenodd"
             fill="#616489"
           >
-            <path :d="icon(link)" style="pointer-events: none;"></path>
+            <path :d="icon(link)" style="pointer-events: none"></path>
           </svg>
         </a>
       </div>

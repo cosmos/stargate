@@ -429,9 +429,7 @@
                   <div class="section-tabs__text__heading">
                     Not ready to upgrade?
                   </div>
-                  <div class="section-tabs__text__title">
-                    Launchpad
-                  </div>
+                  <div class="section-tabs__text__title">Launchpad</div>
                   <p class="section-tabs__text__paragraph">
                     Stargate involves a lot of breaking changes that may make it
                     difficult for you to upgrade, if you have already written a
@@ -459,9 +457,7 @@
               </tm-tab>
             </tm-tabs>
             <div class="section-tabs__text">
-              <div class="section-tabs__text__title">
-                Migration guides
-              </div>
+              <div class="section-tabs__text__title">Migration guides</div>
               <p class="section-tabs__text__paragraph">
                 Help the Cosmos ecosystem upgrade by contributing your own
                 migration guides to the community.
@@ -729,12 +725,8 @@
             />
           </div>
           <div class="text">
-            <div class="text__caption">
-              June 23
-            </div>
-            <div class="text__title">
-              Stargate Q&amp;A with Zaki Manian
-            </div>
+            <div class="text__caption">June 23</div>
+            <div class="text__title">Stargate Q&amp;A with Zaki Manian</div>
             <div class="text__cta">
               <a
                 href="https://www.youtube.com/watch?v=mlq5GzQTIAM"
@@ -791,17 +783,13 @@
       <div class="container">
         <transition name="fade" mode="out-in">
           <div v-if="state === 'success'" key="success" class="bottom__state">
-            <div class="bottom__get-notified">
-              Almost there&hellip;
-            </div>
+            <div class="bottom__get-notified">Almost there&hellip;</div>
             <h2 class="bottom__state__success">
               Check your inbox and confirm your email address
             </h2>
           </div>
           <div v-else-if="state === 'error'" key="error" class="bottom__state">
-            <div class="bottom__get-notified">
-              Something went wrong
-            </div>
+            <div class="bottom__get-notified">Something went wrong</div>
             <h2 class="bottom__state__error">
               Uh oh! Refresh the page and try again.
             </h2>
