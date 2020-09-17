@@ -57,14 +57,6 @@ export default {}
   to
     transform translate3d(0,0,0) rotate(360deg)
 
-// Accessible/SEO friendly CSS hiding
-.sr-only
-  position absolute
-  height 1px
-  width 1px
-  overflow hidden
-  clip rect(1px, 1px, 1px, 1px)
-
 .nav-primary
   ul
     display grid
