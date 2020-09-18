@@ -35,6 +35,7 @@
             v-scroll-to="'#testnets'"
             size="l"
             color="var(--white)"
+            background-color="linear-gradient(92.99deg, #8D0EC0 0%, #4251FA 100%)"
             variant="contained"
             glow
             class="hero-btn"
@@ -72,8 +73,6 @@ export default {}
     margin 0 auto
   a
     display inline-block
-    font-size 1rem
-    line-height 1.375
     padding 0.8125rem 0
     color var(--gray-600)
     border-radius 0.375rem
@@ -182,42 +181,6 @@ export default {}
 
 .hero-bottom
   margin-top 15%
-  .hero-btn
-    margin 3.5rem auto
-    width 100%
-    max-width 17.5rem
-    height 4rem
-    background #4251FA linear-gradient(92.99deg, #8D0EC0 0%, #4251FA 100%)
-    box-shadow 0px 10px 22px rgba(65, 81, 250, 0.21)
-    font-weight 700
-    font-size 1.1875rem
-    line-height 1.263
-    letter-spacing -0.005em
-    position relative
-    transition transform .2s ease-out, background-color .2s ease-out
-    &::after
-      content ""
-      position absolute
-      top 0
-      right 0
-      left 0
-      bottom 0
-      border-radius inherit
-      background linear-gradient(92.99deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0) 100%)
-      box-shadow 0px 15px 33px rgba(65, 81, 250, 0.25)
-      opacity 0
-      transition opacity .2s ease-out
-    &:hover,
-    &:focus
-      transform translateY(-2px)
-      &::after
-        opacity 1
-    &:active
-      transform none
-      transition-duration 0s
-      &::after
-        transition-duration 0s
-        opacity 0
 
 @media screen and (max-width: 1024px)
   .section-hero
@@ -225,9 +188,6 @@ export default {}
     .container
       .headings
         .subtitle
-          font-size 1.75rem
-          line-height 1.571
-          letter-spacing -0.015em
           margin-top 2rem
 
 @media screen and (max-width: 767px)
@@ -261,9 +221,6 @@ export default {}
           padding-left 1rem
           padding-right 1rem
         .subtitle
-          font-size 1.1875rem
-          line-height 1.579
-          letter-spacing -0.005em
           margin-top 1.5rem
     .hero-graphics
       font-size 0.36rem

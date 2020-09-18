@@ -548,6 +548,9 @@ td
     font-weight 600
 
 @media screen and (max-width: 1024px)
+  .section .section-header
+      grid-column 1 / span 12
+
   .section-testnets
     .section-graphics
       grid-column 6 / span 7
