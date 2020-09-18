@@ -2,13 +2,17 @@
   <div id="contributors" class="section section-contributors">
     <div class="tm-section-container section-container">
       <div class="container">
-        <div class="section-header">Contributors</div>
+        <div class="section-header tm-rf0 tm-medium tm-lh-title tm-overline">
+          Contributors
+        </div>
         <div class="section-graphics">
           <consortium-graphics class="section-graphics__canvas" />
         </div>
         <div class="section-top">
-          <div class="section-title">Core Developers</div>
-          <div class="section-statement">
+          <div class="section-title tm-rf6 tm-bold tm-lh-title">
+            Core Developers
+          </div>
+          <div class="section-statement tm-rf1 tm-lh-copy">
             Stargate is made possible through the hard work and coordination of
             many dedicated teams contributing to development on Cosmos SDK,
             Tendermint Core, IBC and Gaia.
@@ -30,11 +34,15 @@
                 <div class="section-list__item__logo">
                   <img :src="i.logo" />
                 </div>
-                <div class="section-list__item__title">
+                <div
+                  class="section-list__item__title tm-rf1 tm-bold tm-lh-title"
+                >
                   {{ i.name }}
-                  <code v-if="i.role" class="section-list__item__title__role">{{
-                    i.role
-                  }}</code>
+                  <code
+                    v-if="i.role"
+                    class="section-list__item__title__role tm-rf0 tm-lh-title"
+                    >{{ i.role }}</code
+                  >
                 </div>
                 <div class="section-list__item__date">&#8599;</div>
               </a>
@@ -55,11 +63,15 @@
                 <div class="section-list__item__logo">
                   <img :src="i.logo" />
                 </div>
-                <div class="section-list__item__title">
+                <div
+                  class="section-list__item__title tm-rf1 tm-bold tm-lh-title"
+                >
                   {{ i.name }}
-                  <code v-if="i.role" class="section-list__item__title__role">{{
-                    i.role
-                  }}</code>
+                  <code
+                    v-if="i.role"
+                    class="section-list__item__title__role tm-rf0 tm-lh-title"
+                    >{{ i.role }}</code
+                  >
                 </div>
                 <div class="section-list__item__date">&#8599;</div>
               </a>
@@ -146,18 +158,11 @@ export default {
     position relative
   .section-title
     align-self flex-start
-    font-weight 900
-    font-size 5.125rem
-    line-height 1.121
-    letter-spacing -0.025em
-    color #FFFFFF
+    color var(--white)
     max-width 6em
   .section-statement
     margin-top 3rem
-    font-size 1.4375rem
-    line-height 1.565
-    letter-spacing -0.01em
-    color #CFD1E7
+    color var(--gray-800)
     max-width 30em
   .section-list
     grid-column 1/span 12
@@ -179,44 +184,33 @@ export default {
       align-items center
       border-bottom 1px solid #282B53
       &__title
-        font-weight bold
-        font-size 1.4375rem
-        line-height 121.7%
-        letter-spacing -0.01em
-        color #CCD1FF
+        color var(--primary-900)
         transition color .1s ease-out
         width 70%
         &__role
-          font-weight normal
-          font-size 1rem
-          color var(--blue-gray)
+          color var(--gray-600)
           margin-left 0.5rem
           vertical-align bottom
           background #282B53
           border-radius 14px
           padding 0px 12px
       &__date
-        font-size 1.4375rem
-        line-height 121.3%
-        text-align right
-        letter-spacing -0.005em
-        color var(--blue-gray)
+        font-size 1.5rem
+        color var(--gray-600)
         transition color 0.1s ease-out, transform 0.15s ease-out
       &:hover .section-list__item__title,
       &:hover .section-list__item__date
-        color #FFFFFF
+        color var(--white)
       &:hover .section-list__item__date
         transform translate(3px, -3px)
 
 @media screen and (max-width: 1024px)
-  // .section .section-header
-  //     grid-column 1 / span 12
+  .section .section-header
+      grid-column 1 / span 12
 
   .section-contributors
     .section-top
       grid-column 1/span 12
-    .section-title
-      font-size 4rem
     .section-list
       margin-top 4rem
       display block
@@ -230,13 +224,6 @@ export default {
     .section-list__item
       padding-top 1.25rem
       padding-bottom 1.25rem
-      &__title
-        font-size 1rem
-        line-height 1.375
-      &__role,
-      &__date
-        font-size 0.8125rem
-        line-height 1.384
 
   .section-contributors
     .section-graphics

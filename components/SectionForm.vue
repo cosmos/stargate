@@ -128,7 +128,7 @@ export default {
     font-weight bold
     font-size 1.1875rem
     line-height 1.263
-    color #CFD1E7
+    color var(--gray-800)
     text-align center
   &__state
     margin 2rem auto
@@ -136,7 +136,7 @@ export default {
     line-height 1.375
     font-weight normal
     &__success
-      color var(--blue-gray)
+      color var(--gray-600)
     &__error
       color #FF4C52
   &__form
@@ -162,12 +162,12 @@ export default {
         &:hover,
         &:focus
           .bottom__form__input__icon
-            fill #FFFFFF
+            fill var(--white)
             transform scale(1.05)
       &__icon
         display block
         height 2rem
-        fill var(--blue-gray)
+        fill var(--gray-600)
         transition fill .15s ease-out, transform .15s ease-out
       &__input
         outline none
@@ -185,15 +185,15 @@ export default {
         opacity 0.7
         transition color 0.15s ease-out, background 0.15s ease-out
         &::placeholder
-          color var(--blue-gray)
+          color var(--gray-600)
           transition color 0.15s ease-out
         &:hover
           background #282B53
           &:not(:focus)::placeholder
-            color #CFD1E7
+            color var(--gray-800)
         &:focus
           background #282B53
-          color #FFFFFF
+          color var(--white)
 
 @media screen and (max-width: 576px)
   .bottom

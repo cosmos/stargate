@@ -2,7 +2,9 @@
   <div id="videos" class="section section-videos">
     <div class="tm-section-container section-container">
       <div class="container">
-        <div class="section-header">Videos</div>
+        <div class="section-header tm-rf0 tm-medium tm-lh-title tm-overline">
+          Videos
+        </div>
         <div class="frame">
           <iframe
             src="https://www.youtube.com/embed/mlq5GzQTIAM?autoplay=0&controls=1&rel=0&modestbranding=1&fs=1&enablejsapi=1"
@@ -12,9 +14,11 @@
           />
         </div>
         <div class="text">
-          <div class="text__caption">June 23</div>
-          <div class="text__title">Stargate Q&amp;A with Zaki Manian</div>
-          <div class="text__cta">
+          <div class="text__caption tm-rf0 tm-lh-copy">June 23</div>
+          <div class="text__title tm-rf2 tm-bold tm-lh-title">
+            Stargate Q&amp;A with Zaki Manian
+          </div>
+          <div class="text__cta tm-rf0 tm-lh-solid">
             <a
               href="https://www.youtube.com/watch?v=mlq5GzQTIAM"
               target="_blank"
@@ -56,21 +60,14 @@ export default {}
       height 100%
       position absolute
   .text
-    text-align left
-    width 373px
+    width 23.3125rem
     grid-column 9 / span 4
     position relative
     &__caption
-      font-size 16px
-      line-height 1.625
-      color var(--blue-gray)
+      color var(--gray-600)
     &__title
-      margin-top 8px
-      font-weight bold
-      font-size 2rem
-      line-height 125%
-      letter-spacing -0.025em
-      color #FFFFFF
+      margin-top 0.5rem
+      color var(--white)
     &__cta
       display flex
       align-items center
@@ -79,11 +76,8 @@ export default {}
       bottom 0
       right 0
       a
-        font-weight bold
-        font-size 1rem
-        line-height 137.5%
-        padding 0.8125rem 0
         border-radius 0.5rem
+        padding .8125rem 0
 
 @media screen and (max-width: 1438px)
   .section-videos
@@ -95,8 +89,8 @@ export default {}
 
 
 @media screen and (max-width: 1024px)
-  // .section .section-header
-  //     grid-column 1 / span 12
+  .section .section-header
+      grid-column 1 / span 12
 
   .section-videos
     .container
@@ -116,12 +110,4 @@ export default {}
     .container .text
       width auto
       margin-top 0.5rem
-      &__caption
-        font-size 0.8125rem
-        line-height 1.384
-        letter-spacing 0.001em
-      &__title
-        font-size 1.1875rem
-        line-height 1.263
-        letter-spacing -0.01em
 </style>

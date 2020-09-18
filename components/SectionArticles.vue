@@ -2,8 +2,12 @@
   <div id="articles" class="section section-articles">
     <div class="tm-section-container section-container">
       <div class="container">
-        <div class="section-header">{{ articles.length }} articles</div>
-        <div class="section-title">Learn more about Stargate</div>
+        <div class="section-header tm-rf0 tm-medium tm-lh-title tm-overline">
+          {{ articles.length }} articles
+        </div>
+        <div class="section-title tm-rf4 tm-bold tm-lh-title">
+          Learn more about Stargate
+        </div>
         <div class="content">
           <div
             v-for="item in articles"
@@ -19,11 +23,13 @@
               <span class="articles-item__icon">
                 <icon-arrow-top-right />
               </span>
-              <div class="articles-item__date">{{ item.date }}</div>
-              <div class="articles-item__title">
+              <div class="articles-item__date tm-rf-1 tm-lh-copy">
+                {{ item.date }}
+              </div>
+              <div class="articles-item__title tm-rf1 tm-bold tm-lh-title">
                 {{ item.title }}
               </div>
-              <div class="articles-item__description">
+              <div class="articles-item__description tm-rf0 tm-lh-copy">
                 {{ item.description }}
               </div>
             </a>
@@ -81,11 +87,7 @@ export default {
   .section-header
     grid-column 6 / span 7
   .section-title
-    font-weight 900
-    font-size 3.625rem
-    line-height 1.172
-    letter-spacing -0.02em
-    color #FFFFFF
+    color var(--white)
     width 379px
     text-align left
     grid-column 1 / 4
@@ -120,28 +122,19 @@ export default {
           right 1.5rem
           transition transform .25s ease-out
         &__date
-          font-size 0.8125rem
-          line-height 1.538
-          letter-spacing 0.001em
-          color var(--blue-gray)
+          color var(--gray-600)
         &__title
           margin-top 0.75rem
-          font-weight bold
-          font-size 1.75rem
-          line-height 1.285
-          letter-spacing -0.02em
-          color #CCD1FF
+          color var(--primary-900)
           max-width 20em
         &__description
           margin-top 0.75rem
-          font-size 1rem
-          line-height 1.375
-          color var(--blue-gray)
+          color var(--gray-600)
           max-width 30em
 
 @media screen and (max-width: 1024px)
-  // .section .section-header
-  //     grid-column 1 / span 12
+  .section .section-header
+      grid-column 1 / span 12
 
   .section-articles
     .section-header
@@ -149,7 +142,6 @@ export default {
     .section-title
       grid-row 2
       margin-top 6rem
-      font-size 4rem
     .content
       grid-row 3
       grid-column 1/13
@@ -158,15 +150,6 @@ export default {
 @media screen and (max-width: 576px)
   .section-articles .content
     margin-top 2rem
-    .articles-wrapper .articles-item
-      &__title
-        font-size 1.1875rem
-        line-height 1.263
-        letter-spacing -0.01em
-      &__description
-        font-size 0.8125rem
-        line-height 1.384
-        letter-spacing 0.001em
 
 @media screen and (max-width: 320px)
   .section-articles

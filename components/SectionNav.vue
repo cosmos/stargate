@@ -1,6 +1,6 @@
 <template>
   <div class="headroom section-nav">
-    <nav class="nav">
+    <nav class="nav tm-rf1 tm-lh-copy">
       <ul class="nav__list">
         <li class="nav__list__item">
           <a v-scroll-to="'#intro'">What is Stargate?</a>
@@ -55,9 +55,6 @@ export default {}
   .nav
     overflow scroll
     white-space nowrap
-    font-size 1.1875rem
-    line-height 1.263
-    letter-spacing -0.005em
     &__list
       display flex
       flex-direction row
@@ -73,7 +70,7 @@ export default {}
           padding 1.25rem 0
           position relative
           z-index 1
-          color var(--blue-gray)
+          color var(--gray-600)
           &:hover,
           &:focus
             color #ECEDF7
@@ -122,9 +119,6 @@ export default {}
 @media screen and (max-width: 576px)
   .section-nav
     .nav
-      font-size 1rem
-      line-height 1.375
-      letter-spacing 0
       &__list__item a
         padding 0.8125rem 0
 </style>

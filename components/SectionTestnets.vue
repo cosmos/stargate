@@ -2,10 +2,14 @@
   <div id="testnets" class="section section-testnets">
     <div class="tm-section-container section-container">
       <div class="container">
-        <div class="section-header">Testnets</div>
+        <div class="section-header tm-rf0 tm-medium tm-lh-title tm-overline">
+          Testnets
+        </div>
         <planets-cluster class="section-graphics" />
         <div class="section-top">
-          <div class="section-title">Get set for testnets</div>
+          <div class="section-title tm-rf6 tm-bold tm-lh-title">
+            Get set for testnets
+          </div>
           <div class="section-statement">
             <p>
               Validators, wallets, block explorers, exchanges and zone
@@ -335,18 +339,14 @@ export default {}
     margin-top 6rem
   .section-title
     max-width 35rem
-    font-weight 900
-    font-size 5.125rem
-    line-height 1.121
-    letter-spacing -0.025em
-    color #FFFFFF
+    color var(--white)
   .section-statement
     margin-top 3rem
     max-width 30em
     font-size 1.4375rem
     line-height 1.565
     letter-spacing -0.01em
-    color #CFD1E7
+    color var(--gray-800)
   .testnets-list
     grid-column 1/ span 12
     margin-top 6rem
@@ -369,7 +369,7 @@ export default {}
             font-size 1.75rem
             line-height 1.571
             letter-spacing -0.015em
-            color #FFFFFF
+            color var(--white)
           &__status
             padding 0.1875rem 0.75rem
             height 1.75rem
@@ -381,14 +381,14 @@ export default {}
             font-weight bold
             font-size 0.8125rem
             line-height 1.375
-            color #FFFFFF
+            color var(--white)
         &__mid
           &__desc
             margin-top 0.25rem
             font-size 1.1875rem
             line-height 1.579
             letter-spacing -0.005em
-            color var(--blue-gray)
+            color var(--gray-600)
             max-width 30em
         &__bot
           margin-top 1rem
@@ -402,12 +402,12 @@ export default {}
             line-height 1.375
             letter-spacing 0.08em
             text-transform uppercase
-            color #CFD1E7
+            color var(--gray-800)
             flex-shrink 0
           &__labels
             display flex
             &__item
-              color #cfd1e7
+              color var(--gray-800)
               line-height 1.375
               padding 0.1875rem 0.75rem
               background #282b53
@@ -446,9 +446,9 @@ export default {}
       line-height 120%
       letter-spacing -0.03em
       text-align start
-      color #FFFFFF
+      color var(--white)
   .section-list
-    color #fff
+    color var(--white)
     margin-top 6rem
     grid-column 6 / span 7
     &__item
@@ -463,18 +463,18 @@ export default {}
         font-size 1.4375rem
         line-height 121.7%
         letter-spacing -0.01em
-        color #CCD1FF
+        color var(--primary-900)
         transition color 0.1s ease-out
       &__date
         font-size 1.1875rem
         line-height 126.3%
         text-align right
         letter-spacing -0.005em
-        color var(--blue-gray)
+        color var(--gray-600)
         transition color 0.1s ease-out, transform 0.15s ease-out
       &:hover .section-list__item__title,
       &:hover .section-list__item__date
-        color #FFFFFF
+        color var(--white)
       &:hover .section-list__item__date
         transform translateX(3px)
   .section-tabs
@@ -490,7 +490,7 @@ export default {}
         line-height 137.5%
         letter-spacing 0.08em
         text-transform uppercase
-        color var(--blue-gray)
+        color var(--gray-600)
       &__title
         margin-top 0.5rem
         max-width 30em
@@ -498,23 +498,23 @@ export default {}
         font-size 1.75rem
         line-height 128.5%
         letter-spacing -0.02em
-        color #FFFFFF
+        color var(--white)
       &__paragraph
         margin-top 1rem
         max-width 30em
         font-size 1.1875rem
         line-height 157.9%
         letter-spacing -0.005em
-        color #CFD1E7
+        color var(--gray-800)
         &__stargate
-          color #40B3FF
+          color var(--link)
       &__cta
         margin-top 2.25rem
         font-weight bold
         font-size 1.1875rem
         line-height 126.3%
         letter-spacing -0.005em
-        color #40B3FF
+        color var(--link)
 
   .section-text
     margin-top 6rem
@@ -524,7 +524,7 @@ export default {}
       font-size 1.1875rem
       line-height 157.9%
       letter-spacing -0.005em
-      color #CFD1E7
+      color var(--gray-800)
 
 .testnets-list__item__text__bot__labels__item + .testnets-list__item__text__bot__labels__item
   margin-left 0.75rem
@@ -560,8 +560,6 @@ td
       align-items flex-start
     .section-top
       margin-top 4rem
-    .section-title
-      font-size 4rem
     .testnets-list__item
       grid-auto-flow dense
       grid-template-columns auto

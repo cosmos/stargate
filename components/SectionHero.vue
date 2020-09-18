@@ -34,7 +34,7 @@
           <tm-button
             v-scroll-to="'#testnets'"
             size="l"
-            color="#fff"
+            color="var(--white)"
             variant="contained"
             glow
             class="hero-btn"
@@ -75,14 +75,14 @@ export default {}
     font-size 1rem
     line-height 1.375
     padding 0.8125rem 0
-    color var(--blue-gray)
+    color var(--gray-600)
     border-radius 0.375rem
     &:hover,
     &:focus
-      color #CFD1E7
+      color var(--gray-800)
     .icon
       display none
-      fill #CFD1E7
+      fill var(--gray-800)
       transform rotate(180deg)
       width 1.5rem
 
@@ -122,7 +122,7 @@ export default {}
           max-height 5.5rem
       .subtitle
         margin-top 3rem
-        color var(--blue-gray)
+        color var(--gray-600)
 
 .section-hero
   .hero-graphics
@@ -168,7 +168,7 @@ export default {}
       left 29%
       top 22%
       border-radius 50%
-      background #FFFFFF
+      background var(--white)
       box-shadow 0px 0px 2.5em #263CFF, 0px 0px 8em #2D74FF
     &__planet
       position absolute

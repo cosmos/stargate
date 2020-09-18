@@ -143,7 +143,7 @@ export default {
      */
     color: {
       type: String,
-      default: '#ffffff', // TODO: use a color variable
+      default: 'var(--white)',
     },
     /**
      * Glow style

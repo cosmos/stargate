@@ -48,12 +48,7 @@ a[href]
 .section-header
   padding-top 1rem
   min-height 3rem
-  font-weight 600
-  font-size 1.1875rem
-  line-height 1.263
-  letter-spacing 0.08em
-  text-transform uppercase
-  color var(--blue-gray)
+  color var(--gray-600)
   border-top 1px solid #282B53
 
 @media screen and (max-width: 1279px)
@@ -66,15 +61,7 @@ a[href]
     padding-top 4rem
     padding-bottom 4rem
 
-  // .section .section-header
-  //   grid-column 1 / span 12
-
 @media screen and (max-width: 767px)
-  .section
-    .section-header
-      font-size 1rem
-      line-height 1.375
-
   .section-container
     padding-top 1.5rem
 

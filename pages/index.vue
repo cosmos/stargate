@@ -82,7 +82,7 @@ export default {
 .outline-btn
   border 2px solid #43466D !important
   background transparent !important
-  color var(--blue-gray) !important
+  color var(--gray-600) !important
 
 .nav-container
   height 4rem
@@ -101,25 +101,9 @@ main
 //   transform translateY(-100%)
 
 @media screen and (max-width: 1024px)
+  // TODO: remove in section components
   .section .section-header
-      grid-column 1 / span 12
-
-@media screen and (max-width: 576px)
-  .section
-    .section-title
-      margin-top 3rem
-      font-size 2.5rem
-      line-height 1.20
-    .section-subtitle
-      font-size 1.4375rem
-      line-height 1.217
-    .section-statement
-      font-size 1rem
-      line-height 1.625
-    .section-cta
-      font-size 1rem
-      line-height 1.375
-      margin-top 1.5rem
+    grid-column 1 / span 12
 
 @media screen and (max-width: 414px)
   main

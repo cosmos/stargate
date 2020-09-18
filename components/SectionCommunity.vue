@@ -2,16 +2,24 @@
   <div id="community" class="section section-community">
     <div class="tm-section-container section-container">
       <div class="container">
-        <div class="section-header">Community</div>
+        <div class="section-header tm-rf0 tm-medium tm-lh-title tm-overline">
+          Community
+        </div>
         <div class="cards">
           <a
             href="https://cosmos.network/community"
             rel="noreferrer noopener"
             class="cards__item"
           >
-            <div class="cards__item__caption">Connect</div>
-            <div class="cards__item__title">Join the community</div>
-            <div class="cards__item__description">
+            <div
+              class="cards__item__caption tm-rf0 tm-medium tm-lh-title tm-overline"
+            >
+              Connect
+            </div>
+            <div class="cards__item__title tm-rf2 tm-bold tm-lh-title">
+              Join the community
+            </div>
+            <div class="cards__item__description tm-rf1 tm-lh-copy">
               Learn about Cosmos, get to know the community, connect with other
               Cosmonauts and more.
             </div>
@@ -25,9 +33,15 @@
             <span class="cards__item__disclosure">
               <icon-arrow-top-right />
             </span>
-            <div class="cards__item__caption">Chat</div>
-            <div class="cards__item__title">Discuss Stargate</div>
-            <div class="cards__item__description">
+            <div
+              class="cards__item__caption tm-rf0 tm-medium tm-lh-title tm-overline"
+            >
+              Chat
+            </div>
+            <div class="cards__item__title tm-rf2 tm-bold tm-lh-title">
+              Discuss Stargate
+            </div>
+            <div class="cards__item__description tm-rf1 tm-lh-copy">
               Join the <code>#stargate</code> channel in the Cosmos community
               Discord and chat with developers.
             </div>
@@ -94,31 +108,19 @@ export default {}
         height 1.5rem
         transition transform .25s ease-out
       &__caption
-        font-weight 600
-        font-size 16px
-        line-height 1.375
-        letter-spacing 0.08em
-        text-transform uppercase
-        color var(--blue-gray)
+        color var(--gray-600)
         transition transform .25s ease-out
       &__title
-        margin-top 12px
-        font-weight bold
-        font-size 32px
-        line-height 125%
-        letter-spacing -0.025em
-        color #FFFFFF
+        margin-top 0.75rem
+        color var(--white)
         transition transform .25s ease-out
       &__description
-        margin-top 12px
-        font-size 19px
-        line-height 1.579
-        letter-spacing -0.005em
-        color var(--blue-gray)
+        margin-top 0.75rem
+        color var(--gray-600)
 
 @media screen and (max-width: 1024px)
-  // .section .section-header
-  //     grid-column 1 / span 12
+  .section .section-header
+      grid-column 1 / span 12
 
   .section-community .cards
     grid-template-columns repeat(1, 1fr)
@@ -131,17 +133,6 @@ export default {}
         height auto
         min-height 18rem
         border-radius 0.75rem
-        &__caption
-          font-size 0.8125rem
-          line-height 1.384
-        &__title
-          font-size 1.4375rem
-          line-height 1.217
-          letter-spacing -0.01em
-        &__description
-          font-size 1rem
-          line-height 1.375
-          letter-spacing 0
         &__disclosure
           top 1rem
           right 1rem
