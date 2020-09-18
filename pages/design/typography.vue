@@ -74,6 +74,12 @@
       </div>
     </section>
     <section class="type-scale type-scale-wrap">
+      <h2 class="tm-rf3 tm-lh-title tm-bold">Line-heights</h2>
+      <div class="row line-height-scale">
+        <div class="text tm-rf0 tm-lh-solid">Solid line-height (1)</div>
+        <div class="text tm-rf0 tm-lh-title">Title line-height</div>
+        <div class="text tm-rf0 tm-lh-copy">Copy line-height</div>
+      </div>
       <div class="row">
         <div class="colhead tm-rf-1 tm-lh-solid">Step</div>
       </div>
@@ -449,6 +455,14 @@ code
     grid-column 4/span 2
     &:last-child
       grid-column 7/span 6
+
+.line-height-scale
+  margin-bottom var(--spacing-2)
+  .text
+    background darkcyan
+    display inline-block
+    vertical-align baseline
+
 
 // .font-weight-scale
 //   for size in -1...6
