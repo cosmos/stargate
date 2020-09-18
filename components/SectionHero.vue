@@ -182,6 +182,9 @@ export default {}
 .hero-bottom
   margin-top 15%
 
+.button
+  margin 3.5rem auto
+
 @media screen and (max-width: 1024px)
   .section-hero
     display grid
