@@ -148,6 +148,8 @@ export default {
     '@nuxtjs/eslint-module',
     // https://github.com/juliomrqz/nuxt-optimized-images
     '@aceforth/nuxt-optimized-images',
+    // https://github.com/Developmint/nuxt-purgecss
+    'nuxt-purgecss',
   ],
   optimizedImages: {
     optimizeImages: true,
