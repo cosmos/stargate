@@ -160,9 +160,7 @@
                 <div class="section-tabs__text__heading">
                   Cosmos Hub Validators
                 </div>
-                <div class="section-tabs__text__title">
-                  Joining stargate-1
-                </div>
+                <div class="section-tabs__text__title">Joining stargate-1</div>
                 <p class="section-tabs__text__paragraph">
                   Your current <strong>"operator_address"</strong> and your
                   <strong>"consensus_pubkey"</strong> are required via pull
@@ -228,9 +226,7 @@
                 <div class="section-tabs__text__heading">
                   Not ready to upgrade?
                 </div>
-                <div class="section-tabs__text__title">
-                  Launchpad
-                </div>
+                <div class="section-tabs__text__title">Launchpad</div>
                 <p class="section-tabs__text__paragraph">
                   Stargate involves a lot of breaking changes that may make it
                   difficult for you to upgrade, if you have already written a
@@ -256,9 +252,7 @@
             </tm-tab>
           </tm-tabs>
           <div class="section-tabs__text">
-            <div class="section-tabs__text__title">
-              Migration guides
-            </div>
+            <div class="section-tabs__text__title">Migration guides</div>
             <p class="section-tabs__text__paragraph">
               Help the Cosmos ecosystem upgrade by contributing your own
               migration guides to the community.
