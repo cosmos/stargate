@@ -145,7 +145,7 @@ export default {}
         line-height 137.5%
         letter-spacing 0.08em
         text-transform uppercase
-        color #989BB9
+        color var(--blue-gray)
       &__heading
         margin-top 16px
         font-weight bold
@@ -167,7 +167,7 @@ export default {}
     max-width 24em
     font-size 1rem
     line-height 1.625
-    color #989BB9
+    color var(--blue-gray)
     &__icon
       width 3em
       height 3em
@@ -193,7 +193,7 @@ export default {}
       max-width 24em
       font-size 1rem
       line-height 1.625
-      color #989BB9
+      color var(--blue-gray)
       &:nth-child(even)
         grid-column 6 / span 4
       &__icon

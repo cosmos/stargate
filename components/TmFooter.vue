@@ -47,7 +47,7 @@
             clip-rule="evenodd"
             fill="#616489"
           >
-            <path :d="icon(link)" style="pointer-events: none;"></path>
+            <path :d="icon(link)" style="pointer-events: none"></path>
           </svg>
         </a>
       </div>
@@ -160,7 +160,7 @@ footer
         line-height 137.5%
         border-radius 0.375rem
         white-space nowrap
-        color #989BB9
+        color var(--blue-gray)
         &:hover,
         &:focus
           color inherit
@@ -194,7 +194,7 @@ footer
       font-size 0.8125rem
       line-height 1.538
       letter-spacing 0.001em
-      color #989BB9
+      color var(--blue-gray)
 
 @media screen and (max-width: 600px)
   footer

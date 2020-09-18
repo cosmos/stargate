@@ -4,17 +4,13 @@
       <div class="container">
         <transition name="fade" mode="out-in">
           <div v-if="state === 'success'" key="success" class="bottom__state">
-            <div class="bottom__get-notified">
-              Almost there&hellip;
-            </div>
+            <div class="bottom__get-notified">Almost there&hellip;</div>
             <div class="bottom__state__success">
               Check your inbox and confirm your email address
             </div>
           </div>
           <div v-else-if="state === 'error'" key="error" class="bottom__state">
-            <div class="bottom__get-notified">
-              Something went wrong
-            </div>
+            <div class="bottom__get-notified">Something went wrong</div>
             <div class="bottom__state__error">
               Uh oh! Refresh the page and try again.
             </div>
@@ -140,7 +136,7 @@ export default {
     line-height 1.375
     font-weight normal
     &__success
-      color #989bb9
+      color var(--blue-gray)
     &__error
       color #FF4C52
   &__form
@@ -171,7 +167,7 @@ export default {
       &__icon
         display block
         height 2rem
-        fill #989BB9
+        fill var(--blue-gray)
         transition fill .15s ease-out, transform .15s ease-out
       &__input
         outline none
@@ -189,7 +185,7 @@ export default {
         opacity 0.7
         transition color 0.15s ease-out, background 0.15s ease-out
         &::placeholder
-          color #989BB9
+          color var(--blue-gray)
           transition color 0.15s ease-out
         &:hover
           background #282B53

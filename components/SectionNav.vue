@@ -73,7 +73,7 @@ export default {}
           padding 1.25rem 0
           position relative
           z-index 1
-          color #989BB9
+          color var(--blue-gray)
           &:hover,
           &:focus
             color #ECEDF7

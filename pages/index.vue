@@ -82,7 +82,7 @@ export default {
 .outline-btn
   border 2px solid #43466D !important
   background transparent !important
-  color #989BB9 !important
+  color var(--blue-gray) !important
 
 .nav-container
   height 4rem

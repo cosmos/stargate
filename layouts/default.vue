@@ -53,7 +53,7 @@ a[href]
   line-height 1.263
   letter-spacing 0.08em
   text-transform uppercase
-  color #989BB9
+  color var(--blue-gray)
   border-top 1px solid #282B53
 
 @media screen and (max-width: 1279px)

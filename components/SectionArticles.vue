@@ -123,7 +123,7 @@ export default {
           font-size 0.8125rem
           line-height 1.538
           letter-spacing 0.001em
-          color #989BB9
+          color var(--blue-gray)
         &__title
           margin-top 0.75rem
           font-weight bold
@@ -136,7 +136,7 @@ export default {
           margin-top 0.75rem
           font-size 1rem
           line-height 1.375
-          color #989BB9
+          color var(--blue-gray)
           max-width 30em
 
 @media screen and (max-width: 1024px)

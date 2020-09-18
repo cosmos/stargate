@@ -189,7 +189,7 @@ export default {
         &__role
           font-weight normal
           font-size 1rem
-          color #989BB9
+          color var(--blue-gray)
           margin-left 0.5rem
           vertical-align bottom
           background #282B53
@@ -200,7 +200,7 @@ export default {
         line-height 121.3%
         text-align right
         letter-spacing -0.005em
-        color #989BB9
+        color var(--blue-gray)
         transition color 0.1s ease-out, transform 0.15s ease-out
       &:hover .section-list__item__title,
       &:hover .section-list__item__date

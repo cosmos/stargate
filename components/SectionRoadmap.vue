@@ -360,7 +360,7 @@ export default {
         line-height 126.3%
         text-align right
         letter-spacing -0.005em
-        color #989BB9
+        color var(--blue-gray)
         transition color 0.1s ease-out, transform 0.15s ease-out
       &:hover .section-list__item__title,
       &:hover .section-list__item__date

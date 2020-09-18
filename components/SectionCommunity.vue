@@ -99,7 +99,7 @@ export default {}
         line-height 1.375
         letter-spacing 0.08em
         text-transform uppercase
-        color #989BB9
+        color var(--blue-gray)
         transition transform .25s ease-out
       &__title
         margin-top 12px
@@ -114,7 +114,7 @@ export default {}
         font-size 19px
         line-height 1.579
         letter-spacing -0.005em
-        color #989BB9
+        color var(--blue-gray)
 
 @media screen and (max-width: 1024px)
   // .section .section-header

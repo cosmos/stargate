@@ -26,7 +26,7 @@
             <wordmark-stargate />
             <span class="sr-only">Stargate</span>
           </h1>
-          <div class="subtitle">
+          <div class="subtitle tm-rf3 tm-lh-copy">
             The Internet of Blockchains is on the horizon.
           </div>
         </div>
@@ -75,7 +75,7 @@ export default {}
     font-size 1rem
     line-height 1.375
     padding 0.8125rem 0
-    color #989BB9
+    color var(--blue-gray)
     border-radius 0.375rem
     &:hover,
     &:focus
@@ -122,10 +122,7 @@ export default {}
           max-height 5.5rem
       .subtitle
         margin-top 3rem
-        font-size 2rem
-        line-height 150%
-        letter-spacing -0.02em
-        color #989BB9
+        color var(--blue-gray)
 
 .section-hero
   .hero-graphics

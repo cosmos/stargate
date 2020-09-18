@@ -12,12 +12,8 @@
           />
         </div>
         <div class="text">
-          <div class="text__caption">
-            June 23
-          </div>
-          <div class="text__title">
-            Stargate Q&amp;A with Zaki Manian
-          </div>
+          <div class="text__caption">June 23</div>
+          <div class="text__title">Stargate Q&amp;A with Zaki Manian</div>
           <div class="text__cta">
             <a
               href="https://www.youtube.com/watch?v=mlq5GzQTIAM"
@@ -67,7 +63,7 @@ export default {}
     &__caption
       font-size 16px
       line-height 1.625
-      color #989BB9
+      color var(--blue-gray)
     &__title
       margin-top 8px
       font-weight bold
