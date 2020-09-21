@@ -2,14 +2,10 @@
   <div id="testnets" class="section section-testnets">
     <div class="tm-section-container section-container">
       <div class="container">
-        <div class="section-header tm-rf0 tm-medium tm-lh-title tm-overline">
-          Testnets
-        </div>
+        <div class="section-header">Testnets</div>
         <planets-cluster class="section-graphics" />
         <div class="section-top">
-          <div class="section-title tm-rf6 tm-bold tm-lh-title">
-            Get set for testnets
-          </div>
+          <div class="section-title">Get set for testnets</div>
           <div class="section-statement">
             <p>
               Validators, wallets, block explorers, exchanges and zone
@@ -25,19 +21,50 @@
               src="~/assets/illustrations/stargate-flag.svg"
               class="testnets-list__item__graphics"
             />
+            <div class="testnets-list__item__text__top">
+              <div class="testnets-list__item__text__top__title">
+                <code>stargate-2</code>
+              </div>
+              <div class="testnets-list__item__text__top__status">Live</div>
+            </div>
             <div class="testnets-list__item__text">
-              <div class="testnets-list__item__text__top">
-                <div class="testnets-list__item__text__top__title">
-                  <code>stargate-1</code>
-                </div>
-                <div class="testnets-list__item__text__top__status">Live</div>
-              </div>
               <div class="testnets-list__item__text__mid">
-                <div class="testnets-list__item__text__mid__desc">
-                  The first simulated upgrade of the Cosmos Hub and the primary
-                  public integration testnet for Stargate-readiness.
+                <div class="testnets-list__item__text__mid__update">
+                  <div class="top-box">
+                    <div class="testnets-list__item__text__mid__update-top">
+                      Update
+                    </div>
+                    <div
+                      class="testnets-list__item__text__mid__update-top__date"
+                    >
+                      Sept 16
+                    </div>
+                  </div>
+                  <div class="testnets-list__item__text__mid__update-mid">
+                    This testnet will restart as stargate-3 upon merging PR
+                    <a
+                      href="https://github.com/cosmos/cosmos-sdk/pull/7285"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      >#7285</a
+                    >. Prepare to test with existing integrations, IBC, and
+                    state sync in this upcoming API stable testnet.
+                  </div>
+                  <div class="testnets-list__item__text__mid__update-bot">
+                    <a
+                      href="https://airtable.com/shrEr1bQD6COG9WH0"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                    >
+                      Confirm you are <code>stargate-3</code> ready -->
+                    </a>
+                  </div>
                 </div>
               </div>
+              <p class="testnets-list__item__text__mid__desc">
+                The first simulated upgrade of the Cosmos Hub and the primary
+                public integration testnet for Stargate-readiness.
+              </p>
               <div class="testnets-list__item__text__bot">
                 <div class="testnets-list__item__text__bot__display">
                   Recommended for
@@ -57,29 +84,22 @@
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="testnets-list__item__cta">
-              <tm-button
-                to-link="external"
-                href="https://github.com/cosmosdevs/stargate#testnet"
-                size="l"
-                color="#3B2AB7"
-                background-color="var(--white)"
-                variant="contained"
-                glow
-                class="testnets-list__item__cta__join"
-                >Join</tm-button
-              >
-              <tm-button
-                to-link="external"
-                href="https://discord.com/channels/669268347736686612/723170066937413693"
-                size="l"
-                color="var(--white)"
-                variant="text"
-                glow
-                class="testnets-list__item__cta__discuss"
-                >Discuss</tm-button
-              >
+              <div class="testnets-list__item__cta">
+                <a
+                  href="https://github.com/cosmosdevs/stargate#testnet"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  class="testnets-list__item__cta__join"
+                  >Join</a
+                >
+                <a
+                  href="https://discord.com/channels/669268347736686612/723170066937413693"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  class="testnets-list__item__cta__discuss"
+                  >Discuss</a
+                >
+              </div>
             </div>
           </div>
           <div class="testnets-list__item">
@@ -87,15 +107,15 @@
               src="~/assets/illustrations/bigbang-flag.svg"
               class="testnets-list__item__graphics"
             />
-            <div class="testnets-list__item__text">
-              <div class="testnets-list__item__text__top">
-                <div class="testnets-list__item__text__top__title">
-                  <code>bigbang-1</code>
-                </div>
-                <div class="testnets-list__item__text__top__status outline-btn">
-                  Coming soon
-                </div>
+            <div class="testnets-list__item__text__top">
+              <div class="testnets-list__item__text__top__title">
+                <code>bigbang-1</code>
               </div>
+              <div class="testnets-list__item__text__top__status outline-btn">
+                Coming soon
+              </div>
+            </div>
+            <div class="testnets-list__item__text">
               <div class="testnets-list__item__text__mid">
                 <div class="testnets-list__item__text__mid__desc">
                   A community-led testnet aimed at the wider Cosmos ecosystem
@@ -115,27 +135,28 @@
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="testnets-list__item__cta">
-              <tm-button
-                size="l"
-                color="#616489"
-                border-color="#43466D"
-                variant="outlined"
-                class="testnets-list__item__cta__join"
-                disabled
-                >Join</tm-button
-              >
-              <tm-button
-                to-link="external"
-                href="https://discord.com/channels/669268347736686612/723170066937413693"
-                size="l"
-                color="var(--white)"
-                variant="text"
-                glow
-                class="testnets-list__item__cta__discuss"
-                >Discuss</tm-button
-              >
+              <div class="testnets-list__item__cta">
+                <!-- <a
+                  href="https://github.com/cosmosdevs/stargate#testnet"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  > -->
+                <div
+                  class="testnets-list__item__cta__join outline-btn disabled"
+                  aria-disabled="true"
+                >
+                  Join
+                </div>
+                <!-- </a> -->
+                <a
+                  href="https://discord.com/channels/669268347736686612/723170066937413693"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  class="testnets-list__item__cta__discuss"
+                >
+                  Discuss
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -160,7 +181,7 @@
                 <div class="section-tabs__text__heading">
                   Cosmos Hub Validators
                 </div>
-                <div class="section-tabs__text__title">Joining stargate-1</div>
+                <div class="section-tabs__text__title">Joining stargate-2</div>
                 <p class="section-tabs__text__paragraph">
                   Your current <strong>"operator_address"</strong> and your
                   <strong>"consensus_pubkey"</strong> are required via pull
@@ -204,7 +225,7 @@
                   Stargate upgrade by testing the features and your
                   infrastructure ahead of time, using the
                   <code class="section-tabs__text__paragraph__stargate"
-                    >stargate-1</code
+                    >stargate-2</code
                   >
                   testnet.
                 </p>
@@ -273,7 +294,7 @@
         </div>
         <div class="section-text">
           <div class="section-text__paragraph">
-            As part of the <code><strong>stargate-1</strong></code> testnet, the
+            As part of the <code><strong>stargate-2</strong></code> testnet, the
             team at Iqlusion are offering live support for testnet users at the
             following times:
           </div>
@@ -315,8 +336,14 @@ export default {}
 </script>
 
 <style lang="stylus" scoped>
+.top-box
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
 .section-testnets
   position relative
+  overflow hidden
   background linear-gradient(180deg, rgba(0,0,0,0) 0%, #030419 24%, #030419 69%, rgba(0,0,0,0) 100%)
   .section-header
     grid-column 6/span 7
@@ -333,37 +360,44 @@ export default {}
     margin-top 6rem
   .section-title
     max-width 35rem
-    color var(--white)
+    font-weight 900
+    font-size 5.125rem
+    line-height 1.121
+    letter-spacing -0.025em
+    color #FFFFFF
   .section-statement
     margin-top 3rem
     max-width 30em
     font-size 1.4375rem
     line-height 1.565
     letter-spacing -0.01em
-    color var(--gray-800)
+    color #CFD1E7
   .testnets-list
     grid-column 1/ span 12
-    margin-top 6rem
     position relative
     &__item
       display grid
       width 100%
-      grid-template-columns 10rem auto auto
+      grid-template-columns 10rem auto 38rem
       gap 1.5rem
-      align-items center
+      align-items flex-start
+      border-bottom 1px solid #282B53
+      padding 6rem 0
       &__graphics
         width 100%
         max-width 9.875rem
       &__text
         &__top
           display flex
-          align-items center
+          align-items flex-start
+          flex-direction column
+          width fit-content
           &__title
             font-weight bold
-            font-size 1.75rem
+            font-size 38px
             line-height 1.571
             letter-spacing -0.015em
-            color var(--white)
+            color #FFD1FD
           &__status
             padding 0.1875rem 0.75rem
             height 1.75rem
@@ -371,19 +405,45 @@ export default {}
             border-radius 0.875rem
             align-items center
             display flex
-            margin-left 1rem
             font-weight bold
             font-size 0.8125rem
             line-height 1.375
-            color var(--white)
+            color #FFFFFF
+            margin-left auto
         &__mid
-          &__desc
+          &__update
+            padding 1.5rem
+            background #282B53
+            box-shadow 0px 0px 1px rgba(0, 0, 0, 0.07), 0px 4px 8px rgba(0, 0, 0, 0.07), 0px 10px 22px rgba(0, 3, 66, 0.1)
+            border-radius 0.5rem
+            margin-bottom 2rem
+          &__update-top
+            font-weight bold
+            font-size 1rem
+            line-height 1.625
+            color #FFFFFF
+            &__date
+              align-self center
+              font-size 0.75rem
+              color #989BB9
+          &__update-mid
+            margin-top 0.5rem
+            line-height 162.5%
+          &__update-bot
             margin-top 0.25rem
+            padding 1rem 0
+          &__desc
             font-size 1.1875rem
             line-height 1.579
             letter-spacing -0.005em
-            color var(--gray-600)
+            color #CFD1E7
             max-width 30em
+          &__note
+            margin-top 0.5rem
+            font-size 0.8125rem
+            line-height 1.538
+            letter-spacing 0.001em
+            color #989BB9
         &__bot
           margin-top 1rem
           display flex
@@ -396,12 +456,12 @@ export default {}
             line-height 1.375
             letter-spacing 0.08em
             text-transform uppercase
-            color var(--gray-800)
+            color #CFD1E7
             flex-shrink 0
           &__labels
             display flex
             &__item
-              color var(--gray-800)
+              color #cfd1e7
               line-height 1.375
               padding 0.1875rem 0.75rem
               background #282b53
@@ -411,10 +471,11 @@ export default {}
               text-align center
       &__cta
         display flex
-        justify-content flex-end
+        justify-content flex-start
         align-items flex-end
-        flex-direction column
+        flex-direction row
         gap 0.5rem
+        margin-top 2rem
         a
           transition transform .2s ease-out
           &:hover,
@@ -423,9 +484,41 @@ export default {}
           &:active
             transform none
             transition-duration 0s
-        &__join, &__discuss
-          max-width 8.5rem
-          height 4rem
+        &__join
+          user-select none
+          transition background 20ms ease-in 0s
+          cursor pointer
+          display inline-flex
+          align-items center
+          justify-content center
+          white-space nowrap
+          color #FFFFFF
+          border none
+          text-align center
+          width 8.5rem
+          padding 1.25rem 3rem
+          background linear-gradient(92.99deg, #8D0EC0 0%, #4251FA 100%), #4251FA
+          border-radius 0.375rem
+          font-weight 700
+          font-size 1.1875rem
+          line-height 1.263
+          letter-spacing -0.005em
+        &__discuss
+          user-select none
+          transition background 20ms ease-in 0s
+          cursor pointer
+          display inline-flex
+          align-items center
+          justify-content center
+          white-space nowrap
+          color #40B3FF
+          border none
+          text-align center
+          width 8.5rem
+          padding 1.25rem 3rem
+          background transparent
+          border-radius 0.375rem
+          font-weight 700
           font-size 1.1875rem
           line-height 1.263
           letter-spacing -0.005em
@@ -433,16 +526,16 @@ export default {}
     grid-column 1 / 5
     margin-top 6rem
     &__title
-      margin-top 2rem
+      // margin-top 2rem
       grid-column 1 / span 4
       font-weight bold
       font-size 2.5rem
       line-height 120%
       letter-spacing -0.03em
       text-align start
-      color var(--white)
+      color #FFFFFF
   .section-list
-    color var(--white)
+    color #fff
     margin-top 6rem
     grid-column 6 / span 7
     &__item
@@ -457,22 +550,22 @@ export default {}
         font-size 1.4375rem
         line-height 121.7%
         letter-spacing -0.01em
-        color var(--primary-900)
+        color #CCD1FF
         transition color 0.1s ease-out
       &__date
         font-size 1.1875rem
         line-height 126.3%
         text-align right
         letter-spacing -0.005em
-        color var(--gray-600)
+        color #989BB9
         transition color 0.1s ease-out, transform 0.15s ease-out
       &:hover .section-list__item__title,
       &:hover .section-list__item__date
-        color var(--white)
+        color #FFFFFF
       &:hover .section-list__item__date
         transform translateX(3px)
   .section-tabs
-    margin-top 8rem
+    margin-top 6rem
     grid-column 6 / span 7
     &__text
       margin-top 3rem
@@ -484,7 +577,7 @@ export default {}
         line-height 137.5%
         letter-spacing 0.08em
         text-transform uppercase
-        color var(--gray-600)
+        color #989BB9
       &__title
         margin-top 0.5rem
         max-width 30em
@@ -492,33 +585,32 @@ export default {}
         font-size 1.75rem
         line-height 128.5%
         letter-spacing -0.02em
-        color var(--white)
+        color #FFFFFF
       &__paragraph
         margin-top 1rem
         max-width 30em
         font-size 1.1875rem
         line-height 157.9%
         letter-spacing -0.005em
-        color var(--gray-800)
+        color #CFD1E7
         &__stargate
-          color var(--link)
+          color #40B3FF
       &__cta
         margin-top 2.25rem
         font-weight bold
         font-size 1.1875rem
         line-height 126.3%
         letter-spacing -0.005em
-        color var(--link)
+        color #40B3FF
 
   .section-text
     margin-top 6rem
     grid-column 6 / span 7
     &__paragraph
-      margin-top 2rem
       font-size 1.1875rem
       line-height 157.9%
       letter-spacing -0.005em
-      color var(--gray-800)
+      color #CFD1E7
 
 .testnets-list__item__text__bot__labels__item + .testnets-list__item__text__bot__labels__item
   margin-left 0.75rem
@@ -528,7 +620,7 @@ table
   border-radius 0.5rem
   overflow hidden
   width 100%
-  margin-top 2rem
+  margin 2rem 0
 
 td, th
   text-align left
@@ -549,18 +641,23 @@ td
 
 @media screen and (max-width: 1024px)
   .section .section-header
-      grid-column 1 / span 12
+    grid-column 1 / span 12
 
   .section-testnets
+    overflow hidden
     .section-graphics
       grid-column 6 / span 7
       align-items flex-start
     .section-top
       margin-top 4rem
+    .section-title
+      font-size 4rem
     .testnets-list__item
       grid-auto-flow dense
       grid-template-columns auto
-      padding 2rem 0
+      margin 0
+      padding-top 3rem
+      padding-bottom 3rem
       &:first-child
         border-bottom 1px solid #282B53
       &__cta
@@ -572,13 +669,13 @@ td
       margin-top 3rem
       grid-column 1 / span 12
 
-@media screen and (max-width: 767px)
-  .section-testnets
-    .section-status
-      grid-column 1/12
-    .section-text
-      margin-top 0
-      grid-column 1 / span 12
+  .section-testnets .testnets-list__item__text__top
+    display flex
+    align-items center
+    flex-direction row
+
+  .section-testnets .testnets-list__item__text__top__status
+    margin-left 0.5rem
 
   .testnets-list__item__graphics
     display none
@@ -587,6 +684,14 @@ td
     flex-flow row wrap
     &__item
       margin-top 0.5rem
+
+@media screen and (max-width: 767px)
+  .section-testnets
+    .section-status
+      grid-column 1/12
+    .section-text
+      margin-top 0
+      grid-column 1 / span 12
 
 @media screen and (max-width: 576px)
   .section-testnets
@@ -605,15 +710,10 @@ td
   img.testnets-list__item__graphics
     width 20%
 
-  th,td
-    padding 0.125rem 1rem
-    display block
-    &:first-child
-      padding-top 1rem
-    &:last-child
-      padding-bottom 1rem
-
 @media screen and (max-width: 414px)
+  .testnets-list__item__text__bot__labels__item + .testnets-list__item__text__bot__labels__item
+    margin-left 0
+
   .section-testnets
     .testnets-list__item__text__top__title
       font-size 1.4375rem
@@ -627,7 +727,4 @@ td
       &__item
         width fit-content
         margin-right 0.5rem
-
-  .testnets-list__item__text__bot__labels__item + .testnets-list__item__text__bot__labels__item
-    margin-left 0
 </style>
