@@ -1,4 +1,9 @@
+import shrinkRay from 'shrink-ray-current'
+
 export default {
+  render: {
+    compressor: shrinkRay(),
+  },
   /*
    ** Nuxt target
    ** See https://nuxtjs.org/api/configuration-target
