@@ -45,7 +45,6 @@ export default {}
   .section-title
     grid-column 1 / span 12
     grid-row 1 / 2
-    color var(--white)
     max-width 50rem
   .section-subtitle
     display flex

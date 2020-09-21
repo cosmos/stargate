@@ -139,7 +139,6 @@ export default {}
     grid-row 2
     margin-top 3rem
     margin-bottom 3rem
-    color var(--white)
     grid-column 6 / span 7
   .section-statement
     grid-row 3

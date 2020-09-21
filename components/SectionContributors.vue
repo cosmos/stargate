@@ -158,7 +158,6 @@ export default {
     position relative
   .section-title
     align-self flex-start
-    color var(--white)
     max-width 6em
   .section-statement
     margin-top 3rem

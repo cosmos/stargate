@@ -51,6 +51,9 @@ a[href]
   color var(--gray-600)
   border-top 1px solid #282B53
 
+.section-title
+  color var(--white)
+
 @media screen and (max-width: 1279px)
   .section
     padding-top 6rem

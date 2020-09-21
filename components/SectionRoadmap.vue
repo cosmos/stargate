@@ -232,7 +232,6 @@ export default {
     margin-top 3rem
     margin-bottom 3rem
     text-align right
-    color var(--white)
     grid-column 1 / span 12
   .section-milestones
     grid-column 1 / 5
