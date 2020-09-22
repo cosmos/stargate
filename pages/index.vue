@@ -285,7 +285,7 @@
                 </div>
               </div>
             </div>
-            <div class="testnets-list__item">
+            <div class="testnets-list__item testnets-list__item__inactive">
               <img
                 src="~/assets/illustrations/bigbang-flag.svg"
                 class="testnets-list__item__graphics"
@@ -1552,7 +1552,7 @@ main
   color #989BB9 !important
 
 .update-container
-  padding 1.5rem 1rem
+  padding 1rem 1.5rem
   background #282B53
   box-shadow 0px 0px 1px rgba(0, 0, 0, 0.07), 0px 4px 8px rgba(0, 0, 0, 0.07), 0px 10px 22px rgba(0, 3, 66, 0.1)
   border-radius 0.5rem
@@ -1567,7 +1567,7 @@ main
 
 .update-container__cta
   margin-top 0.25rem
-  font-weight 300
+  font-weight normal
   font-size 1.3125rem
   line-height 159.8%
   letter-spacing -0.007em
@@ -1608,40 +1608,43 @@ main
     grid-column 1/ span 12
     position relative
     &__item
+      position relative
       display grid
       width 100%
-      grid-template-columns 10rem auto 38rem
+      grid-template-columns repeat(12, 1fr)
       gap 1.5rem
       align-items flex-start
       border-bottom 1px solid #282B53
       padding 6rem 0
       &__graphics
+        position absolute
+        top 0
+        left 0
         width 100%
         max-width 9.875rem
       &__text
+        position relative
+        grid-column 6 / span 7
         &__top
-          display flex
-          align-items flex-start
-          flex-direction column
-          width fit-content
+          position relative
+          grid-column 1 / span 4
+          text-align right
           &__title
             font-weight bold
             font-size 38px
             line-height 1.571
             letter-spacing -0.015em
             color #FFD1FD
+            margin-bottom 0.75rem
           &__status
             padding 0.1875rem 0.75rem
-            height 1.75rem
             background #E644F8
             border-radius 0.875rem
-            align-items center
-            display flex
+            display inline-block
             font-weight bold
-            font-size 0.8125rem
-            line-height 1.375
+            font-size 1rem
+            line-height 1.3125
             color #FFFFFF
-            margin-left auto
         &__mid
           &__desc
             font-size 1.1875rem
@@ -1680,6 +1683,11 @@ main
               align-items center
               display flex
               text-align center
+      &__inactive
+        .testnets-list__item__text__top__title
+          color #989BB9
+        .testnets-list__item__text__top__status
+          font-weight normal
       &__cta
         display flex
         justify-content flex-start
@@ -2488,14 +2496,14 @@ main
   .section-testnets
     overflow hidden
     .section-graphics
-      grid-column 6 / span 7
       align-items flex-start
     .section-top
       margin-top 4rem
     .section-title
       font-size 4rem
+    .testnets-list
+      margin-top 3rem
     .testnets-list__item
-      grid-auto-flow dense
       grid-template-columns auto
       margin 0
       padding-top 3rem
@@ -2505,19 +2513,22 @@ main
       &__cta
         flex-direction row
         justify-content flex-start
+      &__text
+        grid-column span 12
+      &__text__top
+        grid-column span 12
+        text-align inherit
+        display flex
+        align-items baseline
+        flex-wrap wrap
+        &__title
+          margin-right 0.75rem
+          margin-bottom 0
     .section-status__title
       grid-column 1 / span 12
     .section-tabs
       margin-top 3rem
       grid-column 1 / span 12
-
-  .section-testnets .testnets-list__item__text__top
-    display flex
-    align-items center
-    flex-direction row
-
-  .section-testnets .testnets-list__item__text__top__status
-    margin-left 0.5rem
 
   .section-roadmap
     .section-title
@@ -2744,8 +2755,9 @@ main
           padding-left 1.5rem
           padding-right 1.5rem
 
-  img.testnets-list__item__graphics
-    width 20%
+  .update-container__title,
+  .update-container__cta
+    font-size 1rem
 
   th,td
     padding 0.125rem 1rem
@@ -2872,6 +2884,8 @@ main
   .section-testnets
     .testnets-list__item__text__top__title
       font-size 1.4375rem
+    .testnets-list__item__text__top__status
+      font-size 0.75rem
     .testnets-list__item__text__mid__desc
       font-size 0.8125rem
     .testnets-list__item__text__bot__display
@@ -2879,6 +2893,7 @@ main
     .testnets-list__item__text__bot__labels
       display flex
       max-width 280px
+      font-size 0.75rem
       &__item
         width fit-content
         margin-right 0.5rem
