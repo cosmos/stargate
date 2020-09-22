@@ -2,12 +2,8 @@
   <main>
     <div class="hero">
       <div class="container">
-        <div class="overline">
-          Welcome to Cosmos
-        </div>
-        <h1 class="title">
-          The open economy for everyone
-        </h1>
+        <div class="overline">Welcome to Cosmos</div>
+        <h1 class="title">The open economy for everyone</h1>
         <p class="description">
           Cosmos is an ever-expanding network of decentralized and
           interconnected applications, built with powerful blockchain

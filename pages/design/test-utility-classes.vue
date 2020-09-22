@@ -16,8 +16,8 @@
         >
         <tm-button
           size="l"
-          border-color="#fff"
-          color="#fff"
+          border-color="var(--white)"
+          color="var(--white)"
           variant="outlined"
           glow
           >Get knowledge</tm-button
@@ -59,7 +59,7 @@ export default {
   .title
     max-width 10em
     margin var(--spacing-5) auto var(--spacing-8)
-    color #fff
+    color var(--white)
     // TODO: convert to mixin
     .highlight
       color red

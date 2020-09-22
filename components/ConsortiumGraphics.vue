@@ -139,7 +139,7 @@
       position absolute
       width 100%
       height $borderSize
-      background #ffffff
+      background var(--white)
       box-shadow 0px 0px 0.75em rgba(255, 255, 255, 0.5)
     &:before
       top 0

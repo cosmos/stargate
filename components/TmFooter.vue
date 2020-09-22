@@ -3,28 +3,28 @@
     <div class="container">
       <div class="nav">
         <a
-          class="nav__item"
+          class="nav__item tm-rf0 tm-lh-title"
           href="https://docs.cosmos.network"
           target="blank_"
           rel="noreferrer noopener"
           >Cosmos SDK</a
         >
         <a
-          class="nav__item"
+          class="nav__item tm-rf0 tm-lh-title"
           href="https://hub.cosmos.network"
           target="blank_"
           rel="noreferrer noopener"
           >Cosmos Hub</a
         >
         <a
-          class="nav__item"
+          class="nav__item tm-rf0 tm-lh-title"
           href="https://docs.tendermint.com"
           target="blank_"
           rel="noreferrer noopener"
           >Tendermint Core</a
         >
         <a
-          class="nav__item"
+          class="nav__item tm-rf0 tm-lh-title"
           href="https://github.com/cosmos/ics"
           target="blank_"
           rel="noreferrer noopener"
@@ -47,11 +47,11 @@
             clip-rule="evenodd"
             fill="#616489"
           >
-            <path :d="icon(link)" style="pointer-events: none;"></path>
+            <path :d="icon(link)" style="pointer-events: none"></path>
           </svg>
         </a>
       </div>
-      <div class="home-nav">
+      <div class="home-nav tm-rf-1 tm-lh-copy">
         <a
           href="http://cosmos.network"
           target="blank_"
@@ -59,7 +59,7 @@
           >cosmos.network</a
         >
       </div>
-      <div class="smallprint">
+      <div class="smallprint tm-rf-1 tm-lh-copy">
         This website is maintained by Tendermint Inc. The contents and opinions
         of this website are those of Tendermint Inc.
       </div>
@@ -156,11 +156,9 @@ footer
       &__item
         padding 1.25rem 0
         margin 0 1rem
-        font-size 1rem
-        line-height 137.5%
         border-radius 0.375rem
         white-space nowrap
-        color #989BB9
+        color var(--gray-600)
         &:hover,
         &:focus
           color inherit
@@ -178,12 +176,9 @@ footer
           transition fill .15s ease-out
         &:hover svg,
         &:focus svg
-          fill #FFF
+          fill var(--white)
     .home-nav
       margin-top 1rem
-      font-size 0.8125rem
-      line-height 1.538
-      letter-spacing 0.001em
       a
         color #ECEDF7
         &:hover,
@@ -191,10 +186,7 @@ footer
           color var(--link)
     .smallprint
       margin-top 1rem
-      font-size 0.8125rem
-      line-height 1.538
-      letter-spacing 0.001em
-      color #989BB9
+      color var(--gray-600)
 
 @media screen and (max-width: 600px)
   footer

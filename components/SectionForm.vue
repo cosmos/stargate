@@ -3,24 +3,31 @@
     <div class="tm-section-container section-container bottom">
       <div class="container">
         <transition name="fade" mode="out-in">
-          <div v-if="state === 'success'" key="success" class="bottom__state">
-            <div class="bottom__get-notified">
-              Almost there&hellip;
-            </div>
+          <div
+            v-if="state === 'success'"
+            key="success"
+            class="bottom__state tm-rf0 tm-lh-copy"
+          >
+            <div class="bottom__get-notified">Almost there&hellip;</div>
             <div class="bottom__state__success">
               Check your inbox and confirm your email address
             </div>
           </div>
-          <div v-else-if="state === 'error'" key="error" class="bottom__state">
-            <div class="bottom__get-notified">
-              Something went wrong
-            </div>
+          <div
+            v-else-if="state === 'error'"
+            key="error"
+            class="bottom__state tm-rf0 tm-lh-copy"
+          >
+            <div class="bottom__get-notified">Something went wrong</div>
             <div class="bottom__state__error">
               Uh oh! Refresh the page and try again.
             </div>
           </div>
           <div v-else key="default" class="bottom__form">
-            <label class="bottom__get-notified" for="field-email">
+            <label
+              class="bottom__get-notified tm-rf1 tm-bold tm-lh-copy"
+              for="field-email"
+            >
               Get Stargates updates
             </label>
             <form
@@ -35,7 +42,7 @@
                   id="field-email"
                   v-model="email"
                   name="fields[email]"
-                  class="bottom__form__input__input"
+                  class="bottom__form__input__input tm-rf1 tm-lh-copy"
                   type="email"
                   placeholder="Your email"
                   required="required"
@@ -129,18 +136,12 @@ export default {
   &__get-notified
     display block
     margin-bottom 2rem
-    font-weight bold
-    font-size 1.1875rem
-    line-height 1.263
-    color #CFD1E7
+    color var(--gray-800)
     text-align center
   &__state
     margin 2rem auto
-    font-size 1rem
-    line-height 1.375
-    font-weight normal
     &__success
-      color #989bb9
+      color var(--gray-600)
     &__error
       color #FF4C52
   &__form
@@ -166,12 +167,12 @@ export default {
         &:hover,
         &:focus
           .bottom__form__input__icon
-            fill #FFFFFF
+            fill var(--white)
             transform scale(1.05)
       &__icon
         display block
         height 2rem
-        fill #989BB9
+        fill var(--gray-600)
         transition fill .15s ease-out, transform .15s ease-out
       &__input
         outline none
@@ -180,33 +181,26 @@ export default {
         border none
         border-radius 0.625rem
         padding 1.25rem 4rem 1.25rem 1.5rem
-        height 64px
-        font-weight 350
-        font-size 1.1875rem
-        line-height 1.263
-        letter-spacing -0.005em
+        height 4rem
         color #F8F8FD
         opacity 0.7
         transition color 0.15s ease-out, background 0.15s ease-out
         &::placeholder
-          color #989BB9
+          color var(--gray-600)
           transition color 0.15s ease-out
         &:hover
           background #282B53
           &:not(:focus)::placeholder
-            color #CFD1E7
+            color var(--gray-800)
         &:focus
           background #282B53
-          color #FFFFFF
+          color var(--white)
 
 @media screen and (max-width: 576px)
   .bottom
     &__form
       &__input
         &__input
-          font-size 1rem
-          line-height 1.375
-          letter-spacing 0
           height 3rem
           padding 0.8125rem 3rem 0.8125rem 1rem
         &__button

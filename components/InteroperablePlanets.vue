@@ -128,9 +128,9 @@
     top 102%
     left 122%
   &__3 &__back
-    background radial-gradient(farthest-side at 25% 22%, #40b3ff 3%, #015ab5 34%, #0c2054 82%)
+    background radial-gradient(farthest-side at 25% 22%, var(--link) 3%, #015ab5 34%, #0c2054 82%)
   &__3 &__front
-    background radial-gradient(farthest-side at -88% 16%, #40b3ff 58%, #016ad4 74%, #132c6d 92%, rgba(7,31,95,0) 100%)
+    background radial-gradient(farthest-side at -88% 16%, var(--link) 58%, #016ad4 74%, #132c6d 92%, rgba(7,31,95,0) 100%)
 
 .connections
   position absolute
@@ -287,7 +287,7 @@
   height 100%
   top 50%
   transform translate3d(-50%, -50%, 0)
-  box-shadow inset 0 0.125em 0 0px #40B3FF
+  box-shadow inset 0 0.125em 0 0px var(--link)
   border-radius 100%
   position absolute
   clip-path polygon(0 0, 50% 0, 50% 100%, 0 100%)

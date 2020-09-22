@@ -26,7 +26,7 @@
             <wordmark-stargate />
             <span class="sr-only">Stargate</span>
           </h1>
-          <div class="subtitle">
+          <div class="subtitle tm-rf3 tm-lh-copy">
             The Internet of Blockchains is on the horizon.
           </div>
         </div>
@@ -34,7 +34,8 @@
           <tm-button
             v-scroll-to="'#testnets'"
             size="l"
-            color="#fff"
+            color="var(--white)"
+            background-color="linear-gradient(92.99deg, #8D0EC0 0%, #4251FA 100%)"
             variant="contained"
             glow
             class="hero-btn"
@@ -72,17 +73,15 @@ export default {}
     margin 0 auto
   a
     display inline-block
-    font-size 1rem
-    line-height 1.375
     padding 0.8125rem 0
-    color #989BB9
+    color var(--gray-600)
     border-radius 0.375rem
     &:hover,
     &:focus
-      color #CFD1E7
+      color var(--gray-800)
     .icon
       display none
-      fill #CFD1E7
+      fill var(--gray-800)
       transform rotate(180deg)
       width 1.5rem
 
@@ -122,10 +121,7 @@ export default {}
           max-height 5.5rem
       .subtitle
         margin-top 3rem
-        font-size 2rem
-        line-height 150%
-        letter-spacing -0.02em
-        color #989BB9
+        color var(--gray-600)
 
 .section-hero
   .hero-graphics
@@ -171,7 +167,7 @@ export default {}
       left 29%
       top 22%
       border-radius 50%
-      background #FFFFFF
+      background var(--white)
       box-shadow 0px 0px 2.5em #263CFF, 0px 0px 8em #2D74FF
     &__planet
       position absolute
@@ -185,42 +181,9 @@ export default {}
 
 .hero-bottom
   margin-top 15%
-  .hero-btn
-    margin 3.5rem auto
-    width 100%
-    max-width 17.5rem
-    height 4rem
-    background #4251FA linear-gradient(92.99deg, #8D0EC0 0%, #4251FA 100%)
-    box-shadow 0px 10px 22px rgba(65, 81, 250, 0.21)
-    font-weight 700
-    font-size 1.1875rem
-    line-height 1.263
-    letter-spacing -0.005em
-    position relative
-    transition transform .2s ease-out, background-color .2s ease-out
-    &::after
-      content ""
-      position absolute
-      top 0
-      right 0
-      left 0
-      bottom 0
-      border-radius inherit
-      background linear-gradient(92.99deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0) 100%)
-      box-shadow 0px 15px 33px rgba(65, 81, 250, 0.25)
-      opacity 0
-      transition opacity .2s ease-out
-    &:hover,
-    &:focus
-      transform translateY(-2px)
-      &::after
-        opacity 1
-    &:active
-      transform none
-      transition-duration 0s
-      &::after
-        transition-duration 0s
-        opacity 0
+
+.hero-btn
+  margin 3.5rem auto
 
 @media screen and (max-width: 1024px)
   .section-hero
@@ -228,9 +191,6 @@ export default {}
     .container
       .headings
         .subtitle
-          font-size 1.75rem
-          line-height 1.571
-          letter-spacing -0.015em
           margin-top 2rem
 
 @media screen and (max-width: 767px)
@@ -264,9 +224,6 @@ export default {}
           padding-left 1rem
           padding-right 1rem
         .subtitle
-          font-size 1.1875rem
-          line-height 1.579
-          letter-spacing -0.005em
           margin-top 1.5rem
     .hero-graphics
       font-size 0.36rem

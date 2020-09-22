@@ -29,7 +29,7 @@ html
   -webkit-font-smoothing antialiased
   text-rendering optimizeLegibility
   background-color var(--black)
-  color #CFD1E7
+  color var(--gray-800)
   scroll-behavior smooth
 
 body
@@ -55,7 +55,8 @@ a
   outline-color rgba(64, 179, 255, 0.92)
   cursor pointer
   transition all .1s ease-out
-  &:hover
+  &:hover,
+  &:focus
     color var(--white)
   &:active
     opacity 0.7

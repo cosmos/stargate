@@ -2,11 +2,17 @@
   <div id="roadmap" class="section section-roadmap">
     <div class="tm-section-container section-container">
       <div class="container">
-        <div class="section-header">Roadmap</div>
-        <div class="section-title">{{ progressTotal }}% complete</div>
+        <div class="section-header tm-rf0 tm-medium tm-lh-title tm-overline">
+          Roadmap
+        </div>
+        <div class="section-title tm-rf6 tm-bold tm-lh-title">
+          {{ progressTotal }}% complete
+        </div>
         <div class="section-milestones">
-          <div class="section-milestones__title">Milestones</div>
-          <div class="section-milestones__cta">
+          <div class="section-milestones__title tm-rf3 tm-bold tm-lh-title">
+            Milestones
+          </div>
+          <div class="section-milestones__cta tm-rf1 tm-lh-copy">
             <a
               href="https://github.com/orgs/cosmosdevs/projects/1"
               target="_blank"
@@ -36,18 +42,24 @@
               <component :is="`icon-${item.logo}`" />
             </div>
             <div class="text">
-              <div class="title">{{ item.defaultTitle }}</div>
-              <div class="subtitle">{{ item.repo }}</div>
+              <div class="title tm-rf1 tm-bold tm-lh-copy">
+                {{ item.defaultTitle }}
+              </div>
+              <div class="subtitle tm-rf0 tm-lh-copy">{{ item.repo }}</div>
             </div>
             <div class="indicator">
               <div v-if="item.progress" class="progress__wrapper">
-                <div class="h3">{{ item.progress }}% complete</div>
+                <div class="progress tm-rf0 tm-lh-copy">
+                  {{ item.progress }}% complete
+                </div>
               </div>
             </div>
           </div>
         </a>
         <div class="section-status">
-          <div class="section-status__title">Status updates</div>
+          <div class="section-status__title tm-rf3 tm-bold tm-lh-title">
+            Status updates
+          </div>
         </div>
         <div class="section-list">
           <a
@@ -58,17 +70,17 @@
             rel="noreferrer noopener"
             class="section-list__item"
           >
-            <div class="section-list__item__title">
+            <div class="section-list__item__title tm-rf1 tm-bold tm-lh-title">
               {{ updatesList[item - 1].title }}
             </div>
-            <div class="section-list__item__date">
+            <div class="section-list__item__date tm-rf1 tm-lh-title">
               {{ updatesList[item - 1].date }} &#8594;
             </div>
           </a>
           <div class="section-list__bottom">
             <div
               v-if="currentUpdates != updatesList.length"
-              class="section-list__bottom__cta"
+              class="section-list__bottom__cta tm-rf1 tm-lh-copy"
               role="button"
               @click="currentUpdates = updatesList.length"
             >
@@ -76,7 +88,7 @@
             </div>
             <div
               v-else
-              class="section-list__bottom__cta"
+              class="section-list__bottom__cta tm-rf1 tm-lh-copy"
               role="button"
               @click="currentUpdates = 3"
             >
@@ -119,47 +131,47 @@ export default {
         {
           url: 'https://github.com/cosmosdevs/stargate/blob/master/week1.md',
           title: 'Week 1 status',
-          date: 'July 02, 2020',
+          date: 'July 02',
         },
         {
           url: 'https://github.com/cosmosdevs/stargate/blob/master/week2.md',
           title: 'Week 2 status',
-          date: 'July 13, 2020',
+          date: 'July 13',
         },
         {
           url: 'https://github.com/cosmosdevs/stargate/blob/master/week3.md',
           title: 'Week 3 status',
-          date: 'July 20, 2020',
+          date: 'July 20',
         },
         {
           url: 'https://github.com/cosmosdevs/stargate/blob/master/week4.md',
           title: 'Week 4 status',
-          date: 'July 27, 2020',
+          date: 'July 27',
         },
         {
           url: 'https://github.com/cosmosdevs/stargate/blob/master/week5.md',
           title: 'Week 5 status',
-          date: 'August 07, 2020',
+          date: 'August 07',
         },
         {
           url: 'https://github.com/cosmosdevs/stargate/blob/master/week6.md',
           title: 'Week 6 status',
-          date: 'August 12, 2020',
+          date: 'August 12',
         },
         {
           url: 'https://github.com/cosmosdevs/stargate/blob/master/week7.md',
           title: 'Week 7 status',
-          date: 'August 19, 2020',
+          date: 'August 19',
         },
         {
           url: 'https://github.com/cosmosdevs/stargate/blob/master/week8.md',
           title: 'Week 8 status',
-          date: 'August 26, 2020',
+          date: 'August 26',
         },
         {
           url: 'https://github.com/cosmosdevs/stargate/blob/week-9/week9.md',
           title: 'Week 9 status',
-          date: 'September 09, 2020',
+          date: 'September 09',
         },
       ],
     }
@@ -219,34 +231,20 @@ export default {
   .section-title
     margin-top 3rem
     margin-bottom 3rem
-    font-weight 900
-    font-size 6.25rem
-    line-height 1.12
     text-align right
-    letter-spacing -0.03em
-    color #FFFFFF
     grid-column 1 / span 12
   .section-milestones
     grid-column 1 / 5
     grid-row 3 / 6
     &__title
       margin-top 2rem
-      font-weight bold
-      font-size 2.5rem
-      line-height 120%
-      letter-spacing -0.03em
-      text-align start
-      color #FFFFFF
+      color var(--white)
     &__cta
       margin-top 1rem
       a
         display inline-block
-        font-weight bold
-        font-size 1.1875rem
-        line-height 1.26
-        letter-spacing -0.005em
         border-radius 0.375rem
-        padding 20px 0px
+        padding 1.25rem 0
   .section-row
     position relative
     margin-top 2rem
@@ -282,16 +280,9 @@ export default {
         opacity 0.50
         transition opacity .25s, transform .15s ease-out
       .title
-        font-weight 600
-        font-size 1.4375rem
-        line-height 1.217
-        letter-spacing -0.01em
         transition transform .15s ease-out
       .subtitle
-        font-size 1rem
-        line-height 1.375
-        color rgba(255, 255, 255, 0.75)
-        margin-top 0.375rem
+        color var(--white-70)
         transition color .15s, transform .15s ease-out
       .indicator
         display flex
@@ -302,13 +293,9 @@ export default {
         display flex
         flex-direction column
         align-items flex-end
-        .h3
-          font-size 16px
-          line-height 1.375
+        .progress
           display flex
           align-items center
-          text-align right
-          color #FFFFFF
     &:hover
       transform translateY(-2px)
       .meter
@@ -320,7 +307,7 @@ export default {
         .title
           transform translateY(-3px)
         .subtitle
-          color #fff
+          color var(--white)
           transform translateY(-2px)
       &:active
         transform none
@@ -331,14 +318,9 @@ export default {
     &__title
       margin-top 2rem
       grid-column 1 / span 4
-      font-weight bold
-      font-size 2.5rem
-      line-height 120%
-      letter-spacing -0.03em
-      text-align start
-      color #FFFFFF
+      color var(--white)
   .section-list
-    color #fff
+    color var(--white)
     margin-top 6rem
     grid-column 6 / span 7
     &__item
@@ -349,44 +331,31 @@ export default {
       justify-content space-between
       border-bottom 1px solid #282B53
       &__title
-        font-weight bold
-        font-size 1.4375rem
-        line-height 121.7%
-        letter-spacing -0.01em
-        color #CCD1FF
+        color var(--primary-900)
         transition color 0.1s ease-out
       &__date
-        font-size 1.1875rem
-        line-height 126.3%
-        text-align right
-        letter-spacing -0.005em
-        color #989BB9
+        color var(--gray-600)
         transition color 0.1s ease-out, transform 0.15s ease-out
       &:hover .section-list__item__title,
       &:hover .section-list__item__date
-        color #FFFFFF
+        color var(--white)
       &:hover .section-list__item__date
         transform translateX(3px)
     &__bottom
       text-align center
       padding 1.25rem 0
       &__cta
-        font-weight bold
-        font-size 1.1875rem
-        line-height 126.3%
-        letter-spacing -0.005em
-        color #40B3FF
+        color var(--link)
         cursor pointer
 
 @media screen and (max-width: 1024px)
-  // .section .section-header
-  //     grid-column 1 / span 12
+  .section .section-header
+      grid-column 1 / span 12
 
   .section-roadmap
     .section-title
       grid-column 1 / span 12
       text-align left
-      font-size 4rem
     .section-row
       grid-column 1 / span 12
     .section-milestones
@@ -406,17 +375,10 @@ export default {
 
 @media screen and (max-width: 576px)
   .section-roadmap
-    .section-milestones__title,
-    .section-status__title
-      font-size 1.75rem
-      line-height 1.285
-      letter-spacing -0.02em
     .section-milestones
       &__cta
         margin-top 0.5rem
         a
-          font-size 1rem
-          line-height 1.375
           padding 0.8125rem 0
     .section-row
       margin-top 1rem
@@ -427,27 +389,10 @@ export default {
         padding 1.5rem
         grid-template-columns unset
         grid-auto-flow unset
-        .title
-          font-size 1.4375rem
-          line-height 1.217
-          letter-spacing -0.01em
-        .subtitle
-          font-size 0.8125rem
-          line-height 1.384
-        .progress__wrapper .h3
-          font-size 1rem
-          line-height 1.375
   .section-roadmap
     .section-list__item
       padding-top 1.25rem
       padding-bottom 1.25rem
-      &__title
-        font-size 1rem
-        line-height 1.375
-      &__role,
-      &__date
-        font-size 0.8125rem
-        line-height 1.384
 
 @media screen and (max-width: 414px)
   .section-roadmap .section-row .meter

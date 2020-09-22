@@ -3,13 +3,15 @@
     <div class="section section-intro">
       <div class="tm-section-container section-container">
         <div class="container">
-          <div class="section-title">A new era for Cosmos</div>
-          <div class="section-subtitle">
+          <div class="section-title tm-rf6 tm-bold tm-lh-title">
+            A new era for Cosmos
+          </div>
+          <div class="section-subtitle tm-rf2 tm-lh-copy">
             The biggest event in the ecosystem since the launch of the Cosmos
             Hub.
           </div>
           <eclipsed-planet class="section-graphics" />
-          <div class="section-statement">
+          <div class="section-statement tm-rf1 tm-lh-copy">
             <p>
               Stargate is a set of upgrades that complete the original roadmap
               laid out in the Cosmos Whitepaper. For the first time ever, Cosmos
@@ -17,7 +19,7 @@
               first standardized protocol for inter-blockchain communication
               (IBC).
             </p>
-            <div class="section-cta">
+            <div class="section-cta tm-rf1 tm-lh-solid">
               <a
                 href="https://blog.cosmos.network/cosmos-stargate-upgrade-overview-8939475fe673"
                 target="_blank"
@@ -43,11 +45,6 @@ export default {}
   .section-title
     grid-column 1 / span 12
     grid-row 1 / 2
-    font-weight 900
-    font-size 100px
-    line-height 112%
-    letter-spacing -0.03em
-    color #FFFFFF
     max-width 50rem
   .section-subtitle
     display flex
@@ -56,10 +53,7 @@ export default {}
     margin-top -1.5em
     grid-row 2
     grid-column 6 / span 7
-    font-size 2rem
-    line-height 1.25
-    letter-spacing -0.02em
-    color #FFFFFF
+    color var(--white)
   .section-graphics
     grid-row 3
     grid-column 1 / span 6
@@ -70,39 +64,21 @@ export default {}
     grid-column 6 / span 7
     grid-row 3
     max-width 30em
-    font-size 1.4375rem
-    line-height 1.565
-    letter-spacing -0.01em
     text-align left
     p
-      color #CFD1E7
+      color var(--gray-800)
   .section-cta
     margin-top 3rem
     a
       display inline-block
-      font-weight bold
-      font-size 1.4375rem
-      line-height 1.217
-      letter-spacing -0.01em
-      border-radius 6px
-      padding 22px 0
-      &:hover
-        color inherit
-  .title
-    font-weight 900
-    font-size 100px
-    line-height 112%
-    display flex
-    align-items center
-    letter-spacing -0.03em
-    color var(--white)
+      border-radius 0.375rem
+      padding 1.375rem 0
 
 @media screen and (max-width: 1024px)
   .section-intro
     .section-title
       grid-row 1
       grid-column 1 / span 12
-      font-size 4rem
     .section-subtitle
       margin-top 2rem
       grid-row 2
@@ -126,9 +102,4 @@ export default {}
     .section-graphics
       grid-column 1 / span 10
       font-size 0.5rem
-    .section-cta a
-      font-size 1rem
-      line-height 1.375
-      letter-spacing 0
-      padding 0.8125rem 0
 </style>

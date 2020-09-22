@@ -6,7 +6,7 @@
           Dark background + glowing buttons
         </h2>
         <div class="row">
-          <tm-button size="xl" color="#fff" variant="text" glow
+          <tm-button size="xl" color="var(--white)" variant="text" glow
             >And beyond<span class="icon__right">--></span></tm-button
           >
         </div>
@@ -17,18 +17,18 @@
             glow
             >Beam me up</tm-button
           >
-          <tm-button size="l" background-color="#fff" color="#000"
+          <tm-button size="l" background-color="var(--white)" color="#000"
             >Cosmonaut</tm-button
           >
           <tm-button
             size="l"
-            border-color="#fff"
-            color="#fff"
+            border-color="var(--white)"
+            color="var(--white)"
             variant="outlined"
             glow
             >To infinity</tm-button
           >
-          <tm-button size="l" color="#fff" variant="text" glow
+          <tm-button size="l" color="var(--white)" variant="text" glow
             >And beyond<span class="icon__right">--></span></tm-button
           >
         </div>
@@ -39,18 +39,18 @@
             glow
             >Beam me up</tm-button
           >
-          <tm-button size="m" background-color="#fff" color="#000"
+          <tm-button size="m" background-color="var(--white)" color="#000"
             >Cosmonaut</tm-button
           >
           <tm-button
             size="m"
-            border-color="#fff"
-            color="#fff"
+            border-color="var(--white)"
+            color="var(--white)"
             variant="outlined"
             glow
             >To infinity</tm-button
           >
-          <tm-button size="m" color="#fff" variant="text" glow
+          <tm-button size="m" color="var(--white)" variant="text" glow
             >And beyond<span class="icon__right">--></span></tm-button
           >
         </div>
@@ -61,18 +61,18 @@
             glow
             >Beam me up</tm-button
           >
-          <tm-button size="s" background-color="#fff" color="#000"
+          <tm-button size="s" background-color="var(--white)" color="#000"
             >Cosmonaut</tm-button
           >
           <tm-button
             size="s"
-            border-color="#fff"
-            color="#fff"
+            border-color="var(--white)"
+            color="var(--white)"
             variant="outlined"
             glow
             >To infinity</tm-button
           >
-          <tm-button size="s" color="#fff" variant="text" glow
+          <tm-button size="s" color="var(--white)" variant="text" glow
             >And beyond<span class="icon__right">--></span></tm-button
           >
         </div>
@@ -95,7 +95,7 @@
             glow
             >Beam me up</tm-button
           >
-          <tm-button size="l" background-color="#fff" color="#000"
+          <tm-button size="l" background-color="var(--white)" color="#000"
             >Cosmonaut</tm-button
           >
           <tm-button
@@ -116,7 +116,7 @@
             glow
             >Beam me up</tm-button
           >
-          <tm-button size="m" background-color="#fff" color="#000"
+          <tm-button size="m" background-color="var(--white)" color="#000"
             >Cosmonaut</tm-button
           >
           <tm-button
@@ -137,7 +137,7 @@
             glow
             >Beam me up</tm-button
           >
-          <tm-button size="s" background-color="#fff" color="#000"
+          <tm-button size="s" background-color="var(--white)" color="#000"
             >Cosmonaut</tm-button
           >
           <tm-button
