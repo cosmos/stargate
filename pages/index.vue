@@ -502,43 +502,6 @@
               </div>
             </div>
           </div>
-          <div class="section-status">
-            <div class="section-status__title">Testnet office hours</div>
-          </div>
-          <div class="section-text">
-            <div class="section-text__paragraph">
-              As part of the <code><strong>stargate-2</strong></code> testnet,
-              the team at Iqlusion are offering live support for testnet users
-              at the following times:
-            </div>
-            <table>
-              <tbody>
-                <tr>
-                  <td>Sept 1-17</td>
-                  <td>Tuesdays</td>
-                  <td>16:00-17:00 UTC</td>
-                </tr>
-                <tr>
-                  <td>Sept 1-17</td>
-                  <td>Wednesdays</td>
-                  <td>16:00-17:00 UTC</td>
-                </tr>
-              </tbody>
-            </table>
-            <div class="section-text__paragraph">
-              Post your questions in the
-              <a
-                href="https://discord.com/channels/669268347736686612/723170066937413693"
-                target="_blank"
-                rel="noreferrer noopener"
-                ><code class="section-tabs__text__paragraph__stargate"
-                  >#stargate</code
-                >
-              </a>
-              Discord channel. Zoom call links will be provided in this channel
-              weekly.
-            </div>
-          </div>
         </div>
       </div>
     </div>
@@ -1555,9 +1518,10 @@ main
   color #989BB9 !important
 
 .top-box
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display flex
+  flex-wrap wrap
+  justify-content space-between
+  align-self center
 
 .section-testnets
   position relative
@@ -1641,7 +1605,6 @@ main
             line-height 1.625
             color #FFFFFF
             &__date
-              align-self center
               font-size 0.75rem
               color #989BB9
           &__update-mid
@@ -1821,41 +1784,8 @@ main
         letter-spacing -0.005em
         color #40B3FF
 
-  .section-text
-    margin-top 6rem
-    grid-column 6 / span 7
-    &__paragraph
-      font-size 1.1875rem
-      line-height 157.9%
-      letter-spacing -0.005em
-      color #CFD1E7
-
 .testnets-list__item__text__bot__labels__item + .testnets-list__item__text__bot__labels__item
   margin-left 0.75rem
-
-table
-  border-collapse collapse
-  border-radius 0.5rem
-  overflow hidden
-  width 100%
-  margin 2rem 0
-
-td, th
-  text-align left
-  padding 1rem 2rem
-  font-size 1rem
-  line-height 1.5
-  letter-spacing 0.02em
-  color #ECEDF7
-
-tr
-  background-color #121435
-  & + &
-    border-top 1px solid #282B53
-
-td
-  &:nth-child(2)
-    font-weight 600
 
 .nav-container
   height 4rem
@@ -2647,9 +2577,6 @@ td
   .section-testnets
     .section-status
       grid-column 1/12
-    .section-text
-      margin-top 0
-      grid-column 1 / span 12
 
   .testnets-list__item__graphics
     display none
