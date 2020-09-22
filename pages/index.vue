@@ -232,7 +232,7 @@
               />
               <div class="testnets-list__item__text__top">
                 <div class="testnets-list__item__text__top__title">
-                  <code>stargate-3</code>
+                  <code>stargate-3a</code>
                 </div>
                 <div class="testnets-list__item__text__top__status">Live</div>
               </div>
@@ -355,6 +355,8 @@
                     beginning with the Cosmos Hub – should prepare by helping
                     run the Stargate testnets above.
                   </p>
+                </div>
+                <div class="section-tabs__text">
                   <p class="section-tabs__text__paragraph">
                     More detailed instructions and guidelines on how validators
                     can prepare for the upgrade will be published in due course.
@@ -365,7 +367,7 @@
                     Cosmos Hub Validators
                   </div>
                   <div class="section-tabs__text__title">
-                    Joining <code>stargate-3</code>
+                    Joining <code>stargate-3a</code>
                   </div>
                   <p class="section-tabs__text__paragraph">
                     Your current <strong>"operator_address"</strong> and your
@@ -386,7 +388,7 @@
                 <div class="section-tabs__text">
                   <div class="update-container">
                     <div class="update-container__title">
-                      Joined stargate-3 testnet?
+                      Joined stargate-3a testnet?
                     </div>
                     <div class="update-container__cta">
                       <a
@@ -410,10 +412,28 @@
                       href="https://github.com/cosmosdevs/stargate#testnet"
                       target="_blank"
                       rel="noreferrer noopener"
-                      >stargate-3</a
+                      ><code>stargate-3a</code></a
                     >
                     testnet.
                   </p>
+                </div>
+                <div class="section-tabs__code">
+                  <div class="left">
+                    <div class="title">Public RPC endpoints</div>
+                    <div class="list">
+                      <code>34.123.30.100:26657</code>
+                      <code>174.129.101.58:26657</code>
+                      <code>52.200.210.219:26657</code>
+                    </div>
+                  </div>
+                  <div class="right">
+                    <div class="title">Public RPC endpoints</div>
+                    <div class="list">
+                      <code>34.123.30.100:1317</code>
+                    </div>
+                  </div>
+                </div>
+                <div class="section-tabs__text">
                   <p class="section-tabs__text__paragraph">
                     More detailed instructions and guidelines on how wallets and
                     block explorers can prepare for the upgrade will be
@@ -423,7 +443,7 @@
                 <div class="section-tabs__text">
                   <div class="update-container">
                     <div class="update-container__title">
-                      Joined stargate-3 testnet?
+                      Joined stargate-3a testnet?
                     </div>
                     <div class="update-container__cta">
                       <a
@@ -454,10 +474,28 @@
                     the Stargate upgrade by testing the features and your
                     infrastructure ahead of time, using the
                     <code class="section-tabs__text__paragraph__stargate"
-                      >stargate-3</code
+                      >stargate-3a</code
                     >
                     testnet.
                   </p>
+                </div>
+                <div class="section-tabs__code">
+                  <div class="left">
+                    <div class="title">Public RPC endpoints</div>
+                    <div class="list">
+                      <div>34.123.30.100:26657</div>
+                      <div>174.129.101.58:26657</div>
+                      <div>52.200.210.219:26657</div>
+                    </div>
+                  </div>
+                  <div class="right">
+                    <div class="title">Public RPC endpoints</div>
+                    <div class="list">
+                      <div>34.123.30.100:1317</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="section-tabs__text">
                   <p class="section-tabs__text__paragraph">
                     More detailed instructions and guidelines on how exchanges
                     can prepare for the upgrade will be published in due course.
@@ -466,7 +504,7 @@
                 <div class="section-tabs__text">
                   <div class="update-container">
                     <div class="update-container__title">
-                      Joined stargate-3 testnet?
+                      Joined stargate-3a testnet?
                     </div>
                     <div class="update-container__cta">
                       <a
@@ -481,13 +519,6 @@
                 </div>
               </tm-tab>
               <tm-tab name="Zone Developers">
-                <div class="section-tabs__text">
-                  <p class="section-tabs__text__paragraph">
-                    More detailed instructions and guidelines on how zone
-                    developers can prepare for the upgrade will be published in
-                    due course.
-                  </p>
-                </div>
                 <div class="section-tabs__text">
                   <div class="section-tabs__text__heading">
                     Not ready to upgrade?
@@ -1567,11 +1598,36 @@ main
 
 .update-container__cta
   margin-top 0.25rem
-  font-weight normal
   font-size 1.3125rem
   line-height 159.8%
   letter-spacing -0.007em
   color #40B3FF
+
+.left, .right
+  border 2px solid #282B53
+  box-sizing border-box
+  filter drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.07)), drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.07)), drop-shadow(0px 10px 22px rgba(0, 3, 66, 0.1))
+  border-radius 0.5rem
+  padding 1rem 1.5rem
+  height 10rem
+  display flex
+  flex-direction column
+  justify-content space-between
+
+.title
+  font-weight 500
+  font-size 0.75rem
+  line-height 130.9%
+  letter-spacing 0.08em
+  text-transform uppercase
+  color #FFFFFF
+
+.list
+  font-size 1rem
+  line-height 162.5%
+  color #40B3FF
+  display flex
+  flex-direction column
 
 .section-testnets
   position relative
@@ -1786,6 +1842,12 @@ main
   .section-tabs
     margin-top 6rem
     grid-column 6 / span 7
+    &__code
+      display grid
+      grid-template-columns 50% 50%
+      grid-template-rows 1fr
+      gap 0.5rem
+      margin-top 3rem
     &__text
       margin-top 3rem
       &__heading
@@ -2637,6 +2699,10 @@ main
       margin-top 3rem
 
 @media screen and (max-width: 576px)
+  .section-testnets .section-tabs__code
+    grid-template-columns auto
+    gap 1.5rem
+
   .section
     .section-title
       margin-top 3rem
