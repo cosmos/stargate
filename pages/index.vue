@@ -232,47 +232,21 @@
               />
               <div class="testnets-list__item__text__top">
                 <div class="testnets-list__item__text__top__title">
-                  <code>stargate-2</code>
+                  <code>stargate-3a</code>
                 </div>
                 <div class="testnets-list__item__text__top__status">Live</div>
               </div>
               <div class="testnets-list__item__text">
-                <div class="testnets-list__item__text__mid">
-                  <div class="testnets-list__item__text__mid__update">
-                    <div class="top-box">
-                      <div class="testnets-list__item__text__mid__update-top">
-                        Update
-                      </div>
-                      <div
-                        class="testnets-list__item__text__mid__update-top__date"
-                      >
-                        Sept 16
-                      </div>
-                    </div>
-                    <div class="testnets-list__item__text__mid__update-mid">
-                      This testnet will restart as stargate-3 upon merging PR
-                      <a
-                        href="https://github.com/cosmos/cosmos-sdk/pull/7285"
-                        target="_blank"
-                        rel="noreferrer noopener"
-                        >#7285</a
-                      >. Prepare to test with existing integrations, IBC, and
-                      state sync in this upcoming API stable testnet.
-                    </div>
-                    <div class="testnets-list__item__text__mid__update-bot">
-                      <a
-                        href="https://airtable.com/shrEr1bQD6COG9WH0"
-                        target="_blank"
-                        rel="noreferrer noopener"
-                      >
-                        Confirm you are <code>stargate-3</code> ready -->
-                      </a>
-                    </div>
-                  </div>
-                </div>
+                <div class="testnets-list__item__text__mid"></div>
                 <p class="testnets-list__item__text__mid__desc">
                   The first simulated upgrade of the Cosmos Hub and the primary
-                  public integration testnet for Stargate-readiness.
+                  public integration testnet for
+                  <a
+                    href="https://airtable.com/shrEr1bQD6COG9WH0"
+                    target="blank_"
+                    rel="noreferrer noopener"
+                    >Stargate-readiness</a
+                  >.
                 </p>
                 <div class="testnets-list__item__text__bot">
                   <div class="testnets-list__item__text__bot__display">
@@ -311,7 +285,7 @@
                 </div>
               </div>
             </div>
-            <div class="testnets-list__item">
+            <div class="testnets-list__item testnets-list__item__inactive">
               <img
                 src="~/assets/illustrations/bigbang-flag.svg"
                 class="testnets-list__item__graphics"
@@ -381,6 +355,8 @@
                     beginning with the Cosmos Hub – should prepare by helping
                     run the Stargate testnets above.
                   </p>
+                </div>
+                <div class="section-tabs__text">
                   <p class="section-tabs__text__paragraph">
                     More detailed instructions and guidelines on how validators
                     can prepare for the upgrade will be published in due course.
@@ -391,7 +367,7 @@
                     Cosmos Hub Validators
                   </div>
                   <div class="section-tabs__text__title">
-                    Joining stargate-2
+                    Joining <code>stargate-3a</code>
                   </div>
                   <p class="section-tabs__text__paragraph">
                     Your current <strong>"operator_address"</strong> and your
@@ -409,14 +385,96 @@
                     </a>
                   </div>
                 </div>
+                <div class="section-tabs__text">
+                  <div class="update-container">
+                    <div class="update-container__title">
+                      Joined stargate-3a testnet?
+                    </div>
+                    <div class="update-container__cta">
+                      <a
+                        href="https://airtable.com/shrEr1bQD6COG9WH0"
+                        target="_blank"
+                        rel="noreferrer noopener"
+                      >
+                        Confirm your Stargate readiness &#8594;
+                      </a>
+                    </div>
+                  </div>
+                </div>
               </tm-tab>
               <tm-tab name="Wallets &amp; Explorers">
+                <div class="section-tabs__text">
+                  <p class="section-tabs__text__paragraph">
+                    Wallets and Explorers should ensure they are able to use the
+                    old Amino endpoints and the new Protobuf queries to get the
+                    correct expected results from their queries using
+                    <a
+                      href="https://github.com/cosmosdevs/stargate#testnet"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      ><code>stargate-3a</code></a
+                    >
+                    testnet.
+                  </p>
+                </div>
+                <div class="section-tabs__code">
+                  <div class="left">
+                    <div class="title">Public RPC endpoints</div>
+                    <div class="list">
+                      <a
+                        href="http://34.123.30.100:26657"
+                        target="_blank"
+                        rel="noreferrer noopener"
+                        ><code>34.123.30.100:26657</code></a
+                      >
+                      <a
+                        href="http://174.129.101.58:26657"
+                        target="_blank"
+                        rel="noreferrer noopener"
+                        ><code>174.129.101.58:26657</code></a
+                      >
+                      <a
+                        href="http://52.200.210.219:26657"
+                        target="_blank"
+                        rel="noreferrer noopener"
+                        ><code>52.200.210.219:26657</code></a
+                      >
+                    </div>
+                  </div>
+                  <div class="right">
+                    <div class="title">Public RPC endpoints</div>
+                    <div class="list">
+                      <a
+                        href="http://34.123.30.100:26657"
+                        target="_blank"
+                        rel="noreferrer noopener"
+                        ><code>34.123.30.100:26657</code></a
+                      >
+                    </div>
+                  </div>
+                </div>
                 <div class="section-tabs__text">
                   <p class="section-tabs__text__paragraph">
                     More detailed instructions and guidelines on how wallets and
                     block explorers can prepare for the upgrade will be
                     published in due course.
                   </p>
+                </div>
+                <div class="section-tabs__text">
+                  <div class="update-container">
+                    <div class="update-container__title">
+                      Joined stargate-3a testnet?
+                    </div>
+                    <div class="update-container__cta">
+                      <a
+                        href="https://airtable.com/shrEr1bQD6COG9WH0"
+                        target="_blank"
+                        rel="noreferrer noopener"
+                      >
+                        Confirm your Stargate readiness &#8594;
+                      </a>
+                    </div>
+                  </div>
                 </div>
               </tm-tab>
               <tm-tab name="Exchanges">
@@ -436,24 +494,51 @@
                     the Stargate upgrade by testing the features and your
                     infrastructure ahead of time, using the
                     <code class="section-tabs__text__paragraph__stargate"
-                      >stargate-2</code
+                      >stargate-3a</code
                     >
                     testnet.
                   </p>
+                </div>
+                <div class="section-tabs__code">
+                  <div class="left">
+                    <div class="title">Public RPC endpoints</div>
+                    <div class="list">
+                      <div>34.123.30.100:26657</div>
+                      <div>174.129.101.58:26657</div>
+                      <div>52.200.210.219:26657</div>
+                    </div>
+                  </div>
+                  <div class="right">
+                    <div class="title">Public RPC endpoints</div>
+                    <div class="list">
+                      <div>34.123.30.100:1317</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="section-tabs__text">
                   <p class="section-tabs__text__paragraph">
                     More detailed instructions and guidelines on how exchanges
                     can prepare for the upgrade will be published in due course.
                   </p>
                 </div>
+                <div class="section-tabs__text">
+                  <div class="update-container">
+                    <div class="update-container__title">
+                      Joined stargate-3a testnet?
+                    </div>
+                    <div class="update-container__cta">
+                      <a
+                        href="https://airtable.com/shrEr1bQD6COG9WH0"
+                        target="_blank"
+                        rel="noreferrer noopener"
+                      >
+                        Confirm your Stargate readiness &#8594;
+                      </a>
+                    </div>
+                  </div>
+                </div>
               </tm-tab>
               <tm-tab name="Zone Developers">
-                <div class="section-tabs__text">
-                  <p class="section-tabs__text__paragraph">
-                    More detailed instructions and guidelines on how zone
-                    developers can prepare for the upgrade will be published in
-                    due course.
-                  </p>
-                </div>
                 <div class="section-tabs__text">
                   <div class="section-tabs__text__heading">
                     Not ready to upgrade?
@@ -1517,11 +1602,52 @@ main
   background transparent !important
   color #989BB9 !important
 
-.top-box
+.update-container
+  padding 1rem 1.5rem
+  background #282B53
+  box-shadow 0px 0px 1px rgba(0, 0, 0, 0.07), 0px 4px 8px rgba(0, 0, 0, 0.07), 0px 10px 22px rgba(0, 3, 66, 0.1)
+  border-radius 0.5rem
+
+.update-container__title
+  line-height 162.5%
+  font-weight bold
+  font-size 1.3125rem
+  line-height 159.8%
+  letter-spacing -0.007em
+  color #FFFFFF
+
+.update-container__cta
+  margin-top 0.25rem
+  font-size 1.3125rem
+  line-height 159.8%
+  letter-spacing -0.007em
+  color #40B3FF
+
+.left, .right
+  border 2px solid #282B53
+  box-sizing border-box
+  filter drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.07)), drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.07)), drop-shadow(0px 10px 22px rgba(0, 3, 66, 0.1))
+  border-radius 0.5rem
+  padding 1rem 1.5rem
+  height 10rem
   display flex
-  flex-wrap wrap
+  flex-direction column
   justify-content space-between
-  align-self center
+
+.title
+  font-weight 500
+  font-size 0.75rem
+  line-height 130.9%
+  letter-spacing 0.08em
+  text-transform uppercase
+  color #FFFFFF
+
+.list
+  font-size 1rem
+  line-height 162.5%
+  color #40B3FF
+  display flex
+  flex-direction column
 
 .section-testnets
   position relative
@@ -1558,61 +1684,44 @@ main
     grid-column 1/ span 12
     position relative
     &__item
+      position relative
       display grid
       width 100%
-      grid-template-columns 10rem auto 38rem
+      grid-template-columns repeat(12, 1fr)
       gap 1.5rem
       align-items flex-start
       border-bottom 1px solid #282B53
       padding 6rem 0
       &__graphics
+        position absolute
+        top 0
+        left 0
         width 100%
         max-width 9.875rem
       &__text
+        position relative
+        grid-column 6 / span 7
         &__top
-          display flex
-          align-items flex-start
-          flex-direction column
-          width fit-content
+          position relative
+          grid-column 1 / span 4
+          text-align right
           &__title
             font-weight bold
             font-size 38px
             line-height 1.571
             letter-spacing -0.015em
             color #FFD1FD
+            margin-bottom 0.75rem
           &__status
             padding 0.1875rem 0.75rem
-            height 1.75rem
             background #E644F8
             border-radius 0.875rem
-            align-items center
-            display flex
-            font-weight bold
-            font-size 0.8125rem
-            line-height 1.375
-            color #FFFFFF
-            margin-left auto
-        &__mid
-          &__update
-            padding 1.5rem
-            background #282B53
-            box-shadow 0px 0px 1px rgba(0, 0, 0, 0.07), 0px 4px 8px rgba(0, 0, 0, 0.07), 0px 10px 22px rgba(0, 3, 66, 0.1)
-            border-radius 0.5rem
-            margin-bottom 2rem
-          &__update-top
+            display inline-block
             font-weight bold
             font-size 1rem
-            line-height 1.625
+            line-height 1.3125
             color #FFFFFF
-            &__date
-              font-size 0.75rem
-              color #989BB9
-          &__update-mid
-            margin-top 0.5rem
-            line-height 162.5%
-          &__update-bot
-            margin-top 0.25rem
-            padding 1rem 0
+        &__mid
           &__desc
             font-size 1.1875rem
             line-height 1.579
@@ -1633,7 +1742,7 @@ main
           &__display
             margin 0.5rem 0.75rem 0.5rem 0
             font-weight 600
-            font-size 1rem
+            font-size 0.75rem
             line-height 1.375
             letter-spacing 0.08em
             text-transform uppercase
@@ -1650,6 +1759,11 @@ main
               align-items center
               display flex
               text-align center
+      &__inactive
+        .testnets-list__item__text__top__title
+          color #989BB9
+        .testnets-list__item__text__top__status
+          font-weight normal
       &__cta
         display flex
         justify-content flex-start
@@ -1748,6 +1862,12 @@ main
   .section-tabs
     margin-top 6rem
     grid-column 6 / span 7
+    &__code
+      display grid
+      grid-template-columns 50% 50%
+      grid-template-rows 1fr
+      gap 0.5rem
+      margin-top 3rem
     &__text
       margin-top 3rem
       &__heading
@@ -2458,36 +2578,42 @@ main
   .section-testnets
     overflow hidden
     .section-graphics
-      grid-column 6 / span 7
       align-items flex-start
     .section-top
       margin-top 4rem
     .section-title
       font-size 4rem
+    .testnets-list
+      margin-top 3rem
     .testnets-list__item
-      grid-auto-flow dense
       grid-template-columns auto
       margin 0
       padding-top 3rem
       padding-bottom 3rem
       &:first-child
         border-bottom 1px solid #282B53
+      &__graphics
+        left auto
+        right 0
       &__cta
         flex-direction row
         justify-content flex-start
+      &__text
+        grid-column span 12
+      &__text__top
+        grid-column span 12
+        text-align inherit
+        display flex
+        align-items baseline
+        flex-wrap wrap
+        &__title
+          margin-right 0.75rem
+          margin-bottom 0
     .section-status__title
       grid-column 1 / span 12
     .section-tabs
       margin-top 3rem
       grid-column 1 / span 12
-
-  .section-testnets .testnets-list__item__text__top
-    display flex
-    align-items center
-    flex-direction row
-
-  .section-testnets .testnets-list__item__text__top__status
-    margin-left 0.5rem
 
   .section-roadmap
     .section-title
@@ -2593,6 +2719,10 @@ main
       margin-top 3rem
 
 @media screen and (max-width: 576px)
+  .section-testnets .section-tabs__code
+    grid-template-columns auto
+    gap 1.5rem
+
   .section
     .section-title
       margin-top 3rem
@@ -2714,8 +2844,9 @@ main
           padding-left 1.5rem
           padding-right 1.5rem
 
-  img.testnets-list__item__graphics
-    width 20%
+  .update-container__title,
+  .update-container__cta
+    font-size 1rem
 
   th,td
     padding 0.125rem 1rem
@@ -2842,6 +2973,8 @@ main
   .section-testnets
     .testnets-list__item__text__top__title
       font-size 1.4375rem
+    .testnets-list__item__text__top__status
+      font-size 0.75rem
     .testnets-list__item__text__mid__desc
       font-size 0.8125rem
     .testnets-list__item__text__bot__display
@@ -2849,6 +2982,7 @@ main
     .testnets-list__item__text__bot__labels
       display flex
       max-width 280px
+      font-size 0.75rem
       &__item
         width fit-content
         margin-right 0.5rem
