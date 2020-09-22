@@ -445,10 +445,10 @@
                     <div class="title">Public RPC endpoints</div>
                     <div class="list">
                       <a
-                        href="http://34.123.30.100:26657"
+                        href="http://34.123.30.100:1317"
                         target="_blank"
                         rel="noreferrer noopener"
-                        ><code>34.123.30.100:26657</code></a
+                        ><code>34.123.30.100:1317</code></a
                       >
                     </div>
                   </div>
@@ -503,15 +503,35 @@
                   <div class="left">
                     <div class="title">Public RPC endpoints</div>
                     <div class="list">
-                      <div>34.123.30.100:26657</div>
-                      <div>174.129.101.58:26657</div>
-                      <div>52.200.210.219:26657</div>
+                      <a
+                        href="http://34.123.30.100:26657"
+                        target="_blank"
+                        rel="noreferrer noopener"
+                        ><code>34.123.30.100:26657</code></a
+                      >
+                      <a
+                        href="http://174.129.101.58:26657"
+                        target="_blank"
+                        rel="noreferrer noopener"
+                        ><code>174.129.101.58:26657</code></a
+                      >
+                      <a
+                        href="http://52.200.210.219:26657"
+                        target="_blank"
+                        rel="noreferrer noopener"
+                        ><code>52.200.210.219:26657</code></a
+                      >
                     </div>
                   </div>
                   <div class="right">
                     <div class="title">Public RPC endpoints</div>
                     <div class="list">
-                      <div>34.123.30.100:1317</div>
+                      <a
+                        href="http://34.123.30.100:1317"
+                        target="_blank"
+                        rel="noreferrer noopener"
+                        ><code>34.123.30.100:1317</code></a
+                      >
                     </div>
                   </div>
                 </div>
