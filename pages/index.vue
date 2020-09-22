@@ -2510,6 +2510,9 @@ main
       padding-bottom 3rem
       &:first-child
         border-bottom 1px solid #282B53
+      &__graphics
+        left auto
+        right 0
       &__cta
         flex-direction row
         justify-content flex-start
