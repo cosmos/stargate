@@ -178,6 +178,23 @@
           >
         </div>
       </div>
+      <div class="tm-section-container">
+        <h2 class="tm-rf3 tm-lh-title tm-bold">Disabled state</h2>
+        <div class="row">
+          <tm-button size="l" color="var(--white)" glow disabled
+            >Disabled button</tm-button
+          >
+          <tm-button
+            to-link="internal"
+            to="/design/typography"
+            size="l"
+            color="var(--white)"
+            glow
+            disabled
+            >Disabled link</tm-button
+          >
+        </div>
+      </div>
     </div>
   </main>
 </template>

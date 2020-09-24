@@ -1,28 +1,27 @@
 <template>
   <!-- INTERNAL -->
-  <nuxt-link v-if="toLink === 'internal'" :to="to" class="tm-button">
-    <component
-      :is="tag"
-      v-bind="{ type, disabled }"
-      :class="[
-        'tm-button',
-        `tm-button__size__${size}`,
-        `tm-button__variant__${variant}`,
-        'tm-lh-solid',
-        'tm-medium',
-        glow && 'tm-button__glow',
-        styles,
-      ]"
-      :style="{
-        '--background-color': backgroundColor,
-        '--border-color': borderColor,
-        '--color': color,
-      }"
-    >
-      <span>
-        <slot />
-      </span>
-    </component>
+  <nuxt-link
+    v-if="toLink === 'internal'"
+    :to="to"
+    v-bind="{ type, disabled }"
+    :class="[
+      'tm-button',
+      `tm-button__size__${size}`,
+      `tm-button__variant__${variant}`,
+      'tm-lh-solid',
+      'tm-medium',
+      glow && 'tm-button__glow',
+      styles,
+    ]"
+    :style="{
+      '--background-color': backgroundColor,
+      '--border-color': borderColor,
+      '--color': color,
+    }"
+  >
+    <span>
+      <slot />
+    </span>
   </nuxt-link>
   <!-- EXTERNAL -->
   <a
@@ -30,34 +29,28 @@
     :href="href"
     target="_blank"
     rel="noreferrer noopener"
-    class="tm-button"
+    v-bind="{ type, target, href, rel, disabled }"
+    :class="[
+      'tm-button',
+      `tm-button__size__${size}`,
+      `tm-button__variant__${variant}`,
+      'tm-lh-solid',
+      'tm-medium',
+      glow && 'tm-button__glow',
+      styles,
+    ]"
+    :style="{
+      '--background-color': backgroundColor,
+      '--border-color': borderColor,
+      '--color': color,
+    }"
   >
-    <component
-      :is="tag"
-      v-bind="{ type, target, href, rel, disabled }"
-      :class="[
-        'tm-button',
-        `tm-button__size__${size}`,
-        `tm-button__variant__${variant}`,
-        'tm-lh-solid',
-        'tm-medium',
-        glow && 'tm-button__glow',
-        styles,
-      ]"
-      :style="{
-        '--background-color': backgroundColor,
-        '--border-color': borderColor,
-        '--color': color,
-      }"
-    >
-      <span>
-        <slot />
-      </span>
-    </component>
+    <span>
+      <slot />
+    </span>
   </a>
   <!-- DISABLED -->
-  <component
-    :is="tag"
+  <button
     v-else-if="disabled"
     v-bind="{ type, target, href, rel, disabled }"
     :class="[
@@ -79,11 +72,10 @@
     <span>
       <slot />
     </span>
-  </component>
+  </button>
 
   <!-- DEFAULT -->
-  <component
-    :is="tag"
+  <button
     v-else
     v-bind="{ type, target, href, rel, disabled }"
     :class="[
@@ -104,7 +96,7 @@
     <span>
       <slot />
     </span>
-  </component>
+  </button>
 </template>
 
 <script>
@@ -165,13 +157,6 @@ export default {
     type: {
       type: String,
       default: 'submit',
-    },
-    /**
-     * Tag: `button`
-     */
-    tag: {
-      type: String,
-      default: 'button',
     },
     /**
      * toLink: `anchor` | `internal` | `external`
@@ -268,11 +253,6 @@ export default {
     opacity 0.88
     transition-duration .05s
 
-  &[disabled]
-    cursor not-allowed !important
-    opacity 0.65 !important
-    pointer-events none
-
   /* glow styling (optional) */
   &__glow
     &::before
@@ -331,6 +311,12 @@ export default {
       trbl 0.125em 1em 0
       background inherit
       filter blur(1.25rem) brightness(1.5)
+
+  /* disabled state */
+  &[disabled]
+    cursor not-allowed
+    opacity 0.65
+    pointer-events none
 
   // sizes
   &__size__s
