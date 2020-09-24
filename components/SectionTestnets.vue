@@ -2,17 +2,19 @@
   <div id="testnets" class="section section-testnets">
     <div class="tm-section-container section-container">
       <div class="container">
-        <div class="section-header">Testnets</div>
+        <div class="section-header tm-rf0 tm-medium tm-lh-title tm-overline">
+          Testnets
+        </div>
         <planets-cluster class="section-graphics" />
         <div class="section-top">
-          <div class="section-title">Get set for testnets</div>
-          <div class="section-statement">
-            <p>
-              Validators, wallets, block explorers, exchanges and zone
-              developers are among the primary services affected by the upgrades
-              with Stargate. Make sure to schedule time for integration testing
-              on the various testnets.
-            </p>
+          <div class="section-title tm-rf6 tm-bold tm-lh-title">
+            Get set for testnets
+          </div>
+          <div class="section-statement tm-rf1 tm-lh-copy">
+            Validators, wallets, block explorers, exchanges and zone developers
+            are among the primary services affected by the upgrades with
+            Stargate. Make sure to schedule time for integration testing on the
+            various testnets.
           </div>
         </div>
         <div class="testnets-list">
@@ -702,12 +704,11 @@ export default {}
   .section-testnets
     overflow hidden
     .section-graphics
-      grid-column 6 / span 7
       align-items flex-start
     .section-top
       margin-top 4rem
-    // .testnets-list
-    //   margin-top 3rem
+    .testnets-list
+      margin-top 3rem
     .testnets-list__item
       grid-template-columns auto
       margin 0
@@ -745,9 +746,6 @@ export default {}
 
   .section-testnets .testnets-list__item__text__top__status
     margin-left 0.5rem
-
-  .testnets-list__item__graphics
-    display none
 
   .testnets-list__item__text__bot__labels
     flex-flow row wrap
