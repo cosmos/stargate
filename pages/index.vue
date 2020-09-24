@@ -78,12 +78,6 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-// TODO: outlined pill badge
-.outline-btn
-  border 2px solid #43466D !important
-  background transparent !important
-  color var(--gray-600) !important
-
 .nav-container
   height 4rem
 
