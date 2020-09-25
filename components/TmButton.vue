@@ -360,4 +360,11 @@ export default {
       transform translateX(0.25rem)
     >>> .icon__left
       transform rotate(5deg) scale(1.05)
+
+@media screen and (max-width: 375px)
+  .tm-button
+    min-width -webkit-fill-available
+
+  .tm-button + .tm-button
+    margin-top 1rem
 </style>
