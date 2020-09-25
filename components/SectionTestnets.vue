@@ -32,6 +32,8 @@
               <div class="testnets-list__item__text__top__box">
                 <a
                   href="https://stargate.bigdipper.live"
+                  target="blank_"
+                  rel="noreferrer noopener"
                   class="testnets-list__item__text__top__explorer tm-rf0 tm-bold"
                 >
                   <span><img src="/icons/eye.svg" /></span>
