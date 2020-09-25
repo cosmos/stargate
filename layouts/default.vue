@@ -16,19 +16,6 @@ export default {
 </script>
 
 <style lang="stylus">
-a[href]
-  color var(--link)
-  text-decoration none
-  outline-color rgba(64, 179, 255, 0.92)
-  cursor pointer
-  transition all .1s ease-out
-  &:hover,
-  &:focus
-    color var(--white)
-  &:active
-    opacity 0.7
-    transition-duration 0s
-
 // Accessible/SEO friendly CSS hiding
 .sr-only
   position absolute

@@ -69,6 +69,7 @@ export default {}
           display inline-block
           padding 1.25rem 0
           position relative
+          cursor pointer
           z-index 1
           color var(--gray-600)
           &:hover,
@@ -91,9 +92,6 @@ export default {}
             transition all 300ms cubic-bezier(0.325, -0.075, 0, 1.65)
 
 @media screen and (max-width: 1024px)
-  // .section .section-header
-  //     grid-column 1 / span 12
-
   .section-nav
     .nav
       &::-webkit-scrollbar

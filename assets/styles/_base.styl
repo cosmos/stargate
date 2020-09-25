@@ -12,12 +12,9 @@ html
   font-variant-ligatures contextual common-ligatures
   font-kerning normal
   text-rendering optimizeLegibility
-  background-color #000000
+  background-color var(--black)
   color var(--gray-800)
   scroll-behavior smooth
-
-  // @media ($breakpoint-xl)
-  //   font-size 112.5%
 
 @supports (font-variation-settings: normal)
   html
@@ -27,3 +24,26 @@ html
 body
   overflow-x hidden
   margin 0
+
+*,
+*::before,
+*::after
+  box-sizing border-box
+  margin 0
+
+::selection
+  background #4251FA
+  color var(--white)
+
+a
+  color var(--link)
+  text-decoration none
+  outline-color rgba(64, 179, 255, 0.92)
+  cursor pointer
+  transition all .1s ease-out
+  &:hover,
+  &:focus
+    color var(--white)
+  &:active
+    opacity 0.7
+    transition-duration 0s
