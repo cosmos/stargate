@@ -9,7 +9,7 @@
     </div>
 
     <div class="nav-container">
-      <header id="section-nav">
+      <header id="section-nav" class="headroom section-nav">
         <section-nav />
       </header>
     </div>
@@ -17,7 +17,6 @@
     <section-intro />
 
     <div
-      id="features"
       v-observe-visibility="{
         callback: unfreezeNav,
       }"
@@ -41,7 +40,6 @@ import Headroom from 'headroom.js'
 export default {
   data() {
     return {
-      tabs: [],
       headroom: null,
     }
   },
@@ -68,34 +66,41 @@ export default {
         this.headroom.init()
       }
     },
-    selectTab(selectedTab) {
-      this.tabs.forEach((tab) => {
-        tab.isActive = tab.name === selectedTab.name
-      })
-    },
   },
 }
 </script>
 
 <style lang="stylus" scoped>
-.nav-container
-  height 4rem
-
 main
   overflow -webkit-paged-x
 
-// .headroom
-//   will-change transform
-//   transition transform .2s ease-out
+.nav-container
+  height 4rem
 
-// .headroom--pinned
-//   transform translateY(0%)
+.headroom
+  will-change transform
+  transition transform .2s ease-out
 
-// .headroom--unpinned
-//   transform translateY(-100%)
+.headroom--pinned
+  transform translateY(0%)
+
+.headroom--unpinned
+  transform translateY(-100%)
+
+.section-nav
+  top 0
+  width 100%
+  z-index 1000
+  &.headroom--pinned,
+  &.headroom--unpinned
+    position fixed
+    &:not(.headroom--frozen)
+      background linear-gradient(180deg, rgba(0,0,0,0.96) 41%, rgba(0, 0, 0, 0))
+      padding-bottom 1rem
+  &.headroom--frozen
+    position static
 
 @media screen and (max-width: 1024px)
-  // TODO: remove in section components
   .section .section-header
     grid-column 1 / span 12
 
