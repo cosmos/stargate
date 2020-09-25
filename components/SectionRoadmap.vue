@@ -352,6 +352,7 @@ export default {
       padding 1.25rem 0
       &__cta
         color var(--link)
+        font-weight 700
         cursor pointer
 
 @media screen and (max-width: 1024px)
