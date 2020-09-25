@@ -29,10 +29,19 @@
               >
                 stargate-3a
               </div>
-              <div
-                class="testnets-list__item__text__top__status tm-rf0 tm-bold"
-              >
-                Live
+              <div class="testnets-list__item__text__top__box">
+                <a
+                  href="https://stargate.bigdipper.live"
+                  class="testnets-list__item__text__top__explorer tm-rf0 tm-bold"
+                >
+                  <span><img src="/icons/eye.svg" /></span>
+                  Explorer
+                </a>
+                <div
+                  class="testnets-list__item__text__top__status tm-rf0 tm-bold"
+                >
+                  Live
+                </div>
               </div>
             </div>
             <div class="testnets-list__item__text">
@@ -539,6 +548,12 @@ export default {}
           &__title
             color #FFD1FD
             margin-bottom 0.75rem
+          &__explorer
+            padding 0.1875rem 0.75rem
+            background transparent
+            border-radius 0.875rem
+            display inline-block
+            color var(--white)
           &__status
             padding 0.1875rem 0.75rem
             background #E644F8
@@ -792,4 +807,8 @@ export default {}
       &__item
         width fit-content
         margin-right 0.5rem
+
+@media screen and (max-width: 360px)
+  .section-testnets .testnets-list__item__text__top
+    grid-column span 11
 </style>
