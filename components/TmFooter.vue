@@ -1,7 +1,7 @@
 <template>
-  <footer>
-    <div class="container">
-      <div class="nav">
+  <footer class="footer">
+    <div class="tm-section-container">
+      <nav class="nav">
         <a
           class="nav__item tm-rf0 tm-lh-title"
           href="https://docs.cosmos.network"
@@ -30,8 +30,8 @@
           rel="noreferrer noopener"
           >Interchain Standards</a
         >
-      </div>
-      <div ref="links" class="social-icons">
+      </nav>
+      <nav ref="links" class="social-icons">
         <a
           v-for="link in links"
           :key="url(link)"
@@ -50,7 +50,7 @@
             <path :d="icon(link)" style="pointer-events: none"></path>
           </svg>
         </a>
-      </div>
+      </nav>
       <div class="home-nav tm-rf-1 tm-lh-copy">
         <a
           href="http://cosmos.network"
@@ -137,68 +137,62 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-footer
+.footer
   display flex
   justify-content center
   align-items center
   text-align center
   color var(--white)
   background linear-gradient(180deg, #000000 0%, #030419 100%)
-  .container
-    margin 3rem 8rem
-    max-width var(--container-mw-lg)
-    width 100%
-    .nav
-      display flex
-      flex-direction row
-      justify-content center
-      margin-top 1rem
-      &__item
-        padding 1.25rem 0
-        margin 0 1rem
-        border-radius 0.375rem
-        white-space nowrap
-        color var(--gray-600)
-        &:hover,
-        &:focus
-          color inherit
-    .social-icons
-      margin-top 2rem
-      display flex
-      flex-direction row
-      flex-wrap wrap
-      justify-content center
-      align-items center
-      text-align center
-      &__item
-        margin 0.75rem
-        svg
-          transition fill .15s ease-out
-        &:hover svg,
-        &:focus svg
-          fill var(--white)
-    .home-nav
-      margin-top 1rem
-      a
-        color #ECEDF7
-        &:hover,
-        &:focus
-          color var(--link)
-    .smallprint
-      margin-top 1rem
+  padding var(--spacing-9) 0
+  .nav
+    display flex
+    flex-direction row
+    justify-content center
+    margin-top var(--spacing-5)
+    &__item
+      padding var(--spacing-6) 0
+      margin 0 var(--spacing-5)
+      border-radius $border-radius-2
+      white-space nowrap
       color var(--gray-600)
+      &:hover,
+      &:focus
+        color inherit
+  .social-icons
+    margin-top var(--spacing-7)
+    display flex
+    flex-direction row
+    flex-wrap wrap
+    justify-content center
+    align-items center
+    text-align center
+    &__item
+      margin var(--spacing-4)
+      svg
+        transition fill .15s ease-out
+      &:hover svg,
+      &:focus svg
+        fill var(--white)
+  .home-nav
+    margin-top var(--spacing-5)
+    a
+      color #ECEDF7
+      &:hover,
+      &:focus
+        color var(--link)
+  .smallprint
+    margin-top var(--spacing-5)
+    color var(--gray-600)
 
 @media screen and (max-width: 600px)
-  footer
-    .container
-      margin 3rem 1.5rem
-      .nav
-        display grid
-        grid-template-columns repeat(2, 1fr)
+  .footer
+    .nav
+      display grid
+      grid-template-columns repeat(2, 1fr)
 
 @media screen and (max-width: 420px)
-  footer
-    .container
-      .nav
-        grid-template-columns repeat(1, 1fr)
+  .footer
+    .nav
+      grid-template-columns repeat(1, 1fr)
 </style>

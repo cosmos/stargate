@@ -77,7 +77,7 @@
     left -23% // (146 - 100) / 2
     top 0
     margin-top -33% // (146 - 80) / 2
-    background radial-gradient(50% 50% at 50% 53.5%, #1440c9 28.99%, #121e4d 44.96%, #0d1236 70.17%, #000)
+    background radial-gradient(50% 50% at 50% 53.5%, #1440c9 28.99%, #121e4d 44.96%, #0d1236 70.17%, rgba(0,0,0,0))
 
 .planet
   position absolute

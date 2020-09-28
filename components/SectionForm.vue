@@ -135,18 +135,18 @@ export default {
     justify-content center
   &__get-notified
     display block
-    margin-bottom 2rem
+    margin-bottom var(--spacing-7)
     color var(--gray-800)
     text-align center
   &__state
-    margin 2rem auto
+    margin var(--spacing-7) auto
     &__success
       color var(--gray-600)
     &__error
       color #FF4C52
   &__form
-    margin 2rem auto
-    max-width 25rem
+    margin var(--spacing-7) auto
+    max-width: $max-width['7']
     width 100%
     &__input
       display flex
@@ -160,8 +160,8 @@ export default {
         appearance none
         background none
         border none
-        padding 1rem
-        border-radius 0.625rem
+        padding var(--spacing-5)
+        border-radius $border-radius-3
         cursor pointer
         outline none
         &:hover,
@@ -179,11 +179,9 @@ export default {
         width 100%
         background #121435
         border none
-        border-radius 0.625rem
-        padding 1.25rem 4rem 1.25rem 1.5rem
-        height 4rem
-        color #F8F8FD
-        opacity 0.7
+        border-radius $border-radius-3
+        padding var(--spacing-5) 4rem var(--spacing-5) var(--spacing-6)
+        color var(--white)
         transition color 0.15s ease-out, background 0.15s ease-out
         &::placeholder
           color var(--gray-600)
@@ -194,18 +192,11 @@ export default {
             color var(--gray-800)
         &:focus
           background #282B53
-          color var(--white)
 
 @media screen and (max-width: 576px)
   .bottom
     &__form
       &__input
-        &__input
-          height 3rem
-          padding 0.8125rem 3rem 0.8125rem 1rem
-        &__button
-          width 3rem
-          padding 0.75rem
         &__icon
           height 1.5rem
 </style>
