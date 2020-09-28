@@ -21,7 +21,7 @@
             </li>
           </ul>
         </nav>
-        <div class="headings">
+        <div class="content">
           <h1 class="title">
             <wordmark-stargate />
             <span class="sr-only">Stargate</span>
@@ -29,8 +29,6 @@
           <div class="subtitle tm-rf2 tm-rf3-m-up tm-lh-copy">
             The Internet of Blockchains is on the horizon.
           </div>
-        </div>
-        <div class="hero-bottom">
           <tm-button
             v-scroll-to="'#testnets'"
             size="l"
@@ -107,13 +105,17 @@ export default {}
     width 100%
     flex-direction column
     align-items normal
-    justify-content space-between
+    justify-content flex-start
     .nav-primary
       margin-bottom 5%
-    .headings
+    .content
+      margin auto
+      padding-bottom 20%
       width 100%
       .title
         margin 0
+        padding-left var(--spacing-5)
+        padding-right var(--spacing-5)
         svg
           width 100%
           height auto
@@ -122,7 +124,6 @@ export default {}
         margin-top var(--spacing-8)
         color var(--gray-600)
 
-.section-hero
   .hero-graphics
     position absolute
     top 10%
@@ -136,7 +137,7 @@ export default {}
       position absolute
       width 78%
       left 11%
-      top 20.3%
+      top 21.3%
       transform translate3d(0,0,0)
     &__gate
       padding-bottom 78%
@@ -161,7 +162,7 @@ export default {}
       width 42%
       padding-bottom 42%
       left 29%
-      top 30%
+      top 31%
       border-radius 50%
       background var(--white)
       box-shadow 0px 0px 2.5em #263CFF, 0px 0px 8em #2D74FF
@@ -174,9 +175,6 @@ export default {}
       border-radius 50%
       background radial-gradient(84.49% 66.22% at 50% 59.94%, #000000 5.73%, #030419 71.48%, #0E1247 81.25%, #36299B 91.15%)
       box-shadow 0px -4.5em 4em rgba(28, 0, 238, 0.17), 0px -0.625em 0.5em rgba(92, 70, 255, 0.11), inset 0px 3.5em 3.5em rgba(48, 44, 245, 0.17), inset 0px 0.375em 0.75em rgba(104, 67, 252, 0.23)
-
-.hero-bottom
-  margin-top 15%
 
 .hero-btn
   margin var(--spacing-8) auto
@@ -215,14 +213,15 @@ export default {}
     .container
       .nav-primary
         margin-bottom var(--spacing-8)
-      .headings
-        .title
-          padding-left var(--spacing-5)
-          padding-right var(--spacing-5)
+      .content
         .subtitle
           margin-top var(--spacing-6)
     .hero-graphics
       font-size 0.36rem
+
+  .hero-btn
+    width 100%
+    max-width: $max-width['6']
 
 @media screen and (min-width: 1536px)
   .section-hero
