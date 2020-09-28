@@ -6,7 +6,7 @@
           Features
         </div>
         <div class="section-title tm-rf6 tm-bold tm-lh-title">What’s new?</div>
-        <div class="section-statement tm-rf1 tm-lh-copy">
+        <div class="section-statement tm-rf1 tm-lh-copy tm-measure">
           These upgrades bring significant performance improvements to
           blockchains built with Cosmos SDK. Discover all the amazing features
           of the Stargate upgrade below.
@@ -50,7 +50,7 @@
         <div class="features-graphics">
           <interoperable-planets />
         </div>
-        <div class="ibc-item">
+        <div class="ibc-item tm-measure-narrower tm-measure-narrow-m-up">
           <div class="ibc-item__icon">
             <icon-ibc-cropped />
           </div>
@@ -65,7 +65,7 @@
           </div>
         </div>
         <div class="grid-container">
-          <div class="grid-item">
+          <div class="grid-item tm-measure-narrower tm-measure-narrow-m-up">
             <div class="grid-item__icon">
               <icon-countdown />
             </div>
@@ -78,7 +78,7 @@
               mins or less.
             </div>
           </div>
-          <div class="grid-item">
+          <div class="grid-item tm-measure-narrower tm-measure-narrow-m-up">
             <div class="grid-item__icon">
               <icon-repeat />
             </div>
@@ -91,7 +91,7 @@
               little to no time, as opposed to one hour or more before.
             </div>
           </div>
-          <div class="grid-item">
+          <div class="grid-item tm-measure-narrower tm-measure-narrow-m-up">
             <div class="grid-item__icon">
               <icon-mask-oval />
             </div>
@@ -105,7 +105,7 @@
               communication.
             </div>
           </div>
-          <div class="grid-item">
+          <div class="grid-item tm-measure-narrower tm-measure-narrow-m-up">
             <div class="grid-item__icon">
               <icon-speedometer />
             </div>
@@ -137,31 +137,35 @@ export default {}
     grid-column 6 / span 7
   .section-title
     grid-row 2
-    margin-top 3rem
-    margin-bottom 3rem
+    margin-top var(--spacing-8)
+    margin-bottom var(--spacing-8)
     grid-column 6 / span 7
   .section-statement
+    position relative
+    z-index 1 // above .feature-graphics
     grid-row 3
     grid-column 6 / span 7
-    max-width 30em
     color var(--gray-800)
   .data-container
     position relative
     z-index 1 // above .feature-graphics
     grid-row 4
-    margin-top 9rem
+    margin-top var(--spacing-11)
     display grid
     flex-direction row
     grid-column 1/ span 12
     grid-template-columns repeat(4, 1fr)
-    gap 2rem
+    gap var(--spacing-7)
     .data-item
+      display flex
+      flex-direction column
+      justify-content flex-end
       border-top 1px dashed #282B53
       &__overline
-        margin-top 1rem
+        margin-top var(--spacing-5)
         color var(--gray-600)
       &__heading
-        margin-top 1rem
+        margin-top var(--spacing-5)
         color var(--primary-900)
   .features-graphics
     grid-column 1 / span 8
@@ -174,37 +178,35 @@ export default {}
     grid-column 9 / span 4
     grid-row 5
     align-self center
-    max-width 24em
     &__icon
       width 3em
       height 3em
     &__title
-      margin-top 1.5rem
+      margin-top var(--spacing-6)
       color var(--white)
     &__description
-      margin-top 1rem
+      margin-top var(--spacing-5)
       color var(--gray-600)
   .grid-container
     margin-top 21%
     display grid
     grid-template-columns repeat(9, 1fr)
-    gap 6rem 2rem
+    gap var(--spacing-10) var(--spacing-7)
     grid-column 4 / span 9
     grid-row 6
     color white
     .grid-item
       grid-column 1 / span 4
-      max-width 24em
       &:nth-child(even)
         grid-column 6 / span 4
       &__icon
         width 3em
         height 3em
       &__title
-        margin-top 1.5rem
+        margin-top var(--spacing-6)
         color var(--white)
       &__description
-        margin-top 1rem
+        margin-top var(--spacing-5)
         color var(--gray-600)
 
 @media screen and (max-width: 1279px)
@@ -220,17 +222,17 @@ export default {}
 
   .section-features
     .section-title
-      grid-column 1 / 12
+      grid-column 1 / span 12
     .section-statement
-      grid-column 1 / 12
+      grid-column 1 / span 12
     .data-container
       grid-template-columns repeat(2, 1fr)
     .features-graphics
       grid-column 1 / span 10
     .ibc-item
       grid-row 6
-      grid-column 1 / 12
-      margin-top 2rem
+      grid-column 1 / span 12
+      margin-top var(--spacing-7)
     .grid-container
       grid-row 7
 
@@ -242,21 +244,17 @@ export default {}
 @media screen and (max-width: 576px)
   .section-features
     .data-container
-      margin-top 3rem
+      margin-top var(--spacing-8)
     .features-graphics
       font-size 0.5rem
     .grid-container
-      margin-top 3rem
-      gap 3rem 2rem
+      margin-top var(--spacing-8)
+      gap var(--spacing-8) var(--spacing-7)
       .grid-item
         &:nth-child(even),
         &:nth-child(odd)
           grid-column 1/span 12
           grid-template-columns repeat(1, 1fr)
-
-@media screen and (max-width: 375px)
-  .section-features .grid-container .grid-item
-    max-width 20em
 
 @media screen and (max-width: 320px)
   .section-features

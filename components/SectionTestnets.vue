@@ -10,7 +10,7 @@
           <div class="section-title tm-rf6 tm-bold tm-lh-title">
             Get set for testnets
           </div>
-          <div class="section-statement tm-rf1 tm-lh-copy">
+          <div class="section-statement tm-rf1 tm-lh-copy tm-measure">
             Validators, wallets, block explorers, exchanges and zone developers
             are among the primary services affected by the upgrades with
             Stargate. Make sure to schedule time for integration testing on the
@@ -25,7 +25,7 @@
             />
             <div class="testnets-list__item__text__top">
               <div
-                class="testnets-list__item__text__top__title tm-rf3 tm-bold tm-lh-copy tm-code"
+                class="testnets-list__item__text__top__title tm-rf3 tm-bold tm-lh-title tm-code"
               >
                 stargate-3a
               </div>
@@ -34,13 +34,13 @@
                   href="https://stargate.bigdipper.live"
                   target="blank_"
                   rel="noreferrer noopener"
-                  class="testnets-list__item__text__top__explorer tm-rf0 tm-bold"
+                  class="testnets-list__item__text__top__explorer tm-rf0 tm-medium tm-lh-solid"
                 >
-                  <span><img src="/icons/eye.svg" /></span>
+                  <span class="icon"><img src="/icons/eye.svg" /></span>
                   Explorer
                 </a>
                 <div
-                  class="testnets-list__item__text__top__status tm-rf0 tm-bold"
+                  class="testnets-list__item__text__top__status tm-rf0 tm-bold tm-lh-title"
                 >
                   Live
                 </div>
@@ -48,7 +48,10 @@
             </div>
             <div class="testnets-list__item__text">
               <div class="testnets-list__item__text__mid"></div>
-              <p class="testnets-list__item__text__mid__desc tm-rf1 tm-lh-copy">
+              <p
+                class="testnets-list__item__text__mid__desc tm-rf1 tm-lh-copy"
+                tm-measure
+              >
                 The first simulated upgrade of the Cosmos Hub and the primary
                 public integration testnet for
                 <a
@@ -117,12 +120,12 @@
             />
             <div class="testnets-list__item__text__top">
               <div
-                class="testnets-list__item__text__top__title tm-rf3 tm-bold tm-lh-copy tm-code"
+                class="testnets-list__item__text__top__title tm-rf3 tm-bold tm-lh-title tm-code"
               >
                 bigbang-1
               </div>
               <div
-                class="testnets-list__item__text__top__status outline-btn tm-rf0 tm-bold"
+                class="testnets-list__item__text__top__status outline-btn tm-rf0 tm-lh-title tm-bold"
               >
                 Coming soon
               </div>
@@ -130,7 +133,7 @@
             <div class="testnets-list__item__text">
               <div class="testnets-list__item__text__mid">
                 <div
-                  class="testnets-list__item__text__mid__desc tm-rf1 tm-lh-copy"
+                  class="testnets-list__item__text__mid__desc tm-rf1 tm-lh-copy tm-measure"
                 >
                   A community-led testnet aimed at the wider Cosmos ecosystem
                   and independent zone developers.
@@ -187,44 +190,51 @@
           <tm-tabs>
             <tm-tab name="Validators" :selected="true">
               <div class="section-tabs__text">
-                <p class="section-tabs__text__paragraph tm-rf1 tm-lh-copy">
+                <p
+                  class="section-tabs__text__paragraph tm-measure tm-rf1 tm-lh-copy"
+                >
                   Validators of chains that will implement Stargate upgrades –
                   beginning with the Cosmos Hub – should prepare by helping run
                   the Stargate testnets above.
                 </p>
               </div>
               <div class="section-tabs__text">
-                <p class="section-tabs__text__paragraph tm-rf1 tm-lh-copy">
+                <p
+                  class="section-tabs__text__paragraph tm-measure tm-rf1 tm-lh-copy"
+                >
                   More detailed instructions and guidelines on how validators
                   can prepare for the upgrade will be published in due course.
                 </p>
               </div>
               <div class="section-tabs__text">
                 <div
-                  class="section-tabs__text__heading tm-rf-1 tm-medium tm-lh-title tm-overline"
+                  class="section-tabs__text__heading tm-rf-1 tm-medium tm-lh-title tm-overline tm-measure"
                 >
                   Cosmos Hub Validators
                 </div>
                 <div
-                  class="section-tabs__text__title tm-rf2 tm-bold tm-lh-title"
+                  class="section-tabs__text__title tm-rf2 tm-bold tm-lh-title tm-measure"
                 >
                   Joining <span class="tm-code">stargate-3a</span>
                 </div>
-                <p class="section-tabs__text__paragraph tm-rf1 tm-lh-copy">
+                <p
+                  class="section-tabs__text__paragraph tm-measure tm-rf1 tm-lh-copy"
+                >
                   Your current <strong>"operator_address"</strong> and your
                   <strong>"consensus_pubkey"</strong> are required via pull
                   request. These keys will be used to generate a genesis file
                   for the upcoming testnets.
                 </p>
-                <div class="section-tabs__text__cta tm-rf1 tm-lh-solid">
-                  <a
+                <p class="section-tabs__text__cta">
+                  <tm-button
+                    to-link="external"
                     href="https://github.com/cosmosdevs/stargate/tree/master/validator_pub_keys"
-                    target="_blank"
-                    rel="noreferrer noopener"
+                    size="l"
+                    color="var(--link)"
+                    variant="text"
+                    >Submit validator key &#8594;</tm-button
                   >
-                    Submit validator key &#8594;
-                  </a>
-                </div>
+                </p>
               </div>
               <div class="section-tabs__text">
                 <div class="update-container">
@@ -233,21 +243,23 @@
                   >
                     Joined stargate-3a testnet?
                   </div>
-                  <div class="update-container__cta tm-rf1 tm-lh-copy">
-                    <a
-                      href="https://airtable.com/shrEr1bQD6COG9WH0"
-                      target="_blank"
-                      rel="noreferrer noopener"
-                    >
-                      Confirm your Stargate readiness &#8594;
-                    </a>
-                  </div>
+                  <tm-button
+                    to-link="external"
+                    href="https://airtable.com/shrEr1bQD6COG9WH0"
+                    size="l"
+                    color="var(--link)"
+                    variant="text"
+                  >
+                    Confirm your Stargate readiness &#8594;
+                  </tm-button>
                 </div>
               </div>
             </tm-tab>
             <tm-tab name="Wallets &amp; Explorers">
               <div class="section-tabs__text">
-                <p class="section-tabs__text__paragraph tm-rf1 tm-lh-copy">
+                <p
+                  class="section-tabs__text__paragraph tm-measure tm-rf1 tm-lh-copy"
+                >
                   Wallets and Explorers should ensure they are able to use the
                   old Amino endpoints and the new Protobuf queries to get the
                   correct expected results from their queries using
@@ -305,7 +317,9 @@
                 </div>
               </div>
               <div class="section-tabs__text">
-                <p class="section-tabs__text__paragraph tm-rf1 tm-lh-copy">
+                <p
+                  class="section-tabs__text__paragraph tm-measure tm-rf1 tm-lh-copy"
+                >
                   More detailed instructions and guidelines on how wallets and
                   block explorers can prepare for the upgrade will be published
                   in due course.
@@ -318,21 +332,25 @@
                   >
                     Joined stargate-3a testnet?
                   </div>
-                  <div class="update-container__cta tm-rf1 tm-lh-copy">
-                    <a
+                  <p class="update-container__cta">
+                    <tm-button
+                      to-link="external"
                       href="https://airtable.com/shrEr1bQD6COG9WH0"
-                      target="_blank"
-                      rel="noreferrer noopener"
+                      size="l"
+                      color="var(--link)"
+                      variant="text"
                     >
                       Confirm your Stargate readiness &#8594;
-                    </a>
-                  </div>
+                    </tm-button>
+                  </p>
                 </div>
               </div>
             </tm-tab>
             <tm-tab name="Exchanges">
               <div class="section-tabs__text">
-                <p class="section-tabs__text__paragraph tm-rf1 tm-lh-copy">
+                <p
+                  class="section-tabs__text__paragraph tm-measure tm-rf1 tm-lh-copy"
+                >
                   Use the
                   <a
                     href="https://github.com/cosmosdevs/stargate/blob/master/ibc_readiness_matrix.md"
@@ -342,12 +360,14 @@
                   >
                   to guide you in supporting IBC with your upgrades.
                 </p>
-                <p class="section-tabs__text__paragraph tm-rf1 tm-lh-copy">
+                <p
+                  class="section-tabs__text__paragraph tm-measure tm-rf1 tm-lh-copy"
+                >
                   Make sure your signing and querying software is ready for the
                   Stargate upgrade by testing the features and your
                   infrastructure ahead of time, using the
                   <span
-                    class="section-tabs__text__paragraph__stargate tm-rf1 tm-lh-copy tm-code"
+                    class="section-tabs__text__paragraph tm-measure__stargate tm-rf1 tm-lh-copy tm-code"
                     >stargate-3a</span
                   >
                   testnet.
@@ -398,7 +418,9 @@
                 </div>
               </div>
               <div class="section-tabs__text">
-                <p class="section-tabs__text__paragraph tm-rf1 tm-lh-copy">
+                <p
+                  class="section-tabs__text__paragraph tm-measure tm-rf1 tm-lh-copy"
+                >
                   More detailed instructions and guidelines on how exchanges can
                   prepare for the upgrade will be published in due course.
                 </p>
@@ -410,76 +432,93 @@
                   >
                     Joined stargate-3a testnet?
                   </div>
-                  <div class="update-container__cta tm-rf1 tm-lh-copy">
-                    <a
+                  <p class="update-container__cta">
+                    <tm-button
+                      to-link="external"
                       href="https://airtable.com/shrEr1bQD6COG9WH0"
-                      target="_blank"
-                      rel="noreferrer noopener"
+                      size="l"
+                      color="var(--link)"
+                      variant="text"
                     >
                       Confirm your Stargate readiness &#8594;
-                    </a>
-                  </div>
+                    </tm-button>
+                  </p>
                 </div>
               </div>
             </tm-tab>
             <tm-tab name="Zone Developers">
               <div class="section-tabs__text">
-                <p class="section-tabs__text__paragraph tm-rf1 tm-lh-copy">
+                <p
+                  class="section-tabs__text__paragraph tm-measure tm-rf1 tm-lh-copy"
+                >
                   More detailed instructions and guidelines on how zone
                   developers can prepare for the upgrade will be published in
                   due course.
                 </p>
               </div>
               <div class="section-tabs__text">
-                <div class="section-tabs__text__heading tm-rf1 tm-lh-title">
+                <div
+                  class="section-tabs__text__heading tm-rf1 tm-lh-title tm-measure"
+                >
                   Not ready to upgrade?
                 </div>
                 <div
-                  class="section-tabs__text__title tm-rf2 tm-bold tm-lh-title"
+                  class="section-tabs__text__title tm-rf2 tm-bold tm-lh-title tm-measure"
                 >
                   Launchpad
                 </div>
-                <p class="section-tabs__text__paragraph tm-rf1 tm-lh-copy">
+                <p
+                  class="section-tabs__text__paragraph tm-measure tm-rf1 tm-lh-copy"
+                >
                   Stargate involves a lot of breaking changes that may make it
                   difficult for you to upgrade, if you have already written a
                   lot of code for Cosmos SDK 0.37/0.38.
                 </p>
-                <p class="section-tabs__text__paragraph tm-rf1 tm-lh-copy">
+                <p
+                  class="section-tabs__text__paragraph tm-measure tm-rf1 tm-lh-copy"
+                >
                   The community supports an SDK 0.39 Launchpad release that
                   includes backported bug fixes. The
                   <a v-scroll-to="'#contributors'">Cosmos development teams</a>
                   are working together to document a clean migration path from
                   Launchpad to a stable Stargate release.
                 </p>
-                <div class="section-tabs__text__cta tm-rf1 tm-lh-solid">
-                  <a
+                <p class="section-tabs__text__cta">
+                  <tm-button
+                    to-link="external"
                     href="https://blog.cosmos.network/launchpad-a-pre-stargate-stable-version-of-the-cosmos-sdk-e0c58d8c4e24"
-                    target="_blank"
-                    rel="noreferrer noopener"
+                    size="l"
+                    color="var(--link)"
+                    variant="text"
                   >
                     Learn more &#8594;
-                  </a>
-                </div>
+                  </tm-button>
+                </p>
               </div>
             </tm-tab>
           </tm-tabs>
           <div class="section-tabs__text">
-            <div class="section-tabs__text__title tm-rf2 tm-bold tm-lh-title">
+            <div
+              class="section-tabs__text__title tm-rf2 tm-bold tm-lh-title tm-measure"
+            >
               Migration guides
             </div>
-            <p class="section-tabs__text__paragraph tm-rf1 tm-lh-copy">
+            <p
+              class="section-tabs__text__paragraph tm-measure tm-rf1 tm-lh-copy"
+            >
               Help the Cosmos ecosystem upgrade by contributing your own
               migration guides to the community.
             </p>
-            <div class="section-tabs__text__cta tm-rf1 tm-lh-solid">
-              <a
+            <p class="section-tabs__text__cta">
+              <tm-button
+                to-link="external"
                 href="https://github.com/cosmosdevs/stargate/pulls"
-                target="_blank"
-                rel="noreferrer noopener"
+                size="l"
+                color="var(--link)"
+                variant="text"
+                >Submit a guide &#8594;</tm-button
               >
-                Submit a guide &#8594;
-              </a>
-            </div>
+            </p>
           </div>
         </div>
       </div>
@@ -507,20 +546,19 @@ export default {}
     grid-row 1
   .section-graphics
     grid-column 8 / 13
-    grid-row 1
+    grid-row 2
     display flex
     align-items flex-end
   .section-top
     position relative
     grid-column 1 / span 12
-    grid-row 1
-    margin-top 6rem
+    grid-row 2
+    margin-top var(--spacing-10)
   .section-title
-    max-width 35rem
+    max-width: $max-width['7']
     color var(--white)
   .section-statement
-    margin-top 3rem
-    max-width 30em
+    margin-top var(--spacing-8)
     color var(--gray-800)
   .testnets-list
     grid-column 1/ span 12
@@ -530,10 +568,10 @@ export default {}
       display grid
       width 100%
       grid-template-columns repeat(12, 1fr)
-      gap 1.5rem
+      gap var(--spacing-6)
       align-items flex-start
       border-bottom 1px solid #282B53
-      padding 6rem 0
+      padding var(--spacing-10) 0
       &__graphics
         position absolute
         top 0
@@ -543,51 +581,53 @@ export default {}
       &__text
         position relative
         grid-column 6 / span 7
+        margin-top var(--spacing-4)
         &__top
           position relative
           grid-column 1 / span 4
           text-align right
           &__title
             color #FFD1FD
-            margin-bottom 0.75rem
+            margin-bottom var(--spacing-6)
           &__explorer
-            padding 0.1875rem 0.75rem
+            padding var(--spacing-2) 0
             background transparent
-            border-radius 0.875rem
             display inline-block
-            color var(--white)
+            margin-right var(--spacing-6)
+            .icon
+              margin-right var(--spacing-2)
           &__status
-            padding 0.1875rem 0.75rem
+            padding var(--spacing-1) var(--spacing-4)
             background #E644F8
-            border-radius 0.875rem
+            border-radius $border-radius-5
             display inline-block
             color var(--white)
         &__mid
           &__desc
             color var(--gray-800)
-            max-width 30em
           &__note
-            margin-top 0.5rem
+            margin-top var(--spacing-3)
             color var(--gray-600)
         &__bot
-          margin-top 1rem
+          margin-top var(--spacing-7)
           display flex
           align-items baseline
           flex-wrap wrap
           &__display
-            margin 0.5rem 0.75rem 0.5rem 0
+            margin var(--spacing-3) var(--spacing-4) var(--spacing-3) 0
             color var(--gray-800)
             flex-shrink 0
           &__labels
             display flex
             &__item
               color var(--gray-800)
-              padding 0.1875rem 0.75rem
+              padding var(--spacing-1) var(--spacing-4)
               background #282b53
-              border-radius 0.875rem
+              border-radius $border-radius-4
               align-items center
               display flex
               text-align center
+              margin-right var(--spacing-3)
       &__inactive
         .testnets-list__item__text__top__title
           color var(--gray-600)
@@ -598,75 +638,42 @@ export default {}
         justify-content flex-start
         align-items flex-end
         flex-direction row
-        gap 0.5rem
-        margin-top 2rem
-        a
-          transition transform .2s ease-out
-          &:hover,
-          &:focus
-            transform translateY(-2px)
-          &:active
-            transform none
-            transition-duration 0s
+        flex-wrap wrap
+        gap var(--spacing-7)
+        margin-top var(--spacing-7)
   .section-status
     grid-column 1 / 5
-    margin-top 6rem
+    margin-top var(--spacing-10)
     &__title
       grid-column 1 / span 4
       text-align start
       color var(--white)
-  .section-list
-    color var(--white)
-    margin-top 6rem
-    grid-column 6 / span 7
-    &__item
-      padding-top 1.875rem
-      padding-bottom 1.875rem
-      display flex
-      flex-direction row
-      justify-content space-between
-      border-bottom 1px solid #282B53
-      &__title
-        color var(--primary-900)
-        transition color 0.1s ease-out
-      &__date
-        text-align right
-        color var(--gray-600)
-        transition color 0.1s ease-out, transform 0.15s ease-out
-      &:hover .section-list__item__title,
-      &:hover .section-list__item__date
-        color var(--white)
-      &:hover .section-list__item__date
-        transform translateX(3px)
   .section-tabs
-    margin-top 6rem
+    margin-top var(--spacing-10)
     grid-column 6 / span 7
     &__code
       display grid
       grid-template-columns 50% 50%
       grid-template-rows 1fr
-      gap 0.5rem
-      margin-top 3rem
+      gap var(--spacing-3)
+      margin-top var(--spacing-8)
     &__text
-      margin-top 3rem
+      margin-top var(--spacing-8)
       &__heading
-        max-width 30em
         color var(--gray-600)
       &__title
-        margin-top 0.5rem
-        max-width 30em
+        margin-top var(--spacing-3)
         color var(--white)
       &__paragraph
-        margin-top 1rem
-        max-width 30em
+        margin-top var(--spacing-5)
         color var(--gray-800)
         &__stargate
           color var(--link)
       &__cta
-        margin-top 2.25rem
+        margin-top var(--spacing-4)
         color var(--link)
   .section-text
-    margin-top 6rem
+    margin-top var(--spacing-10)
     grid-column 6 / span 7
     &__paragraph
       color var(--gray-800)
@@ -676,31 +683,24 @@ export default {}
   flex-wrap wrap
   justify-content space-between
 
-.btn
-  margin-right var(--spacing-5)
-
-.testnets-list__item__text__bot__labels__item + .testnets-list__item__text__bot__labels__item
-  margin-left 0.75rem
-
 .update-container
-  padding 1rem 1.5rem
+  padding var(--spacing-6) var(--spacing-6) var(--spacing-3)
   background #282B53
   box-shadow 0px 0px 1px rgba(0, 0, 0, 0.07), 0px 4px 8px rgba(0, 0, 0, 0.07), 0px 10px 22px rgba(0, 3, 66, 0.1)
-  border-radius 0.5rem
+  border-radius $border-radius-3
 
 .update-container__title
   color var(--white)
 
 .update-container__cta
-  margin-top 0.25rem
   color var(--link)
 
 .left, .right
   border 2px solid #282B53
   box-sizing border-box
   filter drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.07)), drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.07)), drop-shadow(0px 10px 22px rgba(0, 3, 66, 0.1))
-  border-radius 0.5rem
-  padding 1rem 1.5rem
+  border-radius var(--spacing-3)
+  padding var(--spacing-5) var(--spacing-6)
   height 10rem
   display flex
   flex-direction column
@@ -723,14 +723,14 @@ export default {}
     .section-graphics
       align-items flex-start
     .section-top
-      margin-top 4rem
+      margin-top var(--spacing-9)
     .testnets-list
-      margin-top 3rem
+      margin-top var(--spacing-8)
     .testnets-list__item
       grid-template-columns auto
       margin 0
-      padding-top 3rem
-      padding-bottom 3rem
+      padding-top var(--spacing-9)
+      padding-bottom var(--spacing-9)
       &:first-child
         border-bottom 1px solid #282B53
       &__graphics
@@ -747,13 +747,14 @@ export default {}
         display flex
         align-items baseline
         flex-wrap wrap
+        gap var(--spacing-4)
         &__title
-          margin-right 0.75rem
+          margin-right var(--spacing-4)
           margin-bottom 0
     .section-status__title
       grid-column 1 / span 12
     .section-tabs
-      margin-top 3rem
+      margin-top var(--spacing-8)
       grid-column 1 / span 12
 
   .section-testnets .testnets-list__item__text__top
@@ -761,18 +762,15 @@ export default {}
     align-items center
     flex-direction row
 
-  .section-testnets .testnets-list__item__text__top__status
-    margin-left 0.5rem
-
   .testnets-list__item__text__bot__labels
     flex-flow row wrap
     &__item
-      margin-top 0.5rem
+      margin-top var(--spacing-3)
 
 @media screen and (max-width: 767px)
   .section-testnets
     .section-status
-      grid-column 1/12
+      grid-column 1/ span 12
     .section-text
       margin-top 0
       grid-column 1 / span 12
@@ -780,37 +778,32 @@ export default {}
 @media screen and (max-width: 576px)
   .section-testnets .section-tabs__code
     grid-template-columns auto
-    gap 1.5rem
+    gap var(--spacing-6)
 
   .section-testnets
     .section-graphics
-      font-size 0.5rem
+      font-size var(--spacing-3)
     .section-statement
-      margin-top 2rem
+      margin-top var(--spacing-7)
     .section-tabs
       >>> .tabs
-        margin-left -1.5rem
-        margin-right -1.5rem
+        margin-left calc(-1 * var(--spacing-6))
+        margin-right calc(-1 * var(--spacing-6))
         ul
-          padding-left 1.5rem
-          padding-right 1.5rem
+          padding-left var(--spacing-6)
+          padding-right var(--spacing-6)
 
   img.testnets-list__item__graphics
     width 20%
 
 @media screen and (max-width: 414px)
-  .testnets-list__item__text__bot__labels__item + .testnets-list__item__text__bot__labels__item
-    margin-left 0
-
   .section-testnets
     .testnets-list__item__text__bot__labels
       display flex
-      max-width 280px
       &__item
         width fit-content
-        margin-right 0.5rem
 
 @media screen and (max-width: 360px)
   .section-testnets .testnets-list__item__text__top
-    grid-column span 11
+    grid-column span 12
 </style>

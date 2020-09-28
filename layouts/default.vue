@@ -59,10 +59,15 @@ export default {
   .section
     padding-top 4rem
     padding-bottom 4rem
+  .section-container
+    .container
+      gap 0 1.5rem
 
 @media screen and (max-width: 767px)
   .section-container
     padding-top 1.5rem
+    .container
+      gap 0 1rem
 
 @media screen and (min-width: 1920px)
   .section

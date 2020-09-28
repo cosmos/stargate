@@ -8,7 +8,7 @@
       'tm-button',
       `tm-button__size__${size}`,
       `tm-button__variant__${variant}`,
-      'tm-lh-solid',
+      'tm-lh-title',
       'tm-medium',
       glow && 'tm-button__glow',
       styles,
@@ -34,7 +34,7 @@
       'tm-button',
       `tm-button__size__${size}`,
       `tm-button__variant__${variant}`,
-      'tm-lh-solid',
+      'tm-lh-title',
       'tm-medium',
       glow && 'tm-button__glow',
       styles,
@@ -57,7 +57,7 @@
       'tm-button',
       `tm-button__size__${size}`,
       `tm-button__variant__${variant}`,
-      'tm-lh-solid',
+      'tm-lh-title',
       'tm-medium',
       glow && 'tm-button__glow',
       styles,
@@ -82,7 +82,7 @@
       'tm-button',
       `tm-button__size__${size}`,
       `tm-button__variant__${variant}`,
-      'tm-lh-solid',
+      'tm-lh-title',
       'tm-medium',
       glow && 'tm-button__glow',
       styles,
@@ -245,7 +245,7 @@ export default {
   display inline-flex
   align-items center
   justify-content center
-  text-align center
+  text-align inherit
   color var(--color)
   border-radius 0.35em // relative border-radius
   transition all .25s $ease-out
@@ -360,11 +360,4 @@ export default {
       transform translateX(0.25rem)
     >>> .icon__left
       transform rotate(5deg) scale(1.05)
-
-@media screen and (max-width: 375px)
-  .tm-button
-    min-width -webkit-fill-available
-
-  .tm-button + .tm-button
-    margin-top 1rem
 </style>
