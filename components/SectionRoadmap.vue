@@ -12,14 +12,15 @@
           <div class="section-milestones__title tm-rf3 tm-bold tm-lh-title">
             Milestones
           </div>
-          <div class="section-milestones__cta tm-rf1 tm-lh-copy">
-            <a
+          <div class="section-milestones__cta">
+            <tm-button
+              to-link="external"
               href="https://github.com/orgs/cosmosdevs/projects/1"
-              target="_blank"
-              rel="noreferrer noopener"
+              color="var(--link)"
+              variant="text"
+              size="l"
+              >View on GitHub &#8594;</tm-button
             >
-              View on GitHub &#8594;
-            </a>
           </div>
         </div>
         <a
@@ -70,17 +71,21 @@
             rel="noreferrer noopener"
             class="section-list__item"
           >
-            <div class="section-list__item__title tm-rf1 tm-bold tm-lh-title">
+            <div
+              class="section-list__item__title tm-rf0 tm-rf1-m-up tm-bold tm-lh-title"
+            >
               {{ updatesList[item - 1].title }}
             </div>
-            <div class="section-list__item__date tm-rf1 tm-lh-title">
+            <div
+              class="section-list__item__date tm-rf-1 tm-rf1-m-up tm-lh-title"
+            >
               {{ updatesList[item - 1].date }} &#8594;
             </div>
           </a>
           <div class="section-list__bottom">
             <div
               v-if="currentUpdates != updatesList.length"
-              class="section-list__bottom__cta tm-rf1 tm-lh-copy"
+              class="section-list__bottom__cta tm-rf1 tm-lh-copy tm-medium"
               role="button"
               @click="currentUpdates = updatesList.length"
             >
@@ -88,7 +93,7 @@
             </div>
             <div
               v-else
-              class="section-list__bottom__cta tm-rf1 tm-lh-copy"
+              class="section-list__bottom__cta tm-rf1 tm-lh-copy tm-medium"
               role="button"
               @click="currentUpdates = 3"
             >
@@ -235,29 +240,25 @@ export default {
   .section-header
     grid-column 6 / span 7
   .section-title
-    margin-top 3rem
-    margin-bottom 3rem
+    margin-top var(--spacing-8)
+    margin-bottom var(--spacing-8)
     text-align right
     grid-column 1 / span 12
   .section-milestones
     grid-column 1 / 5
     grid-row 3 / 6
     &__title
-      margin-top 2rem
+      margin-top var(--spacing-7)
       color var(--white)
     &__cta
-      margin-top 1rem
-      a
-        display inline-block
-        border-radius 0.375rem
-        padding 1.25rem 0
+      margin-top var(--spacing-5)
   .section-row
     position relative
-    margin-top 2rem
+    margin-top var(--spacing-7)
     grid-column 5 / span 8
     background linear-gradient(258.96deg, #121435 0%, #030419 100%)
     color white
-    border-radius 1.25rem
+    border-radius $border-radius-5
     transition all .25s ease-out
     .meter
       position absolute
@@ -266,13 +267,13 @@ export default {
       bottom 0
       width var(--progress-bar-width, 0)
       background var(--progress-bar-background-color, linear-gradient(95.47deg, #121435 0%, #282B53 100%))
-      border-radius 1.25rem
+      border-radius $border-radius-5
       transition opacity .15s
     .details
       position relative
       grid-template-columns auto 1fr
-      gap 1.5rem
-      padding 3rem
+      gap var(--spacing-6)
+      padding var(--spacing-8)
       grid-column-start 2
       display grid
       grid-auto-flow column
@@ -320,18 +321,18 @@ export default {
         transition-duration 0s
   .section-status
     grid-column 1 / 5
-    margin-top 6rem
+    margin-top var(--spacing-10)
     &__title
-      margin-top 2rem
+      margin-top var(--spacing-7)
       grid-column 1 / span 4
       color var(--white)
   .section-list
     color var(--white)
-    margin-top 6rem
+    margin-top var(--spacing-10)
     grid-column 6 / span 7
     &__item
-      padding-top 1.875rem
-      padding-bottom 1.875rem
+      padding-top var(--spacing-7)
+      padding-bottom var(--spacing-7)
       display flex
       flex-direction row
       justify-content space-between
@@ -349,10 +350,9 @@ export default {
         transform translateX(3px)
     &__bottom
       text-align center
-      padding 1.25rem 0
+      padding var(--spacing-6) 0
       &__cta
         color var(--link)
-        font-weight 700
         cursor pointer
 
 @media screen and (max-width: 1024px)
@@ -366,40 +366,33 @@ export default {
     .section-row
       grid-column 1 / span 12
     .section-milestones
-      grid-column 1 / 12
+      grid-column 1 / span 12
     .section-status
-      grid-column 1 / 12
+      grid-column 1 / span 12
     .section-list
-      margin-top 1.5rem
+      margin-top var(--spacing-6)
       grid-column 1 / span 12
 
 @media screen and (max-width: 767px)
   .section-roadmap
     .section-title
-      margin-bottom 1rem
+      margin-bottom var(--spacing-5)
     .section-status
-      margin-top 3rem
+      margin-top var(--spacing-8)
 
 @media screen and (max-width: 576px)
   .section-roadmap
     .section-milestones
       &__cta
-        margin-top 0.5rem
-        a
-          padding 0.8125rem 0
+        margin-top var(--spacing-3)
     .section-row
-      margin-top 1rem
+      margin-top var(--spacing-5)
       &,
       .meter
-        border-radius 0.75rem
+        border-radius $border-radius-4
       .details
-        padding 1.5rem
         grid-template-columns unset
         grid-auto-flow unset
-  .section-roadmap
-    .section-list__item
-      padding-top 1.25rem
-      padding-bottom 1.25rem
 
 @media screen and (max-width: 414px)
   .section-roadmap .section-row .meter

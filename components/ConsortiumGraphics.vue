@@ -200,7 +200,7 @@
   top 74%
   transform translate3d(-50%, -50%, 0) rotateX(46deg)
   border-radius 50%
-  box-shadow inset 0.1875em -0.1875em 0.125em 0 #7C85EA
+  box-shadow inset 0.1875em 0.1875em 0.125em 0 #7C85EA
   position absolute
   border 0.0625em solid #636CBD
   opacity 0.2

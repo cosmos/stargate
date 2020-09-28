@@ -12,7 +12,7 @@
           <div class="section-title tm-rf6 tm-bold tm-lh-title">
             Core Developers
           </div>
-          <div class="section-statement tm-rf1 tm-lh-copy">
+          <div class="section-statement tm-rf1 tm-lh-copy tm-measure">
             Stargate is made possible through the hard work and coordination of
             many dedicated teams contributing to development on Cosmos SDK,
             Tendermint Core, IBC and Gaia.
@@ -40,11 +40,13 @@
                   {{ i.name }}
                   <code
                     v-if="i.role"
-                    class="section-list__item__title__role tm-rf0 tm-lh-title"
+                    class="section-list__item__title__role tm-rf-1 tm-lh-title"
                     >{{ i.role }}</code
                   >
                 </div>
-                <div class="section-list__item__date">&#8599;</div>
+                <div class="section-list__item__date tm-rf2 tm-lh-solid">
+                  &#8599;
+                </div>
               </a>
             </div>
           </div>
@@ -69,11 +71,13 @@
                   {{ i.name }}
                   <code
                     v-if="i.role"
-                    class="section-list__item__title__role tm-rf0 tm-lh-title"
+                    class="section-list__item__title__role tm-rf-1 tm-lh-title"
                     >{{ i.role }}</code
                   >
                 </div>
-                <div class="section-list__item__date">&#8599;</div>
+                <div class="section-list__item__date tm-rf2 tm-lh-solid">
+                  &#8599;
+                </div>
               </a>
             </div>
           </div>
@@ -142,10 +146,8 @@ export default {
 .section-contributors
   .section-header
     grid-column 6 / span 7
-    grid-row 1
   .section-graphics
     grid-column 7 / span 6
-    grid-row 2
     position relative
     .section-graphics__canvas
       position absolute
@@ -154,15 +156,14 @@ export default {
       margin-top 0
   .section-top
     grid-column 1 / span 7
-    margin-top 12rem
+    margin-top var(--spacing-12)
     position relative
   .section-title
     align-self flex-start
     max-width 6em
   .section-statement
-    margin-top 3rem
+    margin-top var(--spacing-8)
     color var(--gray-800)
-    max-width 30em
   .section-list
     grid-column 1/span 12
     grid-auto-flow column
@@ -175,8 +176,7 @@ export default {
     .right-half__container
       grid-column 8/span 5
     &__item
-      padding-top 1.875rem
-      padding-bottom 1.875rem
+      padding var(--spacing-7) 0
       display flex
       flex-direction row
       justify-content space-between
@@ -185,16 +185,17 @@ export default {
       &__title
         color var(--primary-900)
         transition color .1s ease-out
-        width 70%
+        flex 1
+        margin 0 var(--spacing-7)
         &__role
           color var(--gray-600)
-          margin-left 0.5rem
-          vertical-align bottom
+          margin-left var(--spacing-3)
+          vertical-align baseline
           background #282B53
-          border-radius 14px
-          padding 0px 12px
+          border-radius $border-radius-5
+          padding var(--spacing-1) var(--spacing-4)
+          display inline-block
       &__date
-        font-size 1.5rem
         color var(--gray-600)
         transition color 0.1s ease-out, transform 0.15s ease-out
       &:hover .section-list__item__title,
@@ -211,7 +212,7 @@ export default {
     .section-top
       grid-column 1/span 12
     .section-list
-      margin-top 4rem
+      margin-top var(--spacing-9)
       display block
       .left-half
         grid-column unset
@@ -220,17 +221,13 @@ export default {
 
 @media screen and (max-width: 576px)
   .section-contributors
-    .section-list__item
-      padding-top 1.25rem
-      padding-bottom 1.25rem
-
-  .section-contributors
     .section-graphics
       grid-column 4/span 8
       font-size 0.5rem
     .section-top
-      margin-top 34%
-    .section-statement,
+      margin-top var(--spacing-13)
     .section-list
-      margin-top 2rem
+      margin-top var(--spacing-8)
+      &__item__logo
+        max-width $max-width['2']
 </style>
