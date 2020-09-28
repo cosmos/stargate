@@ -12,14 +12,14 @@
             class="cards__item"
           >
             <div
-              class="cards__item__caption tm-rf0 tm-medium tm-lh-title tm-overline"
+              class="cards__item__caption tm-rf-1 tm-rf0-m-up tm-medium tm-lh-title tm-overline"
             >
               Connect
             </div>
             <div class="cards__item__title tm-rf2 tm-bold tm-lh-title">
               Join the community
             </div>
-            <div class="cards__item__description tm-rf1 tm-lh-copy">
+            <div class="cards__item__description tm-rf0 tm-rf1-m-up tm-lh-copy">
               Learn about Cosmos, get to know the community, connect with other
               Cosmonauts and more.
             </div>
@@ -30,18 +30,18 @@
             rel="noreferrer noopener"
             class="cards__item"
           >
-            <span class="cards__item__disclosure">
-              <icon-arrow-top-right />
-            </span>
+            <span class="cards__item__disclosure tm-rf2 tm-lh-solid"
+              >&#8599;</span
+            >
             <div
-              class="cards__item__caption tm-rf0 tm-medium tm-lh-title tm-overline"
+              class="cards__item__caption tm-rf-1 tm-rf0-m-up tm-medium tm-lh-title tm-overline"
             >
               Chat
             </div>
             <div class="cards__item__title tm-rf2 tm-bold tm-lh-title">
               Discuss Stargate
             </div>
-            <div class="cards__item__description tm-rf1 tm-lh-copy">
+            <div class="cards__item__description tm-rf0 tm-rf1-m-up tm-lh-copy">
               Join the <code>#stargate</code> channel in the Cosmos community
               Discord and chat with developers.
             </div>
@@ -61,15 +61,15 @@ export default {}
   .section-header
     grid-column 6 / span 7
   .cards
-    margin-top 6rem
+    margin-top var(--spacing-10)
     display grid
     grid-template-columns 1fr 1fr
-    gap 2rem
+    gap var(--spacing-7)
     grid-column 1 / span 12
     &__item
       position relative
-      padding 3rem
-      height 338px
+      padding var(--spacing-8)
+      height 20rem
       color var(--white)
       position relative
       display flex
@@ -77,12 +77,12 @@ export default {}
       flex-wrap nowrap
       justify-content flex-start
       color var(--white)
-      height 338px
       background url("/top-half-graphics.svg"), linear-gradient(256.92deg, #120018 0%, #121435 100%)
       background-position bottom center
       background-size contain
       background-repeat no-repeat
-      border-radius 1.25rem
+      border-radius $border-radius-5
+      hover-raise(-3px)
       &:first-child
         background url("/bottom-half-graphics.svg"), linear-gradient(256.92deg, #121435 0%, #030419 100%)
         justify-content flex-end
@@ -90,32 +90,27 @@ export default {}
         background-size contain
         background-repeat no-repeat
       &:hover
-        transform translateY(-3px)
         .cards__item__disclosure
+          color var(--white)
           transform translate(2px,-2px)
         .cards__item__caption
           transform translateY(-4px)
         .cards__item__title
           transform translateY(-2px)
-      &:active
-        transform none
-        transition-duration 0s
       &__disclosure
         position absolute
-        top 3rem
-        right 3rem
-        width 1.5rem
-        height 1.5rem
-        transition transform .25s ease-out
+        right var(--spacing-8)
+        color var(--gray-600)
+        transition color .1s ease-out, transform .25s ease-out
       &__caption
         color var(--gray-600)
         transition transform .25s ease-out
       &__title
-        margin-top 0.75rem
+        margin-top var(--spacing-4)
         color var(--white)
         transition transform .25s ease-out
       &__description
-        margin-top 0.75rem
+        margin-top var(--spacing-4)
         color var(--gray-600)
 
 @media screen and (max-width: 1024px)
@@ -128,16 +123,8 @@ export default {}
 @media screen and (max-width: 576px)
   .section-community
     .cards
-      margin-top 2rem
       &__item
         height auto
-        min-height 18rem
-        border-radius 0.75rem
-        &__disclosure
-          top 1rem
-          right 1rem
-
-@media screen and (max-width: 320px)
-  .section-community .cards__item
-    padding 1.5rem
+        min-height 16rem
+        border-radius $border-radius-4
 </style>

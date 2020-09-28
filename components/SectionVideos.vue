@@ -14,19 +14,19 @@
           />
         </div>
         <div class="text">
-          <div class="text__caption tm-rf0 tm-lh-copy">June 23</div>
+          <div class="text__caption tm-rf-1 tm-lh-title">June 23</div>
           <div class="text__title tm-rf2 tm-bold tm-lh-title">
             Stargate Q&amp;A with Zaki Manian
           </div>
-          <div class="text__cta tm-rf0 tm-lh-solid">
-            <a
-              href="https://www.youtube.com/watch?v=mlq5GzQTIAM"
-              target="_blank"
-              rel="noreferrer noopener"
-            >
-              Watch on YouTube &#8594;
-            </a>
-          </div>
+          <tm-button
+            to-link="external"
+            href="https://www.youtube.com/watch?v=mlq5GzQTIAM"
+            variant="text"
+            color="var(--link)"
+            class="text__cta"
+          >
+            Watch on YouTube &#8594;
+          </tm-button>
         </div>
       </div>
     </div>
@@ -43,49 +43,40 @@ export default {}
   padding-bottom 0
   .section-header
     grid-column 6 / span 7
-    margin-bottom 4rem
+    margin-bottom var(--spacing-9)
   .frame
     background-color rgb(22, 25, 49)
-    border-radius 0.5rem
-    padding-top 1.5625rem
+    border-radius $border-radius-3
     padding-bottom 56.25% /* 16:9 */
     height 0
     position relative
     grid-column 1 / span 8
     iframe
-      border-radius 0.5rem
+      border-radius $border-radius-3
       top 0
       left 0
       width 100%
       height 100%
       position absolute
   .text
-    width 23.3125rem
-    grid-column 9 / span 4
+    grid-column 9 / span 5
     position relative
+    display flex
+    flex-direction column
     &__caption
       color var(--gray-600)
     &__title
-      margin-top 0.5rem
+      margin-top var(--spacing-4)
       color var(--white)
     &__cta
-      display flex
-      align-items center
-      text-align center
-      position absolute
-      bottom 0
-      right 0
-      a
-        border-radius 0.5rem
-        padding .8125rem 0
+      align-self flex-end
+      margin-top auto
 
 @media screen and (max-width: 1438px)
   .section-videos
     .container
       .frame
         grid-column 1 / 8
-      .text
-        grid-column 8 / span 4
 
 
 @media screen and (max-width: 1024px)
@@ -97,17 +88,14 @@ export default {}
       .frame
         grid-column 1/span 12
       .text
-        margin-top 2rem
+        display block
+        margin-top var(--spacing-7)
         grid-column 1/span 12
         &__cta
-          position unset
-          text-align left
+          margin-top var(--spacing-3)
 
 @media screen and (max-width: 576px)
   .section-videos
-    .section-header
-      margin-bottom 2rem
     .container .text
-      width auto
-      margin-top 0.5rem
+      margin-top var(--spacing-6)
 </style>

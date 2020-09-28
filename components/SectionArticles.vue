@@ -9,31 +9,29 @@
           Learn more about Stargate
         </div>
         <div class="content">
-          <div
+          <a
             v-for="item in articles"
             :key="item.name"
-            class="articles-wrapper"
+            :href="item.url"
+            target="_blank"
+            rel="noreferrer noopener"
+            class="articles-item"
           >
-            <a
-              :href="item.url"
-              target="_blank"
-              rel="noreferrer noopener"
-              class="articles-item"
+            <span class="articles-item__icon tm-rf2 tm-lh-solid">&#8599;</span>
+            <div class="articles-item__date tm-rf-1 tm-lh-title">
+              {{ item.date }}
+            </div>
+            <div
+              class="articles-item__title tm-rf1 tm-bold tm-lh-title tm-measure-narrower"
             >
-              <span class="articles-item__icon">
-                <icon-arrow-top-right />
-              </span>
-              <div class="articles-item__date tm-rf-1 tm-lh-copy">
-                {{ item.date }}
-              </div>
-              <div class="articles-item__title tm-rf1 tm-bold tm-lh-title">
-                {{ item.title }}
-              </div>
-              <div class="articles-item__description tm-rf0 tm-lh-copy">
-                {{ item.description }}
-              </div>
-            </a>
-          </div>
+              {{ item.title }}
+            </div>
+            <div
+              class="articles-item__description tm-rf0 tm-lh-copy tm-measure"
+            >
+              {{ item.description }}
+            </div>
+          </a>
         </div>
       </div>
     </div>
@@ -88,71 +86,59 @@ export default {
     grid-column 6 / span 7
   .section-title
     color var(--white)
-    width 379px
     text-align left
-    grid-column 1 / 4
+    grid-column 1 / 6
     grid-row 1
   .content
     grid-column 6 / span 7
     grid-row 2
-    margin-top -4rem
-    .articles-wrapper
+    .articles-item
+      display block
+      text-align left
+      padding var(--spacing-7) 0
+      position relative
       border-bottom 1px solid #282b53
       &:last-child
         border-bottom 0
-      .articles-item
-        display block
-        text-align left
-        padding 2rem 0
-        border-radius 1.25rem
-        margin-top 1.5rem
-        position relative
-        transition all .25s ease-out
-        &:hover:not(:active)
-          transform translateY(-2px)
-          .articles-item__icon
-            transform translate(3px, -3px)
-        &:active
-          transition-duration 0s
-        &__icon
-          position absolute
-          width 1.5rem
-          height 1.5rem
-          top 1.5rem
-          right 1.5rem
-          transition transform .25s ease-out
-        &__date
-          color var(--gray-600)
-        &__title
-          margin-top 0.75rem
-          color var(--primary-900)
-          max-width 20em
-        &__description
-          margin-top 0.75rem
-          color var(--gray-600)
-          max-width 30em
+      &__icon
+        position absolute
+        right 0
+        color var(--gray-600)
+        transition color .1s ease-out, transform .25s ease-out
+      &__date
+        color var(--gray-600)
+      &__title
+        margin-top var(--spacing-4)
+        color var(--primary-900)
+        transition color .1s ease-out
+      &__description
+        margin-top var(--spacing-4)
+        color var(--gray-600)
+      &:hover
+        .articles-item__title,
+        .articles-item__icon
+          color var(--white)
+        .articles-item__icon
+          transform translate(3px, -3px)
 
 @media screen and (max-width: 1024px)
-  .section .section-header
-      grid-column 1 / span 12
 
   .section-articles
+    .section-header,
+    .section-title
+      grid-column 1 / span 12
     .section-header
       grid-row 1
     .section-title
       grid-row 2
-      margin-top 6rem
+      margin-top var(--spacing-4)
     .content
       grid-row 3
       grid-column 1/13
-      margin-top 4rem
-
-@media screen and (max-width: 576px)
-  .section-articles .content
-    margin-top 2rem
+      margin-top var(--spacing-9)
 
 @media screen and (max-width: 320px)
   .section-articles
     .section-title
-      max-width 17rem
+      max-width $max-width['5']
 </style>
