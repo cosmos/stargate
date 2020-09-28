@@ -3,15 +3,15 @@
     <div class="section section-intro">
       <div class="tm-section-container section-container">
         <div class="container">
-          <div class="section-title tm-rf6 tm-bold tm-lh-title">
+          <div class="section-title tm-rf6 tm-rf7-xl-up tm-bold tm-lh-title">
             A new era for Cosmos
           </div>
-          <div class="section-subtitle tm-rf2 tm-lh-copy">
+          <div class="section-subtitle tm-rf2 tm-lh-copy tm-measure">
             The biggest event in the ecosystem since the launch of the Cosmos
             Hub.
           </div>
           <eclipsed-planet class="section-graphics" />
-          <div class="section-statement tm-rf1 tm-lh-copy">
+          <div class="section-statement tm-rf1 tm-lh-copy tm-measure">
             <p>
               Stargate is a set of upgrades that complete the original roadmap
               laid out in the Cosmos Whitepaper. For the first time ever, Cosmos
@@ -19,15 +19,15 @@
               first standardized protocol for inter-blockchain communication
               (IBC).
             </p>
-            <div class="section-cta tm-rf1 tm-lh-solid">
-              <a
-                href="https://blog.cosmos.network/cosmos-stargate-upgrade-overview-8939475fe673"
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                Read more about Stargate &#8594;
-              </a>
-            </div>
+            <tm-button
+              to-link="external"
+              href="https://blog.cosmos.network/cosmos-stargate-upgrade-overview-8939475fe673"
+              size="l"
+              color="var(--link)"
+              variant="text"
+              class="section-cta"
+              >Read more about Stargate &#8594;</tm-button
+            >
           </div>
         </div>
       </div>
@@ -45,12 +45,13 @@ export default {}
   .section-title
     grid-column 1 / span 12
     grid-row 1 / 2
-    max-width 50rem
+    max-width 9em
+    min-height $line-height-title-base-min * 2em
+    margin-bottom -0.75em
   .section-subtitle
     display flex
     justify-content flex-end
     flex-direction column
-    margin-top -1.5em
     grid-row 2
     grid-column 6 / span 7
     color var(--white)
@@ -60,27 +61,31 @@ export default {}
     position relative
   .section-statement
     position relative
-    margin-top 3rem
+    margin-top var(--spacing-8)
     grid-column 6 / span 7
     grid-row 3
-    max-width 30em
     text-align left
     p
       color var(--gray-800)
   .section-cta
-    margin-top 3rem
-    a
-      display inline-block
-      border-radius 0.375rem
-      padding 1.375rem 0
+    margin-top var(--spacing-8)
+
+@media screen and (max-width: 1400px)
+  .section-intro
+    .section-subtitle,
+    .section-statement
+      grid-column 7 / span 6
 
 @media screen and (max-width: 1024px)
   .section-intro
     .section-title
       grid-row 1
       grid-column 1 / span 12
+      max-width none
+      min-height 0
+      margin-bottom 0
     .section-subtitle
-      margin-top 2rem
+      margin-top var(--spacing-7)
       grid-row 2
       grid-column 1 / span 12
     .section-graphics
@@ -95,7 +100,7 @@ export default {}
     .section-graphics
       font-size 0.75rem
     .section-statement
-      margin-top 1rem
+      margin-top var(--spacing-5)
 
 @media screen and (max-width: 576px)
   .section-intro

@@ -26,7 +26,7 @@
             <wordmark-stargate />
             <span class="sr-only">Stargate</span>
           </h1>
-          <div class="subtitle tm-rf3 tm-lh-copy">
+          <div class="subtitle tm-rf2 tm-rf3-m-up tm-lh-copy">
             The Internet of Blockchains is on the horizon.
           </div>
         </div>
@@ -36,7 +36,6 @@
             size="l"
             color="var(--white)"
             background-color="linear-gradient(92.99deg, #8D0EC0 0%, #4251FA 100%)"
-            variant="contained"
             glow
             class="hero-btn"
             >Join testnets</tm-button
@@ -73,9 +72,9 @@ export default {}
     margin 0 auto
   a
     display inline-block
-    padding 0.8125rem 0
+    padding var(--spacing-4) 0
     color var(--gray-600)
-    border-radius 0.375rem
+    border-radius $border-radius-2
     &:hover,
     &:focus
       color var(--gray-800)
@@ -90,7 +89,7 @@ export default {}
   height 100vh
   min-height 52rem
   max-height 64rem
-  margin-bottom 6rem
+  margin-bottom var(--spacing-10)
   display flex
   justify-content stretch
   align-items stretch
@@ -100,8 +99,8 @@ export default {}
     display flex
     align-items stretch
     width 100%
-    padding-top 4rem
-    padding-bottom 6rem
+    padding-top var(--spacing-9)
+    padding-bottom var(--spacing-10)
   .container
     position relative
     display flex
@@ -120,7 +119,7 @@ export default {}
           height auto
           max-height 5.5rem
       .subtitle
-        margin-top 3rem
+        margin-top var(--spacing-8)
         color var(--gray-600)
 
 .section-hero
@@ -137,7 +136,7 @@ export default {}
       position absolute
       width 78%
       left 11%
-      top 9.3%
+      top 20.3%
       transform translate3d(0,0,0)
     &__gate
       padding-bottom 78%
@@ -149,10 +148,7 @@ export default {}
       &:after
         content ""
         position absolute
-        top 3.2%
-        left 3.2%
-        right 3.2%
-        bottom 3.2%
+        trbl 3.2%
         border-radius 50%
         box-shadow inset 0 -0.1875em 0.0625em 0 rgba(255, 255, 255, 0.3)
         border 1px solid rgba(255, 255, 255, 0.1)
@@ -165,7 +161,7 @@ export default {}
       width 42%
       padding-bottom 42%
       left 29%
-      top 22%
+      top 30%
       border-radius 50%
       background var(--white)
       box-shadow 0px 0px 2.5em #263CFF, 0px 0px 8em #2D74FF
@@ -183,7 +179,7 @@ export default {}
   margin-top 15%
 
 .hero-btn
-  margin 3.5rem auto
+  margin var(--spacing-8) auto
 
 @media screen and (max-width: 1024px)
   .section-hero
@@ -191,7 +187,7 @@ export default {}
     .container
       .headings
         .subtitle
-          margin-top 2rem
+          margin-top var(--spacing-7)
 
 @media screen and (max-width: 767px)
   .section-hero
@@ -203,7 +199,7 @@ export default {}
     .logo
       height 1.25rem
     a
-      padding 0.75rem
+      padding var(--spacing-4)
       .text
         display none
       .icon
@@ -212,19 +208,19 @@ export default {}
   .section-hero
     min-height 32rem
     max-height 42rem
-    margin-bottom 3rem
+    margin-bottom var(--spacing-8)
     .section-container
-      padding-top 0.75rem
-      padding-bottom 2rem
+      padding-top var(--spacing-4)
+      padding-bottom var(--spacing-7)
     .container
       .nav-primary
-        margin-bottom 3rem
+        margin-bottom var(--spacing-8)
       .headings
         .title
-          padding-left 1rem
-          padding-right 1rem
+          padding-left var(--spacing-5)
+          padding-right var(--spacing-5)
         .subtitle
-          margin-top 1.5rem
+          margin-top var(--spacing-6)
     .hero-graphics
       font-size 0.36rem
 

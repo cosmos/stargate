@@ -36,14 +36,14 @@ export default {}
     flex-direction row
     justify-content center
     list-style none
-    padding-left 4rem
-    padding-right 4rem
+    padding-left var(--spacing-9)
+    padding-right var(--spacing-9)
     &__item
       + .nav__list__item
-        margin-left 2rem
+        margin-left var(--spacing-7)
       a
         display inline-block
-        padding 1.25rem 0
+        padding var(--spacing-5) 0
         position relative
         cursor pointer
         z-index 1
@@ -61,7 +61,7 @@ export default {}
           height 2px
           bottom 2px
           z-index -1
-          border-radius 4px
+          border-radius $border-radius-1
           background-color #3B2AB7
           visibility hidden
           transform scaleX(0)
@@ -85,11 +85,11 @@ export default {}
 @media screen and (max-width: 767px)
   .nav
     &__list
-      padding-left 1.5rem
-      padding-right 1.5rem
+      padding-left var(--spacing-6)
+      padding-right var(--spacing-6)
 
 @media screen and (max-width: 576px)
   .nav
     &__list__item a
-      padding 0.8125rem 0
+      padding var(--spacing-4) 0
 </style>
