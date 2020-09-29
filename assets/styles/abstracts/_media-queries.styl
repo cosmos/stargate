@@ -1,0 +1,55 @@
+/*
+
+  CUSTOM MEDIA QUERIES
+
+  Inspired by Bootstrap 5.0 - https://v5.getbootstrap.com/docs/5.0/layout/breakpoints/
+
+  Media query values can be changed to fit your own content.
+  There are no magic bullets when it comes to media query width values.
+  They should be declared in px units - and they should be set to meet
+  the needs of your content. You can also add additional media queries,
+  or remove some of the existing ones.
+
+  These media queries can be referenced like so:
+
+  @media $breakpoint-medium {
+    .medium-and-larger-specific-style {
+      background-color: red;
+    }
+  }
+
+  @media $breakpoint-medium-only {
+    .medium-screen-specific-style {
+      background-color: red;
+    }
+  }
+
+  @media $breakpoint-large {
+    .large-and-larger-screen-specific-style {
+      background-color: red;
+    }
+  }
+
+*/
+
+/* Responsive breakpoints */
+$breakpoints = {
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+}
+
+/* Media Queries */
+$breakpoint-xsmall-only = "screen and (max-width: %s)" % ($breakpoints[sm] - .02)
+$breakpoint-small = "screen and (min-width: %s)" % $breakpoints[sm]
+$breakpoint-small-only = "screen and (min-width: %s) and (max-width: %s)" % ($breakpoints[sm] ($breakpoints[md] - .02))
+$breakpoint-medium = "screen and (min-width: %s)" % $breakpoints[md]
+$breakpoint-medium-only = "screen and (min-width: %s) and (max-width: %s)" % ($breakpoints[md] ($breakpoints[lg] - .02))
+$breakpoint-large = "screen and (min-width: %s)" % $breakpoints[lg]
+$breakpoint-large-only = "screen and (min-width: %s) and (max-width: %s)" % ($breakpoints[lg] ($breakpoints[xl] - .02))
+$breakpoint-xl = "screen and (min-width: %s)" % $breakpoints[xl]
+$breakpoint-xl-only = "screen and (min-width: %s) and (max-width: %s)" % ($breakpoints[xl] ($breakpoints[xxl] - .02))
+$breakpoint-xxl = "screen and (min-width: %s)" % $breakpoints[xxl]

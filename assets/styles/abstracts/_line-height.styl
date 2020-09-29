@@ -1,0 +1,23 @@
+// solid line-height
+$line-height-solid = 1
+
+// title line-height
+$line-height-title-base-min = 1.2
+$line-height-title-base-max = 1.3
+$line-height-title-factor = 0.03
+// copy line-height
+$line-height-copy-base-min = 1.55
+$line-height-copy-base-max = 1.625
+$line-height-copy-factor = 0.055
+
+// css-locks applied to line-heights with a negative slope
+css-lock-line-height($prop = 'line-height', $variant, $step, $base-cap = false)
+  $fs-min = rfs-computed-min($step)
+  $fs-max = unit($font-size-step[''+$step],'')
+  $lh-factor = lookup('$line-height-'+$variant+'-factor')
+  $lh-min = lookup('$line-height-'+ $variant+'-base-min')
+  $lh-max = lookup('$line-height-'+$variant+'-base-max')
+  $min = min($base-cap ? $lh-min : $lh-max, max($line-height-solid, ($lh-min * (1 + ((1 - $fs-min) * $lh-factor)))))
+  $max = min($base-cap ? $lh-max : 999, max($line-height-solid, ($lh-max * (1 + ((1 - $fs-max) * $lh-factor)))))
+  // generate the molten leading!
+  css-lock($prop, $step, $min, $max)

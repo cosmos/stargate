@@ -1,0 +1,66 @@
+/*
+
+   TYPOGRAPHY
+   http://tachyons.io/docs/typography/measure/
+
+   Media Query Extensions:
+     -m-up = medium upwards
+     -m  = medium
+     -l-up = large
+
+*/
+
+/* Overline type style */
+.tm-overline
+  css-lock('letter-spacing', 0, $letter-spacing-wide-base, $letter-spacing-wide-max, 'em')
+  text-transform uppercase
+
+/* Paragraph spacing */
+p + p
+  margin-top 1em
+
+/* Measure is limited to ~66 characters */
+.tm-measure
+  max-width $measure-3
+
+/* Measure is limited to ~80 characters */
+.tm-measure-wide
+  max-width $measure-4
+
+/* Measure is limited to ~54 characters */
+.tm-measure-narrow
+  max-width $measure-2
+
+/* Measure is limited to ~45 characters */
+.tm-measure-narrower
+  max-width $measure-1
+
+@media $breakpoint-medium
+  .tm-measure-m-up
+    max-width $measure-3
+  .tm-measure-wide-m-up
+    max-width $measure-4
+  .tm-measure-narrow-m-up
+    max-width $measure-2
+  .tm-measure-narrower-m-up
+    max-width $measure-1
+
+@media $breakpoint-medium-only
+  .tm-measure-m
+    max-width $measure-3
+  .tm-measure-wide-m
+    max-width $measure-4
+  .tm-measure-narrow-m
+    max-width $measure-2
+  .tm-measure-narrower-m
+    max-width $measure-1
+
+@media $breakpoint-large
+  .tm-measure-l-up
+    max-width $measure-3
+  .tm-measure-wide-l-up
+    max-width $measure-4
+  .tm-measure-narrow-l-up
+    max-width $measure-2
+  .tm-measure-narrower-l-up
+    max-width $measure-1

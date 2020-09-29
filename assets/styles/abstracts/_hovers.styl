@@ -1,0 +1,33 @@
+/* Can combine this with overflow-hidden to make background images grow on hover
+ * even if you are using background-size: cover */
+
+hover-grow(scale-hover = 1.05, scale-active = .9, speed = .25s, speed-hover = .2s, speed-active = .05s)
+  transform-fix()
+  transition transform speed $ease-out
+
+  &:hover,
+  &:focus
+    transform scale(scale-hover)
+    transition-duration speed-hover
+
+  &:active
+    transform scale(scale-active)
+    transition-duration speed-active
+
+hover-raise(raise-hover = -2px, raise-active = (raise-hover/2), speed = .25s, speed-hover = .2s, speed-active = .05s)
+  transform-fix()
+  transition all speed $ease-out
+
+  &:hover,
+  &:focus
+    transform translateY(raise-hover)
+    transition-duration speed-hover
+
+  &:active
+    transform translateY(raise-active)
+    transition-duration speed-active
+
+transform-fix()
+  -moz-osx-font-smoothing grayscale
+  backface-visibility hidden
+  transform translateZ(0)

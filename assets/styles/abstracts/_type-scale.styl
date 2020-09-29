@@ -1,0 +1,34 @@
+/*
+
+Steps: -1 ~ 7
+
+Headings (bold): -1 ~ 7
+Body copy: -1 ~ 3
+Overline: -1 ~ 1
+Code: -1 ~ 7
+
+usage:
+.section-title
+  font-size $font-size-step['1']
+
+*/
+
+$font-size-base = 16px // TODO: replace with $rfs-something?
+// RFS config
+// $rfs-two-dimensional = true
+$rfs-base-value = 1rem
+$rfs-factor = 8
+$rfs-breakpoint = $breakpoints[xl]
+
+// Modular typography scale – perfect fourth ratio (1.333)
+$font-size-step = {
+  '-1': 0.75rem,
+  '0': 1rem,
+  '1': 1.333rem,
+  '2': 1.777rem,
+  '3': 2.369rem,
+  '4': 3.157rem,
+  '5': 4.209rem,
+  '6': 5.61rem,
+  '7': 7.478rem
+}

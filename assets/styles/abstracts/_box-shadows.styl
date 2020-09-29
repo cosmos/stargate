@@ -1,0 +1,30 @@
+/*
+   Add shadow on hover.
+
+   Performant box-shadow animation pattern from
+   http://tobiasahlin.com/blog/how-to-animate-box-shadow/
+*/
+
+hover-elevation($size = 8, $speed = .25s, $speed-hover = .2s, $speed-active = .05s, $ambient = true, $opacity = $ambient ? 0.6 : 1, $active-opacity = 0, $shadow = null)
+  $elevation = $ambient ? var(('--elevation-%s-ambient' % $size)) : var(('--elevation-%s' % $size))
+  cursor pointer
+  position relative
+  &::after
+    content ''
+    if $shadow
+      box-shadow $elevation, $shadow
+    else
+      box-shadow $elevation
+    border-radius inherit
+    opacity 0
+    position absolute
+    trbl 0 0 0 0
+    z-index -1
+    transition opacity $speed $ease-out
+  &:hover::after,
+  &:focus::after
+    opacity $opacity
+    transition-duration $speed-hover
+  &:active::after
+    opacity $active-opacity
+    transition-duration $speed-active
