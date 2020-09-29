@@ -40,6 +40,7 @@
     "imagemin-svgo": "^8.0.0",
     "normalize.css": "^8.0.1",
     "node-fetch": "^2.6.1",
+    "nuxt-purgecss": "^1.0.0",
     "prettier": "^2.0.5",
     "stylus": "^0.54.7",
     "stylus-loader": "^3.0.2",
