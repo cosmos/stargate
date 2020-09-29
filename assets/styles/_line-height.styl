@@ -1,0 +1,18 @@
+:root
+  for $step in -1...8
+    css-lock-line-height('--line-height-title-'+$step, 'title', $step)
+  for $step in -1...4
+    css-lock-line-height('--line-height-copy-'+$step, 'copy', $step, true)
+
+/*
+
+   LINE HEIGHT / LEADING
+
+*/
+
+.tm-lh-solid
+  line-height $line-height-solid
+.tm-lh-title
+  line-height var(--line-height-title-0)
+.tm-lh-copy
+  line-height var(--line-height-copy-0)

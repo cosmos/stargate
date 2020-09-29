@@ -1,0 +1,28 @@
+/*
+
+   LINKS
+   Docs: http://tachyons.io/docs/elements/links/
+
+*/
+
+.tm-link
+  cursor pointer
+  text-decoration none
+  transition all .2s $ease-out
+
+.tm-link:link,
+.tm-link:visited
+  transition all .2s $ease-out
+
+.tm-link:hover
+  transition all .2s $ease-out, opacity .4s ease-out
+  &.tm-link-underline-hover
+    text-decoration underline
+
+.tm-link:active
+  opacity 0.7
+  transition-duration 0s
+
+.tm-link:focus
+  transition all .2s $ease-out
+  outline 1px dotted currentColor

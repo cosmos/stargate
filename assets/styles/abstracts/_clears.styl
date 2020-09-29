@@ -1,0 +1,18 @@
+/*
+
+   CLEARFIX
+   http://tachyons.io/docs/layout/clearfix/
+
+*/
+
+/* Nicolas Gallaghers Clearfix solution
+   Ref: http://nicolasgallagher.com/micro-clearfix-hack/ */
+
+clearfix()
+  *zoom 1
+  &:after
+    clear both
+  &:before,
+  &:after
+    content " "
+    display table

@@ -69,7 +69,7 @@ export default {
 
 .tabs a
   align-items center
-  color #989bb9
+  color var(--gray-600)
   justify-content center
   display inline-block
   padding 1.25rem 0

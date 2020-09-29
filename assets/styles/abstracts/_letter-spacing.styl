@@ -1,0 +1,27 @@
+// bold letter-spacing
+$letter-spacing-bold-factor = -0.02 // scale factor
+$letter-spacing-bold-base = -0.01 // step 0 letter-spacing
+$letter-spacing-bold-max = -0.055 // max value (can be min floor if negative)
+// normal letter-spacing
+$letter-spacing-normal-factor = -0.022 // scale factor
+$letter-spacing-normal-base = 0 // step 0 letter-spacing
+$letter-spacing-normal-max = -0.03 // max value (can be min floor if negative)
+// overline letter-spacing
+$letter-spacing-wide-base = 0.08 // step 0 letter-spacing @ 320
+$letter-spacing-wide-max = 0.08 // step 0 letter-spacing @ 1200+
+
+// css-locks applied to letter-spacings with a negative slope
+css-lock-letter-spacing($prop = 'letter-spacing', $variant, $step)
+  $fs-min = rfs-computed-min($step)
+  $fs-max = unit($font-size-step[''+$step],'')
+  $ls-factor = lookup('$letter-spacing-'+$variant+'-factor')
+  $ls-base = lookup('$letter-spacing-'+$variant+'-base')
+  $ls-max = lookup('$letter-spacing-'+$variant+'-max')
+  $min = $ls-base + ((-1 + $fs-min) * $ls-factor)
+  $max = $ls-base + ((-1 + $fs-max) * $ls-factor)
+  if $ls-max and ($ls-max <= 0)
+    $max = max($ls-max, $max)
+  else
+    $max = min($ls-max, $max)
+  // generate the molten tracking!
+  css-lock($prop, $step, $min, $max, 'em')

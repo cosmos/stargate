@@ -77,7 +77,7 @@
     left -23% // (146 - 100) / 2
     top 0
     margin-top -33% // (146 - 80) / 2
-    background radial-gradient(50% 50% at 50% 53.5%, #1440c9 28.99%, #121e4d 44.96%, #0d1236 70.17%, #000)
+    background radial-gradient(50% 50% at 50% 53.5%, #1440c9 28.99%, #121e4d 44.96%, #0d1236 70.17%, rgba(0,0,0,0))
 
 .planet
   position absolute
@@ -128,9 +128,9 @@
     top 102%
     left 122%
   &__3 &__back
-    background radial-gradient(farthest-side at 25% 22%, #40b3ff 3%, #015ab5 34%, #0c2054 82%)
+    background radial-gradient(farthest-side at 25% 22%, var(--link) 3%, #015ab5 34%, #0c2054 82%)
   &__3 &__front
-    background radial-gradient(farthest-side at -88% 16%, #40b3ff 58%, #016ad4 74%, #132c6d 92%, rgba(7,31,95,0) 100%)
+    background radial-gradient(farthest-side at -88% 16%, var(--link) 58%, #016ad4 74%, #132c6d 92%, rgba(7,31,95,0) 100%)
 
 .connections
   position absolute
@@ -139,7 +139,8 @@
   width 100%
   .connection
     position absolute
-    background-image radial-gradient(20% 100%, rgba(204, 209, 255, 0.6) 50%, rgba(255,255,255,0) 50%)
+    // TODO: not being used, syntax error: https://github.com/postcss/autoprefixer/issues/530
+    // background-image radial-gradient(20% 100%, rgba(204, 209, 255, 0.6) 50%, rgba(255,255,255,0) 50%)
     background-position top
     background-size 0.416em 0.083em
     background-repeat repeat-x
@@ -286,7 +287,7 @@
   height 100%
   top 50%
   transform translate3d(-50%, -50%, 0)
-  box-shadow inset 0 0.125em 0 0px #40B3FF
+  box-shadow inset 0 0.125em 0 0px var(--link)
   border-radius 100%
   position absolute
   clip-path polygon(0 0, 50% 0, 50% 100%, 0 100%)
