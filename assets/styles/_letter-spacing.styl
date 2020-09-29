@@ -1,0 +1,7 @@
+/* Variables */
+
+:root
+  for $step in -1...8
+    css-lock-letter-spacing('--letter-spacing-bold-'+$step, 'bold', $step)
+  for $step in -1...4
+    css-lock-letter-spacing('--letter-spacing-normal-'+$step, 'normal', $step)

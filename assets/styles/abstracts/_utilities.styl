@@ -1,0 +1,70 @@
+/*
+
+   UTILITIES
+
+*/
+
+$css-lock-breakpoint-min = 320px
+$css-lock-breakpoint-max = 1200px
+
+// horizontally center a block element
+center()
+  margin-right auto
+  margin-left auto
+
+// quick coordinates using margin/padding style syntax:
+// `trbl 2rem` means all values are 2rem
+// `trbl 2rem 4rem` means top and bottom are 2rem and left and right are 4rem
+trbl(top = auto, right = top, bottom = top, left = right)
+  top top
+  left left
+  right right
+  bottom bottom
+
+/*
+   CSS LOCK
+   an alternative to RFS for computing em values (e.g. for letter-spacing and line-heights)
+   https://fvsch.com/css-locks
+*/
+css-lock(
+  $prop,
+  $step, // font size
+  $y1, // min value
+  $y2, // max value
+  $unit = '', // default unit outside of the lock
+  $lock-unit = 'em') // unit used in the lock (can't be unitless)
+  // min breakpoint (veiwport width)
+  $x1 = $css-lock-breakpoint-min
+  // max breakpoint (viewport width)
+  $x2 = $css-lock-breakpoint-max
+  // get font size from modular scale and strip rem unit
+  $f = unit($font-size-step['%s' % $step], '')
+  // min value computed with font-size
+  $y1-px = $f * 16 * $y1
+  // max value computed with font-size
+  $y2-px = $f * 16 * $y2
+  // the slope of the function (“how many pixels do we add to the font size for each increase of 1px to the viewport width?")
+  $m = (unit($y2-px - $y1-px, '') / unit($x2 - $x1, ''))
+
+  &
+    // min value
+    {$prop}: unit($y1, $unit)
+
+    if $y1 != $y2
+      // css lock (between x1 and x2 breakpoints)
+      @media screen and (min-width: $x1)
+        // our formula: (y1 * 1em) + (m * x) - (m * x1)
+        {$prop}: 'calc(%s + %s - %s)' % (unit($y1, $lock-unit) ($m * 100vw) ($m * $x1))
+      // max-value
+      @media screen and (min-width: $x2)
+        {$prop}: unit($y2, $unit)
+
+// compute the value of a step in the type scale to a (unitless) 'em' value
+rfs-computed-min($step)
+  $fluid-value = rfs-fluid-value($font-size-step[''+$step])
+  $values = match('[^calc(+ vw)]+', '' + $fluid-value, 'g')
+  $min = unit(convert($values[0]),'')
+  if $values[1]
+    $x1 = convert($values[1])
+    $min = $min + (($x1 / 100 * 320) / unit($font-size-base,''))
+  $min // return
