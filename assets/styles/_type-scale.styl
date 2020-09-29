@@ -1,0 +1,77 @@
+/* Variables */
+
+:root
+  for $size in -1...8
+    rfs($font-size-step[''+$size], ('--font-size-%s' % $size))
+
+/*
+
+   TYPE SCALE
+   Docs: http://tachyons.io/docs/typography/scale/
+
+   Base:
+    rf = responsive font-size
+
+   Modifiers
+     1 = 1st step in size scale
+     2 = 2nd step in size scale
+     3 = 3rd step in size scale
+     4 = 4th step in size scale
+     5 = 5th step in size scale
+     6 = 6th step in size scale
+     7 = 7th step in size scale
+
+   Media Query Extensions:
+     -m-up = medium upwards
+     -m  = medium
+     -l-up = large
+*/
+
+
+_generate-type-style($size)
+  font-size 'var(--font-size-%s)' % $size
+  if $size <= 3
+    font-weight 'var(--font-weight-normal-%s)' % $size
+    letter-spacing 'var(--letter-spacing-normal-%s)' % $size
+    &.tm-lh-copy
+      line-height 'var(--line-height-copy-%s)' % $size
+  if $size <= 2
+    &.tm-medium
+      font-weight 'var(--font-weight-medium-%s)' % $size
+  &.tm-bold
+    font-weight 'var(--font-weight-bold-%s)' % $size
+    letter-spacing 'var(--letter-spacing-bold-%s)' % $size
+  &.tm-lh-title
+    line-height 'var(--line-height-title-%s)' % $size
+
+
+/* Type scale */
+/* Modular type scale + relative weights */
+for $size in -1...8
+  .tm-rf{$size}
+    _generate-type-style($size)
+
+@media $breakpoint-medium
+  for $size in -1...8
+    .tm-rf{$size}-m-up
+      _generate-type-style($size)
+
+@media $breakpoint-medium-only
+  for $size in -1...8
+    .tm-rf{$size}-m
+      _generate-type-style($size)
+
+@media $breakpoint-large
+  for $size in -1...8
+    .tm-rf{$size}-l-up
+      _generate-type-style($size)
+
+@media $breakpoint-large-only
+  for $size in -1...8
+    .tm-rf{$size}-l
+      _generate-type-style($size)
+
+@media $breakpoint-xl
+  for $size in -1...8
+    .tm-rf{$size}-xl-up
+      _generate-type-style($size)

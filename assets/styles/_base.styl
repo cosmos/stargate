@@ -1,0 +1,49 @@
+:root
+  --container-mw-lg 74rem
+
+html
+  font 400 100%/1.5 $font-family-sans-serif
+  font-feature-settings 'kern' on, 'liga' on, 'calt' on, 'zero' on
+  // TODO: figure out why nuxt isn't using postcss-font-variant to generate these vendor prefixes
+  -webkit-font-feature-settings 'kern' on, 'liga' on, 'calt' on, 'zero' on
+  text-size-adjust 100%
+  -moz-osx-font-smoothing grayscale
+  font-smoothing antialiased
+  font-variant-ligatures contextual common-ligatures
+  font-kerning normal
+  text-rendering optimizeLegibility
+  background-color var(--black)
+  color var(--gray-800)
+  scroll-behavior smooth
+
+@supports (font-variation-settings: normal)
+  html
+    font-family $font-family-sans-serif-var
+    font-weight $font-weight-normal-base
+
+body
+  overflow-x hidden
+  margin 0
+
+*,
+*::before,
+*::after
+  box-sizing border-box
+  margin 0
+
+::selection
+  background #4251FA
+  color var(--white)
+
+a
+  color var(--link)
+  text-decoration none
+  outline-color rgba(64, 179, 255, 0.92)
+  cursor pointer
+  transition all .1s ease-out
+  &:hover,
+  &:focus
+    color var(--white)
+  &:active
+    opacity 0.7
+    transition-duration 0s

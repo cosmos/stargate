@@ -1,13 +1,102 @@
 <template>
-  <component
-    :is="tag"
-    class="component__button"
-    :style="{ '--background-color': backgroundColor }"
-    v-bind="{ target, type, disabled, href }"
-    :class="[`button__size__${size}`, `button__style__${buttonStyle}`]"
+  <!-- INTERNAL -->
+  <nuxt-link
+    v-if="toLink === 'internal'"
+    :to="to"
+    v-bind="{ type, disabled }"
+    :class="[
+      'tm-button',
+      `tm-button__size__${size}`,
+      `tm-button__variant__${variant}`,
+      'tm-lh-title',
+      'tm-medium',
+      glow && 'tm-button__glow',
+      styles,
+    ]"
+    :style="{
+      '--background-color': backgroundColor,
+      '--border-color': borderColor,
+      '--color': color,
+    }"
   >
-    <slot />
-  </component>
+    <span>
+      <slot />
+    </span>
+  </nuxt-link>
+  <!-- EXTERNAL -->
+  <a
+    v-else-if="toLink === 'external'"
+    :href="href"
+    target="_blank"
+    rel="noreferrer noopener"
+    v-bind="{ type, target, href, rel, disabled }"
+    :class="[
+      'tm-button',
+      `tm-button__size__${size}`,
+      `tm-button__variant__${variant}`,
+      'tm-lh-title',
+      'tm-medium',
+      glow && 'tm-button__glow',
+      styles,
+    ]"
+    :style="{
+      '--background-color': backgroundColor,
+      '--border-color': borderColor,
+      '--color': color,
+    }"
+  >
+    <span>
+      <slot />
+    </span>
+  </a>
+  <!-- DISABLED -->
+  <button
+    v-else-if="disabled"
+    v-bind="{ type, target, href, rel, disabled }"
+    :class="[
+      'tm-button',
+      `tm-button__size__${size}`,
+      `tm-button__variant__${variant}`,
+      'tm-lh-title',
+      'tm-medium',
+      glow && 'tm-button__glow',
+      styles,
+    ]"
+    :style="{
+      '--background-color': backgroundColor,
+      '--border-color': borderColor,
+      '--color': color,
+    }"
+    aria-disabled="true"
+  >
+    <span>
+      <slot />
+    </span>
+  </button>
+
+  <!-- DEFAULT -->
+  <button
+    v-else
+    v-bind="{ type, target, href, rel, disabled }"
+    :class="[
+      'tm-button',
+      `tm-button__size__${size}`,
+      `tm-button__variant__${variant}`,
+      'tm-lh-title',
+      'tm-medium',
+      glow && 'tm-button__glow',
+      styles,
+    ]"
+    :style="{
+      '--background-color': backgroundColor,
+      '--border-color': borderColor,
+      '--color': color,
+    }"
+  >
+    <span>
+      <slot />
+    </span>
+  </button>
 </template>
 
 <script>
@@ -15,17 +104,45 @@ export default {
   props: {
     size: {
       /**
-       * `xs` | `s` | `m` | `l` | `xl`
+       * `s` | `m` | `l` | `xl`
        */
       type: String,
       default: 'm',
     },
     /**
-     * CSS color of `regular` | `danger`
+     * Variant: `text` | `outlined` | `contained`
+     */
+    variant: {
+      type: String,
+      default: 'contained',
+    },
+    /**
+     * CSS color of background
      */
     backgroundColor: {
       type: String,
-      default: 'rgb(80, 100, 251)',
+      default: 'rgb(80, 100, 251)', // TODO: use a color variable
+    },
+    /**
+     * CSS color of border
+     */
+    borderColor: {
+      type: String,
+      default: 'rgb(80, 100, 251)', // TODO: use a color variable
+    },
+    /**
+     * CSS color of border
+     */
+    color: {
+      type: String,
+      default: 'var(--white)',
+    },
+    /**
+     * Glow style
+     */
+    glow: {
+      type: Boolean,
+      default: false,
     },
     /**
      * Disabled
@@ -35,18 +152,25 @@ export default {
       default: false,
     },
     /**
-     * Type
+     * Type: `submit`
      */
     type: {
       type: String,
       default: 'submit',
     },
     /**
-     * Tag
+     * toLink: `anchor` | `internal` | `external`
      */
-    tag: {
+    toLink: {
       type: String,
-      default: 'button',
+      default: null,
+    },
+    /**
+     * to
+     */
+    to: {
+      type: String,
+      default: null,
     },
     /**
      * href
@@ -62,66 +186,178 @@ export default {
       type: String,
       default: null,
     },
+    /**
+     * rel
+     */
+    rel: {
+      type: String,
+      default: null,
+    },
+    /**
+     * Classes
+     */
+    classes: {
+      type: String,
+      default: '',
+    },
   },
   computed: {
-    buttonStyle() {
-      const styles = ['regular', 'danger']
-      const exists = styles.indexOf(this.background)
-      if (exists >= 0) {
-        return styles[exists]
-      } else {
-        return 'standard'
+    styles() {
+      let classes = this.classes
+      switch (this.size) {
+        case 's':
+          classes += ' tm-rf-1 tm-rf0-l-up'
+          break
+        case 'l':
+          classes += ' tm-rf1'
+          break
+        case 'xl':
+          classes += ' tm-rf2'
+          break
+        default:
+          classes += ' tm-rf0'
       }
+      return classes
     },
   },
 }
 </script>
 
 <style lang="stylus" scoped>
-.component__button
-  border none
-  font-size initial
-  margin 0
+.tm-button
+  // resets
+  appearance none
   padding 0
-  padding 1.25rem 3rem
-  border-radius 0.625rem
+  text-rendering inherit
+  font-family inherit
+  background none
+  border none
+  outline 0
   cursor pointer
   user-select none
-  outline none
-  transition all 0.25s
-  text-align center
-  // text-transform uppercase
-  font-weight 500
-  line-height 1.25
-  letter-spacing 0.02em
   text-decoration none
-  color white
-  white-space nowrap
+  &::-moz-focus-inner
+    border 0
+    padding 0
 
-button:disabled
-  opacity 0.5
+  // base
+  position relative
+  display inline-flex
+  align-items center
+  justify-content center
+  text-align inherit
+  color var(--color)
+  border-radius 0.35em // relative border-radius
+  transition all .25s $ease-out
+  &:active
+    opacity 0.88
+    transition-duration .05s
 
-.component__button:hover,
-.component__button:focus
-  box-shadow 0px 16px 32px rgba(0, 0, 0, 0.08),
-    0px 8px 12px rgba(0, 0, 0, 0.06), 0px 1px 0px rgba(0, 0, 0, 0.05)
-  opacity 0.8
+  /* glow styling (optional) */
+  &__glow
+    &::before
+      content ''
+      position absolute
+      border-radius inherit
+      transform translateZ(0)
+      z-index -1
+      opacity 0.4
+      transition background-position .4s $ease-out, opacity .5s $ease-out
+    &:hover,
+    &:focus
+      &,
+      &::before
+        background-position right bottom
+      &::before
+        transition-duration .2s
+        opacity 0.5
 
-.button__size__xs
-  font-size 0.75rem
+  /* text variant */
+  &__variant__text
+    &:hover,
+    &:focus
+      opacity 0.8
+    &:active
+      opacity 0.6
 
-.button__size__s
-  font-size 0.875rem
+  /* outlined variant */
+  &__variant__outlined
+    &::after,
+    &.tm-button__glow::before
+      border 0.0625rem solid var(--border-color)
+    &::after // border
+      content ''
+      position absolute
+      trbl 0
+      border-radius inherit
+      opacity 0.2
+      transition opacity .25s $ease-out
+    &.tm-button__glow::before // glow
+      trbl -0.0625em
+      filter blur(0.4rem)
+    &:hover,
+    &:focus
+      &::after
+        opacity 1
 
-.button__size__m
-  font-size 1rem
+  /* contained variant */
+  &__variant__contained
+    background var(--background-color)
+    background-size 200% auto
+    box-shadow var(--elevation-4)
+    hover-raise -1px
+    hover-elevation(16, $active-opacity:0.4)
+    &::before // glow
+      trbl 0.125em 1em 0
+      background inherit
+      filter blur(1.25rem) brightness(1.5)
 
-.button__size__l
-  font-size 1.25rem
-  font-weight bold
-  line-height 126.3%
-  letter-spacing -0.005em
+  /* disabled state */
+  &[disabled]
+    cursor not-allowed
+    opacity 0.65
+    pointer-events none
 
-.button__size__xl
-  font-size 1.5rem
+  // sizes
+  &__size__s
+    padding-top var(--spacing-4)
+    padding-bottom var(--spacing-4)
+    &.tm-button__variant__contained,
+    &.tm-button__variant__outlined
+       padding-left var(--spacing-6)
+       padding-right var(--spacing-6)
+  &__size__m
+    padding-top var(--spacing-5)
+    padding-bottom var(--spacing-5)
+    &.tm-button__variant__contained,
+    &.tm-button__variant__outlined
+       padding-left var(--spacing-8)
+       padding-right var(--spacing-8)
+  &__size__l
+    padding-top var(--spacing-6)
+    padding-bottom var(--spacing-6)
+    &.tm-button__variant__contained,
+    &.tm-button__variant__outlined
+       padding-left var(--spacing-9)
+       padding-right var(--spacing-9)
+  &__size__xl
+    padding-top var(--spacing-6)
+    padding-bottom var(--spacing-6)
+
+  /* icons */
+  >>> .icon__right
+  >>> .icon__left
+    display inline-block
+    transform-fix()
+    transition transform 0.25s $ease-out
+  >>> .icon__left
+    margin-right 0.5em
+  >>> .icon__right
+    margin-left 0.5em
+  &:hover,
+  &:focus
+    >>> .icon__right
+      transform translateX(0.25rem)
+    >>> .icon__left
+      transform rotate(5deg) scale(1.05)
 </style>
