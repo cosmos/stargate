@@ -6,7 +6,7 @@
           Roadmap
         </div>
         <div class="section-title tm-rf6 tm-bold tm-lh-title">
-          {{ progressTotal }}% complete
+          <span class="percentage">{{ progressTotal }}%</span> complete
         </div>
         <div class="section-milestones">
           <div class="section-milestones__title tm-rf3 tm-bold tm-lh-title">
@@ -241,6 +241,11 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+.percentage
+  background linear-gradient(to bottom right, #3fb3ff, #9010c7)
+  -webkit-background-clip text
+  -webkit-text-fill-color transparent
+
 .section-roadmap
   .section-header
     grid-column 6 / span 7
