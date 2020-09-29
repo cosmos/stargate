@@ -684,11 +684,6 @@ export default {}
   &:last-child
     margin-right 0
 
-.top-box
-  display flex
-  flex-wrap wrap
-  justify-content space-between
-
 .update-container
   padding var(--spacing-6) var(--spacing-6) var(--spacing-3)
   background #282B53
