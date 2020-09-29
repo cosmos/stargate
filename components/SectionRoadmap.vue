@@ -184,6 +184,11 @@ export default {
           title: 'Week 10 & 11 status',
           date: 'September 16',
         },
+        {
+          url: 'https://github.com/cosmosdevs/stargate/blob/master/week12.md',
+          title: 'Week 12 status',
+          date: 'September 28',
+        },
       ],
     }
   },
