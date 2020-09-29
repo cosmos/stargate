@@ -108,6 +108,7 @@
                   color="var(--link)"
                   variant="text"
                   glow
+                  class="btn"
                   >Discuss</tm-button
                 >
               </div>
@@ -175,6 +176,7 @@
                   color="var(--link)"
                   variant="text"
                   glow
+                  class="btn"
                   >Discuss</tm-button
                 >
               </div>
@@ -639,7 +641,6 @@ export default {}
         align-items flex-end
         flex-direction row
         flex-wrap wrap
-        gap var(--spacing-7)
         margin-top var(--spacing-7)
   .section-status
     grid-column 1 / 5
@@ -677,6 +678,11 @@ export default {}
     grid-column 6 / span 7
     &__paragraph
       color var(--gray-800)
+
+.btn
+  margin-right var(--spacing-7)
+  &:last-child
+    margin-right 0
 
 .top-box
   display flex
