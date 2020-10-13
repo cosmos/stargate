@@ -161,12 +161,13 @@
               </div>
               <div class="testnets-list__item__cta">
                 <tm-button
-                  border-color="var(--white)"
-                  color="var(--white)"
-                  variant="outlined"
+                  to-link="external"
+                  href="https://github.com/cosmos/testnets/tree/anil/bigbang/bigbang-1"
                   size="l"
+                  color="var(--white)"
+                  background-color="linear-gradient(92.99deg, #8D0EC0 0%, #4251FA 100%)"
+                  glow
                   class="btn"
-                  disabled
                   >Join</tm-button
                 >
                 <tm-button
