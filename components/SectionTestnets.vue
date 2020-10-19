@@ -27,7 +27,7 @@
               <div
                 class="testnets-list__item__text__top__title tm-rf3 tm-bold tm-lh-title tm-code"
               >
-                stargate-3a
+                stargate-4
               </div>
               <div class="testnets-list__item__text__top__box">
                 <a
@@ -116,7 +116,7 @@
           </div>
           <div class="testnets-list__item testnets-list__item__inactive">
             <img
-              src="~/assets/illustrations/bigbang-flag.svg"
+              src="~/assets/illustrations/stargate-flag.svg"
               class="testnets-list__item__graphics"
             />
             <div class="testnets-list__item__text__top">
@@ -126,9 +126,9 @@
                 bigbang-1
               </div>
               <div
-                class="testnets-list__item__text__top__status outline-btn tm-rf0 tm-lh-title tm-bold"
+                class="testnets-list__item__text__top__status tm-rf0 tm-bold tm-lh-title"
               >
-                Coming soon
+                Live
               </div>
             </div>
             <div class="testnets-list__item__text">
@@ -162,7 +162,7 @@
               <div class="testnets-list__item__cta">
                 <tm-button
                   to-link="external"
-                  href="https://github.com/cosmos/testnets/tree/anil/bigbang/bigbang-1"
+                  href="https://github.com/cosmos/testnets/tree/master/bigbang-1"
                   size="l"
                   color="var(--white)"
                   background-color="linear-gradient(92.99deg, #8D0EC0 0%, #4251FA 100%)"
@@ -218,7 +218,7 @@
                 <div
                   class="section-tabs__text__title tm-rf2 tm-bold tm-lh-title tm-measure"
                 >
-                  Joining <span class="tm-code">stargate-3a</span>
+                  Joining <span class="tm-code">stargate-4</span>
                 </div>
                 <p
                   class="section-tabs__text__paragraph tm-measure tm-rf1 tm-lh-copy"
@@ -244,7 +244,7 @@
                   <div
                     class="update-container__title tm-rf1 tm-bold tm-lh-copy"
                   >
-                    Joined stargate-3a testnet?
+                    Joined stargate-4 testnet?
                   </div>
                   <tm-button
                     to-link="external"
@@ -270,7 +270,7 @@
                     href="https://github.com/cosmosdevs/stargate#testnet"
                     target="_blank"
                     rel="noreferrer noopener"
-                    ><span class="tm-code">stargate-3a</span></a
+                    ><span class="tm-code">stargate-4</span></a
                   >
                   testnet.
                 </p>
@@ -333,7 +333,7 @@
                   <div
                     class="update-container__title tm-rf1 tm-bold tm-lh-copy"
                   >
-                    Joined stargate-3a testnet?
+                    Joined stargate-4 testnet?
                   </div>
                   <p class="update-container__cta">
                     <tm-button
@@ -371,7 +371,7 @@
                   infrastructure ahead of time, using the
                   <span
                     class="section-tabs__text__paragraph tm-measure__stargate tm-rf1 tm-lh-copy tm-code"
-                    >stargate-3a</span
+                    >stargate-4</span
                   >
                   testnet.
                 </p>
@@ -433,7 +433,7 @@
                   <div
                     class="update-container__title tm-rf1 tm-bold tm-lh-copy"
                   >
-                    Joined stargate-3a testnet?
+                    Joined stargate-4 testnet?
                   </div>
                   <p class="update-container__cta">
                     <tm-button
@@ -633,9 +633,13 @@ export default {}
               margin-right var(--spacing-3)
       &__inactive
         .testnets-list__item__text__top__title
-          color var(--gray-600)
+          color #ffd1fd
         .testnets-list__item__text__top__status
-          font-weight normal
+          padding var(--spacing-1) var(--spacing-4)
+          background #E644F8
+          border-radius $border-radius-5
+          display inline-block
+          color var(--white)
       &__cta
         display flex
         justify-content flex-start
