@@ -32,6 +32,7 @@ export default {}
   overflow-x auto
   overflow-y hidden
   white-space nowrap
+  scrollbar-width none
   &__list
     display flex
     flex-direction row
