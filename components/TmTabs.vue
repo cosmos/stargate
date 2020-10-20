@@ -48,6 +48,8 @@ export default {
   font-size 1rem
   justify-content space-between
   overflow auto
+  &::-webkit-scrollbar
+    display none
 
 .tabs ul
   align-items center
