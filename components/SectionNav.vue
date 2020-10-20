@@ -29,7 +29,7 @@ export default {}
 
 <style lang="stylus" scoped>
 .nav
-  overflow scroll
+  overflow auto
   white-space nowrap
   &__list
     display flex
@@ -76,9 +76,6 @@ export default {}
       flex-direction row
       justify-content space-between
       transition transform 200ms ease 0s
-      overflow-x scroll
-      overflow-y hidden
-      white-space nowrap
       width fit-content
       -webkit-overflow-scrolling touch
 
