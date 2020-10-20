@@ -29,7 +29,8 @@ export default {}
 
 <style lang="stylus" scoped>
 .nav
-  overflow auto
+  overflow-x auto
+  overflow-y hidden
   white-space nowrap
   &__list
     display flex

@@ -47,7 +47,8 @@ export default {
   display flex
   font-size 1rem
   justify-content space-between
-  overflow auto
+  overflow-x auto
+  overflow-y hidden
   &::-webkit-scrollbar
     display none
 
