@@ -698,6 +698,17 @@ export default {}
 .list-title
   margin-bottom var(--spacing-5)
 
+.list-item
+  position relative
+  &::after
+    content "↗"
+    position absolute
+    bottom 0.466em
+    padding-left 0.1875em
+    font-size 0.75em
+    line-height 1
+    transition transform 0.2s ease-out 0s
+
 .list-item + .list-item
   margin-top var(--spacing-5)
 
