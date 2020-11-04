@@ -238,7 +238,7 @@
               </div>
               <div class="list-item tm-rf0 tm-lh-copy">
                 <a
-                  href="https://bigbang.bigdipper.live"
+                  href="https://stargate.bigdipper.live"
                   target="blank_"
                   rel="noreferrer noopener"
                   >The Big Dipper</a
