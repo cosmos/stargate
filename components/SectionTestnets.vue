@@ -78,7 +78,7 @@
                 <div class="testnets-list__item__cta">
                   <tm-button
                     to-link="external"
-                    href="https://github.com/cosmosdevs/stargate#testnet"
+                    href="https://github.com/cosmos/testnets/tree/master/bigbang-1"
                     size="l"
                     color="var(--white)"
                     background-color="linear-gradient(92.99deg, #8D0EC0 0%, #4251FA 100%), #4251FA;"
@@ -232,7 +232,7 @@
               </div>
               <div class="list-item tm-rf0 tm-lh-copy">
                 <a
-                  href="https://look.ping.pub/#/validator?chain=bigbang-1"
+                  href="https://look.ping.pub/#/validator?chain=stargate-4"
                   target="blank_"
                   rel="noreferrer noopener"
                   >Look</a
@@ -260,7 +260,7 @@
                 >
                   cosmoshub-stargate-test
                 </div>
-                <div class="testnets-list__item__text__top__box">
+                <div class="testnets-list__item__text__top__box__inactive">
                   <div
                     class="testnets-list__item__text__top__status outline-btn tm-rf0 tm-bold tm-lh-title"
                   >
@@ -753,6 +753,7 @@ export default {}
           &__top
             display flex
             align-items center
+            flex-wrap wrap
           &__title
             color #FFD1FD
             // margin-bottom var(--spacing-6)
@@ -937,6 +938,7 @@ export default {}
 
   .section-testnets .testnets-list__item__text__right
     grid-column 1/12
+    margin-top var(--spacing-5)
 
   .testnets-list__item__text__bot__labels
     flex-flow row wrap
@@ -952,6 +954,12 @@ export default {}
       grid-column 1 / span 12
 
 @media screen and (max-width: 576px)
+  .section-testnets .testnets-list__item__text__top__status
+    margin-left 0
+
+  .testnets-list__item__text__top__box__inactive
+    margin-top var(--spacing-4)
+
   .section-testnets .section-tabs__code
     grid-template-columns auto
     gap var(--spacing-6)
