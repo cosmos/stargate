@@ -50,8 +50,7 @@
               <div class="testnets-list__item__text">
                 <div class="testnets-list__item__text__mid"></div>
                 <p
-                  class="testnets-list__item__text__mid__desc tm-rf1 tm-lh-copy"
-                  tm-measure
+                  class="testnets-list__item__text__mid__desc tm-rf1 tm-lh-copy tm-measure"
                 >
                   A community-led testnet aimed at the wider Cosmos ecosystem
                   and independent zone developers.
@@ -161,8 +160,7 @@
               <div class="testnets-list__item__text">
                 <div class="testnets-list__item__text__mid"></div>
                 <p
-                  class="testnets-list__item__text__mid__desc tm-rf1 tm-lh-copy"
-                  tm-measure
+                  class="testnets-list__item__text__mid__desc tm-rf1 tm-lh-copy tm-measure"
                 >
                   The first simulated upgrade of the Cosmos Hub and the primary
                   public integration testnet for
@@ -271,8 +269,7 @@
               <div class="testnets-list__item__text">
                 <div class="testnets-list__item__text__mid"></div>
                 <p
-                  class="testnets-list__item__text__mid__desc tm-rf1 tm-lh-copy"
-                  tm-measure
+                  class="testnets-list__item__text__mid__desc tm-rf1 tm-lh-copy tm-measure"
                 >
                   An upgrade of the Cosmos Hub to Stargate (Cosmos SDK v0.37 -->
                   v0.40). Highly recommended for Cosmos Hub validators.
@@ -293,8 +290,6 @@
                 </div>
                 <div class="testnets-list__item__cta">
                   <tm-button
-                    to-link="external"
-                    href="https://github.com/cosmosdevs/stargate#testnet"
                     size="l"
                     color="var(--white)"
                     background-color="linear-gradient(92.99deg, #8D0EC0 0%, #4251FA 100%), #4251FA;"
@@ -812,7 +807,7 @@ export default {}
               margin-right var(--spacing-3)
       &__inactive
         .testnets-list__item__text__top__title
-          color #ffd1fd
+          color #989BB9
         .testnets-list__item__text__top__status
           padding var(--spacing-1) var(--spacing-4)
           background #E644F8
@@ -969,7 +964,7 @@ export default {}
     margin-left 0
 
   .testnets-list__item__text__top__box__inactive
-    margin-top var(--spacing-4)
+    margin-top var(--spacing-6)
 
   .section-testnets .section-tabs__code
     grid-template-columns auto
