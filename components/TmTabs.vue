@@ -47,7 +47,9 @@ export default {
   display flex
   font-size 1rem
   justify-content space-between
-  overflow scroll
+  overflow-x auto
+  overflow-y hidden
+  scrollbar-width none
   &::-webkit-scrollbar
     display none
 
@@ -58,9 +60,6 @@ export default {
   flex-shrink 0
   padding 0
   margin 0
-  overflow-x scroll
-  overflow-y hidden
-  white-space nowrap
   user-select none
 
 .tabs li
