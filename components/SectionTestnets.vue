@@ -20,168 +20,318 @@
         <div class="testnets-list">
           <div class="testnets-list__item">
             <img
-              src="~/assets/illustrations/stargate-flag.svg"
+              src="~/assets/illustrations/active-flag.svg"
               class="testnets-list__item__graphics"
             />
             <div class="testnets-list__item__text__top">
-              <div
-                class="testnets-list__item__text__top__title tm-rf3 tm-bold tm-lh-title tm-code"
-              >
-                stargate-4
+              <div class="testnets-list__item__text__top__top">
+                <div
+                  class="testnets-list__item__text__top__title tm-rf3 tm-bold tm-lh-title tm-code"
+                >
+                  bigbang-1
+                </div>
+                <div class="testnets-list__item__text__top__box">
+                  <!-- <a
+                    href="https://stargate.bigdipper.live"
+                    target="blank_"
+                    rel="noreferrer noopener"
+                    class="testnets-list__item__text__top__explorer tm-rf0 tm-medium tm-lh-solid"
+                  >
+                    <span class="icon"><img src="/icons/eye.svg" /></span>
+                    Explorer
+                  </a> -->
+                  <div
+                    class="testnets-list__item__text__top__status tm-rf0 tm-bold tm-lh-title"
+                  >
+                    Live
+                  </div>
+                </div>
               </div>
-              <div class="testnets-list__item__text__top__box">
+              <div class="testnets-list__item__text">
+                <div class="testnets-list__item__text__mid"></div>
+                <p
+                  class="testnets-list__item__text__mid__desc tm-rf1 tm-lh-copy tm-measure"
+                >
+                  A community-led testnet aimed at the wider Cosmos ecosystem
+                  and independent zone developers.
+                </p>
+                <div class="testnets-list__item__text__bot">
+                  <div
+                    class="testnets-list__item__text__bot__display tm-rf-1 tm-medium tm-lh-title tm-overline"
+                  >
+                    Recommended for
+                  </div>
+                  <div class="testnets-list__item__text__bot__labels">
+                    <div
+                      class="testnets-list__item__text__bot__labels__item tm-rf0 tm-lh-title"
+                    >
+                      Validators
+                    </div>
+                    <div
+                      class="testnets-list__item__text__bot__labels__item tm-rf0 tm-lh-title"
+                    >
+                      Zone Developers
+                    </div>
+                  </div>
+                </div>
+                <div class="testnets-list__item__cta">
+                  <tm-button
+                    to-link="external"
+                    href="https://github.com/cosmos/testnets/tree/master/bigbang-1"
+                    size="l"
+                    color="var(--white)"
+                    background-color="linear-gradient(92.99deg, #8D0EC0 0%, #4251FA 100%), #4251FA;"
+                    glow
+                    class="btn"
+                    >Join</tm-button
+                  >
+                  <tm-button
+                    to-link="external"
+                    href="https://discord.com/channels/669268347736686612/723170066937413693"
+                    size="l"
+                    color="var(--link)"
+                    variant="text"
+                    glow
+                    class="btn"
+                    >Discuss</tm-button
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="testnets-list__item__text__right">
+              <div class="list-title tm-rf-1 tm-medium tm-lh-title tm-overline">
+                explorers
+              </div>
+              <div class="list-item tm-rf0 tm-lh-copy">
+                <a
+                  href="https://bigbang.aneka.io"
+                  target="blank_"
+                  rel="noreferrer noopener"
+                  >Aneka</a
+                >
+              </div>
+              <div class="list-item tm-rf0 tm-lh-copy">
+                <a
+                  href="https://look.ping.pub/#/validator?chain=bigbang-1"
+                  target="blank_"
+                  rel="noreferrer noopener"
+                  >Look</a
+                >
+              </div>
+              <div class="list-item tm-rf0 tm-lh-copy">
+                <a
+                  href="https://bigbang.bigdipper.live"
+                  target="blank_"
+                  rel="noreferrer noopener"
+                  >The Big Dipper</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="testnets-list__item">
+            <img
+              src="~/assets/illustrations/active-flag.svg"
+              class="testnets-list__item__graphics"
+            />
+            <div class="testnets-list__item__text__top">
+              <div class="testnets-list__item__text__top__top">
+                <div
+                  class="testnets-list__item__text__top__title tm-rf3 tm-bold tm-lh-title tm-code"
+                >
+                  stargate-4
+                </div>
+                <div class="testnets-list__item__text__top__box">
+                  <!-- <a
+                    href="https://stargate.bigdipper.live"
+                    target="blank_"
+                    rel="noreferrer noopener"
+                    class="testnets-list__item__text__top__explorer tm-rf0 tm-medium tm-lh-solid"
+                  >
+                    <span class="icon"><img src="/icons/eye.svg" /></span>
+                    Explorer
+                  </a> -->
+                  <div
+                    class="testnets-list__item__text__top__status tm-rf0 tm-bold tm-lh-title"
+                  >
+                    Live
+                  </div>
+                </div>
+              </div>
+              <div class="testnets-list__item__text">
+                <div class="testnets-list__item__text__mid"></div>
+                <p
+                  class="testnets-list__item__text__mid__desc tm-rf1 tm-lh-copy tm-measure"
+                >
+                  The first simulated upgrade of the Cosmos Hub and the primary
+                  public integration testnet for
+                  <a
+                    href="https://airtable.com/shrEr1bQD6COG9WH0"
+                    target="blank_"
+                    rel="noreferrer noopener"
+                    >Stargate-readiness</a
+                  >.
+                </p>
+                <div class="testnets-list__item__text__bot">
+                  <div
+                    class="testnets-list__item__text__bot__display tm-rf-1 tm-medium tm-lh-title tm-overline"
+                  >
+                    Recommended for
+                  </div>
+                  <div class="testnets-list__item__text__bot__labels">
+                    <div
+                      class="testnets-list__item__text__bot__labels__item tm-rf0 tm-lh-title"
+                    >
+                      Validators
+                    </div>
+                    <div
+                      class="testnets-list__item__text__bot__labels__item tm-rf0 tm-lh-title"
+                    >
+                      Wallets
+                    </div>
+                    <div
+                      class="testnets-list__item__text__bot__labels__item tm-rf0 tm-lh-title"
+                    >
+                      Explorers
+                    </div>
+                    <div
+                      class="testnets-list__item__text__bot__labels__item tm-rf0 tm-lh-title"
+                    >
+                      Exchanges
+                    </div>
+                  </div>
+                </div>
+                <div class="testnets-list__item__cta">
+                  <tm-button
+                    to-link="external"
+                    href="https://github.com/cosmosdevs/stargate#testnet"
+                    size="l"
+                    color="var(--white)"
+                    background-color="linear-gradient(92.99deg, #8D0EC0 0%, #4251FA 100%), #4251FA;"
+                    glow
+                    class="btn"
+                    >Join</tm-button
+                  >
+                  <tm-button
+                    to-link="external"
+                    href="https://discord.com/channels/669268347736686612/723170066937413693"
+                    size="l"
+                    color="var(--link)"
+                    variant="text"
+                    glow
+                    class="btn"
+                    >Discuss</tm-button
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="testnets-list__item__text__right">
+              <div class="list-title tm-rf-1 tm-medium tm-lh-title tm-overline">
+                explorers
+              </div>
+              <div class="list-item tm-rf0 tm-lh-copy">
+                <a
+                  href="https://look.ping.pub/#/validator?chain=stargate-4"
+                  target="blank_"
+                  rel="noreferrer noopener"
+                  >Look</a
+                >
+              </div>
+              <div class="list-item tm-rf0 tm-lh-copy">
                 <a
                   href="https://stargate.bigdipper.live"
                   target="blank_"
                   rel="noreferrer noopener"
-                  class="testnets-list__item__text__top__explorer tm-rf0 tm-medium tm-lh-solid"
-                >
-                  <span class="icon"><img src="/icons/eye.svg" /></span>
-                  Explorer
-                </a>
-                <div
-                  class="testnets-list__item__text__top__status tm-rf0 tm-bold tm-lh-title"
-                >
-                  Live
-                </div>
-              </div>
-            </div>
-            <div class="testnets-list__item__text">
-              <div class="testnets-list__item__text__mid"></div>
-              <p
-                class="testnets-list__item__text__mid__desc tm-rf1 tm-lh-copy"
-                tm-measure
-              >
-                The first simulated upgrade of the Cosmos Hub and the primary
-                public integration testnet for
-                <a
-                  href="https://airtable.com/shrEr1bQD6COG9WH0"
-                  target="blank_"
-                  rel="noreferrer noopener"
-                  >Stargate-readiness</a
-                >.
-              </p>
-              <div class="testnets-list__item__text__bot">
-                <div
-                  class="testnets-list__item__text__bot__display tm-rf-1 tm-medium tm-lh-title tm-overline"
-                >
-                  Recommended for
-                </div>
-                <div class="testnets-list__item__text__bot__labels">
-                  <div
-                    class="testnets-list__item__text__bot__labels__item tm-rf0 tm-lh-title"
-                  >
-                    Validators
-                  </div>
-                  <div
-                    class="testnets-list__item__text__bot__labels__item tm-rf0 tm-lh-title"
-                  >
-                    Wallets
-                  </div>
-                  <div
-                    class="testnets-list__item__text__bot__labels__item tm-rf0 tm-lh-title"
-                  >
-                    Explorers
-                  </div>
-                  <div
-                    class="testnets-list__item__text__bot__labels__item tm-rf0 tm-lh-title"
-                  >
-                    Exchanges
-                  </div>
-                </div>
-              </div>
-              <div class="testnets-list__item__cta">
-                <tm-button
-                  to-link="external"
-                  href="https://github.com/cosmosdevs/stargate#testnet"
-                  size="l"
-                  color="var(--white)"
-                  background-color="linear-gradient(92.99deg, #8D0EC0 0%, #4251FA 100%)"
-                  glow
-                  class="btn"
-                  >Join</tm-button
-                >
-                <tm-button
-                  to-link="external"
-                  href="https://discord.com/channels/669268347736686612/723170066937413693"
-                  size="l"
-                  color="var(--link)"
-                  variant="text"
-                  glow
-                  class="btn"
-                  >Discuss</tm-button
+                  >The Big Dipper</a
                 >
               </div>
             </div>
           </div>
           <div class="testnets-list__item testnets-list__item__inactive">
             <img
-              src="~/assets/illustrations/stargate-flag.svg"
+              src="~/assets/illustrations/inactive-flag.svg"
               class="testnets-list__item__graphics"
             />
             <div class="testnets-list__item__text__top">
-              <div
-                class="testnets-list__item__text__top__title tm-rf3 tm-bold tm-lh-title tm-code"
-              >
-                bigbang-1
-              </div>
-              <div
-                class="testnets-list__item__text__top__status tm-rf0 tm-bold tm-lh-title"
-              >
-                Live
-              </div>
-            </div>
-            <div class="testnets-list__item__text">
-              <div class="testnets-list__item__text__mid">
+              <div class="testnets-list__item__text__top__top">
                 <div
+                  class="testnets-list__item__text__top__title tm-rf3 tm-bold tm-lh-title tm-code"
+                >
+                  cosmoshub-stargate-test
+                </div>
+                <div class="testnets-list__item__text__top__box__inactive">
+                  <div
+                    class="testnets-list__item__text__top__status outline-btn tm-rf0 tm-bold tm-lh-title"
+                  >
+                    Coming soon
+                  </div>
+                </div>
+              </div>
+              <div class="testnets-list__item__text">
+                <div class="testnets-list__item__text__mid"></div>
+                <p
                   class="testnets-list__item__text__mid__desc tm-rf1 tm-lh-copy tm-measure"
                 >
-                  A community-led testnet aimed at the wider Cosmos ecosystem
-                  and independent zone developers.
-                </div>
-              </div>
-              <div class="testnets-list__item__text__bot">
-                <div
-                  class="testnets-list__item__text__bot__display tm-rf-1 tm-medium tm-lh-title tm-overline"
-                >
-                  Recommended for
-                </div>
-                <div class="testnets-list__item__text__bot__labels">
+                  An upgrade of the Cosmos Hub to Stargate (Cosmos SDK v0.37 -->
+                  v0.40). Highly recommended for Cosmos Hub validators.
+                </p>
+                <div class="testnets-list__item__text__bot">
                   <div
-                    class="testnets-list__item__text__bot__labels__item tm-rf0 tm-lh-title"
+                    class="testnets-list__item__text__bot__display tm-rf-1 tm-medium tm-lh-title tm-overline"
                   >
-                    Validators
+                    Recommended for
                   </div>
-                  <div
-                    class="testnets-list__item__text__bot__labels__item tm-rf0 tm-lh-title"
-                  >
-                    Cosmos SDK devs
+                  <div class="testnets-list__item__text__bot__labels">
+                    <div
+                      class="testnets-list__item__text__bot__labels__item tm-rf0 tm-lh-title"
+                    >
+                      Validators
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="testnets-list__item__cta">
-                <tm-button
-                  to-link="external"
-                  href="https://github.com/cosmos/testnets/tree/master/bigbang-1"
-                  size="l"
-                  color="var(--white)"
-                  background-color="linear-gradient(92.99deg, #8D0EC0 0%, #4251FA 100%)"
-                  glow
-                  class="btn"
-                  >Join</tm-button
-                >
-                <tm-button
-                  to-link="external"
-                  href="https://discord.com/channels/669268347736686612/723170066937413693"
-                  size="l"
-                  color="var(--link)"
-                  variant="text"
-                  glow
-                  class="btn"
-                  >Discuss</tm-button
-                >
+                <div class="testnets-list__item__cta">
+                  <tm-button
+                    size="l"
+                    color="var(--white)"
+                    background-color="linear-gradient(92.99deg, #8D0EC0 0%, #4251FA 100%), #4251FA;"
+                    glow
+                    class="btn outline-btn"
+                    disabled
+                    >Join</tm-button
+                  >
+                  <!-- <tm-button
+                    to-link="external"
+                    href="https://discord.com/channels/669268347736686612/723170066937413693"
+                    size="l"
+                    color="var(--link)"
+                    variant="text"
+                    glow
+                    class="btn"
+                    >Discuss</tm-button
+                  > -->
+                </div>
               </div>
             </div>
+            <!-- <div class="testnets-list__item__text__right">
+              <div class="list-title tm-rf-1 tm-medium tm-lh-title tm-overline">
+                explorers
+              </div>
+              <div class="list-item tm-rf0 tm-lh-copy">
+                <a
+                  href="https://look.ping.pub/#/validator?chain=bigbang-1"
+                  target="blank_"
+                  rel="noreferrer noopener"
+                  >Look</a
+                >
+              </div>
+              <div class="list-item tm-rf0 tm-lh-copy">
+                <a
+                  href="https://bigbang.bigdipper.live"
+                  target="blank_"
+                  rel="noreferrer noopener"
+                  >The Big Dipper</a
+                >
+              </div>
+            </div> -->
           </div>
         </div>
         <div class="section-status">
@@ -540,6 +690,23 @@ export default {}
   background transparent !important
   color var(--gray-600) !important
 
+.list-title
+  margin-bottom var(--spacing-5)
+
+.list-item a
+  position relative
+  &::after
+    content "↗"
+    position absolute
+    bottom 0.166em
+    padding-left 0.1875em
+    font-size 0.75em
+    line-height 1
+    transition transform 0.2s ease-out 0s
+
+.list-item + .list-item
+  margin-top var(--spacing-5)
+
 .section-testnets
   position relative
   overflow hidden
@@ -577,34 +744,41 @@ export default {}
       padding var(--spacing-10) 0
       &__graphics
         position absolute
-        top 0
+        top 3.75rem
         left 0
         width 100%
         max-width 9.875rem
       &__text
         position relative
-        grid-column 6 / span 7
-        margin-top var(--spacing-4)
+        // grid-column 6 / span 7
+        margin-top var(--spacing-6)
         &__top
           position relative
-          grid-column 1 / span 4
-          text-align right
+          grid-column 3 / span 7
+          text-align left
+          &__top
+            display flex
+            align-items center
+            flex-wrap wrap
           &__title
             color #FFD1FD
-            margin-bottom var(--spacing-6)
-          &__explorer
-            padding var(--spacing-2) 0
-            background transparent
-            display inline-block
-            margin-right var(--spacing-6)
-            .icon
-              margin-right var(--spacing-2)
+            // margin-bottom var(--spacing-6)
+          // &__explorer
+          //   padding var(--spacing-2) 0
+          //   background transparent
+          //   display inline-block
+          //   margin-right var(--spacing-6)
+          //   .icon
+          //     margin-right var(--spacing-2)
           &__status
             padding var(--spacing-1) var(--spacing-4)
             background #E644F8
             border-radius $border-radius-5
             display inline-block
             color var(--white)
+            margin-left var(--spacing-6)
+        &__right
+          grid-column 10 / 12
         &__mid
           &__desc
             color var(--gray-800)
@@ -633,7 +807,7 @@ export default {}
               margin-right var(--spacing-3)
       &__inactive
         .testnets-list__item__text__top__title
-          color #ffd1fd
+          color #989BB9
         .testnets-list__item__text__top__status
           padding var(--spacing-1) var(--spacing-4)
           background #E644F8
@@ -768,6 +942,10 @@ export default {}
     align-items center
     flex-direction row
 
+  .section-testnets .testnets-list__item__text__right
+    grid-column 1/12
+    margin-top var(--spacing-5)
+
   .testnets-list__item__text__bot__labels
     flex-flow row wrap
     &__item
@@ -782,6 +960,12 @@ export default {}
       grid-column 1 / span 12
 
 @media screen and (max-width: 576px)
+  .section-testnets .testnets-list__item__text__top__status
+    margin-left 0
+
+  .testnets-list__item__text__top__box__inactive
+    margin-top var(--spacing-4)
+
   .section-testnets .section-tabs__code
     grid-template-columns auto
     gap var(--spacing-6)

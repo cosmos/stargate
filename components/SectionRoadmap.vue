@@ -101,6 +101,32 @@
             </div>
           </div>
         </div>
+        <div class="section-status">
+          <div class="section-status__title tm-rf3 tm-bold tm-lh-title">
+            Proposals
+          </div>
+        </div>
+        <div class="section-list">
+          <a
+            v-for="item in proposals"
+            :key="item.title"
+            :href="item.url"
+            target="_blank"
+            rel="noreferrer noopener"
+            class="section-list__item"
+          >
+            <div
+              class="section-list__item__title tm-rf0 tm-rf1-m-up tm-bold tm-lh-title"
+            >
+              {{ item.title }}
+            </div>
+            <div
+              class="section-list__item__date tm-rf-1 tm-rf1-m-up tm-lh-title"
+            >
+              {{ item.date }} &#8594;
+            </div>
+          </a>
+        </div>
       </div>
     </div>
   </div>
@@ -188,6 +214,14 @@ export default {
           url: 'https://github.com/cosmosdevs/stargate/blob/master/week12.md',
           title: 'Week 12 status',
           date: 'September 23',
+        },
+      ],
+      proposals: [
+        {
+          url:
+            'https://github.com/iqlusioninc/governance/tree/zaki-stargate-upgrade-proposal/proposals/2020-11-stargate-upgrade',
+          title: 'Cosmos Stargate Hub Upgrade Proposal 2',
+          date: 'Draft',
         },
       ],
     }
