@@ -314,9 +314,10 @@ export default {
 
   /* disabled state */
   &[disabled]
-    cursor not-allowed
-    opacity 0.65
-    pointer-events none
+    cursor not-allowed !important
+    opacity 0.65 !important
+    // re-enable to remove cursor
+    // pointer-events none
 
   // sizes
   &__size__s

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <tm-top-banner />
+    <!-- <tm-top-banner /> -->
     <nuxt />
     <tm-footer />
   </div>
@@ -8,12 +8,12 @@
 
 <script>
 import TmFooter from '~/components/TmFooter.vue'
-import TmTopBanner from '~/components/TmTopBanner.vue'
+// import TmTopBanner from '~/components/TmTopBanner.vue'
 
 export default {
   components: {
     TmFooter,
-    TmTopBanner,
+    // TmTopBanner,
   },
 }
 </script>
