@@ -751,7 +751,7 @@ export default {}
       &__text
         position relative
         // grid-column 6 / span 7
-        margin-top var(--spacing-4)
+        margin-top var(--spacing-6)
         &__top
           position relative
           grid-column 3 / span 7
@@ -964,7 +964,7 @@ export default {}
     margin-left 0
 
   .testnets-list__item__text__top__box__inactive
-    margin-top var(--spacing-6)
+    margin-top var(--spacing-4)
 
   .section-testnets .section-tabs__code
     grid-template-columns auto
