@@ -693,12 +693,12 @@ export default {}
 .list-title
   margin-bottom var(--spacing-5)
 
-.list-item
+.list-item a
   position relative
   &::after
     content "↗"
     position absolute
-    bottom 0.466em
+    bottom 0.166em
     padding-left 0.1875em
     font-size 0.75em
     line-height 1
