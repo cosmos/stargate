@@ -7,6 +7,7 @@
         </div>
         <div class="frame">
           <iframe
+            title="Stargate video"
             src="https://www.youtube.com/embed/mlq5GzQTIAM?autoplay=0&controls=1&rel=0&modestbranding=1&fs=1&enablejsapi=1"
             frameborder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
