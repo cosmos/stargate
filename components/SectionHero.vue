@@ -2,6 +2,7 @@
   <div class="section-hero">
     <div class="tm-section-container section-container">
       <div class="hero-graphics">
+        <span class="hero-graphics__glow"></span>
         <span class="hero-graphics__gate"></span>
         <gate-notches class="hero-graphics__gate-notches" />
         <span class="hero-graphics__star"></span>
@@ -23,7 +24,10 @@
         </nav>
         <div class="content">
           <h1 class="title">
-            <wordmark-stargate />
+            <div class="wordmarks">
+              <wordmark-stargate variant="glow" />
+              <wordmark-stargate />
+            </div>
             <span class="sr-only">Stargate</span>
           </h1>
           <div class="subtitle tm-rf2 tm-rf3-m-up tm-lh-copy">
@@ -32,8 +36,8 @@
           <tm-button
             v-scroll-to="'#testnets'"
             size="l"
-            color="var(--white)"
-            background-color="linear-gradient(92.99deg, #8D0EC0 0%, #4251FA 100%)"
+            color="var(--black)"
+            background-color="linear-gradient(90deg, #99DAFF 0%, #FFD1FD 50%, var(--primary-900) 100%), var(--primary-900)"
             glow
             class="hero-btn"
             >Join testnets</tm-button
@@ -86,13 +90,13 @@ export default {}
   position relative
   height 100vh
   min-height 52rem
-  max-height 64rem
+  max-height 72rem
   margin-bottom var(--spacing-10)
   display flex
   justify-content stretch
   align-items stretch
   text-align center
-  background radial-gradient(60.92% 51.1% at 50% 57.31%, #21255F 26.56%, #030419 80.73%, #000000 100%)
+  background url(/stars.svg)
   .section-container
     display flex
     align-items stretch
@@ -110,7 +114,6 @@ export default {}
       margin-bottom 5%
     .content
       margin auto
-      padding-bottom 20%
       width 100%
       .title
         margin 0
@@ -120,27 +123,41 @@ export default {}
           width 100%
           height auto
           max-height 5.5rem
+        .wordmarks
+          position relative
+          svg:first-child
+            position absolute
+            transform translateY(20%)
+          svg:last-child
+            position relative
       .subtitle
-        margin-top var(--spacing-8)
-        color var(--gray-600)
+        margin-top var(--spacing-7)
+        color var(--primary-900)
 
   .hero-graphics
     position absolute
-    top 10%
+    top 0%
     left 0
     bottom -100%
-    padding-top 50%
     width 100%
     overflow hidden
+    &__glow
+      position absolute
+      width 140%
+      padding-bottom 140%
+      left -20%
+      top 5%
+      background radial-gradient(50% 50% at 50% 50%, #320b93 50%, rgba(50,11,147,0) 99%)
+      z-index -1
     &__gate,
     &__gate-notches
       position absolute
-      width 78%
-      left 11%
-      top 21.3%
+      width 88%
+      left 6%
+      top 15%
       transform translate3d(0,0,0)
     &__gate
-      padding-bottom 78%
+      padding-bottom 88%
       border-radius 50%
       box-shadow inset 0 0.1875em 0.0625em 0 rgba(255, 255, 255, 0.3)
       border 1px solid rgba(255, 255, 255, 0.1)
@@ -159,13 +176,11 @@ export default {}
       animation 40s gate infinite linear
     &__star
       position absolute
-      width 42%
-      padding-bottom 42%
-      left 29%
-      top 31%
-      border-radius 50%
-      background var(--white)
-      box-shadow 0px 0px 2.5em #263CFF, 0px 0px 8em #2D74FF
+      width 60%
+      padding-bottom 60%
+      left 20%
+      top 25%
+      background radial-gradient(50% 50% at 50% 50%, #fff 39.83%, rgba(203,162,255,0.63) 64.1%, rgba(64, 53, 195, 0.59) 85.81%, rgba(53, 11, 158, 0) 99%)
     &__planet
       position absolute
       width 126%
@@ -173,8 +188,8 @@ export default {}
       left -13%
       top 42%
       border-radius 50%
-      background radial-gradient(84.49% 66.22% at 50% 59.94%, #000000 5.73%, #030419 71.48%, #0E1247 81.25%, #36299B 91.15%)
-      box-shadow 0px -4.5em 4em rgba(28, 0, 238, 0.17), 0px -0.625em 0.5em rgba(92, 70, 255, 0.11), inset 0px 3.5em 3.5em rgba(48, 44, 245, 0.17), inset 0px 0.375em 0.75em rgba(104, 67, 252, 0.23)
+      background radial-gradient(31.26% 16.8% at 50.03% -2.64%, #ccc7fb 0%, rgba(145,51,202,0.6) 55.21%, rgba(141,14,192,0) 100%), radial-gradient(84.49% 66.22% at 50% 59.94%, #000 0%, #030419 60.94%, #340d67 80.73%, #36299b 90.1%)
+      box-shadow inset 0px 3.5rem 3.5rem rgba(48, 44, 245, 0.17)
 
 .hero-btn
   margin var(--spacing-8) auto
@@ -189,6 +204,9 @@ export default {}
 
 @media screen and (max-width: 767px)
   .section-hero
+    .container
+      .content
+        padding-bottom 20%
     .hero-graphics
       font-size 0.5rem
 
@@ -214,6 +232,7 @@ export default {}
       .nav-primary
         margin-bottom var(--spacing-8)
       .content
+        padding-bottom 40%
         .subtitle
           margin-top var(--spacing-6)
     .hero-graphics

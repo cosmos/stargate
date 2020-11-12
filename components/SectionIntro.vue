@@ -1,5 +1,5 @@
 <template>
-  <div id="intro">
+  <div id="intro" class="section-outer">
     <div class="section section-intro">
       <div class="tm-section-container section-container">
         <div class="container">
@@ -40,6 +40,8 @@ export default {}
 </script>
 
 <style lang="stylus" scoped>
+.section-outer
+  background url(/stars.svg)
 .section-intro
   position relative
   .section-title

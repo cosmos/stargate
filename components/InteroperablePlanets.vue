@@ -72,12 +72,12 @@
   &:before
     content ""
     position absolute
-    width 146%
-    padding-bottom 146%
-    left -23% // (146 - 100) / 2
+    width 186%
+    padding-bottom 186%
+    left -43% // (186 - 100) / 2
     top 0
-    margin-top -33% // (146 - 80) / 2
-    background radial-gradient(50% 50% at 50% 53.5%, #1440c9 28.99%, #121e4d 44.96%, #0d1236 70.17%, rgba(0,0,0,0))
+    margin-top -53% // (186 - 80) / 2
+    background radial-gradient(50% 50% at 50% 50%, rgb(50, 11, 147) 13.21%, rgba(66, 81, 250, 0) 100%)
 
 .planet
   position absolute
@@ -101,10 +101,10 @@
   &__sun
     top 50%
     left 50%
-    width 41%
-    padding-bottom 41%
+    width 81%
+    padding-bottom 81%
   &__sun &__front
-    background #F8FAFF
+    background radial-gradient(50% 50% at 50% 50%, #FFFFFF 36.46%, rgba(203, 162, 255, 0.64) 58.85%, rgba(71, 87, 255, 0.34) 79.17%, rgba(50, 11, 147, 0) 100%)
 
   &__1
     width 18%

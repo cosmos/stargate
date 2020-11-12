@@ -138,9 +138,6 @@ export default {
 
 <style lang="stylus" scoped>
 .footer
-  display flex
-  justify-content center
-  align-items center
   text-align center
   color var(--white)
   background linear-gradient(180deg, #000000 0%, #030419 100%)

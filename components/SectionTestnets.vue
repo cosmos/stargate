@@ -69,8 +69,8 @@
                     to-link="external"
                     href="https://blog.cosmos.network/five-reasons-why-cosmos-validators-want-to-participate-in-the-stargate-simulated-upgrade-f817ddef1678"
                     size="l"
-                    color="var(--white)"
-                    background-color="linear-gradient(93deg, #8D0EC0 0%, #4251FA 100%), #4251FA;"
+                    color="var(--black)"
+                    background-color="linear-gradient(90deg, #99DAFF 0%, #FFD1FD 50%, var(--primary-900) 100%), var(--primary-900)"
                     glow
                     class="btn"
                     >Join</tm-button
@@ -141,8 +141,8 @@
                     to-link="external"
                     href="https://github.com/cosmos/testnets/tree/master/bigbang-1"
                     size="l"
-                    color="var(--white)"
-                    background-color="linear-gradient(93deg, #8D0EC0 0%, #4251FA 100%), #4251FA;"
+                    color="var(--black)"
+                    background-color="linear-gradient(90deg, #99DAFF 0%, #FFD1FD 50%, var(--primary-900) 100%), var(--primary-900)"
                     glow
                     class="btn"
                     >Join</tm-button
@@ -258,8 +258,8 @@
                     to-link="external"
                     href="https://github.com/cosmosdevs/stargate#testnet"
                     size="l"
-                    color="var(--white)"
-                    background-color="linear-gradient(93deg, #8D0EC0 0%, #4251FA 100%), #4251FA;"
+                    color="var(--black)"
+                    background-color="linear-gradient(90deg, #99DAFF 0%, #FFD1FD 50%, var(--primary-900) 100%), var(--primary-900)"
                     glow
                     class="btn"
                     >Join</tm-button
@@ -721,7 +721,7 @@ export default {}
             align-items center
             flex-wrap wrap
           &__title
-            color #FFD1FD
+            color var(--primary-900)
           &__status
             padding var(--spacing-1) var(--spacing-4)
             background #E644F8
