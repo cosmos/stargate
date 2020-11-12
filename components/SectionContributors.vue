@@ -32,7 +32,7 @@
                 class="section-list__item"
               >
                 <div class="section-list__item__logo">
-                  <img :src="i.logo" />
+                  <img alt="Company logo" :src="i.logo" />
                 </div>
                 <div
                   class="section-list__item__title tm-rf1 tm-bold tm-lh-title"
@@ -63,7 +63,7 @@
                 class="section-list__item"
               >
                 <div class="section-list__item__logo">
-                  <img :src="i.logo" />
+                  <img alt="Company logo" :src="i.logo" />
                 </div>
                 <div
                   class="section-list__item__title tm-rf1 tm-bold tm-lh-title"

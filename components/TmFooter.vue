@@ -38,6 +38,7 @@
           :href="url(link)"
           class="social-icons__item"
           target="_blank"
+          rel="noreferrer"
         >
           <svg
             width="24"

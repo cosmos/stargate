@@ -23,6 +23,7 @@
             <img
               src="~/assets/illustrations/active-flag.svg"
               class="testnets-list__item__graphics"
+              alt="Purple chevron pointing down"
             />
             <div class="testnets-list__item__text__top">
               <div class="testnets-list__item__text__top__top">
@@ -88,6 +89,7 @@
             <img
               src="~/assets/illustrations/active-flag.svg"
               class="testnets-list__item__graphics"
+              alt="Purple chevron pointing down"
             />
             <div class="testnets-list__item__text__top">
               <div class="testnets-list__item__text__top__top">
@@ -182,6 +184,7 @@
             <img
               src="~/assets/illustrations/active-flag.svg"
               class="testnets-list__item__graphics"
+              alt="Purple chevron pointing down"
             />
             <div class="testnets-list__item__text__top">
               <div class="testnets-list__item__text__top__top">

@@ -73,7 +73,11 @@
           </radialGradient>
         </defs>
       </svg>
-      <img src="~/assets/illustrations/plumbobs.svg" class="plumbobs" />
+      <img
+        alt="Colourful plumbobs around a blue planet with nine hexagonss"
+        src="~/assets/illustrations/plumbobs.svg"
+        class="plumbobs"
+      />
     </div>
   </div>
 </template>
