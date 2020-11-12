@@ -9,6 +9,9 @@ export default {
    ** See https://nuxtjs.org/api/configuration-head
    */
   head: {
+    htmlAttrs: {
+      lang: 'en'
+    },
     title: 'Stargate | Cosmos Network',
     meta: [
       { charset: 'utf-8' },

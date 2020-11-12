@@ -2,37 +2,33 @@
   <div id="articles" class="section section-articles">
     <div class="tm-section-container section-container">
       <div class="container">
+        <div class="section-title tm-rf5 tm-bold tm-lh-title tm-measure-narrow">
+          Learn more about Stargate
+        </div>
         <div class="section-header tm-rf0 tm-medium tm-lh-title tm-overline">
           {{ articles.length }} articles
         </div>
-        <div class="section-title tm-rf4 tm-bold tm-lh-title">
-          Learn more about Stargate
-        </div>
-        <div class="content">
-          <a
-            v-for="item in articles"
-            :key="item.name"
-            :href="item.url"
-            target="_blank"
-            rel="noreferrer noopener"
-            class="articles-item"
+        <a
+          v-for="item in articles"
+          :key="item.name"
+          :href="item.url"
+          target="_blank"
+          rel="noreferrer noopener"
+          class="articles-item"
+        >
+          <span class="articles-item__icon tm-rf2 tm-lh-solid">&#8599;</span>
+          <div
+            class="articles-item__title tm-rf1 tm-bold tm-lh-title tm-measure-narrow"
           >
-            <span class="articles-item__icon tm-rf2 tm-lh-solid">&#8599;</span>
-            <div class="articles-item__date tm-rf-1 tm-lh-title">
-              {{ item.date }}
-            </div>
-            <div
-              class="articles-item__title tm-rf1 tm-bold tm-lh-title tm-measure-narrower"
-            >
-              {{ item.title }}
-            </div>
-            <div
-              class="articles-item__description tm-rf0 tm-lh-copy tm-measure"
-            >
-              {{ item.description }}
-            </div>
-          </a>
-        </div>
+            {{ item.title }}
+          </div>
+          <div class="articles-item__description tm-rf0 tm-lh-copy tm-measure">
+            {{ item.description }}
+          </div>
+          <div class="articles-item__date tm-rf-1 tm-lh-title">
+            {{ item.date }}
+          </div>
+        </a>
       </div>
     </div>
   </div>
@@ -74,6 +70,28 @@ export default {
           description:
             'Details on the upcoming 1.0 release of the inter-blockchain communication protocol.',
         },
+        {
+          url:
+            'https://blog.cosmos.network/how-seven-teams-collaborated-to-deliver-the-biggest-software-upgrade-in-the-cosmos-universe-2288f4f9afe8',
+          date: 'Oct 14',
+          title:
+            'How Seven Teams Collaborated To Deliver The Biggest Software Upgrade In The Cosmos Universe',
+        },
+        {
+          url:
+            'https://blog.cosmos.network/announcing-the-big-bang-stargate-testnet-a27a7b74a903',
+          date: 'Oct 16',
+          title: 'Announcing the ‘Big Bang’ Stargate Testnet',
+          description:
+            'The goal of Big Bang is to create a multichain test environment that tests, simulates, and benchmarks the post-Stargate Cosmos.',
+        },
+        {
+          url:
+            'https://blog.cosmos.network/five-reasons-why-cosmos-validators-want-to-participate-in-the-stargate-simulated-upgrade-f817ddef1678',
+          date: 'Nov 9',
+          title:
+            'Five Reasons Why Cosmos Validators Want to Participate in the Stargate Simulated Upgrade',
+        },
       ],
     }
   },
@@ -82,63 +100,55 @@ export default {
 
 <style lang="stylus" scoped>
 .section-articles
-  .section-header
-    grid-column 6 / span 7
+  .container
+    gap var(--spacing-7)
   .section-title
     color var(--white)
+    grid-column 1 / span 12
+  .section-header
+    grid-column 1 / span 12
+    margin-top var(--spacing-8)
+  .articles-item
+    grid-column 1 / span 12
+    display block
     text-align left
-    grid-column 1 / 6
-    grid-row 1
-  .content
-    grid-column 6 / span 7
-    grid-row 2
-    .articles-item
-      display block
-      text-align left
-      padding var(--spacing-7) 0
-      position relative
-      border-bottom 1px solid #282b53
-      &:last-child
-        border-bottom 0
-      &__icon
-        position absolute
-        right 0
-        color var(--gray-600)
-        transition color .1s ease-out, transform .25s ease-out
-      &__date
-        color var(--gray-600)
-      &__title
-        margin-top var(--spacing-4)
-        color var(--primary-900)
-        transition color .1s ease-out
-      &__description
-        margin-top var(--spacing-4)
-        color var(--gray-600)
-      &:hover
-        .articles-item__title,
-        .articles-item__icon
-          color var(--white)
-        .articles-item__icon
-          transform translate(3px, -3px)
-
-@media screen and (max-width: 1024px)
-
-  .section-articles
-    .section-header,
-    .section-title
-      grid-column 1 / span 12
-    .section-header
-      grid-row 1
-    .section-title
-      grid-row 2
+    padding var(--spacing-7) 0
+    position relative
+    &:last-child
+      border-bottom 0
+    &__icon
+      position absolute
+      right 0
+      color var(--gray-600)
+      transition color .1s ease-out, transform .25s ease-out
+    &__title
+      color var(--primary-900)
+      transition color .1s ease-out
+      padding-right 2rem
+    &__description
       margin-top var(--spacing-4)
-    .content
-      grid-row 3
-      grid-column 1/13
-      margin-top var(--spacing-9)
+      color var(--gray-600)
+    &__date
+      margin-top var(--spacing-4)
+      color var(--gray-600)
+    &:hover
+      .articles-item__title,
+      .articles-item__icon
+        color var(--white)
+      .articles-item__icon
+        transform translate(3px, -3px)
 
-@media screen and (max-width: 320px)
+@media $breakpoint-small
   .section-articles
-    .section-title
-      max-width $max-width['5']
+    .articles-item
+      grid-column span 6
+
+@media $breakpoint-large
+  .section-articles
+    .container
+      gap var(--spacing-8) var(--spacing-7)
+    .section-header
+      grid-column 6 / span 7
+    .articles-item
+      grid-column span 4
 </style>

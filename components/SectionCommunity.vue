@@ -59,11 +59,11 @@ export default {}
 <style lang="stylus" scoped>
 .section-community
   .section-header
-    grid-column 6 / span 7
+    grid-column 1 / span 12
   .cards
     margin-top var(--spacing-10)
     display grid
-    grid-template-columns 1fr 1fr
+    grid-template-columns repeat(1, 1fr)
     gap var(--spacing-7)
     grid-column 1 / span 12
     &__item
@@ -113,14 +113,14 @@ export default {}
         margin-top var(--spacing-4)
         color var(--gray-600)
 
-@media screen and (max-width: 1024px)
+@media $breakpoint-large
   .section .section-header
-      grid-column 1 / span 12
+    grid-column 6 / span 7
 
   .section-community .cards
-    grid-template-columns repeat(1, 1fr)
+    grid-template-columns 1fr 1fr
 
-@media screen and (max-width: 576px)
+@media $breakpoint-xsmall-only
   .section-community
     .cards
       &__item
