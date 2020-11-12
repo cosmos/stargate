@@ -5,7 +5,7 @@
         <div class="section-header tm-rf0 tm-medium tm-lh-title tm-overline">
           Roadmap
         </div>
-        <div class="section-title tm-rf6 tm-bold tm-lh-title">
+        <div class="section-title tm-rf7 tm-bold tm-lh-title">
           <span class="percentage">{{ progressTotal }}%</span> complete
         </div>
         <div class="section-milestones">
@@ -21,6 +21,22 @@
               size="l"
               >View on GitHub &#8594;</tm-button
             >
+          </div>
+          <div class="section-milestones__faq">
+            <h4
+              class="section-milestones__faq__title tm-rf0 tm-bold tm-lh-title"
+            >
+              How do we measure progress?
+            </h4>
+            <p
+              class="section-milestones__faq__body tm-rf-1 tm-lh-copy tm-measure tm-measure-narrow-l-up"
+            >
+              The various parts of the Cosmos stack, upon which Stargate is
+              built, each have their own milestone. The progress of each
+              milestone depends on how many outstanding tasks there are. As more
+              tasks are created or completed, the percentage will fluctuate
+              until no more tasks remain and the milestone is achieved.
+            </p>
           </div>
         </div>
         <a
@@ -277,15 +293,15 @@ export default {
 <style lang="stylus" scoped>
 .percentage
   background linear-gradient(to bottom right, #3fb3ff, #9010c7)
-  -webkit-background-clip text
+  background-clip text
   -webkit-text-fill-color transparent
 
 .section-roadmap
   .section-header
-    grid-column 6 / span 7
+    grid-column 1 / span 12
   .section-title
-    margin-top var(--spacing-8)
-    margin-bottom var(--spacing-8)
+    margin-top var(--spacing-10)
+    margin-bottom var(--spacing-9)
     text-align right
     grid-column 1 / span 12
   .section-milestones
@@ -296,6 +312,13 @@ export default {
       color var(--white)
     &__cta
       margin-top var(--spacing-5)
+    &__faq
+      margin-top var(--spacing-5)
+      &__title
+        color var(--gray-800)
+      &__body
+        color var(--gray-600)
+        margin-top var(--spacing-3)
   .section-row
     position relative
     margin-top var(--spacing-7)

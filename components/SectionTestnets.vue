@@ -5,10 +5,11 @@
         <div class="section-header tm-rf0 tm-medium tm-lh-title tm-overline">
           Testnets
         </div>
-        <planets-cluster class="section-graphics" />
+        <!-- <planets-cluster class="section-graphics" /> -->
+        <dyson-sphere class="section-graphics" />
         <div class="section-top">
           <div class="section-title tm-rf6 tm-bold tm-lh-title">
-            Get set for testnets
+            Get set for <span class="section-title__highlight">testnets</span>
           </div>
           <div class="section-statement tm-rf1 tm-lh-copy tm-measure">
             Validators, wallets, block explorers, exchanges and zone developers
@@ -22,29 +23,80 @@
             <img
               src="~/assets/illustrations/active-flag.svg"
               class="testnets-list__item__graphics"
+              alt="Purple chevron pointing down"
             />
             <div class="testnets-list__item__text__top">
               <div class="testnets-list__item__text__top__top">
                 <div
-                  class="testnets-list__item__text__top__title tm-rf3 tm-bold tm-lh-title tm-code"
+                  class="testnets-list__item__text__top__title tm-rf2 tm-bold tm-lh-title tm-code"
+                >
+                  cosmoshub-stargate-test
+                </div>
+              </div>
+              <div class="testnets-list__item__text">
+                <div class="testnets-list__item__text__mid"></div>
+                <p
+                  class="testnets-list__item__text__mid__desc tm-rf1 tm-lh-copy tm-measure"
+                >
+                  An upgrade of the Cosmos Hub to Stargate (Cosmos SDK v0.37 -->
+                  v0.40).
+                  <strong
+                    class="testnets-list__item__text__mid__desc__strong tm-bold"
+                    >Highly recommended</strong
+                  >
+                  for Cosmos Hub validators.
+                </p>
+                <div class="testnets-list__item__text__bot">
+                  <div
+                    class="testnets-list__item__text__bot__display tm-rf-1 tm-medium tm-lh-title tm-overline"
+                  >
+                    Recommended for
+                  </div>
+                  <div class="testnets-list__item__text__bot__labels">
+                    <div
+                      class="testnets-list__item__text__bot__labels__item tm-rf0 tm-lh-title"
+                    >
+                      Validators
+                    </div>
+                  </div>
+                </div>
+                <div class="testnets-list__item__cta">
+                  <tm-button
+                    to-link="external"
+                    href="https://blog.cosmos.network/five-reasons-why-cosmos-validators-want-to-participate-in-the-stargate-simulated-upgrade-f817ddef1678"
+                    size="l"
+                    color="var(--black)"
+                    background-color="linear-gradient(90deg, #99DAFF 0%, #FFD1FD 50%, var(--primary-900) 100%), var(--primary-900)"
+                    glow
+                    class="btn"
+                    >Join -></tm-button
+                  >
+                  <tm-button
+                    to-link="external"
+                    href="https://discord.com/channels/669268347736686612/723170066937413693"
+                    size="l"
+                    color="var(--link)"
+                    variant="text"
+                    glow
+                    class="btn"
+                    >Discuss -></tm-button
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testnets-list__item">
+            <img
+              src="~/assets/illustrations/active-flag.svg"
+              class="testnets-list__item__graphics"
+              alt="Purple chevron pointing down"
+            />
+            <div class="testnets-list__item__text__top">
+              <div class="testnets-list__item__text__top__top">
+                <div
+                  class="testnets-list__item__text__top__title tm-rf2 tm-bold tm-lh-title tm-code"
                 >
                   bigbang-1
-                </div>
-                <div class="testnets-list__item__text__top__box">
-                  <!-- <a
-                    href="https://stargate.bigdipper.live"
-                    target="blank_"
-                    rel="noreferrer noopener"
-                    class="testnets-list__item__text__top__explorer tm-rf0 tm-medium tm-lh-solid"
-                  >
-                    <span class="icon"><img src="/icons/eye.svg" /></span>
-                    Explorer
-                  </a> -->
-                  <div
-                    class="testnets-list__item__text__top__status tm-rf0 tm-bold tm-lh-title"
-                  >
-                    Live
-                  </div>
                 </div>
               </div>
               <div class="testnets-list__item__text">
@@ -79,28 +131,28 @@
                     to-link="external"
                     href="https://github.com/cosmos/testnets/tree/master/bigbang-1"
                     size="l"
-                    color="var(--white)"
-                    background-color="linear-gradient(92.99deg, #8D0EC0 0%, #4251FA 100%), #4251FA;"
+                    color="var(--black)"
+                    background-color="linear-gradient(90deg, #99DAFF 0%, #FFD1FD 50%, var(--primary-900) 100%), var(--primary-900)"
                     glow
                     class="btn"
-                    >Join</tm-button
+                    >Join -></tm-button
                   >
                   <tm-button
                     to-link="external"
-                    href="https://discord.com/channels/669268347736686612/723170066937413693"
+                    href="https://discord.com/channels/669268347736686612/758259820494192640"
                     size="l"
                     color="var(--link)"
                     variant="text"
                     glow
                     class="btn"
-                    >Discuss</tm-button
+                    >Discuss -></tm-button
                   >
                 </div>
               </div>
             </div>
             <div class="testnets-list__item__text__right">
               <div class="list-title tm-rf-1 tm-medium tm-lh-title tm-overline">
-                explorers
+                Explorers
               </div>
               <div class="list-item tm-rf0 tm-lh-copy">
                 <a
@@ -132,29 +184,14 @@
             <img
               src="~/assets/illustrations/active-flag.svg"
               class="testnets-list__item__graphics"
+              alt="Purple chevron pointing down"
             />
             <div class="testnets-list__item__text__top">
               <div class="testnets-list__item__text__top__top">
                 <div
-                  class="testnets-list__item__text__top__title tm-rf3 tm-bold tm-lh-title tm-code"
+                  class="testnets-list__item__text__top__title tm-rf2 tm-bold tm-lh-title tm-code"
                 >
                   stargate-4
-                </div>
-                <div class="testnets-list__item__text__top__box">
-                  <!-- <a
-                    href="https://stargate.bigdipper.live"
-                    target="blank_"
-                    rel="noreferrer noopener"
-                    class="testnets-list__item__text__top__explorer tm-rf0 tm-medium tm-lh-solid"
-                  >
-                    <span class="icon"><img src="/icons/eye.svg" /></span>
-                    Explorer
-                  </a> -->
-                  <div
-                    class="testnets-list__item__text__top__status tm-rf0 tm-bold tm-lh-title"
-                  >
-                    Live
-                  </div>
                 </div>
               </div>
               <div class="testnets-list__item__text">
@@ -205,11 +242,11 @@
                     to-link="external"
                     href="https://github.com/cosmosdevs/stargate#testnet"
                     size="l"
-                    color="var(--white)"
-                    background-color="linear-gradient(92.99deg, #8D0EC0 0%, #4251FA 100%), #4251FA;"
+                    color="var(--black)"
+                    background-color="linear-gradient(90deg, #99DAFF 0%, #FFD1FD 50%, var(--primary-900) 100%), var(--primary-900)"
                     glow
                     class="btn"
-                    >Join</tm-button
+                    >Join -></tm-button
                   >
                   <tm-button
                     to-link="external"
@@ -219,14 +256,14 @@
                     variant="text"
                     glow
                     class="btn"
-                    >Discuss</tm-button
+                    >Discuss -></tm-button
                   >
                 </div>
               </div>
             </div>
             <div class="testnets-list__item__text__right">
               <div class="list-title tm-rf-1 tm-medium tm-lh-title tm-overline">
-                explorers
+                Explorers
               </div>
               <div class="list-item tm-rf0 tm-lh-copy">
                 <a
@@ -238,6 +275,14 @@
               </div>
               <div class="list-item tm-rf0 tm-lh-copy">
                 <a
+                  href="https://testnet.mintscan.io/cosmos"
+                  target="blank_"
+                  rel="noreferrer noopener"
+                  >Mintscan</a
+                >
+              </div>
+              <div class="list-item tm-rf0 tm-lh-copy">
+                <a
                   href="https://stargate.bigdipper.live"
                   target="blank_"
                   rel="noreferrer noopener"
@@ -245,93 +290,6 @@
                 >
               </div>
             </div>
-          </div>
-          <div class="testnets-list__item testnets-list__item__inactive">
-            <img
-              src="~/assets/illustrations/inactive-flag.svg"
-              class="testnets-list__item__graphics"
-            />
-            <div class="testnets-list__item__text__top">
-              <div class="testnets-list__item__text__top__top">
-                <div
-                  class="testnets-list__item__text__top__title tm-rf3 tm-bold tm-lh-title tm-code"
-                >
-                  cosmoshub-stargate-test
-                </div>
-                <div class="testnets-list__item__text__top__box__inactive">
-                  <div
-                    class="testnets-list__item__text__top__status outline-btn tm-rf0 tm-bold tm-lh-title"
-                  >
-                    Coming soon
-                  </div>
-                </div>
-              </div>
-              <div class="testnets-list__item__text">
-                <div class="testnets-list__item__text__mid"></div>
-                <p
-                  class="testnets-list__item__text__mid__desc tm-rf1 tm-lh-copy tm-measure"
-                >
-                  An upgrade of the Cosmos Hub to Stargate (Cosmos SDK v0.37 -->
-                  v0.40). Highly recommended for Cosmos Hub validators.
-                </p>
-                <div class="testnets-list__item__text__bot">
-                  <div
-                    class="testnets-list__item__text__bot__display tm-rf-1 tm-medium tm-lh-title tm-overline"
-                  >
-                    Recommended for
-                  </div>
-                  <div class="testnets-list__item__text__bot__labels">
-                    <div
-                      class="testnets-list__item__text__bot__labels__item tm-rf0 tm-lh-title"
-                    >
-                      Validators
-                    </div>
-                  </div>
-                </div>
-                <div class="testnets-list__item__cta">
-                  <tm-button
-                    size="l"
-                    color="var(--white)"
-                    background-color="linear-gradient(92.99deg, #8D0EC0 0%, #4251FA 100%), #4251FA;"
-                    glow
-                    class="btn outline-btn"
-                    disabled
-                    >Join</tm-button
-                  >
-                  <!-- <tm-button
-                    to-link="external"
-                    href="https://discord.com/channels/669268347736686612/723170066937413693"
-                    size="l"
-                    color="var(--link)"
-                    variant="text"
-                    glow
-                    class="btn"
-                    >Discuss</tm-button
-                  > -->
-                </div>
-              </div>
-            </div>
-            <!-- <div class="testnets-list__item__text__right">
-              <div class="list-title tm-rf-1 tm-medium tm-lh-title tm-overline">
-                explorers
-              </div>
-              <div class="list-item tm-rf0 tm-lh-copy">
-                <a
-                  href="https://look.ping.pub/#/validator?chain=bigbang-1"
-                  target="blank_"
-                  rel="noreferrer noopener"
-                  >Look</a
-                >
-              </div>
-              <div class="list-item tm-rf0 tm-lh-copy">
-                <a
-                  href="https://bigbang.bigdipper.live"
-                  target="blank_"
-                  rel="noreferrer noopener"
-                  >The Big Dipper</a
-                >
-              </div>
-            </div> -->
           </div>
         </div>
         <div class="section-status">
@@ -684,12 +642,6 @@ export default {}
 </script>
 
 <style lang="stylus" scoped>
-// TODO: outlined pill badge
-.outline-btn
-  border 2px solid #43466D !important
-  background transparent !important
-  color var(--gray-600) !important
-
 .list-title
   margin-bottom var(--spacing-5)
 
@@ -715,7 +667,7 @@ export default {}
     grid-column 6/span 7
     grid-row 1
   .section-graphics
-    grid-column 8 / 13
+    grid-column 5 / 13
     grid-row 2
     display flex
     align-items flex-end
@@ -727,6 +679,15 @@ export default {}
   .section-title
     max-width: $max-width['7']
     color var(--white)
+    &__highlight
+      background-color var(--white)
+      background-image linear-gradient(90deg, #99DAFF 0%, #CCD1FF 51.56%, #E644F8 100%)
+      background-size 100%
+      background-clip text
+      // TODO: Why doesn't postcss generate these?
+      -webkit-text-fill-color transparent
+      -moz-text-fill-color transparent
+      padding-right 0.05em // Fix offset clipping
   .section-statement
     margin-top var(--spacing-8)
     color var(--gray-800)
@@ -751,7 +712,7 @@ export default {}
       &__text
         position relative
         // grid-column 6 / span 7
-        margin-top var(--spacing-6)
+        margin-top var(--spacing-7)
         &__top
           position relative
           grid-column 3 / span 7
@@ -761,27 +722,22 @@ export default {}
             align-items center
             flex-wrap wrap
           &__title
-            color #FFD1FD
-            // margin-bottom var(--spacing-6)
-          // &__explorer
-          //   padding var(--spacing-2) 0
-          //   background transparent
-          //   display inline-block
-          //   margin-right var(--spacing-6)
-          //   .icon
-          //     margin-right var(--spacing-2)
+            color var(--primary-900)
+
           &__status
             padding var(--spacing-1) var(--spacing-4)
             background #E644F8
             border-radius $border-radius-5
             display inline-block
             color var(--white)
-            margin-left var(--spacing-6)
+            margin-left var(--spacing-5)
         &__right
           grid-column 10 / 12
         &__mid
           &__desc
             color var(--gray-800)
+            &__strong
+              color var(--white)
           &__note
             margin-top var(--spacing-3)
             color var(--gray-600)

@@ -1,12 +1,17 @@
 <template>
   <div>
     <div class="container">
-      <div class="planet planet__sun">
-        <div class="planet__surface planet__back"></div>
+      <div class="planet planet__sun__1">
+        <div class="planet__surface planet__front"></div>
+      </div>
+      <div class="planet planet__sun__2">
+        <div class="planet__surface planet__front"></div>
+      </div>
+      <div class="planet planet__sun__3">
         <div class="planet__surface planet__front"></div>
       </div>
       <div class="planet planet__1">
-        <div class="planet__surface planet__back"></div>
+        <div class="planet__surface planet__front"></div>
       </div>
       <div class="orbit__outer__1"></div>
       <div class="orbit__outer__2"></div>
@@ -33,27 +38,40 @@
     top 50%
     transform translate(-50%, -50%)
 
-  &__sun
-    top 55%
-    left 61%
-    width 28%
-    padding-bottom 28%
-  &__sun &__back
-    width 180%
-    height 180%
-    background radial-gradient(50% 50% at 50% 50%, rgba(0, 71, 255, 0.8) 56%, rgba(0, 41, 255, 0.38) 70%, rgba(0, 30, 108, 0) 100%)
-  &__sun &__front
-    background #F8FAFF
-    box-shadow 0 0 0 2em rgba(255, 255, 255, 0.03)
+  &__sun__1
+    top 29%
+    left 13%
+    width 56%
+    padding-bottom 56%
+  &__sun__1 &__front
+    background radial-gradient(50% 50% at 50% 50%, #FFFFFF 39.06%, #B366FF 58.33%, rgba(190,0,238,0.48) 79.69%, rgba(192,26,234,0) 100%)
+
+  &__sun__2
+    top 56%
+    left 46%
+    width 50%
+    padding-bottom 50%
+  &__sun__2 &__front
+    background radial-gradient(50% 50% at 50% 50%, #FFFFFF 34.37%, #2492FF 58.33%, rgba(17,160,255,0.38) 79.69%, rgba(64,179,255,0) 100%)
+
+  &__sun__3
+    top 67%
+    left 8%
+    width 60%
+    padding-bottom 60%
+  &__sun__3 &__front
+    background radial-gradient(50% 50% at 50% 50%, #fff 34.37%, #3040f3 58.33%, rgba(0,67,169,0.48) 79.69%, rgba(64,152,255,0) 100%)
 
   &__1
     top 50%
     left 20%
     width 72%
     padding-bottom 72%
-  &__1 &__back
-    background radial-gradient(61.59% 64.86% at 41.88% 47.98%, #030419 0%, #030419 75.48%, #8ca0ff 93.79%)
-    box-shadow inset 3em -2em 3em rgba(0,0,0,0.49), inset 0.33em 0.218em 0.43em rgba(152, 160, 220, 0.34), 0 0 0 2em rgba(255, 255, 255, 0.03)
+  &__1 &__front
+    // background radial-gradient(61.59% 64.86% at 41.88% 47.98%, #030419 0%, #030419 75.48%, #8ca0ff 93.79%)
+    // box-shadow inset 3em -2em 3em rgba(0,0,0,0.49), inset 0.33em 0.218em 0.43em rgba(152, 160, 220, 0.34), 0 0 0 2em rgba(255, 255, 255, 0.03)
+    background radial-gradient(63% 63% at 44% 48%, #030419 0%, #030419 79.69%, #004891 92.71%)
+    box-shadow inset 3px -3px 15px rgba(66, 81, 250, 0.16), inset 5px 7px 20px rgba(192, 26, 234, 0.27), inset 24px 51px 51px #22002b
 
 .orbit__outer__1
   position absolute
