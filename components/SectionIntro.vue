@@ -4,7 +4,7 @@
       <div class="tm-section-container section-container">
         <div class="container">
           <div class="section-title tm-rf6 tm-rf7-xl-up tm-bold tm-lh-title">
-            A new era for Cosmos
+            A <span class="section-title__highlight">new era</span> for Cosmos
           </div>
           <div class="section-subtitle tm-rf2 tm-lh-copy tm-measure">
             The biggest event in the ecosystem since the launch of the Cosmos
@@ -49,7 +49,16 @@ export default {}
     grid-row 1 / 2
     max-width 9em
     min-height $line-height-title-base-min * 2em
-    margin-bottom -0.75em
+    margin-bottom -1.1em
+    &__highlight
+      background-color var(--white)
+      background-image linear-gradient(90deg, #99DAFF 0%, #CCD1FF 51.56%, #E644F8 100%)
+      background-size 100%
+      background-clip text
+      // TODO: Why doesn't postcss generate these?
+      -webkit-text-fill-color transparent
+      -moz-text-fill-color transparent
+      padding-right 0.05em // Fix offset clipping
   .section-subtitle
     display flex
     justify-content flex-end

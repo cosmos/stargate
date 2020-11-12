@@ -122,7 +122,7 @@ export default {}
         svg
           width 100%
           height auto
-          max-height 5.5rem
+          max-height 6rem
         .wordmarks
           position relative
           svg:first-child

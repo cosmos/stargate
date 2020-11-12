@@ -128,9 +128,9 @@
     top 102%
     left 122%
   &__3 &__back
-    background radial-gradient(farthest-side at 25% 22%, var(--link) 3%, #015ab5 34%, #0c2054 82%)
+    background radial-gradient(farthest-side at 25% 22%, var(--link) 3%, #015ab5 34%, #061335 82%)
   &__3 &__front
-    background radial-gradient(farthest-side at -88% 16%, var(--link) 58%, #016ad4 74%, #132c6d 92%, rgba(7,31,95,0) 100%)
+    background radial-gradient(farthest-side at -88% 16%, var(--link) 58%, #016ad4 74%, #112761 92%, rgba(7,31,95,0) 100%)
 
 .connections
   position absolute

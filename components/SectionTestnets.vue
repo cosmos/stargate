@@ -5,10 +5,11 @@
         <div class="section-header tm-rf0 tm-medium tm-lh-title tm-overline">
           Testnets
         </div>
-        <planets-cluster class="section-graphics" />
+        <!-- <planets-cluster class="section-graphics" /> -->
+        <dyson-sphere class="section-graphics" />
         <div class="section-top">
           <div class="section-title tm-rf6 tm-bold tm-lh-title">
-            Get set for testnets
+            Get set for <span class="section-title__highlight">testnets</span>
           </div>
           <div class="section-statement tm-rf1 tm-lh-copy tm-measure">
             Validators, wallets, block explorers, exchanges and zone developers
@@ -29,13 +30,6 @@
                   class="testnets-list__item__text__top__title tm-rf2 tm-bold tm-lh-title tm-code"
                 >
                   cosmoshub-stargate-test
-                </div>
-                <div class="testnets-list__item__text__top__box">
-                  <div
-                    class="testnets-list__item__text__top__status tm-rf0 tm-bold tm-lh-title"
-                  >
-                    Live
-                  </div>
                 </div>
               </div>
               <div class="testnets-list__item__text">
@@ -73,7 +67,7 @@
                     background-color="linear-gradient(90deg, #99DAFF 0%, #FFD1FD 50%, var(--primary-900) 100%), var(--primary-900)"
                     glow
                     class="btn"
-                    >Join</tm-button
+                    >Join -></tm-button
                   >
                   <tm-button
                     to-link="external"
@@ -83,7 +77,7 @@
                     variant="text"
                     glow
                     class="btn"
-                    >Discuss</tm-button
+                    >Discuss -></tm-button
                   >
                 </div>
               </div>
@@ -100,13 +94,6 @@
                   class="testnets-list__item__text__top__title tm-rf2 tm-bold tm-lh-title tm-code"
                 >
                   bigbang-1
-                </div>
-                <div class="testnets-list__item__text__top__box">
-                  <div
-                    class="testnets-list__item__text__top__status tm-rf0 tm-bold tm-lh-title"
-                  >
-                    Live
-                  </div>
                 </div>
               </div>
               <div class="testnets-list__item__text">
@@ -145,24 +132,24 @@
                     background-color="linear-gradient(90deg, #99DAFF 0%, #FFD1FD 50%, var(--primary-900) 100%), var(--primary-900)"
                     glow
                     class="btn"
-                    >Join</tm-button
+                    >Join -></tm-button
                   >
                   <tm-button
                     to-link="external"
-                    href="https://discord.com/channels/669268347736686612/723170066937413693"
+                    href="https://discord.com/channels/669268347736686612/758259820494192640"
                     size="l"
                     color="var(--link)"
                     variant="text"
                     glow
                     class="btn"
-                    >Discuss</tm-button
+                    >Discuss -></tm-button
                   >
                 </div>
               </div>
             </div>
             <div class="testnets-list__item__text__right">
               <div class="list-title tm-rf-1 tm-medium tm-lh-title tm-overline">
-                explorers
+                Explorers
               </div>
               <div class="list-item tm-rf0 tm-lh-copy">
                 <a
@@ -201,13 +188,6 @@
                   class="testnets-list__item__text__top__title tm-rf2 tm-bold tm-lh-title tm-code"
                 >
                   stargate-4
-                </div>
-                <div class="testnets-list__item__text__top__box">
-                  <div
-                    class="testnets-list__item__text__top__status tm-rf0 tm-bold tm-lh-title"
-                  >
-                    Live
-                  </div>
                 </div>
               </div>
               <div class="testnets-list__item__text">
@@ -262,7 +242,7 @@
                     background-color="linear-gradient(90deg, #99DAFF 0%, #FFD1FD 50%, var(--primary-900) 100%), var(--primary-900)"
                     glow
                     class="btn"
-                    >Join</tm-button
+                    >Join -></tm-button
                   >
                   <tm-button
                     to-link="external"
@@ -272,14 +252,14 @@
                     variant="text"
                     glow
                     class="btn"
-                    >Discuss</tm-button
+                    >Discuss -></tm-button
                   >
                 </div>
               </div>
             </div>
             <div class="testnets-list__item__text__right">
               <div class="list-title tm-rf-1 tm-medium tm-lh-title tm-overline">
-                explorers
+                Explorers
               </div>
               <div class="list-item tm-rf0 tm-lh-copy">
                 <a
@@ -675,7 +655,7 @@ export default {}
     grid-column 6/span 7
     grid-row 1
   .section-graphics
-    grid-column 8 / 13
+    grid-column 5 / 13
     grid-row 2
     display flex
     align-items flex-end
@@ -687,6 +667,15 @@ export default {}
   .section-title
     max-width: $max-width['7']
     color var(--white)
+    &__highlight
+      background-color var(--white)
+      background-image linear-gradient(90deg, #99DAFF 0%, #CCD1FF 51.56%, #E644F8 100%)
+      background-size 100%
+      background-clip text
+      // TODO: Why doesn't postcss generate these?
+      -webkit-text-fill-color transparent
+      -moz-text-fill-color transparent
+      padding-right 0.05em // Fix offset clipping
   .section-statement
     margin-top var(--spacing-8)
     color var(--gray-800)
@@ -722,6 +711,7 @@ export default {}
             flex-wrap wrap
           &__title
             color var(--primary-900)
+
           &__status
             padding var(--spacing-1) var(--spacing-4)
             background #E644F8
