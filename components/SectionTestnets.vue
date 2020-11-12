@@ -39,7 +39,8 @@
                 >
                   An upgrade of the Cosmos Hub to Stargate (Cosmos SDK v0.37 -->
                   v0.40).
-                  <strong class="testnets-list__item__text__mid__desc__strong"
+                  <strong
+                    class="testnets-list__item__text__mid__desc__strong tm-bold"
                     >Highly recommended</strong
                   >
                   for Cosmos Hub validators.
