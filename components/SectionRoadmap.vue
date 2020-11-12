@@ -293,7 +293,7 @@ export default {
 <style lang="stylus" scoped>
 .percentage
   background linear-gradient(to bottom right, #3fb3ff, #9010c7)
-  -webkit-background-clip text
+  background-clip text
   -webkit-text-fill-color transparent
 
 .section-roadmap

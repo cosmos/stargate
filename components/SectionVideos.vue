@@ -42,7 +42,7 @@ export default {}
   padding-top 0
   padding-bottom 0
   .section-header
-    grid-column 6 / span 7
+    grid-column 1 / span 12
     margin-bottom var(--spacing-9)
   .frame
     background-color rgb(22, 25, 49)
@@ -50,7 +50,7 @@ export default {}
     padding-bottom 56.25% /* 16:9 */
     height 0
     position relative
-    grid-column 1 / span 8
+    grid-column 1/span 12
     iframe
       border-radius $border-radius-3
       top 0
@@ -59,42 +59,44 @@ export default {}
       height 100%
       position absolute
   .text
-    grid-column 9 / span 5
+    display block
+    margin-top var(--spacing-7)
+    grid-column 1/span 12
     position relative
-    display flex
-    flex-direction column
     &__caption
       color var(--gray-600)
     &__title
       margin-top var(--spacing-4)
       color var(--white)
     &__cta
-      align-self flex-end
-      margin-top auto
+      margin-top var(--spacing-3)
 
-@media screen and (max-width: 1438px)
+@media $breakpoint-xxl
+  .section-videos
+    .container
+      .frame
+        grid-column 1 / span 12
+
+
+@media $breakpoint-large
+  .section .section-header
+    grid-column 6 / span 7
+
   .section-videos
     .container
       .frame
         grid-column 1 / 8
-
-
-@media screen and (max-width: 1024px)
-  .section .section-header
-      grid-column 1 / span 12
-
-  .section-videos
-    .container
-      .frame
-        grid-column 1/span 12
       .text
-        display block
-        margin-top var(--spacing-7)
-        grid-column 1/span 12
+        grid-column 8 / span 5
+        margin-top 0
+        display flex
+        flex-direction column
         &__cta
-          margin-top var(--spacing-3)
+          align-self flex-end
+          margin-top auto
 
-@media screen and (max-width: 576px)
+
+@media $breakpoint-xsmall-only
   .section-videos
     .container .text
       margin-top var(--spacing-6)

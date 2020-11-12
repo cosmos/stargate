@@ -272,6 +272,14 @@
               </div>
               <div class="list-item tm-rf0 tm-lh-copy">
                 <a
+                  href="https://testnet.mintscan.io/cosmos"
+                  target="blank_"
+                  rel="noreferrer noopener"
+                  >Mintscan</a
+                >
+              </div>
+              <div class="list-item tm-rf0 tm-lh-copy">
+                <a
                   href="https://stargate.bigdipper.live"
                   target="blank_"
                   rel="noreferrer noopener"

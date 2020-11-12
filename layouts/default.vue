@@ -34,7 +34,7 @@ export default {
   .container
     display grid
     grid-template-columns repeat(12, 1fr)
-    gap 0 2rem
+    gap 0 var(--spacing-7)
     max-width var(--container-mw-lg)
     margin 0 auto
 
