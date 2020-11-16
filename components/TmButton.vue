@@ -19,7 +19,7 @@
       '--color': color,
     }"
   >
-    <span>
+    <span class="tm-button__content">
       <slot />
     </span>
   </nuxt-link>
@@ -45,7 +45,7 @@
       '--color': color,
     }"
   >
-    <span>
+    <span class="tm-button__content">
       <slot />
     </span>
   </a>
@@ -69,7 +69,7 @@
     }"
     aria-disabled="true"
   >
-    <span>
+    <span class="tm-button__content">
       <slot />
     </span>
   </button>
@@ -93,7 +93,7 @@
       '--color': color,
     }"
   >
-    <span>
+    <span class="tm-button__content">
       <slot />
     </span>
   </button>
@@ -345,10 +345,13 @@ export default {
     padding-top var(--spacing-6)
     padding-bottom var(--spacing-6)
 
+  &__content
+    display flex
+    flex-wrap wrap
+
   /* icons */
   >>> .icon__right
   >>> .icon__left
-    display inline-block
     transform-fix()
     transition transform 0.25s $ease-out
   >>> .icon__left

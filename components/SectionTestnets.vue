@@ -79,7 +79,8 @@
                     variant="text"
                     glow
                     class="btn"
-                    >#stargate-testnet 🌠</tm-button
+                    ><icon-discord-24 class="icon__left" />#stargate-testnet
+                    🌠</tm-button
                   >
                 </div>
               </div>
@@ -145,7 +146,8 @@
                     variant="text"
                     glow
                     class="btn"
-                    >#bigbang-testnet 💥</tm-button
+                    ><icon-discord-24 class="icon__left" />#bigbang-testnet
+                    💥</tm-button
                   >
                 </div>
               </div>
@@ -256,7 +258,8 @@
                     variant="text"
                     glow
                     class="btn"
-                    >#stargate-v040 ⭐</tm-button
+                    ><icon-discord-24 class="icon__left" />#stargate-v040
+                    ⭐</tm-button
                   >
                 </div>
               </div>
