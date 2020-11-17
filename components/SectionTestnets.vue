@@ -73,13 +73,14 @@
                   >
                   <tm-button
                     to-link="external"
-                    href="https://discord.com/channels/669268347736686612/723170066937413693"
+                    href="https://discord.gg/vcExX9T"
                     size="l"
                     color="var(--link)"
                     variant="text"
                     glow
                     class="btn"
-                    >Discuss -></tm-button
+                    ><icon-discord-24 class="icon__left" />#stargate-testnet
+                    🌠</tm-button
                   >
                 </div>
               </div>
@@ -139,13 +140,14 @@
                   >
                   <tm-button
                     to-link="external"
-                    href="https://discord.com/channels/669268347736686612/758259820494192640"
+                    href="https://discord.gg/vcExX9T"
                     size="l"
                     color="var(--link)"
                     variant="text"
                     glow
                     class="btn"
-                    >Discuss -></tm-button
+                    ><icon-discord-24 class="icon__left" />#bigbang-testnet
+                    💥</tm-button
                   >
                 </div>
               </div>
@@ -250,13 +252,14 @@
                   >
                   <tm-button
                     to-link="external"
-                    href="https://discord.com/channels/669268347736686612/723170066937413693"
+                    href="https://discord.gg/vcExX9T"
                     size="l"
                     color="var(--link)"
                     variant="text"
                     glow
                     class="btn"
-                    >Discuss -></tm-button
+                    ><icon-discord-24 class="icon__left" />#stargate-v040
+                    ⭐</tm-button
                   >
                 </div>
               </div>
