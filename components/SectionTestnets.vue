@@ -30,7 +30,7 @@
                 <div
                   class="testnets-list__item__text__top__title tm-rf2 tm-bold tm-lh-title tm-code"
                 >
-                  cosmoshub-stargate-test
+                  cosmoshub-test-stargate-e
                 </div>
               </div>
               <div class="testnets-list__item__text">
@@ -193,7 +193,7 @@
                 <div
                   class="testnets-list__item__text__top__title tm-rf2 tm-bold tm-lh-title tm-code"
                 >
-                  stargate-4
+                  stargate-5
                 </div>
               </div>
               <div class="testnets-list__item__text">
@@ -268,14 +268,14 @@
               <div class="list-title tm-rf-1 tm-medium tm-lh-title tm-overline">
                 Explorers
               </div>
-              <div class="list-item tm-rf0 tm-lh-copy">
+              <!-- <div class="list-item tm-rf0 tm-lh-copy">
                 <a
                   href="https://look.ping.pub/#/validator?chain=stargate-4"
                   target="blank_"
                   rel="noreferrer noopener"
                   >Look</a
                 >
-              </div>
+              </div> -->
               <div class="list-item tm-rf0 tm-lh-copy">
                 <a
                   href="https://testnet.mintscan.io/cosmos"
@@ -329,7 +329,7 @@
                 <div
                   class="section-tabs__text__title tm-rf2 tm-bold tm-lh-title tm-measure"
                 >
-                  Joining <span class="tm-code">stargate-4</span>
+                  Joining <span class="tm-code">stargate-5</span>
                 </div>
                 <p
                   class="section-tabs__text__paragraph tm-measure tm-rf1 tm-lh-copy"
@@ -355,7 +355,7 @@
                   <div
                     class="update-container__title tm-rf1 tm-bold tm-lh-copy"
                   >
-                    Joined stargate-4 testnet?
+                    Joined stargate-5 testnet?
                   </div>
                   <tm-button
                     to-link="external"
@@ -381,7 +381,7 @@
                     href="https://github.com/cosmosdevs/stargate#testnet"
                     target="_blank"
                     rel="noreferrer noopener"
-                    ><span class="tm-code">stargate-4</span></a
+                    ><span class="tm-code">stargate-5</span></a
                   >
                   testnet.
                 </p>
@@ -444,7 +444,7 @@
                   <div
                     class="update-container__title tm-rf1 tm-bold tm-lh-copy"
                   >
-                    Joined stargate-4 testnet?
+                    Joined stargate-5 testnet?
                   </div>
                   <p class="update-container__cta">
                     <tm-button
@@ -482,7 +482,7 @@
                   infrastructure ahead of time, using the
                   <span
                     class="section-tabs__text__paragraph tm-measure__stargate tm-rf1 tm-lh-copy tm-code"
-                    >stargate-4</span
+                    >stargate-5</span
                   >
                   testnet.
                 </p>
@@ -544,7 +544,7 @@
                   <div
                     class="update-container__title tm-rf1 tm-bold tm-lh-copy"
                   >
-                    Joined stargate-4 testnet?
+                    Joined stargate-5 testnet?
                   </div>
                   <p class="update-container__cta">
                     <tm-button
