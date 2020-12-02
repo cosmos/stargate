@@ -265,17 +265,17 @@
               </div>
             </div>
             <div class="testnets-list__item__text__right">
-              <div class="list-title tm-rf-1 tm-medium tm-lh-title tm-overline">
+              <!-- <div class="list-title tm-rf-1 tm-medium tm-lh-title tm-overline">
                 Explorers
               </div>
-              <!-- <div class="list-item tm-rf0 tm-lh-copy">
+              <div class="list-item tm-rf0 tm-lh-copy">
                 <a
                   href="https://look.ping.pub/#/validator?chain=stargate-4"
                   target="blank_"
                   rel="noreferrer noopener"
                   >Look</a
                 >
-              </div> -->
+              </div>
               <div class="list-item tm-rf0 tm-lh-copy">
                 <a
                   href="https://testnet.mintscan.io/cosmos"
@@ -291,7 +291,7 @@
                   rel="noreferrer noopener"
                   >The Big Dipper</a
                 >
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
