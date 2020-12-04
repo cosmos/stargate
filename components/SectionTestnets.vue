@@ -85,6 +85,27 @@
                 </div>
               </div>
             </div>
+            <div class="testnets-list__item__text__right">
+              <div class="list-title tm-rf-1 tm-medium tm-lh-title tm-overline">
+                Explorers
+              </div>
+              <div class="list-item tm-rf0 tm-lh-copy">
+                <a
+                  href="https://testnet.mintscan.io/stargate"
+                  target="blank_"
+                  rel="noreferrer noopener"
+                  >Mintscan</a
+                >
+              </div>
+              <div class="list-item tm-rf0 tm-lh-copy">
+                <a
+                  href="https://stargate.simulation.bigdipper.live"
+                  target="blank_"
+                  rel="noreferrer noopener"
+                  >The Big Dipper</a
+                >
+              </div>
+            </div>
           </div>
           <div class="testnets-list__item">
             <img
@@ -97,7 +118,7 @@
                 <div
                   class="testnets-list__item__text__top__title tm-rf2 tm-bold tm-lh-title tm-code"
                 >
-                  bigbang-1
+                  bigbang-2
                 </div>
               </div>
               <div class="testnets-list__item__text">
@@ -162,14 +183,6 @@
                   target="blank_"
                   rel="noreferrer noopener"
                   >Aneka</a
-                >
-              </div>
-              <div class="list-item tm-rf0 tm-lh-copy">
-                <a
-                  href="https://look.ping.pub/#/validator?chain=bigbang-1"
-                  target="blank_"
-                  rel="noreferrer noopener"
-                  >Look</a
                 >
               </div>
               <div class="list-item tm-rf0 tm-lh-copy">
