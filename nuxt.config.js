@@ -10,7 +10,7 @@ export default {
    */
   head: {
     htmlAttrs: {
-      lang: 'en'
+      lang: 'en',
     },
     title: 'Stargate | Cosmos Network',
     meta: [
@@ -166,7 +166,10 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: [],
+  modules: ['@nuxtjs/gtm'],
+  gtm: {
+    id: 'GTM-TBX48R6',
+  },
   /*
    ** Build configuration
    ** See https://nuxtjs.org/api/configuration-build/
