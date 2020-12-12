@@ -7,8 +7,8 @@
             A <span class="section-title__highlight">new era</span> for Cosmos
           </div>
           <div class="section-subtitle tm-rf2 tm-lh-copy tm-measure">
-            The biggest event in the ecosystem since the launch of the Cosmos
-            Hub.
+            Join the biggest event in the ecosystem since the launch of the
+            Cosmos Hub.
           </div>
           <eclipsed-planet class="section-graphics" />
           <div class="section-statement tm-rf1 tm-lh-copy tm-measure">
@@ -26,7 +26,7 @@
               color="var(--link)"
               variant="text"
               class="section-cta"
-              >Read more about Stargate &#8594;</tm-button
+              >Learn more &#8594;</tm-button
             >
           </div>
         </div>
@@ -52,7 +52,7 @@ export default {}
     margin-bottom -1.1em
     &__highlight
       background-color var(--white)
-      background-image linear-gradient(90deg, #99DAFF 0%, #CCD1FF 51.56%, #E644F8 100%)
+      background-image linear-gradient(90deg, #E644F8 0%, #CCD1FF 51.56%, #99DAFF 100%)
       background-size 100%
       background-clip text
       // TODO: Why doesn't postcss generate these?

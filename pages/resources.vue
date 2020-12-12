@@ -1,79 +1,13 @@
 <template>
   <div id="roadmap" class="section section-roadmap">
     <div class="tm-section-container section-container">
+      <section-articles />
+      <section-videos />
       <div class="container">
         <div class="section-header tm-rf0 tm-medium tm-lh-title tm-overline">
           Roadmap
         </div>
-        <div class="section-title tm-rf7 tm-bold tm-lh-title">
-          <span class="percentage">{{ progressTotal }}%</span> complete
-        </div>
-        <div class="section-milestones">
-          <div class="section-milestones__title tm-rf3 tm-bold tm-lh-title">
-            Milestones
-          </div>
-          <div class="section-milestones__cta">
-            <tm-button
-              to-link="external"
-              href="https://github.com/orgs/cosmosdevs/projects/1"
-              color="var(--link)"
-              variant="text"
-              size="l"
-              >View on GitHub &#8594;</tm-button
-            >
-          </div>
-          <div class="section-milestones__faq">
-            <h4
-              class="section-milestones__faq__title tm-rf0 tm-bold tm-lh-title"
-            >
-              How do we measure progress?
-            </h4>
-            <p
-              class="section-milestones__faq__body tm-rf-1 tm-lh-copy tm-measure tm-measure-narrow-l-up"
-            >
-              The various parts of the Cosmos stack, upon which Stargate is
-              built, each have their own milestone. The progress of each
-              milestone depends on how many outstanding tasks there are. As more
-              tasks are created or completed, the percentage will fluctuate
-              until no more tasks remain and the milestone is achieved.
-            </p>
-          </div>
-        </div>
-        <a
-          v-for="item in milestoneList"
-          :key="item.url"
-          :href="item.url"
-          target="_blank"
-          rel="noreferrer noopener"
-          class="section-row"
-        >
-          <div
-            class="meter"
-            :style="{
-              '--progress-bar-width': `${item.progress}%`,
-              '--progress-bar-background-color': `${bgColor[item.logo]}`,
-            }"
-          ></div>
-          <div class="details">
-            <div class="icon">
-              <component :is="`icon-${item.logo}`" />
-            </div>
-            <div class="text">
-              <div class="title tm-rf1 tm-bold tm-lh-copy">
-                {{ item.defaultTitle }}
-              </div>
-              <div class="subtitle tm-rf0 tm-lh-copy">{{ item.repo }}</div>
-            </div>
-            <div class="indicator">
-              <div v-if="item.progress" class="progress__wrapper">
-                <div class="progress tm-rf0 tm-lh-copy">
-                  {{ item.progress }}% complete
-                </div>
-              </div>
-            </div>
-          </div>
-        </a>
-        <!-- <div class="section-status">
+        <div class="section-status">
           <div class="section-status__title tm-rf3 tm-bold tm-lh-title">
             Status updates
           </div>
@@ -116,32 +50,33 @@
               View less
             </div>
           </div>
-        </div> -->
-        <div class="section-status">
+        </div>
+        <!-- <div class="section-status">
           <div class="section-status__title tm-rf3 tm-bold tm-lh-title">
             Proposals
           </div>
-        </div>
-        <div class="proposal-card">
+        </div> -->
+        <!-- <div class="section-list">
           <a
             v-for="item in proposals"
             :key="item.title"
             :href="item.url"
             target="_blank"
             rel="noreferrer noopener"
-            class="proposal-item"
+            class="section-list__item"
           >
-            <span class="proposal-item__icon tm-rf2 tm-lh-solid">&#8599;</span>
             <div
-              class="proposal-item__title tm-rf1 tm-bold tm-lh-title tm-measure-narrow"
+              class="section-list__item__title tm-rf0 tm-rf1-m-up tm-bold tm-lh-title"
             >
               {{ item.title }}
             </div>
-            <div class="proposal-item__date tm-rf0 tm-lh-copy tm-measure">
-              {{ item.date }}
+            <div
+              class="section-list__item__date tm-rf-1 tm-rf1-m-up tm-lh-title"
+            >
+              {{ item.date }} &#8594;
             </div>
           </a>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
@@ -149,16 +84,16 @@
 
 <script>
 import axios from 'axios'
-import IconIbc from '~/components/IconIbc.vue'
-import IconSdk from '~/components/IconSdk.vue'
-import IconCore from '~/components/IconCore.vue'
+// import IconIbc from '~/components/IconIbc.vue'
+// import IconSdk from '~/components/IconSdk.vue'
+// import IconCore from '~/components/IconCore.vue'
 
 export default {
-  components: {
-    IconIbc,
-    IconSdk,
-    IconCore,
-  },
+  // components: {
+  //   IconIbc,
+  //   IconSdk,
+  //   IconCore,
+  // },
   data() {
     return {
       milestoneList: [],
@@ -420,44 +355,6 @@ export default {
       &__cta
         color var(--link)
         cursor pointer
-
-.proposal-card
-  margin-top var(--spacing-7)
-
-.proposal-item
-  background linear-gradient(89.41deg, #99DAFF -0.22%, #FFD1FD 99.78%)
-  box-shadow 0 0 1px rgba(0,0,0,.07), 0 8px 16px rgba(0,0,0,.05), 0 20px 44px rgba(0,3,66,.12)
-  border-radius var(--spacing-4)
-  padding var(--spacing-7)
-  backface-visibility hidden
-  transform translateZ(0)
-  transition all .25s cubic-bezier(.165,.84,.44,1)
-  cursor pointer
-  position relative
-  width 23.3125rem
-  margin-top var(--spacing-10)
-  grid-column 1 / span 12
-  display block
-  text-align left
-  &__icon
-    display flex
-    justify-content flex-end
-    color var(--gray-600)
-    transition color .1s ease-out, transform .25s ease-out
-  &__title
-    color var(--gray-50)
-    transition color .1s ease-out
-    padding-right 2rem
-    margin-top var(--spacing-8)
-  &__date
-    margin-top var(--spacing-4)
-    color var(--trans-gray-400)
-  &:hover
-    .articles-item__title,
-    .articles-item__icon
-      color var(--white)
-    .articles-item__icon
-      transform translate(3px, -3px)
 
 @media screen and (max-width: 1024px)
   .section .section-header

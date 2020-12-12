@@ -2,9 +2,9 @@
   <div id="community" class="section section-community">
     <div class="tm-section-container section-container">
       <div class="container">
-        <div class="section-header tm-rf0 tm-medium tm-lh-title tm-overline">
+        <!-- <div class="section-header tm-rf0 tm-medium tm-lh-title tm-overline">
           Community
-        </div>
+        </div> -->
         <div class="cards">
           <a
             href="https://cosmos.network/community"
@@ -17,7 +17,7 @@
               Connect
             </div>
             <div class="cards__item__title tm-rf2 tm-bold tm-lh-title">
-              Join the community
+              Join the community -->
             </div>
             <div class="cards__item__description tm-rf0 tm-rf1-m-up tm-lh-copy">
               Learn about Cosmos, get to know the community, connect with other

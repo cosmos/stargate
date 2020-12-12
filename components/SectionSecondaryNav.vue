@@ -1,40 +1,23 @@
 <template>
-  <div class="section-hero">
-    <div class="tm-section-container section-container">
-      <div class="hero-graphics">
-        <span class="hero-graphics__glow"></span>
-        <span class="hero-graphics__gate"></span>
-        <gate-notches class="hero-graphics__gate-notches" />
-        <span class="hero-graphics__star"></span>
-        <span class="hero-graphics__planet"></span>
-      </div>
-      <div class="container">
-        <section-primary-nav />
-        <div class="content">
-          <h1 class="title">
-            <div class="wordmarks">
-              <wordmark-stargate variant="glow" />
-              <wordmark-stargate />
-            </div>
-            <span class="sr-only">Stargate</span>
-          </h1>
-          <div class="subtitle tm-rf2 tm-rf3-m-up tm-lh-copy">
-            The Internet of Blockchains is on the horizon.
-          </div>
-          <tm-button
-            to-link="internal"
-            to="/testnets"
-            size="l"
-            color="var(--black)"
-            background-color="linear-gradient(90deg, #99DAFF 0%, #FFD1FD 50%, var(--primary-900) 100%), var(--primary-900)"
-            glow
-            class="hero-btn"
-            >Join testnets</tm-button
-          >
-        </div>
-      </div>
+  <!-- <div class="section-hero"> -->
+  <div class="tm-section-container section-container">
+    <div class="container">
+      <nav class="nav-primary">
+        <ul>
+          <li>
+            <a href="https://cosmos.network">
+              <span class="text tm-rf0 tm-lh-title">← Testnets</span>
+              <icon-arrow-right class="icon" />
+            </a>
+          </li>
+          <li>
+            <logo-wordmark class="logo" /><span class="sr-only">Cosmos</span>
+          </li>
+        </ul>
+      </nav>
     </div>
   </div>
+  <!-- </div> -->
 </template>
 
 <script>
@@ -47,6 +30,33 @@ export default {}
     transform translate3d(0,0,0) rotate(0deg)
   to
     transform translate3d(0,0,0) rotate(360deg)
+
+.nav-primary
+  ul
+    display grid
+    grid-template-columns repeat(3, 1fr)
+    align-items center
+    padding 0
+  li
+    list-style-type none
+    &:first-child
+      text-align left
+  .logo
+    display block
+    margin 0 auto
+  a
+    display inline-block
+    padding var(--spacing-4) 0
+    color var(--gray-600)
+    border-radius $border-radius-2
+    &:hover,
+    &:focus
+      color var(--gray-800)
+    .icon
+      display none
+      fill var(--gray-800)
+      transform rotate(180deg)
+      width 1.5rem
 
 .section-hero
   position relative
@@ -72,6 +82,8 @@ export default {}
     flex-direction column
     align-items normal
     justify-content flex-start
+    .nav-primary
+      margin-bottom 5%
     .content
       margin auto
       width 100%
@@ -171,6 +183,16 @@ export default {}
       font-size 0.5rem
 
 @media screen and (max-width: 576px)
+  .nav-primary
+    .logo
+      height 1.25rem
+    a
+      padding var(--spacing-4)
+      .text
+        display none
+      .icon
+        display block
+
   .section-hero
     min-height 32rem
     max-height 42rem
@@ -179,6 +201,8 @@ export default {}
       padding-top var(--spacing-4)
       padding-bottom var(--spacing-7)
     .container
+      .nav-primary
+        margin-bottom var(--spacing-8)
       .content
         padding-bottom 40%
         .subtitle
