@@ -1,35 +1,74 @@
 <template>
   <footer class="footer">
-    <div class="tm-section-container">
+    <div class="tm-section-container section-container">
       <nav class="nav">
-        <a
-          class="nav__item tm-rf0 tm-lh-title"
-          href="https://docs.cosmos.network"
-          target="blank_"
-          rel="noreferrer noopener"
-          >Cosmos SDK</a
-        >
-        <a
-          class="nav__item tm-rf0 tm-lh-title"
-          href="https://hub.cosmos.network"
-          target="blank_"
-          rel="noreferrer noopener"
-          >Cosmos Hub</a
-        >
-        <a
-          class="nav__item tm-rf0 tm-lh-title"
-          href="https://docs.tendermint.com"
-          target="blank_"
-          rel="noreferrer noopener"
-          >Tendermint Core</a
-        >
-        <a
-          class="nav__item tm-rf0 tm-lh-title"
-          href="https://github.com/cosmos/ics"
-          target="blank_"
-          rel="noreferrer noopener"
-          >Interchain Standards</a
-        >
+        <div class="nav__item">
+          <div
+            class="nav__item__title tm-rf-1 tm-rf0-m-up tm-medium tm-lh-title tm-overline"
+          >
+            Stargate
+          </div>
+          <NuxtLink to="/" class="nav__item__item tm-rf0 tm-lh-title"
+            >Overview</NuxtLink
+          >
+          <NuxtLink to="/testnets" class="nav__item__item tm-rf0 tm-lh-title"
+            >Testnets</NuxtLink
+          >
+          <NuxtLink to="/resources" class="nav__item__item tm-rf0 tm-lh-title"
+            >Resources</NuxtLink
+          >
+        </div>
+        <div class="nav__item">
+          <div
+            class="nav__item__title tm-rf-1 tm-rf0-m-up tm-medium tm-lh-title tm-overline"
+          >
+            Ecosystem
+          </div>
+          <a
+            class="nav__item__item tm-rf0 tm-lh-title"
+            href="https://docs.cosmos.network"
+            target="blank_"
+            rel="noreferrer noopener"
+            >Cosmos SDK</a
+          >
+          <a
+            class="nav__item__item tm-rf0 tm-lh-title"
+            href="https://docs.tendermint.com"
+            target="blank_"
+            rel="noreferrer noopener"
+            >Tendermint Core</a
+          >
+          <a
+            class="nav__item__item tm-rf0 tm-lh-title"
+            href="https://github.com/cosmos/ics"
+            target="blank_"
+            rel="noreferrer noopener"
+            >Interchain Standards</a
+          >
+          <a
+            class="nav__item__item tm-rf0 tm-lh-title"
+            href="https://hub.cosmos.network"
+            target="blank_"
+            rel="noreferrer noopener"
+            >Cosmos Hub</a
+          >
+        </div>
+        <div class="nav__item">
+          <div
+            class="nav__item__title tm-rf-1 tm-rf0-m-up tm-medium tm-lh-title tm-overline"
+          >
+            Community
+          </div>
+          <div class="nav__item__item">Chat</div>
+          <div class="nav__item__item">Bug Bountry Program</div>
+          <a
+            class="nav__item__item tm-rf0 tm-lh-title"
+            href="https://discord.gg/vcExX9T"
+            target="blank_"
+            rel="noreferrer noopener"
+            >Cosmos Community</a
+          >
+        </div>
       </nav>
       <nav ref="links" class="social-icons">
         <a
@@ -112,7 +151,7 @@ export default {
         },
         { title: 'Reddit', url: 'https://reddit.com/r/cosmosnetwork' },
         { title: 'Telegram', url: 'https://t.me/cosmosproject' },
-        { title: 'Discord', url: 'https://discord.gg/cr7N47p' },
+        { title: 'Discord', url: 'https://discord.gg/vcExX9T' },
         { title: 'YouTube', url: 'https://www.youtube.com/c/CosmosProject' },
       ],
     }
@@ -144,21 +183,30 @@ export default {
   background linear-gradient(180deg, #000000 0%, #030419 100%)
   padding var(--spacing-9) 0
   .nav
-    display flex
-    flex-direction row
+    display grid
+    gap 1.5rem
+    grid-template-columns repeat(auto-fit, minmax(200px, 1fr))
     justify-content center
-    margin-top var(--spacing-5)
     &__item
       padding var(--spacing-6) 0
       margin 0 var(--spacing-5)
       border-radius $border-radius-2
       white-space nowrap
       color var(--gray-600)
-      &:hover,
-      &:focus
-        color inherit
+      text-align left
+      display flex
+      flex-direction column
+      // &:hover,
+      // &:focus
+      //   color inherit
+      &__title
+        padding-bottom var(--spacing-3)
+      &__item
+        padding-top 0.5rem
+        padding-bottom 0.5rem
   .social-icons
-    margin-top var(--spacing-7)
+    margin-top var(--spacing-9)
+    margin-bottom var(--spacing-9)
     display flex
     flex-direction row
     flex-wrap wrap
