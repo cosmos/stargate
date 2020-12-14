@@ -8,15 +8,19 @@
           >
             Stargate
           </div>
-          <NuxtLink to="/" class="nav__item__item tm-rf0 tm-lh-title"
-            >Overview</NuxtLink
-          >
-          <NuxtLink to="/testnets" class="nav__item__item tm-rf0 tm-lh-title"
-            >Testnets</NuxtLink
-          >
-          <NuxtLink to="/resources" class="nav__item__item tm-rf0 tm-lh-title"
-            >Resources</NuxtLink
-          >
+          <div class="nav__item__item">
+            <NuxtLink to="/" class="tm-rf0 tm-lh-title">Overview</NuxtLink>
+          </div>
+          <div class="nav__item__item">
+            <NuxtLink to="/testnets" class="tm-rf0 tm-lh-title"
+              >Testnets</NuxtLink
+            >
+          </div>
+          <div class="nav__item__item">
+            <NuxtLink to="/resources" class="tm-rf0 tm-lh-title"
+              >Resources</NuxtLink
+            >
+          </div>
         </div>
         <div class="nav__item">
           <div
@@ -24,34 +28,42 @@
           >
             Ecosystem
           </div>
-          <a
-            class="nav__item__item tm-rf0 tm-lh-title"
-            href="https://docs.cosmos.network"
-            target="blank_"
-            rel="noreferrer noopener"
-            >Cosmos SDK</a
-          >
-          <a
-            class="nav__item__item tm-rf0 tm-lh-title"
-            href="https://docs.tendermint.com"
-            target="blank_"
-            rel="noreferrer noopener"
-            >Tendermint Core</a
-          >
-          <a
-            class="nav__item__item tm-rf0 tm-lh-title"
-            href="https://github.com/cosmos/ics"
-            target="blank_"
-            rel="noreferrer noopener"
-            >Interchain Standards</a
-          >
-          <a
-            class="nav__item__item tm-rf0 tm-lh-title"
-            href="https://hub.cosmos.network"
-            target="blank_"
-            rel="noreferrer noopener"
-            >Cosmos Hub</a
-          >
+          <div class="nav__item__item">
+            <a
+              class="tm-rf0 tm-lh-title"
+              href="https://docs.cosmos.network"
+              target="blank_"
+              rel="noreferrer noopener"
+              >Cosmos SDK</a
+            >
+          </div>
+          <div class="nav__item__item">
+            <a
+              class="tm-rf0 tm-lh-title"
+              href="https://docs.tendermint.com"
+              target="blank_"
+              rel="noreferrer noopener"
+              >Tendermint Core</a
+            >
+          </div>
+          <div class="nav__item__item">
+            <a
+              class="tm-rf0 tm-lh-title"
+              href="https://github.com/cosmos/ics"
+              target="blank_"
+              rel="noreferrer noopener"
+              >Interchain Standards</a
+            >
+          </div>
+          <div class="nav__item__item">
+            <a
+              class="tm-rf0 tm-lh-title"
+              href="https://hub.cosmos.network"
+              target="blank_"
+              rel="noreferrer noopener"
+              >Cosmos Hub</a
+            >
+          </div>
         </div>
         <div class="nav__item">
           <div
@@ -59,15 +71,33 @@
           >
             Community
           </div>
-          <div class="nav__item__item">Chat</div>
-          <div class="nav__item__item">Bug Bountry Program</div>
-          <a
-            class="nav__item__item tm-rf0 tm-lh-title"
-            href="https://discord.gg/vcExX9T"
-            target="blank_"
-            rel="noreferrer noopener"
-            >Cosmos Community</a
-          >
+          <div class="nav__item__item">
+            <a
+              class="tm-rf0 tm-lh-title"
+              href="https://discord.gg/vcExX9T"
+              target="blank_"
+              rel="noreferrer noopener"
+              >Chat</a
+            >
+          </div>
+          <div class="nav__item__item">
+            <a
+              class="tm-rf0 tm-lh-title"
+              href="https://hackerone.com/tendermint?type=team"
+              target="blank_"
+              rel="noreferrer noopener"
+              >Bug Bounty Program</a
+            >
+          </div>
+          <div class="nav__item__item">
+            <a
+              class="tm-rf0 tm-lh-title"
+              href="https://cosmos.network/community"
+              target="blank_"
+              rel="noreferrer noopener"
+              >Cosmos Community</a
+            >
+          </div>
         </div>
       </nav>
       <nav ref="links" class="social-icons">
