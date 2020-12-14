@@ -1,5 +1,5 @@
 <template>
-  <div id="intro" class="section-outer">
+  <div class="section-outer">
     <div class="section section-intro">
       <div class="tm-section-container section-container">
         <div class="container">

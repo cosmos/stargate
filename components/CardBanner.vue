@@ -1,13 +1,16 @@
 <template>
   <div class="section starport-banner">
+    <div class="card"></div>
     <div class="text">
-      <div
-        class="text__overline tm-rf-1 tm-rf0-m-up tm-medium tm-lh-title tm-overline"
-      >
+      <div class="text__overline tm-rf0 tm-medium tm-lh-title tm-overline">
         Calling all contributors
       </div>
-      <div class="text__title tm-rf3 tm-bold tm-lh-title">
-        Bug Bounty Program
+      <div class="text__title tm-rf4 tm-bold tm-lh-title">
+        <span class="text__title__highlight">Bug</span> Bounty Program
+      </div>
+      <div class="text__subtitle tm-rf1 tm-lh-copy">
+        We depend on the community to assist us with testing so that we can
+        increase confidence in the Stargate software releases.
       </div>
       <div class="text__btn-container">
         <tm-button
@@ -15,7 +18,6 @@
           href="https://hackerone.com/tendermint?type=team"
           background-color="linear-gradient(89.41deg, #99DAFF -0.22%, #FFD1FD 99.78%)"
           color="var(--gray-50)"
-          glow
           class="text__btn-container__btn"
           >Submit bug<span class="icon__right">↗</span></tm-button
         >
@@ -33,44 +35,56 @@
 </template>
 
 <style lang="stylus" scoped>
-/deep/
-.text__btn-container__btn
-  margin-right var(--spacing-6)
-  &:last-child
-    margin-right 0
-
 .starport-banner
   display grid
-  grid-template-columns repeat(6, 1fr)
-  grid-template-rows 1fr
+  grid-template-columns repeat(12,1fr)
   gap 0 var(--spacing-7)
-  background url(/cards/starport-rocket.jpg), linear-gradient(180deg, #1D1D1D 0%, #2E2D2D 100%)
-  background-repeat no-repeat
-  background-size contain
   box-shadow var(--elevation-16)
-  border-radius $border-radius-4
+  max-width var(--container-mw-lg)
   center()
-  max-width 64rem
-  margin 0 auto
+
+.card
+  background url("/stars-bg-bug-bounty.svg"), linear-gradient(180deg, #03072C 0%, #030320 100%)
+  // background-repeat no-repeat
+  background-size contain
+  grid-column 1 / span 6
+  border-radius $border-radius-4
 
 .text
-  padding var(--spacing-8)
-  grid-column 3 / span 6
+  // padding 0 var(--spacing-8)
+  grid-column 8 / span 12
 
   &__overline
-    color var(--white-700)
+    color var(--gray-600)
     position relative
 
   &__title
-    margin-top var(--spacing-3)
+    margin var(--spacing-6) 0
     color var(--white)
     position relative
+    margin-left calc(var(--spacing-12) * -1)
+
+    &__highlight
+      background-color var(--white)
+      background-image linear-gradient(90deg, #FF5348 0%, #FF75C8 6%, #FFFFFF 23%)
+      background-size 100%
+      background-clip text
+      -webkit-text-fill-color transparent
+      -moz-text-fill-color transparent
+      padding-right 0.05em // Fix offset clipping
+
+  &__subtitle
+    color var(--gray-800)
 
 .text__btn-container
   margin-top var(--spacing-8)
-  max-width $max-width-6
   display flex
   flex-wrap wrap
+
+  &__btn
+    margin-right var(--spacing-6)
+    &:last-child
+      margin-right 0
 
 .icon__left
   color var(--primary-600)
@@ -83,12 +97,12 @@
     padding var(--spacing-7)
 
 @media screen and (max-width: 660px)
-  .starport-banner
-    max-width $max-width-7
-    height 22rem
-    background url(/cards/starport-rocket-small.jpg), linear-gradient(180deg, #1D1D1D 0%, #2E2D2D 100%)
-    background-repeat no-repeat
-    background-size contain
+  // .starport-banner
+  //   max-width $max-width-7
+  //   height 22rem
+  //   background url(/cards/starport-rocket-small.jpg), linear-gradient(180deg, #1D1D1D 0%, #2E2D2D 100%)
+  //   background-repeat no-repeat
+  //   background-size contain
 
   .text
     grid-column unset
@@ -104,6 +118,9 @@
       bottom 0
       border-radius $border-radius-4
       background linear-gradient(180deg, rgba(46, 45, 45, 0) 0%, #2E2D2D 39.9%)
+
+    &__title
+      margin-left 0
 
   .text__btn-container__btn
     flex 1 0 auto

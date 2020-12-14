@@ -1,5 +1,5 @@
 <template>
-  <div id="community" class="section section-community">
+  <div class="section section-community">
     <div class="tm-section-container section-container">
       <div class="container">
         <!-- <div class="section-header tm-rf0 tm-medium tm-lh-title tm-overline">

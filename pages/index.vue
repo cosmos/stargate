@@ -12,6 +12,7 @@
     <section-roadmap />
     <!-- <section-testnets /> -->
     <section-contributors />
+    <card-banner />
     <section-form />
   </main>
 </template>

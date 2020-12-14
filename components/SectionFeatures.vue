@@ -1,5 +1,5 @@
 <template>
-  <div id="features" class="section section-features">
+  <div class="section section-features">
     <div class="tm-section-container section-container">
       <div class="container">
         <div class="section-header tm-rf0 tm-medium tm-lh-title tm-overline">

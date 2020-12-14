@@ -1,5 +1,5 @@
 <template>
-  <div id="contributors" class="section section-contributors">
+  <div class="section section-contributors">
     <div class="tm-section-container section-container">
       <div class="container">
         <div class="section-header tm-rf0 tm-medium tm-lh-title tm-overline">
