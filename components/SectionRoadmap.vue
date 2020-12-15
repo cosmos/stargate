@@ -19,7 +19,7 @@
               color="var(--link)"
               variant="text"
               size="l"
-              >View on GitHub &#8594;</tm-button
+              >View on GitHub ↗</tm-button
             >
           </div>
           <div class="section-milestones__faq">

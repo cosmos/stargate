@@ -6,7 +6,6 @@
           Testnets
         </div> -->
         <!-- <planets-cluster class="section-graphics" /> -->
-        <!-- <dyson-sphere class="section-graphics" /> -->
         <!-- <div class="section-top">
           <div class="section-title tm-rf6 tm-bold tm-lh-title">
             Get set for <span class="section-title__highlight">testnets</span>

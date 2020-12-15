@@ -39,7 +39,7 @@
   display grid
   grid-template-columns repeat(12,1fr)
   gap 0 var(--spacing-7)
-  box-shadow var(--elevation-16)
+  // box-shadow var(--elevation-16)
   max-width var(--container-mw-lg)
   center()
 
@@ -66,7 +66,7 @@
 
     &__highlight
       background-color var(--white)
-      background-image linear-gradient(90deg, #FF5348 0%, #FF75C8 6%, #FFFFFF 23%)
+      background-image linear-gradient(90deg, #ff5348 0%, #ff75c8 46%, #fff 93%)
       background-size 100%
       background-clip text
       -webkit-text-fill-color transparent

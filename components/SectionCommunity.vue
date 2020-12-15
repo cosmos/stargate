@@ -2,9 +2,30 @@
   <div class="section section-community">
     <div class="tm-section-container section-container">
       <div class="container">
-        <!-- <div class="section-header tm-rf0 tm-medium tm-lh-title tm-overline">
-          Community
-        </div> -->
+        <NuxtLink to="/testnets" class="top">
+          <div class="top__left">
+            <dyson-sphere class="section-graphics" />
+          </div>
+          <div class="top__right">
+            <sun class="top__sun" />
+            <div class="top__cards__item__top">
+              <div
+                class="cards__item__caption tm-rf-1 tm-rf0-m-up tm-medium tm-lh-title tm-overline"
+              >
+                Upgrade
+              </div>
+              <div class="cards__item__title tm-rf2 tm-bold tm-lh-title">
+                Join the testnets -->
+              </div>
+              <div
+                class="cards__item__description tm-rf0 tm-rf1-m-up tm-lh-copy"
+              >
+                Prepare for the new era of Cosmos by testing your integrations
+                against the Stargate testnets.
+              </div>
+            </div>
+          </div>
+        </NuxtLink>
         <div class="cards">
           <a
             href="https://cosmos.network/community"
@@ -57,74 +78,109 @@ export default {}
 </script>
 
 <style lang="stylus" scoped>
-.section-community
-  .section-header
-    grid-column 1 / span 12
-  .cards
-    margin-top var(--spacing-10)
-    display grid
-    grid-template-columns repeat(1, 1fr)
-    gap var(--spacing-7)
-    grid-column 1 / span 12
-    &__item
-      position relative
-      padding var(--spacing-8)
-      height 20rem
-      color var(--white)
-      position relative
-      display flex
-      flex-direction column
-      flex-wrap nowrap
-      justify-content flex-start
-      color var(--white)
-      background url("/top-half-graphics.svg"), linear-gradient(256.92deg, #120018 0%, #121435 100%)
-      background-position bottom center
+.section-graphics
+  position absolute
+  left -57%
+  top -3%
+  width 170%
+  height 162%
+
+.top
+  display grid
+  gap var(--spacing-7)
+  grid-template-columns repeat(12, 1fr)
+  grid-column 1/span 12
+  position relative
+  background linear-gradient(256.92deg, #120018 0%, #121435 100%)
+  border-radius $border-radius-5
+  overflow hidden
+
+  &__left
+    grid-column 1/span 7
+
+  &__right
+    grid-column 8/span 12
+    padding 0 var(--spacing-8)
+
+  &__sun
+    position absolute
+    right 0
+    top 0
+    z-index 1
+
+  &__cards__item__top
+    position relative
+    padding var(--spacing-8) 0
+    height 20rem
+    color var(--white)
+    position relative
+    display flex
+    flex-direction column
+    flex-wrap nowrap
+    justify-content flex-end
+    color var(--white)
+
+.cards
+  margin-top var(--spacing-7)
+  display grid
+  grid-template-columns repeat(1, 1fr)
+  gap var(--spacing-7)
+  grid-column 1 / span 12
+  &__item
+    position relative
+    padding var(--spacing-8)
+    height 20rem
+    color var(--white)
+    position relative
+    display flex
+    flex-direction column
+    flex-wrap nowrap
+    justify-content flex-start
+    color var(--white)
+    background url("/top-half-graphics.svg"), linear-gradient(256.92deg, #120018 0%, #121435 100%)
+    background-position bottom center
+    background-size contain
+    background-repeat no-repeat
+    border-radius $border-radius-5
+    hover-raise(-3px)
+    &:first-child
+      background url("/bottom-half-graphics.svg"), linear-gradient(256.92deg, #121435 0%, #030419 100%)
+      justify-content flex-end
+      background-position top center
       background-size contain
       background-repeat no-repeat
-      border-radius $border-radius-5
-      hover-raise(-3px)
-      &:first-child
-        background url("/bottom-half-graphics.svg"), linear-gradient(256.92deg, #121435 0%, #030419 100%)
-        justify-content flex-end
-        background-position top center
-        background-size contain
-        background-repeat no-repeat
-      &:hover
-        .cards__item__disclosure
-          color var(--white)
-          transform translate(2px,-2px)
-        .cards__item__caption
-          transform translateY(-4px)
-        .cards__item__title
-          transform translateY(-2px)
-      &__disclosure
-        position absolute
-        right var(--spacing-8)
-        color var(--gray-600)
-        transition color .1s ease-out, transform .25s ease-out
-      &__caption
-        color var(--gray-600)
-        transition transform .25s ease-out
-      &__title
-        margin-top var(--spacing-4)
+    &:hover
+      .cards__item__disclosure
         color var(--white)
-        transition transform .25s ease-out
-      &__description
-        margin-top var(--spacing-4)
-        color var(--gray-600)
+        transform translate(2px,-2px)
+      .cards__item__caption
+        transform translateY(-4px)
+      .cards__item__title
+        transform translateY(-2px)
+    &__disclosure
+      position absolute
+      right var(--spacing-8)
+      color var(--gray-600)
+      transition color .1s ease-out, transform .25s ease-out
+    &__caption
+      color var(--gray-600)
+      transition transform .25s ease-out
+    &__title
+      margin-top var(--spacing-4)
+      color var(--white)
+      transition transform .25s ease-out
+    &__description
+      margin-top var(--spacing-4)
+      color var(--gray-600)
 
 @media $breakpoint-large
-  .section .section-header
-    grid-column 6 / span 7
-
-  .section-community .cards
+  .cards
     grid-template-columns 1fr 1fr
 
 @media $breakpoint-xsmall-only
-  .section-community
-    .cards
-      &__item
-        height auto
-        min-height 16rem
-        border-radius $border-radius-4
+  .cards
+    &__item
+      height auto
+      min-height 16rem
+      border-radius $border-radius-4
 </style>
