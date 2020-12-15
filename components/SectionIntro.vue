@@ -55,7 +55,6 @@ export default {}
       background-image linear-gradient(90deg, #E644F8 0%, #CCD1FF 51.56%, #99DAFF 100%)
       background-size 100%
       background-clip text
-      // TODO: Why doesn't postcss generate these?
       -webkit-text-fill-color transparent
       -moz-text-fill-color transparent
       padding-right 0.05em // Fix offset clipping

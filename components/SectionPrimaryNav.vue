@@ -39,7 +39,7 @@ a.nuxt-link-exact-active
       display flex
       justify-content space-evenly
   .logo
-    display block
+    // display block
     margin 0 auto
   a
     display inline-block

@@ -94,6 +94,7 @@ export default {}
   background linear-gradient(256.92deg, #120018 0%, #121435 100%)
   border-radius $border-radius-5
   overflow hidden
+  hover-raise(-3px)
 
   &__left
     grid-column 1/span 7

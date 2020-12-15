@@ -1,6 +1,5 @@
 <template>
   <main>
-    <!-- <section-secondary-nav /> -->
     <div class="section-hero">
       <div class="tm-section-container section-container">
         <div class="container">
@@ -78,7 +77,7 @@ main
 
 .intro-text
   text-align left
-  margin-top var(--spacing-12)
+  margin-top var(--spacing-11)
 
 .section-title
   grid-column 1 / span 12
@@ -91,7 +90,6 @@ main
     background-image linear-gradient(90deg, #E644F8 0%, #CCD1FF 51.56%, #99DAFF 100%)
     background-size 100%
     background-clip text
-    // TODO: Why doesn't postcss generate these?
     -webkit-text-fill-color transparent
     -moz-text-fill-color transparent
     padding-right 0.05em // Fix offset clipping
@@ -102,7 +100,7 @@ main
   flex-direction column
   grid-row 2
   grid-column 6 / span 7
-  color var(--white)
+  color var(--gray-800)
 
 @media screen and (max-width: 1024px)
   .section .section-header

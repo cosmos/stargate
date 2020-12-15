@@ -2,9 +2,7 @@
   <div id="videos" class="section section-videos">
     <div class="tm-section-container section-container">
       <div class="container">
-        <div class="section-header tm-rf0 tm-medium tm-lh-title tm-overline">
-          Videos
-        </div>
+        <div class="section-header tm-rf3 tm-bold tm-lh-title">Videos</div>
         <div class="frame">
           <iframe
             title="Stargate video"
@@ -39,11 +37,16 @@ export default {}
 </script>
 
 <style lang="stylus" scoped>
+/deep/
+.section-header
+  border none
+  color inherit
+
 .section-videos
   padding-top 0
   padding-bottom 0
   .section-header
-    grid-column 1 / span 12
+    grid-column 2 / span 12
     margin-bottom var(--spacing-9)
   .frame
     background-color rgb(22, 25, 49)
@@ -80,8 +83,8 @@ export default {}
 
 
 @media $breakpoint-large
-  .section .section-header
-    grid-column 6 / span 7
+  .section-header
+    grid-column 2 / span 12
 
   .section-videos
     .container

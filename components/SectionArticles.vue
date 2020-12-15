@@ -1,13 +1,16 @@
 <template>
-  <div id="articles" class="section section-articles">
+  <div class="section section-articles">
     <div class="tm-section-container section-container">
       <div class="container">
-        <div class="section-title tm-rf5 tm-bold tm-lh-title tm-measure-narrow">
-          Learn more about Stargate
+        <div class="section-title tm-rf7 tm-bold tm-lh-title tm-measure-narrow">
+          Learn more about
+          <span class="section-title__highlight">Stargate</span>
         </div>
-        <div class="section-header tm-rf0 tm-medium tm-lh-title tm-overline">
-          {{ articles.length }} articles
+        <div class="section-subtitle tm-rf2 tm-lh-copy tm-measure">
+          Dive into the various resources to get up to speed with the Stargate
+          upgrades.
         </div>
+        <div class="section-header tm-rf3 tm-bold tm-lh-title">Articles</div>
         <a
           v-for="item in articles"
           :key="item.name"
@@ -99,14 +102,34 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+/deep/
+.section-header
+  border none
+  color inherit
+
 .section-articles
   .container
     gap var(--spacing-7)
   .section-title
     color var(--white)
-    grid-column 1 / span 12
+    grid-column 2 / span 9
+    &__highlight
+      background-color var(--white)
+      background-image linear-gradient(90deg, #99DAFF 0%, #CCD1FF 51.56%, #E644F8 100%)
+      background-size 100%
+      background-clip text
+      -webkit-text-fill-color transparent
+      -moz-text-fill-color transparent
+      padding-right 0.05em // Fix offset clipping
+  .section-subtitle
+    display flex
+    justify-content flex-end
+    flex-direction column
+    grid-row 2
+    grid-column 2 / span 11
+    color var(--gray-800)
   .section-header
-    grid-column 1 / span 12
+    grid-column 2 / span 11
     margin-top var(--spacing-8)
   .articles-item
     grid-column 1 / span 12
@@ -148,7 +171,7 @@ export default {
     .container
       gap var(--spacing-8) var(--spacing-7)
     .section-header
-      grid-column 6 / span 7
+      grid-column 2 / span 12
     .articles-item
       grid-column span 4
 </style>
