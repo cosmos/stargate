@@ -1,0 +1,552 @@
+<template>
+  <div id="testnets" class="section section-testnets">
+    <div class="tm-section-container section-container">
+      <div class="container">
+        <!-- <planets-cluster class="section-graphics" /> -->
+        <div class="section-status">
+          <div class="section-status__title tm-rf3 tm-bold tm-lh-title">
+            Not ready to upgrade?
+          </div>
+        </div>
+        <div class="section-tabs">
+          <tm-tabs>
+            <tm-tab name="Validators" :selected="true">
+              <div class="section-tabs__text">
+                <p
+                  class="section-tabs__text__paragraph tm-measure tm-rf1 tm-lh-copy"
+                >
+                  Validators of chains that will implement Stargate upgrades –
+                  beginning with the Cosmos Hub – should prepare by helping run
+                  the Stargate testnets above.
+                </p>
+              </div>
+              <div class="section-tabs__text">
+                <p
+                  class="section-tabs__text__paragraph tm-measure tm-rf1 tm-lh-copy"
+                >
+                  More detailed instructions and guidelines on how validators
+                  can prepare for the upgrade will be published in due course.
+                </p>
+              </div>
+              <div class="section-tabs__text">
+                <div
+                  class="section-tabs__text__heading tm-rf-1 tm-medium tm-lh-title tm-overline tm-measure"
+                >
+                  Cosmos Hub Validators
+                </div>
+                <div
+                  class="section-tabs__text__title tm-rf2 tm-bold tm-lh-title tm-measure"
+                >
+                  Joining <span class="tm-code">stargate-5</span>
+                </div>
+                <p
+                  class="section-tabs__text__paragraph tm-measure tm-rf1 tm-lh-copy"
+                >
+                  Your current <strong>"operator_address"</strong> and your
+                  <strong>"consensus_pubkey"</strong> are required via pull
+                  request. These keys will be used to generate a genesis file
+                  for the upcoming testnets.
+                </p>
+                <p class="section-tabs__text__cta">
+                  <tm-button
+                    to-link="external"
+                    href="https://github.com/cosmosdevs/stargate/tree/master/validator_pub_keys"
+                    size="l"
+                    color="var(--link)"
+                    variant="text"
+                    >Submit validator key &#8594;</tm-button
+                  >
+                </p>
+              </div>
+              <div class="section-tabs__text">
+                <div class="update-container">
+                  <div
+                    class="update-container__title tm-rf1 tm-bold tm-lh-copy"
+                  >
+                    Joined stargate-5 testnet?
+                  </div>
+                  <tm-button
+                    to-link="external"
+                    href="https://airtable.com/shrEr1bQD6COG9WH0"
+                    size="l"
+                    color="var(--link)"
+                    variant="text"
+                  >
+                    Confirm your Stargate readiness &#8594;
+                  </tm-button>
+                </div>
+              </div>
+            </tm-tab>
+            <tm-tab name="Wallets &amp; Explorers">
+              <div class="section-tabs__text">
+                <p
+                  class="section-tabs__text__paragraph tm-measure tm-rf1 tm-lh-copy"
+                >
+                  Wallets and Explorers should ensure they are able to use the
+                  old Amino endpoints and the new Protobuf queries to get the
+                  correct expected results from their queries using
+                  <a
+                    href="https://github.com/cosmosdevs/stargate#testnet"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    ><span class="tm-code">stargate-5</span></a
+                  >
+                  testnet.
+                </p>
+              </div>
+              <div class="section-tabs__code">
+                <div class="left">
+                  <div class="title tm-rf-1 tm-medium tm-lh-title tm-overline">
+                    Public RPC endpoints
+                  </div>
+                  <div class="list">
+                    <a
+                      href="http://34.123.30.100:26657"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      class="tm-rf0 tm-lh-copy tm-code"
+                      >34.123.30.100:26657</a
+                    >
+                    <a
+                      href="http://174.129.101.58:26657"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      class="tm-rf0 tm-lh-copy tm-code"
+                      >174.129.101.58:26657</a
+                    >
+                    <a
+                      href="http://52.200.210.219:26657"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      class="tm-rf0 tm-lh-copy tm-code"
+                      >52.200.210.219:26657</a
+                    >
+                  </div>
+                </div>
+                <div class="right">
+                  <div class="title tm-rf-1 tm-medium tm-lh-title tm-overline">
+                    Public RPC endpoints
+                  </div>
+                  <div class="list">
+                    <a
+                      href="http://34.123.30.100:1317"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      class="tm-rf0 tm-lh-copy tm-code"
+                      >34.123.30.100:1317</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="section-tabs__text">
+                <p
+                  class="section-tabs__text__paragraph tm-measure tm-rf1 tm-lh-copy"
+                >
+                  More detailed instructions and guidelines on how wallets and
+                  block explorers can prepare for the upgrade will be published
+                  in due course.
+                </p>
+              </div>
+              <div class="section-tabs__text">
+                <div class="update-container">
+                  <div
+                    class="update-container__title tm-rf1 tm-bold tm-lh-copy"
+                  >
+                    Joined stargate-5 testnet?
+                  </div>
+                  <p class="update-container__cta">
+                    <tm-button
+                      to-link="external"
+                      href="https://airtable.com/shrEr1bQD6COG9WH0"
+                      size="l"
+                      color="var(--link)"
+                      variant="text"
+                    >
+                      Confirm your Stargate readiness &#8594;
+                    </tm-button>
+                  </p>
+                </div>
+              </div>
+            </tm-tab>
+            <tm-tab name="Exchanges">
+              <div class="section-tabs__text">
+                <p
+                  class="section-tabs__text__paragraph tm-measure tm-rf1 tm-lh-copy"
+                >
+                  Use the
+                  <a
+                    href="https://github.com/cosmosdevs/stargate/blob/master/ibc_readiness_matrix.md"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    >Stargate IBC Skill Matrix</a
+                  >
+                  to guide you in supporting IBC with your upgrades.
+                </p>
+                <p
+                  class="section-tabs__text__paragraph tm-measure tm-rf1 tm-lh-copy"
+                >
+                  Make sure your signing and querying software is ready for the
+                  Stargate upgrade by testing the features and your
+                  infrastructure ahead of time, using the
+                  <span
+                    class="section-tabs__text__paragraph tm-measure__stargate tm-rf1 tm-lh-copy tm-code"
+                    >stargate-5</span
+                  >
+                  testnet.
+                </p>
+              </div>
+              <div class="section-tabs__code">
+                <div class="left">
+                  <div class="title tm-rf-1 tm-medium tm-lh-title tm-overline">
+                    Public RPC endpoints
+                  </div>
+                  <div class="list">
+                    <a
+                      href="http://34.123.30.100:26657"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      class="tm-rf0 tm-lh-copy tm-code"
+                      >34.123.30.100:26657</a
+                    >
+                    <a
+                      href="http://174.129.101.58:26657"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      class="tm-rf0 tm-lh-copy tm-code"
+                      >174.129.101.58:26657</a
+                    >
+                    <a
+                      href="http://52.200.210.219:26657"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      class="tm-rf0 tm-lh-copy tm-code"
+                      >52.200.210.219:26657</a
+                    >
+                  </div>
+                </div>
+                <div class="right">
+                  <div class="title tm-rf-1 tm-medium tm-lh-title tm-overline">
+                    Public RPC endpoints
+                  </div>
+                  <div class="list">
+                    <a
+                      href="http://34.123.30.100:1317"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      class="tm-rf0 tm-lh-copy tm-code"
+                      >34.123.30.100:1317</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="section-tabs__text">
+                <p
+                  class="section-tabs__text__paragraph tm-measure tm-rf1 tm-lh-copy"
+                >
+                  More detailed instructions and guidelines on how exchanges can
+                  prepare for the upgrade will be published in due course.
+                </p>
+              </div>
+              <div class="section-tabs__text">
+                <div class="update-container">
+                  <div
+                    class="update-container__title tm-rf1 tm-bold tm-lh-copy"
+                  >
+                    Joined stargate-5 testnet?
+                  </div>
+                  <p class="update-container__cta">
+                    <tm-button
+                      to-link="external"
+                      href="https://airtable.com/shrEr1bQD6COG9WH0"
+                      size="l"
+                      color="var(--link)"
+                      variant="text"
+                    >
+                      Confirm your Stargate readiness &#8594;
+                    </tm-button>
+                  </p>
+                </div>
+              </div>
+            </tm-tab>
+            <tm-tab name="Zone Developers">
+              <div class="section-tabs__text">
+                <p
+                  class="section-tabs__text__paragraph tm-measure tm-rf1 tm-lh-copy"
+                >
+                  More detailed instructions and guidelines on how zone
+                  developers can prepare for the upgrade will be published in
+                  due course.
+                </p>
+              </div>
+              <div class="section-tabs__text">
+                <div
+                  class="section-tabs__text__heading tm-rf1 tm-lh-title tm-measure"
+                >
+                  Not ready to upgrade?
+                </div>
+                <div
+                  class="section-tabs__text__title tm-rf2 tm-bold tm-lh-title tm-measure"
+                >
+                  Launchpad
+                </div>
+                <p
+                  class="section-tabs__text__paragraph tm-measure tm-rf1 tm-lh-copy"
+                >
+                  Stargate involves a lot of breaking changes that may make it
+                  difficult for you to upgrade, if you have already written a
+                  lot of code for Cosmos SDK 0.37/0.38.
+                </p>
+                <p
+                  class="section-tabs__text__paragraph tm-measure tm-rf1 tm-lh-copy"
+                >
+                  The community supports an SDK 0.39 Launchpad release that
+                  includes backported bug fixes. The
+                  <a v-scroll-to="'#contributors'">Cosmos development teams</a>
+                  are working together to document a clean migration path from
+                  Launchpad to a stable Stargate release.
+                </p>
+                <p class="section-tabs__text__cta">
+                  <tm-button
+                    to-link="external"
+                    href="https://blog.cosmos.network/launchpad-a-pre-stargate-stable-version-of-the-cosmos-sdk-e0c58d8c4e24"
+                    size="l"
+                    color="var(--link)"
+                    variant="text"
+                  >
+                    Learn more &#8594;
+                  </tm-button>
+                </p>
+              </div>
+            </tm-tab>
+          </tm-tabs>
+          <div class="section-tabs__text">
+            <div
+              class="section-tabs__text__title tm-rf2 tm-bold tm-lh-title tm-measure"
+            >
+              Migration guides
+            </div>
+            <p
+              class="section-tabs__text__paragraph tm-measure tm-rf1 tm-lh-copy"
+            >
+              Help the Cosmos ecosystem upgrade by contributing your own
+              migration guides to the community.
+            </p>
+            <p class="section-tabs__text__cta">
+              <tm-button
+                to-link="external"
+                href="https://github.com/cosmosdevs/stargate/pulls"
+                size="l"
+                color="var(--link)"
+                variant="text"
+                >Submit a guide &#8594;</tm-button
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {}
+</script>
+
+<style lang="stylus" scoped>
+.list-title
+  margin-bottom var(--spacing-5)
+
+.list-item a
+  position relative
+  &::after
+    content "↗"
+    position absolute
+    bottom 0.166em
+    padding-left 0.1875em
+    font-size 0.75em
+    line-height 1
+    transition transform 0.2s ease-out 0s
+
+.list-item + .list-item
+  margin-top var(--spacing-5)
+
+.section-testnets
+  position relative
+  overflow hidden
+  background linear-gradient(180deg, rgba(0,0,0,0) 0%, #030419 24%, #030419 69%, rgba(0,0,0,0) 100%)
+  .section-graphics
+    grid-column 5 / 13
+    grid-row 2
+    display flex
+    align-items flex-end
+  .section-status
+    grid-column 1 / 5
+    margin-top var(--spacing-10)
+    &__title
+      grid-column 1 / span 4
+      text-align start
+      color var(--white)
+  .section-tabs
+    margin-top var(--spacing-10)
+    grid-column 6 / span 7
+    &__code
+      display grid
+      grid-template-columns 50% 50%
+      grid-template-rows 1fr
+      gap var(--spacing-3)
+      margin-top var(--spacing-8)
+    &__text
+      margin-top var(--spacing-8)
+      &__heading
+        color var(--gray-600)
+      &__title
+        margin-top var(--spacing-3)
+        color var(--white)
+      &__paragraph
+        margin-top var(--spacing-5)
+        color var(--gray-800)
+        &__stargate
+          color var(--link)
+      &__cta
+        margin-top var(--spacing-4)
+        color var(--link)
+  .section-text
+    margin-top var(--spacing-10)
+    grid-column 6 / span 7
+    &__paragraph
+      color var(--gray-800)
+
+.btn
+  margin-right var(--spacing-7)
+  &:last-child
+    margin-right 0
+
+.update-container
+  padding var(--spacing-6) var(--spacing-6) var(--spacing-3)
+  background #282B53
+  box-shadow 0px 0px 1px rgba(0, 0, 0, 0.07), 0px 4px 8px rgba(0, 0, 0, 0.07), 0px 10px 22px rgba(0, 3, 66, 0.1)
+  border-radius $border-radius-3
+
+.update-container__title
+  color var(--white)
+
+.update-container__cta
+  color var(--link)
+
+.left, .right
+  border 2px solid #282B53
+  box-sizing border-box
+  filter drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.07)), drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.07)), drop-shadow(0px 10px 22px rgba(0, 3, 66, 0.1))
+  border-radius var(--spacing-3)
+  padding var(--spacing-5) var(--spacing-6)
+  height 10rem
+  display flex
+  flex-direction column
+  justify-content space-between
+
+.title
+  color var(--white)
+
+.list
+  color var(--link)
+  display flex
+  flex-direction column
+
+@media screen and (max-width: 1024px)
+  .section-testnets
+    overflow hidden
+    .section-graphics
+      align-items flex-start
+    .testnets-list
+      margin-top var(--spacing-8)
+    .testnets-list__item
+      grid-template-columns auto
+      margin 0
+      padding-top var(--spacing-9)
+      padding-bottom var(--spacing-9)
+      &:first-child
+        border-bottom 1px solid #282B53
+      &__graphics
+        left auto
+        right 0
+      &__cta
+        flex-direction row
+        justify-content flex-start
+      &__text
+        grid-column span 12
+      &__text__top
+        grid-column span 12
+        text-align inherit
+        display flex
+        align-items baseline
+        flex-wrap wrap
+        gap var(--spacing-4)
+        &__title
+          margin-right var(--spacing-4)
+          margin-bottom 0
+    .section-status__title
+      grid-column 1 / span 12
+    .section-tabs
+      margin-top var(--spacing-8)
+      grid-column 1 / span 12
+
+  .section-testnets .testnets-list__item__text__top
+    display flex
+    align-items center
+    flex-direction row
+
+  .section-testnets .testnets-list__item__text__right
+    grid-column 1/12
+    margin-top var(--spacing-5)
+
+  .testnets-list__item__text__bot__labels
+    flex-flow row wrap
+    &__item
+      margin-top var(--spacing-3)
+
+@media screen and (max-width: 767px)
+  .section-testnets
+    .section-status
+      grid-column 1/ span 12
+    .section-text
+      margin-top 0
+      grid-column 1 / span 12
+
+@media screen and (max-width: 576px)
+  .section-testnets .testnets-list__item__text__top__status
+    margin-left 0
+
+  .testnets-list__item__text__top__box__inactive
+    margin-top var(--spacing-4)
+
+  .section-testnets .section-tabs__code
+    grid-template-columns auto
+    gap var(--spacing-6)
+
+  .section-testnets
+    .section-graphics
+      font-size var(--spacing-3)
+    .section-statement
+      margin-top var(--spacing-7)
+    .section-tabs
+      >>> .tabs
+        margin-left calc(-1 * var(--spacing-6))
+        margin-right calc(-1 * var(--spacing-6))
+        ul
+          padding-left var(--spacing-6)
+          padding-right var(--spacing-6)
+
+  img.testnets-list__item__graphics
+    width 20%
+
+@media screen and (max-width: 414px)
+  .section-testnets
+    .testnets-list__item__text__bot__labels
+      display flex
+      &__item
+        width fit-content
+
+@media screen and (max-width: 360px)
+  .section-testnets .testnets-list__item__text__top
+    grid-column span 12
+</style>

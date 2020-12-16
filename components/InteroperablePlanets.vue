@@ -66,7 +66,7 @@
 
 <style lang="stylus" scoped>
 .container
-  width 100%
+  width 120%
   padding-bottom 90%
   position relative
   &:before

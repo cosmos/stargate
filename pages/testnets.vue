@@ -13,17 +13,69 @@
               Stargate testnets today.
             </div>
           </div>
+          <div class="testnet-lists">
+            <div class="testnet-lists__item">
+              <div class="testnet-lists__item__code tm-code">
+                cosmoshub-test-stargate-e
+              </div>
+              <dyson-sphere-glow class="section-graphics" />
+              <div
+                class="testnet-lists__item__title tm-rf4 tm-bold tm-lh-title"
+              >
+                Validator testnet
+              </div>
+              <div class="testnet-lists__item__desc tm-rf0 tm-lh-copy">
+                A simulated upgrade of the Cosmos Hub to Stargate (Cosmos SDK
+                v0.37 --> v0.40).
+                <span class="tm-bold">Highly recommended</span> for Cosmos Hub
+                validators.
+              </div>
+              <div class="testnet-lists__item__cta">---></div>
+            </div>
+            <div class="testnet-lists__item">
+              <div class="testnet-lists__item__code tm-code">bigbang-2</div>
+              <dyson-sphere class="section-graphics" />
+              <div
+                class="testnet-lists__item__title tm-rf4 tm-bold tm-lh-title"
+              >
+                Validator testnet
+              </div>
+              <div class="testnet-lists__item__desc tm-rf0 tm-lh-copy">
+                A simulated upgrade of the Cosmos Hub to Stargate (Cosmos SDK
+                v0.37 --> v0.40).
+                <span class="tm-bold">Highly recommended</span> for Cosmos Hub
+                validators.
+              </div>
+              <div class="testnet-lists__item__cta">---></div>
+            </div>
+            <div class="testnet-lists__item">
+              <div class="testnet-lists__item__code tm-code">stargate-5</div>
+              <dyson-sphere class="section-graphics" />
+              <div
+                class="testnet-lists__item__title tm-rf4 tm-bold tm-lh-title"
+              >
+                Validator testnet
+              </div>
+              <div class="testnet-lists__item__desc tm-rf0 tm-lh-copy">
+                A simulated upgrade of the Cosmos Hub to Stargate (Cosmos SDK
+                v0.37 --> v0.40).
+                <span class="tm-bold">Highly recommended</span> for Cosmos Hub
+                validators.
+              </div>
+              <div class="testnet-lists__item__cta">---></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- <section-intro /> -->
-    <!-- <section-features /> -->
+    <div class="data-container">
+      <div class="features-graphics">
+        <interoperable-planets />
+      </div>
+    </div>
 
-    <!-- <section-community /> -->
-    <!-- <section-roadmap /> -->
-    <!-- <section-testnets /> -->
-    <!-- <section-contributors /> -->
+    <section-testnets />
     <card-banner />
     <section-form />
   </main>
@@ -42,13 +94,70 @@ export default {
 main
   overflow -webkit-paged-x
 
-.nav-container
-  height 4rem
+.testnet-lists
+  margin-top var(--spacing-11)
+  display grid
+  grid-template-columns 50% 50%
+  grid-template-rows 1fr
+  gap var(--spacing-7)
+  align-items center
 
-.section-nav
-  top 0
+  &__item
+    background linear-gradient(131.1deg, #3E0555 26.7%, #121435 64.71%, #030419 100%)
+    position relative
+    padding var(--spacing-9) var(--spacing-8)
+    height 40.5rem
+    color var(--white)
+    position relative
+    display flex
+    flex-direction column
+    flex-wrap nowrap
+    justify-content flex-start
+    border-radius $border-radius-5
+    hover-raise(-3px)
+
+    &__code, &__title, &__desc, &__cta
+      position relative
+
+    &__code, &__title, &__desc
+      text-align left
+
+    &__title
+      max-width 7em
+      margin-top var(--spacing-13)
+
+    &__desc
+      margin-top var(--spacing-6)
+      color var(--white-700)
+
+    &__cta
+      text-align right
+      margin-top var(--spacing-6)
+
+.section-graphics
   width 100%
-  z-index 1000
+  height 80%
+  top -7%
+  position absolute
+  z-index -1
+
+.data-container
+  position relative
+  z-index 1 // above .feature-graphics
+  grid-row 4
+  margin-top var(--spacing-11)
+  display grid
+  flex-direction row
+  grid-column 1/ span 12
+  grid-template-columns repeat(4, 1fr)
+  gap var(--spacing-7)
+
+// .features-graphics
+//   grid-column 1 / span 8
+//   grid-row 5
+//   position relative
+//   font-size 1.5rem
+//   z-index 0
 
 .section-hero
   position relative
@@ -78,13 +187,17 @@ main
 .intro-text
   text-align left
   margin-top var(--spacing-11)
+  display grid
+  grid-template-columns repeat(12, 1fr)
+  gap 0 var(--spacing-7)
+  max-width var(--container-mw-lg)
 
 .section-title
-  grid-column 1 / span 12
-  grid-row 1 / 2
+  grid-column 2 / span 7
+  // grid-row 1 / 2
   max-width 9em
   min-height $line-height-title-base-min * 2em
-  margin-bottom -1.1em
+  // margin-bottom -1.1em
   &__highlight
     background-color var(--white)
     background-image linear-gradient(90deg, #E644F8 0%, #CCD1FF 51.56%, #99DAFF 100%)
@@ -95,11 +208,11 @@ main
     padding-right 0.05em // Fix offset clipping
 
 .section-subtitle
-  display flex
-  justify-content flex-end
-  flex-direction column
-  grid-row 2
-  grid-column 6 / span 7
+  // display flex
+  // justify-content flex-end
+  // flex-direction column
+  // grid-row 2
+  grid-column 2 / span 7
   color var(--gray-800)
 
 @media screen and (max-width: 1024px)

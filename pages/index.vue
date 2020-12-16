@@ -1,6 +1,5 @@
 <template>
   <main>
-    <!-- <section-nav /> -->
     <!-- <section-secondary-nav /> -->
 
     <section-hero />
@@ -10,7 +9,6 @@
 
     <section-community />
     <section-roadmap />
-    <!-- <section-testnets /> -->
     <section-contributors />
     <card-banner />
     <section-form />
