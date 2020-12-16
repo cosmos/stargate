@@ -14,55 +14,32 @@
             </div>
           </div>
           <div class="testnet-lists">
-            <div class="testnet-lists__item">
-              <div class="testnet-lists__item__code tm-code">
-                cosmoshub-test-stargate-e
+            <div
+              v-for="item in testnets"
+              :key="item.id"
+              class="testnet-lists__item"
+              :style="{
+                '--background-color': `${bgColor[item.code]}`,
+              }"
+            >
+              <div class="testnet-lists__item__top">
+                <div class="testnet-lists__item__code tm-code">
+                  {{ item.id }}
+                </div>
               </div>
               <dyson-sphere-glow class="section-graphics" />
-              <div
-                class="testnet-lists__item__title tm-rf4 tm-bold tm-lh-title"
-              >
-                Validator testnet
+              <div class="testnet-lists__item__bottom">
+                <div
+                  class="testnet-lists__item__title tm-rf4 tm-bold tm-lh-title"
+                >
+                  {{ item.title }}
+                </div>
+                <div
+                  class="testnet-lists__item__desc tm-rf0 tm-lh-copy"
+                  v-html="markdown(item.desc)"
+                ></div>
+                <div class="testnet-lists__item__cta">---></div>
               </div>
-              <div class="testnet-lists__item__desc tm-rf0 tm-lh-copy">
-                A simulated upgrade of the Cosmos Hub to Stargate (Cosmos SDK
-                v0.37 --> v0.40).
-                <span class="tm-bold">Highly recommended</span> for Cosmos Hub
-                validators.
-              </div>
-              <div class="testnet-lists__item__cta">---></div>
-            </div>
-            <div class="testnet-lists__item">
-              <div class="testnet-lists__item__code tm-code">bigbang-2</div>
-              <dyson-sphere class="section-graphics" />
-              <div
-                class="testnet-lists__item__title tm-rf4 tm-bold tm-lh-title"
-              >
-                Validator testnet
-              </div>
-              <div class="testnet-lists__item__desc tm-rf0 tm-lh-copy">
-                A simulated upgrade of the Cosmos Hub to Stargate (Cosmos SDK
-                v0.37 --> v0.40).
-                <span class="tm-bold">Highly recommended</span> for Cosmos Hub
-                validators.
-              </div>
-              <div class="testnet-lists__item__cta">---></div>
-            </div>
-            <div class="testnet-lists__item">
-              <div class="testnet-lists__item__code tm-code">stargate-5</div>
-              <dyson-sphere class="section-graphics" />
-              <div
-                class="testnet-lists__item__title tm-rf4 tm-bold tm-lh-title"
-              >
-                Validator testnet
-              </div>
-              <div class="testnet-lists__item__desc tm-rf0 tm-lh-copy">
-                A simulated upgrade of the Cosmos Hub to Stargate (Cosmos SDK
-                v0.37 --> v0.40).
-                <span class="tm-bold">Highly recommended</span> for Cosmos Hub
-                validators.
-              </div>
-              <div class="testnet-lists__item__cta">---></div>
             </div>
           </div>
         </div>
@@ -82,11 +59,60 @@
 </template>
 
 <script>
+import MarkdownIt from 'markdown-it'
+
 export default {
   data() {
-    return {}
+    return {
+      md: new MarkdownIt({
+        linkify: true,
+        html: true,
+      }),
+      testnets: [
+        {
+          code: 'cosmoshub',
+          id: 'cosmoshub-test-stargate-e',
+          title: 'Validator testnet',
+          desc:
+            'A simulated upgrade of the Cosmos Hub to Stargate (Cosmos SDK v0.37 --> v0.40). <span class="tm-bold">Highly recommended</span> for Cosmos Hub validators.',
+          url: 'wallets-explorers-exchanges',
+        },
+        {
+          code: 'bigbang',
+          id: 'bigbang-2',
+          title: 'Community testnet',
+          desc:
+            'A community-led multi-chain testnet aimed at the wider Cosmos ecosystem and independent zone developers focusing on feature testing and experimental development.',
+          url: 'community',
+        },
+        {
+          code: 'stargate',
+          id: 'stargate-5',
+          title: 'Wallet, Explorer & Exchange testnet',
+          desc:
+            'A persistent non-adversarial testnet that replicates a Stargate-enabled Cosmos Hub to be used for service provider integration and relayer testing.',
+          url: 'validator',
+        },
+      ],
+      bgColor: {
+        cosmoshub:
+          'linear-gradient(131.1deg, #3E0555 26.7%, #121435 64.71%, #030419 100%)',
+        bigbang:
+          'linear-gradient(131.1deg, #004447 26.7%, #19054B 64.71%, #030419 100%)',
+        stargate:
+          'linear-gradient(131.1deg, #4A2E03 26.7%, #341235 64.71%, #030419 100%)',
+      },
+    }
   },
-  methods: {},
+  methods: {
+    markdown(value) {
+      const md = new MarkdownIt({
+        linkify: true,
+        html: true,
+      })
+      return md.render(value)
+    },
+  },
 }
 </script>
 
@@ -103,7 +129,7 @@ main
   align-items center
 
   &__item
-    background linear-gradient(131.1deg, #3E0555 26.7%, #121435 64.71%, #030419 100%)
+    background var(--background-color, linear-gradient(131.1deg, #3E0555 26.7%, #121435 64.71%, #030419 100%))
     position relative
     padding var(--spacing-9) var(--spacing-8)
     height 40.5rem
@@ -112,7 +138,7 @@ main
     display flex
     flex-direction column
     flex-wrap nowrap
-    justify-content flex-start
+    justify-content space-between
     border-radius $border-radius-5
     hover-raise(-3px)
 
@@ -122,9 +148,11 @@ main
     &__code, &__title, &__desc
       text-align left
 
+    &__code
+      color var(--white-700)
+
     &__title
       max-width 7em
-      margin-top var(--spacing-13)
 
     &__desc
       margin-top var(--spacing-6)
