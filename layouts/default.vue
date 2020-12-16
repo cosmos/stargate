@@ -1,20 +1,18 @@
 <template>
   <div>
-    <!-- <tm-top-banner /> -->
+    <div class="tm-section-container nav-container">
+      <div class="nav-container__container">
+        <section-primary-nav />
+      </div>
+    </div>
     <nuxt />
     <tm-footer />
   </div>
 </template>
 
 <script>
-import TmFooter from '~/components/TmFooter.vue'
-// import TmTopBanner from '~/components/TmTopBanner.vue'
-
 export default {
-  components: {
-    TmFooter,
-    // TmTopBanner,
-  },
+  components: {},
 }
 </script>
 
@@ -27,16 +25,41 @@ export default {
   overflow hidden
   clip rect(1px, 1px, 1px, 1px)
 
+// https://nuxtjs.org/examples/transitions
+.page-enter-active,
+.page-leave-active
+  transition opacity 0.5s
+
+.page-enter,
+.page-leave-to
+  opacity 0
+
+.nav-container
+  display flex
+  align-items stretch
+  width 100%
+  padding-top var(--spacing-9)
+  padding-bottom var(--spacing-9)
+
+  &__container
+    position relative
+    display flex
+    width 100%
+    flex-direction column
+    align-items normal
+    justify-content flex-start
+
 .section-container
   position relative
   max-width 96rem
   margin 0 auto
-  .container
-    display grid
-    grid-template-columns repeat(12, 1fr)
-    gap 0 var(--spacing-7)
-    max-width var(--container-mw-lg)
-    margin 0 auto
+
+.container
+  display grid
+  grid-template-columns repeat(12, 1fr)
+  gap 0 var(--spacing-7)
+  max-width var(--container-mw-lg)
+  margin 0 auto
 
 .section
   overflow hidden

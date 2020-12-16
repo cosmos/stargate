@@ -1,9 +1,9 @@
+/* eslint-disable */
 <template>
   <main>
     <div class="section-hero">
       <div class="tm-section-container section-container">
         <div class="container">
-          <section-primary-nav />
           <div class="intro-text">
             <div class="section-title tm-rf6 tm-rf7-xl-up tm-bold tm-lh-title">
               Get set for <span class="section-title__highlight">testnets</span>
@@ -14,33 +14,37 @@
             </div>
           </div>
           <div class="testnet-lists">
-            <div
+            <NuxtLink
               v-for="item in testnets"
               :key="item.id"
-              class="testnet-lists__item"
-              :style="{
-                '--background-color': `${bgColor[item.code]}`,
-              }"
+              :to="`/testnets/${item.slug}`"
             >
-              <div class="testnet-lists__item__top">
-                <div class="testnet-lists__item__code tm-code">
-                  {{ item.id }}
+              <div
+                class="testnet-lists__item"
+                :style="{
+                  '--background-color': `${bgColor[item.code]}`,
+                }"
+              >
+                <div class="testnet-lists__item__top">
+                  <div class="testnet-lists__item__code tm-code">
+                    {{ item.id }}
+                  </div>
+                </div>
+                <dyson-sphere-glow class="section-graphics" />
+                <div class="testnet-lists__item__bottom">
+                  <div
+                    class="testnet-lists__item__title tm-rf4 tm-bold tm-lh-title"
+                  >
+                    {{ item.title }}
+                  </div>
+                  <div
+                    class="testnet-lists__item__desc tm-rf0 tm-lh-copy"
+                    v-html="markdown(item.desc)"
+                  ></div>
+                  <div class="testnet-lists__item__cta">---></div>
                 </div>
               </div>
-              <dyson-sphere-glow class="section-graphics" />
-              <div class="testnet-lists__item__bottom">
-                <div
-                  class="testnet-lists__item__title tm-rf4 tm-bold tm-lh-title"
-                >
-                  {{ item.title }}
-                </div>
-                <div
-                  class="testnet-lists__item__desc tm-rf0 tm-lh-copy"
-                  v-html="markdown(item.desc)"
-                ></div>
-                <div class="testnet-lists__item__cta">---></div>
-              </div>
-            </div>
+            </NuxtLink>
           </div>
         </div>
       </div>
@@ -75,7 +79,7 @@ export default {
           title: 'Validator testnet',
           desc:
             'A simulated upgrade of the Cosmos Hub to Stargate (Cosmos SDK v0.37 --> v0.40). <span class="tm-bold">Highly recommended</span> for Cosmos Hub validators.',
-          url: 'wallets-explorers-exchanges',
+          slug: 'wallets-explorers-exchanges',
         },
         {
           code: 'bigbang',
@@ -83,7 +87,7 @@ export default {
           title: 'Community testnet',
           desc:
             'A community-led multi-chain testnet aimed at the wider Cosmos ecosystem and independent zone developers focusing on feature testing and experimental development.',
-          url: 'community',
+          slug: 'community',
         },
         {
           code: 'stargate',
@@ -91,7 +95,7 @@ export default {
           title: 'Wallet, Explorer & Exchange testnet',
           desc:
             'A persistent non-adversarial testnet that replicates a Stargate-enabled Cosmos Hub to be used for service provider integration and relayer testing.',
-          url: 'validator',
+          slug: 'validator',
         },
       ],
       bgColor: {

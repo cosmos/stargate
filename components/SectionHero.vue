@@ -9,7 +9,6 @@
         <span class="hero-graphics__planet"></span>
       </div>
       <div class="container">
-        <section-primary-nav />
         <div class="content">
           <h1 class="title">
             <div class="wordmarks">

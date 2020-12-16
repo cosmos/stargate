@@ -1,12 +1,6 @@
 <template>
   <main>
     <div>
-      <div class="tm-section-container section-container">
-        <div class="container">
-          <section-primary-nav />
-        </div>
-      </div>
-
       <section-articles />
       <section-videos />
 
@@ -142,20 +136,6 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-  .section-container
-    display flex
-    align-items stretch
-    width 100%
-    padding-top var(--spacing-9)
-    padding-bottom var(--spacing-9)
-  .container
-    position relative
-    display flex
-    width 100%
-    flex-direction column
-    align-items normal
-    justify-content flex-start
-
 .section-title
   margin-top var(--spacing-10)
   margin-bottom var(--spacing-9)
