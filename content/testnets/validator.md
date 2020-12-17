@@ -1,8 +1,9 @@
 ---
+index: 0
 id: cosmoshub-test-stargate-e
 code: cosmoshub
 title: Validator testnet
-desc: A simulated upgrade of the Cosmos Hub to Stargate (Cosmos SDK v0.37 --> v0.40). <span class="tm-bold">Highly recommended</span> for Cosmos Hub validators.
+desc: A simulated upgrade of the Cosmos Hub to Stargate (Cosmos SDK v0.37 --> v0.40). Highly recommended for Cosmos Hub validators.
 slug: wallets-explorers-exchanges
 ---
 

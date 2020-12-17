@@ -66,7 +66,9 @@ import MarkdownIt from 'markdown-it'
 
 export default {
   async asyncData({ $content, params }) {
-    const testnets = await $content('testnets', params.slug).fetch()
+    const testnets = await $content('testnets', params.slug)
+      .sortBy('index', 'asc')
+      .fetch()
 
     return { testnets }
   },

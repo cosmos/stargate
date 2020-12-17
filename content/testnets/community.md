@@ -1,4 +1,5 @@
 ---
+index: 1
 id: bigbang-2
 code: bigbang
 title: Community testnet
