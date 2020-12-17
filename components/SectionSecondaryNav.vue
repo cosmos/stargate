@@ -11,7 +11,9 @@
             </a>
           </li>
           <li>
-            <logo-wordmark class="logo" /><span class="sr-only">Cosmos</span>
+            <logo-cosmos-wordmark class="logo" /><span class="sr-only"
+              >Cosmos</span
+            >
           </li>
         </ul>
       </nav>

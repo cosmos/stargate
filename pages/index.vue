@@ -1,7 +1,5 @@
 <template>
   <main>
-    <!-- <section-secondary-nav /> -->
-
     <section-hero />
 
     <section-intro />
@@ -11,6 +9,7 @@
     <section-roadmap />
     <section-contributors />
     <card-banner />
+    <readiness-banner />
     <section-form />
   </main>
 </template>

@@ -3,7 +3,8 @@
     <ul>
       <li>
         <NuxtLink to="/">
-          <logo-wordmark class="logo" />
+          <logo-cosmos-wordmark v-if="this.$route.path === '/'" class="logo" />
+          <logo-stargate-wordmark v-else class="logo" />
         </NuxtLink>
         <span class="sr-only">Cosmos</span>
       </li>

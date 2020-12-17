@@ -68,10 +68,6 @@ import MarkdownIt from 'markdown-it'
 export default {
   data() {
     return {
-      md: new MarkdownIt({
-        linkify: true,
-        html: true,
-      }),
       testnets: [
         {
           code: 'cosmoshub',
