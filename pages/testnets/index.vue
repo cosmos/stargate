@@ -15,7 +15,7 @@
           </div>
           <div class="testnet-lists">
             <NuxtLink
-              v-for="item in testnets"
+              v-for="item of testnets"
               :key="item.id"
               :to="`/testnets/${item.slug}`"
             >
@@ -37,10 +37,9 @@
                   >
                     {{ item.title }}
                   </div>
-                  <div
-                    class="testnet-lists__item__desc tm-rf0 tm-lh-copy"
-                    v-html="markdown(item.desc)"
-                  ></div>
+                  <div class="testnet-lists__item__desc tm-rf0 tm-lh-copy">
+                    {{ item.desc }}
+                  </div>
                   <div class="testnet-lists__item__cta">---></div>
                 </div>
               </div>
@@ -66,34 +65,13 @@
 import MarkdownIt from 'markdown-it'
 
 export default {
+  async asyncData({ $content, params }) {
+    const testnets = await $content('testnets', params.slug).fetch()
+
+    return { testnets }
+  },
   data() {
     return {
-      testnets: [
-        {
-          code: 'cosmoshub',
-          id: 'cosmoshub-test-stargate-e',
-          title: 'Validator testnet',
-          desc:
-            'A simulated upgrade of the Cosmos Hub to Stargate (Cosmos SDK v0.37 --> v0.40). <span class="tm-bold">Highly recommended</span> for Cosmos Hub validators.',
-          slug: 'wallets-explorers-exchanges',
-        },
-        {
-          code: 'bigbang',
-          id: 'bigbang-2',
-          title: 'Community testnet',
-          desc:
-            'A community-led multi-chain testnet aimed at the wider Cosmos ecosystem and independent zone developers focusing on feature testing and experimental development.',
-          slug: 'community',
-        },
-        {
-          code: 'stargate',
-          id: 'stargate-5',
-          title: 'Wallet, Explorer & Exchange testnet',
-          desc:
-            'A persistent non-adversarial testnet that replicates a Stargate-enabled Cosmos Hub to be used for service provider integration and relayer testing.',
-          slug: 'validator',
-        },
-      ],
       bgColor: {
         cosmoshub:
           'linear-gradient(131.1deg, #3E0555 26.7%, #121435 64.71%, #030419 100%)',
