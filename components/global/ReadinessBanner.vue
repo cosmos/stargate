@@ -2,7 +2,11 @@
   <div class="section">
     <div class="tm-section-container section-container">
       <div class="section-banner">
-        <a href="https://airtable.com/shrEr1bQD6COG9WH0">
+        <a
+          href="https://airtable.com/shrEr1bQD6COG9WH0"
+          target="_blank"
+          rel="noreferrer"
+        >
           <div class="content">
             <div class="left">
               <div class="tm-rf3 tm-bold tm-lh-title">Joined the testnet?</div>
