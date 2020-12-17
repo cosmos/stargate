@@ -149,9 +149,9 @@
 
 <script>
 import axios from 'axios'
-import IconIbc from '~/components/IconIbc.vue'
-import IconSdk from '~/components/IconSdk.vue'
-import IconCore from '~/components/IconCore.vue'
+import IconIbc from '~/components/icons/IconIbc.vue'
+import IconSdk from '~/components/icons/IconSdk.vue'
+import IconCore from '~/components/icons/IconCore.vue'
 
 export default {
   components: {
