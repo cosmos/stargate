@@ -30,7 +30,7 @@
                     {{ item.id }}
                   </div>
                 </div>
-                <dyson-sphere-glow class="section-graphics" />
+                <graphics-dyson-sphere-glow class="section-graphics" />
                 <div class="testnet-lists__item__bottom">
                   <div
                     class="testnet-lists__item__title tm-rf4 tm-bold tm-lh-title"
@@ -51,12 +51,12 @@
 
     <div class="data-container">
       <div class="features-graphics">
-        <interoperable-planets />
+        <graphics-interoperable-planets />
       </div>
     </div>
 
     <section-testnets />
-    <card-banner />
+    <bug-bounty-banner />
     <section-form />
   </main>
 </template>

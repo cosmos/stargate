@@ -4,7 +4,7 @@
       <div class="hero-graphics">
         <span class="hero-graphics__glow"></span>
         <span class="hero-graphics__gate"></span>
-        <gate-notches class="hero-graphics__gate-notches" />
+        <graphics-gate-notches class="hero-graphics__gate-notches" />
         <span class="hero-graphics__star"></span>
         <span class="hero-graphics__planet"></span>
       </div>

@@ -6,7 +6,7 @@
           Contributors
         </div>
         <div class="section-graphics">
-          <consortium-graphics class="section-graphics__canvas" />
+          <graphics-consortium class="section-graphics__canvas" />
         </div>
         <div class="section-top">
           <div class="section-title tm-rf6 tm-bold tm-lh-title">

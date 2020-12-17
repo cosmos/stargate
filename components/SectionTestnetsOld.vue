@@ -2,7 +2,7 @@
   <div id="testnets" class="section section-testnets">
     <div class="tm-section-container section-container">
       <div class="container">
-        <!-- <planets-cluster class="section-graphics" /> -->
+        <!-- <graphics-planets-cluster class="section-graphics" /> -->
         <div class="section-status">
           <div class="section-status__title tm-rf3 tm-bold tm-lh-title">
             Not ready to upgrade?

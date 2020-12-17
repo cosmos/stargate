@@ -53,7 +53,7 @@
         </div>
       </div>
 
-      <card-banner />
+      <bug-bounty-banner />
       <section-community />
       <section-form />
     </div>

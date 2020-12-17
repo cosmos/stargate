@@ -4,10 +4,10 @@
       <div class="container">
         <NuxtLink to="/testnets" class="top">
           <div class="top__left">
-            <dyson-sphere class="section-graphics" />
+            <graphics-dyson-sphere class="section-graphics" />
           </div>
           <div class="top__right">
-            <sun class="top__sun" />
+            <graphics-sun class="top__sun" />
             <div class="top__cards__item__top">
               <div
                 class="cards__item__caption tm-rf-1 tm-rf0-m-up tm-medium tm-lh-title tm-overline"

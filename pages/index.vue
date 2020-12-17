@@ -8,7 +8,7 @@
     <section-community />
     <section-roadmap />
     <section-contributors />
-    <card-banner />
+    <bug-bounty-banner />
     <section-form />
   </main>
 </template>

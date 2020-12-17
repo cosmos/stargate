@@ -10,7 +10,7 @@
             Join the biggest event in the ecosystem since the launch of the
             Cosmos Hub.
           </div>
-          <eclipsed-planet class="section-graphics" />
+          <graphics-eclipsed-planet class="section-graphics" />
           <div class="section-statement tm-rf1 tm-lh-copy tm-measure">
             <p>
               Stargate is a set of upgrades that complete the original roadmap
