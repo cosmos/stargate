@@ -1,0 +1,99 @@
+<template>
+  <div class="tm-section-container section-container">
+    <div class="container">
+      <div class="left">
+        <div class="left__title tm-rf4 tm-bold tm-lh-title">Endpoints</div>
+      </div>
+      <div class="list">
+        <div class="list__title tm-measure tm-rf1 tm-lh-copy">
+          Use the public endpoints below to interact with the
+          {{ id }} testnet.
+        </div>
+
+        <div class="list__item">
+          <div class="list__item__title tm-rf0 tm-bold tm-lh-title">
+            Public RPC endpoint
+          </div>
+          <a
+            href="http://34.123.30.100:1317"
+            target="_blank"
+            rel="noreferrer noopener"
+            class="list__item__url tm-rf0 tm-lh-copy tm-code"
+            >{{ endpoints[code][0] }}</a
+          >
+        </div>
+
+        <div class="list__item">
+          <div class="list__item__title tm-rf0 tm-bold tm-lh-title">
+            Public REST endpoint
+          </div>
+          <a
+            href="http://34.123.30.100:1317"
+            target="_blank"
+            rel="noreferrer noopener"
+            class="list__item__url tm-rf0 tm-lh-copy tm-code"
+            >{{ endpoints[code][1] }}</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  props: {
+    id: {
+      type: String,
+      default: '',
+    },
+    code: {
+      type: String,
+      default: '',
+    },
+  },
+  data() {
+    return {
+      // RPC, REST
+      endpoints: {
+        bigbang: ['157.230.185.206:26657', '157.230.185.206:1317'],
+        stargate: [
+          'rpc.stargate.sim.bigdipper.live',
+          'api.stargate.sim.bigdipper.live',
+        ],
+        cosmoshub: ['34.66.55.131:26657', '34.66.55.131:1317'],
+      },
+    }
+  },
+}
+</script>
+
+<style lang="stylus" scoped>
+.left
+  grid-column 1 / span 4
+  &__title
+    margin-top var(--spacing-7)
+    color var(--white)
+
+.list
+  margin-top var(--spacing-7)
+  grid-column 5/ span 9
+
+  &__title
+    margin-bottom var(--spacing-8)
+
+  &__item + &__item
+    margin-top var(--spacing-8)
+
+  &__item
+    &__title
+      margin-bottom var(--spacing-5)
+
+@media screen and (max-width: 1024px)
+  .left, .list
+    grid-column 1 / span 12
+
+@media screen and (max-width: 767px)
+  .left
+    margin-top var(--spacing-8)
+</style>
