@@ -1,34 +1,33 @@
 <template>
-  <div class="section">
-    <div class="tm-section-container section-container">
-      <div class="section-explorer">
-        <div class="headings">
-          <div class="headings__title tm-rf6 tm-bold tm-lh-title">
-            Explore the testnet
-          </div>
-          <div class="headings__subtitle tm-rf1 tm-lh-copy tm-measure">
-            Browse the testnet with your favorite community-run block explorers.
-          </div>
+  <div class="tm-section-container section-container">
+    <div class="section-explorer">
+      <!-- TODO: add section-graphics -->
+      <div class="headings">
+        <div class="headings__title tm-rf6 tm-bold tm-lh-title">
+          Explore the testnet
         </div>
-        <div class="cards-container">
-          <a
-            v-for="item in data"
-            :key="item.name"
-            :href="item.url"
-            target="_blank"
-            rel="noreferrer noopener"
-            class="cards-container__item"
+        <div class="headings__subtitle tm-rf1 tm-lh-copy tm-measure">
+          Browse the testnet with your favorite community-run block explorers.
+        </div>
+      </div>
+      <div class="cards-container">
+        <a
+          v-for="item in data"
+          :key="item.name"
+          :href="item.url"
+          target="_blank"
+          rel="noreferrer noopener"
+          class="cards-container__item"
+        >
+          <span class="cards-container__item__icon tm-rf2 tm-lh-solid"
+            >&#8599;</span
           >
-            <span class="cards-container__item__icon tm-rf2 tm-lh-solid"
-              >&#8599;</span
-            >
-            <div
-              class="cards-container__item__title tm-rf1 tm-bold tm-lh-title tm-measure-narrow"
-            >
-              {{ item.name }}
-            </div>
-          </a>
-        </div>
+          <div
+            class="cards-container__item__title tm-rf1 tm-bold tm-lh-title tm-measure-narrow"
+          >
+            {{ item.name }}
+          </div>
+        </a>
       </div>
     </div>
   </div>
@@ -47,6 +46,9 @@ export default {
 
 <style lang="stylus" scoped>
 .headings
+  &__title
+    color var(--white)
+
   &__subtitle
     margin-top var(--spacing-7)
     color var(--gray-800)
@@ -59,7 +61,6 @@ export default {
 
   &__item
     background linear-gradient(89.41deg, #99DAFF -0.22%, #FFD1FD 99.78%)
-    box-shadow 0 0 1px rgba(0,0,0,.07), 0 8px 16px rgba(0,0,0,.05), 0 20px 44px rgba(0,3,66,.12)
     border-radius var(--spacing-4)
     padding var(--spacing-7)
     backface-visibility hidden

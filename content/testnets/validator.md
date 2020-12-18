@@ -12,6 +12,11 @@ explorers:
     url: https://stargate.simulation.bigdipper.live/
   - name: LOOK
     url: https://look.ping.pub/#/validator?chain=cosmos-next
+learn-more:
+  - title: Five Reasons Why Cosmos Validators Want to Participate in the Stargate Simulated Upgrade
+    desc: ""
+    date: Nov 9
+    url: https://blog.cosmos.network/five-reasons-why-cosmos-validators-want-to-participate-in-the-stargate-simulated-upgrade-f817ddef1678
 ---
 
 ## SAMUEL L. IPSUM
@@ -19,3 +24,5 @@ explorers:
 Your bones don't break, mine do. That's clear. Your cells react to bacteria and viruses differently than mine. You don't get sick, I do. That's also clear. But for some reason, you and I react the exact same way to water. We swallow it too fast, we choke. We get some in our lungs, we drown. However unreal it may seem, we are connected, you and I. We're on the same curve, just on opposite ends.
 
 <section-explorer :data="explorers"></section-explorer>
+
+<section-learn-more :data="learn-more"></section-learn-more>
