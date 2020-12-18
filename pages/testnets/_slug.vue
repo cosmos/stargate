@@ -1,12 +1,12 @@
 <template>
-  <testnet>
-    <div class="tm-section-container section-container">
-      <h1>{{ testnet.title }}</h1>
+  <div class="tm-section-container section-container">
+    <h1>{{ testnet.title }}</h1>
 
-      <!-- content from markdown -->
-      <nuxt-content :document="testnet" />
-    </div>
-  </testnet>
+    <!-- content from markdown -->
+    <nuxt-content :document="testnet" />
+
+    <section-form />
+  </div>
 </template>
 
 <script>
