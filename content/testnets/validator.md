@@ -2,6 +2,7 @@
 index: 0
 id: cosmoshub-test-stargate-e
 code: cosmoshub
+discord-channel-name: stargate-testnet
 title: Validator testnet
 desc: A simulated upgrade of the Cosmos Hub to Stargate (Cosmos SDK v0.37 --> v0.40). Highly recommended for Cosmos Hub validators.
 slug: wallets-explorers-exchanges
@@ -19,9 +20,11 @@ learn-more:
     url: https://blog.cosmos.network/five-reasons-why-cosmos-validators-want-to-participate-in-the-stargate-simulated-upgrade-f817ddef1678
 ---
 
-## SAMUEL L. IPSUM
+<!-- ## SAMUEL L. IPSUM
 
-Your bones don't break, mine do. That's clear. Your cells react to bacteria and viruses differently than mine. You don't get sick, I do. That's also clear. But for some reason, you and I react the exact same way to water. We swallow it too fast, we choke. We get some in our lungs, we drown. However unreal it may seem, we are connected, you and I. We're on the same curve, just on opposite ends.
+Your bones don't break, mine do. That's clear. Your cells react to bacteria and viruses differently than mine. You don't get sick, I do. That's also clear. But for some reason, you and I react the exact same way to water. We swallow it too fast, we choke. We get some in our lungs, we drown. However unreal it may seem, we are connected, you and I. We're on the same curve, just on opposite ends. -->
+
+<section-migration :channel="discord-channel-name" :code="code"></section-migration>
 
 <section-explorer :data="explorers"></section-explorer>
 
