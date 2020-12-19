@@ -1,8 +1,20 @@
 <template>
   <div class="tm-section-container section-container">
     <div class="container">
+      <div class="list section-join">
+        <div class="list__title tm-rf3 tm-bold tm-lh-title tm-measure">
+          Joining the testnet
+        </div>
+
+        <div class="list__item">
+          <div class="list__item__paragraph">
+            <slot name="intro" />
+          </div>
+        </div>
+      </div>
+
       <div class="left">
-        <div class="left__title tm-rf4 tm-bold tm-lh-title">Endpoints</div>
+        <div class="left__title tm-rf3 tm-bold tm-lh-title">Endpoints</div>
       </div>
       <div class="list">
         <div class="list__title tm-measure tm-rf1 tm-lh-copy">
@@ -69,10 +81,13 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+.section-join
+  margin-bottom var(--spacing-10)
+
 .left
   grid-column 1 / span 4
+  margin-top var(--spacing-7)
   &__title
-    margin-top var(--spacing-7)
     color var(--white)
 
 .list
@@ -81,6 +96,7 @@ export default {
 
   &__title
     margin-bottom var(--spacing-8)
+    color var(--gray-800)
 
   &__item + &__item
     margin-top var(--spacing-8)

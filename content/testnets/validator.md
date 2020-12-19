@@ -24,7 +24,14 @@ learn-more:
 
 Your bones don't break, mine do. That's clear. Your cells react to bacteria and viruses differently than mine. You don't get sick, I do. That's also clear. But for some reason, you and I react the exact same way to water. We swallow it too fast, we choke. We get some in our lungs, we drown. However unreal it may seem, we are connected, you and I. We're on the same curve, just on opposite ends. -->
 
-<section-endpoints :id="id" :code="code"></section-endpoints>
+<section-chain :id="id" :title="title" :desc="desc"></section-chain>
+
+<section-endpoints :id="id" :code="code">
+  <template #intro>
+    <p>To implement the Stargate upgrades – beginning with the Cosmos Hub – validators should prepare by helping to run the various Stargate testnets. The simulated upgrade of the Cosmos Hub is the highest priority for validators at present.</p>
+    <p>The future of Cosmos depends on you, Cosmonauts!</p>
+  </template>
+</section-endpoints>
 
 <section-migration :channel="discord-channel-name" :code="code"></section-migration>
 
