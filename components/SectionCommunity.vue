@@ -184,4 +184,7 @@ export default {}
       height auto
       min-height 16rem
       border-radius $border-radius-4
+
+  .top__right
+    grid-column 1/span 12
 </style>

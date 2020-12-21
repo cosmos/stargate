@@ -99,7 +99,6 @@ export default {}
           align-self flex-end
           margin-top auto
 
-
 @media $breakpoint-xsmall-only
   .section-videos
     .container .text
