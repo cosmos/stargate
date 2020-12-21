@@ -7,7 +7,7 @@
         </div>
 
         <div class="list__item">
-          <div class="list__item__paragraph">
+          <div class="list__item__paragraph tm-measure tm-rf1 tm-lh-copy">
             <slot name="intro" />
           </div>
         </div>
@@ -104,6 +104,16 @@ export default {
   &__item
     &__title
       margin-bottom var(--spacing-5)
+
+    &__paragraph p
+      color var(--gray-600)
+
+blockquote
+  padding-left var(--spacing-7)
+  padding-right var(--spacing-7)
+  border-left 0.25rem solid #FFBA31
+  color inherit
+  margin-top var(--spacing-8)
 
 @media screen and (max-width: 1024px)
   .left, .list

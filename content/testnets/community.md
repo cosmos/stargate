@@ -26,7 +26,7 @@ Your bones don't break, mine do. That's clear. Your cells react to bacteria and 
 
 <section-endpoints :id="id" :code="code">
   <template #intro>
-    <p>Start testing the new features of the Stargate upgrades, such as IBC, state sync and more with the bigbang testnet.</p>
+    <p>Start testing the new features of the Stargate upgrades, such as IBC, state sync and more with the <span class="tm-code">bigbang</span> testnet.</p>
     <p>More detailed instructions and guidelines on how zone developers can prepare for the upgrade will be published in due course.</p>
   </template>
 </section-endpoints>

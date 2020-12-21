@@ -30,6 +30,10 @@ Your bones don't break, mine do. That's clear. Your cells react to bacteria and 
   <template #intro>
     <p>To implement the Stargate upgrades – beginning with the Cosmos Hub – validators should prepare by helping to run the various Stargate testnets. The simulated upgrade of the Cosmos Hub is the highest priority for validators at present.</p>
     <p>The future of Cosmos depends on you, Cosmonauts!</p>
+    <blockquote>
+      <span class="tm-bold">Be advised</span>
+      <p>Cosmos Hub Validators that don't participate in this testnet won't be prepared for the governance vote to upgrade Cosmos Hub to Stargate.</p>
+    </blockquote>
   </template>
 </section-endpoints>
 
