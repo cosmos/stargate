@@ -1,7 +1,5 @@
 <template>
   <div class="tm-section-container section-container">
-    <h1>{{ testnet.title }}</h1>
-
     <!-- content from markdown -->
     <nuxt-content :document="testnet" />
 
@@ -19,15 +17,4 @@ export default {
 }
 </script>
 
-<style lang="stylus" scoped>
-.nuxt-content p
-  margin-bottom 1.25rem
-
-.nuxt-content h2
-  font-weight bold
-  font-size 1.75rem
-
-.nuxt-content h3
-  font-weight bold
-  font-size 1.375rem
-</style>
+<style lang="stylus" scoped></style>
