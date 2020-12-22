@@ -2,10 +2,315 @@
   <div id="testnets" class="section section-testnets">
     <div class="tm-section-container section-container">
       <div class="container">
-        <!-- <graphics-planets-cluster class="section-graphics" /> -->
+        <div class="section-header tm-rf0 tm-medium tm-lh-title tm-overline">
+          Testnets
+        </div>
+        <!-- <planets-cluster class="section-graphics" /> -->
+        <dyson-sphere class="section-graphics" />
+        <div class="section-top">
+          <div class="section-title tm-rf6 tm-bold tm-lh-title">
+            Get set for <span class="section-title__highlight">testnets</span>
+          </div>
+          <div class="section-statement tm-rf1 tm-lh-copy tm-measure">
+            Validators, wallets, block explorers, exchanges and zone developers
+            are among the primary services affected by the upgrades with
+            Stargate. Make sure to schedule time for integration testing on the
+            various testnets.
+          </div>
+        </div>
+        <div class="testnets-list">
+          <div class="testnets-list__item">
+            <img
+              src="~/assets/illustrations/active-flag.svg"
+              class="testnets-list__item__graphics"
+              alt="Purple chevron pointing down"
+            />
+            <div class="testnets-list__item__text__top">
+              <div class="testnets-list__item__text__top__top">
+                <div
+                  class="testnets-list__item__text__top__title tm-rf2 tm-bold tm-lh-title tm-code"
+                >
+                  cosmoshub-test-stargate-e
+                </div>
+              </div>
+              <div class="testnets-list__item__text">
+                <div class="testnets-list__item__text__mid"></div>
+                <p
+                  class="testnets-list__item__text__mid__desc tm-rf1 tm-lh-copy tm-measure"
+                >
+                  An upgrade of the Cosmos Hub to Stargate (Cosmos SDK v0.37 -->
+                  v0.40).
+                  <strong
+                    class="testnets-list__item__text__mid__desc__strong tm-bold"
+                    >Highly recommended</strong
+                  >
+                  for Cosmos Hub validators.
+                </p>
+                <div class="testnets-list__item__text__bot">
+                  <div
+                    class="testnets-list__item__text__bot__display tm-rf-1 tm-medium tm-lh-title tm-overline"
+                  >
+                    Recommended for
+                  </div>
+                  <div class="testnets-list__item__text__bot__labels">
+                    <div
+                      class="testnets-list__item__text__bot__labels__item tm-rf0 tm-lh-title"
+                    >
+                      Validators
+                    </div>
+                  </div>
+                </div>
+                <div class="testnets-list__item__cta">
+                  <tm-button
+                    to-link="external"
+                    href="https://blog.cosmos.network/five-reasons-why-cosmos-validators-want-to-participate-in-the-stargate-simulated-upgrade-f817ddef1678"
+                    size="l"
+                    color="var(--black)"
+                    background-color="linear-gradient(90deg, #99DAFF 0%, #FFD1FD 50%, var(--primary-900) 100%), var(--primary-900)"
+                    glow
+                    class="btn"
+                    >Join -></tm-button
+                  >
+                  <tm-button
+                    to-link="external"
+                    href="https://discord.gg/vcExX9T"
+                    size="l"
+                    color="var(--link)"
+                    variant="text"
+                    glow
+                    class="btn"
+                    ><icon-discord-24 class="icon__left" />#stargate-testnet
+                    🌠</tm-button
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="testnets-list__item__text__right">
+              <div class="list-title tm-rf-1 tm-medium tm-lh-title tm-overline">
+                Explorers
+              </div>
+              <div class="list-item tm-rf0 tm-lh-copy">
+                <a
+                  href="https://testnet.mintscan.io/stargate"
+                  target="blank_"
+                  rel="noreferrer noopener"
+                  >Mintscan</a
+                >
+              </div>
+              <div class="list-item tm-rf0 tm-lh-copy">
+                <a
+                  href="https://stargate.simulation.bigdipper.live"
+                  target="blank_"
+                  rel="noreferrer noopener"
+                  >The Big Dipper</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="testnets-list__item">
+            <img
+              src="~/assets/illustrations/active-flag.svg"
+              class="testnets-list__item__graphics"
+              alt="Purple chevron pointing down"
+            />
+            <div class="testnets-list__item__text__top">
+              <div class="testnets-list__item__text__top__top">
+                <div
+                  class="testnets-list__item__text__top__title tm-rf2 tm-bold tm-lh-title tm-code"
+                >
+                  bigbang-2
+                </div>
+              </div>
+              <div class="testnets-list__item__text">
+                <div class="testnets-list__item__text__mid"></div>
+                <p
+                  class="testnets-list__item__text__mid__desc tm-rf1 tm-lh-copy tm-measure"
+                >
+                  A community-led testnet aimed at the wider Cosmos ecosystem
+                  and independent zone developers.
+                </p>
+                <div class="testnets-list__item__text__bot">
+                  <div
+                    class="testnets-list__item__text__bot__display tm-rf-1 tm-medium tm-lh-title tm-overline"
+                  >
+                    Recommended for
+                  </div>
+                  <div class="testnets-list__item__text__bot__labels">
+                    <div
+                      class="testnets-list__item__text__bot__labels__item tm-rf0 tm-lh-title"
+                    >
+                      Validators
+                    </div>
+                    <div
+                      class="testnets-list__item__text__bot__labels__item tm-rf0 tm-lh-title"
+                    >
+                      Zone Developers
+                    </div>
+                  </div>
+                </div>
+                <div class="testnets-list__item__cta">
+                  <tm-button
+                    to-link="external"
+                    href="https://github.com/cosmos/testnets/tree/master/bigbang-1"
+                    size="l"
+                    color="var(--black)"
+                    background-color="linear-gradient(90deg, #99DAFF 0%, #FFD1FD 50%, var(--primary-900) 100%), var(--primary-900)"
+                    glow
+                    class="btn"
+                    >Join -></tm-button
+                  >
+                  <tm-button
+                    to-link="external"
+                    href="https://discord.gg/vcExX9T"
+                    size="l"
+                    color="var(--link)"
+                    variant="text"
+                    glow
+                    class="btn"
+                    ><icon-discord-24 class="icon__left" />#bigbang-testnet
+                    💥</tm-button
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="testnets-list__item__text__right">
+              <div class="list-title tm-rf-1 tm-medium tm-lh-title tm-overline">
+                Explorers
+              </div>
+              <div class="list-item tm-rf0 tm-lh-copy">
+                <a
+                  href="https://bigbang.aneka.io"
+                  target="blank_"
+                  rel="noreferrer noopener"
+                  >Aneka</a
+                >
+              </div>
+              <div class="list-item tm-rf0 tm-lh-copy">
+                <a
+                  href="https://bigbang.bigdipper.live"
+                  target="blank_"
+                  rel="noreferrer noopener"
+                  >The Big Dipper</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="testnets-list__item">
+            <img
+              src="~/assets/illustrations/active-flag.svg"
+              class="testnets-list__item__graphics"
+              alt="Purple chevron pointing down"
+            />
+            <div class="testnets-list__item__text__top">
+              <div class="testnets-list__item__text__top__top">
+                <div
+                  class="testnets-list__item__text__top__title tm-rf2 tm-bold tm-lh-title tm-code"
+                >
+                  stargate-5
+                </div>
+              </div>
+              <div class="testnets-list__item__text">
+                <div class="testnets-list__item__text__mid"></div>
+                <p
+                  class="testnets-list__item__text__mid__desc tm-rf1 tm-lh-copy tm-measure"
+                >
+                  The first simulated upgrade of the Cosmos Hub and the primary
+                  public integration testnet for
+                  <a
+                    href="https://airtable.com/shrEr1bQD6COG9WH0"
+                    target="blank_"
+                    rel="noreferrer noopener"
+                    >Stargate-readiness</a
+                  >.
+                </p>
+                <div class="testnets-list__item__text__bot">
+                  <div
+                    class="testnets-list__item__text__bot__display tm-rf-1 tm-medium tm-lh-title tm-overline"
+                  >
+                    Recommended for
+                  </div>
+                  <div class="testnets-list__item__text__bot__labels">
+                    <div
+                      class="testnets-list__item__text__bot__labels__item tm-rf0 tm-lh-title"
+                    >
+                      Validators
+                    </div>
+                    <div
+                      class="testnets-list__item__text__bot__labels__item tm-rf0 tm-lh-title"
+                    >
+                      Wallets
+                    </div>
+                    <div
+                      class="testnets-list__item__text__bot__labels__item tm-rf0 tm-lh-title"
+                    >
+                      Explorers
+                    </div>
+                    <div
+                      class="testnets-list__item__text__bot__labels__item tm-rf0 tm-lh-title"
+                    >
+                      Exchanges
+                    </div>
+                  </div>
+                </div>
+                <div class="testnets-list__item__cta">
+                  <tm-button
+                    to-link="external"
+                    href="https://github.com/cosmosdevs/stargate#testnet"
+                    size="l"
+                    color="var(--black)"
+                    background-color="linear-gradient(90deg, #99DAFF 0%, #FFD1FD 50%, var(--primary-900) 100%), var(--primary-900)"
+                    glow
+                    class="btn"
+                    >Join -></tm-button
+                  >
+                  <tm-button
+                    to-link="external"
+                    href="https://discord.gg/vcExX9T"
+                    size="l"
+                    color="var(--link)"
+                    variant="text"
+                    glow
+                    class="btn"
+                    ><icon-discord-24 class="icon__left" />#stargate-v040
+                    ⭐</tm-button
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="testnets-list__item__text__right">
+              <!-- <div class="list-title tm-rf-1 tm-medium tm-lh-title tm-overline">
+                Explorers
+              </div>
+              <div class="list-item tm-rf0 tm-lh-copy">
+                <a
+                  href="https://look.ping.pub/#/validator?chain=stargate-4"
+                  target="blank_"
+                  rel="noreferrer noopener"
+                  >Look</a
+                >
+              </div>
+              <div class="list-item tm-rf0 tm-lh-copy">
+                <a
+                  href="https://testnet.mintscan.io/cosmos"
+                  target="blank_"
+                  rel="noreferrer noopener"
+                  >Mintscan</a
+                >
+              </div>
+              <div class="list-item tm-rf0 tm-lh-copy">
+                <a
+                  href="https://stargate.bigdipper.live"
+                  target="blank_"
+                  rel="noreferrer noopener"
+                  >The Big Dipper</a
+                >
+              </div> -->
+            </div>
+          </div>
+        </div>
         <div class="section-status">
           <div class="section-status__title tm-rf3 tm-bold tm-lh-title">
-            Not ready to upgrade?
+            Preparing to upgrade
           </div>
         </div>
         <div class="section-tabs">
@@ -374,11 +679,120 @@ export default {}
   position relative
   overflow hidden
   background linear-gradient(180deg, rgba(0,0,0,0) 0%, #030419 24%, #030419 69%, rgba(0,0,0,0) 100%)
+  .section-header
+    grid-column 6/span 7
+    grid-row 1
   .section-graphics
     grid-column 5 / 13
     grid-row 2
     display flex
     align-items flex-end
+  .section-top
+    position relative
+    grid-column 1 / span 12
+    grid-row 2
+    margin-top var(--spacing-10)
+  .section-title
+    max-width: $max-width['7']
+    color var(--white)
+    &__highlight
+      background-color var(--white)
+      background-image linear-gradient(90deg, #99DAFF 0%, #CCD1FF 51.56%, #E644F8 100%)
+      background-size 100%
+      background-clip text
+      // TODO: Why doesn't postcss generate these?
+      -webkit-text-fill-color transparent
+      -moz-text-fill-color transparent
+      padding-right 0.05em // Fix offset clipping
+  .section-statement
+    margin-top var(--spacing-8)
+    color var(--gray-800)
+  .testnets-list
+    grid-column 1/ span 12
+    position relative
+    &__item
+      position relative
+      display grid
+      width 100%
+      grid-template-columns repeat(12, 1fr)
+      gap var(--spacing-6)
+      align-items flex-start
+      border-bottom 1px solid #282B53
+      padding var(--spacing-10) 0
+      &__graphics
+        position absolute
+        top 3.75rem
+        left 0
+        width 100%
+        max-width 9.875rem
+      &__text
+        position relative
+        // grid-column 6 / span 7
+        margin-top var(--spacing-7)
+        &__top
+          position relative
+          grid-column 3 / span 7
+          text-align left
+          &__top
+            display flex
+            align-items center
+            flex-wrap wrap
+          &__title
+            color var(--primary-900)
+
+          &__status
+            padding var(--spacing-1) var(--spacing-4)
+            background #E644F8
+            border-radius $border-radius-5
+            display inline-block
+            color var(--white)
+            margin-left var(--spacing-5)
+        &__right
+          grid-column 10 / 12
+        &__mid
+          &__desc
+            color var(--gray-800)
+            &__strong
+              color var(--white)
+          &__note
+            margin-top var(--spacing-3)
+            color var(--gray-600)
+        &__bot
+          margin-top var(--spacing-7)
+          display flex
+          align-items baseline
+          flex-wrap wrap
+          &__display
+            margin var(--spacing-3) var(--spacing-4) var(--spacing-3) 0
+            color var(--gray-800)
+            flex-shrink 0
+          &__labels
+            display flex
+            &__item
+              color var(--gray-800)
+              padding var(--spacing-1) var(--spacing-4)
+              background #282b53
+              border-radius $border-radius-4
+              align-items center
+              display flex
+              text-align center
+              margin-right var(--spacing-3)
+      &__inactive
+        .testnets-list__item__text__top__title
+          color #989BB9
+        .testnets-list__item__text__top__status
+          padding var(--spacing-1) var(--spacing-4)
+          background #E644F8
+          border-radius $border-radius-5
+          display inline-block
+          color var(--white)
+      &__cta
+        display flex
+        justify-content flex-start
+        align-items flex-end
+        flex-direction row
+        flex-wrap wrap
+        margin-top var(--spacing-7)
   .section-status
     grid-column 1 / 5
     margin-top var(--spacing-10)
@@ -453,10 +867,15 @@ export default {}
   flex-direction column
 
 @media screen and (max-width: 1024px)
+  .section .section-header
+    grid-column 1 / span 12
+
   .section-testnets
     overflow hidden
     .section-graphics
       align-items flex-start
+    .section-top
+      margin-top var(--spacing-9)
     .testnets-list
       margin-top var(--spacing-8)
     .testnets-list__item

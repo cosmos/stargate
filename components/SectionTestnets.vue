@@ -1,5 +1,5 @@
 <template>
-  <div class="section section-testnets">
+  <div class="section-testnets">
     <div class="tm-section-container section-container">
       <div class="container">
         <div class="section-status">
@@ -71,7 +71,6 @@ export default {}
     margin-top var(--spacing-10)
     grid-column 6 / span 7
     &__text
-      // margin-top var(--spacing-8)
       &__heading
         color var(--gray-600)
       &__title
@@ -127,11 +126,6 @@ export default {}
       margin-top var(--spacing-8)
       grid-column 1 / span 12
 
-  // .section-testnets .testnets-list__item__text__top
-  //   display flex
-  //   align-items center
-  //   flex-direction row
-
   .section-testnets .testnets-list__item__text__right
     grid-column 1/12
     margin-top var(--spacing-5)
@@ -150,12 +144,6 @@ export default {}
       grid-column 1 / span 12
 
 @media screen and (max-width: 576px)
-  // .section-testnets .testnets-list__item__text__top__status
-  //   margin-left 0
-
-  // .testnets-list__item__text__top__box__inactive
-  //   margin-top var(--spacing-4)
-
   .section-testnets
     .section-statement
       margin-top var(--spacing-7)
@@ -173,8 +161,4 @@ export default {}
       display flex
       &__item
         width fit-content
-
-// @media screen and (max-width: 360px)
-//   .section-testnets .testnets-list__item__text__top
-//     grid-column span 12
 </style>
