@@ -32,7 +32,7 @@
           rel="noreferrer noopener"
         >
           <span class="text tm-rf0 tm-lh-title">GitHub ↗</span>
-          <icon-arrow-right class="icon" />
+          <icon-github class="icon" />
         </a>
       </li>
     </ul>
@@ -99,9 +99,6 @@ a.nuxt-link-exact-active
         display block
 
 @media $breakpoint-xsmall-only
-  ul
+  .nav-primary__first
     display inline-block
-
-  .nav-primary a::first-child
-    padding 0
 </style>
