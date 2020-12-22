@@ -1,6 +1,6 @@
 <template>
   <nav class="nav-primary">
-    <ul>
+    <ul class="nav-primary__first">
       <li>
         <NuxtLink to="/">
           <logo-cosmos-wordmark v-if="this.$route.path === '/'" class="logo" />
@@ -18,6 +18,24 @@
         >
       </li>
     </ul>
+    <ul v-if="this.$route.path === '/testnets'" class="nav-primary__second">
+      <li>
+        <NuxtLink to="/">
+          <span class="text tm-rf0 tm-lh-title">← Testnets</span>
+          <icon-arrow-right class="icon" />
+        </NuxtLink>
+      </li>
+      <li>
+        <a
+          href="https://github.com/cosmosdevs/stargate#stargate-5-testing"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          <span class="text tm-rf0 tm-lh-title">GitHub ↗</span>
+          <icon-arrow-right class="icon" />
+        </a>
+      </li>
+    </ul>
   </nav>
 </template>
 
@@ -32,10 +50,14 @@ a.nuxt-link-exact-active
   font-weight bold
 
 .nav-primary
-  ul
+  &__first
     display grid
     grid-template-columns repeat(3, 1fr)
     align-items center
+    padding 0
+  &__second
+    display flex
+    justify-content space-between
     padding 0
   li
     list-style-type none
@@ -45,7 +67,7 @@ a.nuxt-link-exact-active
       display flex
       justify-content space-evenly
   .logo
-    // display block
+    display block
     margin 0 auto
   a
     display inline-block
@@ -62,25 +84,13 @@ a.nuxt-link-exact-active
       width 1.5rem
 
 // @media screen and (max-width: 1024px)
-//   .section-hero
-//     display grid
-//     .container
-//       .headings
-//         .subtitle
-//           margin-top var(--spacing-7)
-
 // @media screen and (max-width: 767px)
-//   .section-hero
-//     .container
-//       .content
-//         padding-bottom 20%
-//     .hero-graphics
-//       font-size 0.5rem
 
 @media screen and (max-width: 576px)
   .nav-primary
     .logo
       height 1.25rem
+      width auto
     a
       padding var(--spacing-4)
       .text
@@ -88,18 +98,10 @@ a.nuxt-link-exact-active
       .icon
         display block
 
-  // .section-hero
-  //   min-height 32rem
-  //   max-height 42rem
-  //   margin-bottom var(--spacing-8)
-  //   .section-container
-  //     padding-top var(--spacing-4)
-  //     padding-bottom var(--spacing-7)
-  //   .container
-  //     .nav-primary
-  //       margin-bottom var(--spacing-8)
-  //     .content
-  //       padding-bottom 40%
-  //       .subtitle
-  //         margin-top var(--spacing-6)
+@media $breakpoint-xsmall-only
+  ul
+    display inline-block
+
+  .nav-primary a::first-child
+    padding 0
 </style>
