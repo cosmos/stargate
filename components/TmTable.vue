@@ -35,7 +35,7 @@ td, th
   font-size 1rem
   line-height 1.5
   letter-spacing 0.02em
-  color #ECEDF7
+  color var(--gray-900)
 
 tr
   background-color #121435

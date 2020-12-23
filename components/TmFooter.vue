@@ -263,7 +263,7 @@ export default {
   .home-nav
     margin-top var(--spacing-5)
     a
-      color #ECEDF7
+      color var(--gray-900)
       &:hover,
       &:focus
         color var(--link)

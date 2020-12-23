@@ -43,7 +43,7 @@ export default {}
         color var(--gray-600)
         &:hover,
         &:focus
-          color #ECEDF7
+          color var(--gray-900)
         &:hover:before
           visibility visible
           transform scaleX(1)
