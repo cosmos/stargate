@@ -1,9 +1,7 @@
 <template>
   <div>
-    <div class="tm-section-container nav-container">
-      <div class="nav-container__container">
-        <section-primary-nav />
-      </div>
+    <div class="tm-section-container section-container nav-container">
+      <section-primary-nav />
     </div>
     <nuxt />
     <tm-footer />
@@ -35,19 +33,7 @@ export default {
   opacity 0
 
 .nav-container
-  display flex
-  align-items stretch
-  width 100%
-  padding-top var(--spacing-9)
-  padding-bottom var(--spacing-9)
-
-  &__container
-    position relative
-    display flex
-    width 100%
-    flex-direction column
-    align-items normal
-    justify-content flex-start
+  padding-top var(--spacing-7)
 
 .section-container
   position relative
@@ -64,11 +50,11 @@ export default {
 .section
   overflow hidden
   position relative
-  padding-top 6rem
-  padding-bottom 6rem
+  padding-top var(--spacing-10)
+  padding-bottom var(--spacing-10)
 
 .section-header
-  padding-top 1rem
+  padding-top var(--spacing-5)
   min-height 3rem
   color var(--gray-600)
   border-top 1px solid #282B53
@@ -76,15 +62,7 @@ export default {
 .section-title
   color var(--white)
 
-@media screen and (max-width: 1279px)
-  .section
-    padding-top 6rem
-    padding-bottom 6rem
-
 @media screen and (max-width: 1024px)
-  .section
-    padding-top 4rem
-    padding-bottom 4rem
   .section-container
     .container
       gap 0 1.5rem
@@ -94,9 +72,4 @@ export default {
     padding-top 1.5rem
     .container
       gap 0 1rem
-
-@media screen and (min-width: 1920px)
-  .section
-    padding-top 8rem
-    padding-bottom 8rem
 </style>

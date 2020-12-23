@@ -1,42 +1,64 @@
 <template>
-  <nav class="nav-primary">
-    <ul class="nav-primary__first">
-      <li>
-        <NuxtLink to="/">
-          <logo-cosmos-wordmark v-if="this.$route.path === '/'" class="logo" />
-          <logo-stargate-wordmark v-else class="logo" />
-        </NuxtLink>
-        <span class="sr-only">Cosmos</span>
-      </li>
-      <li>
-        <NuxtLink to="/" class="text tm-rf0 tm-lh-title">Overview</NuxtLink>
-        <NuxtLink to="/testnets" class="text tm-rf0 tm-lh-title"
-          >Testnets</NuxtLink
-        >
-        <NuxtLink to="/resources" class="text tm-rf0 tm-lh-title"
-          >Resources</NuxtLink
-        >
-      </li>
-    </ul>
-    <ul v-if="this.$route.path === '/testnets'" class="nav-primary__second">
-      <li>
-        <NuxtLink to="/">
-          <span class="text tm-rf0 tm-lh-title">← Testnets</span>
-          <icon-arrow-right class="icon" />
-        </NuxtLink>
-      </li>
-      <li>
-        <a
-          href="https://github.com/cosmosdevs/stargate#stargate-5-testing"
-          target="_blank"
-          rel="noreferrer noopener"
-        >
-          <span class="text tm-rf0 tm-lh-title">GitHub ↗</span>
-          <icon-github class="icon" />
-        </a>
-      </li>
-    </ul>
-  </nav>
+  <div class="nav-inner">
+    <nav class="nav nav-primary" role="navigation">
+      <NuxtLink
+        to="/"
+        :class="['logos', this.$route.path != '/' && ' not-home']"
+      >
+        <logo-cosmos-wordmark class="logo logo-cosmos" />
+        <logo-stargate-wordmark class="logo logo-stargate" />
+      </NuxtLink>
+      <span class="sr-only">Cosmos – Stargate</span>
+      <ul>
+        <li>
+          <NuxtLink to="/" class="text tm-rf0 tm-medium tm-lh-title"
+            >Overview</NuxtLink
+          >
+        </li>
+        <li>
+          <NuxtLink to="/testnets" class="text tm-rf0 tm-medium tm-lh-title"
+            >Testnets</NuxtLink
+          >
+        </li>
+        <li>
+          <NuxtLink to="/resources" class="text tm-rf0 tm-medium tm-lh-title"
+            >Resources</NuxtLink
+          >
+        </li>
+      </ul>
+    </nav>
+    <nav
+      v-if="this.$route.path === '/testnets'"
+      class="nav nav-secondary"
+      role="navigation"
+    >
+      <ul>
+        <li>
+          <tm-button
+            to-link="internal"
+            to="/testnets"
+            size="l"
+            variant="text"
+            color="var(--white)"
+            glow
+            ><span class="icon__left">←</span>Testnets
+          </tm-button>
+        </li>
+        <li>
+          <tm-button
+            to-link="internal"
+            to="https://github.com/cosmosdevs/stargate#stargate-5-testing"
+            size="l"
+            variant="text"
+            color="var(--white)"
+            glow
+            ><span class="text">GitHub<span class="icon__right">↗️</span></span>
+            <icon-github class="icon" />
+          </tm-button>
+        </li>
+      </ul>
+    </nav>
+  </div>
 </template>
 
 <script>
@@ -44,61 +66,109 @@ export default {}
 </script>
 
 <style lang="stylus" scoped>
-/* exact link will show the primary color for only the exact matching link */
-a.nuxt-link-exact-active
-  color #00c58e
-  font-weight bold
 
-.nav-primary
-  &__first
-    display grid
-    grid-template-columns repeat(3, 1fr)
-    align-items center
-    padding 0
-  &__second
+.nav-inner
+  position relative
+
+.nav
+  /* if no secondary nav, create similar space */
+  &:first-child:last-child
+    margin-bottom var(--spacing-9)
+
+  &-primary,
+  ul
     display flex
+    align-items center
     justify-content space-between
+  ul
     padding 0
   li
     list-style-type none
-    &:first-child
-      text-align left
-    &:nth-child(2)
-      display flex
-      justify-content space-evenly
+    display inline-block
+    + li
+      margin-left var(--spacing-7)
   .logo
     display block
-    margin 0 auto
-  a
-    display inline-block
-    padding var(--spacing-4) 0
-    color var(--gray-600)
+    transition transform .4s $ease-out, opacity .4s $ease-out, color .4s $ease-out, visibility .4s 0s
+    color var(--white)
+  .logo-stargate
+    position absolute
+    height 1rem
+    opacity 0
+    visibility hidden
+    transform scale(0.8)
+  .logos
+    position relative
+    width 10rem
+    height 3rem
+    display flex
+    justify-content center
+    flex-direction column
+    &.not-home
+      .logo-cosmos
+        transform scale(0.4) translateY(-3.5rem)
+        color var(--gray-600)
+      .logo-stargate
+        opacity 1
+        visibility visible
+        transform scale(1)
+        transition transform .4s $ease-out, opacity .4s $ease-out, visibility 0s
+
+  &-primary ul a
+    display block
+    padding var(--spacing-6) 0
+    color var(--white)
     border-radius $border-radius-2
+    transition all .25s $ease-out
     &:hover,
     &:focus
-      color var(--gray-800)
+      opacity 0.8
+    &:active
+      opacity 0.6
+      transition-duration .05s
+    // /* exact link will show the primary color for only the exact matching link */
+    &.nuxt-link-exact-active
+      cursor default
+      color var(--gray-600)
+      opacity 1
+  &-secondary
+    .tm-button
+      min-width $max-width['2']
     .icon
       display none
-      fill var(--gray-800)
-      transform rotate(180deg)
+      fill var(--white)
       width 1.5rem
+      &__reverse
+        transform rotate(180deg)
 
-// @media screen and (max-width: 1024px)
-// @media screen and (max-width: 767px)
-
-@media screen and (max-width: 576px)
+@media $breakpoint-small
+  .homelink
+    align-self baseline
+    margin-top var(--spacing-1)
+  .logos
+    align-items start
+    height 4rem
+  .logo
+    transform-origin 0% 50%
   .nav-primary
-    .logo
-      height 1.25rem
+    align-items flex-end
+
+@media $breakpoint-xsmall-only
+  .nav
+    &-primary
+      justify-content center
+      flex-direction column
+    .logo-cosmos
+      max-height 1.5rem
       width auto
-    a
-      padding var(--spacing-4)
+    .logo-stargate
+      height 0.75rem
+    .logos.not-home
+      .logo-cosmos
+        transform scale(0.5) translateY(-2.5rem)
+    &-secondary
       .text
         display none
       .icon
         display block
-
-@media $breakpoint-xsmall-only
-  .nav-primary__first
-    display inline-block
 </style>
