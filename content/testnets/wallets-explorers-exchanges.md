@@ -1,6 +1,6 @@
 ---
 index: 2
-id: stargate-5
+id: stargate-6
 code: stargate
 discord-channel-name: stargate-v040
 title: Wallet, Explorer & Exchange testnet
