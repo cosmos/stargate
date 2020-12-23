@@ -1,34 +1,34 @@
 <template>
   <footer class="footer">
     <div class="tm-section-container section-container">
-      <nav class="nav">
-        <div class="nav__item">
-          <div
-            class="nav__item__title tm-rf-1 tm-rf0-m-up tm-medium tm-lh-title tm-overline"
+      <nav class="nav" role="navigation">
+        <ul class="nav__item">
+          <li
+            class="nav__item__title tm-rf-1 tm-medium tm-lh-title tm-overline"
           >
             Stargate
-          </div>
-          <div class="nav__item__item">
+          </li>
+          <li class="nav__item__item">
             <NuxtLink to="/" class="tm-rf0 tm-lh-title">Overview</NuxtLink>
-          </div>
-          <div class="nav__item__item">
+          </li>
+          <li class="nav__item__item">
             <NuxtLink to="/testnets" class="tm-rf0 tm-lh-title"
               >Testnets</NuxtLink
             >
-          </div>
-          <div class="nav__item__item">
+          </li>
+          <li class="nav__item__item">
             <NuxtLink to="/resources" class="tm-rf0 tm-lh-title"
               >Resources</NuxtLink
             >
-          </div>
-        </div>
-        <div class="nav__item">
-          <div
-            class="nav__item__title tm-rf-1 tm-rf0-m-up tm-medium tm-lh-title tm-overline"
+          </li>
+        </ul>
+        <ul class="nav__item">
+          <li
+            class="nav__item__title tm-rf-1 tm-medium tm-lh-title tm-overline"
           >
             Ecosystem
-          </div>
-          <div class="nav__item__item">
+          </li>
+          <li class="nav__item__item">
             <a
               class="tm-rf0 tm-lh-title"
               href="https://docs.cosmos.network"
@@ -36,8 +36,8 @@
               rel="noreferrer noopener"
               >Cosmos SDK</a
             >
-          </div>
-          <div class="nav__item__item">
+          </li>
+          <li class="nav__item__item">
             <a
               class="tm-rf0 tm-lh-title"
               href="https://docs.tendermint.com"
@@ -45,8 +45,8 @@
               rel="noreferrer noopener"
               >Tendermint Core</a
             >
-          </div>
-          <div class="nav__item__item">
+          </li>
+          <li class="nav__item__item">
             <a
               class="tm-rf0 tm-lh-title"
               href="https://github.com/cosmos/ics"
@@ -54,8 +54,8 @@
               rel="noreferrer noopener"
               >Interchain Standards</a
             >
-          </div>
-          <div class="nav__item__item">
+          </li>
+          <li class="nav__item__item">
             <a
               class="tm-rf0 tm-lh-title"
               href="https://hub.cosmos.network"
@@ -63,15 +63,15 @@
               rel="noreferrer noopener"
               >Cosmos Hub</a
             >
-          </div>
-        </div>
-        <div class="nav__item">
-          <div
-            class="nav__item__title tm-rf-1 tm-rf0-m-up tm-medium tm-lh-title tm-overline"
+          </li>
+        </ul>
+        <ul class="nav__item">
+          <li
+            class="nav__item__title tm-rf-1 tm-medium tm-lh-title tm-overline"
           >
             Community
-          </div>
-          <div class="nav__item__item">
+          </li>
+          <li class="nav__item__item">
             <a
               class="tm-rf0 tm-lh-title"
               href="https://discord.gg/vcExX9T"
@@ -79,8 +79,8 @@
               rel="noreferrer noopener"
               >Chat</a
             >
-          </div>
-          <div class="nav__item__item">
+          </li>
+          <li class="nav__item__item">
             <a
               class="tm-rf0 tm-lh-title"
               href="https://hackerone.com/tendermint?type=team"
@@ -88,8 +88,8 @@
               rel="noreferrer noopener"
               >Bug Bounty Program</a
             >
-          </div>
-          <div class="nav__item__item">
+          </li>
+          <li class="nav__item__item">
             <a
               class="tm-rf0 tm-lh-title"
               href="https://cosmos.network/community"
@@ -97,10 +97,10 @@
               rel="noreferrer noopener"
               >Cosmos Community</a
             >
-          </div>
-        </div>
+          </li>
+        </ul>
       </nav>
-      <nav ref="links" class="social-icons">
+      <nav ref="links" class="social-icons" role="navigation">
         <a
           v-for="link in links"
           :key="url(link)"
@@ -211,29 +211,39 @@ export default {
   text-align center
   color var(--white)
   background linear-gradient(180deg, #000000 0%, #030419 100%)
-  padding var(--spacing-9) 0
+  padding 0 0 var(--spacing-8)
   .nav
     display grid
     gap 1.5rem
-    grid-template-columns repeat(auto-fit, minmax(200px, 1fr))
+    grid-template-columns repeat(12, 1fr)
     justify-content center
     &__item
       padding var(--spacing-6) 0
-      margin 0 var(--spacing-5)
       border-radius $border-radius-2
       white-space nowrap
       color var(--gray-600)
       text-align left
       display flex
       flex-direction column
-      // &:hover,
-      // &:focus
-      //   color inherit
+      margin 0
+      list-style-type none
+      grid-column span 3
+      &:first-child
+        grid-column 3/span 3
       &__title
         padding-bottom var(--spacing-3)
       &__item
-        padding-top 0.5rem
-        padding-bottom 0.5rem
+        padding-top var(--spacing-3)
+        padding-bottom var(--spacing-3)
+        a
+          color var(--white)
+          transition all .25s $ease-out
+          &:hover,
+          &:focus
+            opacity 0.8
+          &:active
+            opacity 0.6
+            transition-duration .05s
   .social-icons
     margin-top var(--spacing-9)
     margin-bottom var(--spacing-9)
@@ -261,13 +271,15 @@ export default {
     margin-top var(--spacing-5)
     color var(--gray-600)
 
-@media screen and (max-width: 600px)
+@media $breakpoint-medium-max
   .footer
     .nav
-      display grid
       grid-template-columns repeat(2, 1fr)
+      &__item,
+      &__item:first-child
+          grid-column span 1
 
-@media screen and (max-width: 420px)
+@media $breakpoint-small-max
   .footer
     .nav
       grid-template-columns repeat(1, 1fr)
