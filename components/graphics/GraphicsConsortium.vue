@@ -168,10 +168,10 @@
       animation-delay ($duration/6 * (hex - 1))
 
 @keyframes hex-flash
-    from
-      opacity 0.2
-    to
-      opacity 1
+  from
+    opacity 0.2
+  to
+    opacity 1
 
 .orbit__outer__1
   width 71%

@@ -1,73 +1,69 @@
 <template>
-  <div class="section section-community">
-    <div class="tm-section-container section-container">
-      <div class="container">
-        <NuxtLink to="/testnets" class="top">
-          <div class="top__left">
-            <graphics-dyson-sphere class="section-graphics" />
-          </div>
-          <div class="top__right">
-            <graphics-sun class="top__sun" />
-            <div class="top__cards__item__top">
-              <div
-                class="cards__item__caption tm-rf-1 tm-rf0-m-up tm-medium tm-lh-title tm-overline"
-              >
-                Upgrade
-              </div>
-              <div class="cards__item__title tm-rf2 tm-bold tm-lh-title">
-                Join the testnets -->
-              </div>
-              <div
-                class="cards__item__description tm-rf0 tm-rf1-m-up tm-lh-copy"
-              >
-                Prepare for the new era of Cosmos by testing your integrations
-                against the Stargate testnets.
-              </div>
-            </div>
-          </div>
-        </NuxtLink>
-        <div class="cards">
-          <a
-            href="https://cosmos.network/community"
-            rel="noreferrer noopener"
-            class="cards__item"
-          >
-            <div
-              class="cards__item__caption tm-rf-1 tm-rf0-m-up tm-medium tm-lh-title tm-overline"
-            >
-              Connect
-            </div>
-            <div class="cards__item__title tm-rf2 tm-bold tm-lh-title">
-              Join the community -->
-            </div>
-            <div class="cards__item__description tm-rf0 tm-rf1-m-up tm-lh-copy">
-              Learn about Cosmos, get to know the community, connect with other
-              Cosmonauts and more.
-            </div>
-          </a>
-          <a
-            href="https://discord.com/channels/669268347736686612/723170066937413693"
-            target="_blank"
-            rel="noreferrer noopener"
-            class="cards__item"
-          >
-            <span class="cards__item__disclosure tm-rf2 tm-lh-solid"
-              >&#8599;</span
-            >
-            <div
-              class="cards__item__caption tm-rf-1 tm-rf0-m-up tm-medium tm-lh-title tm-overline"
-            >
-              Chat
-            </div>
-            <div class="cards__item__title tm-rf2 tm-bold tm-lh-title">
-              Discuss Stargate
-            </div>
-            <div class="cards__item__description tm-rf0 tm-rf1-m-up tm-lh-copy">
-              Join the <code>#stargate</code> channel in the Cosmos community
-              Discord and chat with developers.
-            </div>
-          </a>
+  <div class="tm-section-container section-container">
+    <div class="container">
+      <NuxtLink to="/testnets" class="top">
+        <div class="top__left">
+          <graphics-dyson-sphere class="section-graphics" />
         </div>
+        <div class="top__right">
+          <graphics-sun class="top__sun" />
+          <div class="top__cards__item__top">
+            <div
+              class="cards__item__caption tm-rf-1 tm-rf0-m-up tm-medium tm-lh-title tm-overline"
+            >
+              Upgrade
+            </div>
+            <div class="cards__item__title tm-rf2 tm-bold tm-lh-title">
+              Join the testnets -->
+            </div>
+            <div class="cards__item__description tm-rf0 tm-rf1-m-up tm-lh-copy">
+              Prepare for the new era of Cosmos by testing your integrations
+              against the Stargate testnets.
+            </div>
+          </div>
+        </div>
+      </NuxtLink>
+      <div class="cards">
+        <a
+          href="https://cosmos.network/community"
+          rel="noreferrer noopener"
+          class="cards__item"
+        >
+          <div
+            class="cards__item__caption tm-rf-1 tm-rf0-m-up tm-medium tm-lh-title tm-overline"
+          >
+            Connect
+          </div>
+          <div class="cards__item__title tm-rf2 tm-bold tm-lh-title">
+            Join the community -->
+          </div>
+          <div class="cards__item__description tm-rf0 tm-rf1-m-up tm-lh-copy">
+            Learn about Cosmos, get to know the community, connect with other
+            Cosmonauts and more.
+          </div>
+        </a>
+        <a
+          href="https://discord.com/channels/669268347736686612/723170066937413693"
+          target="_blank"
+          rel="noreferrer noopener"
+          class="cards__item"
+        >
+          <span class="cards__item__disclosure tm-rf2 tm-lh-solid"
+            >&#8599;</span
+          >
+          <div
+            class="cards__item__caption tm-rf-1 tm-rf0-m-up tm-medium tm-lh-title tm-overline"
+          >
+            Chat
+          </div>
+          <div class="cards__item__title tm-rf2 tm-bold tm-lh-title">
+            Discuss Stargate
+          </div>
+          <div class="cards__item__description tm-rf0 tm-rf1-m-up tm-lh-copy">
+            Join the <code>#stargate</code> channel in the Cosmos community
+            Discord and chat with developers.
+          </div>
+        </a>
       </div>
     </div>
   </div>

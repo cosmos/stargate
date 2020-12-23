@@ -206,7 +206,7 @@ export default {
     color var(--white)
 .section-list
   color var(--white)
-  margin-top var(--spacing-10)
+  margin-top var(--spacing-8)
   grid-column 2 / span 10
   &__item
     padding-top var(--spacing-7)
