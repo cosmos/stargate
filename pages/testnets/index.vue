@@ -18,30 +18,30 @@
               v-for="item of testnets"
               :key="item.id"
               :to="`/testnets/${item.slug}`"
+              class="testnet-lists__item"
+              :style="{
+                '--background-color': `${bgColor[item.code]}`,
+              }"
             >
-              <div
-                class="testnet-lists__item"
-                :style="{
-                  '--background-color': `${bgColor[item.code]}`,
-                }"
-              >
-                <div class="testnet-lists__item__top">
-                  <div class="testnet-lists__item__code tm-code">
-                    {{ item.id }}
-                  </div>
+              <div class="testnet-lists__item__top">
+                <div class="testnet-lists__item__code tm-code">
+                  {{ item.id }}
                 </div>
-                <graphics-dyson-sphere-glow class="section-graphics" />
-                <div class="testnet-lists__item__bottom">
-                  <div
-                    class="testnet-lists__item__title tm-rf4 tm-bold tm-lh-title"
-                  >
-                    {{ item.title }}
-                  </div>
-                  <div class="testnet-lists__item__desc tm-rf0 tm-lh-copy">
-                    {{ item.desc }}
-                  </div>
-                  <div class="testnet-lists__item__cta">---></div>
+              </div>
+              <graphics-dyson-sphere-glow
+                class="section-graphics"
+                :testnet="item.code"
+              />
+              <div class="testnet-lists__item__bottom">
+                <div
+                  class="testnet-lists__item__title tm-rf4 tm-bold tm-lh-title"
+                >
+                  {{ item.title }}
                 </div>
+                <div class="testnet-lists__item__desc tm-rf0 tm-lh-copy">
+                  {{ item.desc }}
+                </div>
+                <div class="testnet-lists__item__cta">---></div>
               </div>
             </NuxtLink>
           </div>
@@ -51,7 +51,7 @@
 
     <div class="data-container">
       <div class="features-graphics">
-        <graphics-interoperable-planets />
+        <!-- <graphics-interoperable-planets /> -->
       </div>
     </div>
 
@@ -103,7 +103,7 @@ main
 .testnet-lists
   margin-top var(--spacing-11)
   display grid
-  grid-template-columns 50% 50%
+  grid-template-columns 1fr 1fr
   grid-template-rows 1fr
   gap var(--spacing-7)
   align-items center
@@ -112,12 +112,11 @@ main
     background var(--background-color, linear-gradient(131.1deg, #3E0555 26.7%, #121435 64.71%, #030419 100%))
     position relative
     padding var(--spacing-9) var(--spacing-8)
-    height 40.5rem
     color var(--white)
-    position relative
     display flex
     flex-direction column
     flex-wrap nowrap
+    height 100%
     justify-content space-between
     border-radius $border-radius-5
     hover-raise(-3px)
@@ -130,6 +129,9 @@ main
 
     &__code
       color var(--white-700)
+
+    &__bottom
+      margin-top var(--spacing-11)
 
     &__title
       max-width 7em
@@ -144,8 +146,9 @@ main
 
 .section-graphics
   width 100%
-  height 80%
-  top -7%
+  height auto
+  margin-top -21%
+  left 0
   position absolute
   z-index -1
 
