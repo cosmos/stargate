@@ -90,7 +90,7 @@ export default {}
     &__paragraph
       color var(--gray-800)
 
-@media screen and (max-width: 1024px)
+@media $breakpoint-large-max
   .section-testnets
     overflow hidden
     .testnets-list
@@ -120,6 +120,7 @@ export default {}
         &__title
           margin-right var(--spacing-4)
           margin-bottom 0
+    .section-status,
     .section-status__title
       grid-column 1 / span 12
     .section-tabs
@@ -135,15 +136,13 @@ export default {}
     &__item
       margin-top var(--spacing-3)
 
-@media screen and (max-width: 767px)
+@media $breakpoint-medium-max
   .section-testnets
-    .section-status
-      grid-column 1/ span 12
     .section-text
       margin-top 0
       grid-column 1 / span 12
 
-@media screen and (max-width: 576px)
+@media $breakpoint-small-max
   .section-testnets
     .section-statement
       margin-top var(--spacing-7)

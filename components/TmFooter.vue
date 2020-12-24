@@ -1,7 +1,7 @@
 <template>
   <footer class="footer">
     <div class="tm-section-container section-container">
-      <nav class="nav" role="navigation">
+      <nav class="nav container" role="navigation">
         <ul class="nav__item">
           <li
             class="nav__item__title tm-rf-1 tm-medium tm-lh-title tm-overline"
@@ -213,9 +213,7 @@ export default {
   background linear-gradient(180deg, #000000 0%, #030419 100%)
   padding 0 0 var(--spacing-8)
   .nav
-    display grid
-    gap 1.5rem
-    grid-template-columns repeat(12, 1fr)
+    gap var(--spacing-7)
     justify-content center
     &__item
       padding var(--spacing-6) 0
@@ -232,18 +230,16 @@ export default {
         grid-column 3/span 3
       &__title
         padding-bottom var(--spacing-3)
-      &__item
+      &__item a
+        display inline-block
         padding-top var(--spacing-3)
         padding-bottom var(--spacing-3)
-        a
-          color var(--white)
-          transition all .25s $ease-out
-          &:hover,
-          &:focus
-            opacity 0.8
-          &:active
-            opacity 0.6
-            transition-duration .05s
+        color var(--white)
+        &:hover,
+        &:focus
+          opacity 0.8
+        &:active
+          opacity 0.6
   .social-icons
     margin-top var(--spacing-9)
     margin-bottom var(--spacing-9)
@@ -266,7 +262,7 @@ export default {
       color var(--gray-900)
       &:hover,
       &:focus
-        color var(--link)
+        color var(--white)
   .smallprint
     margin-top var(--spacing-5)
     color var(--gray-600)

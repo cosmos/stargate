@@ -1,58 +1,56 @@
 /* eslint-disable */
 <template>
   <main>
-    <div class="section-hero">
-      <div class="tm-section-container section-container">
-        <div class="container">
-          <div class="intro-text">
-            <div class="section-title tm-rf6 tm-rf7-xl-up tm-bold tm-lh-title">
-              Get set for <span class="section-title__highlight">testnets</span>
-            </div>
-            <div class="section-subtitle tm-rf2 tm-lh-copy tm-measure">
-              The future is here, Cosmonauts! Start integration testing with the
-              Stargate testnets today.
-            </div>
+    <div class="tm-section-container section-container">
+      <div class="container">
+        <div class="intro-text">
+          <div class="section-title tm-rf7 tm-bold tm-lh-title">
+            Get set for <span class="section-title__highlight">testnets</span>
           </div>
-          <div class="testnet-lists">
-            <NuxtLink
-              v-for="item of testnets"
-              :key="item.id"
-              :to="`/testnets/${item.slug}`"
-              class="testnet-lists__item"
-              :style="{
-                '--background-color': `${bgColor[item.code]}`,
-              }"
-            >
-              <div class="testnet-lists__item__top">
-                <div class="testnet-lists__item__code tm-code">
-                  {{ item.id }}
-                </div>
-              </div>
-              <graphics-dyson-sphere-glow
-                class="section-graphics"
-                :testnet="item.code"
-              />
-              <div class="testnet-lists__item__bottom">
-                <div
-                  class="testnet-lists__item__title tm-rf4 tm-bold tm-lh-title"
-                >
-                  {{ item.title }}
-                </div>
-                <div class="testnet-lists__item__desc tm-rf0 tm-lh-copy">
-                  {{ item.desc }}
-                </div>
-                <div class="testnet-lists__item__cta">---></div>
-              </div>
-            </NuxtLink>
+          <div class="section-subtitle tm-rf2 tm-lh-copy tm-measure-narrow">
+            The future is here, Cosmonauts! Start integration testing with the
+            Stargate testnets today.
           </div>
         </div>
       </div>
+      <div class="testnet-lists container">
+        <NuxtLink
+          v-for="item of testnets"
+          :key="item.id"
+          :to="`/testnets/${item.slug}`"
+          class="testnet-lists__item"
+          :style="{
+            '--background-color': `${bgColor[item.code]}`,
+          }"
+        >
+          <div class="testnet-lists__item__top">
+            <div
+              class="testnet-lists__item__code tm-rf-1 tm-rf0-m-up tm-lh-title tm-code"
+            >
+              {{ item.id }}
+            </div>
+          </div>
+          <graphics-dyson-sphere-glow
+            class="testnet-lists__item__graphics"
+            :testnet="item.code"
+          />
+          <div class="testnet-lists__item__bottom">
+            <div class="testnet-lists__item__title tm-rf4 tm-bold tm-lh-title">
+              {{ item.title }}
+            </div>
+            <div
+              class="testnet-lists__item__desc tm-rf-1 tm-rf0-l-up tm-lh-copy tm-measure"
+            >
+              {{ item.desc }}
+            </div>
+            <div class="testnet-lists__item__cta">---></div>
+          </div>
+        </NuxtLink>
+      </div>
     </div>
 
-    <div class="data-container">
-      <div class="features-graphics">
-        <!-- <graphics-interoperable-planets /> -->
-      </div>
+    <div class="section-graphics">
+      <!-- <graphics-interoperable-planets /> -->
     </div>
 
     <section-testnets />
@@ -102,16 +100,14 @@ main
 
 .testnet-lists
   margin-top var(--spacing-11)
-  display grid
-  grid-template-columns 1fr 1fr
-  grid-template-rows 1fr
   gap var(--spacing-7)
   align-items center
 
   &__item
     background var(--background-color, linear-gradient(131.1deg, #3E0555 26.7%, #121435 64.71%, #030419 100%))
+    grid-column span 12
     position relative
-    padding var(--spacing-9) var(--spacing-8)
+    padding var(--spacing-8)
     color var(--white)
     display flex
     flex-direction column
@@ -131,10 +127,7 @@ main
       color var(--white-700)
 
     &__bottom
-      margin-top var(--spacing-11)
-
-    &__title
-      max-width 7em
+      margin-top var(--spacing-13)
 
     &__desc
       margin-top var(--spacing-6)
@@ -143,71 +136,32 @@ main
     &__cta
       text-align right
       margin-top var(--spacing-6)
+      display none
 
-.section-graphics
-  width 100%
-  height auto
-  margin-top -21%
-  left 0
-  position absolute
-  z-index -1
+    &__graphics
+      width 100%
+      height auto
+      margin-top -14%
+      left 0
+      position absolute
+      z-index -1
+      max-width 36rem
 
-.data-container
-  position relative
-  z-index 1 // above .feature-graphics
-  grid-row 4
-  margin-top var(--spacing-11)
-  display grid
-  flex-direction row
-  grid-column 1/ span 12
-  grid-template-columns repeat(4, 1fr)
-  gap var(--spacing-7)
-
-// .features-graphics
+// .section-graphics
 //   grid-column 1 / span 8
 //   grid-row 5
 //   position relative
 //   font-size 1.5rem
 //   z-index 0
 
-.section-hero
-  position relative
-  // height 100vh
-  // min-height 52rem
-  // max-height 72rem
-  // margin-bottom var(--spacing-10)
-  display flex
-  justify-content stretch
-  align-items stretch
-  text-align center
-  // background url(/stars.svg)
-  .section-container
-    display flex
-    align-items stretch
-    width 100%
-    padding-top var(--spacing-9)
-    padding-bottom var(--spacing-10)
-  .container
-    position relative
-    display flex
-    width 100%
-    flex-direction column
-    align-items normal
-    justify-content flex-start
-
 .intro-text
   text-align left
   margin-top var(--spacing-11)
-  display grid
-  grid-template-columns repeat(12, 1fr)
-  gap 0 var(--spacing-7)
-  max-width var(--container-mw-lg)
+  grid-column span 12
 
 .section-title
-  grid-column 2 / span 7
-  // grid-row 1 / 2
-  max-width 9em
-  min-height $line-height-title-base-min * 2em
+  max-width 6em
+  // min-height $line-height-title-base-min * 2em
   // margin-bottom -1.1em
   &__highlight
     background-color var(--white)
@@ -219,41 +173,38 @@ main
     padding-right 0.05em // Fix offset clipping
 
 .section-subtitle
-  // display flex
-  // justify-content flex-end
-  // flex-direction column
-  // grid-row 2
-  grid-column 2 / span 7
   color var(--gray-800)
+  margin-top var(--spacing-8)
 
-@media screen and (max-width: 1024px)
-  .section .section-header
-    grid-column 1 / span 12
+@media $breakpoint-medium
+  .intro-text
+    grid-column 2 / span 11
 
-  .section-hero
-    display grid
-    .container
-      .headings
-        .subtitle
-          margin-top var(--spacing-7)
+  .testnet-lists
+    &__item
+      grid-column span 6
+      padding var(--spacing-8) var(--spacing-9)
 
-@media screen and (max-width: 767px)
-  .section-hero
-    .container
-      .content
-        padding-bottom 20%
+      &__bottom
+        margin-top var(--spacing-13)
 
-@media screen and (max-width: 576px)
+      &__graphics
+        margin-top -21%
+
+      &__title
+        max-width 7em
+
+      &__cta
+        display block
+
+@media $breakpoint-xsmall-only
   .section-hero
     min-height 32rem
     max-height 42rem
     margin-bottom var(--spacing-8)
-
-@media screen and (max-width: 414px)
   main
     overflow-x hidden
-
-@media screen and (max-width: 375px)
-  .section-container .container
-    gap unset
+  .testnet-lists
+    margin-left calc(-1 * var(--spacing-3))
+    margin-right calc(-1 * var(--spacing-3))
 </style>

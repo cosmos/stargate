@@ -62,14 +62,7 @@ export default {
 .section-title
   color var(--white)
 
-@media screen and (max-width: 1024px)
+@media $breakpoint-medium-max
   .section-container
-    .container
-      gap 0 1.5rem
-
-@media screen and (max-width: 767px)
-  .section-container
-    padding-top 1.5rem
-    .container
-      gap 0 1rem
+    padding-top var(--spacing-6)
 </style>

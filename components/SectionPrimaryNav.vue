@@ -68,7 +68,8 @@ export default {}
 <style lang="stylus" scoped>
 
 .nav-inner
-  position relative
+  margin 0 auto
+  max-width var(--container-mw-lg)
 
 .nav
   /* if no secondary nav, create similar space */
