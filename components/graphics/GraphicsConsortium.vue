@@ -74,7 +74,7 @@
         </defs>
       </svg>
       <img
-        alt="Colourful plumbobs around a blue planet with nine hexagonss"
+        alt="Colourful plumbobs around a blue planet with nine hexagons"
         src="~/assets/illustrations/plumbobs.svg"
         class="plumbobs"
       />
