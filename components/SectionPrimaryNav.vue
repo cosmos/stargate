@@ -18,7 +18,14 @@
         >
       </li>
     </ul>
-    <ul v-if="this.$route.path === '/testnets'" class="nav-primary__second">
+    <ul
+      v-if="
+        this.$route.path === '/testnets/wallets-explorers-exchanges' ||
+        this.$route.path === '/testnets/community' ||
+        this.$route.path === '/testnets/validator'
+      "
+      class="nav-primary__second"
+    >
       <li>
         <NuxtLink to="/">
           <span class="text tm-rf0 tm-lh-title">← Testnets</span>
