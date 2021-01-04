@@ -28,7 +28,11 @@
       </ul>
     </nav>
     <nav
-      v-if="this.$route.path === '/testnets'"
+      v-if="
+        this.$route.path === '/testnets/wallets-explorers-exchanges' ||
+        this.$route.path === '/testnets/community' ||
+        this.$route.path === '/testnets/validator'
+      "
       class="nav nav-secondary"
       role="navigation"
     >
