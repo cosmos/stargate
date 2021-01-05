@@ -27,7 +27,7 @@
             Public RPC endpoint
           </div>
           <a
-            href="http://34.123.30.100:1317"
+            :href="`http://${endpoints[code][0]}`"
             target="_blank"
             rel="noreferrer noopener"
             class="list__item__url tm-rf0 tm-lh-copy tm-code"
@@ -40,7 +40,7 @@
             Public REST endpoint
           </div>
           <a
-            href="http://34.123.30.100:1317"
+            :href="`http://${endpoints[code][1]}`"
             target="_blank"
             rel="noreferrer noopener"
             class="list__item__url tm-rf0 tm-lh-copy tm-code"
