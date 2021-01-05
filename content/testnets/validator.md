@@ -5,7 +5,7 @@ code: cosmoshub
 discord-channel-name: stargate-testnet
 title: Validator testnet
 desc: A simulated upgrade of the Cosmos Hub to Stargate (Cosmos SDK v0.37 --> v0.40). Highly recommended for Cosmos Hub validators.
-slug: wallets-explorers-exchanges
+slug: validator
 explorers:
   - name: Mintscan
     url: https://testnet.mintscan.io/stargate

@@ -5,7 +5,7 @@ code: stargate
 discord-channel-name: stargate-v040
 title: Wallet, Explorer & Exchange testnet
 desc: A persistent non-adversarial testnet that replicates a Stargate-enabled Cosmos Hub to be used for service provider integration and relayer testing.
-slug: validator
+slug: wallets-explorers-exchanges
 explorers:
   - name: Mintscan
     url: https://testnet.mintscan.io/stargate
