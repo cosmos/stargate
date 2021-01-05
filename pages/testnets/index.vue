@@ -50,7 +50,9 @@
     </div>
 
     <div class="section-graphics">
-      <!-- <graphics-interoperable-planets /> -->
+      <div class="inner">
+        <graphics-testnets class="graphics" />
+      </div>
     </div>
 
     <section-testnets />
@@ -147,12 +149,24 @@ main
       z-index -1
       max-width 36rem
 
-// .section-graphics
-//   grid-column 1 / span 8
-//   grid-row 5
-//   position relative
-//   font-size 1.5rem
-//   z-index 0
+.section-graphics
+  grid-column span 12
+  position relative
+  z-index -1
+  margin-top calc(-1 * var(--spacing-12))
+  margin-bottom calc(-1 * var(--spacing-12))
+  display flex
+  justify-content flex-end
+  .inner
+    padding-top var(--spacing-11)
+    padding-bottom var(--spacing-11)
+    padding-right 10%
+    background radial-gradient(40% 56% at 44% 50%, #4251fa 16%, #320b93 39%, #030419 79%, rgba(0,0,0,0) 100%)
+    max-width 170rem
+    flex 1 0 180%
+  .graphics
+    width 100%
+    height auto
 
 .intro-text
   text-align left
@@ -161,8 +175,6 @@ main
 
 .section-title
   max-width 6em
-  // min-height $line-height-title-base-min * 2em
-  // margin-bottom -1.1em
   &__highlight
     background-color var(--white)
     background-image linear-gradient(90deg, #E644F8 0%, #CCD1FF 51.56%, #99DAFF 100%)

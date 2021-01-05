@@ -1,5 +1,5 @@
 <template>
-  <div class="section-testnets">
+  <div class="section section-testnets">
     <div class="tm-section-container section-container">
       <div class="container">
         <div class="section-status">
@@ -57,12 +57,8 @@ export default {}
 
 <style lang="stylus" scoped>
 .section-testnets
-  position relative
-  overflow hidden
-  background linear-gradient(180deg, rgba(0,0,0,0) 0%, #030419 24%, #030419 69%, rgba(0,0,0,0) 100%)
   .section-status
     grid-column 1 / 5
-    margin-top var(--spacing-10)
     &__title
       grid-column 1 / span 4
       text-align start
