@@ -1,124 +1,124 @@
 <template>
   <svg
-    width="941"
-    height="1125"
-    viewBox="0 0 941 1125"
+    width="977"
+    height="1029"
+    viewBox="0 0 977 1029"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
     <g opacity="0.7">
       <path
-        d="M308.469 546.174C290.337 662.435 260.562 736.541 184.469 879.174"
-        stroke="url(#paint0_linear-239627)"
+        d="M440.469 449.764C422.337 566.025 392.562 640.13 316.469 782.764"
+        stroke="url(#paint0_linear-267406)"
         stroke-linecap="round"
       />
       <path
-        d="M308 546C295.133 662.261 274.002 736.366 220 879"
-        stroke="url(#paint1_linear-761607)"
+        d="M440 449.589C427.133 565.85 406.002 639.955 352 782.589"
+        stroke="url(#paint1_linear-732617)"
         stroke-linecap="round"
       />
       <path
-        d="M308 546C287.968 659.468 255.071 731.793 171 871"
-        stroke="url(#paint2_linear-377662)"
+        d="M440 449.589C419.968 563.057 387.071 635.382 303 774.589"
+        stroke="url(#paint2_linear-193597)"
         stroke-linecap="round"
       />
       <path
-        d="M308 546C291.185 662.261 263.571 736.366 193 879"
-        stroke="url(#paint3_linear-256465)"
+        d="M440 449.589C423.185 565.85 395.571 639.955 325 782.589"
+        stroke="url(#paint3_linear-511191)"
         stroke-linecap="round"
       />
       <path
-        d="M308 546C292.501 662.261 267.048 736.366 202 879"
-        stroke="url(#paint4_linear-912516)"
+        d="M440 449.589C424.501 565.85 399.048 639.955 334 782.589"
+        stroke="url(#paint4_linear-189649)"
         stroke-linecap="round"
       />
       <path
-        d="M308 546C293.67 662.261 270.138 736.366 210 879"
-        stroke="url(#paint5_linear-677032)"
-        stroke-linecap="round"
-      />
-    </g>
-    <g opacity="0.7">
-      <path
-        d="M308.125 546.031C399.715 536.059 466.091 498.294 602.089 393.22"
-        stroke="url(#paint6_linear-025062)"
-        stroke-linecap="round"
-      />
-      <path
-        d="M308.205 545.192C397.486 544.295 460.067 521.434 586.371 454.447"
-        stroke="url(#paint7_linear-555203)"
-        stroke-linecap="round"
-      />
-      <path
-        d="M308.206 545.192C398.622 531.431 465.086 487.958 602.12 368.503"
-        stroke="url(#paint8_linear-892616)"
-        stroke-linecap="round"
-      />
-      <path
-        d="M308.207 545.192C399.22 537.489 464.647 503.45 598.222 407.898"
-        stroke="url(#paint9_linear-826708)"
-        stroke-linecap="round"
-      />
-      <path
-        d="M308.206 545.192C398.641 539.758 463.12 509.444 594.271 423.414"
-        stroke="url(#paint10_linear-000082)"
-        stroke-linecap="round"
-      />
-      <path
-        d="M308.206 545.192C398.128 541.774 461.764 514.773 590.76 437.206"
-        stroke="url(#paint11_linear-272171)"
+        d="M440 449.589C425.67 565.85 402.138 639.955 342 782.589"
+        stroke="url(#paint5_linear-675528)"
         stroke-linecap="round"
       />
     </g>
     <g opacity="0.7">
       <path
-        d="M307.848 546.039C197.407 537.512 118.212 497.504 -43.2931 384.852"
-        stroke="url(#paint12_linear-311442)"
+        d="M440.125 449.621C531.715 439.649 598.091 401.884 734.089 296.81"
+        stroke="url(#paint6_linear-600793)"
         stroke-linecap="round"
       />
       <path
-        d="M307.774 545.111C199.876 546.574 124.856 522.971 -25.9772 452.243"
-        stroke="url(#paint13_linear-375901)"
+        d="M440.205 448.781C529.486 447.884 592.067 425.023 718.371 358.037"
+        stroke="url(#paint7_linear-317015)"
         stroke-linecap="round"
       />
       <path
-        d="M307.77 545.111C198.854 532.355 119.708 486.028 -42.6532 357.473"
-        stroke="url(#paint14_linear-502254)"
+        d="M440.206 448.781C530.622 435.02 597.086 391.547 734.12 272.092"
+        stroke="url(#paint8_linear-913807)"
         stroke-linecap="round"
       />
       <path
-        d="M307.77 545.112C197.965 539.082 119.814 503.176 -39.0231 401.005"
-        stroke="url(#paint15_linear-965977)"
+        d="M440.207 448.782C531.22 441.079 596.647 407.04 730.222 311.488"
+        stroke="url(#paint9_linear-936449)"
         stroke-linecap="round"
       />
       <path
-        d="M307.772 545.111C198.603 541.579 121.496 509.774 -34.6735 418.084"
-        stroke="url(#paint16_linear-702525)"
+        d="M440.206 448.781C530.641 443.347 595.12 413.033 726.271 327.003"
+        stroke="url(#paint10_linear-282970)"
         stroke-linecap="round"
       />
       <path
-        d="M307.772 545.111C199.168 543.799 122.988 515.639 -30.8092 433.266"
-        stroke="url(#paint17_linear-200274)"
+        d="M440.206 448.781C530.128 445.364 593.764 418.362 722.76 340.796"
+        stroke="url(#paint11_linear-143414)"
+        stroke-linecap="round"
+      />
+    </g>
+    <g opacity="0.7">
+      <path
+        d="M439.848 449.628C329.407 441.101 250.212 401.093 88.7069 288.441"
+        stroke="url(#paint12_linear-460666)"
+        stroke-linecap="round"
+      />
+      <path
+        d="M439.774 448.7C331.876 450.163 256.856 426.56 106.023 355.832"
+        stroke="url(#paint13_linear-759490)"
+        stroke-linecap="round"
+      />
+      <path
+        d="M439.77 448.701C330.854 435.945 251.708 389.617 89.3468 261.062"
+        stroke="url(#paint14_linear-035509)"
+        stroke-linecap="round"
+      />
+      <path
+        d="M439.77 448.701C329.965 442.671 251.814 406.765 92.9769 304.593"
+        stroke="url(#paint15_linear-197092)"
+        stroke-linecap="round"
+      />
+      <path
+        d="M439.772 448.7C330.603 445.168 253.496 413.363 97.3265 321.673"
+        stroke="url(#paint16_linear-040406)"
+        stroke-linecap="round"
+      />
+      <path
+        d="M439.772 448.701C331.168 447.389 254.988 419.229 101.191 336.855"
+        stroke="url(#paint17_linear-589295)"
         stroke-linecap="round"
       />
     </g>
     <ellipse
-      cx="171"
-      cy="954"
+      cx="303"
+      cy="857.589"
       rx="171"
       ry="171"
-      fill="url(#paint18_radial-636334)"
+      fill="url(#paint18_radial-113645)"
     />
     <ellipse
-      cx="171"
-      cy="954"
+      cx="303"
+      cy="857.589"
       rx="171"
       ry="171"
-      fill="url(#paint19_radial-526393)"
+      fill="url(#paint19_radial-866689)"
     />
     <circle
       r="437.5"
-      transform="matrix(-1 0 0 1 307.5 546.5)"
+      transform="matrix(-1 0 0 1 439.5 450.089)"
       stroke="white"
       stroke-opacity="0.5"
       stroke-width="3"
@@ -126,62 +126,60 @@
       stroke-dasharray="0.01 96"
     />
     <ellipse
-      cx="307.5"
-      cy="546.5"
+      cx="439.5"
+      cy="450.089"
       rx="262.5"
       ry="262.5"
-      fill="url(#paint20_radial-578017)"
+      fill="url(#paint20_radial-421838)"
     />
-    <circle
-      r="242"
-      transform="matrix(-0.808324 0.588738 0.588738 0.808324 602 338.5)"
-      fill="url(#paint21_radial-629663)"
+    <path
+      d="M538.386 384.564C617.072 492.599 768.44 516.39 876.475 437.704C984.509 359.017 1008.3 207.649 929.614 99.6145C850.928 -8.4203 699.56 -32.2117 591.525 46.4749C483.49 125.161 459.699 276.529 538.386 384.564Z"
+      fill="url(#paint21_radial-356610)"
     />
-    <circle
-      r="242"
-      transform="matrix(-0.808324 0.588738 0.588738 0.808324 602 338.5)"
-      fill="url(#paint22_linear-340823)"
+    <path
+      d="M538.386 384.564C617.072 492.599 768.44 516.39 876.475 437.704C984.509 359.017 1008.3 207.649 929.614 99.6145C850.928 -8.4203 699.56 -32.2117 591.525 46.4749C483.49 125.161 459.699 276.529 538.386 384.564Z"
+      fill="url(#paint22_linear-959748)"
     />
     <defs>
       <linearGradient
-        id="paint0_linear-239627"
-        x1="184"
-        y1="879"
-        x2="276.915"
-        y2="537.541"
+        id="paint0_linear-267406"
+        x1="316"
+        y1="782.589"
+        x2="408.915"
+        y2="441.131"
         gradientUnits="userSpaceOnUse"
       >
         <stop stop-color="white" stop-opacity="0" />
         <stop offset="0.979792" stop-color="white" />
       </linearGradient>
       <linearGradient
-        id="paint1_linear-761607"
-        x1="219.667"
-        y1="878.826"
-        x2="342.263"
-        y2="559.091"
+        id="paint1_linear-732617"
+        x1="351.667"
+        y1="782.415"
+        x2="474.263"
+        y2="462.68"
         gradientUnits="userSpaceOnUse"
       >
         <stop stop-color="white" stop-opacity="0" />
         <stop offset="0.979792" stop-color="white" />
       </linearGradient>
       <linearGradient
-        id="paint2_linear-377662"
-        x1="170.482"
-        y1="870.83"
-        x2="251.82"
-        y2="532.45"
+        id="paint2_linear-193597"
+        x1="302.482"
+        y1="774.419"
+        x2="383.82"
+        y2="436.039"
         gradientUnits="userSpaceOnUse"
       >
         <stop stop-color="white" stop-opacity="0" />
         <stop offset="0.979792" stop-color="white" />
       </linearGradient>
       <linearGradient
-        id="paint3_linear-256465"
-        x1="192.565"
-        y1="878.826"
-        x2="291.641"
-        y2="541.153"
+        id="paint3_linear-511191"
+        x1="324.565"
+        y1="782.415"
+        x2="423.641"
+        y2="444.742"
         gradientUnits="userSpaceOnUse"
       >
         <stop offset="0.448233" stop-color="white" stop-opacity="0.15" />
@@ -189,22 +187,22 @@
         <stop offset="1" stop-color="white" stop-opacity="0" />
       </linearGradient>
       <linearGradient
-        id="paint4_linear-912516"
-        x1="201.599"
-        y1="878.826"
-        x2="307.599"
-        y2="545.826"
+        id="paint4_linear-189649"
+        x1="333.599"
+        y1="782.415"
+        x2="439.599"
+        y2="449.415"
         gradientUnits="userSpaceOnUse"
       >
         <stop stop-color="white" stop-opacity="0" />
         <stop offset="0.979792" stop-color="white" />
       </linearGradient>
       <linearGradient
-        id="paint5_linear-677032"
-        x1="209.63"
-        y1="878.826"
-        x2="307.63"
-        y2="545.826"
+        id="paint5_linear-675528"
+        x1="341.63"
+        y1="782.415"
+        x2="439.63"
+        y2="449.415"
         gradientUnits="userSpaceOnUse"
       >
         <stop offset="0.265625" stop-color="white" stop-opacity="0.15" />
@@ -212,44 +210,44 @@
         <stop offset="0.760417" stop-color="white" stop-opacity="0" />
       </linearGradient>
       <linearGradient
-        id="paint6_linear-025062"
-        x1="602.169"
-        y1="392.38"
-        x2="334.18"
-        y2="355.655"
+        id="paint6_linear-600793"
+        x1="734.169"
+        y1="295.97"
+        x2="466.18"
+        y2="259.244"
         gradientUnits="userSpaceOnUse"
       >
         <stop stop-color="white" stop-opacity="0" />
         <stop offset="0.979792" stop-color="white" />
       </linearGradient>
       <linearGradient
-        id="paint7_linear-555203"
-        x1="586.391"
-        y1="453.842"
-        x2="318.68"
-        y2="429.519"
+        id="paint7_linear-317015"
+        x1="718.391"
+        y1="357.431"
+        x2="450.68"
+        y2="333.108"
         gradientUnits="userSpaceOnUse"
       >
         <stop stop-color="white" stop-opacity="0" />
         <stop offset="0.979792" stop-color="white" />
       </linearGradient>
       <linearGradient
-        id="paint8_linear-892616"
-        x1="602.225"
-        y1="367.579"
-        x2="340.8"
-        y2="328.26"
+        id="paint8_linear-913807"
+        x1="734.225"
+        y1="271.168"
+        x2="472.8"
+        y2="231.849"
         gradientUnits="userSpaceOnUse"
       >
         <stop stop-color="white" stop-opacity="0" />
         <stop offset="0.979792" stop-color="white" />
       </linearGradient>
       <linearGradient
-        id="paint9_linear-826708"
-        x1="598.287"
-        y1="407.116"
-        x2="330.263"
-        y2="372.776"
+        id="paint9_linear-936449"
+        x1="730.287"
+        y1="310.706"
+        x2="462.263"
+        y2="276.366"
         gradientUnits="userSpaceOnUse"
       >
         <stop offset="0.448233" stop-color="white" stop-opacity="0.15" />
@@ -257,22 +255,22 @@
         <stop offset="1" stop-color="white" stop-opacity="0" />
       </linearGradient>
       <linearGradient
-        id="paint10_linear-000082"
-        x1="594.321"
-        y1="422.691"
-        x2="326.31"
-        y2="391.136"
+        id="paint10_linear-282970"
+        x1="726.321"
+        y1="326.281"
+        x2="458.31"
+        y2="294.725"
         gradientUnits="userSpaceOnUse"
       >
         <stop stop-color="white" stop-opacity="0" />
         <stop offset="0.979792" stop-color="white" />
       </linearGradient>
       <linearGradient
-        id="paint11_linear-272171"
-        x1="590.798"
-        y1="436.536"
-        x2="326.355"
-        y2="402.753"
+        id="paint11_linear-143414"
+        x1="722.798"
+        y1="340.126"
+        x2="458.355"
+        y2="306.342"
         gradientUnits="userSpaceOnUse"
       >
         <stop offset="0.265625" stop-color="white" stop-opacity="0.15" />
@@ -280,11 +278,11 @@
         <stop offset="0.760417" stop-color="white" stop-opacity="0" />
       </linearGradient>
       <linearGradient
-        id="paint12_linear-311442"
-        x1="-43.3671"
-        y1="383.924"
-        x2="282.5"
-        y2="343.145"
+        id="paint12_linear-460666"
+        x1="88.6329"
+        y1="287.513"
+        x2="414.5"
+        y2="246.735"
         gradientUnits="userSpaceOnUse"
       >
         <stop stop-color="white" stop-opacity="0" />
@@ -292,33 +290,33 @@
         <stop offset="0.572577" stop-color="white" stop-opacity="0.15" />
       </linearGradient>
       <linearGradient
-        id="paint13_linear-375901"
-        x1="-25.9854"
-        y1="451.573"
-        x2="299.046"
-        y2="427.365"
+        id="paint13_linear-759490"
+        x1="106.015"
+        y1="355.162"
+        x2="431.046"
+        y2="330.954"
         gradientUnits="userSpaceOnUse"
       >
         <stop stop-color="white" stop-opacity="0" />
         <stop offset="0.979792" stop-color="white" />
       </linearGradient>
       <linearGradient
-        id="paint14_linear-502254"
-        x1="-42.7546"
-        y1="356.452"
-        x2="275.218"
-        y2="311.995"
+        id="paint14_linear-035509"
+        x1="89.2454"
+        y1="260.042"
+        x2="407.218"
+        y2="215.584"
         gradientUnits="userSpaceOnUse"
       >
         <stop stop-color="white" stop-opacity="0" />
         <stop offset="0.979792" stop-color="white" />
       </linearGradient>
       <linearGradient
-        id="paint15_linear-965977"
-        x1="-39.0806"
-        y1="400.141"
-        x2="286.755"
-        y2="362.557"
+        id="paint15_linear-197092"
+        x1="92.9194"
+        y1="303.73"
+        x2="418.755"
+        y2="266.145"
         gradientUnits="userSpaceOnUse"
       >
         <stop offset="0.448233" stop-color="white" stop-opacity="0.15" />
@@ -326,22 +324,22 @@
         <stop offset="1" stop-color="white" stop-opacity="0" />
       </linearGradient>
       <linearGradient
-        id="paint16_linear-702525"
-        x1="-34.7146"
-        y1="417.284"
-        x2="291.006"
-        y2="383.424"
+        id="paint16_linear-040406"
+        x1="97.2854"
+        y1="320.873"
+        x2="423.006"
+        y2="287.013"
         gradientUnits="userSpaceOnUse"
       >
         <stop stop-color="white" stop-opacity="0" />
         <stop offset="0.979792" stop-color="white" />
       </linearGradient>
       <linearGradient
-        id="paint17_linear-200274"
-        x1="-30.8357"
-        y1="432.524"
-        x2="290.643"
-        y2="395.573"
+        id="paint17_linear-589295"
+        x1="101.164"
+        y1="336.113"
+        x2="422.643"
+        y2="299.163"
         gradientUnits="userSpaceOnUse"
       >
         <stop offset="0.265625" stop-color="white" stop-opacity="0.15" />
@@ -349,35 +347,35 @@
         <stop offset="0.760417" stop-color="white" stop-opacity="0" />
       </linearGradient>
       <radialGradient
-        id="paint18_radial-636334"
+        id="paint18_radial-113645"
         cx="0"
         cy="0"
         r="1"
         gradientUnits="userSpaceOnUse"
-        gradientTransform="translate(208.05 818.625) rotate(108.635) scale(323.325 280.691)"
+        gradientTransform="translate(340.05 722.214) rotate(108.635) scale(323.325 280.691)"
       >
         <stop stop-color="#6E027A" />
         <stop offset="0.557292" stop-color="#070131" />
         <stop offset="0.953125" />
       </radialGradient>
       <radialGradient
-        id="paint19_radial-526393"
+        id="paint19_radial-866689"
         cx="0"
         cy="0"
         r="1"
         gradientUnits="userSpaceOnUse"
-        gradientTransform="translate(125.4 1066.58) rotate(-71.3925) scale(299.216)"
+        gradientTransform="translate(257.4 970.164) rotate(-71.3925) scale(299.216)"
       >
         <stop offset="0.609375" stop-color="#3B2AB7" stop-opacity="0" />
         <stop offset="1" stop-color="#EB8727" />
       </radialGradient>
       <radialGradient
-        id="paint20_radial-578017"
+        id="paint20_radial-421838"
         cx="0"
         cy="0"
         r="1"
         gradientUnits="userSpaceOnUse"
-        gradientTransform="translate(307.5 546.5) rotate(90) scale(262.5)"
+        gradientTransform="translate(439.5 450.089) rotate(90) scale(262.5)"
       >
         <stop offset="0.270531" stop-color="white" />
         <stop offset="0.4375" stop-color="#FFB966" stop-opacity="0.94" />
@@ -385,12 +383,12 @@
         <stop offset="1" stop-color="#320B93" stop-opacity="0" />
       </radialGradient>
       <radialGradient
-        id="paint21_radial-629663"
+        id="paint21_radial-356610"
         cx="0"
         cy="0"
         r="1"
         gradientUnits="userSpaceOnUse"
-        gradientTransform="translate(23.0553 267.559) rotate(-6.16593) scale(464.021 368.932)"
+        gradientTransform="translate(926.026 133.848) rotate(150.098) scale(464.021 368.932)"
       >
         <stop offset="0.0281821" stop-color="#570A7B" />
         <stop offset="0.540503" stop-color="#111443" />
@@ -398,11 +396,11 @@
         <stop offset="1" stop-color="#D65823" />
       </radialGradient>
       <linearGradient
-        id="paint22_linear-340823"
-        x1="484"
-        y1="242"
-        x2="242"
-        y2="242"
+        id="paint22_linear-959748"
+        x1="538.386"
+        y1="384.564"
+        x2="734"
+        y2="242.089"
         gradientUnits="userSpaceOnUse"
       >
         <stop offset="0.533058" stop-opacity="0" />
