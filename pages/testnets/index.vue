@@ -49,11 +49,11 @@
       </div>
     </div>
 
-    <div class="data-container">
+    <!-- <div class="data-container">
       <div class="features-graphics">
-        <!-- <graphics-interoperable-planets /> -->
+        <graphics-interoperable-planets />
       </div>
-    </div>
+    </div> -->
 
     <section-testnets />
     <bug-bounty-banner />
@@ -180,7 +180,6 @@ main
   justify-content stretch
   align-items stretch
   text-align center
-  // background url(/stars.svg)
   .section-container
     display flex
     align-items stretch
@@ -197,7 +196,7 @@ main
 
 .intro-text
   text-align left
-  margin-top var(--spacing-11)
+  // margin-top var(--spacing-11)
   display grid
   grid-template-columns repeat(12, 1fr)
   gap 0 var(--spacing-7)
@@ -243,11 +242,8 @@ main
       .content
         padding-bottom 20%
 
-@media screen and (max-width: 576px)
-  .section-hero
-    min-height 32rem
-    max-height 42rem
-    margin-bottom var(--spacing-8)
+  .testnet-lists
+    grid-template-columns repeat(1, 1fr)
 
 @media screen and (max-width: 414px)
   main
@@ -256,4 +252,8 @@ main
 @media screen and (max-width: 375px)
   .section-container .container
     gap unset
+
+@media $breakpoint-xsmall-only
+  .intro-text
+    display block
 </style>
