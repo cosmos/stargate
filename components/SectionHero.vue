@@ -49,9 +49,9 @@ export default {}
 
 .section-hero
   position relative
-  // height 100vh
-  // min-height 52rem
-  // max-height 72rem
+  height 100vh
+  min-height 52rem
+  max-height 72rem
   margin-bottom var(--spacing-10)
   display flex
   justify-content stretch
@@ -95,7 +95,7 @@ export default {}
 
   .hero-graphics
     position absolute
-    top 0%
+    top -10%
     left 0
     bottom -100%
     width 100%
