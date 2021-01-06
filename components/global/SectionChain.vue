@@ -81,16 +81,21 @@ export default {
     position relative
 
 .section-graphics
-  grid-column 7 / span 6
+  grid-column 7/span 8
   position relative
   &__canvas
     position absolute
-    width 130%
-    margin-left -55%
+    width 140%
+    margin-left -75%
     margin-top 90%
     transform translate(-50%, -50%)
 
 @media screen and (max-width: 767px)
-  .list
-    display block
+  // .list
+  //   display block
+
+  .list__top,
+  .list__title,
+  .list__desc
+    grid-column 1/span 12
 </style>
