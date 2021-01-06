@@ -1,6 +1,6 @@
 <template>
   <div class="section">
-    <div class="tm-section-container section-container">
+    <div class="section-container">
       <div class="container list">
         <div class="section-graphics">
           <graphics-testnet class="section-graphics__canvas" />
@@ -49,6 +49,9 @@ export default {
 /deep/
   .section
     overflow initial
+
+.section
+  overflow visible
 
 .list
   margin-top var(--spacing-7)

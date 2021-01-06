@@ -45,7 +45,6 @@
 </template>
 
 <style lang="stylus" scoped>
-
 .section
   overflow visible
 
