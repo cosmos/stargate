@@ -129,8 +129,9 @@ export default {
     grid-column 2 / span 11
     color var(--gray-800)
   .section-header
-    grid-column 2 / span 11
+    grid-column 1 / span 11
     margin-top var(--spacing-8)
+    color var(--white)
   .articles-item
     grid-column 1 / span 12
     display block
@@ -171,7 +172,7 @@ export default {
     .container
       gap var(--spacing-8) var(--spacing-7)
     .section-header
-      grid-column 2 / span 12
+      grid-column 2 / span 11
     .articles-item
       grid-column span 4
 </style>

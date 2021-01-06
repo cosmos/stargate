@@ -46,8 +46,9 @@ export default {}
   padding-top 0
   padding-bottom 0
   .section-header
-    grid-column 2 / span 12
+    grid-column 1 / span 12
     margin-bottom var(--spacing-9)
+    color var(--white)
   .frame
     background-color rgb(22, 25, 49)
     border-radius $border-radius-3
@@ -81,7 +82,6 @@ export default {}
       .frame
         grid-column 1 / span 12
 
-
 @media $breakpoint-large
   .section-header
     grid-column 2 / span 12
@@ -99,8 +99,16 @@ export default {}
           align-self flex-end
           margin-top auto
 
+@media $breakpoint-medium
+  .section-videos
+    .section-header
+      grid-column 2 / span 12
+
 @media $breakpoint-xsmall-only
   .section-videos
     .container .text
       margin-top var(--spacing-6)
+
+    .section-header
+      grid-column 1 / span 12
 </style>
