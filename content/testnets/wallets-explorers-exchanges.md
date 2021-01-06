@@ -8,7 +8,7 @@ desc: A persistent non-adversarial testnet that replicates a Stargate-enabled Co
 slug: wallets-explorers-exchanges
 explorers:
   - name: Mintscan
-    url: https://testnet.mintscan.io/stargate
+    url: https://testnet.mintscan.io/stargate/validators
 ---
 
 <!-- ## SAMUEL L. IPSUM
