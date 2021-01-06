@@ -18,7 +18,7 @@
         <div class="list__title tm-rf6 tm-bold tm-lh-title">
           {{ title }}
         </div>
-        <div class="list__desc tm-rf2 tm-lh-copy">
+        <div class="list__desc tm-rf2 tm-lh-copy tm-measure-narrower">
           {{ desc }}
         </div>
       </div>
@@ -65,16 +65,19 @@ export default {
       color var(--gray-600)
       position relative
 
+    &__chain-id
+      color var(--gray-900)
+
   &__title
     margin-top var(--spacing-8)
-    color var(--gray-800)
+    color var(--white)
     grid-column 4/ span 9
     position relative
 
   &__desc
     margin-top var(--spacing-8)
     grid-column 5/ span 9
-    color var(--gray-600)
+    color var(--gray-800)
     position relative
 
 .section-graphics

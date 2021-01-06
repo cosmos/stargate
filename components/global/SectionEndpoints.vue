@@ -17,7 +17,7 @@
         <div class="left__title tm-rf3 tm-bold tm-lh-title">Endpoints</div>
       </div>
       <div class="list">
-        <div class="list__title tm-measure tm-rf1 tm-lh-copy">
+        <div class="list__paragraph tm-measure tm-rf1 tm-lh-copy">
           Use the public endpoints below to interact with the
           {{ id }} testnet.
         </div>
@@ -96,6 +96,10 @@ export default {
 
   &__title
     margin-bottom var(--spacing-8)
+    color var(--white)
+
+  &__paragraph
+    margin-bottom var(--spacing-8)
     color var(--gray-800)
 
   &__item + &__item
@@ -104,6 +108,7 @@ export default {
   &__item
     &__title
       margin-bottom var(--spacing-5)
+      color var(--white)
 
     &__paragraph p
       color var(--gray-600)
