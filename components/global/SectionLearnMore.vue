@@ -45,6 +45,10 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+/deep/
+  .container
+    max-width unset
+
 .left
   grid-column 1 / span 4
   &__title

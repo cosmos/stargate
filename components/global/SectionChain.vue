@@ -91,9 +91,6 @@ export default {
     transform translate(-50%, -50%)
 
 @media screen and (max-width: 767px)
-  // .list
-  //   display block
-
   .list__top,
   .list__title,
   .list__desc
