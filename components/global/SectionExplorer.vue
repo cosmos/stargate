@@ -73,7 +73,7 @@ export default {
     &__icon
       display flex
       justify-content flex-end
-      color var(--gray-600)
+      color var(--gray-50)
       transition color .1s ease-out, transform .25s ease-out
 
     &__title
