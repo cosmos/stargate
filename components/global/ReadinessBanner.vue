@@ -1,6 +1,6 @@
 <template>
   <div class="section">
-    <div class="tm-section-container section-container">
+    <div class="section-container">
       <div class="section-banner">
         <a
           href="https://airtable.com/shrEr1bQD6COG9WH0"

@@ -1,6 +1,6 @@
 <template>
   <div class="section">
-    <div class="tm-section-container section-container">
+    <div class="section-container">
       <div class="container">
         <div class="graphics">
           <div class="graphics__back"></div>

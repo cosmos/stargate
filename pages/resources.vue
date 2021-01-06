@@ -1,10 +1,10 @@
 <template>
   <main>
-    <div>
+    <div class="tm-section-container">
       <section-articles />
       <section-videos />
 
-      <div class="tm-section-container section-container">
+      <div class="section-container">
         <div class="container">
           <div class="section-status">
             <div class="section-status__title tm-rf3 tm-bold tm-lh-title">

@@ -1,5 +1,5 @@
 <template>
-  <div class="tm-section-container section-container">
+  <div class="section-container">
     <div class="section-explorer">
       <!-- TODO: add section-graphics -->
       <div class="headings">

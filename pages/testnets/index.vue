@@ -1,7 +1,7 @@
 /* eslint-disable */
 <template>
-  <main>
-    <div class="tm-section-container section-container">
+  <main class="tm-section-container">
+    <div class="section-container">
       <div class="container">
         <div class="intro-text">
           <div class="section-title tm-rf7 tm-bold tm-lh-title">

@@ -1,5 +1,5 @@
 <template>
-  <div class="tm-section-container section-container">
+  <div class="section section-container">
     <div class="container">
       <NuxtLink to="/testnets" class="top">
         <div class="top__left">
