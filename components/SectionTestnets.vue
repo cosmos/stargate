@@ -64,7 +64,6 @@ export default {}
       text-align start
       color var(--primary-900)
   .section-tabs
-    margin-top var(--spacing-10)
     grid-column 6 / span 7
     &__text
       &__heading
