@@ -60,6 +60,7 @@ export default {
     margin-top -10%
     width 100%
     transform translate(-50%, -50%)
+    z-index -1
 
 .headings
   &__title

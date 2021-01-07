@@ -81,7 +81,7 @@ export default {
     position relative
 
 .section-graphics
-  grid-column 7/span 8
+  grid-column 7/span 5
   position relative
   &__canvas
     position absolute
