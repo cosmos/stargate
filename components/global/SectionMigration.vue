@@ -82,6 +82,7 @@ export default {
   display grid
   grid-template-columns repeat(1, 1fr)
   gap var(--spacing-7)
+  position relative
 
 .cards__item
   margin-top var(--spacing-10)
