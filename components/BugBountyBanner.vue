@@ -1,43 +1,41 @@
 <template>
-  <div class="section">
-    <div class="section-container">
-      <div class="container">
-        <div class="graphics">
-          <div class="graphics__back"></div>
-          <graphics-bug-bounty class="graphics__front" />
+  <div class="section section-container tm-section-container">
+    <div class="container">
+      <div class="graphics">
+        <div class="graphics__back"></div>
+        <graphics-bug-bounty class="graphics__front" />
+      </div>
+      <div class="text">
+        <div
+          class="text__overline tm-rf-1 tm-rf0-m-up tm-medium tm-lh-title tm-overline"
+        >
+          Calling all contributors
         </div>
-        <div class="text">
-          <div
-            class="text__overline tm-rf-1 tm-rf0-m-up tm-medium tm-lh-title tm-overline"
+        <div class="text__title tm-rf5 tm-bold tm-lh-title">
+          <span class="text__title__highlight">Bug</span> Bounty Program
+        </div>
+        <div class="text__subtitle tm-rf1 tm-lh-copy tm-measure">
+          We depend on the community to assist us with testing so that we can
+          increase confidence in the Stargate software releases.
+        </div>
+        <div class="text__btn-container">
+          <tm-button
+            to-link="external"
+            href="https://hackerone.com/tendermint?type=team"
+            background-color="linear-gradient(89.41deg, #99DAFF -0.22%, #FFD1FD 99.78%)"
+            color="var(--gray-50)"
+            size="l"
+            >Submit bug<span class="icon__right">↗</span></tm-button
           >
-            Calling all contributors
-          </div>
-          <div class="text__title tm-rf5 tm-bold tm-lh-title">
-            <span class="text__title__highlight">Bug</span> Bounty Program
-          </div>
-          <div class="text__subtitle tm-rf1 tm-lh-copy tm-measure">
-            We depend on the community to assist us with testing so that we can
-            increase confidence in the Stargate software releases.
-          </div>
-          <div class="text__btn-container">
-            <tm-button
-              to-link="external"
-              href="https://hackerone.com/tendermint?type=team"
-              background-color="linear-gradient(89.41deg, #99DAFF -0.22%, #FFD1FD 99.78%)"
-              color="var(--gray-50)"
-              size="l"
-              >Submit bug<span class="icon__right">↗</span></tm-button
-            >
-            <tm-button
-              to-link="external"
-              href="https://blog.cosmos.network/cosmos-stargate-release-bug-bounty-program-1662af59c92d"
-              variant="text"
-              size="l"
-              color="var(--link)"
-              glow
-              >Learn more<span class="icon__right">↗</span></tm-button
-            >
-          </div>
+          <tm-button
+            to-link="external"
+            href="https://blog.cosmos.network/cosmos-stargate-release-bug-bounty-program-1662af59c92d"
+            variant="text"
+            size="l"
+            color="var(--link)"
+            glow
+            >Learn more<span class="icon__right">↗</span></tm-button
+          >
         </div>
       </div>
     </div>

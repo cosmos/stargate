@@ -1,7 +1,7 @@
 /* eslint-disable */
 <template>
-  <main class="tm-section-container">
-    <div class="section-container">
+  <main>
+    <div class="tm-section-container section-container">
       <div class="container">
         <div class="intro-text">
           <div class="section-title tm-rf7 tm-bold tm-lh-title">
@@ -153,8 +153,8 @@ main
   grid-column span 12
   position relative
   z-index -1
-  margin-top calc(-1 * var(--spacing-12))
-  margin-bottom calc(-1 * var(--spacing-12))
+  margin calc(-1 * var(--spacing-12)) auto
+  max-width: $max-width['11']
   display flex
   justify-content flex-end
   .inner
@@ -162,6 +162,7 @@ main
     padding-bottom var(--spacing-11)
     padding-right 10%
     background radial-gradient(40% 56% at 44% 50%, #4251fa 16%, #320b93 39%, #030419 79%, rgba(0,0,0,0) 100%)
+    min-width 36rem
     max-width 170rem
     flex 1 0 180%
   .graphics

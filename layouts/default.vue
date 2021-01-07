@@ -37,15 +37,13 @@ export default {
 
 .section-container
   position relative
-  max-width 96rem
+  max-width: $max-width['11']
   margin 0 auto
 
 .container
   display grid
   grid-template-columns repeat(12, 1fr)
   gap 0 var(--spacing-7)
-  max-width var(--container-mw-lg)
-  margin 0 auto
 
 .section
   overflow hidden

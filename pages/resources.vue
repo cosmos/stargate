@@ -1,62 +1,59 @@
 <template>
   <main>
-    <div class="tm-section-container">
+    <div class="tm-section-container section-container">
       <section-articles />
       <section-videos />
-
-      <div class="section-container">
-        <div class="container">
-          <div class="section-status">
-            <div class="section-status__title tm-rf3 tm-bold tm-lh-title">
-              Status updates
-            </div>
+      <div class="container">
+        <div class="section-status">
+          <div class="section-status__title tm-rf3 tm-bold tm-lh-title">
+            Status updates
           </div>
-          <div class="section-list">
-            <a
-              v-for="item in currentUpdates"
-              :key="updatesList[item - 1].title"
-              :href="updatesList[item - 1].url"
-              target="_blank"
-              rel="noreferrer noopener"
-              class="section-list__item"
+        </div>
+        <div class="section-list">
+          <a
+            v-for="item in currentUpdates"
+            :key="updatesList[item - 1].title"
+            :href="updatesList[item - 1].url"
+            target="_blank"
+            rel="noreferrer noopener"
+            class="section-list__item"
+          >
+            <div
+              class="section-list__item__title tm-rf0 tm-rf1-m-up tm-bold tm-lh-title"
             >
-              <div
-                class="section-list__item__title tm-rf0 tm-rf1-m-up tm-bold tm-lh-title"
-              >
-                {{ updatesList[item - 1].title }}
-              </div>
-              <div
-                class="section-list__item__date tm-rf-1 tm-rf1-m-up tm-lh-title"
-              >
-                {{ updatesList[item - 1].date }} &#8594;
-              </div>
-            </a>
-            <div class="section-list__bottom">
-              <div
-                v-if="currentUpdates != updatesList.length"
-                class="section-list__bottom__cta tm-rf1 tm-lh-copy tm-medium"
-                role="button"
-                @click="currentUpdates = updatesList.length"
-              >
-                View all updates
-              </div>
-              <div
-                v-else
-                class="section-list__bottom__cta tm-rf1 tm-lh-copy tm-medium"
-                role="button"
-                @click="currentUpdates = 3"
-              >
-                View less
-              </div>
+              {{ updatesList[item - 1].title }}
+            </div>
+            <div
+              class="section-list__item__date tm-rf-1 tm-rf1-m-up tm-lh-title"
+            >
+              {{ updatesList[item - 1].date }} &#8594;
+            </div>
+          </a>
+          <div class="section-list__bottom">
+            <div
+              v-if="currentUpdates != updatesList.length"
+              class="section-list__bottom__cta tm-rf1 tm-lh-copy tm-medium"
+              role="button"
+              @click="currentUpdates = updatesList.length"
+            >
+              View all updates
+            </div>
+            <div
+              v-else
+              class="section-list__bottom__cta tm-rf1 tm-lh-copy tm-medium"
+              role="button"
+              @click="currentUpdates = 3"
+            >
+              View less
             </div>
           </div>
         </div>
       </div>
-
-      <bug-bounty-banner />
-      <section-community />
-      <section-form />
     </div>
+
+    <bug-bounty-banner />
+    <section-community />
+    <section-form />
   </main>
 </template>
 

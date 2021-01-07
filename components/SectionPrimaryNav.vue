@@ -71,10 +71,6 @@ export default {}
 
 <style lang="stylus" scoped>
 
-.nav-inner
-  margin 0 auto
-  max-width var(--container-mw-lg)
-
 .nav
   /* if no secondary nav, create similar space */
   &:first-child:last-child
