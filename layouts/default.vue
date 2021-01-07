@@ -24,9 +24,10 @@ export default {
   clip rect(1px, 1px, 1px, 1px)
 
 // https://nuxtjs.org/examples/transitions
-.page-enter-active,
+.page-enter-active
+  transition opacity 0.25s ease-out
 .page-leave-active
-  transition opacity 0.2s ease-out
+  transition opacity 0.25s ease-out
 
 .page-enter,
 .page-leave-to
