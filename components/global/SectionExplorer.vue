@@ -1,7 +1,9 @@
 <template>
   <div class="section-container">
     <div class="section-explorer">
-      <!-- TODO: add section-graphics -->
+      <div class="section-graphics">
+        <graphics-explore class="section-graphics__canvas" />
+      </div>
       <div class="headings">
         <div class="headings__title tm-rf6 tm-bold tm-lh-title">
           Explore the testnet
@@ -45,19 +47,36 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+.section-explorer
+  position relative
+  margin-top var(--spacing-12)
+
+.section-graphics
+  grid-column 7/span 8
+  position relative
+  &__canvas
+    position absolute
+    margin-left 50%
+    margin-top -10%
+    width 100%
+    transform translate(-50%, -50%)
+
 .headings
   &__title
     color var(--white)
+    position relative
 
   &__subtitle
     margin-top var(--spacing-7)
     color var(--gray-800)
+    position relative
 
 .cards-container
   margin-top var(--spacing-9)
   display grid
   grid-template-columns repeat(1, 1fr)
   gap var(--spacing-7)
+  position relative
 
   &__item
     background linear-gradient(89.41deg, #99DAFF -0.22%, #FFD1FD 99.78%)
