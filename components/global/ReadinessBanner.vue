@@ -1,6 +1,6 @@
 <template>
   <div class="section">
-    <div class="section-container">
+    <div class="tm-section-container section-container">
       <div class="section-banner">
         <a
           href="https://airtable.com/shrEr1bQD6COG9WH0"
@@ -50,11 +50,12 @@ export default {
   align-items center
   justify-content space-between
   min-height 16.8125rem
+  color var(--white)
 
 .right
   text-align right
 
-@media screen and (max-width: 1200px)
+@media $breakpoint-xl-max
   .content
     grid-template-columns auto
     justify-content center
@@ -63,7 +64,7 @@ export default {
     justify-content flex-start
     margin-top 2rem
 
-@media screen and (max-width: 767px)
+@media $breakpoint-medium-max
   .content
     padding 2rem
 </style>
