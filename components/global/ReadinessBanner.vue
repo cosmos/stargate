@@ -41,7 +41,6 @@ export default {
   background-position center center
   border-radius $border-radius-4
   hover-raise(-3px)
-  max-width var(--container-mw-lg)
   center()
 
 .content
@@ -59,6 +58,7 @@ export default {
 @media screen and (max-width: 1200px)
   .content
     grid-template-columns auto
+    justify-content center
 
   .right
     justify-content flex-start
