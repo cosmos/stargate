@@ -26,7 +26,7 @@ export default {
 // https://nuxtjs.org/examples/transitions
 .page-enter-active,
 .page-leave-active
-  transition opacity 0.5s
+  transition opacity 0.2s ease-out
 
 .page-enter,
 .page-leave-to

@@ -71,6 +71,10 @@ export default {}
 
 <style lang="stylus" scoped>
 
+.nav-inner
+  position relative
+  z-index 2
+
 .nav
   /* if no secondary nav, create similar space */
   &:first-child:last-child
