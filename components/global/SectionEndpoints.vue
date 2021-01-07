@@ -1,8 +1,8 @@
 <template>
-  <div class="section-container">
+  <div class="tm-section-container section-container">
     <div class="container">
       <div class="list section-join">
-        <div class="list__title tm-rf3 tm-bold tm-lh-title tm-measure">
+        <div class="list__title tm-rf4 tm-bold tm-lh-title tm-measure">
           Joining the testnet
         </div>
 
@@ -30,7 +30,7 @@
             :href="`http://${endpoints[code][0]}`"
             target="_blank"
             rel="noreferrer noopener"
-            class="list__item__url tm-rf0 tm-lh-copy tm-code"
+            class="list__item__url tm-rf1 tm-lh-title tm-code"
             >{{ endpoints[code][0] }}</a
           >
         </div>
@@ -43,7 +43,7 @@
             :href="`http://${endpoints[code][1]}`"
             target="_blank"
             rel="noreferrer noopener"
-            class="list__item__url tm-rf0 tm-lh-copy tm-code"
+            class="list__item__url tm-rf1 tm-lh-title tm-code"
             >{{ endpoints[code][1] }}</a
           >
         </div>
@@ -100,7 +100,6 @@ export default {
 
   &__paragraph
     margin-bottom var(--spacing-8)
-    color var(--gray-800)
 
   &__item + &__item
     margin-top var(--spacing-8)
@@ -109,9 +108,6 @@ export default {
     &__title
       margin-bottom var(--spacing-5)
       color var(--white)
-
-    &__paragraph p
-      color var(--gray-600)
 
 blockquote
   padding-left var(--spacing-7)

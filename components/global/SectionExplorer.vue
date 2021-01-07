@@ -1,47 +1,45 @@
 <template>
-  <div class="section-container">
-    <div class="section-explorer">
-      <div class="section-graphics">
-        <graphics-explore-1
-          v-if="this.$route.path === '/testnets/wallets-explorers-exchanges'"
-          class="section-graphics__canvas"
-        />
-        <graphics-explore-2
-          v-if="this.$route.path === '/testnets/community'"
-          class="section-graphics__canvas"
-        />
-        <graphics-explore-3
-          v-if="this.$route.path === '/testnets/validator'"
-          class="section-graphics__canvas"
-        />
+  <div class="tm-section-container section-container section-explorer">
+    <div class="section-graphics">
+      <graphics-explore-1
+        v-if="this.$route.path === '/testnets/wallets-explorers-exchanges'"
+        class="section-graphics__canvas"
+      />
+      <graphics-explore-2
+        v-if="this.$route.path === '/testnets/community'"
+        class="section-graphics__canvas"
+      />
+      <graphics-explore-3
+        v-if="this.$route.path === '/testnets/validator'"
+        class="section-graphics__canvas"
+      />
+    </div>
+    <div class="headings">
+      <div class="headings__title tm-rf6 tm-bold tm-lh-title">
+        Explore the testnet
       </div>
-      <div class="headings">
-        <div class="headings__title tm-rf6 tm-bold tm-lh-title">
-          Explore the testnet
-        </div>
-        <div class="headings__subtitle tm-rf1 tm-lh-copy tm-measure">
-          Browse the testnet with your favorite community-run block explorers.
-        </div>
+      <div class="headings__subtitle tm-rf1 tm-lh-copy tm-measure">
+        Browse the testnet with your favorite community-run block explorers.
       </div>
-      <div class="cards-container">
-        <a
-          v-for="item in data"
-          :key="item.name"
-          :href="item.url"
-          target="_blank"
-          rel="noreferrer noopener"
-          class="cards-container__item"
+    </div>
+    <div class="cards-container">
+      <a
+        v-for="item in data"
+        :key="item.name"
+        :href="item.url"
+        target="_blank"
+        rel="noreferrer noopener"
+        class="cards-container__item"
+      >
+        <span class="cards-container__item__icon tm-rf2 tm-lh-solid"
+          >&#8599;</span
         >
-          <span class="cards-container__item__icon tm-rf2 tm-lh-solid"
-            >&#8599;</span
-          >
-          <div
-            class="cards-container__item__title tm-rf1 tm-bold tm-lh-title tm-measure-narrow"
-          >
-            {{ item.name }}
-          </div>
-        </a>
-      </div>
+        <div
+          class="cards-container__item__title tm-rf1 tm-bold tm-lh-title tm-measure-narrow"
+        >
+          {{ item.name }}
+        </div>
+      </a>
     </div>
   </div>
 </template>
@@ -58,20 +56,16 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-.section-explorer
-  position relative
-  margin-top var(--spacing-12)
 
 .section-graphics
-  grid-column 7/span 8
   position relative
   &__canvas
-    position absolute
-    margin-left 50%
-    margin-top -10%
-    width 100%
-    transform translate(-50%, -50%)
     z-index -1
+    width 120%
+    margin-left -10%
+    height auto
+    margin-top -16%
+    margin-bottom -16%
 
 .headings
   &__title

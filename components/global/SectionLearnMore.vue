@@ -1,6 +1,6 @@
 <template>
   <div class="section">
-    <div class="section-container">
+    <div class="tm-section-container section-container">
       <div class="container">
         <div class="left">
           <div class="left__title tm-rf4 tm-bold tm-lh-title">Learn more</div>

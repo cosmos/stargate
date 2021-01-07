@@ -1,14 +1,16 @@
 <template>
   <div class="section">
-    <div class="section-container">
+    <div class="tm-section-container section-container">
       <div class="cards-container">
-        <div class="cards__item__text">
+        <div class="cards__item cards__item__text">
           <div
-            class="cards__item__text__title tm-rf3 tm-bold tm-lh-title tm-measure"
+            class="cards__item__text__title tm-rf3 tm-bold tm-lh-title tm-measure-narrow"
           >
             Chat
           </div>
-          <p class="cards__item__text__paragraph tm-measure tm-rf1 tm-lh-copy">
+          <p
+            class="cards__item__text__paragraph tm-measure-narrow tm-rf1 tm-lh-copy"
+          >
             Join the <span class="tm-bold">#{{ channel }}</span> channel on the
             Cosmos Community Discord to chat with other developers.
           </p>
@@ -27,13 +29,15 @@
             {{ emojis[code] }} emoji in #join-channels
           </p>
         </div>
-        <div class="cards__item__text">
+        <div class="cards__item cards__item__text">
           <div
-            class="cards__item__text__title tm-rf3 tm-bold tm-lh-title tm-measure"
+            class="cards__item__text__title tm-rf3 tm-bold tm-lh-title tm-measure-narrow"
           >
             Migration guides
           </div>
-          <p class="cards__item__text__paragraph tm-measure tm-rf1 tm-lh-copy">
+          <p
+            class="cards__item__text__paragraph tm-measure-narrow tm-rf1 tm-lh-copy"
+          >
             Help the Cosmos ecosystem upgrade by contributing your own migration
             guides to the community.
           </p>
@@ -85,8 +89,7 @@ export default {
   position relative
 
 .cards__item
-  margin-top var(--spacing-10)
-  grid-column 6 / span 7
+  margin-top var(--spacing-9)
   &__code
     display grid
     grid-template-columns 50% 50%
@@ -112,5 +115,9 @@ export default {
 
 @media $breakpoint-xl
   .cards-container
-    grid-template-columns repeat(2, 1fr)
+    grid-template-columns repeat(12, 1fr)
+  .cards__item
+    grid-column span 5
+    &:last-child
+      grid-column 7 / span 5
 </style>

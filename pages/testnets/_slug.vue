@@ -1,10 +1,10 @@
 <template>
-  <div class="tm-section-container section-container">
+  <main class="page-container">
     <!-- content from markdown -->
     <nuxt-content :document="testnet" />
 
     <section-form />
-  </div>
+  </main>
 </template>
 
 <script>
@@ -17,4 +17,8 @@ export default {
 }
 </script>
 
-<style lang="stylus" scoped></style>
+<style lang="stylus" scoped>
+@media $breakpoint-medium-max
+  .page-container
+    overflow-x hidden
+</style>

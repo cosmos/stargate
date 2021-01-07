@@ -1,6 +1,6 @@
 <template>
   <div class="section">
-    <div class="section-container">
+    <div class="tm-section-container section-container">
       <div class="container list">
         <div class="section-graphics">
           <graphics-chain-1
@@ -95,6 +95,7 @@ export default {
   grid-column 1/span 3
   grid-row span 4
   position relative
+  z-index -1
   &__canvas
     position absolute
     width 390%
@@ -102,7 +103,7 @@ export default {
     height auto
     margin-top 10%
 
-@media screen and (max-width: 767px)
+@media $breakpoint-medium-max
   .list__top,
   .list__title,
   .list__desc
