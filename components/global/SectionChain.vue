@@ -3,7 +3,18 @@
     <div class="section-container">
       <div class="container list">
         <div class="section-graphics">
-          <graphics-testnet class="section-graphics__canvas" />
+          <graphics-chain-1
+            v-if="this.$route.path === '/testnets/wallets-explorers-exchanges'"
+            class="section-graphics__canvas"
+          />
+          <graphics-chain-2
+            v-if="this.$route.path === '/testnets/community'"
+            class="section-graphics__canvas"
+          />
+          <graphics-chain-3
+            v-if="this.$route.path === '/testnets/validator'"
+            class="section-graphics__canvas"
+          />
         </div>
         <div class="list__top tm-rf1 tm-lh-copy">
           <div
