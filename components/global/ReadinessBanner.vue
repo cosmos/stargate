@@ -57,6 +57,7 @@ export default {
 @media screen and (max-width: 1200px)
   .content
     grid-template-columns auto
+    justify-content center
 
   .right
     justify-content flex-start
