@@ -112,7 +112,7 @@ export default {
     gap var(--spacing-7)
   .section-title
     color var(--white)
-    grid-column 2 / span 9
+    grid-column 1 / span 9
     &__highlight
       background-color var(--white)
       background-image linear-gradient(90deg, #99DAFF 0%, #CCD1FF 51.56%, #E644F8 100%)
@@ -126,7 +126,7 @@ export default {
     justify-content flex-end
     flex-direction column
     grid-row 2
-    grid-column 2 / span 11
+    grid-column 1 / span 11
     color var(--gray-800)
   .section-header
     grid-column 1 / span 11
@@ -171,6 +171,10 @@ export default {
   .section-articles
     .container
       gap var(--spacing-8) var(--spacing-7)
+    .section-title
+      grid-column 2/span 9
+    .section-subtitle
+      grid-column 2/span 11
     .section-header
       grid-column 2 / span 11
     .articles-item
