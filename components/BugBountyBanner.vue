@@ -43,8 +43,6 @@
 </template>
 
 <style lang="stylus" scoped>
-.section
-  overflow visible
 
 .graphics
   $scale = 1.2
@@ -102,6 +100,10 @@
     display flex
     flex-wrap wrap
     gap var(--spacing-7)
+
+@media $breakpoint-medium-up
+  .section
+    overflow visible
 
 @media $breakpoint-medium-max
   .container
