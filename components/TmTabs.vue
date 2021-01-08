@@ -77,7 +77,7 @@ export default {
   transition color .15s ease-out, opacity .15s ease-out
   &:hover,
   &:focus
-    color #ECEDF7
+    color var(--gray-900)
   &:active
     opacity 0.7
     transition-duration 0s
@@ -87,7 +87,7 @@ export default {
   padding 1.25rem 0
   position relative
   z-index 1
-  color #ECEDF7
+  color var(--gray-900)
   line-height 126.3%
   font-weight 700
   letter-spacing -0.005em

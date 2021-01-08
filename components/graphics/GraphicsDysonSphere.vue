@@ -1,14 +1,10 @@
 <template>
   <svg viewBox="0 0 783 699" fill="none" xmlns="http://www.w3.org/2000/svg">
     <g clip-path="url(#clip0)">
-      <path
-        d="M547 471C677.339 471 783 365.563 783 235.5C783 105.437 677.339 0 547 0C416.661 0 311 105.437 311 235.5C311 365.563 416.661 471 547 471Z"
-        fill="url(#paint0_radial)"
-      />
       <g filter="url(#filter0_i)">
         <path
           d="M181.769 102.348C37.9299 185.393 -11.353 369.32 71.6926 513.159C154.738 656.998 338.664 706.281 482.504 623.235C626.343 540.19 675.626 356.263 592.58 212.424C509.535 68.5852 325.608 19.3023 181.769 102.348Z"
-          fill="url(#paint1_radial)"
+          fill="url(#paint1_radial_123)"
         />
       </g>
       <mask
@@ -80,7 +76,7 @@
         <feBlend mode="normal" in2="shape" result="effect1_innerShadow" />
       </filter>
       <radialGradient
-        id="paint0_radial"
+        id="paint0_radial_123"
         cx="0"
         cy="0"
         r="1"
@@ -95,8 +91,9 @@
         <stop offset="0.790195" stop-color="#DE13FF" stop-opacity="0.34" />
         <stop offset="1" stop-color="#AC00BF" stop-opacity="0" />
       </radialGradient>
+      <!-- added _123 to avoid duplicating id with sun.vue -->
       <radialGradient
-        id="paint1_radial"
+        id="paint1_radial_123"
         cx="0"
         cy="0"
         r="1"

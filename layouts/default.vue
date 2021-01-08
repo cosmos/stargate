@@ -1,20 +1,16 @@
 <template>
   <div>
-    <!-- <tm-top-banner /> -->
+    <div class="tm-section-container section-container nav-container">
+      <section-primary-nav />
+    </div>
     <nuxt />
     <tm-footer />
   </div>
 </template>
 
 <script>
-import TmFooter from '~/components/TmFooter.vue'
-// import TmTopBanner from '~/components/TmTopBanner.vue'
-
 export default {
-  components: {
-    TmFooter,
-    // TmTopBanner,
-  },
+  components: {},
 }
 </script>
 
@@ -27,25 +23,37 @@ export default {
   overflow hidden
   clip rect(1px, 1px, 1px, 1px)
 
+// https://nuxtjs.org/examples/transitions
+.page-enter-active
+  transition opacity 0.25s ease-out
+.page-leave-active
+  transition opacity 0.25s ease-out
+
+.page-enter,
+.page-leave-to
+  opacity 0
+
+.nav-container
+  padding-top var(--spacing-7)
+
 .section-container
   position relative
-  max-width 96rem
+  max-width: $max-width['11']
   margin 0 auto
-  .container
-    display grid
-    grid-template-columns repeat(12, 1fr)
-    gap 0 var(--spacing-7)
-    max-width var(--container-mw-lg)
-    margin 0 auto
+
+.container
+  display grid
+  grid-template-columns repeat(12, 1fr)
+  gap 0 var(--spacing-7)
 
 .section
   overflow hidden
   position relative
-  padding-top 6rem
-  padding-bottom 6rem
+  padding-top var(--spacing-10)
+  padding-bottom var(--spacing-10)
 
 .section-header
-  padding-top 1rem
+  padding-top var(--spacing-5)
   min-height 3rem
   color var(--gray-600)
   border-top 1px solid #282B53
@@ -53,27 +61,7 @@ export default {
 .section-title
   color var(--white)
 
-@media screen and (max-width: 1279px)
-  .section
-    padding-top 6rem
-    padding-bottom 6rem
-
-@media screen and (max-width: 1024px)
-  .section
-    padding-top 4rem
-    padding-bottom 4rem
+@media $breakpoint-medium-max
   .section-container
-    .container
-      gap 0 1.5rem
-
-@media screen and (max-width: 767px)
-  .section-container
-    padding-top 1.5rem
-    .container
-      gap 0 1rem
-
-@media screen and (min-width: 1920px)
-  .section
-    padding-top 8rem
-    padding-bottom 8rem
+    padding-top var(--spacing-6)
 </style>

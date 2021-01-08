@@ -53,11 +53,11 @@
           fill-rule="evenodd"
           clip-rule="evenodd"
           d="M247.406 491.388C382.378 491.388 491.795 381.972 491.795 247C491.795 112.028 382.378 2.61151 247.406 2.61151C112.434 2.61151 3.01776 112.028 3.01776 247C3.01776 381.972 112.434 491.388 247.406 491.388ZM247.406 494C383.821 494 494.406 383.414 494.406 247C494.406 110.586 383.821 0 247.406 0C110.992 0 0.40625 110.586 0.40625 247C0.40625 383.414 110.992 494 247.406 494Z"
-          fill="url(#paint0_radial)"
+          fill="url(#paint0_radial-consortium)"
         />
         <defs>
           <radialGradient
-            id="paint0_radial"
+            id="paint0_radial-consortium"
             cx="0"
             cy="0"
             r="1"
@@ -74,7 +74,7 @@
         </defs>
       </svg>
       <img
-        alt="Colourful plumbobs around a blue planet with nine hexagonss"
+        alt="Colourful plumbobs around a blue planet with nine hexagons"
         src="~/assets/illustrations/plumbobs.svg"
         class="plumbobs"
       />
@@ -168,10 +168,10 @@
       animation-delay ($duration/6 * (hex - 1))
 
 @keyframes hex-flash
-    from
-      opacity 0.2
-    to
-      opacity 1
+  from
+    opacity 0.2
+  to
+    opacity 1
 
 .orbit__outer__1
   width 71%

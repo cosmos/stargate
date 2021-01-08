@@ -14,7 +14,6 @@ html
   text-rendering optimizeLegibility
   background-color var(--black)
   color var(--gray-800)
-  scroll-behavior smooth
 
 @supports (font-variation-settings: normal)
   html
@@ -40,10 +39,10 @@ a
   text-decoration none
   outline-color rgba(64, 179, 255, 0.92)
   cursor pointer
-  transition all .1s ease-out
+  transition all .25s $ease-out
   &:hover,
   &:focus
     color var(--white)
   &:active
-    opacity 0.7
+    opacity 0.6
     transition-duration 0s

@@ -10,7 +10,7 @@ export default {
    */
   head: {
     htmlAttrs: {
-      lang: 'en'
+      lang: 'en',
     },
     title: 'Stargate | Cosmos Network',
     meta: [
@@ -130,11 +130,7 @@ export default {
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
    */
-  plugins: [
-    '~/plugins/ga.client.js',
-    '~/plugins/vue-scrollto.client.js',
-    '~/plugins/vue-observe-visibility.client.js',
-  ],
+  plugins: ['~/plugins/ga.client.js', '~/plugins/vue-scrollto.client.js'],
   env: {
     GITHUB_PERSONAL_TOKEN: process.env.GITHUB_PERSONAL_TOKEN,
   },
@@ -166,7 +162,7 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: [],
+  modules: ['@nuxt/content'],
   /*
    ** Build configuration
    ** See https://nuxtjs.org/api/configuration-build/
