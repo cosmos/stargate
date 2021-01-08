@@ -43,6 +43,8 @@
 </template>
 
 <style lang="stylus" scoped>
+.section
+  overflow visible
 
 .graphics
   $scale = 1.2
