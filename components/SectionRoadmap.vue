@@ -73,31 +73,6 @@
             </div>
           </div>
         </a>
-        <div class="section-proposal">
-          <div class="section-proposal__title tm-rf3 tm-bold tm-lh-title">
-            Proposals
-          </div>
-        </div>
-        <div class="proposal-card">
-          <a
-            v-for="item in proposals"
-            :key="item.title"
-            :href="item.url"
-            target="_blank"
-            rel="noreferrer noopener"
-            class="proposal-item"
-          >
-            <span class="proposal-item__icon tm-rf2 tm-lh-solid">&#8599;</span>
-            <div
-              class="proposal-item__title tm-rf1 tm-bold tm-lh-title tm-measure-narrow"
-            >
-              {{ item.title }}
-            </div>
-            <div class="proposal-item__date tm-rf0 tm-lh-copy tm-measure">
-              {{ item.date }}
-            </div>
-          </a>
-        </div>
       </div>
     </div>
   </div>
@@ -128,14 +103,6 @@ export default {
         core: 'linear-gradient(95.47deg, #086108 0%, #018A01 100%)',
         ibc: 'linear-gradient(95.47deg, #121435 0%, #282B53 100%)',
       },
-      proposals: [
-        {
-          url:
-            'https://github.com/iqlusioninc/governance/tree/zaki-stargate-upgrade-proposal/proposals/2020-11-stargate-upgrade',
-          title: 'Cosmos Stargate Hub Upgrade Proposal 2',
-          date: 'Draft',
-        },
-      ],
     }
   },
   computed: {
