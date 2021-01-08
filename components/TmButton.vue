@@ -363,5 +363,5 @@ export default {
     >>> .icon__right
       transform translateX(0.25rem)
     >>> .icon__left
-      transform rotate(5deg) scale(1.05)
+      transform translateX(-0.25rem)
 </style>

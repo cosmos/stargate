@@ -1,37 +1,106 @@
 <template>
   <footer class="footer">
-    <div class="tm-section-container">
-      <nav class="nav">
-        <a
-          class="nav__item tm-rf0 tm-lh-title"
-          href="https://docs.cosmos.network"
-          target="blank_"
-          rel="noreferrer noopener"
-          >Cosmos SDK</a
-        >
-        <a
-          class="nav__item tm-rf0 tm-lh-title"
-          href="https://hub.cosmos.network"
-          target="blank_"
-          rel="noreferrer noopener"
-          >Cosmos Hub</a
-        >
-        <a
-          class="nav__item tm-rf0 tm-lh-title"
-          href="https://docs.tendermint.com"
-          target="blank_"
-          rel="noreferrer noopener"
-          >Tendermint Core</a
-        >
-        <a
-          class="nav__item tm-rf0 tm-lh-title"
-          href="https://github.com/cosmos/ics"
-          target="blank_"
-          rel="noreferrer noopener"
-          >Interchain Standards</a
-        >
+    <div class="tm-section-container section-container">
+      <nav class="nav container" role="navigation">
+        <ul class="nav__item">
+          <li
+            class="nav__item__title tm-rf-1 tm-medium tm-lh-title tm-overline"
+          >
+            Stargate
+          </li>
+          <li class="nav__item__item">
+            <NuxtLink to="/" class="tm-rf0 tm-lh-title">Overview</NuxtLink>
+          </li>
+          <li class="nav__item__item">
+            <NuxtLink to="/testnets" class="tm-rf0 tm-lh-title"
+              >Testnets</NuxtLink
+            >
+          </li>
+          <li class="nav__item__item">
+            <NuxtLink to="/resources" class="tm-rf0 tm-lh-title"
+              >Resources</NuxtLink
+            >
+          </li>
+        </ul>
+        <ul class="nav__item">
+          <li
+            class="nav__item__title tm-rf-1 tm-medium tm-lh-title tm-overline"
+          >
+            Ecosystem
+          </li>
+          <li class="nav__item__item">
+            <a
+              class="tm-rf0 tm-lh-title"
+              href="https://docs.cosmos.network"
+              target="blank_"
+              rel="noreferrer noopener"
+              >Cosmos SDK</a
+            >
+          </li>
+          <li class="nav__item__item">
+            <a
+              class="tm-rf0 tm-lh-title"
+              href="https://docs.tendermint.com"
+              target="blank_"
+              rel="noreferrer noopener"
+              >Tendermint Core</a
+            >
+          </li>
+          <li class="nav__item__item">
+            <a
+              class="tm-rf0 tm-lh-title"
+              href="https://github.com/cosmos/ics"
+              target="blank_"
+              rel="noreferrer noopener"
+              >Interchain Standards</a
+            >
+          </li>
+          <li class="nav__item__item">
+            <a
+              class="tm-rf0 tm-lh-title"
+              href="https://hub.cosmos.network"
+              target="blank_"
+              rel="noreferrer noopener"
+              >Cosmos Hub</a
+            >
+          </li>
+        </ul>
+        <ul class="nav__item">
+          <li
+            class="nav__item__title tm-rf-1 tm-medium tm-lh-title tm-overline"
+          >
+            Community
+          </li>
+          <li class="nav__item__item">
+            <a
+              class="tm-rf0 tm-lh-title"
+              href="https://discord.gg/vcExX9T"
+              target="blank_"
+              rel="noreferrer noopener"
+              >Chat</a
+            >
+          </li>
+          <li class="nav__item__item">
+            <a
+              class="tm-rf0 tm-lh-title"
+              href="https://hackerone.com/tendermint?type=team"
+              target="blank_"
+              rel="noreferrer noopener"
+              >Bug Bounty Program</a
+            >
+          </li>
+          <li class="nav__item__item">
+            <a
+              class="tm-rf0 tm-lh-title"
+              href="https://cosmos.network/community"
+              target="blank_"
+              rel="noreferrer noopener"
+              >Cosmos Community</a
+            >
+          </li>
+        </ul>
       </nav>
-      <nav ref="links" class="social-icons">
+      <nav ref="links" class="social-icons" role="navigation">
         <a
           v-for="link in links"
           :key="url(link)"
@@ -112,7 +181,7 @@ export default {
         },
         { title: 'Reddit', url: 'https://reddit.com/r/cosmosnetwork' },
         { title: 'Telegram', url: 'https://t.me/cosmosproject' },
-        { title: 'Discord', url: 'https://discord.gg/cr7N47p' },
+        { title: 'Discord', url: 'https://discord.gg/vcExX9T' },
         { title: 'YouTube', url: 'https://www.youtube.com/c/CosmosProject' },
       ],
     }
@@ -142,23 +211,38 @@ export default {
   text-align center
   color var(--white)
   background linear-gradient(180deg, #000000 0%, #030419 100%)
-  padding var(--spacing-9) 0
+  padding 0 0 var(--spacing-8)
   .nav
-    display flex
-    flex-direction row
+    gap var(--spacing-7)
     justify-content center
-    margin-top var(--spacing-5)
     &__item
       padding var(--spacing-6) 0
-      margin 0 var(--spacing-5)
       border-radius $border-radius-2
       white-space nowrap
       color var(--gray-600)
-      &:hover,
-      &:focus
-        color inherit
+      text-align left
+      display flex
+      flex-direction column
+      margin 0
+      list-style-type none
+      grid-column span 3
+      &:first-child
+        grid-column 3/span 3
+      &__title
+        padding-bottom var(--spacing-3)
+      &__item a
+        display inline-block
+        padding-top var(--spacing-3)
+        padding-bottom var(--spacing-3)
+        color var(--white)
+        &:hover,
+        &:focus
+          opacity 0.8
+        &:active
+          opacity 0.6
   .social-icons
-    margin-top var(--spacing-7)
+    margin-top var(--spacing-9)
+    margin-bottom var(--spacing-9)
     display flex
     flex-direction row
     flex-wrap wrap
@@ -175,21 +259,23 @@ export default {
   .home-nav
     margin-top var(--spacing-5)
     a
-      color #ECEDF7
+      color var(--gray-900)
       &:hover,
       &:focus
-        color var(--link)
+        color var(--white)
   .smallprint
     margin-top var(--spacing-5)
     color var(--gray-600)
 
-@media screen and (max-width: 600px)
+@media $breakpoint-medium-max
   .footer
     .nav
-      display grid
       grid-template-columns repeat(2, 1fr)
+      &__item,
+      &__item:first-child
+          grid-column span 1
 
-@media screen and (max-width: 420px)
+@media $breakpoint-small-max
   .footer
     .nav
       grid-template-columns repeat(1, 1fr)

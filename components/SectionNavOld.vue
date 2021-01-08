@@ -2,19 +2,10 @@
   <nav class="nav tm-rf1 tm-lh-copy">
     <ul class="nav__list">
       <li class="nav__list__item">
-        <a v-scroll-to="'#intro'">What is Stargate?</a>
-      </li>
-      <li class="nav__list__item">
-        <a v-scroll-to="'#features'">Features</a>
+        <a v-scroll-to="'#intro'">Overview</a>
       </li>
       <li class="nav__list__item">
         <a v-scroll-to="'#testnets'">Testnets</a>
-      </li>
-      <li class="nav__list__item">
-        <a v-scroll-to="'#roadmap'">Roadmap</a>
-      </li>
-      <li class="nav__list__item">
-        <a v-scroll-to="'#contributors'">Contributors</a>
       </li>
       <li class="nav__list__item">
         <a v-scroll-to="'#articles'">Resources</a>
@@ -52,7 +43,7 @@ export default {}
         color var(--gray-600)
         &:hover,
         &:focus
-          color #ECEDF7
+          color var(--gray-900)
         &:hover:before
           visibility visible
           transform scaleX(1)

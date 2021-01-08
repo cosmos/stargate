@@ -1,5 +1,5 @@
 <template>
-  <div class="section-form">
+  <div class="section section-form">
     <div class="tm-section-container section-container bottom">
       <div class="container">
         <transition name="fade" mode="out-in">

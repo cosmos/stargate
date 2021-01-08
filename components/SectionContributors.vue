@@ -1,12 +1,12 @@
 <template>
-  <div id="contributors" class="section section-contributors">
+  <div class="section section-contributors">
     <div class="tm-section-container section-container">
       <div class="container">
         <div class="section-header tm-rf0 tm-medium tm-lh-title tm-overline">
           Contributors
         </div>
         <div class="section-graphics">
-          <consortium-graphics class="section-graphics__canvas" />
+          <graphics-consortium class="section-graphics__canvas" />
         </div>
         <div class="section-top">
           <div class="section-title tm-rf6 tm-bold tm-lh-title">
