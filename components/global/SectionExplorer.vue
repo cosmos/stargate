@@ -94,6 +94,7 @@ export default {
     cursor pointer
     max-width 23.3125rem
     text-align left
+    hover-raise()
 
     &__icon
       display flex
