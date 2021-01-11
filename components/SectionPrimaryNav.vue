@@ -56,7 +56,9 @@
             variant="text"
             color="var(--white)"
             glow
-            ><span class="text">GitHub<span class="icon__right">↗️</span></span>
+            ><span class="text"
+              >GitHub<span class="icon__right">&#8599;</span></span
+            >
             <icon-github class="icon" />
           </tm-button>
         </li>
