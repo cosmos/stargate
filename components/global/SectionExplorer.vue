@@ -59,8 +59,8 @@ export default {
 
 .section-graphics
   position relative
+  z-index -1
   &__canvas
-    z-index -1
     width 120%
     margin-left -10%
     height auto
