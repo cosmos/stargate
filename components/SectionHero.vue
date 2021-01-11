@@ -1,6 +1,6 @@
 <template>
   <div class="section-hero">
-    <div class="section-container">
+    <div class="tm-section-container section-container">
       <div class="hero-graphics">
         <span class="hero-graphics__glow"></span>
         <span class="hero-graphics__gate"></span>
