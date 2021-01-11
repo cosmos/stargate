@@ -6,23 +6,24 @@
           Roadmap
         </div>
         <div class="section-title tm-rf7 tm-bold tm-lh-title">
-          <span class="percentage">{{ progressTotal }}%</span> complete
+          <!-- <span class="percentage">{{ progressTotal }}%</span> complete -->
+          <span class="percentage">100%</span> complete
         </div>
         <div class="section-milestones">
           <div class="section-milestones__title tm-rf3 tm-bold tm-lh-title">
-            Milestones
+            Releases
           </div>
           <div class="section-milestones__cta">
             <tm-button
               to-link="external"
-              href="https://github.com/orgs/cosmosdevs/projects/1"
+              href="https://github.com/cosmos/cosmos-sdk/releases/tag/v0.40.0"
               color="var(--link)"
               variant="text"
               size="l"
               >View on GitHub ↗</tm-button
             >
           </div>
-          <div class="section-milestones__faq">
+          <!-- <div class="section-milestones__faq">
             <h4
               class="section-milestones__faq__title tm-rf0 tm-bold tm-lh-title"
             >
@@ -37,7 +38,7 @@
               tasks are created or completed, the percentage will fluctuate
               until no more tasks remain and the milestone is achieved.
             </p>
-          </div>
+          </div> -->
         </div>
         <a
           v-for="item in milestoneList"
@@ -50,7 +51,7 @@
           <div
             class="meter"
             :style="{
-              '--progress-bar-width': `${item.progress}%`,
+              '--progress-bar-width': `100%`,
               '--progress-bar-background-color': `${bgColor[item.logo]}`,
             }"
           ></div>
@@ -67,7 +68,8 @@
             <div class="indicator">
               <div v-if="item.progress" class="progress__wrapper">
                 <div class="progress tm-rf0 tm-lh-copy">
-                  {{ item.progress }}% complete
+                  <!-- {{ item.progress }}% complete -->
+                  100% complete
                 </div>
               </div>
             </div>
@@ -105,15 +107,15 @@ export default {
       },
     }
   },
-  computed: {
-    progressTotal() {
-      const progressSum = this.milestoneList
-        .map((i) => Math.floor(i.progress))
-        .reduce((a, b) => a + b, 0)
-      const percentage = ((progressSum / 300) * 100).toFixed(0)
-      return percentage
-    },
-  },
+  // computed: {
+  //   progressTotal() {
+  //     const progressSum = this.milestoneList
+  //       .map((i) => Math.floor(i.progress))
+  //       .reduce((a, b) => a + b, 0)
+  //     const percentage = ((progressSum / 300) * 100).toFixed(0)
+  //     return percentage
+  //   },
+  // },
   mounted() {
     this.sources.forEach(async (source) => {
       const milestone = await this.getMilestone.apply(null, source)
