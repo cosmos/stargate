@@ -273,7 +273,7 @@ export default {
     margin-top var(--spacing-8)
   &__date
     margin-top var(--spacing-4)
-    color var(--trans-gray-400)
+    color var(--gray-trans-400)
   &:hover
     .articles-item__title,
     .articles-item__icon

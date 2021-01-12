@@ -20,7 +20,7 @@ Your bones don't break, mine do. That's clear. Your cells react to bacteria and 
 <section-endpoints :id="id" :code="code">
   <template #intro>
     <p><span class="tm-bold">Wallets</span> and <span class="tm-bold">Explorers</span> should test to ensure that the legacy Amino endpoints provided on the new chains are compatible with existing services. It is highly recommended to start planning a transition to Protobuf endpoints as Amino support is expected to be discontinued in the future.</p>
-    <p><span class="tm-bold">Exchanges</span> should ensure their signing and querying software is ready by testing the new features against their infrastructure ahead of the Stargate upgrade.</p>
+    <p><span class="tm-bold">Exchanges</span> should ensure their signing and querying software is ready by testing the new features against their infrastructure ahead of the Stargate upgrade. Use the <a href="https://github.com/cosmosdevs/stargate/blob/master/ibc_readiness_matrix.md" target="blank_" rel="noreferrer noopener">Stargate IBC Skill Matrix</a> to guide you in supporting IBC with your upgrades.</p>
   </template>
 </section-endpoints>
 
