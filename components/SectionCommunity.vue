@@ -71,7 +71,7 @@
       </div>
     </div>
     <a
-      href="https://github.com/iqlusioninc/governance/tree/zaki-stargate-upgrade-proposal/proposals/2020-11-stargate-upgrade"
+      href="https://github.com/iqlusioninc/governance/tree/zaki-stargate-upgrade-proposal/proposals/2021-01-stargate-upgrade"
       target="_blank"
       rel="noreferrer noopener"
       class="wide-card bottom"
