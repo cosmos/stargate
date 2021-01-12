@@ -50,8 +50,8 @@
         </li>
         <li>
           <tm-button
-            to-link="internal"
-            to="https://github.com/cosmosdevs/stargate#stargate-5-testing"
+            to-link="external"
+            href="https://github.com/cosmosdevs/stargate#stargate-5-testing"
             size="l"
             variant="text"
             color="var(--white)"
