@@ -6,11 +6,11 @@
           Roadmap
         </div>
         <div class="section-title tm-rf7 tm-bold tm-lh-title">
-          <span class="percentage">{{ progressTotal }}%</span> complete
+          <span class="percentage">100%</span> complete
         </div>
         <div class="section-milestones">
           <div class="section-milestones__title tm-rf3 tm-bold tm-lh-title">
-            Milestones
+            Releases
           </div>
           <div class="section-milestones__cta">
             <tm-button
@@ -19,10 +19,10 @@
               color="var(--link)"
               variant="text"
               size="l"
-              >View on GitHub ↗</tm-button
+              >View project ↗</tm-button
             >
           </div>
-          <div class="section-milestones__faq">
+          <!-- <div class="section-milestones__faq">
             <h4
               class="section-milestones__faq__title tm-rf0 tm-bold tm-lh-title"
             >
@@ -37,12 +37,12 @@
               tasks are created or completed, the percentage will fluctuate
               until no more tasks remain and the milestone is achieved.
             </p>
-          </div>
+          </div> -->
         </div>
         <a
           v-for="item in milestoneList"
-          :key="item.url"
-          :href="item.url"
+          :key="item.milestoneUrl || item.releaseUrl"
+          :href="item.milestoneUrl || item.releaseUrl"
           target="_blank"
           rel="noreferrer noopener"
           class="section-row"
@@ -50,7 +50,7 @@
           <div
             class="meter"
             :style="{
-              '--progress-bar-width': `${item.progress}%`,
+              '--progress-bar-width': `100%`,
               '--progress-bar-background-color': `${bgColor[item.logo]}`,
             }"
           ></div>
@@ -65,11 +65,11 @@
               <div class="subtitle tm-rf0 tm-lh-copy">{{ item.repo }}</div>
             </div>
             <div class="indicator">
-              <div v-if="item.progress" class="progress__wrapper">
+              <!-- <div v-if="item.progress" class="progress__wrapper">
                 <div class="progress tm-rf0 tm-lh-copy">
-                  {{ item.progress }}% complete
+                  100% complete
                 </div>
-              </div>
+              </div> -->
             </div>
           </div>
         </a>
@@ -79,7 +79,6 @@
 </template>
 
 <script>
-import axios from 'axios'
 import IconIbc from '~/components/icons/IconIbc.vue'
 import IconSdk from '~/components/icons/IconSdk.vue'
 import IconCore from '~/components/icons/IconCore.vue'
@@ -94,7 +93,7 @@ export default {
     return {
       milestoneList: [],
       sources: [
-        ['cosmos/cosmos-sdk', 25, 'sdk', 'Cosmos SDK 0.40'],
+        ['cosmos/cosmos-sdk', 'v0.40.0', 'sdk', 'Cosmos SDK 0.40'],
         ['tendermint/tendermint', 27, 'core', 'Tendermint Core 0.34'],
         ['cosmos/cosmos-sdk', 21, 'ibc', 'IBC 1.0'],
       ],
@@ -105,15 +104,6 @@ export default {
       },
     }
   },
-  computed: {
-    progressTotal() {
-      const progressSum = this.milestoneList
-        .map((i) => Math.floor(i.progress))
-        .reduce((a, b) => a + b, 0)
-      const percentage = ((progressSum / 300) * 100).toFixed(0)
-      return percentage
-    },
-  },
   mounted() {
     this.sources.forEach(async (source) => {
       const milestone = await this.getMilestone.apply(null, source)
@@ -121,26 +111,23 @@ export default {
     })
   },
   methods: {
-    async getMilestone(repo, id, logo, defaultTitle, defaultProgress) {
-      const url = `https://github.com/${repo}/milestone/${id}`
-      try {
-        const api = `https://api.github.com/repos/${repo}/milestones/${id}`
-        const m = (
-          await axios.get(api, {
-            headers: {
-              Authorization: `Bearer ${process.env.GITHUB_PERSONAL_TOKEN}`,
-            },
-          })
-        ).data
-        const open = parseInt(m.open_issues)
-        const closed = parseInt(m.closed_issues)
-        const progress = Math.floor((100 * closed) / (open + closed)).toFixed(0)
-        return { defaultTitle, repo, progress, logo, url }
-      } catch {
+    getMilestone(repo, id, logo, defaultTitle, defaultProgress) {
+      const milestoneUrl = `https://github.com/${repo}/milestone/${id}`
+      const releaseUrl = `https://github.com/${repo}/releases/tag/${id}`
+
+      if (id === 'v0.40.0') {
+        return {
+          defaultTitle,
+          repo,
+          logo,
+          releaseUrl,
+          id,
+        }
+      } else {
         return {
           repo,
           logo,
-          url,
+          milestoneUrl,
           defaultTitle,
           progress: null,
         }
@@ -286,7 +273,7 @@ export default {
     margin-top var(--spacing-8)
   &__date
     margin-top var(--spacing-4)
-    color var(--trans-gray-400)
+    color var(--gray-trans-400)
   &:hover
     .articles-item__title,
     .articles-item__icon

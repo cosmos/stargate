@@ -25,6 +25,7 @@
             background-color="linear-gradient(89.41deg, #99DAFF -0.22%, #FFD1FD 99.78%)"
             color="var(--gray-50)"
             size="l"
+            class="text__btn-container__btn"
             >Submit bug<span class="icon__right">↗</span></tm-button
           >
           <tm-button
@@ -34,6 +35,7 @@
             size="l"
             color="var(--link)"
             glow
+            class="text__btn-container__btn"
             >Learn more<span class="icon__right">↗</span></tm-button
           >
         </div>
@@ -43,9 +45,6 @@
 </template>
 
 <style lang="stylus" scoped>
-.section
-  overflow visible
-
 .graphics
   $scale = 1.2
 
@@ -102,6 +101,16 @@
     display flex
     flex-wrap wrap
     gap var(--spacing-7)
+
+    &__btn
+      margin-right var(--spacing-6)
+
+      &:last-child
+        margin-right 0
+
+@media $breakpoint-large
+  .section
+    overflow visible
 
 @media $breakpoint-medium-up
   .section

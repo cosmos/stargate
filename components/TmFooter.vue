@@ -13,7 +13,7 @@
           </li>
           <li class="nav__item__item">
             <NuxtLink to="/testnets" class="tm-rf0 tm-lh-title"
-              >Testnets</NuxtLink
+              >Prepare</NuxtLink
             >
           </li>
           <li class="nav__item__item">

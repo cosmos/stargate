@@ -255,8 +255,4 @@ export default {
     .details
       grid-template-columns unset
       grid-auto-flow unset
-
-// @media screen and (max-width: 414px)
-//   .section-roadmap .section-row .meter
-//     width 100%
 </style>
