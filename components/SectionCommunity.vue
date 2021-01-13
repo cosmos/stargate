@@ -1,6 +1,35 @@
 <template>
   <div class="section tm-section-container section-container">
     <div class="container">
+      <a
+        href="https://www.mintscan.io/cosmos/proposals/35"
+        target="_blank"
+        rel="noreferrer noopener"
+        class="wide-card bottom"
+      >
+        <div class="wide-card__left wide-card__content">
+          <div
+            class="cards__item__caption tm-rf-1 tm-rf0-m-up tm-medium tm-lh-title tm-overline"
+          >
+            Proposal
+          </div>
+          <div class="cards__item__title tm-rf2 tm-bold tm-lh-title">
+            Stargate --> Cosmos Hub
+          </div>
+          <div
+            class="cards__item__description tm-rf0 tm-rf1-m-up tm-lh-copy tm-measure-narrow"
+          >
+            Vote on the upcoming proposal to bring the Stargate upgrades to
+            Cosmos Hub.
+          </div>
+        </div>
+        <div class="wide-card__right">
+          <graphics-hub-planet class="section-graphics" />
+          <span class="cards__item__disclosure tm-rf2 tm-lh-solid"
+            >&#8599;</span
+          >
+        </div>
+      </a>
       <NuxtLink to="/testnets" class="wide-card top">
         <div class="wide-card__left">
           <graphics-dyson-sphere class="section-graphics" />
@@ -13,7 +42,7 @@
             Upgrade
           </div>
           <div class="cards__item__title tm-rf2 tm-bold tm-lh-title">
-            Join the testnets -->
+            Prepare for Stargate -->
           </div>
           <div
             class="cards__item__description tm-rf0 tm-rf1-m-up tm-lh-copy tm-measure-narrow"
@@ -70,33 +99,6 @@
         </a>
       </div>
     </div>
-    <a
-      href="https://github.com/iqlusioninc/governance/tree/zaki-stargate-upgrade-proposal/proposals/2020-11-stargate-upgrade"
-      target="_blank"
-      rel="noreferrer noopener"
-      class="wide-card bottom"
-    >
-      <div class="wide-card__left wide-card__content">
-        <div
-          class="cards__item__caption tm-rf-1 tm-rf0-m-up tm-medium tm-lh-title tm-overline"
-        >
-          Proposal &middot; Draft
-        </div>
-        <div class="cards__item__title tm-rf2 tm-bold tm-lh-title">
-          Stargate --> Cosmos Hub
-        </div>
-        <div
-          class="cards__item__description tm-rf0 tm-rf1-m-up tm-lh-copy tm-measure-narrow"
-        >
-          Vote on the upcoming proposal to bring the Stargate upgrades to Cosmos
-          Hub.
-        </div>
-      </div>
-      <div class="wide-card__right">
-        <graphics-hub-planet class="section-graphics" />
-        <span class="cards__item__disclosure tm-rf2 tm-lh-solid">&#8599;</span>
-      </div>
-    </a>
   </div>
 </template>
 
@@ -111,6 +113,7 @@ export default {}
   z-index 1 // above next section
 
 .wide-card
+  margin-top var(--spacing-7)
   display grid
   gap var(--spacing-7)
   grid-template-columns repeat(12, 1fr)

@@ -9,23 +9,34 @@
         <logo-stargate-wordmark class="logo logo-stargate" />
       </NuxtLink>
       <span class="sr-only">Cosmos – Stargate</span>
-      <ul>
-        <li>
-          <NuxtLink to="/" class="text tm-rf0 tm-medium tm-lh-title"
-            >Overview</NuxtLink
-          >
-        </li>
-        <li>
-          <NuxtLink to="/testnets" class="text tm-rf0 tm-medium tm-lh-title"
-            >Testnets</NuxtLink
-          >
-        </li>
-        <li>
-          <NuxtLink to="/resources" class="text tm-rf0 tm-medium tm-lh-title"
-            >Resources</NuxtLink
-          >
-        </li>
-      </ul>
+      <div class="nav-scroll">
+        <ul>
+          <li>
+            <NuxtLink to="/" class="text tm-rf0 tm-medium tm-lh-title"
+              >Overview</NuxtLink
+            >
+          </li>
+          <li>
+            <NuxtLink to="/testnets" class="text tm-rf0 tm-medium tm-lh-title"
+              >Prepare</NuxtLink
+            >
+          </li>
+          <li>
+            <NuxtLink to="/resources" class="text tm-rf0 tm-medium tm-lh-title"
+              >Resources</NuxtLink
+            >
+          </li>
+          <li>
+            <a
+              href="https://github.com/cosmos/stargate-launch"
+              target="_blank"
+              rel="noreferrer noopener"
+              class="text tm-rf0 tm-medium tm-lh-title"
+              >Updates &#8599;</a
+            >
+          </li>
+        </ul>
+      </div>
     </nav>
     <nav
       v-if="
@@ -45,18 +56,20 @@
             variant="text"
             color="var(--white)"
             glow
-            ><span class="icon__left">←</span>Testnets
+            ><span class="icon__left">←</span>Prepare
           </tm-button>
         </li>
         <li>
           <tm-button
-            to-link="internal"
-            to="https://github.com/cosmosdevs/stargate#stargate-5-testing"
+            to-link="external"
+            href="https://github.com/cosmosdevs/stargate#stargate-5-testing"
             size="l"
             variant="text"
             color="var(--white)"
             glow
-            ><span class="text">GitHub<span class="icon__right">↗️</span></span>
+            ><span class="text"
+              >GitHub<span class="icon__right">&#8599;</span></span
+            >
             <icon-github class="icon" />
           </tm-button>
         </li>
@@ -70,7 +83,6 @@ export default {}
 </script>
 
 <style lang="stylus" scoped>
-
 .nav-inner
   position relative
   z-index 2
@@ -121,6 +133,7 @@ export default {}
 
   &-primary ul a
     display block
+    white-space nowrap
     padding var(--spacing-6) 0
     color var(--white)
     border-radius $border-radius-2
@@ -163,6 +176,9 @@ export default {}
     &-primary
       justify-content center
       flex-direction column
+      align-items unset
+    .logos
+      center()
     .logo-cosmos
       max-height 1.5rem
       width auto
@@ -176,4 +192,20 @@ export default {}
         display none
       .icon
         display block
+
+  .nav-scroll
+    margin-left calc(-1 * var(--spacing-7))
+    margin-right calc(-1 * var(--spacing-7))
+    overflow-x auto
+    text-align center
+    scrollbar-width none
+    &::-webkit-scrollbar
+      display none
+
+  .nav ul
+    padding-left var(--spacing-7)
+    padding-right var(--spacing-7)
+    display inline-flex
+    justify-content center
+    align-items center
 </style>

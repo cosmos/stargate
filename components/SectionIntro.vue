@@ -20,7 +20,8 @@
               (IBC).
             </p>
             <tm-button
-              to-link="external"
+              to-link="internal"
+              to="/resources"
               href="https://blog.cosmos.network/cosmos-stargate-upgrade-overview-8939475fe673"
               size="l"
               color="var(--link)"

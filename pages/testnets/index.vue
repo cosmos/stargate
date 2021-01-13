@@ -5,7 +5,8 @@
       <div class="container">
         <div class="intro-text">
           <div class="section-title tm-rf7 tm-bold tm-lh-title">
-            Get set for <span class="section-title__highlight">testnets</span>
+            Are you
+            <span class="section-title__highlight">Stargate</span> ready?
           </div>
           <div class="section-subtitle tm-rf2 tm-lh-copy tm-measure-narrow">
             The future is here, Cosmonauts! Start integration testing with the

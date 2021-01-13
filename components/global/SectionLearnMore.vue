@@ -14,11 +14,11 @@
             rel="noreferrer noopener"
             class="list-item"
           >
-            <span class="list-item__icon tm-rf2 tm-lh-solid">&#8599;</span>
             <div
               class="list-item__title tm-rf1 tm-bold tm-lh-title tm-measure-narrow"
             >
               {{ item.title }}
+              <span class="list-item__icon tm-rf2 tm-lh-solid">&#8599;</span>
             </div>
             <div class="list-item__description tm-rf0 tm-lh-copy tm-measure">
               {{ item.desc }}
@@ -63,16 +63,18 @@ export default {
   display block
   text-align left
   padding var(--spacing-7) 0
-  position relative
-  &__icon
-    position absolute
-    right 0
-    color var(--gray-600)
-    transition color .1s ease-out, transform .25s ease-out
+  width fit-content
   &__title
     color var(--primary-900)
     transition color .1s ease-out
     padding-right 2rem
+    position relative
+  &__icon
+    position absolute
+    top 0.25rem
+    right 0
+    color var(--gray-600)
+    transition color .1s ease-out, transform .25s ease-out
   &__description
     margin-top var(--spacing-4)
     color var(--gray-600)

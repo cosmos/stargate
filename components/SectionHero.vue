@@ -1,6 +1,6 @@
 <template>
   <div class="section-hero">
-    <div class="section-container">
+    <div class="tm-section-container section-container">
       <div class="hero-graphics">
         <span class="hero-graphics__glow"></span>
         <span class="hero-graphics__gate"></span>
@@ -20,16 +20,28 @@
           <div class="subtitle tm-rf2 tm-rf3-m-up tm-lh-copy">
             The Internet of Blockchains is on the horizon.
           </div>
-          <tm-button
-            to-link="internal"
-            to="/testnets"
-            size="l"
-            color="var(--black)"
-            background-color="linear-gradient(90deg, #99DAFF 0%, #FFD1FD 50%, var(--primary-900) 100%), var(--primary-900)"
-            glow
-            class="hero-btn"
-            >Join testnets</tm-button
-          >
+          <div class="btn-container">
+            <tm-button
+              to-link="internal"
+              to="/testnets"
+              size="l"
+              color="var(--black)"
+              background-color="linear-gradient(90deg, #99DAFF 0%, #FFD1FD 50%, var(--primary-900) 100%), var(--primary-900)"
+              glow
+              class="btn-container__btn__primary"
+              >Prepare</tm-button
+            >
+            <tm-button
+              to-link="external"
+              href="https://www.mintscan.io/cosmos/proposals/35"
+              size="l"
+              color="var(--white)"
+              background-color="var(--gray-trans-300)"
+              glow
+              class="btn-container__btn__secondary"
+              >Vote</tm-button
+            >
+          </div>
         </div>
       </div>
     </div>
@@ -150,8 +162,22 @@ export default {}
       background radial-gradient(31.26% 16.8% at 50.03% -2.64%, #ccc7fb 0%, rgba(145,51,202,0.6) 55.21%, rgba(141,14,192,0) 100%), radial-gradient(84.49% 66.22% at 50% 59.94%, #000 0%, #030419 60.94%, #340d67 80.73%, #36299b 90.1%)
       box-shadow inset 0px 3.5rem 3.5rem rgba(48, 44, 245, 0.17)
 
-.hero-btn
-  margin var(--spacing-8) auto
+.btn-container
+  margin-top var(--spacing-8)
+  display flex
+  flex-wrap wrap
+  justify-content center
+
+  &__btn
+
+    &:last-child
+      margin-right 0
+
+    &__primary
+      margin-right var(--spacing-6)
+
+    &__secondary
+      backdrop-filter blur(3rem)
 
 @media screen and (max-width: 1024px)
   .section-hero
@@ -169,6 +195,16 @@ export default {}
     .hero-graphics
       font-size 0.5rem
 
+  .btn-container
+    display grid
+    grid-template-columns repeat(auto-fill, minmax(13rem, auto))
+    gap var(--spacing-7)
+
+    &__btn
+
+      &__primary
+        margin-right 0
+
 @media screen and (max-width: 576px)
   .section-hero
     min-height 32rem
@@ -184,10 +220,6 @@ export default {}
           margin-top var(--spacing-6)
     .hero-graphics
       font-size 0.36rem
-
-  .hero-btn
-    width 100%
-    max-width: $max-width['6']
 
 @media screen and (min-width: 1536px)
   .section-hero
