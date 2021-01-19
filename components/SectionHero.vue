@@ -10,6 +10,9 @@
       </div>
       <div class="container">
         <div class="content">
+          <div class="suptitle tm-rf2 tm-rf3-m-up tm-lh-copy">
+            The Internet of Blockchains is on the horizon.
+          </div>
           <h1 class="title">
             <div class="wordmarks">
               <wordmark-stargate variant="glow" />
@@ -17,29 +20,31 @@
             </div>
             <span class="sr-only">Stargate</span>
           </h1>
-          <div class="subtitle tm-rf2 tm-rf3-m-up tm-lh-copy">
-            The Internet of Blockchains is on the horizon.
+          <div class="subtitle tm-rf1 tm-lh-copy tm-measure-narrow">
+            Prepare your integrations for the imminent upgrades and vote today
+            to bring Stargate to Cosmos Hub.
           </div>
           <div class="btn-container">
             <tm-button
               to-link="internal"
-              to="/testnets"
+              to="/testnet"
               size="l"
-              color="var(--black)"
-              background-color="linear-gradient(90deg, #99DAFF 0%, #FFD1FD 50%, var(--primary-900) 100%), var(--primary-900)"
+              color="var(--white)"
+              background-color="var(--gray-trans-300)"
+              s
               glow
               class="btn-container__btn__primary"
-              >Prepare</tm-button
+              >Prepare <span class="icon__right">--></span></tm-button
             >
             <tm-button
               to-link="external"
               href="https://www.mintscan.io/cosmos/proposals/35"
               size="l"
-              color="var(--white)"
-              background-color="var(--gray-trans-300)"
+              color="var(--black)"
+              background-color="linear-gradient(90deg, #99DAFF 0%, #FFD1FD 50%, var(--primary-900) 100%), var(--primary-900)"
               glow
               class="btn-container__btn__secondary"
-              >Vote</tm-button
+              >Vote <span class="icon__right">&#8599;</span></tm-button
             >
           </div>
         </div>
@@ -86,6 +91,12 @@ export default {}
     .content
       margin auto
       width 100%
+      display flex
+      flex-direction column
+      align-items center
+      .suptitle
+        margin-bottom var(--spacing-7)
+        color var(--white)
       .title
         margin 0
         padding-left var(--spacing-5)

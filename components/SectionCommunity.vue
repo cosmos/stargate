@@ -30,7 +30,7 @@
           >
         </div>
       </a>
-      <NuxtLink to="/testnets" class="wide-card top">
+      <NuxtLink to="/testnet" class="wide-card top">
         <div class="wide-card__left">
           <graphics-dyson-sphere class="section-graphics" />
         </div>
