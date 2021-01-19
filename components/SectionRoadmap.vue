@@ -5,9 +5,9 @@
         <div class="section-header tm-rf0 tm-medium tm-lh-title tm-overline">
           Roadmap
         </div>
-        <div class="section-title tm-rf7 tm-bold tm-lh-title">
+        <!-- <div class="section-title tm-rf7 tm-bold tm-lh-title">
           <span class="percentage">100%</span> complete
-        </div>
+        </div> -->
         <div class="section-milestones">
           <div class="section-milestones__title tm-rf3 tm-bold tm-lh-title">
             Releases
@@ -22,27 +22,11 @@
               >View project ↗</tm-button
             >
           </div>
-          <!-- <div class="section-milestones__faq">
-            <h4
-              class="section-milestones__faq__title tm-rf0 tm-bold tm-lh-title"
-            >
-              How do we measure progress?
-            </h4>
-            <p
-              class="section-milestones__faq__body tm-rf-1 tm-lh-copy tm-measure tm-measure-narrow-l-up"
-            >
-              The various parts of the Cosmos stack, upon which Stargate is
-              built, each have their own milestone. The progress of each
-              milestone depends on how many outstanding tasks there are. As more
-              tasks are created or completed, the percentage will fluctuate
-              until no more tasks remain and the milestone is achieved.
-            </p>
-          </div> -->
         </div>
         <a
           v-for="item in milestoneList"
-          :key="item.milestoneUrl || item.releaseUrl"
-          :href="item.milestoneUrl || item.releaseUrl"
+          :key="item.releaseUrl"
+          :href="item.releaseUrl"
           target="_blank"
           rel="noreferrer noopener"
           class="section-row"
@@ -63,13 +47,7 @@
                 {{ item.defaultTitle }}
               </div>
               <div class="subtitle tm-rf0 tm-lh-copy">{{ item.repo }}</div>
-            </div>
-            <div class="indicator">
-              <!-- <div v-if="item.progress" class="progress__wrapper">
-                <div class="progress tm-rf0 tm-lh-copy">
-                  100% complete
-                </div>
-              </div> -->
+              <div class="subtitle tm-rf0 tm-lh-copy">{{ item.id }}</div>
             </div>
           </div>
         </a>
@@ -94,8 +72,8 @@ export default {
       milestoneList: [],
       sources: [
         ['cosmos/cosmos-sdk', 'v0.40.0', 'sdk', 'Cosmos SDK 0.40'],
-        ['tendermint/tendermint', 27, 'core', 'Tendermint Core 0.34'],
-        ['cosmos/cosmos-sdk', 21, 'ibc', 'IBC 1.0'],
+        ['tendermint/tendermint', 'v0.34.0', 'core', 'Tendermint Core 0.34'],
+        ['cosmos/cosmos-sdk', 'v1.0.0-rc6', 'ibc', 'IBC 1.0'],
       ],
       bgColor: {
         sdk: 'linear-gradient(95.47deg, #320B93 0%, #3B2AB7 100%)',
@@ -112,7 +90,6 @@ export default {
   },
   methods: {
     getMilestone(repo, id, logo, defaultTitle, defaultProgress) {
-      const milestoneUrl = `https://github.com/${repo}/milestone/${id}`
       const releaseUrl = `https://github.com/${repo}/releases/tag/${id}`
 
       if (id === 'v0.40.0') {
@@ -127,7 +104,6 @@ export default {
         return {
           repo,
           logo,
-          milestoneUrl,
           defaultTitle,
           progress: null,
         }
@@ -159,13 +135,6 @@ export default {
       color var(--white)
     &__cta
       margin-top var(--spacing-5)
-    &__faq
-      margin-top var(--spacing-5)
-      &__title
-        color var(--gray-800)
-      &__body
-        color var(--gray-600)
-        margin-top var(--spacing-3)
   .section-row
     position relative
     margin-top var(--spacing-7)
@@ -205,11 +174,6 @@ export default {
       .subtitle
         color var(--white-70)
         transition color .15s, transform .15s ease-out
-      .indicator
-        display flex
-        flex-direction row
-        align-items flex-end
-        background rgba(0, 0, 0, 0)
       .progress__wrapper
         display flex
         flex-direction column

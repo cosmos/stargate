@@ -1,18 +1,7 @@
 <template>
   <div class="tm-section-container section-container section-explorer">
     <div class="section-graphics">
-      <graphics-explore-1
-        v-if="this.$route.path === '/testnets/wallets-explorers-exchanges'"
-        class="section-graphics__canvas"
-      />
-      <graphics-explore-2
-        v-if="this.$route.path === '/testnets/community'"
-        class="section-graphics__canvas"
-      />
-      <graphics-explore-3
-        v-if="this.$route.path === '/testnets/validator'"
-        class="section-graphics__canvas"
-      />
+      <graphics-explore class="section-graphics__canvas" />
     </div>
     <div class="headings">
       <div class="headings__title tm-rf6 tm-bold tm-lh-title">

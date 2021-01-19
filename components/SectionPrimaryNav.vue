@@ -17,7 +17,7 @@
             >
           </li>
           <li>
-            <NuxtLink to="/testnets" class="text tm-rf0 tm-medium tm-lh-title"
+            <NuxtLink to="/testnet" class="text tm-rf0 tm-medium tm-lh-title"
               >Prepare</NuxtLink
             >
           </li>
@@ -38,7 +38,7 @@
         </ul>
       </div>
     </nav>
-    <nav
+    <!-- <nav
       v-if="
         this.$route.path === '/testnets/wallets-explorers-exchanges' ||
         this.$route.path === '/testnets/community' ||
@@ -74,7 +74,7 @@
           </tm-button>
         </li>
       </ul>
-    </nav>
+    </nav> -->
   </div>
 </template>
 

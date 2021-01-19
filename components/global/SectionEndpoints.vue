@@ -8,7 +8,26 @@
 
         <div class="list__item">
           <div class="list__item__paragraph tm-measure tm-rf1 tm-lh-copy">
-            <slot name="intro" />
+            <p>
+              <span class="tm-bold">Wallets</span> and
+              <span class="tm-bold">Explorers</span> should test to ensure that
+              the legacy Amino endpoints provided on the new chains are
+              compatible with existing services. It is highly recommended to
+              start planning a transition to Protobuf endpoints as Amino support
+              is expected to be discontinued in the future.
+            </p>
+            <p>
+              <span class="tm-bold">Exchanges</span> should ensure their signing
+              and querying software is ready by testing the new features against
+              their infrastructure ahead of the Stargate upgrade. Use the
+              <a
+                href="https://github.com/cosmosdevs/stargate/blob/master/ibc_readiness_matrix.md"
+                target="blank_"
+                rel="noreferrer noopener"
+                >Stargate IBC Skill Matrix</a
+              >
+              to guide you in supporting IBC with your upgrades.
+            </p>
           </div>
         </div>
       </div>
@@ -19,7 +38,7 @@
       <div class="list">
         <div class="list__paragraph tm-measure tm-rf1 tm-lh-copy">
           Use the public endpoints below to interact with the
-          {{ id }} testnet.
+          <code>{{ id }}</code> testnet.
         </div>
 
         <div class="list__item">
@@ -27,11 +46,11 @@
             Public RPC endpoint
           </div>
           <a
-            :href="`http://${endpoints[code][0]}`"
+            :href="`http://${endpoints[0]}`"
             target="_blank"
             rel="noreferrer noopener"
             class="list__item__url tm-rf1 tm-lh-title tm-code"
-            >{{ endpoints[code][0] }}</a
+            >{{ endpoints[0] }}</a
           >
         </div>
 
@@ -40,11 +59,11 @@
             Public REST endpoint
           </div>
           <a
-            :href="`http://${endpoints[code][1]}`"
+            :href="`http://${endpoints[1]}`"
             target="_blank"
             rel="noreferrer noopener"
             class="list__item__url tm-rf1 tm-lh-title tm-code"
-            >{{ endpoints[code][1] }}</a
+            >{{ endpoints[1] }}</a
           >
         </div>
       </div>
@@ -67,14 +86,7 @@ export default {
   data() {
     return {
       // RPC, REST
-      endpoints: {
-        bigbang: ['157.230.185.206:26657', '157.230.185.206:1317'],
-        stargate: [
-          'rpc.stargate.sim.bigdipper.live',
-          'api.stargate.sim.bigdipper.live',
-        ],
-        cosmoshub: ['34.66.55.131:26657', '34.66.55.131:1317'],
-      },
+      endpoints: ['34.71.170.158:26657', '34.71.170.158:1317'],
     }
   },
 }
@@ -108,13 +120,6 @@ export default {
     &__title
       margin-bottom var(--spacing-5)
       color var(--white)
-
-blockquote
-  padding-left var(--spacing-7)
-  padding-right var(--spacing-7)
-  border-left 0.25rem solid #FFBA31
-  color inherit
-  margin-top var(--spacing-8)
 
 @media screen and (max-width: 1024px)
   .left, .list

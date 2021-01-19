@@ -3,18 +3,7 @@
     <div class="tm-section-container section-container">
       <div class="container list">
         <div class="section-graphics">
-          <graphics-chain-1
-            v-if="this.$route.path === '/testnets/wallets-explorers-exchanges'"
-            class="section-graphics__canvas"
-          />
-          <graphics-chain-2
-            v-if="this.$route.path === '/testnets/community'"
-            class="section-graphics__canvas"
-          />
-          <graphics-chain-3
-            v-if="this.$route.path === '/testnets/validator'"
-            class="section-graphics__canvas"
-          />
+          <graphics-chain class="section-graphics__canvas" />
         </div>
         <div class="list__top tm-rf1 tm-lh-copy">
           <div
@@ -27,10 +16,23 @@
           </div>
         </div>
         <div class="list__title tm-rf6 tm-bold tm-lh-title">
-          {{ title }}
+          Prepare for <span class="list__title__highlight">Stargate</span>
         </div>
         <div class="list__desc tm-rf2 tm-lh-copy tm-measure-narrower">
-          {{ desc }}
+          The future is here, Cosmonauts! Start integration testing with
+          Stargate today.
+        </div>
+        <div class="list__quote tm-measure-wide">
+          <blockquote>
+            <span class="tm-rf0 tm-bold tm-lh-copy" style="color: var(--white)"
+              >Imminent upgrades</span
+            >
+            <p class="tm-rf0 tm-lh-copy" style="color: var(--gray-800)">
+              Service providers have until January 28th to test their
+              integrations with Stargate before the upgrades are launched on
+              Cosmos Hub.
+            </p>
+          </blockquote>
         </div>
       </div>
     </div>
@@ -44,14 +46,6 @@ export default {
       type: String,
       default: '',
     },
-    title: {
-      type: String,
-      default: '',
-    },
-    desc: {
-      type: String,
-      default: '',
-    },
   },
 }
 </script>
@@ -60,6 +54,13 @@ export default {
 /deep/
   .section
     overflow initial
+
+blockquote
+  padding-left var(--spacing-7)
+  padding-right var(--spacing-7)
+  border-left 0.25rem solid #FFBA31
+  color inherit
+  margin-top var(--spacing-8)
 
 .section
   overflow visible
@@ -85,10 +86,24 @@ export default {
     grid-column 4/ span 9
     position relative
 
+    &__highlight
+      background-color var(--white)
+      background-image linear-gradient(90deg, #E644F8 0%, #CCD1FF 51.56%, #99DAFF 100%)
+      background-size 100%
+      background-clip text
+      -webkit-text-fill-color transparent
+      -moz-text-fill-color transparent
+      padding-right 0.05em // Fix offset clipping
+
   &__desc
     margin-top var(--spacing-8)
     grid-column 5/ span 9
     color var(--gray-800)
+    position relative
+
+  &__quote
+    margin-top var(--spacing-8)
+    grid-column 5/ span 9
     position relative
 
 .section-graphics
