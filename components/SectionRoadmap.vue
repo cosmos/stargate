@@ -133,6 +133,9 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+video
+  border-radius $border-radius-6
+
 .percentage
   background linear-gradient(to bottom right, #3fb3ff, #9010c7)
   background-clip text
