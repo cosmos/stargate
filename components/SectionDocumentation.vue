@@ -1,5 +1,5 @@
 <template>
-  <div class="tm-section-container section-container">
+  <div id="documentation" class="tm-section-container section-container">
     <div class="container">
       <div class="left">
         <div class="left__title tm-rf3 tm-bold tm-lh-title">Documentation</div>

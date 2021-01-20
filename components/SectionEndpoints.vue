@@ -106,7 +106,7 @@ export default {
           logo: '/icons/prepare-zone.svg',
           name: 'Zone Developers',
           desc:
-            'Prepare for Stargate by upgrading your applications and modules to support the latest Cosmos SDK 0.40.0 release. See the <a href="/resources">resources below</a> for migration guides.',
+            'Prepare for Stargate by upgrading your applications and modules to support the latest Cosmos SDK 0.40.0 release. See the <a href="#documentation">resources below</a> for migration guides.',
         },
         {
           logo: '/icons/prepare-validators.svg',
