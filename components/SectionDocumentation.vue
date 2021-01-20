@@ -45,7 +45,7 @@
           </div>
         </a>
         <a
-          href="https://discord.gg/vcExX9T"
+          href="https://discord.com/channels/669268347736686612/775776691213041674"
           target="blank_"
           rel="noreferrer noopener"
         >
@@ -61,7 +61,7 @@
               </div>
             </div>
             <div
-              class="cards__item__text__title tm-rf3 tm-bold tm-lh-title tm-measure-narrow"
+              class="cards__item__text__title tm-rf2 tm-bold tm-lh-title tm-measure-narrow"
             >
               Get developer support
             </div>

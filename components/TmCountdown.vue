@@ -1,6 +1,6 @@
 <template lang="pug">
   div(v-if='countingDown')
-    code -{{ days}}:{{ hours }}:{{ minutes }}
+    code -{{ days}}:{{ hours }}:{{ minutes }}:{{ seconds }}
 </template>
 
 <script>

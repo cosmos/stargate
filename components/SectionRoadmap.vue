@@ -26,8 +26,9 @@
           <tm-button
             to-link="internal"
             to="/testnet"
+            size="l"
             color="var(--gray-50)"
-            background-color="linear-gradient(89.41deg, #99DAFF -0.22%, #FFD1FD 99.78%)"
+            background-color="linear-gradient(90deg, #99DAFF 0%, #FFD1FD 50%, var(--primary-900) 100%), var(--primary-900)"
             class="video-text__btn"
             >Prepare <span class="icon__right">--></span></tm-button
           >

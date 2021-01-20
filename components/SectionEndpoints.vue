@@ -132,7 +132,7 @@ export default {
 <style lang="stylus" scoped>
 .left
   grid-column 1 / span 4
-  margin-top var(--spacing-9)
+  margin-top var(--spacing-10)
   &__title
     color var(--white)
   &__id
@@ -145,7 +145,7 @@ export default {
       color var(--gray-800)
 
 .list
-  margin-top var(--spacing-9)
+  margin-top var(--spacing-10)
   grid-column 6/span 7
 
   &__title
@@ -171,6 +171,17 @@ export default {
     &__paragraph
       margin-top var(--spacing-5)
       color var(--gray-800)
+
+    &__url
+      position relative
+      &:after
+        content "↗"
+        position absolute
+        bottom .466em
+        padding-left .4875em
+        font-size .75em
+        line-height 1
+        transition transform .2s ease-out 0s
 
 @media screen and (max-width: 1024px)
   .left, .list

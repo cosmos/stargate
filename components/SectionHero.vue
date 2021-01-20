@@ -106,6 +106,8 @@ export default {
   flex-direction column
   align-items center
   justify-content center
+  &__title
+    color var(--white)
   &__timer
     color var(--secondary-900)
     background-color var(--white-200)

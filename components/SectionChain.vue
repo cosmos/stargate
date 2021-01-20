@@ -5,14 +5,14 @@
         <div class="section-graphics">
           <graphics-chain class="section-graphics__canvas" />
         </div>
-        <div class="list__top tm-rf1 tm-lh-copy">
+        <div class="list__top">
           <div
-            class="list__top__heading tm-rf-1 tm-medium tm-lh-title tm-overline"
+            class="list__top__heading tm-rf0 tm-medium tm-lh-title tm-overline"
           >
             service providers
           </div>
         </div>
-        <div class="list__title tm-rf6 tm-bold tm-lh-title">
+        <div class="list__title tm-rf7 tm-bold tm-lh-title">
           Prepare for <span class="list__title__highlight">Stargate</span>
         </div>
         <div class="list__desc tm-rf2 tm-lh-copy tm-measure-narrower">
@@ -98,6 +98,8 @@ blockquote
   grid-row span 4
   position relative
   z-index -1
+  left -40%
+  top 8%
   &__canvas
     position absolute
     width 390%

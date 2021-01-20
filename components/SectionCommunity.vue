@@ -40,7 +40,8 @@
             Hub on Jan 28th
           </div>
         </a>
-        <a class="cards__item__top-right disabled">
+        <!-- TODO: revert to <a> -->
+        <div class="cards__item__top-right disabled">
           <span class="cards__item__disclosure tm-rf2 tm-lh-solid"
             >&#8599;</span
           >
@@ -58,7 +59,7 @@
             Join the <code>#🌠-stargate-testnet</code> channel in the Cosmos
             community Discord and chat with developers.
           </div> -->
-        </a>
+        </div>
       </div>
 
       <div class="subsection-title__right tm-rf4 tm-bold tm-lh-title">
@@ -109,7 +110,7 @@
           </div>
         </a>
         <a
-          href="https://discord.gg/vcExX9T"
+          href="https://discord.com/channels/669268347736686612/775776691213041674"
           target="_blank"
           rel="noreferrer noopener"
           class="cards__item"
@@ -170,7 +171,7 @@ export default {}
   position absolute
   z-index 1
   top 50%
-  left 35%
+  left 37%
 
 .wide-card
   margin-top var(--spacing-7)
@@ -242,11 +243,14 @@ export default {}
   grid-column 1 / span 12
   z-index 1
   position relative
+  color var(--white)
 
   &__right
     margin-top var(--spacing-11)
     margin-bottom var(--spacing-7)
     grid-column 8/span 5
+    color var(--white)
+    text-align right
 
 .cards
   margin-top var(--spacing-7)
@@ -274,8 +278,7 @@ export default {}
     border-radius $border-radius-5
     hover-raise(-3px)
     &__top-left
-      height auto
-      min-height 16rem
+      height 21.3125rem
       position relative
       padding var(--spacing-8)
       display flex
@@ -290,8 +293,7 @@ export default {}
       border-radius $border-radius-5
       hover-raise(-3px)
     &__top-right
-      height auto
-      min-height 16rem
+      height 21.3125rem
       position relative
       padding var(--spacing-8)
       display flex
@@ -337,9 +339,6 @@ export default {}
 @media $breakpoint-large
   .cards
     grid-template-columns 1fr 1fr
-
-  // .section-graphics-zone
-  //   display none
 
 @media $breakpoint-xsmall-only
   .cards

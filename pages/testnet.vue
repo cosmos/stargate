@@ -5,7 +5,7 @@
     <readiness-banner />
     <section-documentation />
     <section-testnets />
-    <section-explorer :data="explorers"></section-explorer>
+    <!-- <section-explorer :data="explorers"></section-explorer> -->
     <bug-bounty-banner />
     <section-form />
   </main>
