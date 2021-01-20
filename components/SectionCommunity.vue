@@ -11,45 +11,16 @@
         awareness on socials, and voting on governance proposals.
       </div>
 
-      <!-- <a
-        href="https://www.mintscan.io/cosmos/proposals/35"
-        target="_blank"
-        rel="noreferrer noopener"
-        class="wide-card bottom"
-      >
-        <div class="wide-card__left wide-card__content">
-          <div
-            class="cards__item__caption tm-rf-1 tm-rf0-m-up tm-medium tm-lh-title tm-overline"
-          >
-            Proposal
-          </div>
-          <div class="cards__item__title tm-rf2 tm-bold tm-lh-title">
-            Stargate Cosmos Hub
-          </div>
-          <div
-            class="cards__item__description tm-rf0 tm-rf1-m-up tm-lh-copy tm-measure-narrow"
-          >
-            Vote on the upcoming proposal to bring the Stargate upgrades to
-            Cosmos Hub.
-          </div>
-        </div>
-        <div class="wide-card__right">
-          <graphics-hub-planet class="section-graphics" />
-          <span class="cards__item__disclosure tm-rf2 tm-lh-solid"
-            >&#8599;</span
-          >
-        </div>
-      </a> -->
-
       <div class="subsection-title tm-rf4 tm-bold tm-lh-title">
         Vote for Stargate
       </div>
       <div class="cards">
+        <graphics-hub-zone class="section-graphics-zone" />
         <a
           href="https://www.mintscan.io/cosmos/proposals/35"
           target="_blank"
           rel="noreferrer noopener"
-          class="cards__item"
+          class="cards__item__top-left"
         >
           <span class="cards__item__disclosure tm-rf2 tm-lh-solid"
             >&#8599;</span
@@ -69,7 +40,7 @@
             Hub on Jan 28th
           </div>
         </a>
-        <a class="cards__item disabled">
+        <a class="cards__item__top-right disabled">
           <span class="cards__item__disclosure tm-rf2 tm-lh-solid"
             >&#8599;</span
           >
@@ -195,6 +166,12 @@ export default {}
   color var(--gray-800)
   margin-bottom var(--spacing-10)
 
+.section-graphics-zone
+  position absolute
+  z-index 1
+  top 50%
+  left 35%
+
 .wide-card
   margin-top var(--spacing-7)
   display grid
@@ -267,7 +244,7 @@ export default {}
   position relative
 
   &__right
-    margin-top var(--spacing-7)
+    margin-top var(--spacing-11)
     margin-bottom var(--spacing-7)
     grid-column 8/span 5
 
@@ -296,6 +273,39 @@ export default {}
     background-repeat no-repeat
     border-radius $border-radius-5
     hover-raise(-3px)
+    &__top-left
+      height auto
+      min-height 16rem
+      position relative
+      padding var(--spacing-8)
+      display flex
+      flex-direction column
+      flex-wrap nowrap
+      justify-content flex-start
+      color var(--white)
+      background url("/top-surface-graphics.svg"), linear-gradient(256.92deg, #120018 0%, #121435 100%)
+      background-position 70%
+      background-size contain
+      background-repeat no-repeat
+      border-radius $border-radius-5
+      hover-raise(-3px)
+    &__top-right
+      height auto
+      min-height 16rem
+      position relative
+      padding var(--spacing-8)
+      display flex
+      flex-direction column
+      flex-wrap nowrap
+      color var(--white)
+      background url("/bottom-half-right-graphics.svg"), linear-gradient(256.92deg, #121435 0%, #030419 100%)
+      justify-content flex-start
+      background-position bottom right
+      background-size auto
+      background-repeat no-repeat
+      border-radius $border-radius-5
+      // uncomment after removing disabled
+      // hover-raise(-3px)
     &:first-child
       background url("/bottom-half-graphics.svg"), linear-gradient(256.92deg, #121435 0%, #030419 100%)
       justify-content flex-end
@@ -328,9 +338,12 @@ export default {}
   .cards
     grid-template-columns 1fr 1fr
 
+  // .section-graphics-zone
+  //   display none
+
 @media $breakpoint-xsmall-only
   .cards
-    &__item
+    &__item,
       height auto
       min-height 16rem
       border-radius $border-radius-4
@@ -364,4 +377,8 @@ export default {}
   .section-statement,
   .subsection-title__right
     grid-column 1 / span 12
+
+@media screen and (max-width: 900px)
+  .section-graphics-zone
+    display none
 </style>

@@ -133,7 +133,7 @@ export default {
     display flex
     align-items stretch
     width 100%
-    padding-top var(--spacing-9)
+    padding-top var(--spacing-12)
     // padding-bottom var(--spacing-10)
   .container
     position relative

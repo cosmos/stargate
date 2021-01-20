@@ -144,7 +144,7 @@ video
 .section-cards
   display grid
   grid-template-columns repeat(3, 1fr)
-  grid-column 5/span 8
+  grid-column 5/span 11
   gap var(--spacing-6)
   margin-top var(--spacing-11)
 
