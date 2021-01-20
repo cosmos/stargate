@@ -25,9 +25,9 @@
         </div>
         <div class="left__id">
           <span class="left__id__chain tm-rf-1 tm-lh-title">chain-id</span>
-          <span class="left__id__id tm-rf1 tm-bold tm-lh-copy tm-code">{{
-            id
-          }}</span>
+          <span class="left__id__id tm-rf1 tm-bold tm-lh-copy tm-code"
+            >stargate-final</span
+          >
         </div>
       </div>
       <div class="list">
