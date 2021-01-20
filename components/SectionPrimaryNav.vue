@@ -203,8 +203,8 @@ export default {
     height 4rem
   .logo
     transform-origin 0% 50%
-  // .nav-primary
-  //   align-items flex-end
+  .nav-primary
+    align-items center
 
 @media $breakpoint-xsmall-only
   .nav
@@ -243,6 +243,15 @@ export default {
     display inline-flex
     justify-content center
     align-items center
+
+  .countdown
+    display none
+
+@media screen and (max-width: 1024px)
+  .nav
+    &-primary
+      justify-content center
+      flex-direction column
 
   .countdown
     display none

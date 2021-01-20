@@ -47,13 +47,50 @@
             >
           </div>
         </div>
+        <div class="hero-countdown">
+          <div
+            class="hero-countdown__title tm-rf0 tm-medium tm-lh-title tm-overline"
+          >
+            Cosmos hub upgrade
+          </div>
+          <tm-countdown
+            :now="countdown.now"
+            :end="countdownTimer.end"
+            class="hero-countdown__timer tm-rf1 tm-medium tm-lh-title tm-overline"
+          />
+          <div class="hero-countdown__date tm-rf0 tm-lh-copy">
+            January 28, 06:00 UTC
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-export default {}
+import moment from 'moment-timezone'
+
+export default {
+  data() {
+    return {
+      countdown: {
+        now: Math.trunc(new Date(new Date().toUTCString()).getTime() / 1000),
+        // usage: moment.tz("2021-01-28 06:00", "UTC").format()
+        end: '2021-01-28T06:00:00Z',
+      },
+    }
+  },
+  mounted() {
+    window.setInterval(() => {
+      this.countdown.now = Math.trunc(new Date().getTime() / 1000)
+    }, 1000)
+  },
+  methods: {
+    countdownTimer(date, time) {
+      return moment.tz(`${date} ${time}`, 'UTC').format()
+    },
+  },
+}
 </script>
 
 <style lang="stylus" scoped>
@@ -63,11 +100,29 @@ export default {}
   to
     transform translate3d(0,0,0) rotate(360deg)
 
+.hero-countdown
+  margin-top var(--spacing-10)
+  display flex
+  flex-direction column
+  align-items center
+  justify-content center
+  &__timer
+    color var(--secondary-900)
+    background-color var(--white-200)
+    padding 0.25rem 1rem
+    border-radius $border-radius-1
+    width fit-content
+    margin-top var(--spacing-4)
+    margin-bottom var(--spacing-4)
+  &__date
+    color var(--primary-900)
+
 .section-hero
   position relative
   height 100vh
   min-height 52rem
   max-height 72rem
+  margin-top calc(var(--spacing-10) * -1)
   margin-bottom var(--spacing-10)
   display flex
   justify-content stretch
@@ -79,7 +134,7 @@ export default {}
     align-items stretch
     width 100%
     padding-top var(--spacing-9)
-    padding-bottom var(--spacing-10)
+    // padding-bottom var(--spacing-10)
   .container
     position relative
     display flex
