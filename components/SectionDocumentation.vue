@@ -248,7 +248,7 @@ export default {
       align-items flex-end
 
 .list__item__tags__item + .list__item__tags__item
-  margin-left var(--spacing-5)
+  margin-left var(--spacing-3)
   margin-top var(--spacing-3)
 
 @media screen and (max-width: 1024px)
