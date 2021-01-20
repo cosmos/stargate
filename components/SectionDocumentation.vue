@@ -27,13 +27,13 @@
               <div class="list__item__title tm-rf1 tm-bold tm-lh-title">
                 {{ item.name }}
               </div>
-              <div class="list__item__dismiss tm-rf2 tm-lh-solid">&#8599;</div>
+              <div class="list__item__arrow tm-rf2 tm-lh-solid">&#8599;</div>
             </div>
             <div class="list__item__tags">
               <div
                 v-for="i in item.tags"
                 :key="i"
-                class="list__item__tags__item"
+                class="list__item__tags__item tm-rf0 tm-lh-title"
                 :style="{
                   '--tag-text-color': `${tagColor[camelize(i)][0]}`,
                   '--tag-background-color': `${tagColor[camelize(i)][1]}`,
@@ -42,6 +42,36 @@
                 {{ i }}
               </div>
             </div>
+          </div>
+        </a>
+        <a
+          href="https://discord.gg/vcExX9T"
+          target="blank_"
+          rel="noreferrer noopener"
+        >
+          <div class="cards__item cards__item__text">
+            <div class="cards__item__top">
+              <div
+                class="cards__item__text__heading tm-rf-1 tm-rf0-m-up tm-medium tm-lh-title tm-overline tm-measure"
+              >
+                chat
+              </div>
+              <div class="cards__item__text__arrow tm-rf2 tm-lh-solid">
+                &#8599;
+              </div>
+            </div>
+            <div
+              class="cards__item__text__title tm-rf3 tm-bold tm-lh-title tm-measure-narrow"
+            >
+              Get developer support
+            </div>
+            <p
+              class="cards__item__text__paragraph tm-measure-narrow tm-rf1 tm-lh-copy"
+            >
+              Join the <span class="tm-bold tm-code">#🌠-stargate-testnet</span>
+              channel on the Cosmos Community Discord to chat with other
+              developers.
+            </p>
           </div>
         </a>
       </div>
@@ -118,6 +148,35 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+.cards__item
+  margin-top var(--spacing-9)
+  background linear-gradient(262.23deg, #120018 0%, #121435 100%)
+  border-radius $border-radius-5
+  overflow hidden
+  hover-raise(-3px)
+  padding var(--spacing-8)
+  &__top
+    display flex
+    justify-content space-between
+    align-items center
+  &__code
+    display grid
+    grid-template-columns 50% 50%
+    grid-template-rows 1fr
+    gap var(--spacing-3)
+    margin-top var(--spacing-8)
+  &__text
+    &__heading
+      color var(--white-500)
+    &__title
+      margin-top var(--spacing-3)
+      color var(--white)
+    &__paragraph
+      margin-top var(--spacing-5)
+      color var(--white-700)
+    &__arrow
+      color var(--white-300)
+
 .left
   grid-column 1 / span 4
   margin-top var(--spacing-9)
@@ -145,6 +204,9 @@ export default {
       display flex
       justify-content space-between
       align-items center
+
+    &__arrow
+      color var(--gray-600)
 
     &__tags
 
