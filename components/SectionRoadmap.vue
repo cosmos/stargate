@@ -145,15 +145,15 @@ video
 .section-cards
   display grid
   grid-template-columns repeat(3, 1fr)
-  grid-column 5/span 11
+  grid-column 4/span 12
   gap var(--spacing-6)
   margin-top var(--spacing-11)
 
 .section-roadmap
   .section-header
-    grid-column 1 / span 12
+    grid-column 1 / span 15
   .section-video
-    grid-column 4 / span 12
+    grid-column 5/16
     margin-top var(--spacing-6)
   .section-title
     grid-column 2/span 6
@@ -166,7 +166,7 @@ video
       margin-top var(--spacing-8)
   .section-milestones
     margin-top var(--spacing-11)
-    grid-column 1 / 5
+    grid-column 1 / span 2
     &__title
       color var(--white)
     &__cta
@@ -286,7 +286,7 @@ video
 @media screen and (max-width: 1520px)
   .section-cards
     grid-template-columns repeat(3, 1fr)
-    grid-column 1/span 12
+    grid-column 1/span 15
 
   .section-video
     grid-column 1/span 12
@@ -297,13 +297,13 @@ video
 
 @media screen and (max-width: 1024px)
   .section .section-header
-    grid-column 1 / span 12
+    grid-column 1 / span 15
 
   .section-roadmap
     .section-video, .video-text
-      grid-column 1 / span 12
+      grid-column 1 / span 15
     .section-title
-      grid-column 1 / span 12
+      grid-column 1 / span 15
       text-align left
       margin-top var(--spacing-8)
     .proposal-card,
