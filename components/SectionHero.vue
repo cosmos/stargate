@@ -282,11 +282,15 @@ export default {
       padding-bottom var(--spacing-7)
     .container
       .content
-        padding-bottom 40%
+        padding-top 20%
         .subtitle
           margin-top var(--spacing-6)
     .hero-graphics
       font-size 0.36rem
+
+@media screen and (max-width: 414px)
+  .section-hero
+    margin-top calc(var(--spacing-7) * -1)
 
 @media screen and (min-width: 1536px)
   .section-hero
