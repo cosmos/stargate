@@ -171,7 +171,8 @@ export default {}
   position absolute
   z-index 1
   top 50%
-  left 37%
+  left 50%
+  transform translate(-50%, 0)
 
 .wide-card
   margin-top var(--spacing-7)
@@ -336,7 +337,7 @@ export default {}
       margin-top var(--spacing-4)
       color var(--white-700)
 
-@media $breakpoint-large
+@media $breakpoint-medium
   .cards
     grid-template-columns 1fr 1fr
 

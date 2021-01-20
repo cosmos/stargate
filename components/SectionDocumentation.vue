@@ -200,6 +200,10 @@ export default {
     padding-bottom var(--spacing-7)
     border-bottom 1px solid #282b53
 
+    &:hover .list__item__arrow
+      transform translateX(3px)
+      color var(--white)
+
     &__top
       display flex
       justify-content space-between
@@ -207,6 +211,7 @@ export default {
 
     &__arrow
       color var(--gray-600)
+      transition color 0.1s ease-out, transform 0.15s ease-out
 
     &__tags
 
