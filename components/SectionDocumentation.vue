@@ -243,8 +243,13 @@ export default {
       color var(--gray-800)
 
     &__tags
-      display flex
-      gap 1rem
+      display inline-flex
+      flex-wrap wrap
+      align-items flex-end
+
+.list__item__tags__item + .list__item__tags__item
+  margin-left var(--spacing-5)
+  margin-top var(--spacing-3)
 
 @media screen and (max-width: 1024px)
   .left, .list

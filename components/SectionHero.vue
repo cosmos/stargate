@@ -174,7 +174,7 @@ export default {
 
   .hero-graphics
     position absolute
-    top -10%
+    top -5%
     left 0
     bottom -100%
     width 100%
@@ -263,14 +263,18 @@ export default {
       font-size 0.5rem
 
   .btn-container
-    display grid
-    grid-template-columns repeat(auto-fill, minmax(13rem, auto))
-    gap var(--spacing-7)
+    display flex
+    flex-direction column
 
     &__btn
 
       &__primary
         margin-right 0
+        height fit-content
+
+      &__secondary
+        height fit-content
+        margin-top var(--spacing-7)
 
 @media screen and (max-width: 576px)
   .section-hero

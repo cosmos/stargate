@@ -67,4 +67,9 @@ export default {
 @media $breakpoint-medium-max
   .content
     padding 2rem
+
+@media screen and (max-width: 320px)
+  .left,
+  .right
+    text-align center
 </style>
