@@ -103,7 +103,7 @@ blockquote
     width 390%
     right -190%
     height auto
-    margin-top 10%
+    margin-top -24%
 
 @media $breakpoint-medium-max
   .list__top,

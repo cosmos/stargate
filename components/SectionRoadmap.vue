@@ -5,9 +5,33 @@
         <div class="section-header tm-rf0 tm-medium tm-lh-title tm-overline">
           Roadmap
         </div>
-        <!-- <div class="section-title tm-rf7 tm-bold tm-lh-title">
+        <div class="section-video">
+          <video width="879" height="493" autoplay loop muted>
+            <source src="/videos/stargate-promo.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="section-title tm-rf7 tm-bold tm-lh-title">
           <span class="percentage">100%</span> complete
-        </div> -->
+        </div>
+        <div class="video-text">
+          <p class="section-paragraph tm-rf1 tm-lh-copy">
+            The latest releases of Tendermint Core, IBC and Cosmos SDK are ready
+            for Stargate. Are you?
+          </p>
+          <p class="section-paragraph tm-rf1 tm-lh-copy">
+            Now is the time to integrate with Stargate and prepare for the
+            imminent ecosystem upgrades.
+          </p>
+          <tm-button
+            to-link="internal"
+            to="/testnet"
+            color="var(--gray-50)"
+            background-color="linear-gradient(89.41deg, #99DAFF -0.22%, #FFD1FD 99.78%)"
+            class="video-text__btn"
+            >Prepare <span class="icon__right">--></span></tm-button
+          >
+        </div>
         <div class="section-milestones">
           <div class="section-milestones__title tm-rf3 tm-bold tm-lh-title">
             Releases
@@ -23,34 +47,39 @@
             >
           </div>
         </div>
-        <a
-          v-for="item in milestoneList"
-          :key="item.releaseUrl"
-          :href="item.releaseUrl"
-          target="_blank"
-          rel="noreferrer noopener"
-          class="section-row"
-        >
-          <div
-            class="meter"
-            :style="{
-              '--progress-bar-width': `100%`,
-              '--progress-bar-background-color': `${bgColor[item.logo]}`,
-            }"
-          ></div>
-          <div class="details">
-            <div class="icon">
-              <component :is="`icon-${item.logo}`" />
-            </div>
-            <div class="text">
-              <div class="title tm-rf1 tm-bold tm-lh-copy">
-                {{ item.defaultTitle }}
+        <div class="section-cards">
+          <a
+            v-for="item in releases"
+            :key="item.name"
+            :href="item.url"
+            target="_blank"
+            rel="noreferrer noopener"
+            class="section-row"
+          >
+            <div
+              class="meter"
+              :style="{
+                '--progress-bar-width': `100%`,
+                '--progress-bar-background-color': `${bgColor[item.logo]}`,
+              }"
+            ></div>
+            <div class="details">
+              <div class="arrow tm-rf2 tm-lh-solid">&#8599;</div>
+              <div class="icon">
+                <component :is="`icon-${item.logo}`" />
               </div>
-              <div class="subtitle tm-rf0 tm-lh-copy">{{ item.repo }}</div>
-              <div class="subtitle tm-rf0 tm-lh-copy">{{ item.id }}</div>
+              <div class="text">
+                <div class="title tm-rf1 tm-bold tm-lh-copy">
+                  {{ item.name }}
+                </div>
+                <div class="subtitle tm-rf0 tm-lh-copy">{{ item.repo }}</div>
+                <div class="version tm-rf0 tm-lh-copy tm-code">
+                  {{ item.version }}
+                </div>
+              </div>
             </div>
-          </div>
-        </a>
+          </a>
+        </div>
       </div>
     </div>
   </div>
@@ -70,45 +99,35 @@ export default {
   data() {
     return {
       milestoneList: [],
-      sources: [
-        ['cosmos/cosmos-sdk', 'v0.40.0', 'sdk', 'Cosmos SDK 0.40'],
-        ['tendermint/tendermint', 'v0.34.0', 'core', 'Tendermint Core 0.34'],
-        ['cosmos/cosmos-sdk', 'v1.0.0-rc6', 'ibc', 'IBC 1.0'],
-      ],
       bgColor: {
         sdk: 'linear-gradient(95.47deg, #320B93 0%, #3B2AB7 100%)',
         core: 'linear-gradient(95.47deg, #086108 0%, #018A01 100%)',
         ibc: 'linear-gradient(95.47deg, #121435 0%, #282B53 100%)',
       },
+      releases: [
+        {
+          url: 'https://github.com/tendermint/tendermint/releases',
+          version: '0.34',
+          name: 'Tendermint Core',
+          repo: 'tendermint/tendermint',
+          logo: 'core',
+        },
+        {
+          url: 'https://github.com/cosmos/ics/releases/tag/v1.0.0-rc6',
+          version: '1.0',
+          name: 'IBC',
+          repo: 'tendermint/tendermint',
+          logo: 'ibc',
+        },
+        {
+          url: 'https://github.com/cosmos/cosmos-sdk/releases',
+          version: '0.40',
+          name: 'Cosmos SDK',
+          repo: 'cosmos/cosmos-sdk',
+          logo: 'sdk',
+        },
+      ],
     }
-  },
-  mounted() {
-    this.sources.forEach(async (source) => {
-      const milestone = await this.getMilestone.apply(null, source)
-      this.milestoneList.push(milestone)
-    })
-  },
-  methods: {
-    getMilestone(repo, id, logo, defaultTitle, defaultProgress) {
-      const releaseUrl = `https://github.com/${repo}/releases/tag/${id}`
-
-      if (id === 'v0.40.0') {
-        return {
-          defaultTitle,
-          repo,
-          logo,
-          releaseUrl,
-          id,
-        }
-      } else {
-        return {
-          repo,
-          logo,
-          defaultTitle,
-          progress: null,
-        }
-      }
-    },
   },
 }
 </script>
@@ -119,26 +138,37 @@ export default {
   background-clip text
   -webkit-text-fill-color transparent
 
+.section-cards
+  display grid
+  grid-template-columns repeat(3, 1fr)
+  grid-column 5/span 8
+  gap var(--spacing-6)
+  margin-top var(--spacing-11)
+
 .section-roadmap
   .section-header
     grid-column 1 / span 12
+  .section-video
+    grid-column 4 / span 12
+    margin-top var(--spacing-6)
   .section-title
-    margin-top var(--spacing-10)
-    margin-bottom var(--spacing-9)
-    text-align right
-    grid-column 1 / span 12
+    grid-column 2/span 6
+    margin-top -35%
+    position relative
+  .video-text
+    grid-column 2/span 6
+    margin-top var(--spacing-6)
+    &__btn
+      margin-top var(--spacing-8)
   .section-milestones
+    margin-top var(--spacing-11)
     grid-column 1 / 5
-    grid-row 3 / 6
     &__title
-      margin-top var(--spacing-7)
       color var(--white)
     &__cta
       margin-top var(--spacing-5)
   .section-row
     position relative
-    margin-top var(--spacing-7)
-    grid-column 5 / span 8
     background linear-gradient(258.96deg, #121435 0%, #030419 100%)
     color white
     border-radius $border-radius-5
@@ -154,26 +184,30 @@ export default {
       transition opacity .15s
     .details
       position relative
-      grid-template-columns auto 1fr
-      gap var(--spacing-6)
+      grid-template-columns auto
+      gap var(--spacing-9)
       padding var(--spacing-8)
       grid-column-start 2
       display grid
-      grid-auto-flow column
       align-items center
       text-align left
-      justify-content space-between
+      .arrow
+        position absolute
+        top var(--spacing-7)
+        right var(--spacing-7)
+        color var(--white-300)
       .icon
-        width 3rem
-        height 3rem
         fill var(--white)
-        opacity 0.50
+        margin auto
+        margin-top var(--spacing-8)
         transition opacity .25s, transform .15s ease-out
       .title
         transition transform .15s ease-out
       .subtitle
-        color var(--white-70)
+        color var(--white-700)
         transition color .15s, transform .15s ease-out
+      .version
+        margin-top var(--spacing-5)
       .progress__wrapper
         display flex
         flex-direction column
@@ -245,16 +279,36 @@ export default {
     .articles-item__icon
       transform translate(3px, -3px)
 
+@media screen and (max-width: 1520px)
+  .section-cards
+    grid-template-columns repeat(3, 1fr)
+    grid-column 1/span 12
+
+  .section-video
+    grid-column 1/span 12
+
+  video
+    width 100% !important
+    height auto !important
+
 @media screen and (max-width: 1024px)
   .section .section-header
-      grid-column 1 / span 12
+    grid-column 1 / span 12
 
   .section-roadmap
+    .section-video, .video-text
+      grid-column 1 / span 12
     .section-title
       grid-column 1 / span 12
       text-align left
-    .section-row, .proposal-card, .section-milestones, .section-proposal
+      margin-top var(--spacing-8)
+    .proposal-card,
+    .section-milestones,
+    .section-proposal
       grid-column 1 / span 12
+
+  .section-cards
+    grid-template-columns repeat(2, 1fr)
 
 @media screen and (max-width: 767px)
   .section-roadmap
@@ -276,6 +330,9 @@ export default {
       .details
         grid-template-columns unset
         grid-auto-flow unset
+
+  .section-cards
+    grid-template-columns repeat(1, 1fr)
 
 @media screen and (max-width: 414px)
   .meter

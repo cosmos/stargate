@@ -31,7 +31,6 @@
               size="l"
               color="var(--white)"
               background-color="var(--gray-trans-300)"
-              s
               glow
               class="btn-container__btn__primary"
               >Prepare <span class="icon__right">--></span></tm-button
