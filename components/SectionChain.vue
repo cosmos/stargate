@@ -9,10 +9,7 @@
           <div
             class="list__top__heading tm-rf-1 tm-medium tm-lh-title tm-overline"
           >
-            chain-id
-          </div>
-          <div class="list__top__chain-id tm-code">
-            {{ id }}
+            service providers
           </div>
         </div>
         <div class="list__title tm-rf6 tm-bold tm-lh-title">
@@ -40,14 +37,7 @@
 </template>
 
 <script>
-export default {
-  props: {
-    id: {
-      type: String,
-      default: '',
-    },
-  },
-}
+export default {}
 </script>
 
 <style lang="stylus" scoped>
@@ -70,25 +60,22 @@ blockquote
   position relative
 
   &__top
-    grid-column 5/ span 9
+    grid-column 6/span 7
     position relative
 
     &__heading
       color var(--gray-600)
       position relative
 
-    &__chain-id
-      color var(--gray-900)
-
   &__title
     margin-top var(--spacing-8)
     color var(--white)
-    grid-column 4/ span 9
+    grid-column 5/ span 9
     position relative
 
     &__highlight
       background-color var(--white)
-      background-image linear-gradient(90deg, #E644F8 0%, #CCD1FF 51.56%, #99DAFF 100%)
+      background-image linear-gradient(90deg, #99DAFF 0%, #CCD1FF 51.56%, #E644F8 100%)
       background-size 100%
       background-clip text
       -webkit-text-fill-color transparent
@@ -97,13 +84,13 @@ blockquote
 
   &__desc
     margin-top var(--spacing-8)
-    grid-column 5/ span 9
+    grid-column 6/span 7
     color var(--gray-800)
     position relative
 
   &__quote
     margin-top var(--spacing-8)
-    grid-column 5/ span 9
+    grid-column 6/span 7
     position relative
 
 .section-graphics
@@ -121,7 +108,8 @@ blockquote
 @media $breakpoint-medium-max
   .list__top,
   .list__title,
-  .list__desc
+  .list__desc,
+  .list__quote
     grid-column 1/span 12
   .section-graphics
     grid-column 1/span 12

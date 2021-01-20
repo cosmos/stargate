@@ -1,8 +1,9 @@
 <template>
   <main>
-    <section-chain :id="id"></section-chain>
-    <section-endpoints :id="id" :code="code"></section-endpoints>
+    <section-chain></section-chain>
+    <section-endpoints></section-endpoints>
     <readiness-banner />
+    <section-documentation />
     <section-testnets />
     <section-explorer :data="explorers"></section-explorer>
     <bug-bounty-banner />
@@ -14,10 +15,6 @@
 export default {
   data() {
     return {
-      milestoneList: [],
-      currentUpdates: 3,
-      id: 'stargate-final',
-      code: 'asd',
       explorers: [
         {
           name: 'Big Dipper',
