@@ -10,6 +10,9 @@
       </div>
       <div class="container">
         <div class="content">
+          <div class="suptitle tm-rf2 tm-rf3-m-up tm-lh-copy">
+            The Internet of Blockchains is on the horizon.
+          </div>
           <h1 class="title">
             <div class="wordmarks">
               <wordmark-stargate variant="glow" />
@@ -17,30 +20,46 @@
             </div>
             <span class="sr-only">Stargate</span>
           </h1>
-          <div class="subtitle tm-rf2 tm-rf3-m-up tm-lh-copy">
-            The Internet of Blockchains is on the horizon.
+          <div class="subtitle tm-rf1 tm-lh-copy tm-measure-narrow">
+            Prepare your integrations for the imminent upgrades and vote today
+            to bring Stargate to Cosmos Hub.
           </div>
           <div class="btn-container">
             <tm-button
               to-link="internal"
-              to="/testnets"
+              to="/testnet"
               size="l"
-              color="var(--black)"
-              background-color="linear-gradient(90deg, #99DAFF 0%, #FFD1FD 50%, var(--primary-900) 100%), var(--primary-900)"
+              color="var(--white)"
+              background-color="var(--gray-trans-300)"
               glow
               class="btn-container__btn__primary"
-              >Prepare</tm-button
+              >Prepare <span class="icon__right">--></span></tm-button
             >
             <tm-button
               to-link="external"
               href="https://www.mintscan.io/cosmos/proposals/35"
               size="l"
-              color="var(--white)"
-              background-color="var(--gray-trans-300)"
+              color="var(--black)"
+              background-color="linear-gradient(90deg, #99DAFF 0%, #FFD1FD 50%, var(--primary-900) 100%), var(--primary-900)"
               glow
               class="btn-container__btn__secondary"
-              >Vote</tm-button
+              >Vote <span class="icon__right">&#8599;</span></tm-button
             >
+          </div>
+        </div>
+        <div class="hero-countdown">
+          <div
+            class="hero-countdown__title tm-rf0 tm-medium tm-lh-title tm-overline"
+          >
+            Cosmos hub upgrade
+          </div>
+          <tm-countdown
+            :now="countdown.now"
+            :end="countdownTimer.end"
+            class="hero-countdown__timer tm-rf1 tm-medium tm-lh-title tm-overline"
+          />
+          <div class="hero-countdown__date tm-rf0 tm-lh-copy">
+            January 28, 06:00 UTC
           </div>
         </div>
       </div>
@@ -49,7 +68,29 @@
 </template>
 
 <script>
-export default {}
+import moment from 'moment-timezone'
+
+export default {
+  data() {
+    return {
+      countdown: {
+        now: Math.trunc(new Date(new Date().toUTCString()).getTime() / 1000),
+        // usage: moment.tz("2021-01-28 06:00", "UTC").format()
+        end: '2021-01-28T06:00:00Z',
+      },
+    }
+  },
+  mounted() {
+    window.setInterval(() => {
+      this.countdown.now = Math.trunc(new Date().getTime() / 1000)
+    }, 1000)
+  },
+  methods: {
+    countdownTimer(date, time) {
+      return moment.tz(`${date} ${time}`, 'UTC').format()
+    },
+  },
+}
 </script>
 
 <style lang="stylus" scoped>
@@ -59,11 +100,31 @@ export default {}
   to
     transform translate3d(0,0,0) rotate(360deg)
 
+.hero-countdown
+  margin-top var(--spacing-10)
+  display flex
+  flex-direction column
+  align-items center
+  justify-content center
+  &__title
+    color var(--white)
+  &__timer
+    color var(--secondary-900)
+    background-color var(--white-200)
+    padding 0.25rem 1rem
+    border-radius $border-radius-1
+    width fit-content
+    margin-top var(--spacing-4)
+    margin-bottom var(--spacing-4)
+  &__date
+    color var(--primary-900)
+
 .section-hero
   position relative
   height 100vh
   min-height 52rem
   max-height 72rem
+  margin-top calc(var(--spacing-10) * -1)
   margin-bottom var(--spacing-10)
   display flex
   justify-content stretch
@@ -74,8 +135,8 @@ export default {}
     display flex
     align-items stretch
     width 100%
-    padding-top var(--spacing-9)
-    padding-bottom var(--spacing-10)
+    padding-top var(--spacing-12)
+    // padding-bottom var(--spacing-10)
   .container
     position relative
     display flex
@@ -86,6 +147,12 @@ export default {}
     .content
       margin auto
       width 100%
+      display flex
+      flex-direction column
+      align-items center
+      .suptitle
+        margin-bottom var(--spacing-7)
+        color var(--white)
       .title
         margin 0
         padding-left var(--spacing-5)
@@ -107,7 +174,7 @@ export default {}
 
   .hero-graphics
     position absolute
-    top -10%
+    top -5%
     left 0
     bottom -100%
     width 100%
@@ -196,14 +263,18 @@ export default {}
       font-size 0.5rem
 
   .btn-container
-    display grid
-    grid-template-columns repeat(auto-fill, minmax(13rem, auto))
-    gap var(--spacing-7)
+    display flex
+    flex-direction column
 
     &__btn
 
       &__primary
         margin-right 0
+        height fit-content
+
+      &__secondary
+        height fit-content
+        margin-top var(--spacing-7)
 
 @media screen and (max-width: 576px)
   .section-hero
@@ -215,11 +286,15 @@ export default {}
       padding-bottom var(--spacing-7)
     .container
       .content
-        padding-bottom 40%
+        padding-top 20%
         .subtitle
           margin-top var(--spacing-6)
     .hero-graphics
       font-size 0.36rem
+
+@media screen and (max-width: 414px)
+  .section-hero
+    margin-top calc(var(--spacing-7) * -1)
 
 @media screen and (min-width: 1536px)
   .section-hero

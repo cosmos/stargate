@@ -14,12 +14,12 @@
     "lint": "npm run lint:js"
   },
   "dependencies": {
-    "@nuxt/content": "^1.11.1",
     "axios": "^0.19.2",
     "install": "^0.13.0",
     "lodash": "^4.17.19",
     "markdown-it": "^11.0.1",
     "moment": "^2.27.0",
+    "moment-timezone": "^0.5.32",
     "npm": "^6.14.7",
     "nuxt": "^2.13.0",
     "pug": "^3.0.0",

@@ -30,9 +30,12 @@
               class="section-tabs__text__paragraph tm-measure tm-rf1 tm-lh-copy"
             >
               The community supports an SDK 0.39 Launchpad release that includes
-              backported bug fixes. The Cosmos development teams are working
-              together to document a clean migration path from Launchpad to a
-              stable Stargate release.
+              backported bug fixes. The
+              <nuxt-link :to="{ path: '/', hash: '#contributors' }"
+                >Cosmos development teams</nuxt-link
+              >
+              are working together to document a clean migration path from
+              Launchpad to a stable Stargate release.
             </p>
             <p class="section-tabs__text__cta">
               <tm-button
