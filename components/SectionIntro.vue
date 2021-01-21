@@ -45,6 +45,7 @@ export default {}
   background url(/stars.svg)
 .section-intro
   position relative
+  margin-top var(--spacing-10)
   .section-title
     grid-column 1 / span 12
     grid-row 1 / 2

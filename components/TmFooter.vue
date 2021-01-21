@@ -12,7 +12,7 @@
             <NuxtLink to="/" class="tm-rf0 tm-lh-title">Overview</NuxtLink>
           </li>
           <li class="nav__item__item">
-            <NuxtLink to="/testnets" class="tm-rf0 tm-lh-title"
+            <NuxtLink to="/testnet" class="tm-rf0 tm-lh-title"
               >Prepare</NuxtLink
             >
           </li>

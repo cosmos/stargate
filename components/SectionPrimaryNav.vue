@@ -17,7 +17,7 @@
             >
           </li>
           <li>
-            <NuxtLink to="/testnets" class="text tm-rf0 tm-medium tm-lh-title"
+            <NuxtLink to="/testnet" class="text tm-rf0 tm-medium tm-lh-title"
               >Prepare</NuxtLink
             >
           </li>
@@ -37,8 +37,12 @@
           </li>
         </ul>
       </div>
+      <div class="countdown">
+        Launch in &nbsp;
+        <tm-countdown :now="countdown.now" :end="countdownTimer.end" />
+      </div>
     </nav>
-    <nav
+    <!-- <nav
       v-if="
         this.$route.path === '/testnets/wallets-explorers-exchanges' ||
         this.$route.path === '/testnets/community' ||
@@ -74,15 +78,46 @@
           </tm-button>
         </li>
       </ul>
-    </nav>
+    </nav> -->
   </div>
 </template>
 
 <script>
-export default {}
+import moment from 'moment-timezone'
+
+export default {
+  data() {
+    return {
+      countdown: {
+        now: Math.trunc(new Date(new Date().toUTCString()).getTime() / 1000),
+        // end date: 2021-01-28
+        // end time: 06:00
+        // usage: moment.tz("2021-01-28 06:00", "UTC").format()
+        end: '2021-01-28T06:00:00Z',
+      },
+    }
+  },
+  mounted() {
+    window.setInterval(() => {
+      this.countdown.now = Math.trunc(new Date().getTime() / 1000)
+    }, 1000)
+  },
+  methods: {
+    countdownTimer(date, time) {
+      return moment.tz(`${date} ${time}`, 'UTC').format()
+    },
+  },
+}
 </script>
 
 <style lang="stylus" scoped>
+.countdown
+  display flex
+  color var(--secondary-900)
+  border 0.0625rem solid rgba(255, 255, 255, 0.2)
+  padding 0.125rem 0.5rem
+  border-radius $border-radius-1
+
 .nav-inner
   position relative
   z-index 2
@@ -169,7 +204,7 @@ export default {}
   .logo
     transform-origin 0% 50%
   .nav-primary
-    align-items flex-end
+    align-items center
 
 @media $breakpoint-xsmall-only
   .nav
@@ -208,4 +243,16 @@ export default {}
     display inline-flex
     justify-content center
     align-items center
+
+  .countdown
+    display none
+
+@media screen and (max-width: 1024px)
+  .nav
+    &-primary
+      justify-content center
+      flex-direction column
+
+  .countdown
+    display none
 </style>

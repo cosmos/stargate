@@ -2,7 +2,7 @@
   <div class="section section-articles">
     <div class="section-container">
       <div class="container">
-        <div class="section-title tm-rf7 tm-bold tm-lh-title tm-measure-narrow">
+        <div class="section-title tm-rf6 tm-bold tm-lh-title tm-measure-narrow">
           Learn more about
           <span class="section-title__highlight">Stargate</span>
         </div>
