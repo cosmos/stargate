@@ -21,8 +21,8 @@
             <span class="sr-only">Stargate</span>
           </h1>
           <div class="subtitle tm-rf1 tm-lh-copy tm-measure-narrow">
-            Prepare your integrations for the imminent upgrades and vote today
-            to bring Stargate to Cosmos Hub.
+            Prepare your integrations for the imminent upgrades to bring
+            Stargate to the Cosmos Hub.
           </div>
           <div class="btn-container">
             <tm-button
@@ -260,7 +260,7 @@ export default {
   .section-hero
     .container
       .content
-        padding-bottom 20%
+        padding-bottom 30%
     .hero-graphics
       font-size 0.5rem
 
@@ -288,7 +288,7 @@ export default {
       padding-bottom var(--spacing-7)
     .container
       .content
-        padding-top 20%
+        // padding-top 20%
         .subtitle
           margin-top var(--spacing-6)
     .hero-graphics
