@@ -12,39 +12,33 @@
       </div>
 
       <div class="subsection-title tm-rf4 tm-bold tm-lh-title">
-        Vote for Stargate
+        Upcoming proposals
       </div>
       <div class="cards">
         <graphics-hub-zone class="section-graphics-zone" />
-        <a
-          href="https://www.mintscan.io/cosmos/proposals/35"
-          target="_blank"
-          rel="noreferrer noopener"
-          class="cards__item__top-left"
-        >
-          <span class="cards__item__disclosure tm-rf2 tm-lh-solid"
+        <div class="cards__item__top-left disabled">
+          <!-- <span class="cards__item__disclosure tm-rf2 tm-lh-solid"
             >&#8599;</span
-          >
+          > -->
           <div
             class="cards__item__caption tm-rf-1 tm-rf0-m-up tm-medium tm-lh-title tm-overline"
           >
-            Proposal
+            Proposal · coming soon
           </div>
           <div class="cards__item__title tm-rf2 tm-bold tm-lh-title">
             Stargate --> Cosmos Hub
           </div>
-          <div
+          <!-- <div
             class="cards__item__description tm-rf0 tm-rf1-m-up tm-lh-copy tm-measure-narrow"
           >
             Vote ‘Yes’ on the proposal to bring the Stargate upgrades to Cosmos
             Hub on Jan 28th
-          </div>
-        </a>
-        <!-- TODO: revert to <a> -->
+          </div> -->
+        </div>
         <div class="cards__item__top-right disabled">
-          <span class="cards__item__disclosure tm-rf2 tm-lh-solid"
+          <!-- <span class="cards__item__disclosure tm-rf2 tm-lh-solid"
             >&#8599;</span
-          >
+          > -->
           <div
             class="cards__item__caption tm-rf-1 tm-rf0-m-up tm-medium tm-lh-title tm-overline"
           >
@@ -292,7 +286,8 @@ export default {}
       background-size contain
       background-repeat no-repeat
       border-radius $border-radius-5
-      hover-raise(-3px)
+      // uncomment after removing disabled
+      // hover-raise(-3px)
     &__top-right
       height 21.3125rem
       position relative

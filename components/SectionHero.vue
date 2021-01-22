@@ -21,8 +21,8 @@
             <span class="sr-only">Stargate</span>
           </h1>
           <div class="subtitle tm-rf1 tm-lh-copy tm-measure-narrow">
-            Prepare your integrations for the imminent upgrades and vote today
-            to bring Stargate to Cosmos Hub.
+            Prepare your integrations for the imminent upgrades to bring
+            Stargate to the Cosmos Hub.
           </div>
           <div class="btn-container">
             <tm-button
@@ -35,7 +35,8 @@
               class="btn-container__btn__primary"
               >Prepare <span class="icon__right">--></span></tm-button
             >
-            <tm-button
+            <!-- TODO -->
+            <!-- <tm-button
               to-link="external"
               href="https://www.mintscan.io/cosmos/proposals/35"
               size="l"
@@ -44,11 +45,12 @@
               glow
               class="btn-container__btn__secondary"
               >Vote <span class="icon__right">&#8599;</span></tm-button
-            >
+            > -->
           </div>
         </div>
         <div class="hero-countdown">
-          <div
+          <!-- TODO -->
+          <!-- <div
             class="hero-countdown__title tm-rf0 tm-medium tm-lh-title tm-overline"
           >
             Cosmos hub upgrade
@@ -60,7 +62,7 @@
           />
           <div class="hero-countdown__date tm-rf0 tm-lh-copy">
             January 28, 06:00 UTC
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
@@ -258,7 +260,7 @@ export default {
   .section-hero
     .container
       .content
-        padding-bottom 20%
+        padding-bottom 30%
     .hero-graphics
       font-size 0.5rem
 
@@ -286,7 +288,7 @@ export default {
       padding-bottom var(--spacing-7)
     .container
       .content
-        padding-top 20%
+        // padding-top 20%
         .subtitle
           margin-top var(--spacing-6)
     .hero-graphics
