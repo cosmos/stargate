@@ -25,9 +25,9 @@
               >Imminent upgrades</span
             >
             <p class="tm-rf0 tm-lh-copy" style="color: var(--gray-800)">
-              Service providers have until January 28th to test their
-              integrations with Stargate before the upgrades are launched on
-              Cosmos Hub.
+              Service providers have until early February (date TBC) to test
+              their integrations with Stargate before the upgrades are launched
+              on Cosmos Hub.
             </p>
           </blockquote>
         </div>
