@@ -37,10 +37,11 @@
           </li>
         </ul>
       </div>
-      <div class="countdown">
+      <!-- TODO -->
+      <!-- <div class="countdown">
         Launch in &nbsp;
         <tm-countdown :now="countdown.now" :end="countdownTimer.end" />
-      </div>
+      </div> -->
     </nav>
     <!-- <nav
       v-if="

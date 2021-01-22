@@ -35,7 +35,8 @@
               class="btn-container__btn__primary"
               >Prepare <span class="icon__right">--></span></tm-button
             >
-            <tm-button
+            <!-- TODO -->
+            <!-- <tm-button
               to-link="external"
               href="https://www.mintscan.io/cosmos/proposals/35"
               size="l"
@@ -44,11 +45,12 @@
               glow
               class="btn-container__btn__secondary"
               >Vote <span class="icon__right">&#8599;</span></tm-button
-            >
+            > -->
           </div>
         </div>
         <div class="hero-countdown">
-          <div
+          <!-- TODO -->
+          <!-- <div
             class="hero-countdown__title tm-rf0 tm-medium tm-lh-title tm-overline"
           >
             Cosmos hub upgrade
@@ -60,7 +62,7 @@
           />
           <div class="hero-countdown__date tm-rf0 tm-lh-copy">
             January 28, 06:00 UTC
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
