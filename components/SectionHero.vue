@@ -35,22 +35,20 @@
               class="btn-container__btn__primary"
               >Prepare <span class="icon__right">--></span></tm-button
             >
-            <!-- TODO -->
-            <!-- <tm-button
+            <tm-button
               to-link="external"
-              href="https://www.mintscan.io/cosmos/proposals/35"
+              href="https://www.mintscan.io/cosmos/proposals/36"
               size="l"
               color="var(--black)"
               background-color="linear-gradient(90deg, #99DAFF 0%, #FFD1FD 50%, var(--primary-900) 100%), var(--primary-900)"
               glow
               class="btn-container__btn__secondary"
               >Vote <span class="icon__right">&#8599;</span></tm-button
-            > -->
+            >
           </div>
         </div>
         <div class="hero-countdown">
-          <!-- TODO -->
-          <!-- <div
+          <div
             class="hero-countdown__title tm-rf0 tm-medium tm-lh-title tm-overline"
           >
             Cosmos hub upgrade
@@ -61,8 +59,8 @@
             class="hero-countdown__timer tm-rf1 tm-medium tm-lh-title tm-overline"
           />
           <div class="hero-countdown__date tm-rf0 tm-lh-copy">
-            January 28, 06:00 UTC
-          </div> -->
+            February 18, 06:00 UTC
+          </div>
         </div>
       </div>
     </div>
@@ -77,8 +75,8 @@ export default {
     return {
       countdown: {
         now: Math.trunc(new Date(new Date().toUTCString()).getTime() / 1000),
-        // usage: moment.tz("2021-01-28 06:00", "UTC").format()
-        end: '2021-01-28T06:00:00Z',
+        // usage: moment.tz("2021-02-18 06:00", "UTC").format()
+        end: '2021-02-18T06:00:00Z',
       },
     }
   },
@@ -260,7 +258,7 @@ export default {
   .section-hero
     .container
       .content
-        padding-bottom 30%
+        padding-bottom 20%
     .hero-graphics
       font-size 0.5rem
 
@@ -288,7 +286,7 @@ export default {
       padding-bottom var(--spacing-7)
     .container
       .content
-        // padding-top 20%
+        padding-top 20%
         .subtitle
           margin-top var(--spacing-6)
     .hero-graphics

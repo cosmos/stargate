@@ -12,7 +12,7 @@ export default {
     },
     end: {
       type: String,
-      default: '2021-01-28',
+      default: '2021-02-18',
     },
   },
   computed: {
