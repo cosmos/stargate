@@ -78,7 +78,7 @@ export default {
       countdown: {
         now: Math.trunc(new Date(new Date().toUTCString()).getTime() / 1000),
         // usage: moment.tz("2021-01-28 06:00", "UTC").format()
-        end: '2021-01-28T06:00:00Z',
+        end: '2021-02-18T06:00:00Z',
       },
     }
   },
