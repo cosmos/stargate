@@ -37,8 +37,8 @@
           </li>
         </ul>
       </div>
-      <div class="countdown">
-        Launch in &nbsp;
+      <div class="countdown tm-rf-1 tm-code">
+        Launch in&nbsp;
         <tm-countdown :now="countdown.now" :end="countdownTimer.end" />
       </div>
     </nav>
