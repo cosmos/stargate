@@ -37,11 +37,10 @@
           </li>
         </ul>
       </div>
-      <!-- TODO -->
-      <!-- <div class="countdown">
-        Launch in &nbsp;
+      <div class="countdown tm-rf-1 tm-code">
+        Launch in&nbsp;
         <tm-countdown :now="countdown.now" :end="countdownTimer.end" />
-      </div> -->
+      </div>
     </nav>
     <!-- <nav
       v-if="
@@ -91,10 +90,10 @@ export default {
     return {
       countdown: {
         now: Math.trunc(new Date(new Date().toUTCString()).getTime() / 1000),
-        // end date: 2021-01-28
+        // end date: 2021-02-18
         // end time: 06:00
-        // usage: moment.tz("2021-01-28 06:00", "UTC").format()
-        end: '2021-01-28T06:00:00Z',
+        // usage: moment.tz("2021-02-18 06:00", "UTC").format()
+        end: '2021-02-18T06:00:00Z',
       },
     }
   },
