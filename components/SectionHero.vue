@@ -30,8 +30,7 @@
               to="/testnet"
               size="l"
               color="var(--white)"
-              background-color="var(--gray-trans-300)"
-              glow
+              background-color="var(--black)"
               class="btn-container__btn__primary"
               >Prepare <span class="icon__right">--></span></tm-button
             >
@@ -137,7 +136,6 @@ export default {
     align-items stretch
     width 100%
     padding-top var(--spacing-12)
-    // padding-bottom var(--spacing-10)
   .container
     position relative
     display flex
@@ -148,9 +146,6 @@ export default {
     .content
       margin auto
       width 100%
-      display flex
-      flex-direction column
-      align-items center
       .suptitle
         margin-bottom var(--spacing-7)
         color var(--white)
@@ -170,6 +165,7 @@ export default {
           svg:last-child
             position relative
       .subtitle
+        center()
         margin-top var(--spacing-7)
         color var(--primary-900)
 
@@ -235,17 +231,10 @@ export default {
   display flex
   flex-wrap wrap
   justify-content center
+  grid-gap var(--spacing-6)
 
-  &__btn
-
-    &:last-child
-      margin-right 0
-
-    &__primary
-      margin-right var(--spacing-6)
-
-    &__secondary
-      backdrop-filter blur(3rem)
+  &__btn__primary
+    margin-right var(--spacing-6)
 
 @media screen and (max-width: 1024px)
   .section-hero
@@ -255,7 +244,7 @@ export default {
         .subtitle
           margin-top var(--spacing-7)
 
-@media screen and (max-width: 767px)
+@media $breakpoint-medium-max
   .section-hero
     .container
       .content
@@ -263,24 +252,11 @@ export default {
     .hero-graphics
       font-size 0.5rem
 
-  .btn-container
-    display flex
-    flex-direction column
-
-    &__btn
-
-      &__primary
-        margin-right 0
-        height fit-content
-
-      &__secondary
-        height fit-content
-        margin-top var(--spacing-7)
-
-@media screen and (max-width: 576px)
+@media $breakpoint-small-max
   .section-hero
     min-height 32rem
-    max-height 42rem
+    max-height none
+    height auto
     margin-bottom var(--spacing-8)
     .section-container
       padding-top var(--spacing-4)
@@ -292,6 +268,20 @@ export default {
           margin-top var(--spacing-6)
     .hero-graphics
       font-size 0.36rem
+      &__planet
+        top 31%
+
+  .btn-container
+    display grid
+    grid-template-columns repeat(auto-fill, minmax(13rem, auto))
+    justify-content unset
+    align-items flex-start
+    width 100%
+    grid-gap var(--spacing-6)
+
+    &__btn
+      &__primary
+        margin-right 0
 
 @media screen and (max-width: 414px)
   .section-hero
