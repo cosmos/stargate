@@ -1,6 +1,8 @@
 <template lang="pug">
   div(v-if='countingDown')
-    code -{{ days}}:{{ hours }}:{{ minutes }}:{{ seconds }}
+    code
+      span(v-if='tMinus') -
+      | {{ days}}:{{ hours }}:{{ minutes }}:{{ seconds }}
 </template>
 
 <script>
@@ -13,6 +15,10 @@ export default {
     end: {
       type: String,
       default: '2021-02-18',
+    },
+    tMinus: {
+      type: Boolean,
+      default: false,
     },
   },
   computed: {

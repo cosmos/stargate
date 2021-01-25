@@ -12,7 +12,7 @@
       </div>
 
       <div class="subsection-title tm-rf4 tm-bold tm-lh-title">
-        Upcoming proposals
+        Vote for Stargate
       </div>
       <div class="cards">
         <graphics-hub-zone class="section-graphics-zone" />
@@ -28,7 +28,7 @@
           <div
             class="cards__item__caption tm-rf-1 tm-rf0-m-up tm-medium tm-lh-title tm-overline"
           >
-            Proposal · coming soon
+            Proposal #36
           </div>
           <div class="cards__item__title tm-rf2 tm-bold tm-lh-title">
             Stargate --> Cosmos Hub
@@ -36,8 +36,8 @@
           <div
             class="cards__item__description tm-rf0 tm-rf1-m-up tm-lh-copy tm-measure-narrow"
           >
-            Vote ‘Yes’ on the proposal to bring the Stargate upgrades to Cosmos
-            Hub on Feb 18th
+            Vote ‘Yes’ on the proposal to bring the Stargate upgrades to the
+            Cosmos Hub on Feb 18th
           </div>
         </a>
         <div class="cards__item__top-right disabled">

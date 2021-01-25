@@ -21,8 +21,8 @@
             <span class="sr-only">Stargate</span>
           </h1>
           <div class="subtitle tm-rf1 tm-lh-copy tm-measure-narrow">
-            Prepare your integrations for the imminent upgrades to bring
-            Stargate to the Cosmos Hub.
+            Prepare your integrations for the imminent upgrades and vote today
+            to bring Stargate to Cosmos Hub.
           </div>
           <div class="btn-container">
             <tm-button
@@ -56,6 +56,7 @@
           <tm-countdown
             :now="countdown.now"
             :end="countdownTimer.end"
+            :tMinus="true"
             class="hero-countdown__timer tm-rf1 tm-medium tm-lh-title tm-overline"
           />
           <div class="hero-countdown__date tm-rf0 tm-lh-copy">
