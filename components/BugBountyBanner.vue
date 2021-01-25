@@ -137,4 +137,7 @@
   .text__btn-container
     display grid
     grid-template-columns repeat(auto-fill, minmax(13rem, auto))
+
+    &__btn
+      margin-right 0
 </style>
