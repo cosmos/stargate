@@ -18,7 +18,7 @@
         <graphics-hub-zone class="section-graphics-zone" />
         <a
           class="cards__item__top-left"
-          href="https://www.mintscan.io/cosmos/proposals/36"
+          href="https://www.mintscan.io/cosmos/proposals/37"
           target="blank_"
           rel="noreferrer noopener"
         >
@@ -28,7 +28,7 @@
           <div
             class="cards__item__caption tm-rf-1 tm-rf0-m-up tm-medium tm-lh-title tm-overline"
           >
-            Proposal #36
+            Proposal #37
           </div>
           <div class="cards__item__title tm-rf2 tm-bold tm-lh-title">
             Stargate --> Cosmos Hub
@@ -36,8 +36,8 @@
           <div
             class="cards__item__description tm-rf0 tm-rf1-m-up tm-lh-copy tm-measure-narrow"
           >
-            Vote ‘Yes’ on the proposal to bring the Stargate upgrades to the
-            Cosmos Hub on Feb 18th
+            Vote 'Yes' on the proposal by Feb 12th to bring the Stargate
+            upgrades to the Cosmos Hub on Feb 18th
           </div>
         </a>
         <div class="cards__item__top-right disabled">
