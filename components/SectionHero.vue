@@ -36,7 +36,7 @@
             >
             <tm-button
               to-link="external"
-              href="https://www.mintscan.io/cosmos/proposals/36"
+              href="https://www.mintscan.io/cosmos/proposals/37"
               size="l"
               color="var(--black)"
               background-color="linear-gradient(90deg, #99DAFF 0%, #FFD1FD 50%, var(--primary-900) 100%), var(--primary-900)"
@@ -55,7 +55,7 @@
           <tm-countdown
             :now="countdown.now"
             :end="countdownTimer.end"
-            :tMinus="true"
+            :t-minus="true"
             class="hero-countdown__timer tm-rf1 tm-medium tm-lh-title tm-overline"
           />
           <div class="hero-countdown__date tm-rf0 tm-lh-copy">
