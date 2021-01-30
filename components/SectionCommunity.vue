@@ -36,7 +36,7 @@
           <div
             class="cards__item__description tm-rf0 tm-rf1-m-up tm-lh-copy tm-measure-narrow"
           >
-            Vote 'Yes' on the proposal until Feb 12th to bring the Stargate
+            Vote 'Yes' on the proposal by Feb 12th to bring the Stargate
             upgrades to the Cosmos Hub on Feb 18th
           </div>
         </a>
