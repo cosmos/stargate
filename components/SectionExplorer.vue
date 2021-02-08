@@ -1,5 +1,5 @@
 <template>
-  <div class="tm-section-container section-container section-explorer">
+  <div class="section section-container tm-section-container section-explorer">
     <div class="section-graphics">
       <graphics-explore class="section-graphics__canvas" />
     </div>
@@ -44,8 +44,12 @@ export default {
 }
 </script>
 
-<style lang="stylus" scoped>
+<style lang="stylus">
+.section
+  overflow visible !important
+</style>
 
+<style lang="stylus" scoped>
 .section-graphics
   position relative
   z-index -1
