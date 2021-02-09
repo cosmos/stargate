@@ -18,7 +18,11 @@ export default {
       explorers: [
         {
           name: 'Big Dipper',
-          url: 'https://stargate.simulation.bigdipper.live',
+          url: 'https://gaia.bigdipper.live',
+        },
+        {
+          name: 'Mintscan',
+          url: 'https://testnet.mintscan.io/cosmos',
         },
         {
           name: 'IRISnet',
