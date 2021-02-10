@@ -44,12 +44,10 @@ export default {
 }
 </script>
 
-<style lang="stylus">
-.section
-  overflow visible !important
-</style>
-
 <style lang="stylus" scoped>
+.section-explorer
+  overflow visible
+
 .section-graphics
   position relative
   z-index -1
