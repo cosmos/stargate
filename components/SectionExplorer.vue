@@ -45,9 +45,6 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-.section-explorer
-  overflow visible
-
 .section-graphics
   position relative
   z-index -1
@@ -55,7 +52,6 @@ export default {
     width 120%
     margin-left -10%
     height auto
-    margin-top -16%
     margin-bottom -16%
 
 .headings

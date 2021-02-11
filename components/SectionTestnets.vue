@@ -60,6 +60,7 @@ export default {}
 
 <style lang="stylus" scoped>
 .section-testnets
+  padding-bottom 0
   .section-status
     grid-column 1 / 5
     &__title
