@@ -1,5 +1,5 @@
 <template>
-  <div class="tm-section-container section-container section-explorer">
+  <div class="section section-container tm-section-container section-explorer">
     <div class="section-graphics">
       <graphics-explore class="section-graphics__canvas" />
     </div>
@@ -45,7 +45,6 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-
 .section-graphics
   position relative
   z-index -1
@@ -53,7 +52,6 @@ export default {
     width 120%
     margin-left -10%
     height auto
-    margin-top -16%
     margin-bottom -16%
 
 .headings
