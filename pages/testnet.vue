@@ -5,7 +5,7 @@
     <readiness-banner />
     <section-documentation />
     <section-testnets />
-    <!-- <section-explorer :data="explorers"></section-explorer> -->
+    <section-explorer :data="explorers"></section-explorer>
     <bug-bounty-banner />
     <section-form />
   </main>
@@ -18,7 +18,15 @@ export default {
       explorers: [
         {
           name: 'Big Dipper',
-          url: 'https://stargate.simulation.bigdipper.live/',
+          url: 'https://gaia.bigdipper.live',
+        },
+        {
+          name: 'Mintscan',
+          url: 'https://testnet.mintscan.io/cosmos',
+        },
+        {
+          name: 'IRISnet',
+          url: 'https://stargate.iobscan.io',
         },
       ],
       updates: [

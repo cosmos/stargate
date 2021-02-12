@@ -117,7 +117,7 @@ export default {
           url: 'https://github.com/cosmos/ics/releases/tag/v1.0.0-rc6',
           version: '1.0',
           name: 'IBC',
-          repo: 'tendermint/tendermint',
+          repo: 'cosmos/ics',
           logo: 'ibc',
         },
         {
