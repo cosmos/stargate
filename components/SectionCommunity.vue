@@ -11,13 +11,11 @@
         awareness on socials, and voting on governance proposals.
       </div>
 
-      <div class="subsection-title tm-rf4 tm-bold tm-lh-title">
-        Vote for Stargate
-      </div>
+      <div class="subsection-title tm-rf4 tm-bold tm-lh-title">Proposals</div>
       <div class="cards">
         <graphics-hub-zone class="section-graphics-zone" />
         <a
-          class="cards__item__top-left"
+          class="cards__item cards__item__top-left"
           href="https://www.mintscan.io/cosmos/proposals/37"
           target="blank_"
           rel="noreferrer noopener"
@@ -28,7 +26,7 @@
           <div
             class="cards__item__caption tm-rf-1 tm-rf0-m-up tm-medium tm-lh-title tm-overline"
           >
-            Proposal #37
+            Proposal #37 &middot; <span class="cards__item__chip">Passed</span>
           </div>
           <div class="cards__item__title tm-rf2 tm-bold tm-lh-title">
             Stargate --> Cosmos Hub
@@ -36,11 +34,10 @@
           <div
             class="cards__item__description tm-rf0 tm-rf1-m-up tm-lh-copy tm-measure-narrow"
           >
-            Vote 'Yes' on the proposal by Feb 12th to bring the Stargate
-            upgrades to the Cosmos Hub on Feb 18th
+            Stargate upgrades are coming to the Cosmos Hub on Feb 18th
           </div>
         </a>
-        <div class="cards__item__top-right disabled">
+        <div class="cards__item cards__item__top-right disabled">
           <!-- <span class="cards__item__disclosure tm-rf2 tm-lh-solid"
             >&#8599;</span
           > -->
@@ -52,12 +49,11 @@
           <div class="cards__item__title tm-rf2 tm-bold tm-lh-title">
             IBC --> Cosmos Hub
           </div>
-          <!-- <div
+          <div
             class="cards__item__description tm-rf0 tm-rf1-m-up tm-lh-copy tm-measure-narrow"
           >
-            Join the <code>#🌠-stargate-testnet</code> channel in the Cosmos
-            community Discord and chat with developers.
-          </div> -->
+            Enable IBC transactions on the Cosmos Hub.
+          </div>
         </div>
       </div>
 
@@ -142,9 +138,6 @@ export default {}
 </script>
 
 <style lang="stylus" scoped>
-.disabled
-  cursor not-allowed !important
-  opacity 0.65 !important
 
 .section
   overflow visible // graphics overflow
@@ -172,6 +165,8 @@ export default {}
   top 50%
   left 50%
   transform translate(-50%, 0)
+  user-select none
+  pointer-events none
 
 .wide-card
   margin-top var(--spacing-7)
@@ -222,6 +217,7 @@ export default {}
     top -3%
     width 170%
     height 162%
+    width 150%
 
 .bottom
   overflow visible
@@ -276,44 +272,21 @@ export default {}
     background-size contain
     background-repeat no-repeat
     border-radius $border-radius-5
-    hover-raise(-3px)
+    a&
+      hover-raise(-3px)
     &__top-left
       height 21.3125rem
-      position relative
-      padding var(--spacing-8)
-      display flex
-      flex-direction column
-      flex-wrap nowrap
-      justify-content flex-start
-      color var(--white)
-      background url("/top-surface-graphics.svg"), linear-gradient(256.92deg, #120018 0%, #121435 100%)
+      background-image url("/top-surface-graphics.svg"), linear-gradient(256.92deg, #120018 0%, #121435 100%)
       background-position 70%
-      background-size contain
-      background-repeat no-repeat
-      border-radius $border-radius-5
-      hover-raise(-3px)
     &__top-right
       height 21.3125rem
-      position relative
-      padding var(--spacing-8)
-      display flex
-      flex-direction column
-      flex-wrap nowrap
-      color var(--white)
-      background url("/bottom-half-right-graphics.svg"), linear-gradient(256.92deg, #121435 0%, #030419 100%)
-      justify-content flex-start
+      background-image url("/bottom-half-right-graphics.svg"), linear-gradient(256.92deg, #121435 0%, #030419 100%)
       background-position bottom right
       background-size auto
-      background-repeat no-repeat
-      border-radius $border-radius-5
-      // uncomment after removing disabled
-      // hover-raise(-3px)
     &:first-child
-      background url("/bottom-half-graphics.svg"), linear-gradient(256.92deg, #121435 0%, #030419 100%)
+      background-image url("/bottom-half-graphics.svg"), linear-gradient(256.92deg, #121435 0%, #030419 100%)
       justify-content flex-end
       background-position top center
-      background-size contain
-      background-repeat no-repeat
       padding-top var(--spacing-11)
     &:last-child
       padding-bottom var(--spacing-11)
@@ -329,16 +302,28 @@ export default {}
       transition color .1s ease-out, transform .25s ease-out
     &__caption
       color var(--white-500)
+    &__chip
+      display inline-block
+      padding var(--spacing-1) var(--spacing-3)
+      background var(--white)
+      color var(--black)
+      border-radius $border-radius-2
     &__title
       margin-top var(--spacing-4)
       color var(--white)
     &__description
       margin-top var(--spacing-4)
       color var(--white-700)
+    &.disabled
+      opacity 0.7
 
 @media $breakpoint-medium
   .cards
     grid-template-columns 1fr 1fr
+
+  .top
+      .section-graphics
+          width 170%
 
 @media $breakpoint-xsmall-only
   .cards
