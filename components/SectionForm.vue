@@ -28,7 +28,7 @@
               class="bottom__get-notified tm-rf1 tm-bold tm-lh-copy"
               for="field-email"
             >
-              Get Stargates updates
+              Get Cosmos updates
             </label>
             <form
               :action="url"
@@ -56,6 +56,10 @@
                 </button>
               </div>
             </form>
+            <p class="bottom__footnote tm-measure tm-rf-1 tm-lh-copy">
+              Zero spam.
+              <a href="https://cosmos.network/privacy">Privacy policy</a>
+            </p>
           </div>
         </transition>
       </div>
@@ -135,8 +139,8 @@ export default {
     justify-content center
   &__get-notified
     display block
-    margin-bottom var(--spacing-7)
-    color var(--gray-800)
+    margin-bottom var(--spacing-6)
+    color var(--white)
     text-align center
   &__state
     margin var(--spacing-7) auto
@@ -192,6 +196,11 @@ export default {
             color var(--gray-800)
         &:focus
           background #282B53
+  &__footnote
+    color var(--gray-600)
+    text-align center
+    margin-top var(--spacing-5)
+    center()
 
 @media screen and (max-width: 576px)
   .bottom

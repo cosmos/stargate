@@ -1,7 +1,7 @@
 <template>
   <main>
     <section-hero />
-
+    <section-form />
     <section-intro />
     <section-features />
 
@@ -9,7 +9,6 @@
     <section-roadmap />
     <section-contributors />
     <bug-bounty-banner />
-    <section-form />
   </main>
 </template>
 

@@ -210,7 +210,6 @@ export default {
 .footer
   text-align center
   color var(--white)
-  background linear-gradient(180deg, #000000 0%, #030419 100%)
   padding 0 0 var(--spacing-8)
   .nav
     gap var(--spacing-7)
