@@ -21,30 +21,18 @@
             <span class="sr-only">Stargate</span>
           </h1>
           <div class="subtitle tm-rf1 tm-lh-copy tm-measure-narrow">
-            Prepare your integrations for the imminent upgrades and vote today
-            to bring Stargate to Cosmos Hub.
+            Prepare your integrations for the imminent Stargate upgrades on the
+            Cosmos Hub.
           </div>
-          <div class="btn-container">
-            <tm-button
-              to-link="internal"
-              to="/testnet"
-              size="l"
-              color="var(--white)"
-              background-color="var(--black)"
-              class="btn-container__btn__primary"
-              >Prepare <span class="icon__right">--></span></tm-button
-            >
-            <tm-button
-              to-link="external"
-              href="https://www.mintscan.io/cosmos/proposals/37"
-              size="l"
-              color="var(--black)"
-              background-color="linear-gradient(90deg, #99DAFF 0%, #FFD1FD 50%, var(--primary-900) 100%), var(--primary-900)"
-              glow
-              class="btn-container__btn__secondary"
-              >Vote <span class="icon__right">&#8599;</span></tm-button
-            >
-          </div>
+          <tm-button
+            to-link="internal"
+            to="/testnet"
+            size="l"
+            color="var(--white)"
+            background-color="var(--black)"
+            class="btn__primary"
+            >Prepare <span class="icon__right">--></span></tm-button
+          >
         </div>
         <div class="hero-countdown">
           <div
@@ -53,13 +41,26 @@
             Cosmos hub upgrade
           </div>
           <tm-countdown
+            v-if="toTimezone(countdown.date, countdown.time) >= moment()"
             :now="countdown.now"
-            :end="countdownTimer.end"
+            :end="countdownTimer(countdown.date, countdown.time)"
             :t-minus="true"
             class="hero-countdown__timer tm-rf1 tm-medium tm-lh-title tm-overline"
           />
-          <div class="hero-countdown__date tm-rf0 tm-lh-copy">
+          <div
+            v-else
+            class="hero-countdown__timer tm-rf1 tm-medium tm-lh-title tm-overline"
+          >
+            00:00:00:00
+          </div>
+          <div
+            v-if="toTimezone(countdown.date, countdown.time) >= moment()"
+            class="hero-countdown__date tm-rf0 tm-lh-copy"
+          >
             February 18, 06:00 UTC
+          </div>
+          <div v-else class="hero-countdown__date tm-rf0 tm-lh-copy">
+            We have lift off
           </div>
         </div>
       </div>
@@ -73,8 +74,11 @@ import moment from 'moment-timezone'
 export default {
   data() {
     return {
+      moment,
       countdown: {
         now: Math.trunc(new Date(new Date().toUTCString()).getTime() / 1000),
+        date: '2021-02-18',
+        time: '06:00',
         // usage: moment.tz("2021-02-18 06:00", "UTC").format()
         end: '2021-02-18T06:00:00Z',
       },
@@ -88,6 +92,17 @@ export default {
   methods: {
     countdownTimer(date, time) {
       return moment.tz(`${date} ${time}`, 'UTC').format()
+    },
+    toTimezone(date, time) {
+      return (
+        moment
+          // set base time with UTC
+          // get timezone with i18n API - Intl.DateTimeFormat().resolvedOptions().timeZone
+          // usage: 2020-08-04 08:00
+          .tz(`${date} ${time}`, 'UTC')
+          // use client's locale time zone
+          .tz(moment.tz.guess())
+      )
     },
   },
 }
@@ -226,15 +241,8 @@ export default {
       background radial-gradient(31.26% 16.8% at 50.03% -2.64%, #ccc7fb 0%, rgba(145,51,202,0.6) 55.21%, rgba(141,14,192,0) 100%), radial-gradient(84.49% 66.22% at 50% 59.94%, #000 0%, #030419 60.94%, #340d67 80.73%, #36299b 90.1%)
       box-shadow inset 0px 3.5rem 3.5rem rgba(48, 44, 245, 0.17)
 
-.btn-container
+.btn__primary
   margin-top var(--spacing-8)
-  display flex
-  flex-wrap wrap
-  justify-content center
-  grid-gap var(--spacing-6)
-
-  &__btn__primary
-    margin-right var(--spacing-6)
 
 @media screen and (max-width: 1024px)
   .section-hero
@@ -271,17 +279,9 @@ export default {
       &__planet
         top 31%
 
-  .btn-container
-    display grid
-    grid-template-columns repeat(auto-fill, minmax(13rem, auto))
-    justify-content unset
-    align-items flex-start
+  .btn__primary
     width 100%
-    grid-gap var(--spacing-6)
-
-    &__btn
-      &__primary
-        margin-right 0
+    max-width 13rem
 
 @media screen and (max-width: 414px)
   .section-hero

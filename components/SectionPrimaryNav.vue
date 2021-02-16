@@ -37,9 +37,15 @@
           </li>
         </ul>
       </div>
-      <div class="countdown tm-rf-1 tm-code">
+      <div
+        v-if="toTimezone(countdown.date, countdown.time) >= moment()"
+        class="countdown tm-rf-1 tm-code"
+      >
         Launch in&nbsp;
-        <tm-countdown :now="countdown.now" :end="countdownTimer.end" />
+        <tm-countdown
+          :now="countdown.now"
+          :end="countdownTimer(countdown.date, countdown.time)"
+        />
       </div>
     </nav>
     <!-- <nav
@@ -88,10 +94,11 @@ import moment from 'moment-timezone'
 export default {
   data() {
     return {
+      moment,
       countdown: {
         now: Math.trunc(new Date(new Date().toUTCString()).getTime() / 1000),
-        // end date: 2021-02-18
-        // end time: 06:00
+        date: '2021-02-18',
+        time: '06:00',
         // usage: moment.tz("2021-02-18 06:00", "UTC").format()
         end: '2021-02-18T06:00:00Z',
       },
@@ -105,6 +112,17 @@ export default {
   methods: {
     countdownTimer(date, time) {
       return moment.tz(`${date} ${time}`, 'UTC').format()
+    },
+    toTimezone(date, time) {
+      return (
+        moment
+          // set base time with UTC
+          // get timezone with i18n API - Intl.DateTimeFormat().resolvedOptions().timeZone
+          // usage: 2020-08-04 08:00
+          .tz(`${date} ${time}`, 'UTC')
+          // use client's locale time zone
+          .tz(moment.tz.guess())
+      )
     },
   },
 }
