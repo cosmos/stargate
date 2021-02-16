@@ -41,13 +41,26 @@
             Cosmos hub upgrade
           </div>
           <tm-countdown
+            v-if="toTimezone(countdown.date, countdown.time) >= moment()"
             :now="countdown.now"
-            :end="countdownTimer.end"
+            :end="countdownTimer(countdown.date, countdown.time)"
             :t-minus="true"
             class="hero-countdown__timer tm-rf1 tm-medium tm-lh-title tm-overline"
           />
-          <div class="hero-countdown__date tm-rf0 tm-lh-copy">
+          <div
+            v-else
+            class="hero-countdown__timer tm-rf1 tm-medium tm-lh-title tm-overline"
+          >
+            00:00:00:00
+          </div>
+          <div
+            v-if="toTimezone(countdown.date, countdown.time) >= moment()"
+            class="hero-countdown__date tm-rf0 tm-lh-copy"
+          >
             February 18, 06:00 UTC
+          </div>
+          <div v-else class="hero-countdown__date tm-rf0 tm-lh-copy">
+            We have lift off
           </div>
         </div>
       </div>
@@ -61,8 +74,11 @@ import moment from 'moment-timezone'
 export default {
   data() {
     return {
+      moment,
       countdown: {
         now: Math.trunc(new Date(new Date().toUTCString()).getTime() / 1000),
+        date: '2021-02-18',
+        time: '06:00',
         // usage: moment.tz("2021-02-18 06:00", "UTC").format()
         end: '2021-02-18T06:00:00Z',
       },
@@ -76,6 +92,17 @@ export default {
   methods: {
     countdownTimer(date, time) {
       return moment.tz(`${date} ${time}`, 'UTC').format()
+    },
+    toTimezone(date, time) {
+      return (
+        moment
+          // set base time with UTC
+          // get timezone with i18n API - Intl.DateTimeFormat().resolvedOptions().timeZone
+          // usage: 2020-08-04 08:00
+          .tz(`${date} ${time}`, 'UTC')
+          // use client's locale time zone
+          .tz(moment.tz.guess())
+      )
     },
   },
 }
