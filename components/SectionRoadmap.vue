@@ -122,7 +122,7 @@ export default {
         },
         {
           url: 'https://github.com/cosmos/cosmos-sdk/releases',
-          version: '0.40',
+          version: '0.41',
           name: 'Cosmos SDK',
           repo: 'cosmos/cosmos-sdk',
           logo: 'sdk',
