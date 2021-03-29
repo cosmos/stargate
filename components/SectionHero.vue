@@ -21,17 +21,17 @@
             <span class="sr-only">Stargate</span>
           </h1>
           <div class="subtitle tm-rf1 tm-lh-copy tm-measure-narrow">
-            Prepare your integrations for the imminent Stargate upgrades on the
-            Cosmos Hub.
+            Visit the new Cosmos website to learn about the ATOM token, and the
+            incredible upcoming features that IBC will enable.
           </div>
           <tm-button
-            to-link="internal"
-            to="/testnet"
+            to-link="external"
+            href="https://cosmos.network"
             size="l"
             color="var(--white)"
             background-color="var(--black)"
             class="btn__primary"
-            >Prepare <span class="icon__right">--></span></tm-button
+            >Visit <span class="icon__right">--></span></tm-button
           >
         </div>
         <div class="hero-countdown">
