@@ -74,7 +74,7 @@
           <li class="nav__item__item">
             <a
               class="tm-rf0 tm-lh-title"
-              href="https://discord.gg/vcExX9T"
+              href="https://discord.gg/cosmosnetwork"
               target="blank_"
               rel="noreferrer noopener"
               >Chat</a
@@ -181,7 +181,7 @@ export default {
         },
         { title: 'Reddit', url: 'https://reddit.com/r/cosmosnetwork' },
         { title: 'Telegram', url: 'https://t.me/cosmosproject' },
-        { title: 'Discord', url: 'https://discord.gg/vcExX9T' },
+        { title: 'Discord', url: 'https://discord.gg/cosmosnetwork' },
         { title: 'YouTube', url: 'https://www.youtube.com/c/CosmosProject' },
       ],
     }
