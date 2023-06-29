@@ -73,7 +73,7 @@
                   >
                   <tm-button
                     to-link="external"
-                    href="https://discord.gg/vcExX9T"
+                    href="https://discord.gg/cosmosnetwork"
                     size="l"
                     color="var(--link)"
                     variant="text"
@@ -161,7 +161,7 @@
                   >
                   <tm-button
                     to-link="external"
-                    href="https://discord.gg/vcExX9T"
+                    href="https://discord.gg/cosmosnetwork"
                     size="l"
                     color="var(--link)"
                     variant="text"
@@ -265,7 +265,7 @@
                   >
                   <tm-button
                     to-link="external"
-                    href="https://discord.gg/vcExX9T"
+                    href="https://discord.gg/cosmosnetwork"
                     size="l"
                     color="var(--link)"
                     variant="text"

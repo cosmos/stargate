@@ -74,7 +74,7 @@
           <li class="nav__item__item">
             <a
               class="tm-rf0 tm-lh-title"
-              href="https://discord.gg/vcExX9T"
+              href="https://discord.gg/cosmosnetwork"
               target="blank_"
               rel="noreferrer noopener"
               >Chat</a
